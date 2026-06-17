@@ -1,0 +1,45 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { getCollection } from "astro:content";
+import { readSchema } from "../../lib/admin/store";
+
+const schema = await readSchema();
+const built = new Set((await getCollection("articles")).map((a) => `${a.data.leg}/${a.data.slug}`));
+const err = Astro.url.searchParams.get("error");
+const ok = Astro.url.searchParams.get("ok");
+const legs = [...schema.legs].sort((a, b) => a.order - b.order);
+---
+<AdminLayout title="Manage links">
+  {err ? <div class="err">{err}</div> : null}
+  {ok ? <div class="ok">Saved.</div> : null}
+  <p class="muted">
+    Each article's "Read next" links — one internal href per line (e.g.
+    <code>/visit-belgrade/zemun</code> or a leg hub <code>/plan-your-trip</code>). The
+    target's title, teaser and hero are resolved automatically.
+  </p>
+  {
+    legs.map((leg) => {
+      const slugs = [...leg.slugs]
+        .sort((a, b) => a.order - b.order)
+        .filter((s) => built.has(`${leg.slug}/${s.slug}`));
+      if (slugs.length === 0) return null;
+      return (
+        <>
+          <h2>{leg.title}</h2>
+          {slugs.map((s) => (
+            <div class="panel">
+              <div class="row"><span class="slug">/{leg.slug}/{s.slug}</span><span class="badge live">live</span></div>
+              <form method="post" action="/api/admin/links">
+                <input type="hidden" name="leg" value={leg.slug} />
+                <input type="hidden" name="slug" value={s.slug} />
+                <textarea name="links" set:text={(s.linksTo ?? []).join("\n")}></textarea>
+                <div class="row" style="margin-top:8px"><button type="submit">Save links</button></div>
+              </form>
+            </div>
+          ))}
+        </>
+      );
+    })
+  }
+</AdminLayout>

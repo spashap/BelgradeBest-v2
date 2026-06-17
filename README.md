@@ -24,7 +24,7 @@ src/
   styles/globals.css                 # the design system (tokens + L3 classes), ported verbatim
 public/images/                       # heroes — flat: images/expo-2027/<slug>-hero.png ; legs/<leg>/hero.png
 scripts/port-content.mjs             # ONE-TIME porter (reads ../BelgradeBest/frontend; not deployed)
-admin/                               # LOCAL-ONLY operator tool (not deployed)
+src/pages/admin/ + src/lib/admin/    # the /admin app (server-rendered; analytics + settings control)
 ```
 
 ## Develop / build
@@ -55,17 +55,22 @@ npm run preview   # serve dist/ locally
 normalizes `linksTo`, and copies images. Idempotent. (Only needed if you change
 something in the old project; normally V2 is self-contained.)
 
-## Local admin (never deployed)
+## Admin (`/admin` — in the app)
 
-```bash
-cd admin && npm install && npm start   # http://127.0.0.1:4000
-```
-Local-only (403 if `VERCEL` or `NODE_ENV=production`); excluded from the Vercel
-build via `.vercelignore`. Manages related links + structure (writes the same
-`src/data/site-schema.json` the site reads) and shows analytics. For GA4 set
-`GA_PROPERTY_ID` + `GOOGLE_APPLICATION_CREDENTIALS` in `admin/.env`
-(and `npm approve-scripts protobufjs` once). Vercel analytics is viewed in the
-Vercel dashboard.
+`/admin` is part of the site: server-rendered routes (Vercel functions via
+`@astrojs/vercel`) while the public site stays static. Sections: Dashboard, Links
+(per-article related links), Structure (visibility / reorder), Analytics (GA4 +
+Vercel link). In dev it's at `http://localhost:5000/admin`.
+
+- **Saves persist by committing to GitHub**, which auto-triggers a rebuild (no DB).
+  Set `GITHUB_TOKEN` (Contents:write on this repo), `GITHUB_REPO=spashap/BelgradeBest-v2`,
+  `GITHUB_BRANCH=main` in the Vercel env. In local dev (no token) saves write the
+  file directly.
+- **Auth:** `ADMIN_PASSWORD` UNSET = `/admin` is **open** (current default). Set it to
+  require a login. (A live `/admin` that can edit settings should not stay open +
+  write-enabled for long.)
+- **Analytics:** set `GA_PROPERTY_ID` + `GA_CREDENTIALS_JSON` (inline service-account
+  JSON) for GA4; Vercel Web Analytics is viewed in the Vercel dashboard.
 
 ## Analytics on the public site
 
@@ -86,8 +91,11 @@ affected articles' frontmatter `noindex`). The sitemap re-includes it automatica
 
 1. Create the GitHub repo `spashap/BelgradeBest-v2` (empty), then:
    `git remote add origin https://github.com/spashap/BelgradeBest-v2 && git push -u origin main`
-2. New Vercel project on that repo: root = repo root, build `astro build`, output `dist`.
-   It deploys to a temporary `*.vercel.app` URL. Set `PUBLIC_GA4_ID` env.
+2. New Vercel project on that repo (framework: Astro — uses the Vercel adapter's
+   build output automatically; no custom output dir). It deploys to a temporary
+   `*.vercel.app` URL. Set env: `PUBLIC_GA4_ID` (public analytics); for `/admin`:
+   `GITHUB_TOKEN` + `GITHUB_REPO` + `GITHUB_BRANCH` (settings persistence),
+   optionally `ADMIN_PASSWORD` (gate it), `GA_PROPERTY_ID` + `GA_CREDENTIALS_JSON` (admin analytics).
 3. Verify on the temp URL (head/JSON-LD/body vs the live site, sitemap, robots, CWV).
 4. **Only after you're satisfied:** move the production domain from the old Vercel
    project to this one, and re-point GA4 / Search Console. The old project stays as

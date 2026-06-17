@@ -4,7 +4,6 @@ dist/
 
 # deps
 node_modules/
-admin/node_modules/
 
 # astro
 .astro/
@@ -13,7 +12,6 @@ admin/node_modules/
 .env
 .env.local
 .env.production
-admin/.env
 
 # os / editor
 .DS_Store

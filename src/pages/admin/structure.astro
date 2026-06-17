@@ -1,0 +1,64 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { getCollection } from "astro:content";
+import { readSchema } from "../../lib/admin/store";
+
+const schema = await readSchema();
+const built = new Set((await getCollection("articles")).map((a) => `${a.data.leg}/${a.data.slug}`));
+const err = Astro.url.searchParams.get("error");
+const ok = Astro.url.searchParams.get("ok");
+const legs = [...schema.legs].sort((a, b) => a.order - b.order);
+---
+<AdminLayout title="Structure">
+  {err ? <div class="err">{err}</div> : null}
+  {ok ? <div class="ok">Saved.</div> : null}
+  <p class="muted">Reorder slugs and show/hide them. Hidden slugs drop out of hubs + the homepage. Built status = a content file exists.</p>
+  {
+    legs.map((leg) => {
+      const slugs = [...leg.slugs].sort((a, b) => a.order - b.order);
+      return (
+        <>
+          <h2>{leg.title} <span class="muted">/{leg.slug}</span></h2>
+          <div class="panel">
+            <table>
+              <tr><th>slug</th><th>status</th><th>actions</th></tr>
+              {slugs.map((s) => (
+                <tr>
+                  <td class="slug">{s.slug}</td>
+                  <td>
+                    {built.has(`${leg.slug}/${s.slug}`) ? <span class="badge live">live</span> : <span class="badge">planned</span>}
+                    {s.visible === false ? <span class="badge hidden">hidden</span> : null}
+                  </td>
+                  <td>
+                    <form class="inline" method="post" action="/api/admin/structure">
+                      <input type="hidden" name="action" value="move" />
+                      <input type="hidden" name="leg" value={leg.slug} />
+                      <input type="hidden" name="slug" value={s.slug} />
+                      <input type="hidden" name="dir" value="up" />
+                      <button class="ghost" type="submit">↑</button>
+                    </form>
+                    <form class="inline" method="post" action="/api/admin/structure">
+                      <input type="hidden" name="action" value="move" />
+                      <input type="hidden" name="leg" value={leg.slug} />
+                      <input type="hidden" name="slug" value={s.slug} />
+                      <input type="hidden" name="dir" value="down" />
+                      <button class="ghost" type="submit">↓</button>
+                    </form>
+                    <form class="inline" method="post" action="/api/admin/structure">
+                      <input type="hidden" name="action" value="visible" />
+                      <input type="hidden" name="leg" value={leg.slug} />
+                      <input type="hidden" name="slug" value={s.slug} />
+                      <input type="hidden" name="visible" value={s.visible === false ? "1" : "0"} />
+                      <button class="ghost" type="submit">{s.visible === false ? "Show" : "Hide"}</button>
+                    </form>
+                  </td>
+                </tr>
+              ))}
+            </table>
+          </div>
+        </>
+      );
+    })
+  }
+</AdminLayout>

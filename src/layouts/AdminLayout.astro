@@ -1,0 +1,55 @@
+---
+// Dark operator shell for /admin. Pages that use it MUST set
+// `export const prerender = false` so they run as Vercel functions.
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+const path = Astro.url.pathname;
+const nav = [
+  ["/admin", "Dashboard"],
+  ["/admin/links", "Links"],
+  ["/admin/structure", "Structure"],
+  ["/admin/analytics", "Analytics"],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>{title} — admin</title>
+    <style is:inline>
+      :root{--bg:#16130f;--panel:#221d17;--line:#3a322a;--ink:#ece4d8;--soft:#a89b8a;--accent:#d2693f;--ok:#6fae84}
+      *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 ui-sans-serif,system-ui,Segoe UI,Roboto,sans-serif}
+      a{color:var(--accent)}header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+      header b{font-size:16px}nav a{margin-right:14px;text-decoration:none;color:var(--soft)}nav a.active,nav a:hover{color:var(--ink)}
+      main{padding:20px;max-width:1100px;margin:0 auto}h1{font-size:20px;margin:0 0 16px}h2{font-size:16px;margin:24px 0 10px;color:var(--soft)}
+      .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:0 0 14px}
+      .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.slug{font-family:ui-monospace,monospace;font-size:13px}
+      .badge{font-size:11px;padding:2px 7px;border-radius:99px;border:1px solid var(--line);color:var(--soft)}
+      .badge.live{color:var(--ok);border-color:var(--ok)}.badge.hidden{color:var(--accent);border-color:var(--accent)}
+      textarea{width:100%;min-height:84px;background:#120f0c;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px;font-family:ui-monospace,monospace;font-size:13px}
+      input[type=password]{background:#120f0c;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px;font-size:14px}
+      button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:7px 12px;cursor:pointer;font-size:13px}
+      button.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+      table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line)}th{color:var(--soft);font-weight:600}
+      .muted{color:var(--soft)}form.inline{display:inline}
+      .err{background:#3a1f17;border:1px solid var(--accent);color:#f0c9bb;padding:10px 14px;border-radius:8px;margin:0 0 14px}
+      .ok{background:#1e2a22;border:1px solid var(--ok);color:#bfe6cd;padding:10px 14px;border-radius:8px;margin:0 0 14px}
+    </style>
+  </head>
+  <body>
+    <header>
+      <b>BelgradeBest</b><span class="muted">admin</span>
+      <nav>
+        {nav.map(([href, label]) => <a href={href} class={path === href ? "active" : ""}>{label}</a>)}
+      </nav>
+    </header>
+    <main>
+      <h1>{title}</h1>
+      <slot />
+    </main>
+  </body>
+</html>

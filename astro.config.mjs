@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel";
 import schema from "./src/data/site-schema.json" with { type: "json" };
 import config from "./src/data/site-config.json" with { type: "json" };
 import pagesData from "./src/data/site-pages.json" with { type: "json" };
@@ -32,7 +33,11 @@ const pathOf = (url) => new URL(url).pathname.replace(/\/$/, "");
 
 export default defineConfig({
   site: SITE,
+  // Public pages are prerendered to static HTML (the default). Only the /admin
+  // pages + /api/admin endpoints opt out via `export const prerender = false`,
+  // running as Vercel serverless functions. The adapter enables that.
   output: "static",
+  adapter: vercel(),
   trailingSlash: "never",
   // Local dev + preview run on :5000 (project convention). The admin tool is a
   // separate process on :4000. Production builds are static (port is irrelevant).

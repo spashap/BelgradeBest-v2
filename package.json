@@ -12,14 +12,17 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.3.0",
+    "@astrojs/vercel": "^8.2.11",
     "@fontsource-variable/inter": "^5.2.5",
     "@fontsource-variable/newsreader": "^5.2.5",
+    "@google-analytics/data": "^4.12.1",
     "astro": "^5.6.1",
     "marked": "^15.0.12"
   },
   "allowScripts": {
     "esbuild@0.27.7": true,
     "esbuild@0.25.12": true,
-    "sharp@0.34.5": true
+    "sharp@0.34.5": true,
+    "protobufjs@7.6.4": true
   }
 }

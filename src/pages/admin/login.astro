@@ -1,0 +1,15 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+const bad = Astro.url.searchParams.get("bad");
+---
+<AdminLayout title="Admin login">
+  {bad ? <div class="err">Wrong password.</div> : null}
+  <div class="panel" style="max-width:360px">
+    <form method="post" action="/api/admin/login">
+      <p class="muted">Enter the admin password.</p>
+      <input type="password" name="password" autocomplete="current-password" style="width:100%" />
+      <div class="row" style="margin-top:10px"><button type="submit">Sign in</button></div>
+    </form>
+  </div>
+</AdminLayout>

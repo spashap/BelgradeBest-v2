@@ -18,9 +18,12 @@ inherited from the old project and are NOT being redesigned.
 - **Deploy:** Vercel (static). `site` = `https://belgradebest.com` in
   `astro.config.mjs`, so canonical + sitemap URLs are correct even while served
   from a temporary `*.vercel.app` URL. The production domain switch is manual.
-- **No runtime backend, no DB.** Content + structure live in committed files.
+- **No DB.** Content + structure live in committed files. The PUBLIC site is fully
+  static (prerendered). The ONLY server-rendered parts are the `/admin` pages +
+  `/api/admin/*` endpoints (`export const prerender = false` → Vercel serverless
+  functions via `@astrojs/vercel`); they don't affect public-page performance.
 - **Local dev/preview run on `http://localhost:5000`** (`npm run dev` / `npm run preview`;
-  set in `astro.config.mjs`). The local admin is a separate process on `:4000`.
+  set in `astro.config.mjs`). `/admin` lives at `localhost:5000/admin` in dev.
 
 ### Relationship to the old project (rollback)
 The old Next.js + content-pipeline project at **`../BelgradeBest`** is FROZEN as a
@@ -45,8 +48,10 @@ src/
   pages/  index.astro · [leg]/index.astro · [leg]/[slug].astro · about/privacy/contact/how-we-make-money · robots.txt.ts
   styles/globals.css                 # THE design system (tokens + L3 classes), ported verbatim
 public/images/                       # heroes — FLAT: images/expo-2027/<slug>-hero.png ; legs/<leg>/hero.png
+  middleware.ts                      # auth gate for /admin (open until ADMIN_PASSWORD set)
+  pages/admin/ + pages/api/admin/    # the /admin app (server-rendered, prerender=false)
+  lib/admin/                         # env, store (GitHub/local), analytics
 scripts/port-content.mjs             # one-time porter (NOT deployed; .vercelignore)
-admin/                               # LOCAL-ONLY operator tool (NOT deployed; own package.json)
 ```
 
 ## The Design Law (enforce on every page)
@@ -113,15 +118,25 @@ citation). SmartyPants is OFF (`astro.config.mjs`) so quotes/dashes are not rewr
 Both load in **production only** (`components/Analytics.astro` gates on `import.meta.env.PROD`)
 — never in `astro dev`.
 
-## Local admin (never deployed)
+## Admin (`/admin`, in the app — analytics + front-end settings control)
 
-`cd admin && npm install && npm start` → `http://127.0.0.1:4000`. Local-only
-(`isLocalOnly()` → 403 if `VERCEL`/`NODE_ENV=production`; also `.vercelignore`'d).
-Edits the SAME `src/data/site-schema.json` the site reads (atomic, fresh-read-per-op):
-**Links** (per-article `linksTo`), **Structure** (visibility/reorder), **Analytics**
-(GA4 Data API + Vercel dashboard link). "Live" = a content `.md` exists. GA4 needs
-`GA_PROPERTY_ID` + `GOOGLE_APPLICATION_CREDENTIALS` in `admin/.env` (+ once:
-`npm approve-scripts protobufjs`).
+`/admin` is part of the site (server-rendered routes, deployed on Vercel), NOT a
+separate tool. Sections: **Dashboard**, **Links** (per-article `linksTo`),
+**Structure** (visibility / reorder), **Analytics** (GA4 + Vercel link). "Live" =
+the slug is in the `articles` content collection.
+
+- **Persistence = GitHub commit → rebuild.** A save edits `src/data/site-schema.json`
+  via the GitHub Contents API (`GITHUB_TOKEN` + `GITHUB_REPO` + `GITHUB_BRANCH`),
+  which auto-triggers a Vercel rebuild so the static site goes live (~1 min). NO DB.
+  In dev (no token) it writes the local file directly (instant). Code: `src/lib/admin/store.ts`.
+- **Auth (`src/middleware.ts`)**: `ADMIN_PASSWORD` UNSET = `/admin` is OPEN (current
+  state, by choice). Set that env var to require a login (`/admin/login`); the cookie
+  is a hash of the password. Nothing else changes.
+- **Analytics**: GA4 Data API via `GA_PROPERTY_ID` + `GA_CREDENTIALS_JSON` (inline
+  service-account JSON; on Vercel needs `npm approve-scripts protobufjs` to have run
+  at install — Vercel runs install scripts normally). Vercel Web Analytics is viewed
+  in the Vercel dashboard. Code: `src/lib/admin/analytics.ts`.
+- All admin routes are `noindex` + excluded from the sitemap.
 
 ## Commands
 
@@ -153,5 +168,8 @@ build scripts once (`npm approve-scripts esbuild`, `sharp`; `protobufjs` in admi
   in lockstep if you ever must).
 - Do not move the production domain to V2 without the owner's explicit go (old
   project is the rollback).
-- Do not deploy `admin/` or `scripts/` (they are `.vercelignore`'d — keep it that way).
+- Do not make PUBLIC pages server-rendered — only `/admin` + `/api/admin/*` may set
+  `prerender = false`. Keep the public site static.
+- Do not deploy `scripts/` (`.vercelignore`'d). Do not leave `/admin` write-enabled
+  AND password-less for long — set `ADMIN_PASSWORD` once the token is wired.
 ```

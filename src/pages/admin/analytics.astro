@@ -1,0 +1,31 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { ga4TopPages, vercelInfo } from "../../lib/admin/analytics";
+
+const ga = await ga4TopPages();
+const v = vercelInfo();
+---
+<AdminLayout title="Analytics">
+  <h2>Google Analytics 4 — top pages (28 days)</h2>
+  <div class="panel">
+    {
+      ga.configured ? (
+        <table>
+          <tr><th>page</th><th>views</th><th>users</th></tr>
+          {ga.rows.map((r) => (
+            <tr><td class="slug">{r.path}</td><td>{r.views}</td><td>{r.users}</td></tr>
+          ))}
+        </table>
+      ) : (
+        <p class="muted">GA4 not configured. {ga.reason}</p>
+      )
+    }
+  </div>
+
+  <h2>Vercel Web Analytics</h2>
+  <div class="panel">
+    <p class="muted">{v.note}</p>
+    <p><a href={v.dashboardUrl} target="_blank" rel="noreferrer">Open Vercel dashboard ↗</a></p>
+  </div>
+</AdminLayout>

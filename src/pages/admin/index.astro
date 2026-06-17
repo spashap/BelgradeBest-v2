@@ -1,0 +1,50 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { getCollection } from "astro:content";
+import { readSchema, usingGitHub } from "../../lib/admin/store";
+
+const schema = await readSchema();
+const built = new Set((await getCollection("articles")).map((a) => `${a.data.leg}/${a.data.slug}`));
+let builtCount = 0;
+let plannedCount = 0;
+for (const leg of schema.legs)
+  for (const s of leg.slugs) (built.has(`${leg.slug}/${s.slug}`) ? builtCount++ : plannedCount++);
+
+const legs = [...schema.legs].sort((a, b) => a.order - b.order);
+const persistence = usingGitHub() ? "GitHub commit → auto-redeploy" : "local file (dev)";
+---
+<AdminLayout title="Dashboard">
+  <div class="panel">
+    <div class="row">
+      <b>{builtCount}</b> built · <b>{plannedCount}</b> planned · <b>{schema.legs.length}</b> legs
+      <span class="badge">persistence: {persistence}</span>
+    </div>
+  </div>
+
+  <h2>Legs</h2>
+  <div class="panel">
+    <table>
+      <tr><th>slug</th><th>title</th><th>built</th><th>index</th><th></th></tr>
+      {
+        legs.map((l) => {
+          const b = l.slugs.filter((s) => built.has(`${l.slug}/${s.slug}`)).length;
+          return (
+            <tr>
+              <td class="slug">{l.slug}</td>
+              <td>{l.title}</td>
+              <td>{b}/{l.slugs.length}</td>
+              <td>{l.noindex ? <span class="badge">noindex</span> : <span class="badge live">indexable</span>}</td>
+              <td>{l.visible === false ? <span class="badge hidden">hidden</span> : null}</td>
+            </tr>
+          );
+        })
+      }
+    </table>
+  </div>
+  <p class="muted">
+    Edit related links in <a href="/admin/links">Links</a>; reorder / show-hide in
+    <a href="/admin/structure">Structure</a>. Saves write <code>src/data/site-schema.json</code>
+    {usingGitHub() ? " via a GitHub commit, which triggers a Vercel rebuild (~1 min) to go live." : " to the local file (dev)."}
+  </p>
+</AdminLayout>
