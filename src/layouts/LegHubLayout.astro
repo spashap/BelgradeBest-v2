@@ -1,0 +1,121 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Container from "../components/Container.astro";
+import Placeholder from "../components/Placeholder.astro";
+import ArticleHero from "../components/ArticleHero.astro";
+import Note from "../components/Note.astro";
+import RichNote from "../components/RichNote.astro";
+import type { RichPart } from "../lib/types";
+import SectionHead from "../components/SectionHead.astro";
+import Grid from "../components/Grid.astro";
+import Card from "../components/Card.astro";
+import MarkdownInline from "../components/MarkdownInline.astro";
+import Schema from "../components/Schema.astro";
+import { breadcrumbSchema, expoEventSchema } from "../lib/schemas";
+import { SITE, CONFIG, interp } from "../lib/site";
+import { clusterBySlug } from "../lib/clusters";
+import { legStatus } from "../lib/leg-status";
+import { heroForLeg, heroForSlug } from "../lib/hero";
+import { getPlannedChildren } from "../lib/content-plan";
+import { articlesForLeg } from "../lib/articles";
+import { hubMetadata } from "../lib/metadata";
+
+// Shared T2 leg/hub template. One card per PLANNED slug (schema order): BUILT
+// slugs (a content entry exists) render a full Card; planned-only slugs render
+// a muted placeholder badged with the plan status.
+interface Props {
+  clusterSlug: string;
+}
+const { clusterSlug } = Astro.props;
+const cluster = clusterBySlug(clusterSlug)!;
+const meta = hubMetadata(clusterSlug);
+const legHero = heroForLeg(clusterSlug);
+const planned = getPlannedChildren(clusterSlug);
+const built = new Map((await articlesForLeg(clusterSlug)).map((a) => [a.data.slug, a]));
+const isLive = legStatus(clusterSlug) === "live";
+const noteParts = (isLive ? CONFIG.chrome.legHub.noteLive : CONFIG.chrome.legHub.noteComingSoon) as RichPart[];
+const extraSchemas = clusterSlug === "expo-2027" ? [expoEventSchema()] : [];
+
+function fmtDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+}
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={cluster.eyebrow} title={cluster.title} lede={cluster.intro} />
+
+  <Container>
+    {
+      legHero ? (
+        <ArticleHero src={legHero.src} alt={legHero.alt} caption={null} />
+      ) : (
+        <Placeholder
+          ratio="21/9"
+          label={interp(CONFIG.chrome.legHub.clusterHeroPlaceholderTemplate, { leg: cluster.title })}
+        />
+      )
+    }
+  </Container>
+
+  {
+    cluster.body && cluster.body.trim() ? (
+      <Container variant="read">
+        <article class="c-article">
+          <MarkdownInline markdown={cluster.body} />
+        </article>
+      </Container>
+    ) : null
+  }
+
+  <Container variant="read">
+    <div class="u-stack-lg">
+      <Note tone="warn"><RichNote parts={noteParts} /></Note>
+    </div>
+  </Container>
+
+  <Container>
+    <div class="u-stack-lg"></div>
+    <SectionHead
+      eyebrow={CONFIG.chrome.legHub.cardsEyebrow}
+      title={interp(CONFIG.chrome.legHub.cardsTitleTemplate, { leg: cluster.title })}
+      intro={CONFIG.chrome.legHub.cardsIntro}
+    />
+    <Grid>
+      {
+        planned.map((p) => {
+          const a = built.get(p.slug);
+          if (a) {
+            const label = a.data.shortTitle || a.data.title;
+            const hero = heroForSlug(p.slug, label);
+            return (
+              <Card
+                href={`/${clusterSlug}/${p.slug}`}
+                title={label}
+                meta={a.data.lastUpdated ? `Last published ${fmtDate(a.data.lastUpdated)}` : undefined}
+                body={a.data.description}
+                src={hero?.src}
+                imgAlt={hero?.alt ?? label}
+              />
+            );
+          }
+          return (
+            <div class="c-stub" aria-label={`Planned page: ${p.title}`}>
+              <span class="c-stub__badge">{p.status || CONFIG.chrome.legHub.stubFallbackBadge}</span>
+              <span class="c-stub__title">{p.title}</span>
+            </div>
+          );
+        })
+      }
+    </Grid>
+  </Container>
+
+  <Schema
+    schemas={[
+      breadcrumbSchema([
+        { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+        { name: cluster.title, url: SITE.origin + cluster.href },
+      ]),
+      ...extraSchemas,
+    ]}
+  />
+</BaseLayout>

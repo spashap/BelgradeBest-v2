@@ -1,0 +1,38 @@
+---
+import Container from "./Container.astro";
+import SectionHead from "./SectionHead.astro";
+import Grid from "./Grid.astro";
+import Card from "./Card.astro";
+import type { RelatedLink } from "../lib/links";
+
+// The "Read next" / evergreen-link engine at the bottom of T3 pages. Targets are
+// already resolved (lib/links.ts relatedFor) from the editable link master.
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  targets: RelatedLink[];
+}
+const { eyebrow, title, intro, targets } = Astro.props;
+---
+{
+  targets.length > 0 ? (
+    <section class="c-internal-link-block">
+      <Container>
+        <SectionHead eyebrow={eyebrow} title={title} intro={intro} />
+        <Grid>
+          {targets.map((t) => (
+            <Card
+              href={t.href}
+              title={t.title}
+              body={t.body}
+              src={t.heroSrc}
+              imgAlt={t.heroAlt}
+              imgPlaceholder="thumbnail"
+            />
+          ))}
+        </Grid>
+      </Container>
+    </section>
+  ) : null
+}

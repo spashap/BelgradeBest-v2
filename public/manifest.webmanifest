@@ -1,0 +1,23 @@
+{
+  "name": "BelgradeBest",
+  "short_name": "BelgradeBest",
+  "description": "An honest, English-first guide to Belgrade for foreign visitors.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#b5462b",
+  "icons": [
+    {
+      "src": "/images/Favico/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/Favico/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

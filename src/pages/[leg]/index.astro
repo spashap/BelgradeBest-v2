@@ -1,0 +1,11 @@
+---
+import LegHubLayout from "../../layouts/LegHubLayout.astro";
+import { clusters } from "../../lib/clusters";
+
+export function getStaticPaths() {
+  return clusters.map((c) => ({ params: { leg: c.slug } }));
+}
+
+const { leg } = Astro.params;
+---
+<LegHubLayout clusterSlug={leg!} />

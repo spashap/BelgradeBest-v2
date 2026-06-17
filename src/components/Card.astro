@@ -1,0 +1,43 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  body?: string;
+  meta?: string; // small metadata line under the title (e.g. last-published date)
+  shape?: "default" | "sq" | "wide";
+  src?: string; // real image URL; center-cropped to the card ratio
+  imgAlt?: string;
+  imgPlaceholder?: string; // text box shown when no src
+}
+const {
+  href,
+  title,
+  body,
+  meta,
+  shape = "default",
+  src,
+  imgAlt = "",
+  imgPlaceholder = "img",
+} = Astro.props;
+const shapeClass = { default: "", sq: "c-card--sq", wide: "c-card--wide" } as const;
+const mod = shapeClass[shape];
+---
+<a href={href} class={`c-card ${mod}`.trim()}>
+  <div class="c-card__img">
+    {
+      src ? (
+        <img
+          src={src}
+          alt={imgAlt}
+          loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;display:block"
+        />
+      ) : (
+        imgPlaceholder
+      )
+    }
+  </div>
+  <h3>{title}</h3>
+  {meta ? <div class="c-card__meta">{meta}</div> : null}
+  {body ? <p>{body}</p> : null}
+</a>

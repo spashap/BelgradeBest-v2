@@ -1,0 +1,64 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/newsreader";
+import "../styles/globals.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Schema from "../components/Schema.astro";
+import Analytics from "../components/Analytics.astro";
+import { organizationSchema } from "../lib/schemas";
+import { CONFIG } from "../lib/site";
+import type { PageMeta } from "../lib/metadata";
+
+interface Props {
+  meta: PageMeta;
+}
+const { meta } = Astro.props;
+
+// CSS↔JSON layout bridge — the four layout knobs (widths + cards-per-row grid)
+// live ONLY in site-config.json; globals.css does not define them. Injected here
+// as an inline <style> so CSS (whose media-query breakpoints can't be CSS vars)
+// gets them. Coerced to numbers (trusted config).
+const L = CONFIG.layout;
+const layoutCss =
+  `:root{--maxw:${Number(L.maxWidth)}px;--readw:${Number(L.readWidth)}px;--readw-article:${Number(L.articleWidth)}px}` +
+  `.c-grid{grid-template-columns:repeat(${Number(L.grid.mobileCols)},1fr)}` +
+  `@media(min-width:${Number(L.grid.tabletBreakpoint)}px){.c-grid{grid-template-columns:repeat(${Number(L.grid.tabletCols)},1fr)}}` +
+  `@media(min-width:${Number(L.grid.desktopBreakpoint)}px){.c-grid{grid-template-columns:repeat(${Number(L.grid.desktopCols)},1fr)}}`;
+---
+<!doctype html>
+<html lang={CONFIG.brand.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <link rel="canonical" href={meta.canonical} />
+    {meta.noindex ? <meta name="robots" content="noindex,follow" /> : null}
+
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={meta.canonical} />
+    <meta property="og:site_name" content={CONFIG.brand.name} />
+    <meta property="og:type" content={meta.ogType} />
+    <meta property="og:locale" content={CONFIG.brand.ogLocale} />
+
+    <meta name="twitter:card" content={CONFIG.seo.twitterCard} />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <style is:inline id="site-layout" set:html={layoutCss}></style>
+    <Analytics />
+  </head>
+  <body>
+    <SiteHeader />
+    <slot />
+    <SiteFooter />
+    <Schema schemas={[organizationSchema()]} />
+  </body>
+</html>

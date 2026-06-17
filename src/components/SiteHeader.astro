@@ -1,0 +1,30 @@
+---
+import Container from "./Container.astro";
+import Wordmark from "./Wordmark.astro";
+import { CONFIG } from "../lib/site";
+import { clusterBySlug } from "../lib/clusters";
+
+// Wordmark + leg nav. Nav items are leg slug REFS in chrome.headerNav; titles/
+// hrefs resolve from the structure (clusterBySlug), using navLabel when set.
+const items: string[] = (CONFIG.chrome.headerNav?.items ?? []) as string[];
+const nav = items
+  .map((slug) => {
+    const c = clusterBySlug(slug);
+    return c ? { href: c.href, label: (c.navLabel && c.navLabel.trim()) || c.title } : null;
+  })
+  .filter((n): n is { href: string; label: string } => n !== null);
+---
+<header class="c-site-header">
+  <Container>
+    <div class="c-header">
+      <Wordmark />
+      {
+        nav.length > 0 ? (
+          <nav class="c-header__nav" aria-label="Sections">
+            {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+          </nav>
+        ) : null
+      }
+    </div>
+  </Container>
+</header>

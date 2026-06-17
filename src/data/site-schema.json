@@ -1,0 +1,834 @@
+{
+  "version": 1,
+  "legs": [
+    {
+      "slug": "visit-belgrade",
+      "order": 1,
+      "visible": true,
+      "eyebrow": "Leisure",
+      "title": "Visit Belgrade",
+      "navLabel": "",
+      "seoTitle": "",
+      "seoDescription": "",
+      "noindex": true,
+      "tagline": "Sights, itineraries, and what's actually worth your time.",
+      "intro": "Belgrade for visitors who don't speak Serbian — the things worth doing, the neighborhoods worth walking, and the trips worth planning.",
+      "body": "",
+      "hero": {
+        "src": "/images/legs/visit-belgrade/hero.png",
+        "alt": "Visit Belgrade — what to see"
+      },
+      "slugs": [
+        {
+          "slug": "is-belgrade-worth-visiting",
+          "order": 1,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P1",
+          "title": "Is Belgrade worth visiting? Safe, cheap, and when to go",
+          "linksTo": [
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/visit-belgrade/belgrade-itinerary-3-days",
+            "/plan-your-trip"
+          ]
+        },
+        {
+          "slug": "things-to-do-in-belgrade",
+          "order": 2,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P1",
+          "title": "Things to do in Belgrade — the must-sees and why they matter",
+          "linksTo": [
+            "/visit-belgrade/understanding-belgrade",
+            "/visit-belgrade/belgrade-museums",
+            "/visit-belgrade/belgrade-itinerary-3-days"
+          ]
+        },
+        {
+          "slug": "belgrade-itinerary-3-days",
+          "order": 3,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P1",
+          "title": "Belgrade in 3 days — a flexible itinerary (with 1- and 2-day options)",
+          "linksTo": [
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/visit-belgrade/belgrade-day-trips",
+            "/visit-belgrade/understanding-belgrade"
+          ]
+        },
+        {
+          "slug": "understanding-belgrade",
+          "order": 4,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P1",
+          "title": "Understanding Belgrade — the layered city and its fortress",
+          "linksTo": [
+            "/visit-belgrade/brutalist-belgrade",
+            "/visit-belgrade/zemun",
+            "/visit-belgrade/belgrade-museums"
+          ]
+        },
+        {
+          "slug": "belgrade-neighborhoods",
+          "order": 5,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Belgrade neighbourhoods — the districts, by character",
+          "linksTo": [
+            "/visit-belgrade/understanding-belgrade",
+            "/visit-belgrade/brutalist-belgrade",
+            "/visit-belgrade/zemun"
+          ]
+        },
+        {
+          "slug": "belgrade-museums",
+          "order": 6,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Belgrade museums — hours, prices, and which are worth it",
+          "linksTo": [
+            "/visit-belgrade/understanding-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "zemun",
+          "order": 7,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Zemun — Belgrade's Austro-Hungarian old town and Gardoš Tower",
+          "linksTo": [
+            "/visit-belgrade/understanding-belgrade",
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/plan-your-trip/getting-around"
+          ]
+        },
+        {
+          "slug": "brutalist-belgrade",
+          "order": 8,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Brutalist Belgrade — New Belgrade's concrete landmarks and how to see them",
+          "linksTo": [
+            "/visit-belgrade/understanding-belgrade",
+            "/visit-belgrade/belgrade-museums"
+          ]
+        },
+        {
+          "slug": "belgrade-day-trips",
+          "order": 9,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Day trips from Belgrade — Novi Sad, the Iron Gates, and more",
+          "linksTo": [
+            "/visit-belgrade/belgrade-itinerary-3-days",
+            "/plan-your-trip/stations-and-onward-travel"
+          ]
+        },
+        {
+          "slug": "belgrade-arenas-and-stadiums",
+          "order": 10,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P3",
+          "title": "Belgrade arenas and stadiums — venues, tours, and what's on",
+          "linksTo": [
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/visit-belgrade/belgrade-neighborhoods"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "plan-your-trip",
+      "order": 2,
+      "visible": true,
+      "eyebrow": "Practical",
+      "title": "Plan Your Trip",
+      "navLabel": "",
+      "seoTitle": "",
+      "seoDescription": "",
+      "noindex": true,
+      "tagline": "Arrival, visas, transport, SIM, money, safety — the first 24 hours and beyond.",
+      "intro": "Everything you need to know before and after you land. We update the perishable bits — fares, free-transport rules, voucher workflows — and stay honest about what's actually current.",
+      "body": "",
+      "hero": {
+        "src": "/images/legs/plan-your-trip/hero.png",
+        "alt": "Plan your trip to Belgrade"
+      },
+      "slugs": [
+        {
+          "slug": "airport-to-city",
+          "order": 1,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Airport to city — bus vs A1 vs taxi vs CarGo",
+          "linksTo": [
+            "/plan-your-trip/getting-around",
+            "/expo-2027/getting-there"
+          ]
+        },
+        {
+          "slug": "money",
+          "order": 2,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Money in Belgrade — dinar, cards, tipping",
+          "linksTo": [
+            "/plan-your-trip/staying-safe",
+            "/plan-your-trip/getting-around"
+          ]
+        },
+        {
+          "slug": "stations-and-onward-travel",
+          "order": 3,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Belgrade's stations and onward travel",
+          "linksTo": [
+            "/plan-your-trip/getting-around",
+            "/plan-your-trip/airport-to-city"
+          ]
+        },
+        {
+          "slug": "best-time-to-visit",
+          "order": 4,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "The best time to visit Serbia",
+          "linksTo": [
+            "/expo-2027/guide",
+            "/visit-belgrade"
+          ]
+        },
+        {
+          "slug": "getting-around",
+          "order": 5,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Getting around Belgrade — transport, free PT",
+          "linksTo": [
+            "/plan-your-trip/airport-to-city",
+            "/visit-belgrade"
+          ]
+        },
+        {
+          "slug": "visa-and-entry",
+          "order": 6,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Entry rules and registration for Serbia",
+          "linksTo": [
+            "/plan-your-trip/staying-safe",
+            "/invest-and-relocate"
+          ]
+        },
+        {
+          "slug": "staying-safe",
+          "order": 7,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Staying safe and healthy in Belgrade",
+          "linksTo": [
+            "/plan-your-trip/money",
+            "/plan-your-trip/airport-to-city"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "where-to-stay",
+      "order": 3,
+      "visible": true,
+      "eyebrow": "Stay",
+      "title": "Where to Stay",
+      "navLabel": "",
+      "seoTitle": "",
+      "seoDescription": "",
+      "noindex": true,
+      "tagline": "Neighborhoods, hotels, and apartments — split honestly by who you are.",
+      "intro": "Where you sleep changes what Belgrade you see. The choices split by what you came for, not by star rating.",
+      "body": "",
+      "hero": {
+        "src": "/images/legs/where-to-stay/hero.png",
+        "alt": "Where to stay in Belgrade"
+      },
+      "slugs": [
+        {
+          "slug": "neighbourhoods",
+          "order": 1,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Stay by neighbourhood — pick the area first",
+          "linksTo": [
+            "hub"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "food-and-nightlife",
+      "order": 4,
+      "visible": true,
+      "eyebrow": "Eat & Out",
+      "title": "Food, Nightlife & Entertainment",
+      "navLabel": "Food & Nightlife",
+      "seoTitle": "",
+      "seoDescription": "",
+      "noindex": false,
+      "tagline": "Splavovi, kafanas, late nights, and where Belgrade actually goes out.",
+      "intro": "Belgrade nightlife is one of the city's actual reasons to visit. The honest take, not a club promoter's.",
+      "body": "",
+      "hero": {
+        "src": "/images/legs/food-and-nightlife/hero.png",
+        "alt": "Food, Nightlife & Entertainment"
+      },
+      "slugs": [
+        {
+          "slug": "belgrade-splavovi",
+          "order": 1,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P3",
+          "title": "Splavovi — Belgrade's river clubs explained",
+          "linksTo": [
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/plan-your-trip/getting-around"
+          ]
+        },
+        {
+          "slug": "belgrade-grill-and-street-food",
+          "order": 2,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Belgrade grill and street food — ćevapi, pljeskavica, burek and late-night eats",
+          "linksTo": [
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/plan-your-trip/money"
+          ]
+        },
+        {
+          "slug": "serbian-food",
+          "order": 3,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P1",
+          "title": "Serbian food — the dishes, the staples, and how Serbians eat",
+          "linksTo": [
+            "/food-and-nightlife/belgrade-grill-and-street-food",
+            "/food-and-nightlife/best-restaurants-in-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "belgrade-nightlife",
+          "order": 4,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P1",
+          "title": "Belgrade nightlife — the scene, the seasons, and the districts",
+          "linksTo": [
+            "/food-and-nightlife/belgrade-splavovi",
+            "/food-and-nightlife/belgrade-kafanas",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "eating-and-drinking-in-belgrade",
+          "order": 5,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Eating and drinking in Belgrade — how it actually works",
+          "linksTo": [
+            "/food-and-nightlife/belgrade-grill-and-street-food",
+            "/plan-your-trip/money",
+            "/plan-your-trip/getting-around"
+          ]
+        },
+        {
+          "slug": "belgrade-kafanas",
+          "order": 6,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Belgrade kafanas — the traditional tavern, explained",
+          "linksTo": [
+            "/food-and-nightlife/serbian-food",
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "best-restaurants-in-belgrade",
+          "order": 7,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Best restaurants in Belgrade — fine dining, Michelin and New Balkan",
+          "linksTo": [
+            "/food-and-nightlife/serbian-food",
+            "/food-and-nightlife/belgrade-wine-bars",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "belgrade-food-and-drink-by-neighborhood",
+          "order": 8,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P3",
+          "title": "Belgrade food and drink by neighbourhood — where to eat and drink, by district",
+          "linksTo": [
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/food-and-nightlife/belgrade-kafanas",
+            "/visit-belgrade/zemun"
+          ]
+        },
+        {
+          "slug": "belgrade-coffee-culture",
+          "order": 9,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Belgrade coffee culture — Turkish tradition, specialty roasters and sweets",
+          "linksTo": [
+            "/food-and-nightlife/belgrade-kafanas",
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "belgrade-wine-bars",
+          "order": 10,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Belgrade wine bars and rakija — Serbian wine and fruit brandy, and where to taste them",
+          "linksTo": [
+            "/food-and-nightlife/belgrade-kafanas",
+            "/food-and-nightlife/best-restaurants-in-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "belgrade-craft-beer",
+          "order": 11,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Belgrade craft beer — breweries, taprooms and the Dorćol scene",
+          "linksTo": [
+            "/food-and-nightlife/belgrade-nightlife",
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "vegetarian-and-vegan-belgrade",
+          "order": 12,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Vegetarian and vegan Belgrade — how to eat well in a meat city",
+          "linksTo": [
+            "/food-and-nightlife/serbian-food",
+            "/food-and-nightlife/best-restaurants-in-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "expo-2027",
+      "order": 5,
+      "visible": true,
+      "eyebrow": "Belgrade Expo 2027",
+      "title": "Expo 2027",
+      "navLabel": "",
+      "seoTitle": "Expo 2027 Belgrade — an honest visitor guide",
+      "seoDescription": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. Confirmed, reported, and still-unknown — tracked honestly, updated as official information lands.",
+      "noindex": false,
+      "tagline": "What's coming 15 May–15 Aug 2027, and how to make a Belgrade trip out of it.",
+      "intro": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. We're tracking what's confirmed, what's reported, and what's still unknown — and showing you how an Expo visit can become a city visit.",
+      "body": "",
+      "hero": {
+        "src": "/images/legs/expo-2027/hero.png",
+        "alt": "Belgrade Expo 2027 guide"
+      },
+      "slugs": [
+        {
+          "slug": "what-is-it",
+          "order": 1,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "What is a Specialised Expo, is it worth visiting",
+          "linksTo": [
+            "/visit-belgrade"
+          ]
+        },
+        {
+          "slug": "guide",
+          "order": 2,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "The complete visitor guide to Expo 2027 (pillar)",
+          "linksTo": [
+            "/plan-your-trip",
+            "/visit-belgrade",
+            "/where-to-stay"
+          ]
+        },
+        {
+          "slug": "programme",
+          "order": 3,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Expo 2027 programme — pavilions, days, sport, music",
+          "linksTo": [
+            "/food-and-nightlife",
+            "/visit-belgrade/things-to-do"
+          ]
+        },
+        {
+          "slug": "getting-there",
+          "order": 4,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Getting to Expo 2027: Surčin, airport, transport",
+          "linksTo": [
+            "/plan-your-trip/airport-to-city",
+            "/plan-your-trip/getting-around"
+          ]
+        },
+        {
+          "slug": "participants",
+          "order": 5,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Participating countries — confirmed & expected",
+          "linksTo": [
+            "/visit-belgrade",
+            "/invest-and-relocate"
+          ]
+        },
+        {
+          "slug": "tickets",
+          "order": 6,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Expo 2027 tickets — what we know so far",
+          "linksTo": [
+            "/plan-your-trip"
+          ]
+        },
+        {
+          "slug": "where-to-stay",
+          "order": 7,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Where to stay for Expo 2027 — area/budget/commute",
+          "linksTo": [
+            "stay-neighbourhoods",
+            "stay-hub"
+          ]
+        },
+        {
+          "slug": "itineraries",
+          "order": 8,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Expo + Belgrade in 2/3/5 days",
+          "linksTo": [
+            "visit-itineraries",
+            "things-to-do"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "invest-and-relocate",
+      "order": 6,
+      "visible": true,
+      "eyebrow": "Investor",
+      "title": "Invest & Relocate",
+      "navLabel": "",
+      "seoTitle": "",
+      "seoDescription": "",
+      "noindex": true,
+      "tagline": "Real estate, company setup, and the macro story behind Belgrade today.",
+      "intro": "Belgrade for people thinking about money, not vacation. Real estate, company setup, and what's driving the FDI numbers.",
+      "body": "",
+      "hero": {
+        "src": "/images/legs/invest-and-relocate/hero.png",
+        "alt": "Invest in Belgrade or Relocate to Serbia"
+      },
+      "slugs": [
+        {
+          "slug": "real-estate",
+          "order": 1,
+          "visible": true,
+          "intent": "investor",
+          "priority": "P1",
+          "title": "Belgrade real estate for foreigners — areas, yields, risks",
+          "linksTo": [
+            "hub",
+            "business-setup"
+          ]
+        },
+        {
+          "slug": "business-setup",
+          "order": 2,
+          "visible": true,
+          "intent": "investor",
+          "priority": "P2",
+          "title": "Open a company in Serbia as a foreigner",
+          "linksTo": [
+            "hub",
+            "real-estate"
+          ]
+        },
+        {
+          "slug": "why-belgrade-fdi",
+          "order": 3,
+          "visible": true,
+          "intent": "investor",
+          "priority": "P2",
+          "title": "Why global FDI rankings put Belgrade on the map",
+          "linksTo": [
+            "hub"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "medical-tourism",
+      "order": 7,
+      "visible": true,
+      "eyebrow": "Vertical",
+      "title": "Medical Tourism",
+      "navLabel": "",
+      "seoTitle": "",
+      "seoDescription": "",
+      "noindex": false,
+      "tagline": "Dental, cosmetic, wellness — neutral due-diligence, not a clinic ad.",
+      "intro": "Belgrade is a real medical-tourism market. This section is an honest, neutral guide layer — regulation, risk, how to choose — not a lead-gen funnel.",
+      "body": "",
+      "hero": {
+        "src": "/images/legs/medical-tourism/hero.png",
+        "alt": "Serbia offers a range of medical procedures, but some of the most popular include dental treatments, cosmetic surgery, orthopedic surgeries like knee and hip replacements, and fertility treatments"
+      },
+      "slugs": [
+        {
+          "slug": "medical-tourism-belgrade",
+          "order": 1,
+          "visible": true,
+          "intent": null,
+          "priority": "P1",
+          "title": "Medical tourism in Belgrade — an honest overview",
+          "linksTo": [
+            "/medical-tourism/choosing-a-clinic-in-belgrade",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/visit-belgrade/belgrade-neighborhoods"
+          ]
+        },
+        {
+          "slug": "choosing-a-clinic-in-belgrade",
+          "order": 2,
+          "visible": true,
+          "intent": null,
+          "priority": "P1",
+          "title": "Choosing a clinic in Belgrade — how to vet a provider",
+          "linksTo": [
+            "/medical-tourism/medical-tourism-risks-and-aftercare",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/plan-your-trip/staying-safe"
+          ]
+        },
+        {
+          "slug": "medical-tourism-risks-and-aftercare",
+          "order": 3,
+          "visible": true,
+          "intent": null,
+          "priority": "P1",
+          "title": "Medical tourism risks and aftercare — the honest picture",
+          "linksTo": [
+            "/medical-tourism/choosing-a-clinic-in-belgrade",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/plan-your-trip/staying-safe"
+          ]
+        },
+        {
+          "slug": "medical-tourism-costs-in-belgrade",
+          "order": 4,
+          "visible": true,
+          "intent": null,
+          "priority": "P1",
+          "title": "Medical tourism costs in Belgrade — how the pricing really works",
+          "linksTo": [
+            "/medical-tourism/medical-tourism-belgrade",
+            "/medical-tourism/dental-work-belgrade",
+            "/plan-your-trip/money"
+          ]
+        },
+        {
+          "slug": "dental-work-belgrade",
+          "order": 5,
+          "visible": true,
+          "intent": null,
+          "priority": "P1",
+          "title": "Dental work in Belgrade — costs, the trip, and what to check",
+          "linksTo": [
+            "/medical-tourism/dental-implants-explained",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/visit-belgrade/belgrade-neighborhoods"
+          ]
+        },
+        {
+          "slug": "cosmetic-surgery-belgrade",
+          "order": 6,
+          "visible": true,
+          "intent": null,
+          "priority": "P2",
+          "title": "Cosmetic surgery in Belgrade — procedures, costs and cautions",
+          "linksTo": [
+            "/medical-tourism/medical-tourism-risks-and-aftercare",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/plan-your-trip/staying-safe"
+          ]
+        },
+        {
+          "slug": "hair-transplant-belgrade",
+          "order": 7,
+          "visible": true,
+          "intent": null,
+          "priority": "P2",
+          "title": "Hair transplant in Belgrade — costs and Serbia vs Turkey",
+          "linksTo": [
+            "/medical-tourism/hair-transplant-explained",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "eye-surgery-belgrade",
+          "order": 8,
+          "visible": true,
+          "intent": null,
+          "priority": "P3",
+          "title": "Eye surgery in Belgrade — LASIK and cataract, honestly",
+          "linksTo": [
+            "/medical-tourism/medical-tourism-risks-and-aftercare",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "major-surgery-in-belgrade",
+          "order": 9,
+          "visible": true,
+          "intent": null,
+          "priority": "P3",
+          "title": "Major surgery in Belgrade — orthopaedics, and the honest limits",
+          "linksTo": [
+            "/medical-tourism/medical-tourism-risks-and-aftercare",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/plan-your-trip/staying-safe"
+          ]
+        },
+        {
+          "slug": "dental-implants-explained",
+          "order": 10,
+          "visible": true,
+          "intent": null,
+          "priority": "P2",
+          "title": "Dental implants explained — the procedure, risks and costs",
+          "linksTo": [
+            "/medical-tourism/dental-work-belgrade",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "hair-transplant-explained",
+          "order": 11,
+          "visible": true,
+          "intent": null,
+          "priority": "P3",
+          "title": "Hair transplants explained — FUE, FUT and realistic results",
+          "linksTo": [
+            "/medical-tourism/hair-transplant-belgrade",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "ivf-explained",
+          "order": 12,
+          "visible": true,
+          "intent": null,
+          "priority": "P3",
+          "title": "IVF explained — the process, success rates and costs",
+          "linksTo": [
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/medical-tourism/medical-tourism-risks-and-aftercare",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "ivf-and-fertility-belgrade",
+          "order": 13,
+          "visible": true,
+          "intent": null,
+          "priority": "P3",
+          "title": "IVF and fertility in Belgrade — the law, eligibility and costs",
+          "linksTo": [
+            "/medical-tourism/ivf-explained",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "gender-affirming-surgery-belgrade",
+          "order": 14,
+          "visible": true,
+          "intent": null,
+          "priority": "P3",
+          "title": "Gender-affirming surgery in Belgrade — what to expect, staging and recovery",
+          "linksTo": [
+            "/medical-tourism/medical-tourism-risks-and-aftercare",
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/plan-your-trip/staying-safe"
+          ]
+        }
+      ]
+    }
+  ]
+}

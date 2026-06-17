@@ -1,0 +1,11 @@
+---
+import { CONFIG } from "../lib/site";
+interface Props {
+  href?: string;
+}
+const { href = "/" } = Astro.props;
+const w = CONFIG.chrome.wordmark;
+---
+<a href={href} class="c-wordmark" aria-label={w.ariaLabel}
+  >{w.lead}<span class="c-wordmark__accent">{w.accent}</span></a
+>

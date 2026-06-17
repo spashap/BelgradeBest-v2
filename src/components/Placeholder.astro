@@ -1,0 +1,16 @@
+---
+interface Props {
+  ratio: string; // e.g. "21/9", "16/11", "1/1"
+  label: string;
+  class?: string;
+}
+const { ratio, label, class: className = "" } = Astro.props;
+---
+<div
+  class={`c-placeholder ${className}`.trim()}
+  style={`--aspect:${ratio}`}
+  role="img"
+  aria-label={label}
+>
+  <span>{label}</span>
+</div>

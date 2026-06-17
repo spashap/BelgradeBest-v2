@@ -1,0 +1,10 @@
+---
+interface Props {
+  variant?: "container" | "read" | "article";
+  class?: string;
+}
+const { variant = "container", class: className = "" } = Astro.props;
+const VARIANT = { container: "u-container", read: "u-read", article: "u-article" } as const;
+const base = VARIANT[variant];
+---
+<div class={`${base} ${className}`.trim()}><slot /></div>

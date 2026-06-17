@@ -1,0 +1,85 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Container from "../components/Container.astro";
+import Placeholder from "../components/Placeholder.astro";
+import ArticleHero from "../components/ArticleHero.astro";
+import InternalLinkBlock from "../components/InternalLinkBlock.astro";
+import LastUpdated from "../components/LastUpdated.astro";
+import Schema from "../components/Schema.astro";
+import { articleSchema, expoEventSchema, faqSchema, breadcrumbSchema } from "../lib/schemas";
+import { SITE, CONFIG, interp } from "../lib/site";
+import { clusterBySlug } from "../lib/clusters";
+import { heroForPath } from "../lib/hero";
+import { relatedFor } from "../lib/links";
+import { pageMetadata } from "../lib/metadata";
+import type { Article } from "../lib/articles";
+
+// Leg-agnostic T3 article template. Per-leg chrome (eyebrow, breadcrumb root,
+// read-next copy, Expo-only Event schema) is derived from the cluster registry.
+interface Props {
+  entry: Article;
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const leg = d.leg;
+const href = `/${leg}/${d.slug}`;
+const url = SITE.origin + href;
+
+const c = clusterBySlug(leg);
+const eyebrow = c?.eyebrow ?? leg;
+const crumbRoot = { name: c?.title ?? leg, href: SITE.origin + (c?.href ?? `/${leg}`) };
+const rn =
+  leg === "expo-2027" ? CONFIG.chrome.article.readNextExpo : CONFIG.chrome.article.readNextEvergreen;
+
+const meta = pageMetadata({
+  title: d.title,
+  description: d.description,
+  path: href,
+  noindex: d.noindex,
+});
+
+const { Content } = await render(entry);
+const resolvedHero = heroForPath(href, d.heroAlt ?? d.heroLabel);
+const targets = await relatedFor(leg, d.slug);
+
+const schemas: object[] = [
+  articleSchema({ title: d.title, description: d.description, url, dateModified: d.lastUpdated }),
+  ...(leg === "expo-2027" ? [expoEventSchema()] : []),
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: crumbRoot.name, url: crumbRoot.href },
+    { name: d.shortTitle, url },
+  ]),
+];
+if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={eyebrow} title={d.title} lede={d.lede} />
+
+  <Container>
+    {
+      resolvedHero ? (
+        <ArticleHero src={resolvedHero.src} alt={d.heroAlt ?? resolvedHero.alt} />
+      ) : (
+        <Placeholder ratio="21/9" label={d.heroLabel} />
+      )
+    }
+  </Container>
+
+  <Container variant="article">
+    <div class="u-stack-lg">
+      <article class="c-article">
+        <Content />
+      </article>
+      <LastUpdated date={d.lastUpdated} unknowns={d.unknowns} />
+    </div>
+  </Container>
+
+  <div class="u-stack-lg"></div>
+
+  <InternalLinkBlock eyebrow={rn.eyebrow} title={interp(rn.title)} intro={rn.intro} targets={targets} />
+
+  <Schema schemas={schemas} />
+</BaseLayout>

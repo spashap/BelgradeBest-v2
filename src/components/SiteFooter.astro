@@ -1,0 +1,97 @@
+---
+import Container from "./Container.astro";
+import { CONFIG, interp } from "../lib/site";
+import { clusterBySlug, utilityPages } from "../lib/clusters";
+
+// Footer from chrome.footer + DERIVED links (leg titles/hrefs from clusters,
+// utility-page titles/paths from utilityPages). Degrades to a one-line footer
+// when no footer config is present.
+type ResolvedLink = { title: string; href: string };
+
+function resolveRef(kind: string, slug: string): ResolvedLink | null {
+  if (kind === "legs") {
+    const c = clusterBySlug(slug);
+    return c ? { title: c.title, href: c.href } : null;
+  }
+  const p = utilityPages.find((u) => u.slug === slug);
+  return p ? { title: p.title, href: `/${p.slug}` } : null;
+}
+
+const year = new Date().getFullYear();
+const copyright = interp(CONFIG.chrome.footerLine, { year });
+const f = CONFIG.chrome.footer as
+  | {
+      showBrand?: boolean;
+      columns?: { heading?: string; kind: string; items?: string[] }[];
+      legal?: string[];
+      social?: { url: string; label: string }[];
+    }
+  | undefined;
+
+const columns = ((f?.columns ?? []) as { heading?: string; kind: string; items?: string[] }[])
+  .map((col) => ({
+    heading: String(col.heading ?? ""),
+    items: ((col.items ?? []) as string[])
+      .map((s) => resolveRef(col.kind, s))
+      .filter((x): x is ResolvedLink => x !== null),
+  }))
+  .filter((col) => col.items.length > 0);
+const legal = ((f?.legal ?? []) as string[])
+  .map((s) => resolveRef("pages", s))
+  .filter((x): x is ResolvedLink => x !== null);
+const social = ((f?.social ?? []) as { url: string; label: string }[]).filter(
+  (s) => s && s.url && s.label,
+);
+---
+{
+  !f ? (
+    <footer class="c-site-footer">
+      <Container>
+        <p>{copyright}</p>
+      </Container>
+    </footer>
+  ) : (
+    <footer class="c-site-footer">
+      <Container>
+        <div class="c-footer">
+          {f.showBrand ? (
+            <div class="c-footer__brand">
+              <a href="/" class="c-footer__brandname">
+                {CONFIG.brand.name}
+              </a>
+              <p>{CONFIG.brand.tagline}.</p>
+            </div>
+          ) : null}
+          <div class="c-footer__cols">
+            {columns.map((col) => (
+              <nav class="c-footer__col">
+                <h2 class="c-footer__heading">{col.heading}</h2>
+                <ul>
+                  {col.items.map((it) => (
+                    <li>
+                      <a href={it.href}>{it.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            ))}
+          </div>
+        </div>
+
+        <div class="c-footer__bar">
+          <span class="c-footer__copy">{copyright}</span>
+          {legal.length > 0 || social.length > 0 ? (
+            <span class="c-footer__meta">
+              {legal.map((it) => <a href={it.href}>{it.title}</a>)}
+              {social.map((s) => (
+                <a href={s.url} target="_blank" rel="noopener noreferrer">
+                  {s.label}
+                </a>
+              ))}
+            </span>
+          ) : null}
+        </div>
+      </Container>
+    </footer>
+  )
+}

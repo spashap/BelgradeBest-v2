@@ -1,0 +1,524 @@
+/* ============================================================================
+   BELGRADEBEST — DESIGN SYSTEM  (Identity 1: Warm Editorial)
+   Canonical port of L3-components.html. This file is now THE library.
+
+   ████ THE LAW (enforced for all future pages, human or AI) ████
+   1. All color, type, spacing comes from TOKENS below. Never hardcode a hex
+      or a pixel font-size in a page. If a value isn't a token, it doesn't exist.
+   2. Every repeating UI object is defined HERE, once. Pages COMPOSE these
+      classes (typically via the components in /components, which are thin
+      wrappers around these class names). Do not redefine here, do not invent
+      near-duplicates in pages.
+   3. No inline styles. No per-page <style> blocks for things that repeat.
+   4. Need a variant? Add a MODIFIER class to an existing component
+      (e.g. .c-btn + .c-btn--ghost). Do NOT clone the component.
+   5. If a genuinely new pattern is needed, add it to THIS file as a named
+      component first, then use it. The library is the single source.
+   ============================================================================ */
+
+:root {
+  /* ---- COLOR TOKENS ---- */
+  --paper: #f7f3ec;          /* page background */
+  --paper-2: #fffdf9;        /* raised surface (cards/boxes) */
+  --ink: #211b16;            /* primary text */
+  --ink-soft: #6b5f54;       /* secondary text */
+  --line: #e2d8c9;           /* hairlines / borders */
+  --accent: #b5462b;         /* brick — primary accent */
+  --accent-ink: #8f3621;     /* darker accent for text-on-paper */
+  --accent-soft: #f0e3dc;    /* tinted accent surface */
+  --gold: #a8842c;           /* secondary accent, sparing (premium notes) */
+  --ok: #3f6b4f;             /* positive callout */
+  --warn: #9a6a1e;           /* caution callout */
+
+  /* ---- TYPE TOKENS ---- */
+  /* --font-display / --font-body are the raw face names. They were injected by
+     next/font in the old stack; here they are self-hosted via @fontsource
+     (imported in BaseLayout.astro) and named below. To change the display or
+     body face site-wide, swap the @fontsource import + these two values. */
+  --font-display: "Inter Variable";
+  --font-body: "Newsreader Variable";
+  --display: var(--font-display), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --body: var(--font-body), Georgia, serif;
+  --t-eyebrow: 12px;
+  --t-small: 15px;
+  --t-body: 18px;
+  --t-lede: 20px;
+  --t-h3: 20px;
+  --t-h2: clamp(26px, 4vw, 38px);
+  --t-h1: clamp(32px, 5.5vw, 52px);
+
+  /* ---- SPACE TOKENS (8px rhythm) ---- */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+
+  /* ---- STRUCTURE TOKENS ---- */
+  /* --maxw / --readw / --readw-article live in site-config.json and are injected
+     by BaseLayout as a <style id="site-layout"> (the CSS↔JSON bridge). They are
+     intentionally NOT defined here — one source per fact. */
+  --radius: 3px;
+  --pad: clamp(16px, 4vw, 32px);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--t-body);
+  line-height: 1.65;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* =============================== COMPONENTS =============================== */
+
+/* --- u-container / u-read : layout wrappers --- */
+.u-container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+.u-read { max-width: var(--readw); margin: 0 auto; padding: 0 var(--pad); }
+.u-article { max-width: var(--readw-article); margin: 0 auto; padding: 0 var(--pad); }
+
+/* --- u-stack-* : vertical spacing helpers between sections. Use sparingly;
+   prefer natural margins inside section components. --- */
+.u-stack-lg { margin-top: var(--s8); }
+.u-stack-md { margin-top: var(--s6); }
+
+/* --- c-eyebrow : the small label above titles --- */
+.c-eyebrow {
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: var(--t-eyebrow);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* --- c-section-head : eyebrow + title + optional intro (one pattern everywhere) --- */
+.c-section-head { margin-bottom: var(--s5); }
+.c-section-head h2 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: var(--t-h2);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: var(--s2) 0 var(--s3);
+  max-width: var(--readw);
+}
+.c-section-head p { color: var(--ink-soft); max-width: var(--readw); }
+
+/* --- c-btn : ONE button. Variants via modifiers. --- */
+.c-btn {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-small);
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.c-btn:hover { background: var(--accent-ink); }
+.c-btn--ghost { background: transparent; color: var(--accent-ink); }
+.c-btn--ghost:hover { background: var(--accent-soft); }
+.c-btn--ink { background: var(--ink); border-color: var(--ink); }
+.c-btn--ink:hover { background: #000; }
+
+/* --- c-link : inline text-link with arrow, for "read more" --- */
+.c-link {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-small);
+  color: var(--accent-ink);
+  text-decoration: none;
+}
+.c-link:hover { text-decoration: underline; }
+
+/* --- c-card : THE discovery object. Sizes via modifier, not new component. --- */
+.c-card { display: block; text-decoration: none; color: var(--ink); }
+.c-card .c-card__img {
+  aspect-ratio: 16 / 11;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: var(--s3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a99b;
+  font-size: 13px;
+  overflow: hidden;
+}
+.c-card h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-h3);
+  line-height: 1.2;
+  margin-bottom: var(--s1);
+}
+/* small metadata line under a card title (e.g. last-published date) */
+.c-card__meta {
+  font-family: var(--display);
+  font-size: var(--t-eyebrow);
+  color: var(--ink-soft);
+  margin-bottom: var(--s2);
+}
+.c-card p { color: var(--ink-soft); font-size: var(--t-small); }
+.c-card--sq .c-card__img { aspect-ratio: 1 / 1; }
+.c-card--wide .c-card__img { aspect-ratio: 21 / 9; }
+
+/* --- c-rail : horizontal scroll row of cards (discovery) --- */
+.c-rail {
+  display: flex;
+  gap: var(--s5);
+  overflow-x: auto;
+  padding-bottom: var(--s3);
+  scroll-snap-type: x mandatory;
+}
+.c-rail .c-card { flex: 0 0 240px; scroll-snap-align: start; }
+
+/* --- c-grid : responsive tile grid (hub / category lists) --- */
+/* The cards-per-row breakpoints (1 → 2 → 3) live in site-config.json and are
+   injected by BaseLayout's <style id="site-layout"> — media-query conditions
+   can't be CSS vars, so the whole grid-template-columns rule set is config-driven
+   there. Only the display+gap stay here. */
+.c-grid { display: grid; gap: var(--s5); }
+
+/* --- c-affiliate : THE MONEY OBJECT. Reads as trusted recommendation,
+       NOT an ad. Bordered card, clear label, honest tone. --- */
+.c-affiliate {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+@media (min-width: 560px) {
+  .c-affiliate { flex-direction: row; align-items: center; }
+}
+.c-affiliate__img {
+  flex: 0 0 110px;
+  aspect-ratio: 1 / 1;
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a99b;
+  font-size: 12px;
+}
+.c-affiliate__body { flex: 1; }
+.c-affiliate__label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.c-affiliate h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-h3);
+  margin: var(--s1) 0 var(--s2);
+}
+.c-affiliate p {
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+  margin-bottom: var(--s3);
+}
+
+/* --- c-note : info/callout box. Tone via modifier. Heavy use on a guide. --- */
+.c-note {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  padding: var(--s4) var(--s5);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: var(--s5) 0;
+  font-size: var(--t-small);
+}
+.c-note strong { font-family: var(--display); }
+.c-note--ok { border-color: var(--ok); background: #e9f0eb; }
+.c-note--warn { border-color: var(--warn); background: #f6eedd; }
+.c-note--gold { border-color: var(--gold); background: #f4ecd9; }
+
+/* --- c-article : body typography. The reading experience. --- */
+.c-article h1 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: var(--t-h1);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--s4);
+}
+.c-article h2 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: var(--t-h2);
+  line-height: 1.1;
+  margin: var(--s7) 0 var(--s3);
+}
+.c-article h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-h3);
+  margin: var(--s5) 0 var(--s2);
+}
+.c-article p { margin-bottom: var(--s4); }
+.c-article ul,
+.c-article ol {
+  margin: 0 0 var(--s4);
+  padding-left: var(--s5);
+}
+.c-article li { margin-bottom: var(--s2); }
+.c-article li:last-child { margin-bottom: 0; }
+.c-article li::marker { color: var(--accent); }
+.c-article .c-lede { font-size: var(--t-lede); color: var(--ink-soft); margin-bottom: var(--s5); }
+.c-article figure { margin: var(--s5) 0; }
+.c-article figcaption { font-size: 13px; color: var(--ink-soft); margin-top: var(--s2); font-style: italic; }
+.c-article blockquote {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: var(--t-lede);
+  font-style: italic;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: var(--s5) 0;
+  margin: var(--s6) 0;
+  color: var(--ink);
+}
+
+/* ============================================================================
+   ████ LIBRARY EXTENSIONS — added per Design Law point 5 ████
+   New, site-level chrome patterns. Compose strictly from existing tokens.
+   ============================================================================ */
+
+/* --- c-site-header : masthead — wordmark + leg nav. Mobile = flex-wrap. --- */
+.c-site-header {
+  padding: var(--s5) 0;
+  border-bottom: 1px solid var(--line);
+}
+.c-header { display: flex; align-items: center; justify-content: space-between; gap: var(--s4) var(--s5); flex-wrap: wrap; }
+.c-header__nav { display: flex; flex-wrap: wrap; gap: var(--s4) var(--s5); align-items: center; }
+.c-header__nav a {
+  font-family: var(--display); font-weight: 500; font-size: var(--t-small);
+  color: var(--ink); text-decoration: none; white-space: nowrap;
+}
+.c-header__nav a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* --- c-wordmark : the BelgradeBest text wordmark (display face, weight 900) --- */
+.c-wordmark {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(22px, 3vw, 28px);
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-block;
+}
+.c-wordmark__accent { color: var(--accent); }
+
+/* --- c-page-intro : hero block at the top of a page (eyebrow + h1 + lede) --- */
+.c-page-intro {
+  padding: var(--s7) 0 var(--s6);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--s7);
+}
+.c-page-intro h1 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: var(--t-h1);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin: var(--s2) 0 var(--s4);
+  max-width: var(--readw);
+}
+.c-page-intro .c-lede {
+  font-size: var(--t-lede);
+  color: var(--ink-soft);
+  max-width: var(--readw);
+}
+
+/* --- c-site-footer : closing chrome — a real footer (nav columns + brand +
+   bottom bar). Warm Editorial, token-driven. Degrades to one line when the
+   footer config is absent. --- */
+.c-site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: var(--s8);
+  padding: var(--s6) 0;
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+}
+.c-footer { display: flex; flex-wrap: wrap; gap: var(--s6) var(--s8); justify-content: space-between; }
+.c-footer__brand { max-width: 260px; }
+.c-footer__brandname { font-family: var(--display); font-weight: 600; font-size: var(--t-h3); color: var(--ink); display: block; }
+.c-footer__brand p { margin: var(--s2) 0 0; }
+.c-footer__cols { display: flex; flex-wrap: wrap; gap: var(--s6) var(--s8); }
+.c-footer__col ul { list-style: none; margin: var(--s3) 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--s2); }
+.c-footer__heading { font-family: var(--display); font-weight: 600; font-size: var(--t-eyebrow); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); margin: 0; }
+.c-footer__col a { color: var(--ink); text-decoration: none; }
+.c-footer__col a:hover { color: var(--accent-ink); text-decoration: underline; }
+.c-footer__bar { display: flex; flex-wrap: wrap; gap: var(--s3) var(--s5); justify-content: space-between; align-items: center; margin-top: var(--s6); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.c-footer__meta { display: flex; flex-wrap: wrap; gap: var(--s4); }
+.c-footer__meta a { color: var(--ink-soft); text-decoration: none; }
+.c-footer__meta a:hover { color: var(--accent-ink); text-decoration: underline; }
+
+/* --- c-placeholder : generic Warm Editorial tinted image box. Aspect ratio
+   is passed via the --aspect CSS custom property so the visual contract stays
+   in this file, not the page. CWV: the aspect-ratio reserves space before any
+   image swaps in, preventing layout shift. --- */
+.c-placeholder {
+  width: 100%;
+  aspect-ratio: var(--aspect, 16 / 11);
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a99b;
+  font-size: 13px;
+  text-align: center;
+  padding: var(--s4);
+  overflow: hidden;
+  font-family: var(--body);
+  font-style: italic;
+}
+
+/* --- c-hero-media : real T3 hero image frame (21:9). The published
+   counterpart to .c-placeholder — same border/radius/ratio contract, token
+   driven. In Astro it holds a plain <img> (object-fit: cover via the rule
+   below) rather than next/image. --- */
+.c-hero-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.c-hero-media img { width: 100%; height: 100%; object-fit: cover; }
+/* c-hero : figure wrapping the hero media + its credit caption. Reset the
+   browser-default figure margin; the media frame is unchanged. */
+.c-hero { margin: 0; }
+.c-hero-caption {
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+  margin-top: var(--s2);
+}
+
+/* --- c-featured : large featured tile for the homepage (T1). Composes from
+   tokens; not a clone of c-card — different layout proportions and weight. --- */
+.c-featured {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.c-featured:hover { border-color: var(--accent); }
+.c-featured__body {
+  padding: var(--s5) var(--s5) var(--s6);
+}
+.c-featured__body h2 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: var(--t-h2);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: var(--s2) 0 var(--s3);
+}
+.c-featured__body p {
+  color: var(--ink-soft);
+  font-size: var(--t-body);
+  margin-bottom: var(--s4);
+  max-width: var(--readw);
+}
+
+/* --- c-internal-link-block : the visible "Expo feeds evergreen" engine.
+   Bordered section that sits at the end of T3 articles and contains a small
+   grid of cards pointing at evergreen targets. --- */
+.c-internal-link-block {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-2);
+  padding: var(--s7) 0;
+  margin: var(--s7) 0 var(--s5);
+}
+
+/* --- c-last-updated : compact provisional-content footer on T3.
+   "Last updated DATE · What's still unknown: ..." --- */
+.c-last-updated {
+  border-top: 1px solid var(--line);
+  margin-top: var(--s6);
+  padding-top: var(--s4);
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+}
+.c-last-updated__label {
+  font-family: var(--display);
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  margin-bottom: var(--s2);
+}
+.c-last-updated ul {
+  padding-left: var(--s5);
+  margin-top: var(--s2);
+}
+.c-last-updated li { margin-bottom: var(--s1); }
+
+/* --- c-stub-list : the disabled card list for "coming soon" cluster hubs.
+   Communicates the planned URLs without lying that they exist. --- */
+.c-stub-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s4);
+  margin-top: var(--s5);
+}
+@media (min-width: 560px) { .c-stub-list { grid-template-columns: 1fr 1fr; } }
+.c-stub {
+  background: var(--paper-2);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  padding: var(--s4) var(--s5);
+  color: var(--ink-soft);
+}
+.c-stub__title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-h3);
+  color: var(--ink);
+  display: block;
+  margin-bottom: var(--s1);
+}
+.c-stub__badge {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-block;
+  margin-bottom: var(--s2);
+}

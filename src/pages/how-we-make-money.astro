@@ -1,0 +1,6 @@
+---
+import UtilityPageLayout from "../layouts/UtilityPageLayout.astro";
+import { pageBySlug } from "../lib/site-pages";
+const page = pageBySlug("how-we-make-money")!;
+---
+<UtilityPageLayout page={page} />

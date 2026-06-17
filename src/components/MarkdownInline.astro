@@ -1,0 +1,12 @@
+---
+import { marked } from "marked";
+// Renders a SHORT markdown STRING (leg body prose, utility-page body) into HTML.
+// Article bodies do NOT use this — they go through Astro's native content
+// render() (the parity-gated path). Used only for small CMS-style strings.
+interface Props {
+  markdown: string;
+}
+const { markdown } = Astro.props;
+const html = marked.parse(markdown ?? "", { async: false }) as string;
+---
+<Fragment set:html={html} />

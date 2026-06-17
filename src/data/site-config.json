@@ -1,0 +1,192 @@
+{
+  "brand": {
+    "name": "BelgradeBest",
+    "tagline": "An honest English guide to Belgrade",
+    "domain": "belgradebest.com",
+    "origin": "https://belgradebest.com",
+    "locale": "en",
+    "ogLocale": "en_US"
+  },
+  "seo": {
+    "titleSeparator": " — ",
+    "ogType": "article",
+    "twitterCard": "summary_large_image",
+    "rootTitle": "BelgradeBest — An English guide to Belgrade",
+    "rootDescription": "An honest, English-first guide to Belgrade for foreign visitors — what to see, where to stay, how to plan, and what's coming with Expo 2027.",
+    "homeTitle": "BelgradeBest — An English guide to Belgrade",
+    "homeDescription": "Belgrade for foreign visitors. Honest evergreen guide to sights, neighbourhoods, food, nightlife, and the city — plus full coverage of Expo 2027 (15 May–15 Aug 2027).",
+    "homeNoindex": false
+  },
+  "expo": {
+    "name": "Expo 2027 Belgrade",
+    "shortName": "Expo 2027",
+    "classification": "Specialised Expo",
+    "startDate": "2027-05-15",
+    "endDate": "2027-08-15",
+    "city": "Belgrade",
+    "country": "Serbia",
+    "venue": "Surčin",
+    "theme": "Play for Humanity: Sport and Music for All",
+    "eventDescription": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin, themed 'Play for Humanity: Sport and Music for All'."
+  },
+  "chrome": {
+    "wordmark": {
+      "lead": "Belgrade",
+      "accent": "Best",
+      "ariaLabel": "BelgradeBest — home"
+    },
+    "headerNav": {
+      "items": [
+        "visit-belgrade",
+        "plan-your-trip",
+        "where-to-stay",
+        "food-and-nightlife",
+        "expo-2027",
+        "invest-and-relocate"
+      ]
+    },
+    "footerLine": "BelgradeBest · An evergreen English guide to Belgrade · © {year}",
+    "footer": {
+      "showBrand": true,
+      "columns": [
+        {
+          "heading": "Explore",
+          "kind": "legs",
+          "items": [
+            "visit-belgrade",
+            "plan-your-trip",
+            "where-to-stay",
+            "food-and-nightlife",
+            "expo-2027",
+            "invest-and-relocate"
+          ]
+        },
+        {
+          "heading": "The project",
+          "kind": "pages",
+          "items": [
+            "about",
+            "how-we-make-money",
+            "contact"
+          ]
+        }
+      ],
+      "legal": [
+        "privacy"
+      ],
+      "social": []
+    },
+    "legHub": {
+      "noteLive": [
+        {
+          "strong": "What we know so far."
+        },
+        {
+          "text": " This section is announced piece by piece. We mark pages as "
+        },
+        {
+          "em": "confirmed"
+        },
+        {
+          "text": ", "
+        },
+        {
+          "em": "reported"
+        },
+        {
+          "text": ", or "
+        },
+        {
+          "em": "unknown"
+        },
+        {
+          "text": " rather than guessing — and update them as official information lands."
+        }
+      ],
+      "noteComingSoon": [
+        {
+          "strong": "This section is being built."
+        },
+        {
+          "text": " The structure is reserved so URLs stay coherent from day one (charter §10). Cards below show each planned page and its current status."
+        }
+      ],
+      "cardsEyebrow": "Inside this section",
+      "cardsTitleTemplate": "Articles — {leg}",
+      "cardsIntro": "Built pages link through to the full article; planned pages are reserved and badged with their build status.",
+      "stubFallbackBadge": "Planned",
+      "clusterHeroPlaceholderTemplate": "{leg} / cluster hero (21:9)"
+    },
+    "article": {
+      "inProgressNote": [
+        {
+          "strong": "Article in progress."
+        },
+        {
+          "text": " The page template is live and the route is reserved. The body content is being written and will appear here once the pipeline publishes it."
+        }
+      ],
+      "breadcrumbRoot": "BelgradeBest",
+      "lastUpdatedLabel": "Last updated",
+      "unknownsLabel": "What’s still unknown:",
+      "heroCaption": "AI-generated image",
+      "readNextExpo": {
+        "eyebrow": "The Expo feeds the evergreen guide",
+        "title": "Read next on {brand}",
+        "intro": "Every Expo page links down into our permanent Belgrade guide — so the authority earned here stays after the Expo ends."
+      },
+      "readNextEvergreen": {
+        "eyebrow": "Continue with the evergreen guide",
+        "title": "Read next on {brand}",
+        "intro": "Practical, honest guides for planning your visit — and the rest of Belgrade."
+      }
+    }
+  },
+  "homepage": {
+    "intro": {
+      "eyebrow": "An English guide to Belgrade",
+      "title": "Belgrade, for people who don't speak Serbian.",
+      "lede": "Everything you need to visit, enjoy, and understand Belgrade — what to see, where to stay, how to get around, and what's coming with Expo 2027. Written in plain English for travelers, newcomers, and anyone planning a trip to Serbia's capital."
+    },
+    "featured": {
+      "order": 1,
+      "visible": true,
+      "sectionEyebrow": "Worth to watch",
+      "sectionTitle": "Belgrade Expo 2027",
+      "sectionIntro": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. We track what's confirmed, what's reported, and what's still unknown — and show you how an Expo visit becomes a Belgrade visit.",
+      "legSlug": "expo-2027",
+      "href": "/expo-2027",
+      "eyebrow": "Belgrade Expo 2027",
+      "title": "Plan an Expo 2027 trip the honest way",
+      "body": "Everything we know about Expo 2027, marked confirmed, reported, or unknown — each page feeding the permanent Belgrade guide.",
+      "ctaLabel": "Open the Expo guide",
+      "imageLabel": "featured hero (21:9)"
+    },
+    "clustersSection": {
+      "order": 2,
+      "visible": true,
+      "eyebrow": "Start here",
+      "title": "Every way into Belgrade",
+      "intro": "However you got here — visiting, planning, moving, or just curious — there's a door for it. Pick yours."
+    },
+    "ethosSection": {
+      "order": 3,
+      "visible": true,
+      "eyebrow": "What this is",
+      "title": "A Belgrade guide built to last",
+      "intro": "BelgradeBest is a lasting guide to the city — what's worth doing and how Belgrade actually works, written to stay useful long after Expo 2027. We skip the things that go stale and leave live prices and times to the booking sites that keep them current. When we point you toward something to book, it's because it's the genuinely useful answer right there on the page — not because someone paid for the spot."
+    }
+  },
+  "layout": {
+    "maxWidth": 1180,
+    "readWidth": 680,
+    "articleWidth": 760,
+    "grid": {
+      "mobileCols": 1,
+      "tabletCols": 2,
+      "tabletBreakpoint": 560,
+      "desktopCols": 3,
+      "desktopBreakpoint": 880
+    }
+  }
+}

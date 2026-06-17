@@ -1,0 +1,48 @@
+{
+  "pages": [
+    {
+      "slug": "about",
+      "navLabel": "About BelgradeBest",
+      "title": "About BelgradeBest",
+      "eyebrow": "About",
+      "lede": "What this site is, who it's for, and the editorial bar we hold ourselves to.",
+      "body": "BelgradeBest is being built. The full about page lands as part of the first content milestone.",
+      "seoTitle": "About BelgradeBest",
+      "seoDescription": "An honest English-language guide to Belgrade. Evergreen by design, monetised lightly and visibly.",
+      "noindex": false
+    },
+    {
+      "slug": "how-we-make-money",
+      "navLabel": "How we make money",
+      "title": "How we make money",
+      "eyebrow": "Disclosure",
+      "lede": "What we get paid for, how we choose what to recommend, and what we will not do.",
+      "body": "The full disclosure lands with the first content milestone. The short version: earned-placement affiliate links where they are the genuinely useful answer on a page, never wall-to-wall widgets, never anything that compromises the editorial bar.",
+      "seoTitle": "How BelgradeBest makes money",
+      "seoDescription": "Honest, plain-English affiliate disclosure for BelgradeBest.",
+      "noindex": false
+    },
+    {
+      "slug": "contact",
+      "navLabel": "Contact",
+      "title": "Get in touch",
+      "eyebrow": "Contact",
+      "lede": "Tips, corrections, partnership questions. We read everything.",
+      "body": "A contact form lands with the first content milestone.",
+      "seoTitle": "Contact BelgradeBest",
+      "seoDescription": "Get in touch with BelgradeBest.",
+      "noindex": false
+    },
+    {
+      "slug": "privacy",
+      "navLabel": "Privacy",
+      "title": "Privacy at BelgradeBest",
+      "eyebrow": "Privacy",
+      "lede": "The plain-English version: what we collect, what we don't, and how to reach us about it.",
+      "body": "The full privacy notice lands with the first content milestone.",
+      "seoTitle": "Privacy at BelgradeBest",
+      "seoDescription": "How BelgradeBest handles your data — short, plain, current.",
+      "noindex": false
+    }
+  ]
+}

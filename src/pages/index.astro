@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Container from "../components/Container.astro";
+import SectionHead from "../components/SectionHead.astro";
+import Grid from "../components/Grid.astro";
+import Card from "../components/Card.astro";
+import FeaturedTile from "../components/FeaturedTile.astro";
+import { clusters } from "../lib/clusters";
+import { heroForLeg } from "../lib/hero";
+import { pageMetadata } from "../lib/metadata";
+import { CONFIG } from "../lib/site";
+
+const H = CONFIG.homepage;
+const meta = pageMetadata({
+  title: CONFIG.seo.homeTitle,
+  description: CONFIG.seo.homeDescription,
+  path: "/",
+  noindex: !!CONFIG.seo.homeNoindex,
+});
+
+// Medical tourism is a deep vertical silo — reachable from search/sitemap, not
+// in the homepage grid (hidden = visible:false in the schema).
+const homepageClusters = clusters.filter((c) => !c.hidden);
+const featuredHero = heroForLeg(H.featured.legSlug);
+
+// Section order + visibility come from config; default values reproduce the
+// previous fixed order (featured → clusters → ethos).
+const mainSections = [
+  { id: "featured", order: H.featured.order, visible: H.featured.visible },
+  { id: "clusters", order: H.clustersSection.order, visible: H.clustersSection.visible },
+  { id: "ethos", order: H.ethosSection.order, visible: H.ethosSection.visible },
+]
+  .filter((s) => s.visible !== false)
+  .sort((a, b) => a.order - b.order);
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={H.intro.eyebrow} title={H.intro.title} lede={H.intro.lede} />
+
+  <main>
+    {
+      mainSections.map((s, i) => (
+        <Container>
+          {i > 0 ? <div class="u-stack-lg"></div> : null}
+          {
+            s.id === "featured" ? (
+              <Fragment>
+                <SectionHead
+                  eyebrow={H.featured.sectionEyebrow}
+                  title={H.featured.sectionTitle}
+                  intro={H.featured.sectionIntro}
+                />
+                <FeaturedTile
+                  href={H.featured.href}
+                  eyebrow={H.featured.eyebrow}
+                  title={H.featured.title}
+                  body={H.featured.body}
+                  cta={H.featured.ctaLabel}
+                  imageLabel={H.featured.imageLabel}
+                  src={featuredHero?.src}
+                  imgAlt={featuredHero?.alt ?? H.featured.eyebrow}
+                />
+              </Fragment>
+            ) : s.id === "clusters" ? (
+              <Fragment>
+                <SectionHead
+                  eyebrow={H.clustersSection.eyebrow}
+                  title={H.clustersSection.title}
+                  intro={H.clustersSection.intro}
+                />
+                <Grid>
+                  {homepageClusters.map((c) => {
+                    const hero = heroForLeg(c.slug);
+                    return (
+                      <Card
+                        href={c.href}
+                        title={c.title}
+                        body={c.tagline}
+                        src={hero?.src}
+                        imgAlt={hero?.alt ?? c.title}
+                        imgPlaceholder={`${c.title} / thumbnail`}
+                      />
+                    );
+                  })}
+                </Grid>
+              </Fragment>
+            ) : (
+              <SectionHead
+                eyebrow={H.ethosSection.eyebrow}
+                title={H.ethosSection.title}
+                intro={H.ethosSection.intro}
+              />
+            )
+          }
+        </Container>
+      ))
+    }
+  </main>
+</BaseLayout>

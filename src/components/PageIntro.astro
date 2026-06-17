@@ -1,0 +1,16 @@
+---
+import Container from "./Container.astro";
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lede?: string;
+}
+const { eyebrow, title, lede } = Astro.props;
+---
+<section class="c-page-intro">
+  <Container>
+    {eyebrow ? <span class="c-eyebrow">{eyebrow}</span> : null}
+    <h1>{title}</h1>
+    {lede ? <p class="c-lede">{lede}</p> : null}
+  </Container>
+</section>

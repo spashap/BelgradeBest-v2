@@ -1,0 +1,27 @@
+---
+// Public analytics — Vercel Web Analytics + GA4. Emitted in PRODUCTION ONLY,
+// so `astro dev` (and local previews alongside the admin tool) ships no tags.
+const GA4 = import.meta.env.PUBLIC_GA4_ID;
+const isProd = import.meta.env.PROD;
+---
+{
+  isProd ? (
+    <Fragment>
+      {GA4 ? (
+        <Fragment>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4}`} />
+          <script
+            is:inline
+            set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4}');`}
+          />
+        </Fragment>
+      ) : null}
+      {/* Vercel Web Analytics (static script-tag form; served by Vercel) */}
+      <script
+        is:inline
+        set:html={`window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};`}
+      />
+      <script is:inline defer src="/_vercel/insights/script.js" />
+    </Fragment>
+  ) : null
+}

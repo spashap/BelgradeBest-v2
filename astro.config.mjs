@@ -1,42 +1,64 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import schema from "./src/data/site-schema.json" with { type: "json" };
+import config from "./src/data/site-config.json" with { type: "json" };
+import pagesData from "./src/data/site-pages.json" with { type: "json" };
 
 // Production domain. Canonical/sitemap URLs use this even while the V2 build is
 // served from a temporary *.vercel.app URL (domain switch happens later).
-const SITE = "https://belgradebest.com";
+const SITE = config.brand.origin;
+
+// Leg slugs (one path segment that is a real leg hub, vs a utility page).
+const LEG_SLUGS = new Set(schema.legs.map((l) => l.slug));
+
+// noindex path set — kept OUT of the sitemap (a noindex page in a sitemap is
+// contradictory). Article noindex is propagated from its leg by the porter, so
+// leg.noindex is the authoritative signal here too. Flipping a leg to indexable
+// (the SEO-on lever) automatically re-adds it + its articles to the sitemap.
+const NOINDEX = new Set();
+if (config.seo.homeNoindex) NOINDEX.add("");
+for (const leg of schema.legs) {
+  if (leg.noindex) {
+    NOINDEX.add(`/${leg.slug}`);
+    for (const s of leg.slugs) NOINDEX.add(`/${leg.slug}/${s.slug}`);
+  }
+}
+for (const p of pagesData.pages) {
+  if (p.noindex) NOINDEX.add(`/${p.slug}`);
+}
+
+const pathOf = (url) => new URL(url).pathname.replace(/\/$/, "");
 
 export default defineConfig({
   site: SITE,
   output: "static",
   trailingSlash: "never",
   // Markdown parity with the old react-markdown (plain CommonMark) path:
-  // SmartyPants OFF (no curly-quote/dash rewriting). GFM stays on (the bodies
-  // have no GFM-only syntax, so it's a no-op; kept for tables/autolinks safety).
-  // This config is frozen by the Phase-4 parity stop-gate.
+  // SmartyPants OFF (no curly-quote/dash rewriting). Frozen by the Phase-4 gate.
   markdown: {
     gfm: true,
     smartypants: false,
   },
   integrations: [
     sitemap({
-      // Never expose the local-only admin (it isn't built anyway, belt-and-braces).
-      filter: (page) => !page.includes("/admin"),
-      // Priority parity with the old app/sitemap.ts (home 1.0, hubs 0.9,
-      // articles 0.8, utility 0.3). noindex pages are dropped in serialize.
+      filter: (page) => {
+        const path = pathOf(page);
+        if (path.includes("/admin")) return false;
+        return !NOINDEX.has(path);
+      },
+      // Priority parity with the old app/sitemap.ts.
       serialize(item) {
-        const path = new URL(item.url).pathname.replace(/\/$/, "");
+        const path = pathOf(item.url);
         const segs = path.split("/").filter(Boolean);
+        item.changefreq = "weekly";
         if (path === "") {
           item.priority = 1.0;
-          item.changefreq = "weekly";
         } else if (segs.length === 1) {
-          // leg hub or utility page — refined per-URL in the page frontmatter set
-          item.priority = 0.9;
-          item.changefreq = "weekly";
+          item.priority = LEG_SLUGS.has(segs[0]) ? 0.9 : 0.3; // leg hub vs utility page
+          if (!LEG_SLUGS.has(segs[0])) item.changefreq = "yearly";
         } else {
           item.priority = 0.8;
-          item.changefreq = "weekly";
         }
         return item;
       },

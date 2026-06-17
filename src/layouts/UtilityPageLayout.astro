@@ -1,0 +1,27 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Container from "../components/Container.astro";
+import MarkdownInline from "../components/MarkdownInline.astro";
+import { pageMetadata } from "../lib/metadata";
+import type { SitePage } from "../lib/site-pages";
+
+interface Props {
+  page: SitePage;
+}
+const { page } = Astro.props;
+const meta = pageMetadata({
+  title: page.seoTitle || page.title,
+  description: page.seoDescription || page.lede,
+  path: `/${page.slug}`,
+  noindex: page.noindex,
+});
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={page.eyebrow} title={page.title} lede={page.lede} />
+  <Container variant="read">
+    <article class="c-article">
+      <MarkdownInline markdown={page.body} />
+    </article>
+  </Container>
+</BaseLayout>

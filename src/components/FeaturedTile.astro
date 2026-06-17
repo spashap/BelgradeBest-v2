@@ -1,0 +1,41 @@
+---
+import Placeholder from "./Placeholder.astro";
+import ArticleHero from "./ArticleHero.astro";
+interface Props {
+  href: string;
+  eyebrow?: string;
+  title: string;
+  body: string;
+  cta?: string;
+  imageLabel: string;
+  imageRatio?: string;
+  src?: string;
+  imgAlt?: string;
+}
+const {
+  href,
+  eyebrow,
+  title,
+  body,
+  cta,
+  imageLabel,
+  imageRatio = "21/9",
+  src,
+  imgAlt,
+} = Astro.props;
+---
+<a href={href} class="c-featured">
+  {
+    src ? (
+      <ArticleHero src={src} alt={imgAlt ?? imageLabel} caption={null} />
+    ) : (
+      <Placeholder ratio={imageRatio} label={imageLabel} />
+    )
+  }
+  <div class="c-featured__body">
+    {eyebrow ? <span class="c-eyebrow">{eyebrow}</span> : null}
+    <h2>{title}</h2>
+    <p>{body}</p>
+    {cta ? <span class="c-link">{cta} &rarr;</span> : null}
+  </div>
+</a>

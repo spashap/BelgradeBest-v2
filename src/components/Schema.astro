@@ -1,0 +1,8 @@
+---
+// JSON-LD injector. Renders one <script type="application/ld+json"> per item.
+interface Props {
+  schemas: object[];
+}
+const { schemas } = Astro.props;
+---
+{schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}

@@ -1,0 +1,9 @@
+---
+interface Props {
+  tone?: "default" | "ok" | "warn" | "gold";
+}
+const { tone = "default" } = Astro.props;
+const toneClass = { default: "", ok: "c-note--ok", warn: "c-note--warn", gold: "c-note--gold" } as const;
+const mod = toneClass[tone];
+---
+<div class={`c-note ${mod}`.trim()}><slot /></div>

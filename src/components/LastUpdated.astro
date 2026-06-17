@@ -1,0 +1,26 @@
+---
+import { CONFIG } from "../lib/site";
+interface Props {
+  date: string; // ISO 8601
+  unknowns?: string[];
+}
+const { date, unknowns } = Astro.props;
+const formatted = new Date(date).toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+---
+<div class="c-last-updated">
+  <span class="c-last-updated__label">
+    {CONFIG.chrome.article.lastUpdatedLabel} <time datetime={date}>{formatted}</time>
+  </span>
+  {
+    unknowns && unknowns.length > 0 ? (
+      <Fragment>
+        <span>{CONFIG.chrome.article.unknownsLabel}</span>
+        <ul>{unknowns.map((u) => <li>{u}</li>)}</ul>
+      </Fragment>
+    ) : null
+  }
+</div>

@@ -1,0 +1,18 @@
+---
+import { CONFIG } from "../lib/site";
+interface Props {
+  src: string;
+  alt: string;
+  // Subtle credit under the hero. Defaults to the AI-generated label; pass
+  // null/"" to suppress (leg-hub + featured tile do this).
+  caption?: string | null;
+}
+const { src, alt, caption = CONFIG.chrome.article.heroCaption } = Astro.props;
+---
+<figure class="c-hero">
+  <div class="c-hero-media">
+    <!-- Above-the-fold hero: eager (LCP). object-fit:cover via globals.css. -->
+    <img src={src} alt={alt} loading="eager" decoding="async" />
+  </div>
+  {caption ? <figcaption class="c-hero-caption">{caption}</figcaption> : null}
+</figure>

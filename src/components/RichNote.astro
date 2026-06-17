@@ -1,0 +1,21 @@
+---
+// Safe renderer for the structured rich-text notes in site-config.json. Each
+// part has exactly ONE key — strong | em | text. Emits only <strong>/<em> and
+// escaped text, so it is XSS-safe regardless of stored content.
+import type { RichPart } from "../lib/types";
+interface Props {
+  parts: RichPart[];
+}
+const { parts = [] } = Astro.props;
+---
+{
+  parts.map((p) =>
+    p.strong != null ? (
+      <strong>{p.strong}</strong>
+    ) : p.em != null ? (
+      <em>{p.em}</em>
+    ) : (
+      <Fragment>{p.text}</Fragment>
+    ),
+  )
+}
