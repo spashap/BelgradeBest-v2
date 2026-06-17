@@ -1,0 +1,3 @@
+# The local-only admin tool and the one-time content porter never deploy.
+admin/
+scripts/

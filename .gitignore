@@ -1,0 +1,21 @@
+# build output
+dist/
+.output/
+
+# deps
+node_modules/
+admin/node_modules/
+
+# astro
+.astro/
+
+# env (secrets — never commit)
+.env
+.env.local
+.env.production
+admin/.env
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vercel
