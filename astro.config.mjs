@@ -34,6 +34,10 @@ export default defineConfig({
   site: SITE,
   output: "static",
   trailingSlash: "never",
+  // Local dev + preview run on :5000 (project convention). The admin tool is a
+  // separate process on :4000. Production builds are static (port is irrelevant).
+  server: { port: 5000, host: false },
+  preview: { port: 5000, host: false },
   // Markdown parity with the old react-markdown (plain CommonMark) path:
   // SmartyPants OFF (no curly-quote/dash rewriting). Frozen by the Phase-4 gate.
   markdown: {
