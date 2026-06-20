@@ -79,7 +79,6 @@ function fmtDate(iso: string) {
               <Card
                 href={`/${clusterSlug}/${p.slug}`}
                 title={label}
-                meta={a.data.lastUpdated ? `Last published ${fmtDate(a.data.lastUpdated)}` : undefined}
                 body={a.data.description}
                 src={hero?.src}
                 imgAlt={hero?.alt ?? label}

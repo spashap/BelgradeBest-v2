@@ -2,9 +2,32 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
+import { readFileSync, readdirSync, statSync } from "node:fs";
+import { join } from "node:path";
 import schema from "./src/data/site-schema.json" with { type: "json" };
 import config from "./src/data/site-config.json" with { type: "json" };
 import pagesData from "./src/data/site-pages.json" with { type: "json" };
+
+// Per-article last-modified dates for the sitemap, read from each markdown
+// file's `lastUpdated` frontmatter (a freshness signal for search engines).
+// Keyed by URL path "/<leg>/<slug>". Non-article pages fall back to build date.
+const ARTICLES_DIR = "src/content/articles";
+const BUILD_DATE = new Date().toISOString();
+const LASTMOD = {};
+try {
+  for (const leg of readdirSync(ARTICLES_DIR)) {
+    const legDir = join(ARTICLES_DIR, leg);
+    if (!statSync(legDir).isDirectory()) continue;
+    for (const file of readdirSync(legDir)) {
+      if (!file.endsWith(".md")) continue;
+      const txt = readFileSync(join(legDir, file), "utf8");
+      const m = txt.match(/^lastUpdated:\s*["']?(\d{4}-\d{2}-\d{2})/m);
+      if (m) LASTMOD[`/${leg}/${file.replace(/\.md$/, "")}`] = new Date(m[1]).toISOString();
+    }
+  }
+} catch {
+  /* no articles dir — leave map empty */
+}
 
 // Production domain. Canonical/sitemap URLs use this even while the V2 build is
 // served from a temporary *.vercel.app URL (domain switch happens later).
@@ -66,6 +89,7 @@ export default defineConfig({
       serialize(item) {
         const path = pathOf(item.url);
         const segs = path.split("/").filter(Boolean);
+        item.lastmod = LASTMOD[path] || BUILD_DATE;
         item.changefreq = "weekly";
         if (path === "") {
           item.priority = 1.0;

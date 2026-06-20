@@ -1,27 +1,18 @@
 ---
-// Public analytics — Vercel Web Analytics + GA4. Emitted in PRODUCTION ONLY,
-// so `astro dev` (and local previews alongside the admin tool) ships no tags.
+// Public analytics — free Google Analytics 4 only (Vercel Web Analytics removed
+// to avoid its cost). Emitted in PRODUCTION ONLY, so `astro dev` ships no tags.
+// Set PUBLIC_GA4_ID in the Vercel build env to switch it on.
 const GA4 = import.meta.env.PUBLIC_GA4_ID;
 const isProd = import.meta.env.PROD;
 ---
 {
-  isProd ? (
+  isProd && GA4 ? (
     <Fragment>
-      {GA4 ? (
-        <Fragment>
-          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4}`} />
-          <script
-            is:inline
-            set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4}');`}
-          />
-        </Fragment>
-      ) : null}
-      {/* Vercel Web Analytics (static script-tag form; served by Vercel) */}
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4}`} />
       <script
         is:inline
-        set:html={`window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};`}
+        set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4}');`}
       />
-      <script is:inline defer src="/_vercel/insights/script.js" />
     </Fragment>
   ) : null
 }

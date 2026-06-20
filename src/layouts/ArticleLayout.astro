@@ -8,7 +8,6 @@ import ArticleHero from "../components/ArticleHero.astro";
 import ArticleToc from "../components/ArticleToc.astro";
 import StayLinks from "../components/StayLinks.astro";
 import InternalLinkBlock from "../components/InternalLinkBlock.astro";
-import LastUpdated from "../components/LastUpdated.astro";
 import Schema from "../components/Schema.astro";
 import { articleSchema, expoEventSchema, faqSchema, breadcrumbSchema } from "../lib/schemas";
 import { SITE, CONFIG, interp } from "../lib/site";
@@ -77,7 +76,6 @@ if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
         <Content />
       </article>
       <StayLinks targets={d.stayTargets} />
-      <LastUpdated date={d.lastUpdated} unknowns={d.unknowns} />
     </div>
   </Container>
 
