@@ -1,0 +1,80 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import NavList, { type NavRow, type AddOption } from "../../components/admin/NavList.astro";
+import { readConfig } from "../../lib/admin/store";
+import { clusters, clusterBySlug, utilityPages } from "../../lib/clusters";
+
+const config = await readConfig();
+const ch = config.chrome ?? {};
+const err = Astro.url.searchParams.get("error");
+const ok = Astro.url.searchParams.get("ok");
+
+// All structure items, used to build the per-list "Add" pickers.
+const allLegs: AddOption[] = clusters.map((c) => ({ ref: c.slug, label: (c.navLabel && c.navLabel.trim()) || c.title }));
+const allPages: AddOption[] = utilityPages.map((p) => ({ ref: p.slug, label: p.title }));
+
+function norm(it: unknown): { ref: string; visible: boolean } {
+  if (typeof it === "string") return { ref: it, visible: true };
+  const o = it as { ref?: string; visible?: boolean };
+  return { ref: String(o.ref ?? ""), visible: o.visible !== false };
+}
+function labelFor(kind: string, ref: string): { label: string; missing: boolean } {
+  if (kind === "legs") {
+    const c = clusterBySlug(ref);
+    return c ? { label: (c.navLabel && c.navLabel.trim()) || c.title, missing: false } : { label: ref, missing: true };
+  }
+  const p = utilityPages.find((u) => u.slug === ref);
+  return p ? { label: p.title, missing: false } : { label: ref, missing: true };
+}
+function rowsOf(items: unknown[], kind: string): NavRow[] {
+  return (items ?? []).map((it) => {
+    const n = norm(it);
+    const { label, missing } = labelFor(kind, n.ref);
+    // A leg ref whose structure entry is hidden is off everywhere (master gate).
+    const forcedHidden = kind === "legs" && clusterBySlug(n.ref)?.hidden === true;
+    return { ref: n.ref, label, visible: n.visible, missing, forcedHidden };
+  });
+}
+// Structure items of `kind` not already present in `rows` — the Add options.
+function availableFor(kind: string, rows: NavRow[]): AddOption[] {
+  const have = new Set(rows.map((r) => r.ref));
+  return (kind === "legs" ? allLegs : allPages).filter((o) => !have.has(o.ref));
+}
+
+const headerRows = rowsOf(ch.headerNav?.items ?? [], "legs");
+const footer = ch.footer ?? {};
+const columns = (footer.columns ?? []).map((c: { heading?: string; kind: string; items?: unknown[] }) => {
+  const rows = rowsOf(c.items ?? [], c.kind);
+  return { heading: String(c.heading ?? ""), kind: c.kind, rows, available: availableFor(c.kind, rows) };
+});
+const legalRows = rowsOf(footer.legal ?? [], "pages");
+const socialRows: NavRow[] = (footer.social ?? []).map((s: { url?: string; label?: string; visible?: boolean }) => ({
+  ref: "",
+  label: String(s.label ?? s.url ?? ""),
+  visible: s.visible !== false,
+  missing: false,
+}));
+---
+<AdminLayout title="Navigation">
+  {err ? <div class="err">{err}</div> : null}
+  {ok ? <div class="ok">Saved.</div> : null}
+  <p class="muted">
+    Reorder, show/hide, add or remove header-strip and footer links. <b>Hide</b> keeps the item
+    in place (re-show anytime); <b>Remove</b> drops it from the list; <b>Add</b> brings in any
+    structure item not yet listed. Labels resolve from the structure — never typed here.
+  </p>
+
+  <NavList heading="Header strip" target="header" rows={headerRows} available={availableFor("legs", headerRows)} />
+
+  <h2>Footer columns</h2>
+  {columns.map((col, ci) => (
+    <NavList heading={`${col.heading} (${col.kind})`} target="footer-col" col={ci} rows={col.rows} available={col.available} />
+  ))}
+
+  <NavList heading="Footer legal" target="legal" rows={legalRows} available={availableFor("pages", legalRows)} />
+
+  {socialRows.length > 0 ? (
+    <NavList heading="Footer social" target="social" rows={socialRows} available={[]} />
+  ) : null}
+</AdminLayout>

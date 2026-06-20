@@ -1,0 +1,37 @@
+---
+// Homepage "Good to know" band: a grid of durable orientation facts, each linking
+// to the guide that covers it in depth (internal-linking + AI-quotable). Items
+// come from site-config homepage.goodToKnow.
+interface Item {
+  label: string;
+  text: string;
+  href?: string;
+}
+interface Props {
+  items?: Item[];
+}
+const { items = [] } = Astro.props;
+---
+{
+  items.length > 0 ? (
+    <ul class="c-gtk">
+      {items.map((it) =>
+        it.href ? (
+          <li class="c-gtk__item">
+            <a href={it.href} class="c-gtk__link">
+              <span class="c-gtk__label">{it.label}</span>
+              <span class="c-gtk__text">{it.text}</span>
+            </a>
+          </li>
+        ) : (
+          <li class="c-gtk__item">
+            <div class="c-gtk__link">
+              <span class="c-gtk__label">{it.label}</span>
+              <span class="c-gtk__text">{it.text}</span>
+            </div>
+          </li>
+        ),
+      )}
+    </ul>
+  ) : null
+}

@@ -3,11 +3,11 @@ leg: "food-and-nightlife"
 slug: "belgrade-coffee-culture"
 title: "Belgrade coffee culture — Turkish tradition, specialty roasters and sweets"
 shortTitle: "Coffee & sweets"
-description: "Belgrade's coffee culture — the Turkish-coffee tradition, the Dorćol specialty-coffee wave, and the historic poslastičarnica sweet shops worth seeking out."
-lede: "Belgrade runs on coffee — long, social, lingering coffee — from thick Turkish-style cups to a serious specialty scene in Dorćol. Here's the coffee culture, plus the historic sweet shops that go with it."
+description: "Belgrade coffee culture and best cafes in Belgrade — the Turkish-coffee (domaća kafa) ritual, the Dorćol specialty-coffee wave and roasters, digital-nomad cafés, and historic poslastičarnica sweet shops."
+lede: "Belgrade runs on coffee — long, social, lingering coffee — from thick domaća (Turkish-style) cups in a džezva to a serious specialty scene in Dorćol. Here's the city's coffee culture, where to find the best cafes, and the historic sweet shops that go with it."
 heroLabel: "Belgrade coffee culture / hero"
 heroAlt: "A Turkish coffee in a copper džezva with a slice of cake on a café table"
-lastUpdated: "2026-06-07"
+lastUpdated: "2026-06-20"
 order: 9
 visible: true
 intent: "leisure"
@@ -17,36 +17,52 @@ linksTo:
   - "/food-and-nightlife/belgrade-kafanas"
   - "/visit-belgrade/belgrade-neighborhoods"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs: []
-isFaqCandidate: false
+faqs:
+  - question: "Is coffee a big deal in Belgrade?"
+    answer: "Yes — coffee is central to Serbian culture, and Belgrade is widely described as coffee-obsessed. Coffee here is less a quick caffeine hit than a social ritual: locals linger for long coffee-and-conversation sessions, a single cup can hold a table for an hour or more, and \"Dođi na kafu\" (come for coffee) is a standing invitation to spend time together. The traditional Turkish-style cup now coexists with a serious specialty-coffee scene, so the city caters to both lingering tradition and precise modern brewing."
+  - question: "What is Serbian (domaća) coffee?"
+    answer: "Serbian coffee — domaća kafa (\"homemade coffee\"), also called turska kafa (Turkish coffee) or crna kafa (black coffee) — is finely-ground, unfiltered coffee simmered in a small copper pot called a džezva and served in a small cup, usually with sugar and a glass of water. It is brewed slowly so a rich foam (pena, sometimes called kajmak) forms on top and the grounds settle to the bottom. It is traditionally sipped slowly, often with a piece of ratluk (Turkish delight) alongside. It is the older of Belgrade's two coffee experiences and is central to both home life and kafana culture."
+  - question: "Where is the best specialty coffee in Belgrade?"
+    answer: "Belgrade's specialty-coffee scene clusters in Dorćol, a central district just north and north-east of Republic Square, where micro-roasters and specialty cafés serve single-origin espresso and pour-over. The roaster most often cited as the anchor of the movement is D59B (its original café Pržionica opened in 2012 and is reported to be the city's oldest specialty roaster), which roasts on-site in Dorćol. Individual cafés open, move and close quickly, so the durable advice is to walk a few blocks through Dorćol rather than chase one address — the cluster, and the standard of coffee it sets, is the reliable fact (as of 2026)."
+  - question: "Where can digital nomads work from cafés in Belgrade?"
+    answer: "Belgrade's café culture suits remote work well: nobody rushes you out, many specialty cafés (especially in Dorćol and Vračar) double as informal co-working spaces, and the city has reliable broadband. The specialty spots that take their coffee seriously tend also to offer the kind of unhurried, laptop-friendly tables digital nomads look for. As specific cafés are perishable, the durable approach is to look for specialty cafés in Dorćol and Vračar rather than a fixed list (as of 2026)."
+isFaqCandidate: true
 unknowns: []
 ---
 
-## A city that takes its time over coffee
+## Is coffee a big deal in Belgrade?
 
-Coffee is central to Serbian culture, and Belgrade is widely described as coffee-obsessed. It is also commonly cited as home to one of Europe's earliest coffee houses — a claim worth enjoying but treating as reported rather than settled fact. For a long time the standard cup here was Turkish-style: finely-ground, unfiltered coffee, brewed and served in the traditional way. That tradition has not gone anywhere. What has changed is that it now sits alongside a substantial specialty-coffee movement — micro-roasters and specialty cafés serving espresso-based and pour-over coffee.
+Yes — coffee is central to Serbian culture, and Belgrade is widely described as coffee-obsessed. It is also commonly cited as home to one of Europe's earliest coffee houses — a claim worth enjoying but treating as reported rather than settled fact. For a long time the standard cup here was Turkish-style: finely-ground, unfiltered coffee, brewed and served in the traditional way. That tradition has not gone anywhere. What has changed is that it now sits alongside a substantial specialty-coffee movement — micro-roasters and specialty cafés serving espresso-based and pour-over coffee.
 
-The two worlds coexist comfortably. You can have a thick, strong, slowly-sipped Turkish coffee in the morning and a single-origin pour-over in the afternoon, and neither feels out of place. Understanding both is the easiest way to read the city's rhythm.
+The two worlds coexist comfortably. You can have a thick, strong, slowly-sipped Turkish coffee in the morning and a single-origin pour-over in the afternoon, and neither feels out of place. Understanding both is the easiest way to read the city's rhythm — and the easiest way to find the best cafes in Belgrade for whatever mood you are in.
 
-## Traditional Turkish-style coffee
+Coffee here is less a beverage than a social institution. "Dođi na kafu" — come for coffee — is a standing invitation to spend time together, not a literal one-cup proposition, and a coffee with a friend can stretch across an entire afternoon. If you only learn one thing about how Belgrade socialises, learn that coffee is the medium.
 
-Traditional Turkish-style coffee is the older of the two experiences: thick, strong, brewed and served in the traditional way, and central to both home life and kafana culture. It is less a quick caffeine hit than a reason to sit down. You let it settle, you sip slowly, and you let the conversation stretch out.
+## What is Serbian (domaća) coffee?
+
+Traditional Serbian coffee — domaća kafa, literally "homemade coffee," and also called turska kafa (Turkish coffee) or crna kafa (black coffee) — is the older of the city's two coffee experiences: thick, strong, brewed and served in the traditional way, and central to both home life and kafana culture. It is finely-ground, unfiltered coffee simmered in a small copper pot called a džezva, then poured into a small cup, usually with sugar and a glass of water on the side.
+
+The brewing is unhurried by design. The water (and sugar, if you take it) is brought up to heat, the ground coffee is added and briefly brought up again so a rich foam — pena, sometimes called kajmak — forms on top, and the grounds are left to settle to the bottom of the cup. You do not drink it fast: you let it settle, you sip slowly, and you let the conversation stretch out. It is traditionally served with a piece of ratluk (Turkish delight) alongside, the sweetness balancing the bitterness. It is less a quick caffeine hit than a reason to sit down.
 
 Because this style of coffee is so bound up with the kafana — the traditional tavern where coffee and rakija both live — we leave the full story of those rooms to our guide to [Belgrade kafanas](/food-and-nightlife/belgrade-kafanas). For now it is enough to know that a Turkish coffee in a kafana or an old-fashioned café is part of the everyday social fabric, not a tourist ritual.
 
-## The specialty scene in Dorćol
+## Where is the best specialty coffee in Belgrade? The Dorćol scene
 
-The modern specialty wave is built around single-origin beans, micro-roasting and careful brewing — espresso and pour-over rather than the traditional džezva. This scene is widely reported to cluster in Dorćol, where micro-roasters and specialty cafés are concentrated. Dorćol is one of the central districts you may already be exploring; we leave its full character to our overview of [Belgrade's neighbourhoods](/visit-belgrade/belgrade-neighborhoods) and treat it here simply as the specialty-coffee heart of the city.
+For specialty coffee, head to Dorćol. The modern specialty wave is built around single-origin beans, micro-roasting and careful brewing — espresso and pour-over rather than the traditional džezva — and this scene is widely reported to cluster in Dorćol, the central district just north and north-east of Republic Square, where micro-roasters and specialty cafés are concentrated. Dorćol is one of the central districts you may already be exploring; we leave its full character to our overview of [Belgrade's neighbourhoods](/visit-belgrade/belgrade-neighborhoods) and treat it here simply as the specialty-coffee heart of the city.
 
-A word of honesty: individual specialty cafés open, move and close faster than any guide can keep up with, so we deliberately avoid pinning this section to a single named roaster. The cluster itself — and the standard of coffee you can expect from it — is the durable fact. Walk a few blocks through Dorćol and you will find it.
+The roaster most often named as the anchor of this movement is **D59B**, whose original café **Pržionica** opened in 2012 and is reported to be the city's oldest specialty-coffee roaster; it roasts on-site in Dorćol's former industrial quarter and is a regular fixture in specialty-coffee coverage of the city. Treat it as an illustrative landmark rather than the only address: individual specialty cafés open, move and close faster than any guide can keep up with, so we deliberately avoid pinning the whole scene to a single name. The cluster itself — and the standard of coffee you can expect from it — is the durable fact. Walk a few blocks through Dorćol and you will find it.
 
-## The cultural texture
+## What is Belgrade café culture actually like?
 
 Whatever you order, the texture of café life here is consistent: outdoor, social and lingering. Locals sit for long coffee-and-conversation sessions, and cafés function as everyday meeting places — and, in the specialty spots, increasingly as co-working spaces too. The unwritten rule is that nobody is rushing you. A single coffee can hold a table for an hour or more, and that is entirely normal.
 
+That same no-rush culture is why Belgrade has become a comfortable city for remote workers: the specialty cafés of Dorćol and Vračar double as informal co-working spaces, the broadband is reliable, and you will not be moved on after forty-five minutes. Digital nomads tend to gravitate to the specialty spots for exactly this reason — good coffee and an unhurried table — but, as with the roasters, specific laptop-friendly cafés are perishable, so the durable advice is to look for a specialty café in Dorćol or Vračar rather than a fixed address (as of 2026).
+
 This slow café culture is one of the most pleasant, low-cost things to do in the city — a way to watch Belgrade go about its day. If you are still building an itinerary, our list of [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) sits naturally alongside an afternoon spent doing very little over a cup.
 
-On price, a traditional Turkish coffee in an everyday, non-touristy café is commonly reported at around 150–300 RSD, with prime locations charging more; specialty coffee and dessert-shop prices vary widely. Treat all of these as indicative as of 2026 and check current menus rather than relying on a fixed figure.
+## How much does coffee cost in Belgrade?
+
+A traditional Turkish coffee in an everyday, non-touristy café is commonly reported at around 150–300 RSD, with prime locations charging more; specialty coffee and dessert-shop prices vary widely. Treat all of these as indicative as of 2026 and check current menus rather than relying on a fixed figure. Either way, lingering over coffee is one of the cheaper pleasures of the city — the cost of the cup buys you the table for as long as you want it.
 
 ## Sweets and the poslastičarnica tradition
 

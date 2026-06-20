@@ -1,0 +1,46 @@
+---
+// "Where to book your stay" affiliate block. Renders ONE CTA per stay-target a
+// page declares (article frontmatter `stayTargets`), pulling each target from
+// the central registry src/data/stay-affiliates.json. A target renders ONLY when
+// its affiliate is enabled AND has a url — so the whole block is invisible until
+// the owner adds a real link in the registry (no monetization, no broken CTAs
+// until then). Affiliate links carry rel="sponsored nofollow" (Google's required
+// attribute) and sit beside a disclosure linking the "how we make money" page.
+// Affiliate data lives ONLY here, never in article markdown — pages stay clean
+// and regenerable while monetization is toggled centrally.
+import data from "../data/stay-affiliates.json";
+
+type Affiliate = { enabled?: boolean; network?: string; url?: string };
+type Target = { label?: string; type?: string; affiliate?: Affiliate };
+
+interface Props {
+  targets?: string[];
+  heading?: string;
+}
+const { targets = [], heading = "Where to book your stay" } = Astro.props;
+
+const reg = (data as { targets?: Record<string, Target> }).targets ?? {};
+const items = targets
+  .map((k) => ({ key: k, t: reg[k] }))
+  .filter((x): x is { key: string; t: Target } => !!x.t)
+  .filter((x) => x.t.affiliate?.enabled && !!x.t.affiliate?.url);
+---
+{
+  items.length > 0 ? (
+    <aside class="c-staylinks" aria-label={heading}>
+      <p class="c-staylinks__title">{heading}</p>
+      <ul class="c-staylinks__list">
+        {items.map((x) => (
+          <li>
+            <a href={x.t.affiliate!.url} target="_blank" rel="sponsored nofollow noopener">
+              Book a stay in {x.t.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="c-staylinks__disc">
+        {data.disclosure} <a href={data.disclosureHref}>How we make money</a>.
+      </p>
+    </aside>
+  ) : null
+}

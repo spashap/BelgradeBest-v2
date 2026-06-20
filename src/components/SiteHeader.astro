@@ -6,11 +6,18 @@ import { clusterBySlug } from "../lib/clusters";
 
 // Wordmark + leg nav. Nav items are leg slug REFS in chrome.headerNav; titles/
 // hrefs resolve from the structure (clusterBySlug), using navLabel when set.
-const items: string[] = (CONFIG.chrome.headerNav?.items ?? []) as string[];
+// Items are { ref, visible } (admin-controlled); a bare string is tolerated as
+// shorthand for { ref, visible:true }. Hidden items drop out of the strip.
+type NavItem = string | { ref: string; visible?: boolean };
+const items = (CONFIG.chrome.headerNav?.items ?? []) as NavItem[];
 const nav = items
-  .map((slug) => {
-    const c = clusterBySlug(slug);
-    return c ? { href: c.href, label: (c.navLabel && c.navLabel.trim()) || c.title } : null;
+  .map((it) => (typeof it === "string" ? { ref: it, visible: true } : it))
+  .filter((it) => it.visible !== false)
+  .map((it) => {
+    const c = clusterBySlug(it.ref);
+    // Structure visibility is the master gate: a leg hidden in site-schema.json
+    // (visible:false) drops from the strip regardless of its nav-item flag.
+    return c && !c.hidden ? { href: c.href, label: (c.navLabel && c.navLabel.trim()) || c.title } : null;
   })
   .filter((n): n is { href: string; label: string } => n !== null);
 ---
@@ -20,11 +27,37 @@ const nav = items
       <Wordmark />
       {
         nav.length > 0 ? (
-          <nav class="c-header__nav" aria-label="Sections">
-            {nav.map((n) => <a href={n.href}>{n.label}</a>)}
-          </nav>
+          <Fragment>
+            <button
+              type="button"
+              class="c-burger"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="site-nav"
+              data-burger
+            >
+              <span /> <span /> <span />
+            </button>
+            <nav id="site-nav" class="c-header__nav" aria-label="Sections">
+              {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+            </nav>
+          </Fragment>
         ) : null
       }
     </div>
   </Container>
+  <script is:inline>
+    (function () {
+      var b = document.querySelector("[data-burger]");
+      if (!b) return;
+      var nav = document.getElementById("site-nav");
+      if (!nav) return;
+      b.addEventListener("click", function () {
+        var open = b.getAttribute("aria-expanded") === "true";
+        b.setAttribute("aria-expanded", String(!open));
+        b.setAttribute("aria-label", open ? "Open menu" : "Close menu");
+        nav.classList.toggle("is-open", !open);
+      });
+    })();
+  </script>
 </header>

@@ -3,20 +3,26 @@ leg: "plan-your-trip"
 slug: "airport-to-city"
 title: "Getting from Belgrade Airport into the city"
 shortTitle: "Airport to city"
-description: "How to get from Nikola Tesla Airport into Belgrade — the free city buses, the A1 minibus, official taxis on the voucher system, and ride-hail apps, with indicative 2026 prices."
-lede: "Belgrade's Nikola Tesla Airport sits a short drive west of the centre, and you have four sensible ways into town: the free city buses, the paid A1 minibus, an official taxi on the voucher system, or a ride-hail app. Here's how each works and what to expect."
+description: "Belgrade airport to city centre: how to get from Nikola Tesla Airport into town — the free city buses (72, 600, 607), the paid A1 minibus, the official voucher taxi, and ride-hail apps, with indicative 2026 prices and anti-scam tips."
+lede: "Belgrade's Nikola Tesla Airport (BEG) sits about 18 km west of the centre, and you have four sensible ways into town: the free city buses, the paid A1 minibus, an official taxi on the voucher system, or a ride-hail app. Here's an answer-first comparison of each — how it works, what it costs as of 2026, and how to avoid the airport's taxi touts."
 heroLabel: "Belgrade airport to city / hero"
 heroAlt: "Arriving at Belgrade airport and heading into the city"
-lastUpdated: "2026-06-04"
+lastUpdated: "2026-06-20"
 order: 1
 visible: true
 intent: "both"
 priority: "P1"
-noindex: true
+noindex: false
 linksTo:
   - "/plan-your-trip/getting-around"
   - "/expo-2027/getting-there"
 faqs:
+  - answer: "Use the official voucher system rather than guessing the meter. To the central zone, the fixed voucher fare is most commonly reported around 2,200–3,500 RSD (roughly 19–30 EUR at recent rates), with other destination zones running higher. You collect the voucher from the airport e-kiosks or TAXI INFO counter, and the driver charges only that amount. This is indicative and time-stamped to 2026 — re-check the posted zone table on arrival, as fares change."
+    question: "How much is a taxi from Belgrade airport to the centre?"
+  - answer: "The free city buses (72, 600 or 607) are the cheapest option — all regular Belgrade transport has been free with no ticket since January 2025. If you want something faster with luggage space for a few euros, the A1 minibus to Slavija is the cheapest paid option, commonly around 400 RSD (a little under 4 EUR), paid in cash on board. Both figures are current as of 2026 and can change."
+    question: "What's the cheapest way from Belgrade airport into town?"
+  - answer: "Nikola Tesla Airport (BEG) is about 18 km from the city centre, and a typical road journey takes 20–40 minutes depending on traffic. The free bus 72 takes roughly 35–50 minutes, the A1 minibus about 30–40 minutes, and a taxi or ride-hail car 20–40 minutes."
+    question: "How far is Belgrade airport from the city centre?"
   - answer: "Yes. Since 1 January 2025 all regular Belgrade city transport, including airport buses 72, 600 and 607, is free with no tickets or validation. This is current as of 2026, but a fare policy can change, so re-check before you travel."
     question: "Are the buses from Belgrade Airport really free?"
   - answer: "Bus 72 runs to Zeleni Venac, a central terminus just below Knez Mihailova and Republic Square, in about 35–50 minutes. Bus 600 instead serves Beograd Centar (Prokop) station, which is best if you're connecting to trains."
@@ -31,48 +37,62 @@ isFaqCandidate: true
 unknowns: []
 ---
 
+## What's the best way from Belgrade airport to the city centre?
+
+The short answer: if you want **free**, take **bus 72** to Zeleni Venac in the centre. If you want **fast and cheap with luggage room**, take the paid **A1 minibus** to Slavija for about 400 RSD. If you want **door to door**, use the airport's **official voucher taxi** (a fixed fare, no meter haggling) or a **ride-hail app** like Yandex Go or CarGo — there is no Uber or Bolt in Belgrade. A direct **airport–city train** is under construction but not yet running as of mid-2026.
+
+Here is the at-a-glance comparison, all figures indicative and time-stamped to 2026:
+
+- **Bus 72 (free)** → Zeleni Venac, central, ~35–50 min. Cheapest; slower; no dedicated luggage racks.
+- **Bus 600 (free)** → Beograd Centar / "Prokop" rail station, ~30–45 min. Best for onward trains.
+- **A1 minibus (~400 RSD, cash)** → Slavija Square, ~30–40 min. Fastest cheap option; fewer stops; luggage space.
+- **Official voucher taxi (~2,200–3,500 RSD to the centre)** → door to door, ~20–40 min. Fixed price; use the kiosk, not touts.
+- **Ride-hail app (Yandex Go / CarGo)** → door to door; app-priced. No Uber or Bolt here.
+
 ## First, the basics
 
-Nikola Tesla Airport (BEG) sits about 18 km from the city centre, and a typical road journey takes 20–40 minutes depending on traffic. The four sensible ways into town are the free city buses, the paid A1 minibus, the official voucher taxi, and an app-based ride. A future airport–city railway is under construction but not in service as of mid-2026, so for now your decision is between those four. For the wider picture of moving around the city once you arrive, see our guide to [getting around Belgrade](/plan-your-trip/getting-around).
+Nikola Tesla Airport (BEG) sits about 18 km from the city centre, and a typical road journey takes 20–40 minutes depending on traffic. To put that in orientation terms, the centre is roughly 17–19 km away by road via the E75 motorway and the Gazela bridge: Republic Square and Knez Mihailova (the old-town core) are about 18 km out, Slavija Square (where the A1 minibus ends) a similar distance, and Zeleni Venac (where bus 72 ends) likewise central. The four sensible ways into town are the free city buses, the paid A1 minibus, the official voucher taxi, and an app-based ride. A future airport–city railway is under construction but not in service as of mid-2026, so for now your decision is between those four. For the wider picture of moving around the city once you arrive, see our guide to [getting around Belgrade](/plan-your-trip/getting-around).
 
 One note before fares: prices, timetables and app availability change. Where we give a figure below, treat it as indicative and time-stamped to 2026, and re-check closer to travel.
 
-## The free city buses (72, 600, 607)
+## Is bus 72 to the city centre free, and where does it go?
 
-Since 1 January 2025, all regular Belgrade city public transport has been free for every passenger — no tickets, fares or validation on regular lines. That makes the airport buses free to ride. This is the current policy as of 2026, but a fare policy is perishable and could change, so confirm before you rely on it.
+Yes. Since 1 January 2025, all regular Belgrade city public transport has been free for every passenger — no tickets, fares or validation on regular lines. That makes the airport buses free to ride. This is the current policy as of 2026, but a fare policy is perishable and could change, so confirm before you rely on it.
 
 Three lines serve the airport:
 
-- **Bus 72** runs Airport → New Belgrade → Zeleni Venac, a central downtown terminus just below Knez Mihailova and Republic Square. The stop is directly outside the terminal, and the trip typically takes 35–50 minutes depending on traffic. A night variant, 72N, serves Republic Square.
+- **Bus 72** runs Airport → New Belgrade → Zeleni Venac, a central downtown terminus just below Knez Mihailova and Republic Square. The stop is directly outside the terminal, and the trip typically takes 35–50 minutes depending on traffic. It is the workhorse airport-to-city-centre bus. A night variant, 72N, serves Republic Square.
 - **Bus 600** runs Airport → New Belgrade → Beograd Centar ("Prokop") main railway station, taking roughly 30–45 minutes. This is the best option if you're connecting directly to trains.
 - **Bus 607**, reported as serving the airport plus parts of New Belgrade and Banovo Brdo, is useful mainly if you're staying in western riverside neighbourhoods rather than the old centre. It is also free as part of the regular network.
 
+The trade-off versus the paid A1 minibus is that bus 72 makes more stops through New Belgrade and Surčin, so it is the slower of the two into the centre, and it has no dedicated luggage racks. If you are travelling light and want to spend nothing, it is the obvious pick.
+
 You may still see older guides and videos quoting small cash bus fares (for example 45–150 RSD). Those predate the 2025 free-transport policy and are now outdated — don't treat any per-ticket bus fare as current.
 
-## The A1 shuttle (the paid exception)
+## What is the A1 minibus, and how much does it cost?
 
 The A1 shuttle minibus runs Airport → Fontana (New Belgrade) → the main bus and rail area → Slavija Square, with limited stops, which makes it faster into the centre than bus 72. Slavija is a transport hub within walking distance of Vračar, the St. Sava Temple area and many hotels. A1 is a separate paid service — the exception to the free regular transport.
 
-The fare is commonly quoted at about 400 RSD (a little under 4 EUR), paid in cash on board, with a journey of around 30–40 minutes. Some earlier sources quote lower fares (200 RSD), which suggests a gradual increase, so treat it as low single-digit euros in cash and check the current price rather than assuming a fixed figure.
+The fare is commonly quoted at about 400 RSD (a little under 4 EUR), paid in **cash, in dinars (RSD), on board** — so have local cash ready, as cards are not the norm. The journey is around 30–40 minutes. Some earlier sources quote lower fares (200 RSD), which suggests a gradual increase, so treat it as low single-digit euros in cash and check the current price rather than assuming a fixed figure. The A1 timetable runs across the day; departures are roughly hourly but vary, so check the posted schedule at the airport stop. As of 2026 this remains the cheapest paid option and the quickest budget route into the centre.
 
-## The official airport taxi (voucher system)
+## How much is a taxi from Belgrade airport, and how does the voucher work?
 
-Nikola Tesla Airport runs an official fixed-price taxi system to prevent overcharging. You obtain a voucher from the airport e-kiosks or the TAXI INFO counter in arrivals, showing a fixed fare by destination zone; the driver must charge only that amount. With voucher in hand, go to the first official taxi in the queue in front of the terminal — queue-skipping is not permitted. A voucher covers up to four passengers and normal luggage.
+Nikola Tesla Airport runs an official fixed-price taxi system to prevent overcharging. You obtain a voucher from the airport e-kiosks (there are several in arrivals) or the TAXI INFO counter, showing a fixed fare by destination zone; the driver must charge only that amount. With voucher in hand, go to the first official taxi in the queue in front of the terminal — queue-skipping is not permitted. A voucher covers up to four passengers and normal luggage.
 
-Fares to the city centre by voucher are most commonly reported around 3,000–3,500 RSD (roughly 25–30 EUR at recent rates), though non-official zone tables suggest a wider 20–90 EUR range by destination. The official airport pages give the mechanism, not specific figures, so treat any euro figure as approximate.
+Fares to the city centre by voucher are most commonly reported around **2,200–3,500 RSD (roughly 19–30 EUR at recent rates)** for the central zone, with outer destinations costing more — non-official zone tables suggest a wider 20–90 EUR range across the city. The official airport pages give the mechanism, not specific figures, so treat any euro figure as approximate and read the posted zone table on arrival.
 
-One stable warning: aggressive unlicensed taxi touts operate in the arrivals hall despite the voucher system, something the airport operator has acknowledged. Use only the official TAXI INFO desk and the marked taxi rank, and ignore unsolicited offers.
+One stable warning: aggressive unlicensed taxi touts operate in the arrivals hall despite the voucher system, something the airport operator has acknowledged. They will approach you before you reach the kiosk and quote inflated flat fares. Use only the official TAXI INFO desk and the marked taxi rank, get your voucher first, show it to the driver before you set off, and ignore unsolicited offers.
 
-## Ride-hail apps
+## Is there Uber in Belgrade, or which ride-hail apps work?
 
-Belgrade has no Uber or Bolt. The main app-based options are Yandex Go (Yango), which operates in Serbia with upfront fare estimates and card or cash payment, and CarGo, a local Uber-like platform. Classic licensed-taxi dispatch apps such as Pink Taxi and Belgrade Taxi also exist.
+Belgrade has no Uber or Bolt. The main app-based options are Yandex Go (Yango), which operates in Serbia with upfront fare estimates and card or cash payment, and CarGo, a local Uber-like platform. Classic licensed-taxi dispatch apps such as Pink Taxi and Belgrade Taxi also exist. These can be cheaper than the voucher taxi and let you pay by card, but you'll need a working data connection on arrival to order one.
 
 CarGo's regulatory status has been contested over the years, but it continues to operate in practice and is popular for car quality and transparent pricing. Exactly which apps run and under what legal framework can change; the broad pattern — no Uber or Bolt, with Yandex Go and a local app present — is stable in the short term.
 
-## The future airport–city railway
+## When will the airport train to the city open?
 
-A new dual-track electrified passenger rail line of about 18.3 km is under construction, branching from the Belgrade–Novi Sad corridor at Zemun Polje and connecting the airport with the National Stadium and Expo site at Surčin. The airport station will sit about 500 m from Terminal 1.
+A new dual-track electrified passenger rail line of about 18.3 km is under construction, branching from the Belgrade–Novi Sad corridor at Zemun Polje and connecting the airport with the National Stadium and Expo site at Surčin. The planned BG Voz stopping pattern is reported as Prokop (Beograd Centar) → New Belgrade → Tošin Bunar → Zemun → Altina → Zemun Polje → Singidunum → Belgrade Airport → Surčin → National Stadium. The airport station will sit about 500 m from Terminal 1.
 
-Nine new EMU trains for the BG Voz line have been ordered, with government sources targeting delivery by 31 December 2026 and 2026 updates pointing to an operational launch reported as spring 2027, with an airport–centre journey of roughly 15–20 minutes. These dates are provisional, not settled, and should not be relied upon as an opening date.
+Nine new EMU trains for the BG Voz line have been ordered from CRRC, with delivery reported to run from late 2025 into March 2027, testing of the line expected to begin around January 2027, and an operational launch reported for spring 2027 — in time for Expo — with an airport–centre journey of roughly 15–20 minutes. These dates are provisional, not settled, and should not be relied upon as an opening date.
 
 **What's still unknown:** the ticketing regime for the rail link has not been announced — whether rides will be free under the city's free-transport policy or carry a special airport surcharge is not yet specified. Dedicated event shuttles tied to the link are likewise not yet announced. If you're arriving for the fair, see [getting to Expo 2027](/expo-2027/getting-there) for the latest on connections to the Surčin site.

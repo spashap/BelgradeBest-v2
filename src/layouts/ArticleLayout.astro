@@ -5,6 +5,8 @@ import PageIntro from "../components/PageIntro.astro";
 import Container from "../components/Container.astro";
 import Placeholder from "../components/Placeholder.astro";
 import ArticleHero from "../components/ArticleHero.astro";
+import ArticleToc from "../components/ArticleToc.astro";
+import StayLinks from "../components/StayLinks.astro";
 import InternalLinkBlock from "../components/InternalLinkBlock.astro";
 import LastUpdated from "../components/LastUpdated.astro";
 import Schema from "../components/Schema.astro";
@@ -40,7 +42,7 @@ const meta = pageMetadata({
   noindex: d.noindex,
 });
 
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const resolvedHero = heroForPath(href, d.heroAlt ?? d.heroLabel);
 const targets = await relatedFor(leg, d.slug);
 
@@ -70,9 +72,11 @@ if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
 
   <Container variant="article">
     <div class="u-stack-lg">
+      <ArticleToc headings={headings} />
       <article class="c-article">
         <Content />
       </article>
+      <StayLinks targets={d.stayTargets} />
       <LastUpdated date={d.lastUpdated} unknowns={d.unknowns} />
     </div>
   </Container>

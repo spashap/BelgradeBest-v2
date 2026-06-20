@@ -10,10 +10,11 @@
       "navLabel": "",
       "seoTitle": "",
       "seoDescription": "",
-      "noindex": true,
+      "noindex": false,
       "tagline": "Sights, itineraries, and what's actually worth your time.",
       "intro": "Belgrade for visitors who don't speak Serbian — the things worth doing, the neighborhoods worth walking, and the trips worth planning.",
-      "body": "",
+      "body": "## What's worth your time in Belgrade\n\nBelgrade rewards visitors who read it as a layered city rather than a checklist. Two thousand years of Roman, Ottoman, Habsburg, and socialist-modernist history sit on top of each other at the confluence of the Sava and Danube — and most of what's worth seeing is walkable from the old town. Start at **Kalemegdan and the Belgrade Fortress**, follow the **Knez Mihailova** promenade through **Stari Grad**, and leave time for the neighborhoods that give the city its character: creative **Dorćol**, post-industrial **Savamala**, bohemian **Skadarlija**, and the old Habsburg river town of **Zemun**. Three days is the honest sweet spot for a first trip.",
+      "bodyBelow": "## Planning a first trip to Belgrade\n\nMost first-time visitors ask the same thing: *is Belgrade worth visiting?* The answer is yes, but for reasons that don't always photograph well. This is a city of atmosphere and layers rather than a single postcard monument — its appeal is the contrast between Ottoman lanes, Austro-Hungarian facades, and the bold socialist-modernist (and frankly brutalist) architecture of **New Belgrade** across the river. If you like cities you have to *read*, Belgrade rewards you.\n\nA practical first itinerary anchors on the old core — the fortress, Republic Square, the National Museum, the **Temple of Saint Sava**, and the **Nikola Tesla Museum** — then widens to the neighborhoods and the rivers. In summer, locals decamp to **Ada Ciganlija**, the lake-and-beach island sometimes called *Belgrade's sea*. With a spare day, the most popular trip out of town pairs **Novi Sad** with the **Fruška Gora** monasteries and the wine town of **Sremski Karlovci**.\n\nWe keep opening hours, ticket prices, and seasonal access on the individual guides rather than here, because those change — always confirm the perishable details before you go. For the practical side of a visit, see [Plan your trip](/plan-your-trip); for where to base yourself, [Where to stay](/where-to-stay); and for evenings, [Food & nightlife](/food-and-nightlife). Spring and early autumn are the most comfortable seasons to walk the city.",
       "hero": {
         "src": "/images/legs/visit-belgrade/hero.png",
         "alt": "Visit Belgrade — what to see"
@@ -156,15 +157,28 @@
       "navLabel": "",
       "seoTitle": "",
       "seoDescription": "",
-      "noindex": true,
+      "noindex": false,
       "tagline": "Arrival, visas, transport, SIM, money, safety — the first 24 hours and beyond.",
       "intro": "Everything you need to know before and after you land. We update the perishable bits — fares, free-transport rules, voucher workflows — and stay honest about what's actually current.",
-      "body": "",
+      "body": "## Belgrade, the practical basics\n\nThis is the section to read before — and just after — you land. Belgrade's airport (**Nikola Tesla, BEG**) sits about 18 km from the centre, and getting into town comes down to a city bus, the airport minibus, or an official taxi booked from the fixed-price **voucher desk** — never an unlicensed driver who approaches you in arrivals. The local currency is the **Serbian dinar**; cards work across the city, but keep some cash for kiosks, markets, and small shops. Serbia is outside the EU, so check your **visa** position and mobile **roaming** before you travel. None of this is hard — it just pays to know it in advance.",
+      "bodyBelow": "## Getting into Belgrade and your first 24 hours\n\nThe questions we hear most — *how do I get from Belgrade airport to the city center, do I need a visa for Serbia,* and *is Belgrade safe* — all have reassuring answers, with a few specifics worth pinning down.\n\n**Arrival.** Use the official taxi **voucher** from the desk inside the terminal, or take public transport into the centre; avoid drivers who tout for fares in arrivals. Global ride-hailing apps like Uber and Bolt don't operate in Belgrade, though local app-based options exist.\n\n**Money.** Pay and withdraw in **dinars**, not your home currency — always decline the 'pay in your own currency' (dynamic currency conversion) prompt at ATMs and card machines, which quietly costs you more. Exchange rates are best at offices in the centre and worst at the airport.\n\n**Entry and registration.** Many nationalities — including the EU, UK, US, Canada, and Australia — enter visa-free for up to 90 days, but the list changes, so verify your own case with the Serbian foreign ministry. Note Serbia's rule that visitors are **registered within 24 hours** of arrival: hotels and registered rentals handle this for you; private hosts must register you at the police.\n\n**Connectivity and safety.** Three operators sell prepaid tourist SIMs with strong city coverage; remember Serbia is **outside EU roaming**, so check your plan first. Belgrade is generally a safe city — the realistic risks are petty pickpocketing in crowds and the classic taxi and exchange scams. Emergency numbers are **192** (police), **193** (fire), **194** (ambulance), and **112** (general).\n\nFares, free-transport rules, taxi tariffs, and SIM prices move often, and **Expo 2027** (15 May–15 August) will push demand and prices up — so we flag the perishable details as *check current* on each guide rather than freezing a number here. Once you've arrived, [Where to stay](/where-to-stay) and [Visit Belgrade](/visit-belgrade) cover the rest.",
       "hero": {
         "src": "/images/legs/plan-your-trip/hero.png",
         "alt": "Plan your trip to Belgrade"
       },
       "slugs": [
+        {
+          "slug": "sim-and-connectivity",
+          "order": 8,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Serbia SIM card & eSIM for tourists",
+          "linksTo": [
+            "/plan-your-trip/airport-to-city",
+            "/plan-your-trip/money"
+          ]
+        },
         {
           "slug": "airport-to-city",
           "order": 1,
@@ -263,21 +277,131 @@
       "noindex": true,
       "tagline": "Neighborhoods, hotels, and apartments — split honestly by who you are.",
       "intro": "Where you sleep changes what Belgrade you see. The choices split by what you came for, not by star rating.",
-      "body": "",
+      "body": "## Choosing where to stay in Belgrade\n\nThe best way to pick a base in Belgrade is to choose the **neighborhood first and the property second** — the area shapes your trip far more than a star rating does. **Stari Grad**, the old town, is the natural first-timer choice: central, walkable, and on the route of almost everything worth seeing. **Dorćol** trades a few minutes' walk for a more local café-and-bar feel; **Savamala** puts you next to the riverside nightlife; **Vračar** is calmer and residential; and **Zemun** offers a slower, old-river-town atmosphere a little further out. Match the area to why you came.",
+      "bodyBelow": "## Where to stay in Belgrade, by the kind of trip you're taking\n\nThere's no single *best area to stay in Belgrade* — the right answer depends on whether you're here for sightseeing, nightlife, quiet, or a longer stay. Thinking in neighborhoods makes the choice obvious.\n\n**First-time visitors** are usually happiest in **Stari Grad**, within walking distance of the fortress, Republic Square, and the Knez Mihailova promenade. **Night owls** should look at **Savamala** and the streets near the river clubs, accepting more noise for less travel at 3am. Travelers who want **local texture** gravitate to **Dorćol**, with its galleries, specialty coffee, and wine bars. Those who prefer **calm, residential** streets — or are staying a while — often choose **Vračar**, around the Temple of Saint Sava. And visitors chasing **atmosphere** pick **Zemun**, a former Habsburg town with Danube views and a character all its own, at the cost of a longer hop into the centre.\n\nFor **Expo 2027** (15 May–15 August), the trade-off shifts to commute: areas on the New Belgrade and Surčin side sit closer to the Expo site, while the historic core keeps you in the city you presumably also came to see. We organise lodging by **area, budget, and traveler type rather than by star rating**, and keep specific prices and availability off this evergreen page — check current rates when you book. To get a feel for the neighborhoods themselves, pair this with [Visit Belgrade](/visit-belgrade); for getting around once you've chosen, see [Plan your trip](/plan-your-trip).",
       "hero": {
         "src": "/images/legs/where-to-stay/hero.png",
         "alt": "Where to stay in Belgrade"
       },
       "slugs": [
         {
-          "slug": "neighbourhoods",
+          "slug": "where-to-stay-in-belgrade",
           "order": 1,
           "visible": true,
           "intent": "both",
-          "priority": "P2",
-          "title": "Stay by neighbourhood — pick the area first",
+          "priority": "P1",
+          "title": "Where to stay in Belgrade — best areas by traveller type",
           "linksTo": [
-            "hub"
+            "/where-to-stay/where-to-stay-in-belgrade-first-time",
+            "/visit-belgrade/belgrade-neighborhoods"
+          ]
+        },
+        {
+          "slug": "where-to-stay-in-belgrade-first-time",
+          "order": 2,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Where to stay in Belgrade for the first time",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/visit-belgrade/belgrade-itinerary-3-days"
+          ]
+        },
+        {
+          "slug": "where-to-stay-in-belgrade-with-family",
+          "order": 3,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Where to stay in Belgrade with family",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/where-to-stay/belgrade-hotels-vs-apartments"
+          ]
+        },
+        {
+          "slug": "where-to-stay-in-belgrade-for-nightlife",
+          "order": 4,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Where to stay in Belgrade for nightlife",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/food-and-nightlife/belgrade-nightlife"
+          ]
+        },
+        {
+          "slug": "where-to-stay-in-belgrade-for-business",
+          "order": 5,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Where to stay in Belgrade for business",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/plan-your-trip/getting-around"
+          ]
+        },
+        {
+          "slug": "belgrade-old-town-vs-new-belgrade",
+          "order": 6,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Belgrade Old Town vs New Belgrade — where to stay",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/visit-belgrade/brutalist-belgrade"
+          ]
+        },
+        {
+          "slug": "dorcol-vs-vracar-where-to-stay",
+          "order": 7,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Dorćol vs Vračar — where to stay in Belgrade",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/visit-belgrade/belgrade-neighborhoods"
+          ]
+        },
+        {
+          "slug": "stari-grad-vs-zemun-belgrade",
+          "order": 8,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Stari Grad vs Zemun — where to stay in Belgrade",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/visit-belgrade/zemun"
+          ]
+        },
+        {
+          "slug": "belgrade-hotels-vs-apartments",
+          "order": 9,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Belgrade hotels vs apartments — which to book",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/plan-your-trip/visa-and-entry"
+          ]
+        },
+        {
+          "slug": "belgrade-non-smoking-hotels-apartments",
+          "order": 10,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Non-smoking hotels & apartments in Belgrade",
+          "linksTo": [
+            "/where-to-stay/where-to-stay-in-belgrade",
+            "/where-to-stay/belgrade-hotels-vs-apartments"
           ]
         }
       ]
@@ -294,7 +418,8 @@
       "noindex": false,
       "tagline": "Splavovi, kafanas, late nights, and where Belgrade actually goes out.",
       "intro": "Belgrade nightlife is one of the city's actual reasons to visit. The honest take, not a club promoter's.",
-      "body": "",
+      "body": "## Eating and going out in Belgrade\n\nBelgrade's nightlife is one of the genuine reasons people come back. The city's two signatures are the **splavovi** — floating clubs and restaurants moored along the Sava and Danube that come alive from late spring through summer — and the **kafana**, the traditional tavern where hearty grilled food, **rakija**, and live *starogradska* music run late into the night. Around them sits a fast-modernising scene of wine bars, specialty coffee, and what locals will tell you is Serbia's craft-beer capital. The one rule worth knowing in advance: nothing starts early.",
+      "bodyBelow": "## Belgrade nightlife, restaurants, and the rhythm of a night out\n\nIf you learn one thing about **Belgrade nightlife**, learn the seasons. In the colder months the action is indoors — bars, clubs, and kafanas across **Savamala**, **Cetinjska**, and the centre. From roughly May to September it moves onto the water: the **splavovi**, Belgrade's river rafts, are the city's summer nightlife in a way few other capitals can match.\n\nThe **kafana** is the cultural heart of eating out. Part restaurant, part bar, part music hall, it's where you'll meet Serbian classics like **ćevapi** and **pljeskavica**, shared grills, and rounds of **rakija**, usually with a tamburica band working the room. **Skadarlija**, the cobbled bohemian quarter, is the showpiece version for visitors; for everyday character, districts like **Dorćol** (cafés, wine, and craft beer), **Beton Hala** (a converted waterfront warehouse), and **Zemun** (Danube fish restaurants) each have their own feel.\n\nExpect a late timetable: dinner runs past 11pm, bars and clubs go until the early hours, and the busiest nights are Thursday to Sunday — with 24-hour bakeries and grills to absorb the end of the evening. Specific venues, prices, and event line-ups change constantly, so we treat any named spot as **illustrative of a district, not a fixed recommendation** — check what's open before you go. Planning the rest of your stay? See [Visit Belgrade](/visit-belgrade) for daytime, and [Where to stay](/where-to-stay) if you want to be close to the action.",
       "hero": {
         "src": "/images/legs/food-and-nightlife/hero.png",
         "alt": "Food, Nightlife & Entertainment"
@@ -337,6 +462,18 @@
             "/food-and-nightlife/belgrade-grill-and-street-food",
             "/food-and-nightlife/best-restaurants-in-belgrade",
             "/visit-belgrade/things-to-do-in-belgrade"
+          ]
+        },
+        {
+          "slug": "belgrade-cocktail-bars",
+          "order": 13,
+          "visible": true,
+          "intent": "leisure",
+          "priority": "P2",
+          "title": "Belgrade cocktail bars — Cetinjska, speakeasies & Dorćol",
+          "linksTo": [
+            "/food-and-nightlife/belgrade-nightlife",
+            "/food-and-nightlife/belgrade-food-and-drink-by-neighborhood"
           ]
         },
         {
@@ -470,12 +607,25 @@
       "noindex": false,
       "tagline": "What's coming 15 May–15 Aug 2027, and how to make a Belgrade trip out of it.",
       "intro": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. We're tracking what's confirmed, what's reported, and what's still unknown — and showing you how an Expo visit can become a city visit.",
-      "body": "",
+      "body": "## Belgrade Expo 2027, in plain terms\n\n**Confirmed:** Belgrade hosts a **Specialised Expo from 15 May to 15 August 2027** — the first World Expo in the Western Balkans — on a site at **Surčin**, next to Nikola Tesla Airport. The official theme is **'Play for Humanity: Sport and Music for All,'** and well over a hundred countries have committed to take part, each with its own National Day. What's **not yet announced** matters just as much: ticket prices and sales, the daily programme and headliners, and the final transport plan. We mark what's confirmed, what's only reported, and what's still unknown — and update as official information lands.",
+      "bodyBelow": "## Visiting Expo 2027 in Belgrade: what's known and what isn't\n\nSearch interest in **Expo 2027 Belgrade** is climbing, and a lot of what circulates online mixes firm facts with guesswork. Here's the honest split.\n\n**What's confirmed.** The dates (15 May–15 August 2027), the host city and **Surčin** location near the airport, the *Specialised Expo* status, and the theme — *Play for Humanity: Sport and Music for All*. The concept is built around themed pavilion areas and city-wide programming in sport and music, with participating nations each hosting a National Day.\n\n**What's reported or projected.** Official materials project on the order of four million **visits** across the three months, but estimates vary and 'visits' aren't unique visitors — treat any attendance number as a projection. A rail link connecting the airport and Expo area has been announced, but timelines for big infrastructure can slip, so we frame it as planned rather than guaranteed.\n\n**What's still unknown.** **Expo 2027 tickets** — prices, categories, and on-sale dates — haven't been released; the daily schedule, performers, and pavilion details aren't public yet either. There's **no special tourist visa** for the Expo: general visitors rely on Serbia's normal visa rules.\n\nOur approach is to keep each fact labelled and current rather than guess, and to help you turn an Expo day into a proper city break. For arrival, money, and transport logistics see [Plan your trip](/plan-your-trip); for basing yourself near the site or the centre, [Where to stay](/where-to-stay); and for the city itself, [Visit Belgrade](/visit-belgrade).",
       "hero": {
         "src": "/images/legs/expo-2027/hero.png",
         "alt": "Belgrade Expo 2027 guide"
       },
       "slugs": [
+        {
+          "slug": "where-to-stay-for-expo",
+          "order": 7,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Where to stay for Expo 2027",
+          "linksTo": [
+            "/expo-2027/getting-there",
+            "/where-to-stay"
+          ]
+        },
         {
           "slug": "what-is-it",
           "order": 1,
@@ -550,7 +700,7 @@
         {
           "slug": "where-to-stay",
           "order": 7,
-          "visible": true,
+          "visible": false,
           "intent": "both",
           "priority": "P1",
           "title": "Where to stay for Expo 2027 — area/budget/commute",
@@ -562,7 +712,7 @@
         {
           "slug": "itineraries",
           "order": 8,
-          "visible": true,
+          "visible": false,
           "intent": "leisure",
           "priority": "P2",
           "title": "Expo + Belgrade in 2/3/5 days",
@@ -576,7 +726,7 @@
     {
       "slug": "invest-and-relocate",
       "order": 6,
-      "visible": true,
+      "visible": false,
       "eyebrow": "Investor",
       "title": "Invest & Relocate",
       "navLabel": "",
@@ -585,7 +735,8 @@
       "noindex": true,
       "tagline": "Real estate, company setup, and the macro story behind Belgrade today.",
       "intro": "Belgrade for people thinking about money, not vacation. Real estate, company setup, and what's driving the FDI numbers.",
-      "body": "",
+      "body": "## Belgrade for investors and relocators\n\nBelgrade increasingly markets itself as an emerging destination for foreign investment, and both **buying property** and **setting up a company** are broadly open to non-residents. This section is a neutral orientation to that landscape — the macro story, the real-estate market, and the mechanics of company formation — rather than a law firm's brochure or an agency's sales pitch. Because tax rates, fees, prices, and eligibility rules change and depend on your specific situation, we describe **how things work** and point you to official sources and qualified professionals for the numbers.",
+      "bodyBelow": "## Investing in or relocating to Belgrade: a neutral starting point\n\nForeigners researching *buying property in Belgrade* or *opening a company in Serbia* tend to find two kinds of content: legalistic overviews from law and accounting firms, and sales-driven material from agencies. This section aims to be the missing middle — a plain-English orientation that helps you ask the right questions before you talk to either.\n\n**The macro picture.** Serbia, and Belgrade especially, positions itself as a foreign-direct-investment destination, supported by a government development agency and an official investment portal that are the right front door for verified information. The durable draws are structural — location, a competitive talent and cost base, an active real-estate market, and infrastructure momentum — rather than any single headline number.\n\n**Company setup.** Non-residents can register a business; the common vehicle is a limited liability company, formed through Serbia's Business Registers Agency. The sequence — register the entity, open a bank account, sort out tax registration — is the stable part; the specific fees, minimum capital, and timelines are details to confirm as current.\n\n**Property.** Foreigners can generally buy real estate, though some cases hinge on reciprocity and property type, so eligibility depends on your nationality and what you're buying.\n\nA deliberate note of caution: we **don't publish tax rates, prices, yields, or specific incentives** as fixed facts, and we'd treat any Expo-linked economic projections as contested rather than settled. These are exactly the figures that move and that carry real financial and legal consequences — verify them with a qualified Serbian lawyer, accountant, or the official investment agency before acting. For the wider context of the city you'd be investing in, see [Visit Belgrade](/visit-belgrade).",
       "hero": {
         "src": "/images/legs/invest-and-relocate/hero.png",
         "alt": "Invest in Belgrade or Relocate to Serbia"
@@ -640,12 +791,25 @@
       "noindex": false,
       "tagline": "Dental, cosmetic, wellness — neutral due-diligence, not a clinic ad.",
       "intro": "Belgrade is a real medical-tourism market. This section is an honest, neutral guide layer — regulation, risk, how to choose — not a lead-gen funnel.",
-      "body": "",
+      "body": "## Medical tourism in Belgrade: an honest orientation\n\nBelgrade is an established destination for **medical travel**, with **dental** and **cosmetic** work the most common reasons foreign patients come, alongside areas such as aesthetics, hair restoration, and eye surgery. This section is a neutral, due-diligence layer — how to think about choosing a provider, what a quoted price really includes, and how to plan aftercare — not a clinic advertisement or a booking funnel. We name no clinics and quote no fixed prices, because the responsible questions are the same whoever you choose, and because anyone considering a procedure abroad should rely on qualified medical advice for their own case.",
+      "bodyBelow": "## What to weigh before choosing Belgrade for treatment\n\nPeople researching *medical tourism in Serbia* or *Belgrade dental tourism* usually start with cost. It's a fair starting point — as a general pattern, Belgrade tends to sit as a mid-priced European option, more affordable than the UK, US, Germany, or Australia, though not the cheapest market in the region. But advertised 'savings' can mislead once flights, accommodation, any scans or follow-up at home, and the value of your own time are added in, so the realistic figure is usually smaller than the headline.\n\nThe more useful questions are about **diligence and safety**, and they apply to any country:\n\n- **Verify the provider.** Confirm licensing and credentials, and be cautious of outcome or 'success rate' claims, which are often self-reported and not directly comparable.\n- **Read the quote carefully.** Understand exactly what is and isn't included — 'all-inclusive' often covers the medical items only, and staged treatments can list components separately.\n- **Plan continuity of care.** Many procedures need follow-up or may require revision; decide in advance who manages your aftercare and any complications once you're home, and weigh the clot risk of long flights after surgery.\n\nSome areas carry **added legal and ethical complexity** — fertility treatment and gender-affirming care among them — where rules, eligibility, and outcomes vary significantly and some services are restricted under Serbian law. For anything in this territory, treat this page only as a prompt to seek independent **medical and legal advice** specific to your situation; nothing here is medical advice, and no procedure is risk-free. If a Belgrade trip is part of the plan, [Plan your trip](/plan-your-trip) covers the practical logistics.",
       "hero": {
         "src": "/images/legs/medical-tourism/hero.png",
         "alt": "Serbia offers a range of medical procedures, but some of the most popular include dental treatments, cosmetic surgery, orthopedic surgeries like knee and hip replacements, and fertility treatments"
       },
       "slugs": [
+        {
+          "slug": "medical-tourism-serbia-vs-turkey",
+          "order": 15,
+          "visible": true,
+          "intent": null,
+          "priority": "P2",
+          "title": "Medical tourism: Serbia vs Turkey (and Hungary)",
+          "linksTo": [
+            "/medical-tourism/medical-tourism-costs-in-belgrade",
+            "/medical-tourism/choosing-a-clinic-in-belgrade"
+          ]
+        },
         {
           "slug": "medical-tourism-belgrade",
           "order": 1,

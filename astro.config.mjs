@@ -17,12 +17,18 @@ const LEG_SLUGS = new Set(schema.legs.map((l) => l.slug));
 // contradictory). Article noindex is propagated from its leg by the porter, so
 // leg.noindex is the authoritative signal here too. Flipping a leg to indexable
 // (the SEO-on lever) automatically re-adds it + its articles to the sitemap.
+// Paths kept OUT of the sitemap: noindex (above) AND hidden (visible:false).
+// A hidden leg/slug is removed from every public surface, so it must not appear
+// in the sitemap either. Unhiding re-adds it automatically.
 const NOINDEX = new Set();
 if (config.seo.homeNoindex) NOINDEX.add("");
 for (const leg of schema.legs) {
-  if (leg.noindex) {
+  const legHidden = leg.visible === false;
+  if (leg.noindex || legHidden) {
     NOINDEX.add(`/${leg.slug}`);
     for (const s of leg.slugs) NOINDEX.add(`/${leg.slug}/${s.slug}`);
+  } else {
+    for (const s of leg.slugs) if (s.visible === false) NOINDEX.add(`/${leg.slug}/${s.slug}`);
   }
 }
 for (const p of pagesData.pages) {

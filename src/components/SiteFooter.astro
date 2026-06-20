@@ -8,10 +8,22 @@ import { clusterBySlug, utilityPages } from "../lib/clusters";
 // when no footer config is present.
 type ResolvedLink = { title: string; href: string };
 
+// Footer list items are { ref, visible } (admin-controlled); a bare string is
+// tolerated as { ref, visible:true }. Hidden items drop out before resolving.
+type RefItem = string | { ref: string; visible?: boolean };
+function visibleRefs(items: RefItem[]): string[] {
+  return items
+    .map((it) => (typeof it === "string" ? { ref: it, visible: true } : it))
+    .filter((it) => it.visible !== false)
+    .map((it) => it.ref);
+}
+
 function resolveRef(kind: string, slug: string): ResolvedLink | null {
   if (kind === "legs") {
     const c = clusterBySlug(slug);
-    return c ? { title: c.title, href: c.href } : null;
+    // Master gate: a leg hidden in the structure (visible:false) drops from the
+    // footer too, regardless of its footer-item flag.
+    return c && !c.hidden ? { title: c.title, href: c.href } : null;
   }
   const p = utilityPages.find((u) => u.slug === slug);
   return p ? { title: p.title, href: `/${p.slug}` } : null;
@@ -22,25 +34,25 @@ const copyright = interp(CONFIG.chrome.footerLine, { year });
 const f = CONFIG.chrome.footer as
   | {
       showBrand?: boolean;
-      columns?: { heading?: string; kind: string; items?: string[] }[];
-      legal?: string[];
-      social?: { url: string; label: string }[];
+      columns?: { heading?: string; kind: string; items?: RefItem[] }[];
+      legal?: RefItem[];
+      social?: { url: string; label: string; visible?: boolean }[];
     }
   | undefined;
 
-const columns = ((f?.columns ?? []) as { heading?: string; kind: string; items?: string[] }[])
+const columns = ((f?.columns ?? []) as { heading?: string; kind: string; items?: RefItem[] }[])
   .map((col) => ({
     heading: String(col.heading ?? ""),
-    items: ((col.items ?? []) as string[])
+    items: visibleRefs(col.items ?? [])
       .map((s) => resolveRef(col.kind, s))
       .filter((x): x is ResolvedLink => x !== null),
   }))
   .filter((col) => col.items.length > 0);
-const legal = ((f?.legal ?? []) as string[])
+const legal = visibleRefs(f?.legal ?? [])
   .map((s) => resolveRef("pages", s))
   .filter((x): x is ResolvedLink => x !== null);
-const social = ((f?.social ?? []) as { url: string; label: string }[]).filter(
-  (s) => s && s.url && s.label,
+const social = ((f?.social ?? []) as { url: string; label: string; visible?: boolean }[]).filter(
+  (s) => s && s.url && s.label && s.visible !== false,
 );
 ---
 {

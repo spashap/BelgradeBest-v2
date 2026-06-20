@@ -13,8 +13,8 @@
     "twitterCard": "summary_large_image",
     "rootTitle": "BelgradeBest — An English guide to Belgrade",
     "rootDescription": "An honest, English-first guide to Belgrade for foreign visitors — what to see, where to stay, how to plan, and what's coming with Expo 2027.",
-    "homeTitle": "BelgradeBest — An English guide to Belgrade",
-    "homeDescription": "Belgrade for foreign visitors. Honest evergreen guide to sights, neighbourhoods, food, nightlife, and the city — plus full coverage of Expo 2027 (15 May–15 Aug 2027).",
+    "homeTitle": "Belgrade Travel Guide — An Honest English Guide to the City",
+    "homeDescription": "An honest English guide to Belgrade for foreign visitors: what to see and do, where to stay, what to eat, how to get around, staying safe, and planning an Expo 2027 trip.",
     "homeNoindex": false
   },
   "expo": {
@@ -37,12 +37,34 @@
     },
     "headerNav": {
       "items": [
-        "visit-belgrade",
-        "plan-your-trip",
-        "where-to-stay",
-        "food-and-nightlife",
-        "expo-2027",
-        "invest-and-relocate"
+        {
+          "ref": "visit-belgrade",
+          "visible": true
+        },
+        {
+          "ref": "plan-your-trip",
+          "visible": true
+        },
+        {
+          "ref": "where-to-stay",
+          "visible": true
+        },
+        {
+          "ref": "food-and-nightlife",
+          "visible": true
+        },
+        {
+          "ref": "expo-2027",
+          "visible": true
+        },
+        {
+          "ref": "invest-and-relocate",
+          "visible": false
+        },
+        {
+          "ref": "medical-tourism",
+          "visible": true
+        }
       ]
     },
     "footerLine": "BelgradeBest · An evergreen English guide to Belgrade · © {year}",
@@ -53,26 +75,60 @@
           "heading": "Explore",
           "kind": "legs",
           "items": [
-            "visit-belgrade",
-            "plan-your-trip",
-            "where-to-stay",
-            "food-and-nightlife",
-            "expo-2027",
-            "invest-and-relocate"
+            {
+              "ref": "visit-belgrade",
+              "visible": true
+            },
+            {
+              "ref": "plan-your-trip",
+              "visible": true
+            },
+            {
+              "ref": "where-to-stay",
+              "visible": true
+            },
+            {
+              "ref": "food-and-nightlife",
+              "visible": true
+            },
+            {
+              "ref": "expo-2027",
+              "visible": true
+            },
+            {
+              "ref": "invest-and-relocate",
+              "visible": false
+            },
+            {
+              "ref": "medical-tourism",
+              "visible": true
+            }
           ]
         },
         {
           "heading": "The project",
           "kind": "pages",
           "items": [
-            "about",
-            "how-we-make-money",
-            "contact"
+            {
+              "ref": "about",
+              "visible": true
+            },
+            {
+              "ref": "how-we-make-money",
+              "visible": true
+            },
+            {
+              "ref": "contact",
+              "visible": true
+            }
           ]
         }
       ],
       "legal": [
-        "privacy"
+        {
+          "ref": "privacy",
+          "visible": true
+        }
       ],
       "social": []
     },
@@ -144,14 +200,14 @@
   },
   "homepage": {
     "intro": {
-      "eyebrow": "An English guide to Belgrade",
-      "title": "Belgrade, for people who don't speak Serbian.",
-      "lede": "Everything you need to visit, enjoy, and understand Belgrade — what to see, where to stay, how to get around, and what's coming with Expo 2027. Written in plain English for travelers, newcomers, and anyone planning a trip to Serbia's capital."
+      "eyebrow": "For visitors, newcomers & the curious",
+      "title": "The honest English guide to Belgrade",
+      "lede": "Plain-English guides to visiting Belgrade — the things actually worth doing, where to stay, what to eat and drink, how to get around, and how to make a trip out of Expo 2027 (15 May–15 August). Honest, current, and written for people who don't live here."
     },
     "featured": {
       "order": 1,
       "visible": true,
-      "sectionEyebrow": "Worth to watch",
+      "sectionEyebrow": "What's coming",
       "sectionTitle": "Belgrade Expo 2027",
       "sectionIntro": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. We track what's confirmed, what's reported, and what's still unknown — and show you how an Expo visit becomes a Belgrade visit.",
       "legSlug": "expo-2027",
@@ -159,8 +215,8 @@
       "eyebrow": "Belgrade Expo 2027",
       "title": "Plan an Expo 2027 trip the honest way",
       "body": "Everything we know about Expo 2027, marked confirmed, reported, or unknown — each page feeding the permanent Belgrade guide.",
-      "ctaLabel": "Open the Expo guide",
-      "imageLabel": "featured hero (21:9)"
+      "ctaLabel": "Open the Expo 2027 guide",
+      "imageLabel": "Belgrade Expo 2027"
     },
     "clustersSection": {
       "order": 2,
@@ -169,12 +225,43 @@
       "title": "Every way into Belgrade",
       "intro": "However you got here — visiting, planning, moving, or just curious — there's a door for it. Pick yours."
     },
-    "ethosSection": {
+    "goodToKnow": {
       "order": 3,
       "visible": true,
-      "eyebrow": "What this is",
-      "title": "A Belgrade guide built to last",
-      "intro": "BelgradeBest is a lasting guide to the city — what's worth doing and how Belgrade actually works, written to stay useful long after Expo 2027. We skip the things that go stale and leave live prices and times to the booking sites that keep them current. When we point you toward something to book, it's because it's the genuinely useful answer right there on the page — not because someone paid for the spot."
+      "eyebrow": "Before you go",
+      "title": "Good to know about Belgrade",
+      "intro": "The handful of facts that make a first visit easier — each links to the full guide.",
+      "items": [
+        { "label": "Money", "text": "Serbia uses the dinar (RSD); cards are widely accepted, but keep some cash for kiosks and markets.", "href": "/plan-your-trip/money" },
+        { "label": "Getting around", "text": "City buses, trams and trolleybuses have been free for everyone since 2025.", "href": "/plan-your-trip/getting-around" },
+        { "label": "Visas & entry", "text": "Many nationalities enter visa-free for up to 90 days — confirm your own case before you fly.", "href": "/plan-your-trip/visa-and-entry" },
+        { "label": "Is it safe?", "text": "Belgrade is generally safe; the real risks are pickpockets in crowds and taxi overcharging.", "href": "/plan-your-trip/staying-safe" },
+        { "label": "When to go", "text": "April–June and September–October are the sweet spot; July–August is hot and lively.", "href": "/plan-your-trip/best-time-to-visit" },
+        { "label": "Expo 2027", "text": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin.", "href": "/expo-2027" }
+      ]
+    },
+    "faqSection": {
+      "order": 4,
+      "visible": true,
+      "eyebrow": "Questions",
+      "title": "Belgrade, frequently asked",
+      "intro": "Quick, honest answers to what visitors ask most — each explored in depth across the guides.",
+      "faqs": [
+        { "question": "Is Belgrade worth visiting?", "answer": "Yes. Belgrade rewards you with a layered, lived-in city — a riverside fortress, distinct neighbourhoods, big nightlife and hearty food — rather than a polished postcard old town. It is affordable, walkable in the centre, and easy to manage in English." },
+        { "question": "Is Belgrade safe for tourists?", "answer": "Belgrade is generally safe, including for solo and night-time visitors taking normal precautions. The realistic risks are petty pickpocketing in crowds and taxi or exchange overcharging, not violent crime." },
+        { "question": "How many days do you need in Belgrade?", "answer": "Three days is the comfortable sweet spot — the central sights, a neighbourhood or two, and a half-day trip. One to two days still covers the walkable old-town core." },
+        { "question": "What is the best area to stay in Belgrade?", "answer": "Stari Grad, the old town, is the easiest base for a first visit, with Dorćol, Savamala and Vračar as strong alternatives depending on your budget and whether you want nightlife or quiet." },
+        { "question": "Is public transport free in Belgrade?", "answer": "Yes. Since January 2025, Belgrade's city and suburban buses, trams and trolleybuses have been free for all passengers, with no ticket required." },
+        { "question": "When is Expo 2027 in Belgrade?", "answer": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027, on a site at Surčin near Nikola Tesla Airport." }
+      ]
+    },
+    "ethosSection": {
+      "order": 5,
+      "visible": true,
+      "eyebrow": "Why trust BelgradeBest",
+      "title": "An honest, independent guide to Belgrade",
+      "intro": "Independent, source-checked, and built to stay useful — not a content farm chasing clicks.",
+      "body": "BelgradeBest is a comprehensive English-language guide to Belgrade, written for foreign visitors, newcomers, and anyone trying to understand the city from the outside. It covers [things to do and what to see](/visit-belgrade), the practical side of [planning a trip](/plan-your-trip) — airport transfers, money, getting around and staying safe — the city's [food and nightlife](/food-and-nightlife), [medical tourism in Belgrade](/medical-tourism), and everything happening with [Expo 2027](/expo-2027).\n\nEvery page is built on a curated, source-checked knowledge base and written to stay useful rather than chase the news. We leave the perishable details — live prices and exact opening hours — to the official and booking sites that keep them current, and we tell you plainly when something is confirmed, only reported, or still unknown. We stay independent: when we point you toward something to book, it's because it's the genuinely useful answer, not because someone paid for the spot."
     }
   },
   "layout": {

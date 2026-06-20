@@ -1,0 +1,74 @@
+---
+// One editable nav list for the /admin Navigation page: reorder (↑/↓), Hide/Show
+// (visible flag), Remove (drop entirely), and an Add picker for structure items
+// not yet in the list. Posts to /api/admin/navigation. Presentation only — all
+// mutation logic lives in lib/admin/store.ts.
+export type NavRow = { ref: string; label: string; visible: boolean; missing: boolean; forcedHidden?: boolean };
+export type AddOption = { ref: string; label: string };
+
+interface Props {
+  heading: string;
+  target: "header" | "footer-col" | "legal" | "social";
+  col?: number;
+  rows: NavRow[];
+  available?: AddOption[]; // omit (or empty) to hide the Add picker (e.g. social)
+}
+const { heading, target, col = 0, rows, available = [] } = Astro.props;
+const addId = `add-${target}-${col}`;
+---
+<h2>{heading}</h2>
+<div class="panel">
+  {rows.length === 0 ? <p class="muted">No items.</p> : (
+    <table>
+      <tr><th>item</th><th>state</th><th>actions</th></tr>
+      {rows.map((r, i) => (
+        <tr>
+          <td>
+            {r.label} <span class="slug muted">{r.ref ? `/${r.ref}` : ""}</span>
+            {r.missing ? <span class="badge hidden">missing</span> : null}
+          </td>
+          <td>
+            {r.visible ? <span class="badge live">shown</span> : <span class="badge hidden">hidden</span>}
+            {r.forcedHidden ? <span class="badge hidden" title="This leg is hidden in Structure, so it is off everywhere regardless of this setting">off · leg hidden</span> : null}
+          </td>
+          <td>
+            <form class="inline" method="post" action="/api/admin/navigation">
+              <input type="hidden" name="action" value="move" /><input type="hidden" name="target" value={target} />
+              <input type="hidden" name="col" value={col} /><input type="hidden" name="index" value={i} /><input type="hidden" name="dir" value="up" />
+              <button class="ghost" type="submit">↑</button>
+            </form>
+            <form class="inline" method="post" action="/api/admin/navigation">
+              <input type="hidden" name="action" value="move" /><input type="hidden" name="target" value={target} />
+              <input type="hidden" name="col" value={col} /><input type="hidden" name="index" value={i} /><input type="hidden" name="dir" value="down" />
+              <button class="ghost" type="submit">↓</button>
+            </form>
+            <form class="inline" method="post" action="/api/admin/navigation">
+              <input type="hidden" name="action" value="visible" /><input type="hidden" name="target" value={target} />
+              <input type="hidden" name="col" value={col} /><input type="hidden" name="index" value={i} /><input type="hidden" name="visible" value={r.visible ? "0" : "1"} />
+              <button class="ghost" type="submit">{r.visible ? "Hide" : "Show"}</button>
+            </form>
+            <form class="inline" method="post" action="/api/admin/navigation">
+              <input type="hidden" name="action" value="remove" /><input type="hidden" name="target" value={target} />
+              <input type="hidden" name="col" value={col} /><input type="hidden" name="index" value={i} />
+              <button class="ghost" type="submit">Remove</button>
+            </form>
+          </td>
+        </tr>
+      ))}
+    </table>
+  )}
+
+  {available.length > 0 ? (
+    <form class="inline" method="post" action="/api/admin/navigation" style="margin-top:10px">
+      <input type="hidden" name="action" value="add" /><input type="hidden" name="target" value={target} />
+      <input type="hidden" name="col" value={col} />
+      <label class="muted" for={addId}>Add:&nbsp;</label>
+      <select id={addId} name="ref" class="select">
+        {available.map((o) => <option value={o.ref}>{o.label} (/{o.ref})</option>)}
+      </select>
+      <button type="submit">Add</button>
+    </form>
+  ) : (
+    <p class="muted" style="margin-top:10px">All available items are in this list.</p>
+  )}
+</div>

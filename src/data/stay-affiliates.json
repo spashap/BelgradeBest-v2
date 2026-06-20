@@ -1,0 +1,67 @@
+{
+  "disclosure": "Some booking links on this page are affiliate links: if you book through them we may earn a small commission at no extra cost to you.",
+  "disclosureHref": "/how-we-make-money",
+  "defaultNetwork": "booking",
+  "targets": {
+    "stari-grad": {
+      "type": "area",
+      "label": "Stari Grad (Old Town)",
+      "area": "stari-grad",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "dorcol": {
+      "type": "area",
+      "label": "Dorćol",
+      "area": "dorcol",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "savamala": {
+      "type": "area",
+      "label": "Savamala & Belgrade Waterfront",
+      "area": "savamala",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "vracar": {
+      "type": "area",
+      "label": "Vračar",
+      "area": "vracar",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "savski-venac": {
+      "type": "area",
+      "label": "Savski Venac",
+      "area": "savski-venac",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "new-belgrade": {
+      "type": "area",
+      "label": "New Belgrade (Novi Beograd)",
+      "area": "new-belgrade",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "zemun": {
+      "type": "area",
+      "label": "Zemun",
+      "area": "zemun",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "palilula": {
+      "type": "area",
+      "label": "Palilula / Tašmajdan",
+      "area": "palilula",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "dedinje": {
+      "type": "area",
+      "label": "Dedinje & Topčider",
+      "area": "dedinje",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    },
+    "surcin": {
+      "type": "area",
+      "label": "Surčin / airport & Expo side",
+      "area": "surcin",
+      "affiliate": { "enabled": false, "network": "booking", "url": "", "addedAt": null, "lastChecked": null, "status": "none" }
+    }
+  }
+}

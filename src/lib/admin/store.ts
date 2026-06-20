@@ -12,6 +12,7 @@ import { env } from "./env";
 // Either way the public site reads these exact files at build.
 
 const REL_SCHEMA = "src/data/site-schema.json";
+const REL_CONFIG = "src/data/site-config.json";
 
 const ghRepo = () => env("GITHUB_REPO");
 const ghBranch = () => env("GITHUB_BRANCH") || "main";
@@ -141,4 +142,112 @@ export async function moveSlug(legSlug: string, slugId: string, dir: "up" | "dow
     sorted[i].order = sorted[j].order;
     sorted[j].order = tmp;
   }, `admin: move ${slugId} ${dir} in ${legSlug}`);
+}
+
+// ---- chrome / navigation (site-config.json) ----
+// Header strip + footer lists. Items are { ref, visible } objects (social items
+// are { url, label, visible }). Order = array order; visible toggles per item.
+
+export type NavRefItem = { ref: string; visible?: boolean };
+export type SocialItem = { url: string; label: string; visible?: boolean };
+
+export type SiteConfig = {
+  chrome: {
+    headerNav?: { items?: NavRefItem[] };
+    footer?: {
+      columns?: { heading?: string; kind: string; items?: NavRefItem[] }[];
+      legal?: NavRefItem[];
+      social?: SocialItem[];
+    };
+  };
+};
+
+// Where a nav list lives. `col` is required only for footer columns.
+export type NavTarget = "header" | "footer-col" | "legal" | "social";
+
+export async function readConfig(): Promise<SiteConfig> {
+  return JSON.parse((await getFile(REL_CONFIG)).text);
+}
+
+async function updateConfig(mutate: (c: SiteConfig) => void, message: string): Promise<void> {
+  const { text, sha } = await getFile(REL_CONFIG);
+  const config: SiteConfig = JSON.parse(text);
+  mutate(config);
+  await putFile(REL_CONFIG, JSON.stringify(config, null, 2) + "\n", message, sha);
+}
+
+// Resolve the live array for a target so move/visible operate on the real ref.
+function resolveNavList(c: SiteConfig, target: NavTarget, col: number): unknown[] {
+  const ch = c.chrome ?? (c.chrome = {});
+  if (target === "header") {
+    const h = (ch.headerNav ??= {});
+    return (h.items ??= []);
+  }
+  const f = (ch.footer ??= {});
+  if (target === "footer-col") {
+    const cols = (f.columns ??= []);
+    const column = cols[col];
+    if (!column) throw new Error(`unknown footer column ${col}`);
+    return (column.items ??= []);
+  }
+  if (target === "legal") return (f.legal ??= []);
+  if (target === "social") return (f.social ??= []);
+  throw new Error(`unknown nav target '${target}'`);
+}
+
+export async function moveNavItem(
+  target: NavTarget,
+  col: number,
+  index: number,
+  dir: "up" | "down",
+): Promise<void> {
+  await updateConfig((c) => {
+    const list = resolveNavList(c, target, col);
+    const j = dir === "up" ? index - 1 : index + 1;
+    if (index < 0 || index >= list.length || j < 0 || j >= list.length) return;
+    [list[index], list[j]] = [list[j], list[index]];
+  }, `admin: move nav item ${index} ${dir} in ${target}${target === "footer-col" ? `[${col}]` : ""}`);
+}
+
+// Append a structure ref to a nav list (header / footer column / legal). New
+// items default to visible. No-op if the ref is already present. Not for social
+// (those are custom { url, label } entries, not structure refs).
+export async function addNavItem(target: NavTarget, col: number, ref: string): Promise<void> {
+  const clean = String(ref).trim();
+  if (!clean) throw new Error("empty ref");
+  if (target === "social") throw new Error("cannot add structure refs to social");
+  await updateConfig((c) => {
+    const list = resolveNavList(c, target, col) as ({ ref?: string } | string)[];
+    const exists = list.some((it) => (typeof it === "string" ? it : it.ref) === clean);
+    if (exists) return;
+    (list as NavRefItem[]).push({ ref: clean, visible: true });
+  }, `admin: add ${clean} to ${target}${target === "footer-col" ? `[${col}]` : ""}`);
+}
+
+// Remove an item from a nav list entirely (vs. setNavItemVisible which hides it).
+export async function removeNavItem(target: NavTarget, col: number, index: number): Promise<void> {
+  await updateConfig((c) => {
+    const list = resolveNavList(c, target, col);
+    if (index < 0 || index >= list.length) throw new Error(`no nav item at index ${index}`);
+    list.splice(index, 1);
+  }, `admin: remove nav item ${index} from ${target}${target === "footer-col" ? `[${col}]` : ""}`);
+}
+
+export async function setNavItemVisible(
+  target: NavTarget,
+  col: number,
+  index: number,
+  visible: boolean,
+): Promise<void> {
+  await updateConfig((c) => {
+    const list = resolveNavList(c, target, col) as ({ visible?: boolean } | string)[];
+    const item = list[index];
+    if (item === undefined) throw new Error(`no nav item at index ${index} in ${target}`);
+    if (typeof item === "string") {
+      // tolerate legacy bare-string items: promote to object form
+      list[index] = { ref: item, visible };
+    } else {
+      item.visible = visible;
+    }
+  }, `admin: ${visible ? "show" : "hide"} nav item ${index} in ${target}${target === "footer-col" ? `[${col}]` : ""}`);
 }

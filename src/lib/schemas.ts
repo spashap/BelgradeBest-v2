@@ -93,3 +93,14 @@ export function organizationSchema() {
     description: SITE.tagline,
   };
 }
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE.name,
+    url: SITE.origin,
+    description: SITE.tagline,
+    inLanguage: CONFIG.brand.locale,
+  };
+}

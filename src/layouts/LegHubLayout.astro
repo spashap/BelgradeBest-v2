@@ -4,9 +4,6 @@ import PageIntro from "../components/PageIntro.astro";
 import Container from "../components/Container.astro";
 import Placeholder from "../components/Placeholder.astro";
 import ArticleHero from "../components/ArticleHero.astro";
-import Note from "../components/Note.astro";
-import RichNote from "../components/RichNote.astro";
-import type { RichPart } from "../lib/types";
 import SectionHead from "../components/SectionHead.astro";
 import Grid from "../components/Grid.astro";
 import Card from "../components/Card.astro";
@@ -15,8 +12,7 @@ import Schema from "../components/Schema.astro";
 import { breadcrumbSchema, expoEventSchema } from "../lib/schemas";
 import { SITE, CONFIG, interp } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
-import { legStatus } from "../lib/leg-status";
-import { heroForLeg, heroForSlug } from "../lib/hero";
+import { heroForLeg, thumbForSlug } from "../lib/hero";
 import { getPlannedChildren } from "../lib/content-plan";
 import { articlesForLeg } from "../lib/articles";
 import { hubMetadata } from "../lib/metadata";
@@ -33,8 +29,6 @@ const meta = hubMetadata(clusterSlug);
 const legHero = heroForLeg(clusterSlug);
 const planned = getPlannedChildren(clusterSlug);
 const built = new Map((await articlesForLeg(clusterSlug)).map((a) => [a.data.slug, a]));
-const isLive = legStatus(clusterSlug) === "live";
-const noteParts = (isLive ? CONFIG.chrome.legHub.noteLive : CONFIG.chrome.legHub.noteComingSoon) as RichPart[];
 const extraSchemas = clusterSlug === "expo-2027" ? [expoEventSchema()] : [];
 
 function fmtDate(iso: string) {
@@ -67,12 +61,6 @@ function fmtDate(iso: string) {
     ) : null
   }
 
-  <Container variant="read">
-    <div class="u-stack-lg">
-      <Note tone="warn"><RichNote parts={noteParts} /></Note>
-    </div>
-  </Container>
-
   <Container>
     <div class="u-stack-lg"></div>
     <SectionHead
@@ -86,7 +74,7 @@ function fmtDate(iso: string) {
           const a = built.get(p.slug);
           if (a) {
             const label = a.data.shortTitle || a.data.title;
-            const hero = heroForSlug(p.slug, label);
+            const hero = thumbForSlug(p.slug, label);
             return (
               <Card
                 href={`/${clusterSlug}/${p.slug}`}
@@ -108,6 +96,16 @@ function fmtDate(iso: string) {
       }
     </Grid>
   </Container>
+
+  {
+    cluster.bodyBelow && cluster.bodyBelow.trim() ? (
+      <Container variant="read">
+        <article class="c-article c-article--leg-foot">
+          <MarkdownInline markdown={cluster.bodyBelow} />
+        </article>
+      </Container>
+    ) : null
+  }
 
   <Schema
     schemas={[

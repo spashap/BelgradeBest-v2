@@ -20,6 +20,7 @@ export type Cluster = {
   tagline: string;
   intro: string;
   body?: string;
+  bodyBelow?: string;
   hidden?: boolean;
   hero?: { src: string | null; alt: string | null };
   // leg `status` (live/coming-soon) is NOT here — projected by legStatus().
@@ -39,6 +40,7 @@ export const clusters: Cluster[] = [...schema.legs]
     tagline: leg.tagline,
     intro: leg.intro,
     body: leg.body ?? "",
+    bodyBelow: (leg as { bodyBelow?: string }).bodyBelow ?? "",
     hidden: leg.visible === false,
     hero: leg.hero ?? { src: null, alt: null },
   }));

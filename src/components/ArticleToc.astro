@@ -1,0 +1,68 @@
+---
+// On-page topic index ("On this page") rendered between the hero and the article
+// body. Built from the article's H2 headings (Astro adds id anchors, so
+// heading.slug matches the in-page #anchor). Renders nothing unless there are at
+// least 3 sections. Layout: two columns on desktop, one on mobile; paginated into
+// slides of up to 10 items — when there is more than one slide, prev/next arrows
+// appear and the box becomes horizontally slidable. Styled via .c-toc in
+// globals.css (no inline styles except the per-slide counter offset — Design Law).
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+interface Props {
+  headings?: Heading[];
+}
+const { headings = [] } = Astro.props;
+const items = headings.filter((h) => h.depth === 2 && h.text && h.slug);
+
+const PER = 10;
+const slides: Heading[][] = [];
+for (let i = 0; i < items.length; i += PER) slides.push(items.slice(i, i + PER));
+const hasSlider = slides.length > 1;
+---
+{
+  items.length >= 3 ? (
+    <>
+      <nav class="c-toc" aria-label="On this page">
+        <div class="c-toc__head">
+          <p class="c-toc__title">On this page</p>
+          {hasSlider ? (
+            <div class="c-toc__arrows">
+              <button type="button" data-toc-prev aria-label="Previous sections">‹</button>
+              <button type="button" data-toc-next aria-label="More sections">›</button>
+            </div>
+          ) : null}
+        </div>
+        <div class="c-toc__viewport" data-toc-viewport>
+          {slides.map((slide, i) => (
+            <ol class="c-toc__slide" style={`counter-reset: toc ${i * PER}`}>
+              {slide.map((h) => (
+                <li>
+                  <a href={`#${h.slug}`}>{h.text}</a>
+                </li>
+              ))}
+            </ol>
+          ))}
+        </div>
+      </nav>
+      {hasSlider ? (
+        <script is:inline>
+          document.querySelectorAll(".c-toc").forEach(function (toc) {
+            var vp = toc.querySelector("[data-toc-viewport]");
+            var prev = toc.querySelector("[data-toc-prev]");
+            var next = toc.querySelector("[data-toc-next]");
+            if (!vp || !prev || !next) return;
+            prev.addEventListener("click", function () {
+              vp.scrollBy({ left: -vp.clientWidth, behavior: "smooth" });
+            });
+            next.addEventListener("click", function () {
+              vp.scrollBy({ left: vp.clientWidth, behavior: "smooth" });
+            });
+          });
+        </script>
+      ) : null}
+    </>
+  ) : null
+}

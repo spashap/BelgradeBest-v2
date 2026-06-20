@@ -10,6 +10,7 @@ const nav = [
   ["/admin", "Dashboard"],
   ["/admin/links", "Links"],
   ["/admin/structure", "Structure"],
+  ["/admin/navigation", "Navigation"],
   ["/admin/analytics", "Analytics"],
 ];
 ---
@@ -51,5 +52,23 @@ const nav = [
       <h1>{title}</h1>
       <slot />
     </main>
+    <script is:inline>
+      // Admin actions are plain form POST→redirect, which reloads the page and
+      // resets scroll to the top. Preserve the scroll position across that
+      // reload so the operator stays on the row they just acted on.
+      (function () {
+        try {
+          var KEY = "admin-scroll";
+          var saved = sessionStorage.getItem(KEY);
+          if (saved !== null) {
+            sessionStorage.removeItem(KEY);
+            window.scrollTo(0, parseInt(saved, 10) || 0);
+          }
+          document.addEventListener("submit", function () {
+            sessionStorage.setItem(KEY, String(window.scrollY));
+          });
+        } catch (e) {}
+      })();
+    </script>
   </body>
 </html>

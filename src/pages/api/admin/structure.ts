@@ -1,6 +1,6 @@
 export const prerender = false;
 import type { APIRoute } from "astro";
-import { moveSlug, setSlugVisible } from "../../../lib/admin/store";
+import { moveSlug, setSlugVisible, setLegVisible } from "../../../lib/admin/store";
 
 export const POST: APIRoute = async ({ request, redirect }) => {
   const form = await request.formData();
@@ -12,6 +12,10 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       await moveSlug(leg, slug, form.get("dir") === "up" ? "up" : "down");
     } else if (action === "visible") {
       await setSlugVisible(leg, slug, form.get("visible") === "1");
+    } else if (action === "leg-visible") {
+      // Master switch: hides/shows the whole leg everywhere (homepage, header +
+      // footer nav, sitemap). setLegVisible writes leg.visible in site-schema.json.
+      await setLegVisible(leg, form.get("visible") === "1");
     }
     return redirect("/admin/structure?ok=1");
   } catch (e) {

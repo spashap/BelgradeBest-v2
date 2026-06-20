@@ -1,6 +1,6 @@
 import schema from "../data/site-schema.json";
 import { clusterBySlug } from "./clusters";
-import { heroForPath } from "./hero";
+import { thumbForPath } from "./hero";
 import { articlesByHref } from "./articles";
 
 // Internal-link model. The SINGLE editable master for related links is
@@ -54,7 +54,7 @@ export async function relatedFor(leg: string, slug: string): Promise<RelatedLink
     } else {
       continue;
     }
-    const hero = heroForPath(href, title);
+    const hero = thumbForPath(href, title);
     out.push({ href, title: title!, body, heroSrc: hero?.src, heroAlt: hero?.alt });
   }
   return out;

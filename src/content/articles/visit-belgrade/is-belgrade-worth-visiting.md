@@ -3,16 +3,16 @@ leg: "visit-belgrade"
 slug: "is-belgrade-worth-visiting"
 title: "Is Belgrade worth visiting? Safe, cheap, and when to go"
 shortTitle: "Is it worth visiting?"
-description: "An honest answer to whether Belgrade is worth visiting — how safe it is, how cheap, the best time to go, and why the layered city is the draw."
+description: "Is Belgrade worth visiting? An honest yes — it's safe, affordable and walkable, and its layered crossroads history is the draw. Here's how safe, how cheap, and the best time to go."
 lede: "Belgrade is worth visiting precisely because it isn't conventionally pretty — its layered, crossroads history is the draw. Here's the honest case: how safe it is, what it costs, and when to go."
 heroLabel: "Is Belgrade worth visiting / hero"
 heroAlt: "A visitor enjoying Belgrade and deciding the city is worth the trip"
-lastUpdated: "2026-06-06"
+lastUpdated: "2026-06-20"
 order: 1
 visible: true
 intent: "leisure"
 priority: "P1"
-noindex: true
+noindex: false
 linksTo:
   - "/visit-belgrade/things-to-do-in-belgrade"
   - "/visit-belgrade/belgrade-itinerary-3-days"
@@ -32,23 +32,25 @@ isFaqCandidate: true
 unknowns: []
 ---
 
-## The case for going
+## Is Belgrade worth visiting?
 
-The doubt is common: isn't Belgrade just grey concrete, not especially pretty? That's exactly the point. Belgrade is worth visiting because it is layered rather than conventionally pretty — the crossroads history, the visible succession of empires, and the Brutalist and socialist heritage are the draw, not a drawback. If you want a postcard-perfect old town, look elsewhere. If you want a city that wears its complicated past in plain sight, this is it.
+Yes — Belgrade is worth visiting, and it's worth it for the opposite of the usual reason. The common doubt is fair: isn't it just grey concrete, not especially pretty? That's exactly the point. Belgrade rewards you because it is layered rather than conventionally pretty — the crossroads history, the visible succession of empires, and the Brutalist and socialist heritage are the draw, not a drawback. If you want a postcard-perfect old town, look elsewhere. If you want a city that wears its complicated past in plain sight, this is it. It's also safe with sensible caution, affordable if no longer bargain-basement, and easy to get around on foot.
 
-It also works simply as a city break. A few days cover the main sights, the neighbourhoods and a strong food, nightlife and arts scene, with the rivers — Ada Ciganlija and the Danube — as a summer dimension. Tourism has been rising: Belgrade drew roughly 1.38 million visitors in 2023, up 17% year on year, and Serbia as a whole received 4.43 million tourists in 2024, with Belgrade accounting for about 29.3% of overnight stays. For a sense of how to fill the time, see [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) and the [three-day itinerary](/visit-belgrade/belgrade-itinerary-3-days).
+The compact core makes that easy to see in a few days. Most of the headline sights cluster in Stari Grad, the historic old-town district on the right bank: Republic Square (Trg Republike) is the central orientation point and the natural place to start, and from there the pedestrian spine of Knez Mihailova runs north-west to Belgrade Fortress (Kalemegdan), which sits on a ridge at the confluence of the Sava and Danube rivers — a roughly 10-to-15-minute walk end to end, with panoramic river views at the top. The bohemian kafana quarter of Skadarlija is a short downhill walk east of Republic Square, and the riverfront nightlife of Savamala lies just south-west, down the slope toward the Sava. The rivers themselves — Ada Ciganlija and the Danube — add a summer dimension.
+
+It works simply as a city break, and tourism has been rising: Belgrade drew roughly 1.38 million visitors in 2023, up 17% year on year, and Serbia as a whole received 4.43 million tourists in 2024, with Belgrade accounting for about 29.3% of overnight stays. For a sense of how to fill the time, see [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) and the [three-day itinerary](/visit-belgrade/belgrade-itinerary-3-days).
 
 ## Is Belgrade safe?
 
 Belgrade is generally safe for visitors, with low violent crime. The U.S. State Department notes that violent crime is mostly tied to organised crime and hooliganism around high-profile sporting events, not to tourists. The main visitor risks are petty crime — pickpocketing in crowds — and taxi overcharging. Crime indices are moderate, around 37.8 as of 2026, though such figures are perishable and best treated as indicative.
 
-Solo and night-time visits, including for solo female travellers, are widely reported as manageable with standard precautions — though this is traveller-reported rather than an official assurance. In practice that means sticking to central, well-lit areas, avoiding football-crowd hotspots after a derby, and staying alert with taxis. The overall risk category is stable; the specific tactics are the perishable part.
+Solo and night-time visits, including for solo female travellers, are widely reported as manageable with standard precautions — though this is traveller-reported rather than an official assurance. In practice that means sticking to central, well-lit areas — the pedestrianised Knez Mihailova, Republic Square and the Stari Grad core stay busy and lit late — avoiding football-crowd hotspots after a derby, and staying alert with taxis. The overall risk category is stable; the specific tactics are the perishable part.
 
 ## Is Belgrade cheap?
 
 Belgrade is affordable but no longer ultra-cheap — prices have risen since around 2020. As a rough guide for 2026, a budget day runs about $50 (around 5,000 RSD, covering a hostel or cheap apartment plus local food), a mid-range day about $150–170 (a hotel, restaurants and some paid sights), and comfort or luxury from $250–450 a day and up. These bands are reported and indicative, and the RSD equivalent is itself only a rough guide as of 2026.
 
-What keeps a low-budget trip genuinely viable is how much is free. The fortress grounds, the Temple of St Sava and Ada Ciganlija cost nothing, and since 1 January 2025 all city public transport is free. Many museums also have a monthly free-admission day. You can see a great deal of Belgrade without spending much at all.
+What keeps a low-budget trip genuinely viable is how much is free. The fortress grounds at Kalemegdan — the park and ramparts above the river confluence, a short walk from Knez Mihailova — the Temple of St Sava and Ada Ciganlija all cost nothing, and since 1 January 2025 all city public transport is free. Many museums also have a monthly free-admission day. You can see a great deal of Belgrade without spending much at all.
 
 ## When should you go?
 

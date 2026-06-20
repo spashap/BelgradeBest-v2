@@ -47,6 +47,9 @@ const articles = defineCollection({
     // optional editorial extras carried from the old registries / page props
     isFaqCandidate: z.boolean().optional(),
     unknowns: z.array(z.string()).default([]),
+    // Stay-affiliate target keys (resolve via src/data/stay-affiliates.json).
+    // Render-gated: a target only shows once its affiliate is enabled+url-set.
+    stayTargets: z.array(z.string()).default([]),
   }),
 });
 
