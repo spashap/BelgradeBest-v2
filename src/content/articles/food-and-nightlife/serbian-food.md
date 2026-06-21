@@ -1,9 +1,9 @@
 ---
 leg: "food-and-nightlife"
 slug: "serbian-food"
-title: "Serbian food — the dishes, the staples, and how Serbians eat"
+title: "Serbian food — the dishes, the staples, and how Serbs eat"
 shortTitle: "Serbian food"
-description: "What to eat in Belgrade: a clear guide to traditional Serbian food — ćevapi, pljeskavica, karađorđeva, sarma, gibanica, kajmak and ajvar, burek and rakija — what each dish is, why to try it, and the long, communal way Serbians eat."
+description: "What to eat in Belgrade: a clear guide to traditional Serbian food — ćevapi, pljeskavica, karađorđeva, sarma, gibanica, kajmak and ajvar, burek and rakija — what each dish is, why to try it, and the long, communal way Serbs eat."
 lede: "Serbian food is hearty, meat-forward and built for long, shared meals. This is what to eat in Belgrade — the core dishes, the spreads and breads, the sweets and the drinks at the table — with each item explained plainly so you know exactly what to order and why, before you go looking for where to eat it."
 heroLabel: "Serbian food / hero"
 heroAlt: "A shared table of Serbian dishes with grilled meat, ajvar and rakija"
@@ -31,7 +31,7 @@ faqs:
   - answer: "Kajmak is a rich, mild clotted-cream dairy spread and ajvar is a roasted red-pepper relish; together they are the defining accompaniments to almost any Serbian dish. Urnebes is a spicy cheese-and-pepper spread from the south, and gibanica is a cheese-and-egg layered pastry — between them they cover most of the cheese and dairy you'll meet."
     question: "What are kajmak, ajvar and gibanica?"
   - answer: "Rakija — fruit brandy, most iconically šljivovica (plum) — is central to hospitality and drunk before, during and after meals, while Turkish-style coffee is the traditional everyday coffee. Serbian wine, craft beer and coffee culture each have a deeper home elsewhere in this guide."
-    question: "What do Serbians drink with their food?"
+    question: "What do Serbs drink with their food?"
   - answer: "Vegetarians can eat in Belgrade, but the cuisine is meat-centred and cheese and animal fats are common. Some dishes such as prebranac (baked beans), gibanica, shopska salad and fasting (posna) versions are accidentally plant-friendly. Strict vegans should plan ahead and clarify ingredients, especially in salads and baked goods."
     question: "Can vegetarians eat Serbian food?"
   - answer: "Serbian food is widely described as very affordable by European-capital standards, with generous portions, framing the city as an underrated, good-value food destination (indicative, as of 2026). That value is part of why long, shared meals feel so natural here."
@@ -96,13 +96,13 @@ Mostly, no. Traditional Serbian food is savoury and hearty rather than chilli-ho
 
 Serbian dessert culture sits at a crossroads. There are Ottoman-influenced sweets such as **baklava** (layered filo, nuts and syrup), and Austro-Hungarian-style cakes and custards such as **krempita** (a vanilla custard slice). Both are served in the *poslastičarnica* — the pastry-shop tradition that gives sweets their own dedicated space, separate from the grill and the kafana. *Why it matters:* dessert here is a destination in its own right, not an afterthought tacked onto a restaurant meal — locals go out specifically for cake, ice cream and coffee.
 
-## What do Serbians drink with their food?
+## What do Serbs drink with their food?
 
 **Rakija** — fruit brandy, most iconically *šljivovica* (plum) — is central to Serbian hospitality and table culture. It's drunk before, during and after meals, and offering it is a gesture of welcome. The traditional everyday coffee is **Turkish-style coffee**, served strong, in a small cup, and unhurried.
 
 Rakija, wine, craft beer and coffee each have a deeper home elsewhere in this section of the guide, so here they're named as part of the table rather than explored in depth. Follow the dedicated drink pages when you want the full story on Serbian wine, the brewery scene, or coffee culture.
 
-## How Serbians eat
+## How Serbs eat
 
 Meals are long and communal. The **kafana** — the traditional tavern — is the emblematic social eating-and-drinking space, where food and conversation stretch across hours, often with live old-town music. Dishes are frequently shared from central platters rather than plated individually, so eating becomes something you do together rather than alone, with the spreads in the middle and everyone reaching in.
 

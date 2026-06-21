@@ -247,8 +247,7 @@
           "priority": "P2",
           "title": "Entry rules and registration for Serbia",
           "linksTo": [
-            "/plan-your-trip/staying-safe",
-            "/invest-and-relocate"
+            "/plan-your-trip/staying-safe"
           ]
         },
         {
@@ -682,8 +681,7 @@
           "priority": "P2",
           "title": "Participating countries — confirmed & expected",
           "linksTo": [
-            "/visit-belgrade",
-            "/invest-and-relocate"
+            "/visit-belgrade"
           ]
         },
         {
@@ -783,7 +781,7 @@
       "slug": "medical-tourism",
       "order": 7,
       "visible": true,
-      "eyebrow": "Vertical",
+      "eyebrow": "Medical tourism",
       "title": "Medical Tourism",
       "navLabel": "",
       "seoTitle": "",
@@ -795,7 +793,7 @@
       "bodyBelow": "## What to weigh before choosing Belgrade for treatment\n\nPeople researching *medical tourism in Serbia* or *Belgrade dental tourism* usually start with cost. It's a fair starting point — as a general pattern, Belgrade tends to sit as a mid-priced European option, more affordable than the UK, US, Germany, or Australia, though not the cheapest market in the region. But advertised 'savings' can mislead once flights, accommodation, any scans or follow-up at home, and the value of your own time are added in, so the realistic figure is usually smaller than the headline.\n\nThe more useful questions are about **diligence and safety**, and they apply to any country:\n\n- **Verify the provider.** Confirm licensing and credentials, and be cautious of outcome or 'success rate' claims, which are often self-reported and not directly comparable.\n- **Read the quote carefully.** Understand exactly what is and isn't included — 'all-inclusive' often covers the medical items only, and staged treatments can list components separately.\n- **Plan continuity of care.** Many procedures need follow-up or may require revision; decide in advance who manages your aftercare and any complications once you're home, and weigh the clot risk of long flights after surgery.\n\nSome areas carry **added legal and ethical complexity** — fertility treatment and gender-affirming care among them — where rules, eligibility, and outcomes vary significantly and some services are restricted under Serbian law. For anything in this territory, treat this page only as a prompt to seek independent **medical and legal advice** specific to your situation; nothing here is medical advice, and no procedure is risk-free. If a Belgrade trip is part of the plan, [Plan your trip](/plan-your-trip) covers the practical logistics.",
       "hero": {
         "src": "/images/legs/medical-tourism/hero.png",
-        "alt": "Serbia offers a range of medical procedures, but some of the most popular include dental treatments, cosmetic surgery, orthopedic surgeries like knee and hip replacements, and fertility treatments"
+        "alt": "Belgrade as a medical-travel destination"
       },
       "slugs": [
         {

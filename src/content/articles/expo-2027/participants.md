@@ -15,7 +15,6 @@ priority: "P2"
 noindex: false
 linksTo:
   - "/visit-belgrade"
-  - "/invest-and-relocate"
 isFaqCandidate: true
 faqs:
   - answer: "As of 2026, the official Participants page lists 137 nations as formally committed to Expo 2027 Belgrade, with a note that more are coming. The same figure of 137 countries was reported at the second International Participants Meeting in Belgrade in April 2026, where around 500 delegates gathered. The count has risen steadily — roughly 94 in May 2025, 114–118 by mid-2025, 120 in September 2025, and 137 by early–mid 2026 — so treat it as a growing snapshot rather than a final total."
@@ -62,7 +61,7 @@ If your country appears among the named examples above, it is confirmed. If it d
 
 ## How does participation work?
 
-Each participating country is expected to have a designated National Day and the opportunity to present itself through a pavilion, exhibitions, events, innovations, culture and cuisine. The country tie is one reason this event matters beyond tourism — readers weighing business links may find our [invest and relocate](/invest-and-relocate) guide a useful companion.
+Each participating country is expected to have a designated National Day and the opportunity to present itself through a pavilion, exhibitions, events, innovations, culture and cuisine. The country tie is one reason this event matters beyond tourism.
 
 The legal framework is the Agreement on Privileges and Benefits, signed between Serbia and the BIE. It establishes customs and tax relief, the legal status of national commissioner offices, recognition of driving licences, and a "one-stop shop" for administrative formalities. Each participating country has a national commissioner and a legally recognised office in Serbia during the Expo. There is also an "Expo visa," issued free of charge, that allows accredited Expo participants and staff to live and work in Serbia for the Expo period — this is for participants, not for general visitors.
 

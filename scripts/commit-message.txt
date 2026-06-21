@@ -1,1 +1,1 @@
-Fix /admin 500 on Vercel (bundled JSON read fallback); admin login checkOrigin fix; GSC+GA4 admin analytics; ADMIN_ENTRY
+SEO QA fixes: E-E-A-T utility pages (about/how-we-make-money/contact/privacy); drop orphan /invest-and-relocate links; Serbia->Belgrade keyword alignment; remove dup paragraph + leaked internal note; consistent arena naming; Serbians->Serbs; medical eyebrow + hero alt

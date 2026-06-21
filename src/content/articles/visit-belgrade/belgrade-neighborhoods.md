@@ -68,7 +68,7 @@ Partly redeveloped, it is reported as a place known for street art, creative spa
 
 Vračar is a central district just inland from Stari Grad, up the ridge from the river and away from the confluence — one of the smallest but densest and most sought-after residential municipalities, the kind of leafy, café-lined neighbourhood locals actually want to live in. It is anchored by the Temple of St. Sava, one of the largest Orthodox churches in the world and the city's most recognisable landmark, with the National Library beside it on the same plateau, and it is threaded with cafés and quieter residential streets.
 
-The Nikola Tesla Museum is also here, which makes the district easy to plan: you can combine St. Sava, the Tesla Museum and a café stop into a comfortable half-day on foot without needing transport between them. It feels more residential and unhurried than the Old Town — a useful contrast if Stari Grad starts to feel busy — and it suits visitors who want a calmer base with real neighbourhood life and an easy walk back into the centre. (Vračar is not yet in our detailed geography records, so we keep its bounds qualitative rather than pin exact distances.)
+The Nikola Tesla Museum is also here, which makes the district easy to plan: you can combine St. Sava, the Tesla Museum and a café stop into a comfortable half-day on foot without needing transport between them. It feels more residential and unhurried than the Old Town — a useful contrast if Stari Grad starts to feel busy — and it suits visitors who want a calmer base with real neighbourhood life and an easy walk back into the centre.
 
 ## Zemun — the old soul across the water
 

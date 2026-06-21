@@ -15,7 +15,6 @@ priority: "P2"
 noindex: false
 linksTo:
   - "/plan-your-trip/staying-safe"
-  - "/invest-and-relocate"
 faqs:
   - answer: "For most major nationalities, no. As of 2026, US, UK, EU, Canadian and Australian citizens can enter Serbia visa-free for up to 90 days within a 180-day period for tourism or business. The visa-free list can change, so confirm your own nationality with the Serbian Ministry of Foreign Affairs (MFA) before you travel."
     question: "Do US/UK/EU citizens need a visa for Serbia?"
@@ -39,7 +38,7 @@ unknowns: []
 
 For most major nationalities, no. As of 2026, citizens of the EU, UK, USA, Canada, Australia and many other countries can enter Serbia visa-free for short stays. The single rule that actually trips visitors up is not the visa at all — it is the 24-hour police registration (the "white card"), covered below. If you take one thing from this page, take that.
 
-This page covers short-stay tourism and business entry. If you are planning to live, work, study or relocate, the rules are different — see [when a short stay becomes something longer](#when-a-short-stay-becomes-something-longer) and our [invest and relocate](/invest-and-relocate) leg.
+This page covers short-stay tourism and business entry. If you are planning to live, work, study or relocate, the rules are different — see [when a short stay becomes something longer](#when-a-short-stay-becomes-something-longer).
 
 ## How long can I stay in Serbia without a visa? The 90/180 rule
 
@@ -79,7 +78,7 @@ Keeping your paperwork in order is part of a smooth, low-stress trip; for the br
 
 Tourist and short business visits are capped at 90 days within 180 days. Longer stays, employment and many forms of study require temporary or permanent residence permits and the appropriate entry visa, such as a Visa D. Permanent residents also follow a different registration regime — eight days to register domicile rather than 24 hours.
 
-Those residence, work and digital-nomad pathways are beyond the scope of an arrival-focused page. If you are thinking about staying longer, our [invest and relocate](/invest-and-relocate) leg covers them in detail.
+Those residence, work and digital-nomad pathways are beyond the scope of this arrival-focused page.
 
 ## What's still unknown
 

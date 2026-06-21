@@ -55,8 +55,6 @@ Yes, with ordinary caution. Official tourism sources stress that Belgrade has no
 
 A few specific tricks are common enough to be worth naming. None of them require fear — just a plan.
 
-A few specific tricks are common enough to be worth naming. None of them require fear — just a plan.
-
 ### Taxi and airport touts
 
 Aggressive unlicensed taxi drivers approach arriving passengers in or near the airport terminal, offering rides at inflated or undisclosed prices; the airport operator has acknowledged the problem. Some drivers overcharge, especially at night or when dealing with foreigners. The fix is simple: use the airport's official voucher system and registered taxis or ranks, and ignore unsolicited offers. The same caution applies at bus and train stations. For the step-by-step on the voucher and fares, see our guide to [getting from the airport to the city](/plan-your-trip/airport-to-city).

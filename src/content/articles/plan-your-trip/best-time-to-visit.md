@@ -1,11 +1,11 @@
 ---
 leg: "plan-your-trip"
 slug: "best-time-to-visit"
-title: "The best time to visit Serbia"
+title: "The best time to visit Belgrade"
 shortTitle: "Best time to visit"
 description: "The best time to visit Belgrade is April–June and September–October — a month-by-month, season-by-season guide to Belgrade weather, summer vs winter, the cheapest and least-crowded windows, and how Expo 2027 changes the calculus."
 lede: "The short answer: the best time to visit Belgrade is the shoulder seasons — April to June and September to October — when the weather is mild and the crowds are thin. Here's the full month-by-month and season-by-season breakdown, plus what the 2027 Expo window means for heat, crowds and prices."
-heroLabel: "Best time to visit Serbia / hero"
+heroLabel: "Best time to visit Belgrade / hero"
 heroAlt: "Choosing the best time to visit Belgrade"
 lastUpdated: "2026-06-20"
 order: 4

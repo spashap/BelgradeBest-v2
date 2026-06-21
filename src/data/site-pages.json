@@ -6,9 +6,9 @@
       "title": "About BelgradeBest",
       "eyebrow": "About",
       "lede": "What this site is, who it's for, and the editorial bar we hold ourselves to.",
-      "body": "BelgradeBest is being built. The full about page lands as part of the first content milestone.",
+      "body": "BelgradeBest is an independent, English-language guide to Belgrade, written for foreign visitors, newcomers, and anyone trying to understand the city from the outside — travellers planning a trip, people weighing a longer stay, and those researching medical travel or Expo 2027.\n\n## How we work\n\nEvery page is built on a curated, source-checked knowledge base rather than rewritten from other blogs. Where a fact is official, we state it plainly; where it is only reported, we say so; and where something isn't settled yet, we mark it as unknown rather than guess. We focus on what stays true — how the city works, what's worth your time, how to get around — and leave the perishable details, like live prices and exact opening hours, to the official and booking sites that keep them current. Pages are updated as the city changes.\n\n## Independence\n\nWe are not sponsored by any hotel, clinic, tour operator, or tourism board, and no one pays to be recommended. When we point you toward something to book, it's because it's the genuinely useful answer on the page — see [how we make money](/how-we-make-money) for the full disclosure.\n\n## Who it's for\n\nIf you want a polished postcard, there are prettier cities. If you want to actually understand Belgrade and use it well, that's what this guide is for. Spotted something wrong or out of date? [Tell us](/contact) — we read everything, and we'd rather be corrected than be wrong.",
       "seoTitle": "About BelgradeBest",
-      "seoDescription": "An honest English-language guide to Belgrade. Evergreen by design, monetised lightly and visibly.",
+      "seoDescription": "An independent, English-language guide to Belgrade for foreign visitors — how we work, our editorial standards, and who it's for.",
       "noindex": false
     },
     {
@@ -17,9 +17,9 @@
       "title": "How we make money",
       "eyebrow": "Disclosure",
       "lede": "What we get paid for, how we choose what to recommend, and what we will not do.",
-      "body": "The full disclosure lands with the first content milestone. The short version: earned-placement affiliate links where they are the genuinely useful answer on a page, never wall-to-wall widgets, never anything that compromises the editorial bar.",
+      "body": "BelgradeBest is free to read. We keep it that way with lightweight, clearly-marked affiliate links — and nothing else.\n\n## What that means\n\nSome links to booking sites (for example, accommodation) are affiliate links. If you book through one, we may earn a small commission **at no extra cost to you** — you pay the same price you would have anyway. We add these links only where the link is the genuinely useful answer on the page, never wall-to-wall, and we don't run display-ad clutter.\n\n## What we don't do\n\nWe don't take payment to recommend a specific hotel, clinic, restaurant, or tour, and we don't let advertisers influence our editorial judgement. A place is mentioned because it earns its place, not because someone paid for it.\n\n## Why it's set up this way\n\nThe whole value of this guide is trust. Monetisation is added lightly and visibly, onto pages that are genuinely useful first — never at the expense of honest advice. If a recommendation ever reads like an ad to you, [tell us](/contact).",
       "seoTitle": "How BelgradeBest makes money",
-      "seoDescription": "Honest, plain-English affiliate disclosure for BelgradeBest.",
+      "seoDescription": "Honest, plain-English affiliate disclosure for BelgradeBest: marked affiliate links at no extra cost to you, and no paid placements.",
       "noindex": false
     },
     {
@@ -28,9 +28,9 @@
       "title": "Get in touch",
       "eyebrow": "Contact",
       "lede": "Tips, corrections, partnership questions. We read everything.",
-      "body": "A contact form lands with the first content milestone.",
+      "body": "Tips, corrections, partnership questions — we read everything.\n\nEmail us at **hello@belgradebest.com**.\n\nFound a factual error or something out of date? That's the most useful message you can send: tell us the page and what's wrong, and we'll fix it. We're independent, and we'd rather be corrected than be wrong.",
       "seoTitle": "Contact BelgradeBest",
-      "seoDescription": "Get in touch with BelgradeBest.",
+      "seoDescription": "Get in touch with BelgradeBest — tips, corrections, and partnership questions.",
       "noindex": false
     },
     {
@@ -39,9 +39,9 @@
       "title": "Privacy at BelgradeBest",
       "eyebrow": "Privacy",
       "lede": "The plain-English version: what we collect, what we don't, and how to reach us about it.",
-      "body": "The full privacy notice lands with the first content milestone.",
+      "body": "The short, plain-English version.\n\n## What we collect\n\nWe use Google Analytics 4 to understand, in aggregate, how people use the site — which pages are read, roughly where visitors come from, and what device they use. This is anonymised, aggregate usage data. We do not collect names, accounts, or payment details, because the site has none. Analytics uses cookies; you can block them in your browser without losing access to anything here.\n\n## Affiliate links\n\nSome outbound booking links are affiliate links (see [how we make money](/how-we-make-money)). If you click one, the destination site may set its own cookies under its own privacy policy, which we don't control.\n\n## Your choices\n\nYou can use the whole site with cookies blocked. If you have any question about data, [contact us](/contact). This notice may be updated as the site grows.",
       "seoTitle": "Privacy at BelgradeBest",
-      "seoDescription": "How BelgradeBest handles your data — short, plain, current.",
+      "seoDescription": "How BelgradeBest handles your data — short, plain, and current.",
       "noindex": false
     }
   ]
