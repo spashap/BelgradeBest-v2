@@ -1,1 +1,1 @@
-Fix admin login (disable Astro checkOrigin behind Vercel proxy); admin analytics (GSC+GA4); ADMIN_ENTRY login
+Fix /admin 500 on Vercel (bundled JSON read fallback); admin login checkOrigin fix; GSC+GA4 admin analytics; ADMIN_ENTRY

@@ -1,6 +1,10 @@
 import { readFileSync, writeFileSync, renameSync } from "node:fs";
 import { join } from "node:path";
 import { env } from "./env";
+// Bundled snapshots used as a read fallback on Vercel serverless, where the raw
+// source JSON files are not present on disk (so readFileSync would throw).
+import schemaJson from "../../data/site-schema.json";
+import configJson from "../../data/site-config.json";
 
 // Data-file store for the in-app /admin. TWO backends:
 //   • GitHub  (when GITHUB_TOKEN + GITHUB_REPO set, i.e. on Vercel): reads/writes
@@ -36,7 +40,16 @@ async function getFile(rel: string): Promise<FileState> {
     const text = Buffer.from(json.content, "base64").toString("utf8");
     return { text, sha: json.sha };
   }
-  return { text: readFileSync(join(process.cwd(), rel), "utf8"), sha: null };
+  try {
+    return { text: readFileSync(join(process.cwd(), rel), "utf8"), sha: null };
+  } catch {
+    // Vercel serverless: the source file isn't on disk — use the bundled copy so
+    // the admin still RENDERS. (Saving still needs GitHub mode; local FS is
+    // read-only on Vercel.)
+    const bundled = rel === REL_SCHEMA ? schemaJson : rel === REL_CONFIG ? configJson : null;
+    if (bundled) return { text: JSON.stringify(bundled, null, 2) + "\n", sha: null };
+    throw new Error(`Cannot read ${rel} (no disk file, no bundled fallback)`);
+  }
 }
 
 async function putFile(rel: string, text: string, message: string, sha: string | null): Promise<void> {
