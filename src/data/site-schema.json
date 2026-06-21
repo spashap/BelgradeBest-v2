@@ -292,6 +292,34 @@
             "/visit-belgrade/is-belgrade-worth-visiting",
             "/plan-your-trip/getting-around"
           ]
+        },
+        {
+          "slug": "taxis-in-belgrade",
+          "order": 8,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Taxis in Belgrade: apps, fares and avoiding scams",
+          "linksTo": [
+            "/plan-your-trip/airport-to-city",
+            "/plan-your-trip/getting-around",
+            "/plan-your-trip/staying-safe",
+            "/plan-your-trip/money"
+          ]
+        },
+        {
+          "slug": "car-rental-belgrade",
+          "order": 9,
+          "visible": true,
+          "intent": "both",
+          "priority": "P2",
+          "title": "Renting a car in Belgrade: what to know before you book",
+          "linksTo": [
+            "/visit-belgrade/belgrade-day-trips",
+            "/plan-your-trip/getting-around",
+            "/plan-your-trip/airport-to-city",
+            "/expo-2027/tickets"
+          ]
         }
       ]
     },
@@ -323,7 +351,9 @@
           "title": "Where to stay in Belgrade — best areas by traveller type",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade-first-time",
-            "/visit-belgrade/belgrade-neighborhoods"
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/where-to-stay/where-to-stay-in-belgrade-with-family",
+            "/where-to-stay/where-to-stay-in-belgrade-for-nightlife"
           ]
         },
         {
@@ -335,7 +365,9 @@
           "title": "Where to stay in Belgrade for the first time",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/visit-belgrade/belgrade-itinerary-3-days"
+            "/visit-belgrade/belgrade-itinerary-3-days",
+            "/where-to-stay/where-to-stay-in-belgrade-with-family",
+            "/where-to-stay/where-to-stay-in-belgrade-for-nightlife"
           ]
         },
         {
@@ -347,7 +379,9 @@
           "title": "Where to stay in Belgrade with family",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/where-to-stay/belgrade-hotels-vs-apartments"
+            "/where-to-stay/belgrade-hotels-vs-apartments",
+            "/where-to-stay/where-to-stay-in-belgrade-first-time",
+            "/where-to-stay/where-to-stay-in-belgrade-for-nightlife"
           ]
         },
         {
@@ -359,7 +393,9 @@
           "title": "Where to stay in Belgrade for nightlife",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/food-and-nightlife/belgrade-nightlife"
+            "/food-and-nightlife/belgrade-nightlife",
+            "/where-to-stay/where-to-stay-in-belgrade-first-time",
+            "/where-to-stay/where-to-stay-in-belgrade-with-family"
           ]
         },
         {
@@ -371,7 +407,9 @@
           "title": "Where to stay in Belgrade for business",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/plan-your-trip/getting-around"
+            "/plan-your-trip/getting-around",
+            "/where-to-stay/where-to-stay-in-belgrade-first-time",
+            "/where-to-stay/where-to-stay-in-belgrade-with-family"
           ]
         },
         {
@@ -383,7 +421,9 @@
           "title": "Belgrade Old Town vs New Belgrade — where to stay",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/visit-belgrade/brutalist-belgrade"
+            "/visit-belgrade/brutalist-belgrade",
+            "/visit-belgrade/zemun",
+            "/where-to-stay/where-to-stay-in-belgrade-first-time"
           ]
         },
         {
@@ -395,7 +435,9 @@
           "title": "Dorćol vs Vračar — where to stay in Belgrade",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/visit-belgrade/belgrade-neighborhoods"
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/where-to-stay/where-to-stay-in-belgrade-first-time",
+            "/where-to-stay/where-to-stay-in-belgrade-with-family"
           ]
         },
         {
@@ -407,7 +449,9 @@
           "title": "Stari Grad vs Zemun — where to stay in Belgrade",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/visit-belgrade/zemun"
+            "/visit-belgrade/zemun",
+            "/where-to-stay/where-to-stay-in-belgrade-first-time",
+            "/where-to-stay/where-to-stay-in-belgrade-with-family"
           ]
         },
         {
@@ -419,7 +463,9 @@
           "title": "Belgrade hotels vs apartments — which to book",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/plan-your-trip/visa-and-entry"
+            "/plan-your-trip/visa-and-entry",
+            "/where-to-stay/belgrade-non-smoking-hotels-apartments",
+            "/plan-your-trip/car-rental-belgrade"
           ]
         },
         {
@@ -431,7 +477,9 @@
           "title": "Non-smoking hotels & apartments in Belgrade",
           "linksTo": [
             "/where-to-stay/where-to-stay-in-belgrade",
-            "/where-to-stay/belgrade-hotels-vs-apartments"
+            "/where-to-stay/belgrade-hotels-vs-apartments",
+            "/where-to-stay/where-to-stay-in-belgrade-first-time",
+            "/where-to-stay/where-to-stay-in-belgrade-with-family"
           ]
         }
       ]
