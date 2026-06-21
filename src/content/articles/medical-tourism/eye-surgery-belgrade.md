@@ -18,15 +18,21 @@ linksTo:
   - "/medical-tourism/medical-tourism-risks-and-aftercare"
   - "/medical-tourism/medical-tourism-costs-in-belgrade"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "How much does LASIK cost in Belgrade?"
-    answer: "As a rough, perishable guide only — confirm current quotes directly — laser refractive correction such as LASIK at one Belgrade eye hospital is indicated at around €1,000, drawn from a Tier-b price list as of 2026; cataract surgery with lens implantation sits higher, from roughly €1,500 per eye. These are clinic-published figures, not audited or fixed quotes, and they may be priced per eye, vary by the specific laser technique, and exclude pre-op assessment, medication, flights and accommodation, so the figure you first see and the figure you eventually pay can diverge. Belgrade is generally positioned below Western-European prices, but treat any euro amount here as likely to have drifted by the time you read it, and get a written quote that states exactly what is included."
-  - question: "What laser eye procedures are available in Belgrade?"
-    answer: "Belgrade's private eye hospitals are reported to offer laser refractive surgery — LASIK and PRK, which reshape the cornea to correct short- or long-sightedness — alongside cataract surgery and lens-replacement surgery, which swap the eye's natural lens for an artificial intraocular lens. We name no clinics, so confirm exactly which procedures and laser techniques a given provider performs. The key honesty is that not everyone is a candidate for laser correction: suitability depends on the shape and thickness of your cornea, your prescription and the health of your eye, and only an in-person assessment can establish it. Be wary of any source, including a clinic's own marketing, that implies universal suitability or zero risk."
-  - question: "How soon can I fly after laser eye surgery?"
-    answer: "There is no single fixed answer, and nothing here is medical advice — only your operating surgeon can clear you to fly, so ask them directly before you book return travel. Cabin air is dry and laser refractive surgery commonly causes temporary dry eye and glare, so a same-day or next-day flight is something to query rather than assume. The bigger travel catch is follow-up: eye surgery needs post-operative checks, and at one Belgrade hospital free follow-up is reported as limited (roughly 30 days after surgery, around 6 months for refractive procedures, as of 2026). Build the trip around the required post-op review rather than around your flight home, and find out in advance where you would seek urgent eye care if something went wrong after you returned."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What types of eye surgery can I get in Belgrade?"
+    answer: "Belgrade offers laser refractive surgery (LASIK and PRK) and cataract or lens-replacement surgery to international patients. These procedures are available at dedicated private eye hospitals that provide English-language price lists and are listed on international comparison portals."
+  - question: "Are there risks associated with LASIK and cataract surgery?"
+    answer: "Yes, there are documented risks associated with both LASIK and cataract surgery. LASIK can lead to dry eye, glare, halos, and under- or over-correction requiring enhancement, while cataract surgery carries risks such as infection and posterior-capsule issues."
+  - question: "How much does LASIK cost in Belgrade?"
+    answer: "As of 2026, indicative pricing for LASIK in Belgrade starts around €1,000 for laser refractive correction. However, this figure is perishable, and it's important to confirm current quotes directly with clinics."
+  - question: "What is the follow-up care like after eye surgery in Belgrade?"
+    answer: "Follow-up care is limited, with free follow-up reported as roughly 30 days after cataract surgery and around 6 months for refractive procedures like LASIK. This limited window can be a significant consideration for traveling patients."
+  - question: "How soon can I fly after having laser eye surgery?"
+    answer: "There is no fixed answer for how soon you can fly after laser eye surgery, as only your operating surgeon can provide clearance. It's advisable to allow time for post-operative checks before traveling home, especially since follow-up windows are limited."
+  - question: "What should I consider before getting eye surgery in Belgrade?"
+    answer: "Before getting eye surgery in Belgrade, consider the risks and candidacy for the procedures, the limited follow-up care, and the total cost including any additional expenses. It's essential to have an in-person assessment to determine your suitability for surgery."
 ---
 
 ## What eye surgery does Belgrade offer foreign patients?

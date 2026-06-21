@@ -18,15 +18,21 @@ linksTo:
   - "/medical-tourism/medical-tourism-risks-and-aftercare"
   - "/medical-tourism/medical-tourism-costs-in-belgrade"
   - "/plan-your-trip/staying-safe"
-faqs:
-  - question: "What gender-affirming procedures are performed in Belgrade?"
-    answer: "The procedures associated with this field include chest or \"top\" surgery — masculinising or feminising — and genital or lower surgery such as phalloplasty, metoidioplasty and vaginoplasty. These are reconstructive procedures with established techniques. Genital and lower surgery in particular is frequently staged — multiple operations over time rather than one — which is the single most important fact for anyone planning travel. This page describes them at a what-to-expect level only; it names no clinics or surgeons, and is not a surgical manual or a verdict on whether to proceed."
-  - question: "What is the difference between metoidioplasty and phalloplasty?"
-    answer: "Both are masculinising genital (lower) reconstructive procedures, but they differ in approach and scale. Metoidioplasty uses existing tissue to form a smaller phallus and is generally the less complex of the two. Phalloplasty constructs a phallus using tissue grafted from elsewhere on the body and is a larger, multi-stage undertaking with a substantially higher complication and revision burden, particularly where urethral lengthening is involved. Which is appropriate, and what each involves for a given person, is a clinical question for a qualified surgeon and the patient's own care team — not something to settle from a guide. Outcome data for both come from small, non-standardised case series, so figures should be treated cautiously."
-  - question: "What aftercare and follow-up is involved?"
-    answer: "These are major reconstructive surgeries with long-term recovery measured in months, not days, and a real, documented complication and revision profile. Belgrade providers' own guidance, for example, recommends staying at least around two weeks after a first-stage procedure, with some patients medically obliged to stay longer, and stresses keeping return travel flexible. The harder part is continuity of care once you return home: arranging knowledgeable follow-up and a clear path for managing any complication after you have left, ideally agreed before departure. Gender-affirming surgery is generally part of a broader multidisciplinary care pathway, so post-operative support involves your own care team. Seek qualified medical advice; nothing here is medical advice."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "Why is Belgrade considered a good place for gender-affirming surgery?"
+    answer: "Belgrade is recognized as an established international centre for gender-affirming surgery and complex genital reconstructive surgery, with surgeons receiving referrals from multiple countries. While a 2019 estimate suggested around 70 to 100 such operations a year, this figure should be treated as indicative rather than current, as the city's standing in this field remains durable."
+  - question: "What types of gender-affirming procedures can I expect in Belgrade?"
+    answer: "In Belgrade, the main procedures include chest or 'top' surgery, which can be masculinising or feminising, and genital or lower surgeries such as phalloplasty, metoidioplasty, and vaginoplasty. These are major reconstructive surgeries with established techniques, and it's important to understand their purpose and what undergoing them involves rather than the specific surgical methods."
+  - question: "How does staged surgery affect my stay in Belgrade?"
+    answer: "Genital and lower reconstructive surgeries are often staged, meaning multiple operations are performed over time rather than in one session, which necessitates extended stays and careful aftercare. Providers in Belgrade typically recommend a minimum stay of around two weeks after the first-stage procedure, with some patients needing to stay longer, highlighting the importance of flexible travel arrangements."
+  - question: "What are the risks and recovery expectations for gender-affirming surgery?"
+    answer: "These surgeries come with significant recovery and documented complication profiles, including surgical and wound-healing complications. The complication and revision rates are meaningful and procedure-specific, particularly for phalloplasty, and outcomes are typically assessed over the long term, making it essential to understand the seriousness of these procedures before traveling."
+  - question: "How does gender-affirming surgery fit into a broader care context?"
+    answer: "Gender-affirming surgery is generally part of a multidisciplinary care pathway that includes mental health and medical assessments, rather than being a standalone cosmetic procedure. It's advisable to ensure that the surgery fits within your existing care framework to provide better support throughout the recovery process."
+  - question: "What should I know about legal and identity-document considerations when traveling for surgery?"
+    answer: "Traveling for gender-affirming surgery involves navigating different legal and administrative systems, which can complicate the process of changing gender markers or names on identity documents. It's crucial to consult with appropriate authorities and qualified professionals in your home country before traveling to ensure you have the necessary documentation for both the surgery and any future identity-document processes."
 ---
 
 ## Why is Belgrade a recognised centre for gender-affirming surgery?

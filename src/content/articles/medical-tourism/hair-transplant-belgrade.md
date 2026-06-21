@@ -17,15 +17,21 @@ linksTo:
   - "/medical-tourism/hair-transplant-explained"
   - "/medical-tourism/medical-tourism-costs-in-belgrade"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "How much does a hair transplant cost in Belgrade?"
-    answer: "As a rough, perishable guide only — confirm current quotes directly — indicative all-inclusive FUE in Belgrade as of 2026 runs around €1,900 for up to ~1,500 grafts, ~€2,800–€3,800 for ~1,500–3,000 grafts, and ~€3,900–€5,200 for 3,000+ grafts, with one clinic-side example quoting ~€2,000–€3,000 per 1,000 grafts and body-hair grafts around €4 each. These figures are clinic marketing, scale with graft count, usually include the surgery and local transfers (sometimes a hotel) but exclude flights, and are very likely to have drifted by the time you read this. Belgrade sits mid-price: typically cheaper than Western Europe and usually dearer than Turkey."
-  - question: "Do Belgrade clinics offer FUE and DHI?"
-    answer: "Belgrade clinics commonly advertise FUE (follicular unit extraction), and DHI — a marketing name for an implanter-pen variant of FUE — is widely promoted too; the underlying method is still individual-follicle extraction. Treat technique labels as a starting point for questions, not a guarantee of a better result. What drives the outcome is your donor density and degree of loss plus the operator's planning and skill, not the brand name of the technique. We name no clinics, so confirm exactly which methods a given provider performs, and read our hair transplants explained guide for how the techniques actually differ."
-  - question: "How many days do I need to stay for a hair transplant?"
-    answer: "Indicatively, a hair transplant is a single long outpatient day under local anaesthesia, and clinics typically suggest a short stay of roughly two to four days so they can check the grafts the day after surgery before you fly home. Confirm the exact schedule with the provider, since it varies. Plan the trip around recovery rather than sightseeing: the recipient area scabs and reddens for days to a couple of weeks, so the first days afterwards are low-activity."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What is the cost of a hair transplant in Belgrade?"
+    answer: "As of 2026, indicative all-inclusive FUE prices in Belgrade range from roughly €1,900 for up to ~1,500 grafts to about €5,200 for 3,000+ grafts. These prices usually include the surgery and local transfers but exclude flights. It's important to treat these figures as indicative and confirm current numbers directly with clinics."
+  - question: "Are there additional costs associated with hair transplant packages in Belgrade?"
+    answer: "Yes, 'all-inclusive' packages often downplay extras such as repeat sessions, medication, PRP, and long-term follow-up, which may not be included in the headline price. When comparing quotes, it's advisable to ask explicitly what is and isn't covered to avoid unexpected costs."
+  - question: "How does the cost of hair transplants in Belgrade compare to Turkey?"
+    answer: "Belgrade is marketed as a mid-price hair transplant destination, generally cheaper than Western Europe but typically more expensive than Turkey, which is known for being a high-volume low-cost leader. If cost is your primary concern, Turkey may offer better pricing, but Belgrade can provide a comfortable and credible alternative."
+  - question: "What should I realistically expect from one session of a hair transplant?"
+    answer: "Results from a single session depend heavily on the patient's donor area and degree of hair loss, and achieving full density may require a second session. Final results can take many months to mature, so it's important to plan for realistic outcomes rather than expecting immediate results."
+  - question: "What techniques do clinics in Belgrade offer for hair transplants?"
+    answer: "Belgrade clinics commonly advertise FUE (follicular unit extraction) and also promote DHI (direct hair implantation), which is a variant of FUE. However, the underlying method remains the same, and the outcome is more influenced by the donor density and the operator's skill rather than the technique name."
+  - question: "How should I evaluate hair transplant reviews from clinics in Belgrade?"
+    answer: "While reviews and before/after galleries can be useful, they should be weighed carefully as they are often marketing tools. Individual results can vary significantly based on the patient's unique circumstances, and long-term evidence on hair transplant durability is contested, so avoid assuming guaranteed outcomes based on others' experiences."
 ---
 
 A hair transplant in Belgrade is a mid-price option: usually cheaper than Western Europe, usually dearer than Turkey, with indicative all-inclusive FUE running from roughly €1,900 for a small case to about €5,200 for a large one as of 2026. This page is a neutral, clinic-neutral due-diligence guide — not a clinic ad and not medical advice. It names no specific providers, hedges every price as perishable, and is honest about a point the marketing tends to skip: the long-term evidence on how well hair transplants hold up is weak and contested, and one fixed price for one session rarely tells the whole story. Use the cost structure below to sanity-check any quote you are given, then verify the current numbers and the provider yourself.

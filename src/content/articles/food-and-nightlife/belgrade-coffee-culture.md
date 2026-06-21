@@ -17,17 +17,21 @@ linksTo:
   - "/food-and-nightlife/belgrade-kafanas"
   - "/visit-belgrade/belgrade-neighborhoods"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "Is coffee a big deal in Belgrade?"
-    answer: "Yes — coffee is central to Serbian culture, and Belgrade is widely described as coffee-obsessed. Coffee here is less a quick caffeine hit than a social ritual: locals linger for long coffee-and-conversation sessions, a single cup can hold a table for an hour or more, and \"Dođi na kafu\" (come for coffee) is a standing invitation to spend time together. The traditional Turkish-style cup now coexists with a serious specialty-coffee scene, so the city caters to both lingering tradition and precise modern brewing."
-  - question: "What is Serbian (domaća) coffee?"
-    answer: "Serbian coffee — domaća kafa (\"homemade coffee\"), also called turska kafa (Turkish coffee) or crna kafa (black coffee) — is finely-ground, unfiltered coffee simmered in a small copper pot called a džezva and served in a small cup, usually with sugar and a glass of water. It is brewed slowly so a rich foam (pena, sometimes called kajmak) forms on top and the grounds settle to the bottom. It is traditionally sipped slowly, often with a piece of ratluk (Turkish delight) alongside. It is the older of Belgrade's two coffee experiences and is central to both home life and kafana culture."
-  - question: "Where is the best specialty coffee in Belgrade?"
-    answer: "Belgrade's specialty-coffee scene clusters in Dorćol, a central district just north and north-east of Republic Square, where micro-roasters and specialty cafés serve single-origin espresso and pour-over. The roaster most often cited as the anchor of the movement is D59B (its original café Pržionica opened in 2012 and is reported to be the city's oldest specialty roaster), which roasts on-site in Dorćol. Individual cafés open, move and close quickly, so the durable advice is to walk a few blocks through Dorćol rather than chase one address — the cluster, and the standard of coffee it sets, is the reliable fact (as of 2026)."
-  - question: "Where can digital nomads work from cafés in Belgrade?"
-    answer: "Belgrade's café culture suits remote work well: nobody rushes you out, many specialty cafés (especially in Dorćol and Vračar) double as informal co-working spaces, and the city has reliable broadband. The specialty spots that take their coffee seriously tend also to offer the kind of unhurried, laptop-friendly tables digital nomads look for. As specific cafés are perishable, the durable approach is to look for specialty cafés in Dorćol and Vračar rather than a fixed list (as of 2026)."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "Is coffee a big deal in Belgrade?"
+    answer: "Yes — coffee is central to Serbian culture, and Belgrade is widely described as coffee-obsessed. It is also commonly cited as home to one of Europe's earliest coffee houses, a claim worth enjoying but treated as reported rather than settled fact."
+  - question: "What is traditional Serbian coffee like?"
+    answer: "Traditional Serbian coffee, known as domaća kafa or Turkish coffee, is thick, strong, and brewed in a traditional way. It is finely-ground, unfiltered coffee simmered in a small copper pot called a džezva, served slowly to encourage conversation."
+  - question: "Where can I find the best specialty coffee in Belgrade?"
+    answer: "For specialty coffee, head to Dorćol, where micro-roasters and specialty cafés are concentrated. The roaster most often named as the anchor of this movement is D59B, reported to be the city's oldest specialty-coffee roaster."
+  - question: "What is the café culture like in Belgrade?"
+    answer: "Belgrade café culture is outdoor, social, and lingering, with locals often sitting for long coffee-and-conversation sessions. Cafés function as everyday meeting places and increasingly as co-working spaces, with no rush to leave."
+  - question: "How much does coffee cost in Belgrade?"
+    answer: "A traditional Turkish coffee in an everyday, non-touristy café is commonly reported at around 150–300 RSD, with prices varying in prime locations. Specialty coffee and dessert-shop prices also vary widely, so it's best to check current menus."
+  - question: "What are some famous dessert spots in Belgrade?"
+    answer: "Pelivan is widely described as the oldest pastry shop in Belgrade, operating since 1851, while Specijal has been a family pastry shop since 1963. Hotel Moskva is famous for its 'Moskva šnit' cake, a must-try for visitors."
 ---
 
 ## Is coffee a big deal in Belgrade?

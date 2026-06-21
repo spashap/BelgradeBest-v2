@@ -16,19 +16,25 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/food-and-nightlife/belgrade-nightlife"
-faqs:
-  - question: "Which area is best to stay for nightlife in Belgrade?"
-    answer: "For most nightlife-focused visitors the best fit is Savamala / Beton Hala and the Sava riverfront, Dorćol around Strahinjića Bana and Cetinjska, or Stari Grad around Skadarlija. All three put bars, clubs and (in season) the river splavovi within easy walking or short-taxi distance. The trick is to sleep just off the loud street — usually 5–10 minutes' walk away — rather than directly above a bar, so you keep the access without losing the sleep. There is no single best venue or hotel; the right base depends on your exact street, so check noise reviews before booking."
-  - question: "Where are the splavovi (river clubs) in Belgrade?"
-    answer: "The splavovi — floating bars and clubs — are moored along the Sava and Danube rather than on one street, so no single neighbourhood sits on top of all of them. The Sava-side clusters are easiest to reach from Savamala and the Belgrade Waterfront riverfront. They are largely a warm-season experience (roughly late spring to early autumn), and the moorings and line-up can shift between seasons after riverbank works, so confirm which rafts are open and where before you plan a night around a specific one. For how the splav scene actually works, see the food-and-nightlife splavovi guide rather than choosing accommodation on top of them."
-  - question: "How do I get back to my hotel late at night in Belgrade?"
-    answer: "Plan late returns around taxis or a ride app, not the night bus, especially after the splavovi or a club. Use an official marked taxi or app and insist on the meter rather than a negotiated price; ask your venue or hotel reception to call one if you are unsure. Keep some dinar (RSD) cash for the fare and a small round-up tip, since you cannot assume a card terminal will work. Staying within walking distance of the nightlife zone — without being directly over it — is the simplest way to make the trip home short and cheap."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
   - savamala
   - dorcol
   - stari-grad
+faqs:
+  - question: "What are the best areas to stay in Belgrade for nightlife?"
+    answer: "The best areas to stay in Belgrade for nightlife are Savamala / Beton Hala, Dorćol, and Stari Grad. Savamala is known for its clubs and riverfront access, Dorćol offers a café-and-bar atmosphere with a local feel, and Stari Grad features traditional kafanas and a central location. Each area provides easy access to nightlife, but it's important to choose accommodations that are a short walk away from the loudest streets."
+  - question: "How can I avoid noise while staying in nightlife areas of Belgrade?"
+    answer: "To avoid noise while staying in nightlife areas of Belgrade, it's recommended to stay 5–10 minutes' walk from the loud streets rather than directly on them. This allows you to enjoy the nightlife while ensuring a quieter sleeping environment. Look for accommodations that are courtyard-facing, as these tend to be much quieter than those facing busy streets."
+  - question: "What should I know about the splavovi (floating clubs) in Belgrade?"
+    answer: "The splavovi are floating bars and clubs located along the Sava and Danube rivers, primarily active during the warm season from late spring to early autumn. They are easiest to reach from the Savamala and Waterfront areas. It's important to note that the moorings and line-ups of these clubs can shift between seasons, so confirm their locations and availability before planning your night out."
+  - question: "How do I get back to my hotel late at night in Belgrade?"
+    answer: "When returning to your hotel late at night in Belgrade, it's best to use an official taxi or a ride app rather than relying on public transport. Always insist on using the meter to avoid being overcharged, and keep some cash ready for the fare and a small tip. Staying within walking distance of nightlife zones can also simplify your late-night return."
+  - question: "Are there any smoking regulations in nightlife venues in Belgrade?"
+    answer: "Yes, Belgrade nightlife venues are generally more smoke-tolerant compared to many Western and Northern European countries. Serbian law allows designated smoking rooms in hotels and apartments, so if smoke is a concern for you, be sure to book a non-smoking room and confirm in writing that it has no smoke smell."
+  - question: "What should I check before booking accommodation for a nightlife trip in Belgrade?"
+    answer: "Before booking accommodation for a nightlife trip in Belgrade, check for clear terms regarding deposits and payment, confirm that late check-in is possible, and ensure that the host will register your stay. Additionally, verify if the accommodation includes a small city tax and confirm in writing that your room is non-smoking if that is a priority for you."
 ---
 
 ## Where should you stay in Belgrade for nightlife?

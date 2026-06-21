@@ -19,15 +19,21 @@ linksTo:
   - "/medical-tourism/choosing-a-clinic-in-belgrade"
   - "/medical-tourism/medical-tourism-risks-and-aftercare"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "How much does an IVF cycle cost in Serbia?"
-    answer: "As of 2024–2025, Belgrade private-clinic IVF and ICSI packages have been listed at roughly 220,000–360,000 RSD per cycle, typically excluding medications and some tests. That is mid-range European pricing, not a deep discount. These are indicative figures from clinic price lists and they go out of date quickly — medication, ICSI, PGT, embryo freezing and frozen-embryo-transfer fees move the real total well beyond the headline. Always confirm a current, itemised written quote directly with the clinic. Nothing here is a settled price or a quote."
-  - question: "Can foreigners use donor eggs or sperm in Serbia?"
-    answer: "This is genuinely contested and we will not flatten it into a clean yes or no. Academic and legal analyses report that gamete and embryo donation has historically been banned or restricted in Serbia, with standard IVF limited to a couple's own eggs and sperm; some clinics nonetheless market egg-donation IVF using cross-border (for example Spanish-bank) donor material; and a 2022 Ministry of Health pilot allowed imported donor gametes but was specific to Serbian citizens in the public scheme. For foreign patients, treat Serbia primarily as an own-gamete IVF destination. If a private clinic offers you a donor route, do not rely on it until you have obtained independent legal advice in Serbia confirming it is lawful for your specific circumstances. This is not legal advice."
-  - question: "What are IVF success rates in Serbia by age?"
-    answer: "There is no public Serbian success-rate registry comparable to the UK's HFEA, so there is no neutral, like-for-like national figure to quote. Clinics commonly advertise pregnancy rates rather than live-birth rates, and may select favourable age bands, so headline percentages are not directly comparable between clinics or countries. What is reliable everywhere is that IVF success falls with the egg-provider's age and that IVF is frequently a multi-cycle process — so plan for more than one attempt. For how a cycle works and how to read success-rate claims critically, see our IVF explainer. Ask any clinic for its own live-birth rate for your age band, and treat advertised numbers with caution."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What is the main law governing IVF and fertility treatment in Serbia?"
+    answer: "The main law governing IVF and fertility treatment in Serbia is the Law on Biomedically Assisted Fertilization, which entered into force in 2017. However, the specifics of this law are interpreted by clinics and may have evolved, so it is important to verify the current position and seek independent legal advice."
+  - question: "Can foreigners use donor eggs or sperm in Serbia?"
+    answer: "For foreign patients, Serbia is primarily treated as an own-gamete IVF destination, and reliance on donor routes should only be made after confirming their legality with a Serbian lawyer. There is significant disagreement among sources regarding the availability of donor programs, and they are often limited to Serbian citizens."
+  - question: "Is surrogacy legal in Serbia?"
+    answer: "No, surrogacy is treated as prohibited in Serbia and is considered a criminal offense, with potential prison sentences for arranging pregnancy for another person. Foreign patients attempting to arrange surrogacy in Serbia risk criminal exposure and should seek qualified legal counsel."
+  - question: "How much does an IVF cycle cost in Belgrade?"
+    answer: "As of 2024–2025, the cost of IVF and ICSI packages in Belgrade private clinics is reported to be around 220,000–360,000 RSD per cycle, typically excluding medications and some tests. This pricing positions Serbia as a mid-range European option rather than a bargain destination."
+  - question: "What are the success rates for IVF in Serbia?"
+    answer: "Success rates for IVF in Serbia should be approached with caution, as there is no public registry comparable to others, and the figures often come from clinics' marketing. It is important to ask clinics for their live-birth rates specific to your age band, as success rates are strongly age-dependent and can vary significantly."
+  - question: "Are there age limits for IVF treatment in Serbia?"
+    answer: "There is no statutory upper age limit for IVF using a patient's own eggs, but clinics may impose their own limits. This situation is clinic-dependent, so it is advisable to confirm age eligibility directly with any clinic you approach."
 ---
 
 ## What this page covers (and what it deliberately does not)

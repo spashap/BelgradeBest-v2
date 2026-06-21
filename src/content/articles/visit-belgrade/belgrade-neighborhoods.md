@@ -17,17 +17,21 @@ linksTo:
   - "/visit-belgrade/understanding-belgrade"
   - "/visit-belgrade/brutalist-belgrade"
   - "/visit-belgrade/zemun"
-faqs:
-  - question: "Which Belgrade neighbourhood is best for first-time visitors?"
-    answer: "Stari Grad, the Old Town, is the natural base for most first-timers. It is the central historic municipality and gathers Republic Square, Knez Mihailova, Kalemegdan and parts of Dorćol and Skadarlija into a dense, walkable grid, so the greatest number of sights sit within comfortable walking distance, and it is the main node for the city's free walking tours."
-  - question: "What is Dorćol known for?"
-    answer: "Dorćol is one of Belgrade's most eclectic central districts, sitting immediately north and north-east of Republic Square and sloping toward the Danube. Locals split it in two: 'upper' Dorćol is the more upscale half closer to the centre, while 'lower' Dorćol is the quieter, creative, up-and-coming stretch nearer the river. Visitors use it for cafés, bars, small galleries and the Danube promenade."
-  - question: "What is Savamala known for?"
-    answer: "Savamala is a former industrial and warehousing district on the right bank of the Sava, just south-west of the old-town ridge between the Branko bridge and the old Sava port. It became known for street art, creative spaces and riverfront clubs, and is increasingly folded into the 'Belgrade Waterfront' redevelopment narrative. It is best experienced on foot, reading the city's transformation in a single stretch."
-  - question: "Which Belgrade neighbourhood is best for an old-fashioned night out?"
-    answer: "Skadarlija, the cobblestoned bohemian quarter built around Skadarska Street about a five-to-eight-minute walk east of Republic Square, is the classic choice. It is known for traditional kafanas and live music in a preserved late-19th- and early-20th-century setting."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What are the main neighborhoods in Belgrade and their characteristics?"
+    answer: "Belgrade has several distinct neighborhoods, each with its own personality. Key districts include Stari Grad, the historic core; Dorćol, known for its eclectic vibe; Vračar, home to the Temple of St. Sava; Zemun, with its old-world charm; New Belgrade, showcasing socialist modernism; and Savamala, recognized for its creative spaces and nightlife."
+  - question: "Why is understanding Belgrade's neighborhoods important for first-time visitors?"
+    answer: "Understanding Belgrade's neighborhoods is crucial for first-time visitors because each district functions almost like a separate city with its own atmosphere and price points. Locals frequently use district names for orientation, making it easier for newcomers to navigate and appreciate the city's character."
+  - question: "What can I expect to find in the Stari Grad neighborhood?"
+    answer: "Stari Grad, or the Old Town, is the central historic municipality of Belgrade, featuring Republic Square, Knez Mihailova, and Kalemegdan. It offers a dense, walkable grid with a mix of architectural styles, making it the natural base for first-timers and the main hub for free walking tours."
+  - question: "What is Dorćol known for in Belgrade?"
+    answer: "Dorćol is known for its eclectic character, divided into an upscale 'upper' part and a creative 'lower' part, both close to the Danube. Visitors often enjoy café, bar, and small-gallery hunting here, as well as the riverside promenade, making it a great area for those looking to experience everyday life in Belgrade."
+  - question: "What makes Zemun different from other neighborhoods in Belgrade?"
+    answer: "Zemun is distinct from other neighborhoods as it was a former Austro-Hungarian frontier town, preserving 18th- and 19th-century streets and a riverside quay. It has a gentler, more provincial atmosphere compared to central Belgrade, often described as the city's 'old soul,' making it suitable for visitors seeking a quieter escape."
+  - question: "How does New Belgrade differ from the historic parts of the city?"
+    answer: "New Belgrade differs significantly from the historic parts of the city as it is a planned socialist city characterized by large residential blocks and wide boulevards. It functions as an open-air museum of socialist modernism, contrasting with the dense, historical architecture found in areas like Stari Grad."
 ---
 
 ## Why districts come first

@@ -19,15 +19,21 @@ linksTo:
   - "/medical-tourism/choosing-a-clinic-in-belgrade"
   - "/medical-tourism/medical-tourism-risks-and-aftercare"
   - "/visit-belgrade/belgrade-neighborhoods"
-faqs:
-  - question: "How much does dental work cost in Belgrade vs the UK or US?"
-    answer: "Belgrade sits in the mid-priced European band — clearly cheaper than the UK, US or Germany, but not the rock-bottom tier. As a pattern (not a quote, and indicative as of 2026), a single implant that commonly runs around 1,850–3,000 GBP in the UK or roughly 3,000–6,000 USD in the US tends to be quoted in Belgrade well below those figures, while typically sitting above the cheapest Turkish packages. The honest saving is the all-in one: after flights, accommodation, scans at home and any return visit, neutral cost-comparison analysis puts the realistic saving on a full course closer to 20–60%, not the 70–80% often advertised. And compare like for like — the only fair number is the all-in cost of a finished, functioning tooth, not the headline figure. Treat every figure as a 2024–2026 indication to check against live quotes."
-  - question: "How many days should I budget for dental work in Belgrade?"
-    answer: "It depends entirely on what you're having done. Simpler work — crowns, veneers and cleaning — can usually be completed in a single trip of a few days. Implants are different: treatment is typically staged, with an initial visit to place the fixture, a healing period of several months for the bone to fuse (osseointegration), then a return visit for the abutment and final crown. So implant tourism often means two trips, or one trip with a long gap built around it — not a single visit. Confirm the exact staging and the number of in-clinic days with the provider before you book, because clinical timelines vary by case (indicative, as of 2026)."
-  - question: "What materials and brands do Serbian dental labs use?"
-    answer: "Belgrade clinics work with the same internationally recognised implant systems and prosthetic materials used across Europe — implant fixtures are usually titanium, and crowns and full-arch prostheses are commonly made in materials such as metal-ceramic, zirconia or acrylic, with the choice driving a large part of the price (indicative, as of 2026). Premium brand-name implant systems sit at the higher end of local pricing. Because the specific brand and material affect both cost and what's being compared, ask the clinic in writing exactly which implant system and which crown material your quote covers, rather than assuming a headline price reflects a premium system. This page does not name brands or clinics; verify the specifics directly."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "Why is Belgrade a popular destination for dental work?"
+    answer: "Belgrade is a major dental-tourism destination, with estimates suggesting that up to around 80% of Serbia's foreign health-tourism demand is for dental services. Patients primarily come from the Serbian diaspora and Western Europe seeking treatments that would be significantly more expensive in their home countries."
+  - question: "What types of dental treatments do tourists typically seek in Belgrade?"
+    answer: "Dental tourists commonly seek treatments such as dental implants, crowns, veneers, and broader cosmetic dentistry, often referred to as 'smile makeover' work. These procedures are explained in more detail on the dedicated clinical page for dental implants."
+  - question: "How much does dental work cost in Belgrade compared to other countries?"
+    answer: "Dental work in Belgrade is generally cheaper than in the UK, US, or Germany, but not the cheapest option available. Indicative prices for dental implants range from approximately €350 to €800 or more, which is significantly lower than the costs in Western countries."
+  - question: "Why might the quoted price for dental implants in Belgrade not reflect the final cost?"
+    answer: "Some clinics in Belgrade only quote the price for the implant fixture and may charge separately for the abutment, crown, and any additional procedures, which can significantly increase the total cost. It's important to clarify what is included in the quote to avoid unexpected expenses."
+  - question: "How many trips do dental tourists typically need to make for implant procedures?"
+    answer: "Dental implant procedures usually require two trips: the first for assessment and placement, followed by a healing period, and a second visit for the abutment and final crown. Simpler procedures like crowns and veneers can often be completed in a single trip."
+  - question: "What should dental tourists consider when choosing a clinic in Belgrade?"
+    answer: "Dental tourists should verify the dentist's credentials, the clinic's standards, and clarify what the quote includes. It's also essential to understand the continuity of care and what happens if complications arise after returning home."
 ---
 
 ## Why people fly to Belgrade for their teeth

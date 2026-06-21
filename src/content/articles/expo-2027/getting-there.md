@@ -17,19 +17,23 @@ isFaqCandidate: true
 linksTo:
   - "/plan-your-trip/airport-to-city"
   - "/plan-your-trip/getting-around"
-faqs:
-  - question: "Where is Expo 2027 located?"
-    answer: "Expo 2027 is in the municipality of Surčin, in the western part of Belgrade, southwest of the city centre and near Nikola Tesla International Airport. The official Participants FAQ puts the secure venue (25 hectares) about 13.5 km from downtown Belgrade; the wider footprint, including the Expo village, services and parking, covers 113 hectares."
-  - question: "How far is Expo 2027 from the airport?"
-    answer: "About 5 km. The official Expo planning documents place the Surčin site roughly 5 km from Nikola Tesla International Airport — so if you arrive by air, you land closer to the Expo grounds than to central Belgrade (about 13.5 km away). A new railway is being built past the airport toward the site, but as of June 2026 its opening date is still provisional."
-  - question: "What's the best way to get to Expo from central Belgrade?"
-    answer: "As of 2026 the most reliable option is Belgrade's regular city public transport, which is currently free on all regular lines (buses, trams, trolleybuses and BG Voz suburban trains). Officials have promised a new airport-and-Surčin railway plus dedicated electric Expo bus lines to entrances A and C, but the final Expo bus numbers, routes, timetables and the railway's opening date and fares have not yet been published. Until they are, treat the free network — and a taxi or ride-hail app (CarGo or Yandex Go) for door-to-door — as your dependable backbone."
-  - question: "How do I get from Belgrade Airport to the Expo 2027 site?"
-    answer: "The two confirmed options today are road transport (taxi via the airport's official fixed-price voucher system, or a CarGo / Yandex Go ride) over the ~5 km between the airport and Surčin, and the free regular bus network. A new railway under construction runs past Nikola Tesla Airport toward Surčin and the National Stadium, and officials plan environmentally friendly Expo bus lines linking the airport with the site — but as of June 2026 neither the rail timetable nor the Expo shuttle routes have been finalised."
 unknowns:
   - "Exact opening date, passenger timetable and fare scheme for the new Surčin/airport railway"
   - "Final Expo-specific bus line numbers, routes and timetables to entrances A and C for summer 2027"
   - "Whether the airport rail link will be free or carry a special fare"
+faqs:
+  - question: "Where is Expo 2027 located in Belgrade?"
+    answer: "Expo 2027 is located in the municipality of Surčin, southwest of the city centre of Belgrade. The official planning figures indicate that the site is approximately 13.5 kilometres from the city centre and just 5 kilometres from Nikola Tesla International Airport."
+  - question: "How far is Expo 2027 from Nikola Tesla Airport?"
+    answer: "Expo 2027 is about 5 kilometres from Nikola Tesla International Airport. This proximity means that if you fly in, you will land closer to the Expo grounds than to central Belgrade, which is around 13.5 kilometres away."
+  - question: "What is the best way to get from Nikola Tesla Airport to central Belgrade?"
+    answer: "As of 2026, the best way to get from Nikola Tesla Airport to central Belgrade is by using the free city bus line 72, which connects the airport to the central Zeleni venac terminal. Alternatively, you can take the A1 airport minibus, which is a paid service running to Trg Slavija in the city centre."
+  - question: "How can I get to Expo 2027 from central Belgrade?"
+    answer: "To get to Expo 2027 from central Belgrade, you can use the free city public transport, including buses, trams, and trolleybuses. For more convenience, a taxi or ride-hail app like CarGo or Yandex Go can take you directly to the site, which is approximately 13.5 kilometres away."
+  - question: "What transportation options will be available for visitors during Expo 2027?"
+    answer: "During Expo 2027, visitors will have access to private vehicles, public buses, urban rail, and river transport to reach the site. There will also be on-site parking for up to 11,000 vehicles, and new environmentally friendly bus lines are planned to connect the Expo site with the airport and downtown."
+  - question: "Is there a railway planned to connect the airport and Expo 2027?"
+    answer: "A new railway line is under construction to connect Nikola Tesla Airport and the Expo site in Surčin, but it is not yet operational. While officials have targeted completion for late 2026, no detailed timetable or fare scheme has been announced, so it is advisable to check for updates closer to your travel date."
 ---
 
 ## Where is Expo 2027 located?

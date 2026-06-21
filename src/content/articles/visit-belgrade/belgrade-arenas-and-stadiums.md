@@ -16,17 +16,21 @@ noindex: false
 linksTo:
   - "/visit-belgrade/things-to-do-in-belgrade"
   - "/visit-belgrade/belgrade-neighborhoods"
-faqs:
-  - question: "Where do Red Star and Partizan play in Belgrade?"
-    answer: "FK Crvena zvezda (Red Star) plays at the Rajko Mitić Stadium, universally nicknamed the \"Marakana,\" about 3.5 km from the centre on the right (city) bank. FK Partizan plays at the Partizan Stadium (Stadion Partizana / JNA), its own ground in the same broad part of town. Both clubs share the Štark Arena in New Belgrade for basketball."
-  - question: "Can you tour Belgrade's stadiums?"
-    answer: "Yes — the Rajko Mitić (Marakana) runs guided tours of the dressing rooms, tunnel, media room, VIP areas and club museum, booked through the club and not on match days; local operators also bundle it. The Partizan Stadium offers tours (museum, locker rooms, tunnel and pitch) via local operators. The Štark Arena has no documented standing public-tour product — you visit it for events."
-  - question: "What is the Štark Arena in Belgrade?"
-    answer: "The Štark Arena (also known as Belgrade Arena, and earlier as Kombank Arena) is the city's main multi-purpose indoor arena, in New Belgrade on the left bank of the Sava at Bulevar Arsenija Čarnojevića 58. It seats 18,386, reconfigures from roughly 2,000 to 20,000 depending on the event, and hosts basketball, concerts and large events."
-  - question: "Is there a EuroBasket in Belgrade in 2026?"
-    answer: "No. There is no EuroBasket in 2026 at all. The 2025 men's EuroBasket was held outside Serbia, and the next edition is EuroBasket 2029. Any \"EuroBasket 2026 in Belgrade\" claim is incorrect."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What is the capacity and location of the Štark Arena in Belgrade?"
+    answer: "The Štark Arena, also known as Belgrade Arena, is located in New Belgrade at Bulevar Arsenija Čarnojevića 58 and has a capacity of 18,386 seats, which can be configured to accommodate between 2,000 and 20,000 depending on the event."
+  - question: "Can I take a tour of the Rajko Mitić Stadium?"
+    answer: "Yes, the Rajko Mitić Stadium, also known as 'Marakana,' offers guided tours that include access to the dressing rooms, tunnel, media room, VIP areas, and the club museum. However, tours do not run on match days, and bookings must be made through the club or local operators."
+  - question: "What events are scheduled at the Partizan Stadium?"
+    answer: "Currently, there are no specific events scheduled at the Partizan Stadium that have been confirmed for the upcoming months. While the stadium offers tours through local operators, the fixture dates for the 2026–27 season are not yet published."
+  - question: "What is the Aleksandar Nikolić Hall known for?"
+    answer: "The Aleksandar Nikolić Hall, also known as 'Pionir,' is an indoor venue that seats around 8,000 and is known for hosting domestic-league basketball games, smaller concerts, and other indoor sports events. It was the main basketball venue in Belgrade before the Štark Arena was built."
+  - question: "When is the next UFC event at the Štark Arena?"
+    answer: "The next confirmed UFC event at the Štark Arena is scheduled for 1 August 2026. This date is confirmed, and details regarding tickets and the fight card will be available through the promoter."
+  - question: "Are there any upcoming concerts at the Štark Arena?"
+    answer: "As of now, the concert calendar for the Štark Arena has not been released for the upcoming months. It is advisable to check closer to your visit for updates, as the schedule is still to be announced."
 ---
 
 ## What are Belgrade's main arenas and stadiums?

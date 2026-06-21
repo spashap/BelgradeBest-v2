@@ -17,15 +17,21 @@ linksTo:
   - "/food-and-nightlife/serbian-food"
   - "/visit-belgrade/belgrade-neighborhoods"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "What is a kafana?"
-    answer: "A kafana is the traditional Serbian tavern — but it is more than a tavern. It is an all-day social space that combines the roles of restaurant, café, pub and live-music venue in one room. Its roots run back to the Ottoman coffeehouse, and over time it became a place for morning coffee, long shared lunches, and late nights of grilled meat, rakija and live music. The defining features are simple wooden interiors, hearty traditional food, long unhurried stays, and live starogradska (old-town) songs played by tamburica or accordion bands. The whole point is to linger."
-  - question: "Where is the bohemian quarter in Belgrade?"
-    answer: "Belgrade's bohemian quarter is Skadarlija, built around the cobbled Skadarska Street in the Stari Grad (Old Town) district, roughly a 5–8 minute downhill walk east of Republic Square (Trg Republike). It is a short, atmospheric cobblestone street lined with traditional kafanas serving live tamburica music, Serbian dishes and late-night socialising. It took shape in the late 19th century as a gathering place for Belgrade's poets, painters and actors, and it remains the most concentrated, most visitor-facing version of kafana culture in the city."
-  - question: "Do kafanas have live music every night?"
-    answer: "The showpiece kafanas in Skadarlija are reported to have live music nightly — that is a core part of what they sell. Neighbourhood kafanas vary: some have a band only on weekends or specific evenings, and some have none at all. As a rule, if live tamburica or accordion music is the reason you are going, head to Skadarlija or call ahead to a neighbourhood kafana to check when its band plays, since schedules are perishable and change. (Indicative as of 2026.)"
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What exactly is a kafana in Belgrade?"
+    answer: "A kafana is more than just a tavern; it is an all-day social space that combines the roles of restaurant, café, pub, and music venue. Rooted in the history of Ottoman coffeehouses, it serves as a place for eating, drinking, and enjoying live music, characterized by simple wooden interiors and traditional hearty food."
+  - question: "Where can I find the best kafanas in Belgrade?"
+    answer: "The best-known kafanas are located in Skadarlija, Belgrade's emblematic bohemian quarter, which is lined with historic taverns offering live music and traditional dishes. Notable names include the 'Znak Pitanja,' reported to be the oldest kafana, and others like 'Tri Šešira' and 'Dva Jelena,' which are recognized as showpiece experiences for visitors."
+  - question: "What is the etiquette for dining in a kafana?"
+    answer: "Kafanas are places to linger, with meals lasting hours and typically involving shared platters rather than individual servings. Guests are expected to tip musicians directly, and it is common to enjoy rounds of rakija and even dance as the night progresses."
+  - question: "Is there live music every night in kafanas?"
+    answer: "Live music is a defining feature of kafanas, especially in the showpiece venues of Skadarlija, where it is reported to occur nightly. However, in neighbourhood kafanas, the availability of live music can vary, with some only featuring bands on weekends or specific evenings."
+  - question: "How much does a meal at a kafana typically cost?"
+    answer: "Prices for a full kafana meal for two are reported to range around 4,000–8,000 RSD, but this is indicative and can vary. It's advisable to check current menus, as prices are perishable and can change over time."
+  - question: "What should foreigners know before visiting a kafana?"
+    answer: "Foreign visitors should be aware that showpiece kafanas often have multilingual menus and English-speaking staff, while neighbourhood kafanas may be primarily Serbian-speaking. It's also important to carry cash for both payments and tips, as many smaller kafanas may not accept cards."
 ---
 
 ## What is a kafana?

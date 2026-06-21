@@ -16,19 +16,25 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/where-to-stay/belgrade-hotels-vs-apartments"
-faqs:
-  - question: "Are Belgrade hotels non-smoking?"
-    answer: "Many Belgrade hotels offer non-smoking rooms, and some properties are fully non-smoking, but you cannot assume it. Serbian smoke-free law allows hotels, hostels and other accommodation to keep specially designated smoking rooms under certain conditions, and it requires them to offer a choice between smoking and non-smoking rooms and to mark which is which. Because the mix of smoking and non-smoking rooms varies by property and changes over time, the reliable approach is to book a room described as non-smoking and then message the hotel to confirm the exact room has no smoke smell before you arrive."
-  - question: "Is smoking allowed in hotels and apartments in Serbia?"
-    answer: "Serbian law permits smoking only in specially designated accommodation units or rooms under stated conditions, not throughout a property by default. The same law also requires that, where smoking rooms exist, guests are offered a choice between smoking and non-smoking and that signage shows which rooms allow it. For private apartments, the unit may be labelled non-smoking but smoking is sometimes still allowed on the balcony, so ask the host directly. If smoke matters to you, confirm the specific room or apartment is non-smoking in writing rather than relying on the rating or the listing photos."
-  - question: "How do I avoid a smoky room in Belgrade?"
-    answer: "Book a property that explicitly says non-smoking, then message it to confirm the exact room or apartment is smoke-free and not just smoke-free in common areas. Read recent reviews and search them for words like smell, smoke, cigarette and ashtray. For apartments, ask whether smoking is allowed on the balcony, since that smell can drift indoors. If you have asthma or allergies or are travelling with children, prioritise properties that are fully non-smoking rather than ones that simply offer a non-smoking room."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
   - stari-grad
   - vracar
   - new-belgrade
+faqs:
+  - question: "Are there non-smoking hotels in Belgrade?"
+    answer: "Yes, there are non-smoking hotels in Belgrade, but you should not assume all hotels are smoke-free. It's important to choose a property explicitly described as non-smoking and confirm in writing that the exact room or unit is smoke-free before you pay."
+  - question: "Is smoking allowed in hotels in Belgrade?"
+    answer: "Yes, smoking is allowed in some hotels in Belgrade, but only in specially designated accommodation units or rooms. Serbian law requires that accommodations offer a choice between smoking and non-smoking rooms, so it's crucial to confirm the specifics before booking."
+  - question: "How can I ensure I get a smoke-free room in Belgrade?"
+    answer: "To ensure a smoke-free room in Belgrade, explicitly choose a non-smoking room when booking and confirm in writing that the specific room is smoke-free. Additionally, reading recent guest reviews for keywords related to smoke can help you make an informed decision."
+  - question: "What should I check before booking a hotel or apartment in Belgrade to avoid smoke?"
+    answer: "Before booking, check if the specific room or apartment is non-smoking in writing, whether the whole property is non-smoking or just the room, and look for recent reviews mentioning cigarette smell or ashtrays. For apartments, also inquire if smoking is allowed on the balcony."
+  - question: "Which areas in Belgrade are better for smoke-sensitive travelers?"
+    answer: "Areas like Vračar and New Belgrade are better for smoke-sensitive travelers, as they tend to offer larger, more residential apartments and modern business hotels away from the densest nightlife streets. Stari Grad is more central if you prefer to be in the Old Town, but the smoke check is crucial regardless of the area."
+  - question: "What is the bottom line for smoke-sensitive travelers in Belgrade?"
+    answer: "The bottom line for smoke-sensitive travelers in Belgrade is to book a non-smoking property, confirm the exact room or apartment is smoke-free in writing, and read recent reviews for smoke-related keywords. If you have asthma, allergies, or young children, prioritize fully non-smoking places to ensure a comfortable stay."
 ---
 
 ## Are Belgrade hotels and apartments non-smoking?

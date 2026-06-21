@@ -17,15 +17,21 @@ linksTo:
   - "/food-and-nightlife/belgrade-nightlife"
   - "/visit-belgrade/belgrade-neighborhoods"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "Where can I drink craft beer in Belgrade?"
-    answer: "The craft-beer scene clusters around Dorćol, Savamala and the central neighbourhoods, so you can walk a circuit in a single evening. The more established anchors are Dogma Brewery (a flagship microbrewery with a taproom and beer garden near the Sava and Ada Ciganlija) and Samo Pivo (a central, long-standing beer bar reported to have 20-plus taps). Other frequently-cited central beer bars and taprooms include Krafter, Gvint Brewery & Taproom, Gunners Pub, Docker Brewery, Draft Bar, Brotherhood Beer House and Pivski Zabavnik — but the bar segment is volatile, so confirm a given venue is still trading before you build an evening around it."
-  - question: "Does Serbia have good craft beer?"
-    answer: "Yes. Belgrade is widely described as Serbia's craft-beer capital, with multiple microbreweries, taprooms and specialist beer pubs, and the scene is mature enough to support guided brewery tours. Domestic craft labels such as Kabinet and Dogma are commonly recommended (indicative as of 2026). These sit apart from the mainstream domestic lagers Jelen and Lav, which are what you'll usually find on standard bar taps."
-  - question: "What's the best brewpub in Belgrade?"
-    answer: "The most durable anchor is Dogma Brewery, reported as founded in 2016 in a renovated sugar-factory building near the Sava and Ada Ciganlija, with an on-site taproom and beer garden reported to have opened in 2017 — its riverside, repurposed-industrial setting is part of the appeal. For a central pub rather than a brewery-with-garden, Samo Pivo is the long-standing recommendation. \"Best\" depends on what you want; both are reasonable starting points, but verify current hours close to your visit."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What is the craft beer scene like in Belgrade?"
+    answer: "Belgrade is widely described as Serbia's craft-beer capital, with multiple microbreweries, taprooms, and specialist beer pubs clustered mainly around Dorćol, Savamala, and central neighborhoods. This concentration makes it feasible to explore several venues in a single evening, particularly in Dorćol, which has become synonymous with the craft scene."
+  - question: "What are some flagship breweries in Belgrade?"
+    answer: "The most notable flagship brewery in Belgrade is Dogma Brewery, founded in 2016 in a renovated sugar-factory building, with an on-site taproom and beer garden that opened in 2017. Another important name is Kabinet, frequently described as one of Serbia's biggest craft-beer brands, though its taproom is located outside the city."
+  - question: "Where can I find good craft beer bars in Belgrade?"
+    answer: "A well-known craft beer bar in Belgrade is Samo Pivo, which is a long-standing spot with a large beer hall and over 20 taps. Krafter is another popular bar located in Dorćol, known for serving only craft beers, but it does not serve food."
+  - question: "Can I take a craft beer tour in Belgrade?"
+    answer: "Yes, the craft beer scene in Belgrade is mature enough to support themed brewery tours, including options like an e-scooter tour that visits multiple breweries. However, it's advisable to confirm the specific tour offerings and their availability before booking."
+  - question: "What domestic beer labels should I look for in Serbia?"
+    answer: "Popular mainstream domestic beers in Serbia include Jelen and Lav, which are commonly found on bar taps. For craft options, domestic labels such as Kabinet and Dogma are frequently recommended, indicating the craft sector's presence as of 2026."
+  - question: "How much does craft beer cost in Belgrade?"
+    answer: "Beer pricing can vary, but at clubs and splavovi, it has been reported to be roughly 2–4 EUR, while craft beers at central bars are generally in the range of 300–700 RSD (approximately 3–7 EUR) per pint. It's best to check current menus for the most accurate pricing."
 ---
 
 ## Where can I drink craft beer in Belgrade?

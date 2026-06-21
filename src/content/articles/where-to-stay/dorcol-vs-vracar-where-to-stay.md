@@ -16,18 +16,24 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/visit-belgrade/belgrade-neighborhoods"
-faqs:
-  - question: "Is Dorćol or Vračar better to stay in?"
-    answer: "Neither is better outright — it depends on what you want from the trip. Dorćol is usually the best fit if you want café-and-nightlife energy, an eclectic neighbourhood feel and to be closer to the Danube and the historic core; it is apartment-dominated, so quality depends on the specific listing, and some pockets are noisy at night. Vračar is usually the better fit for a calmer, residential base — strong for families, longer stays and travellers who want central Belgrade without the bar pressure, though it is not on a river and can be pricier. Both are central and walkable; choose by energy, then confirm the exact street with the property before booking."
-  - question: "What is Dorćol like to stay in?"
-    answer: "Dorćol is one of Belgrade's oldest neighbourhoods and a modern favourite for cafés, restaurants, bars and riverfront walking. Staying there feels eclectic and local rather than purely touristy. Upper Dorćol is closer to Republic Square and the main sights; lower Dorćol slopes toward the Danube and feels quieter and more spread out. Strahinjića Bana and the nearby Cetinjska nightlife pocket are lively and fun but poor for quiet sleep. It is apartment-dominated rather than full of large hotels, so the individual listing matters a lot, and parking is difficult in the central and upper areas. Check the exact street, because the same district can be charmingly calm or genuinely noisy."
-  - question: "Is Vračar good for families?"
-    answer: "Yes — Vračar is one of the strongest central choices for families in Belgrade. It is a central-residential plateau (not a waterfront or heavy-nightlife area), anchored by Saint Sava Temple and the Nikola Tesla Museum, with normal supermarkets, pharmacies and neighbourhood restaurants and less old-town bar pressure. For the calmest stay, pick a smaller side street away from major boulevards; streets right on Slavija or Bulevar kralja Aleksandra carry traffic noise. It can be on the pricier side and has some hills, but a quiet, well-reviewed, lift-served apartment or hotel here is a good compromise between central access and normal daily life."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
   - dorcol
   - vracar
+faqs:
+  - question: "What is the difference between staying in Dorćol and Vračar in Belgrade?"
+    answer: "The main difference is the energy of the districts; Dorćol offers a vibrant café-and-nightlife scene, while Vračar provides a calmer, residential atmosphere. Dorćol is closer to the Danube and the historic core, making it ideal for those seeking a lively experience, whereas Vračar is better suited for families and longer stays, offering a quieter environment."
+  - question: "Is Dorćol a good area for nightlife in Belgrade?"
+    answer: "Yes, Dorćol is known for its strong nightlife, particularly along Strahinjića Bana Street and the nearby Cetinjska nightlife pocket. However, visitors should be aware that some parts of Dorćol can experience late-night noise, so it's important to check the exact street and building before booking."
+  - question: "Who should consider staying in Vračar?"
+    answer: "Vračar is ideal for families, those on longer stays, and travelers who prefer a calmer, residential base. It offers proximity to attractions like Saint Sava Temple and the Nikola Tesla Museum, while providing a more local experience without the nightlife pressure found in Dorćol."
+  - question: "What should I confirm before booking accommodation in either Dorćol or Vračar?"
+    answer: "Before booking, confirm details such as noise levels and the exact street, whether the accommodation is non-smoking, the presence of a lift, air conditioning and heating options, parking availability, and registration for your stay. These factors can significantly impact your experience in either district."
+  - question: "Is parking easy to find in Dorćol and Vračar?"
+    answer: "Parking can be difficult in both Dorćol and Vračar, especially in central areas. It's advisable to ask whether the accommodation offers private parking or if street parking is available nearby, as street parking is regulated and time-restricted."
+  - question: "What type of travelers is Dorćol best suited for?"
+    answer: "Dorćol is best suited for couples, younger travelers, digital nomads, and repeat visitors who enjoy a lively atmosphere with cafés, bars, and restaurants nearby. It attracts those looking for an eclectic, local experience rather than a purely touristy one."
 ---
 
 ## Dorćol or Vračar — which should you pick?

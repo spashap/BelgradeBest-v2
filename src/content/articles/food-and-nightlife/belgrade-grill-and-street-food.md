@@ -17,15 +17,21 @@ linksTo:
   - "/visit-belgrade/things-to-do-in-belgrade"
   - "/visit-belgrade/belgrade-neighborhoods"
   - "/plan-your-trip/money"
-faqs:
-  - question: "Where can I get the best ćevapi in Belgrade?"
-    answer: "The best ćevapi in Belgrade come from a ćevabdžinica or roštilj spot — a counter-service grill where the meat is cooked over coals and handed to you fast. That venue type is the durable answer; specific shops open and close, so trust the format over any single name. Names you'll see recommended (as of 2026) include long-running grill counters around the centre and in residential neighbourhoods, but a good rule is to follow the smoke and the local queue. Order ćevapi in lepinja flatbread with raw onion, and add kajmak and ajvar."
-  - question: "What is Serbian street food?"
-    answer: "Serbian street food centres on grilled minced meat and bakery pastry. The three things to know are ćevapi (small grilled minced-meat sausages), pljeskavica (a large grilled minced-meat patty, the Serbian relative of a burger) and burek (a flaky filled pastry eaten with yoghurt). They're served from roštilj grills, ćevabdžinice and corner bakeries (pekare), usually with kajmak and ajvar on the grilled dishes. It's cheap, fast, meat-heavy and genuinely good — the food Belgraders actually eat on the go and after a night out."
-  - question: "Where can I eat late at night in Belgrade?"
-    answer: "Belgrade has a strong late-night and 24-hour food culture, so something is almost always open. The standard after-club options are 24-hour bakeries (pekare) selling burek, plus late-night gyros, pizza-by-the-slice and grilled meat. For burek specifically, Pekara Trpković near Slavija is the spot locals and travellers cite most as a post-party reference point (check current hours before you go). Beyond that, the category is more reliable than any one venue — wherever you end your night, a bakery or grill counter will be grilling and selling."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What are the must-try street foods in Belgrade?"
+    answer: "The must-try street foods in Belgrade are ćevapi, pljeskavica, and burek. Ćevapi are small grilled minced-meat sausages typically served with flatbread and accompaniments like onions, kajmak, and ajvar. Pljeskavica is a large grilled minced-meat patty, often compared to a burger, while burek is a flaky pastry filled with meat or cheese, traditionally enjoyed with yoghurt."
+  - question: "Where can I find the best ćevapi in Belgrade?"
+    answer: "The best ćevapi in Belgrade are typically found at ćevabdžinica or roštilj spots, which are counter-service or quick-serve grilled meat venues. Rather than focusing on a single name, it's advised to trust the venue type, as these places are known for serving high-quality grilled meats. Look for well-regarded grill counters around the city, especially those with a queue."
+  - question: "What late-night food options are available in Belgrade?"
+    answer: "Belgrade offers a vibrant late-night food scene featuring burek, pizza, gyros, and grilled meats. Many bakeries operate 24 hours, making them a popular choice for post-club snacks. Pekara Trpković is often cited as a go-to for high-quality burek, but there are numerous options available, so something will likely be open wherever you are."
+  - question: "How affordable is street food in Belgrade?"
+    answer: "Street food in Belgrade is considered very affordable by European standards, making it one of the cheapest ways to eat in the city. While prices can fluctuate, they are generally indicative of good value as of 2026. It's advisable to check current menus for specific pricing."
+  - question: "Do I need cash to buy street food in Belgrade?"
+    answer: "Yes, cash is often necessary for purchasing street food in Belgrade, as many bakeries and small grill spots may be cash-only. While cards are accepted in most places across the city, it's wise to carry some dinars specifically for street food purchases, especially as of 2026."
+  - question: "Are there vegetarian options in Belgrade's street food scene?"
+    answer: "Accidental vegetarian options do exist in Belgrade's street food scene, such as cheese burek and some bakery items. However, it's important for vegetarians to clarify ingredients, as hidden animal fats and cheese are common, and most grill spots focus on meat."
 ---
 
 ## What is Serbian street food, and what should I eat first?

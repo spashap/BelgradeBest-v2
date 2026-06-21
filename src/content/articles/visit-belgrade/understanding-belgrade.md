@@ -17,17 +17,21 @@ linksTo:
   - "/visit-belgrade/brutalist-belgrade"
   - "/visit-belgrade/zemun"
   - "/visit-belgrade/belgrade-museums"
-faqs:
-  - question: "Why does Belgrade look so architecturally mismatched?"
-    answer: "Belgrade sits at the confluence of the Sava and Danube rivers, a strategic crossing fortified for over two thousand years and conquered, razed and rebuilt many times. Each ruler partly erased the layer before, so instead of one preserved old town in a single style you get Ottoman, Austro-Hungarian, neoclassical, socialist-modernist and contemporary fabric on adjacent streets. The city reads as a collage, not a picture-postcard quarter, and that is its character rather than a flaw."
-  - question: "Where is the best place to see Belgrade's history in one visit?"
-    answer: "Belgrade Fortress and the surrounding Kalemegdan Park, on the promontory above the Sava–Danube confluence about 0.9 km north-west of Republic Square (a 10–15 minute walk up Knez Mihailova). The site holds layered remains of Roman, Byzantine, medieval Serbian, Ottoman and Austrian fortifications in one place. The grounds are open 24/7 year-round and free to enter, with the city's best panoramic view over the confluence."
-  - question: "How long were the Ottomans actually in Belgrade?"
-    answer: "Belgrade fell to the Ottomans in 1521 and was under Ottoman control for much of the following centuries, but the often-quoted figure of roughly 500 years is a simplification rather than a clean span. Control was fragmented, interrupted by intermittent Austrian occupations. The most tangible Ottoman survivor in the city is the Bajrakli Mosque — the only one left of the 200-plus mosques that once stood here."
-  - question: "Is the Belgrade Fortress free to visit?"
-    answer: "The fortress grounds and Kalemegdan Park are free and open 24/7 year-round, including the panoramic terraces over the rivers. The individual interior attractions — the Roman Well, Nebojša Tower, the Clock Tower, the Military Bunker and others — are separately ticketed and keep seasonal hours. As of 2026, single-site prices run from about 80 dinars (Clock Tower) to 200 dinars (Nebojša Tower); treat those figures as indicative and recheck on arrival."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What makes Belgrade's architecture unique?"
+    answer: "Belgrade's architecture is unique because it is a layered collage of various styles, including Ottoman, Austro-Hungarian, neoclassical, socialist-modernist, and contemporary elements that coexist on adjacent streets. This diversity is a result of the city's strategic location at the confluence of the Sava and Danube rivers, which has led to it being fortified, conquered, and rebuilt many times over two millennia."
+  - question: "What historical layers can I find in Belgrade?"
+    answer: "Belgrade features several historical layers, including Celtic/Roman, Byzantine/medieval Serbian, Ottoman, Austrian/Habsburg, interwar Yugoslav, socialist-modernist, and the recent Belgrade Waterfront. Each layer reflects the city's complex history and is visible in various structures and sites throughout the city."
+  - question: "Where can I see all the historical layers in Belgrade?"
+    answer: "You can see all the historical layers of Belgrade at Kalemegdan Park and Belgrade Fortress, which occupy a promontory above the confluence of the Sava and Danube rivers. The fortress contains remnants from Roman, Byzantine, medieval Serbian, Ottoman, and Austrian fortifications, making it the best place to experience the city's layered history."
+  - question: "What are the visiting hours for Belgrade Fortress attractions?"
+    answer: "As of 2026, the individual attractions within Belgrade Fortress have seasonal visiting hours: from 11:00 to 19:00 (last entry at 18:30) between 15 April and 15 October, and from 10:00 to 17:00 (last entry at 16:30) between 15 October and 15 April, Tuesday to Sunday. However, these hours are indicative and may change, so it's best to verify upon arrival."
+  - question: "Are there any ticket options for visiting the attractions in Belgrade Fortress?"
+    answer: "Yes, as of 2026, there are individual ticket prices for various attractions within Belgrade Fortress, such as the Clock Tower and the Roman Well, with prices varying for standard and reduced tickets. A combined ticket option was previously announced, but its availability in 2026 is not confirmed, so it's advisable to check at the fortress information desk upon arrival."
+  - question: "What is the best way to explore Belgrade for first-time visitors?"
+    answer: "For first-time visitors, the most efficient way to explore Belgrade is by joining a free walking tour that starts at Republic Square and leads to Kalemegdan Fortress. This tour typically lasts around two to two and a half hours and covers key historical sites, providing a coherent narrative of the city's layered history."
 ---
 
 ## Why the city reads the way it does

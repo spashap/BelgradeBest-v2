@@ -16,19 +16,25 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/plan-your-trip/getting-around"
-faqs:
-  - question: "Where should business travellers stay in Belgrade?"
-    answer: "For most work trips the best fit is New Belgrade (Novi Beograd), which has the city's main cluster of business hotels, wide boulevards, easier parking, and the quickest road access toward Nikola Tesla Airport. Choose central Savski Venac or a Stari Grad business hotel instead if your meetings are downtown and you want to walk to dinner. Belgrade Waterfront works well if your meetings are near the Sava riverfront. Whichever district you pick, confirm the traffic route to your specific meeting location before booking."
-  - question: "Is New Belgrade good for a work trip?"
-    answer: "Usually yes. New Belgrade is the practical, modern side of the city — business hotels, offices, shopping centres, the arena, larger serviced apartments, and the most reliable parking. The trade-offs are that it has less historic atmosphere and that walking to the Old Town is generally impractical, so you'll use a taxi, free public transport, or a car for sightseeing. The exact block matters: some areas are lively and convenient while others feel empty after office hours, so check what's around your hotel."
-  - question: "How far is New Belgrade from the airport and the centre?"
-    answer: "New Belgrade sits on the western side of the city, between the centre and Nikola Tesla Airport, which makes it convenient for both. Belgrade public transport has been free for all passengers since 1 January 2025, so commuting in costs nothing — but time still matters, and a free 35-minute ride is not a 10-minute walk. For exact door-to-door timing, confirm the route with your hotel, since traffic and your specific block change the picture. The airport taxi uses an official fixed-price voucher system from e-kiosks in the terminal."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
   - new-belgrade
   - savski-venac
   - stari-grad
+faqs:
+  - question: "What is the best area to stay in Belgrade for business trips?"
+    answer: "The best area to stay in Belgrade for business trips is New Belgrade (Novi Beograd), as it features a cluster of business hotels, offices, and easy access to the airport. If your meetings are downtown and you prefer walkable evenings, consider staying in Savski Venac or a central Stari Grad hotel instead."
+  - question: "How is Belgrade laid out for business travelers?"
+    answer: "Belgrade is divided into two main areas: Old Belgrade, which is the historic core, and New Belgrade, which is more modern and practical for business. New Belgrade offers better logistics and airport access, while Old Belgrade provides a more atmospheric and walkable experience."
+  - question: "What are the advantages of staying in New Belgrade for a work trip?"
+    answer: "Staying in New Belgrade offers several advantages, including a concentration of business hotels, easier road access to the airport, and better parking options. It is designed for corporate stays, ensuring reliable reception and business facilities, which are essential for work trips."
+  - question: "When should I consider staying in Savski Venac or Stari Grad?"
+    answer: "You should consider staying in Savski Venac or Stari Grad if your meetings are downtown or near the Sava riverfront, as this can save you the daily commute and allow for walkable evenings. Central Stari Grad hotels are also ideal for easy access to restaurants and nightlife."
+  - question: "What should I confirm before booking a business hotel in Belgrade?"
+    answer: "Before booking a business hotel in Belgrade, confirm the traffic route to your meeting location, the reliability of 24-hour reception, and whether parking is guaranteed and reservable. Additionally, check if breakfast is included and ensure you have a non-smoking room if that is a concern."
+  - question: "Are there any practical tips for business travelers in Belgrade?"
+    answer: "Business travelers in Belgrade should be aware that public transport is free but may not be fast, so consider the time cost of commuting. Also, ensure your accommodation will register your stay as required by Serbian law, and keep some cash on hand for taxis and tips, as not all places accept cards."
 ---
 
 ## Where should you stay in Belgrade for business?

@@ -16,15 +16,21 @@ noindex: false
 linksTo:
   - "/plan-your-trip/airport-to-city"
   - "/plan-your-trip/money"
-faqs:
-  - question: "What's the best SIM card for tourists in Serbia?"
-    answer: "For most short visits the easiest option is a travel eSIM (Airalo, Holafly, Saily and similar) that you install before you fly and switch on when you land. If you prefer a physical card, all three Serbian operators — mts, Yettel, and A1 — sell tourist prepaid plans; Yettel and mts publish dedicated tourist bundles, and you can buy them at the airport with your passport. The 'best' choice depends on how long you stay and how much data you need, not on coverage, which is strong on all three networks across Belgrade."
-  - question: "Can I use an eSIM in Serbia?"
-    answer: "Yes. Serbia supports eSIM. International travel-eSIM providers such as Airalo, Holafly, and Saily all sell Serbia plans, and the local operators (mts, Yettel) also offer eSIM profiles. You install the eSIM before arrival, then turn it on after you land — no shop visit and no passport registration needed. Your phone must be eSIM-capable and carrier-unlocked."
-  - question: "Can I buy a SIM at Belgrade airport?"
-    answer: "Yes. mts, Yettel, and A1 have kiosks in the arrivals area at Belgrade Nikola Tesla Airport (BEG), after baggage claim near the exit. Bring your passport — registration with photo ID is legally required to activate any Serbian SIM. Airport kiosks are convenient but tend to be slightly pricier than operator shops in the city, and they are not always open 24/7."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What's the fastest way to get mobile data in Belgrade?"
+    answer: "The fastest way to get mobile data in Belgrade is to install a travel eSIM before you fly and activate it upon landing. Alternatively, you can buy a tourist prepaid SIM from one of Serbia's three operators in the arrivals hall at the airport. Either option allows you to be connected within minutes of landing."
+  - question: "Who are the mobile operators in Serbia?"
+    answer: "Serbia has three main mobile operators: mts (Telekom Srbija), Yettel, and A1 Serbia. All three networks provide fast 4G coverage across Belgrade, making it easy for visitors to choose based on price and plan fit rather than signal quality."
+  - question: "Should I get an eSIM or a physical SIM for my trip to Belgrade?"
+    answer: "You should choose an eSIM if your phone supports it and you want a hassle-free experience, as it allows you to buy and install it online before your trip. A physical SIM is better if your phone is older, if you want a local Serbian phone number, or if you prefer to buy in person."
+  - question: "Can I buy a SIM card at Belgrade airport?"
+    answer: "Yes, you can buy a SIM card at Belgrade Nikola Tesla Airport from mts, Yettel, and A1 kiosks located in the arrivals area. Remember to bring your passport, as it is required for SIM registration, and be aware that airport prices may be higher than those at downtown shops."
+  - question: "Is Serbia covered by EU 'Roam Like at Home'?"
+    answer: "No, Serbia is not covered by the EU's 'Roam Like at Home' rules, meaning EU and UK visitors may incur high roaming charges unless they purchase a roaming add-on that includes Serbia. As of 2026, it is advisable to buy a local SIM or eSIM to avoid unexpected costs."
+  - question: "Is Wi-Fi good in Belgrade?"
+    answer: "Yes, Wi-Fi is widely available and generally good in Belgrade, with most hotels, cafes, and restaurants offering free access. However, for navigation and ride-hailing while moving around the city, having a local SIM or eSIM is recommended."
 ---
 
 ## What's the fastest way to get mobile data in Belgrade?

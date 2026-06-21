@@ -17,17 +17,21 @@ linksTo:
   - "/visit-belgrade/understanding-belgrade"
   - "/visit-belgrade/belgrade-museums"
   - "/visit-belgrade/belgrade-itinerary-3-days"
-faqs:
-  - question: "What are the top things to do in Belgrade?"
-    answer: "The canonical first-timer sights are Belgrade Fortress (Kalemegdan), the Temple of St Sava, the Nikola Tesla Museum, Skadarlija, Republic Square with Knez Mihailova street, Ada Ciganlija, and Zemun with its Gardoš Tower, plus Avala Tower just outside the city. Most of the central ones sit within a short walk of each other in the old town."
-  - question: "Is Belgrade walkable for tourists?"
-    answer: "Yes — the central core is compact and pedestrian-friendly. Republic Square, the Knez Mihailova promenade and Belgrade Fortress form a walkable loop under about a kilometre end to end, and the Vračar sights (St Sava, the Tesla Museum) are a short onward walk or ride. Zemun, Ada Ciganlija and Avala sit further out as half-day trips."
-  - question: "Do you have to pay to enter Belgrade Fortress?"
-    answer: "No. The fortress grounds and Kalemegdan park are open around the clock and free to enter. Individual attractions inside (such as museums) charge their own admission, and those seasonal hours and prices are best confirmed close to your visit."
-  - question: "How many of Belgrade's sights can you see in one day?"
-    answer: "Because the central sights cluster so tightly, a first-timer can comfortably cover the fortress, Republic Square, Knez Mihailova and Skadarlija on foot in a single day, with the Temple of St Sava and the Tesla Museum added if you start early. Ada, Zemun and Avala each need a separate half-day."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What are the must-see attractions in Belgrade?"
+    answer: "The canonical first-timer must-sees in Belgrade include Belgrade Fortress (Kalemegdan), the Temple of St. Sava, the Nikola Tesla Museum, Skadarlija, Republic Square with Knez Mihailova, Ada Ciganlija, Zemun with Gardoš Tower, and Avala Tower just outside the city. These sites recur across essentially all reputable guides, highlighting their significance for visitors."
+  - question: "Why is Belgrade Fortress important to visit?"
+    answer: "Belgrade Fortress (Kalemegdan) is significant because it offers a panoramic view of the confluence of the Sava and Danube rivers and showcases the layered history of the city, with fortifications from Roman to Austrian periods. The grounds are open 24/7 and free to enter, making it an accessible site to explore the historical context of Belgrade."
+  - question: "What can I expect at the Temple of St. Sava?"
+    answer: "The Temple of St. Sava is one of the largest Orthodox churches in the world, known for its monumental marble façade and impressive mosaic interior. As of 2026, it is open daily from approximately 08:00 to 20:00, with free entry and a donation box, making it a key site for understanding modern Serbian Orthodox identity."
+  - question: "What is Skadarlija and why should I visit?"
+    answer: "Skadarlija is a cobblestone bohemian quarter in Belgrade, often referred to as 'Belgrade's Montmartre' due to its lively atmosphere filled with traditional taverns and live music. It is a pedestrian area that is effectively always open, providing visitors with an easy way to experience the charm of 'old Belgrade' through its dining and cultural offerings."
+  - question: "How do I get to Ada Ciganlija and what can I do there?"
+    answer: "Ada Ciganlija, known as 'Belgrade's sea,' is a lake and beach peninsula that offers a variety of activities such as swimming, cycling, and sports facilities. It is a free-access city park that is effectively open 24/7, with lifeguards and beach facilities active from May to September, making it a popular spot for locals in the summer."
+  - question: "What should I know about visiting Avala Tower?"
+    answer: "Avala Tower is a TV-tower viewpoint located about 16 km south of Belgrade, offering a different perspective of the regional landscape. Its hours are uncertain, with conflicting reports suggesting it may be open from 09:00 to 18:00 or 20:00; thus, it's advisable to verify before visiting. Ticket prices are reported but not officially confirmed, so checking ahead is recommended."
 ---
 
 ## The shortlist, and why it earns its place

@@ -16,18 +16,24 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/visit-belgrade/zemun"
-faqs:
-  - question: "Should I stay in Stari Grad or Zemun?"
-    answer: "For a short first visit focused on sightseeing, Stari Grad (Old Town) is usually the better fit, because it keeps Republic Square, Knez Mihailova, Kalemegdan and Skadarlija within an easy walk and saves you commuting time. Zemun is the better choice for a slower, more romantic or repeat stay, when Danube walks and atmosphere matter more than being in the centre. A rough rule: pick Stari Grad if you have only one or two nights and a packed sightseeing list, and Zemun if you have more time or have seen the centre before. Either way, confirm noise, non-smoking and access details with the property before booking."
-  - question: "Is Zemun too far from central Belgrade?"
-    answer: "Not too far for a relaxed or repeat visit, but it is less efficient for a short first-time sightseeing trip. Zemun sits upriver along the Danube, northwest of central Belgrade, so it is its own district rather than part of the walkable old core. If you plan to be in the centre every day on a tight schedule, the daily journey adds up; if you want a calmer base and don't mind a commute, the distance is part of the appeal rather than a problem."
-  - question: "How do you get from Zemun to the centre of Belgrade?"
-    answer: "The usual way is by city bus, and since 1 January 2025 public transport in Belgrade has been free for all passengers, so the journey carries no fare. Time still matters more than cost, though: a free bus ride is not the same as a ten-minute walk, and for late-night returns a taxi or ride app may be more realistic. Check the route and travel time for your exact address before booking, rather than assuming free means quick."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
   - stari-grad
   - zemun
+faqs:
+  - question: "Is it better to stay in Stari Grad or Zemun for a first visit to Belgrade?"
+    answer: "Stari Grad (Old Town) is usually the better fit for a short first trip built around sightseeing, as it keeps Belgrade's headline sights within an easy walk. Zemun, while charming and romantic, is farther from the center and may not be as efficient for first-time visitors focused on central attractions."
+  - question: "What are the main differences between Stari Grad and Zemun?"
+    answer: "Stari Grad is lively, busy, and central, making it ideal for first-time visitors who want to see classic sights on foot. In contrast, Zemun offers a calmer, more romantic atmosphere along the Danube, but requires a commute to reach the main tourist attractions."
+  - question: "How far is Zemun from the center of Belgrade?"
+    answer: "Zemun is located upriver along the Danube and is a separate district from the Old Town, making it a commute away from central sights. While public transport is free as of January 2025, the travel time can add up, especially for short stays focused on sightseeing."
+  - question: "What should I consider when choosing between Stari Grad and Zemun?"
+    answer: "Consider your travel priorities: choose Stari Grad for a short visit focused on walking to attractions, while Zemun is better for a slower, romantic stay along the river. Each area has its trade-offs, such as noise and parking in Stari Grad versus the distance from central sights in Zemun."
+  - question: "What are the trade-offs of staying in Stari Grad?"
+    answer: "Stari Grad offers maximum walkability and proximity to major sights, but comes with central-city friction such as noise from lively bar streets, tricky parking, and the possibility of older buildings without elevators. It's a safe default for first-time visitors, but those sensitive to noise should consider their accommodation options."
+  - question: "What amenities should I check before booking accommodation in Belgrade?"
+    answer: "Before booking, confirm the registration of your stay, whether the room is non-smoking, and check for noise levels based on room location. Additionally, verify building access details, such as the presence of an elevator, and inquire about any tourist taxes that may apply."
 ---
 
 ## Should I stay in Stari Grad or Zemun?

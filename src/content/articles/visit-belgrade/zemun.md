@@ -17,17 +17,21 @@ linksTo:
   - "/visit-belgrade/understanding-belgrade"
   - "/visit-belgrade/belgrade-neighborhoods"
   - "/plan-your-trip/getting-around"
-faqs:
-  - question: "What is Zemun?"
-    answer: "Zemun is a district of Belgrade that was, for two centuries, a separate town. Under Habsburg then Austro-Hungarian rule from 1717 until 1918, it grew up as a frontier town across the Danube from a Belgrade that was first Ottoman and later Serbian, and it only became a Belgrade municipality in 1934. It kept its 18th- and 19th-century street fabric largely intact — low Austro-Hungarian and Balkan-style houses, modest churches and a riverside quay — and reads as an older, quieter town stitched onto the modern city."
-  - question: "Where is Zemun and how do you get there?"
-    answer: "Zemun sits upriver along the Danube, northwest of central Belgrade, and is comfortably reachable within the city by bus. Since 1 January 2025 public transport in Belgrade has been free, so the journey carries no fare. The getting-around page covers routes and modes; the short version is that it's an easy half-day from the centre."
-  - question: "Is Zemun worth visiting?"
-    answer: "Yes, for an unhurried half-day or evening. It's the most legible Austro-Hungarian layer of Belgrade's stacked history — a Habsburg-frontier chapter you can walk through rather than imagine from a plaque. The pleasure is in wandering the old-town streets, climbing Gardoš Hill for the Danube view, and ending on the riverside quay, which is known for its fish restaurants."
-  - question: "What is the Gardoš Tower?"
-    answer: "The Gardoš Tower, also called the Millennium Tower, crowns Gardoš Hill in Zemun. It was built in 1896 to mark a thousand years of Hungarian settlement in the Pannonian plain and is Zemun's signature landmark, as much for the view over the Danube as for the building itself. Its opening hours are reported inconsistently across sources, so check the posted sign at the tower or a local tourist office on the day rather than planning a tight schedule around any single set of times."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What is Zemun and why is it significant?"
+    answer: "Zemun is an old Austro-Hungarian town that is now a district of Belgrade, known for its well-preserved 18th- and 19th-century street fabric. It served as a separate frontier town across the Danube from Belgrade under Habsburg rule from 1717 until 1918, and it became a Belgrade municipality in 1934. This historical significance makes Zemun a unique area that reflects a distinct layer of Belgrade's complex history."
+  - question: "What can I do in Zemun?"
+    answer: "Visitors can enjoy a half-day or evening in Zemun by walking through its charming old-town streets, exploring the Danube quay, and climbing Gardoš Hill for panoramic views. The area is also known for its fish restaurants along the river, making it a perfect spot to relax and enjoy a meal after sightseeing. The district offers a slower pace that contrasts with central Belgrade, inviting leisurely exploration."
+  - question: "What is the Gardoš Tower and why should I visit it?"
+    answer: "The Gardoš Tower, also known as the Millennium Tower, is Zemun's signature landmark built in 1896 to commemorate a thousand years of Hungarian settlement. It offers stunning views over the Danube and the rooftops of Zemun and Belgrade, making it a popular destination for visitors. The climb to the tower through the old streets is an integral part of the experience."
+  - question: "What are the opening hours for Gardoš Tower?"
+    answer: "The opening hours for Gardoš Tower are reported inconsistently, with local sources suggesting summer hours of 10:00–19:00, while other platforms list 10:00–16:00 or 10:00–18:00. As of 2026, there is no official source confirming the hours, so it's best to treat 10:00–16:00 as a minimum baseline and verify on the day of your visit."
+  - question: "Is there an entry fee for Gardoš Tower?"
+    answer: "Yes, there is a small entrance fee for Gardoš Tower, although the exact amount for 2026 is currently unknown. Various sources suggest it is modest, with children paying less, but no official price schedule has been confirmed. It is advisable to budget for a small local entry fee rather than relying on a fixed figure."
+  - question: "How do I get to Zemun from central Belgrade?"
+    answer: "Zemun is located northwest of central Belgrade along the Danube and is easily accessible by bus. Since public transport in Belgrade has been free since January 2025, getting to Zemun incurs no fare, making it a convenient half-day trip from the city center."
 ---
 
 ## What is Zemun, and where is it?

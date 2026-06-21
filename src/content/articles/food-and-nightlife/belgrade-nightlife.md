@@ -17,15 +17,21 @@ linksTo:
   - "/food-and-nightlife/belgrade-splavovi"
   - "/food-and-nightlife/belgrade-kafanas"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "Is Belgrade nightlife safe?"
-    answer: "Belgrade's nightlife is generally considered safe for visitors, and mainstream venues are safe if you respect dress codes, reservations and local norms (reported, as of 2026). The usual big-city precautions apply: go out with others or in a reliable group, keep an eye on your drink and don't accept drinks from strangers, and expect splavovi to get very crowded at peak times. The recurring money-related risks are nightlife-specific rather than violent — overpriced or pushy bottle-service tables, confusion over minimum spends (per table vs per person), and occasional made-up 'entrance fees' at supposedly free-entry clubs when demand is high. Confirming conditions in advance and booking directly or through a reputable channel reduces these (reported, as of 2026)."
-  - question: "What's the dress code for Belgrade clubs?"
-    answer: "Smart-casual is the minimum at upscale venues, clubs and splavovi (confirmed). Belgrade is a capital city and the going-out style runs urban, stylish and a bit flashy, so dressing up rather than down is the safe call. At mainstream clubs, sandals, shorts and sports shoes can be refused at the door — some venues specifically enforce a no-sandals rule for men — and a few upmarket splavovi run elegant dress codes and minimum-age limits (reported / indicative, as of 2026). Kafanas and the bar districts are far more relaxed; the strict end is the prime clubs and river venues."
-  - question: "What time do clubs open in Belgrade?"
-    answer: "Late. Belgrade doesn't warm up early — the night starts late and ends whenever it wants. Clubs and splavovi commonly run until roughly 04:00–06:00, and some venues go later still, with parties typically peaking between about 02:00 and 04:00 (reported / indicative, as of 2026). Belgrade is widely described as going out every night of the week, not just at weekends, though Thursday-to-Sunday is the busiest stretch. Plan to arrive well after midnight for a club or splav; turning up at 22:00 means an empty room."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What is the nightlife scene like in Belgrade?"
+    answer: "Belgrade's nightlife is a recognised draw, known for its vibrant and diverse offerings, including floating river clubs (splavovi), bar districts, bohemian kafana streets, and a late-night culture that operates every night of the week. It is often touted as one of the best nightlife scenes in the Balkans and has been ranked among Europe's most vibrant scenes as of 2026."
+  - question: "When is the best time to experience Belgrade's nightlife?"
+    answer: "The best time to experience Belgrade's nightlife is from May to September when the high-energy scene moves to the riverbank splavovi. In winter, nightlife shifts indoors to clubs and bars, resulting in a stark difference in options available to visitors depending on the season."
+  - question: "What types of nightlife experiences can I find in Belgrade?"
+    answer: "Belgrade offers several distinct nightlife formats, including splavovi (floating river clubs), bar districts for warm-up drinks, traditional kafanas with live music, and a specialist drinks scene featuring rakija bars and craft-beer taprooms. Each format caters to different preferences, whether you're looking to dance, relax, or enjoy a drink."
+  - question: "What are the main nightlife districts in Belgrade?"
+    answer: "The main nightlife districts in Belgrade include Savamala, known for its splav and electronic music scene; Cetinjska and Dorćol, which host bar and craft-beer clusters; Skadarlija, the traditional kafana quarter; and Beton Hala, a polished waterfront dining and drinks strip. Each district has its own unique nightlife personality."
+  - question: "Are there any practical tips for enjoying nightlife in Belgrade?"
+    answer: "Reservations are generally required for large-capacity clubs and splavovi, especially on weekends, and a smart-casual dress code is expected at upscale venues. The legal drinking age is 18, and while cards are accepted at most places, cash is still important at smaller venues."
+  - question: "What kind of music can I expect in Belgrade's nightlife?"
+    answer: "Belgrade's nightlife features a musically eclectic scene, with genres like RnB, hip-hop, house, turbo-folk, and techno being prominent. The music you encounter will depend on the venue, with splavovi often showcasing mainstream sounds while smaller clubs may focus on underground electronic music."
 ---
 
 ## What is Belgrade nightlife like — and why is it famous?

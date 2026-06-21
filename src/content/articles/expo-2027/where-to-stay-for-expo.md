@@ -16,15 +16,21 @@ noindex: false
 linksTo:
   - "/expo-2027/getting-there"
   - "/where-to-stay"
-faqs:
-  - question: "Where should I stay for Expo 2027?"
-    answer: "If your trip is mostly about the Expo, stay in New Belgrade or on the Surčin / airport side — it is closest to the site at Surčin and has the newest hotels. If you also want to see Belgrade itself, base in the historic centre (Stari Grad or Vračar) and treat the Expo as a cross-river day trip. Most visitors are best served by New Belgrade, which sits between the two and reaches both the site and the old town quickly."
-  - question: "How early should I book accommodation for Expo 2027?"
-    answer: "As early as you can — ideally as soon as your dates are fixed, and many months ahead for the peak summer window of 15 May–15 August 2027. Belgrade had roughly 8,000 hotel rooms as of 2026 with only about 2,000 more planned before the Expo, against an expected 4 million-plus visitors over three months, so rooms near the site are likely to be scarce and priced at a premium. Booking with free cancellation lets you lock a room now and keep watching for better options."
-  - question: "Is it better to stay near the Expo site or in central Belgrade?"
-    answer: "Near the site (New Belgrade / Surčin) means the shortest commute and easiest airport access, but a quieter, more modern, business-district setting. Central Belgrade (Stari Grad, Vračar) puts you in the historic, walkable city with the cafés, fortress and nightlife, at the cost of a longer cross-river trip to the venue each day. Choose by what dominates your trip: the Expo itself, or Belgrade as a destination."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What are the best areas to stay in Belgrade for Expo 2027?"
+    answer: "The best areas to stay in Belgrade for Expo 2027 are New Belgrade, the Surčin/airport side, and the historic centre, which includes Stari Grad, Vračar, and Dorćol. New Belgrade offers the shortest commute to the Expo site and has many modern hotels, while the historic centre provides a vibrant atmosphere with cafes and nightlife, albeit with a longer commute to the venue."
+  - question: "How far is the Expo site from the city centre of Belgrade?"
+    answer: "The Expo site in Surčin is roughly 15 km from the city centre of Belgrade. This distance means that staying in the historic centre will require a cross-river trip to reach the venue."
+  - question: "Is it better to stay near the Expo site or in the city centre?"
+    answer: "It depends on your priorities. If your main focus is the Expo, staying near the site in New Belgrade or Surčin is advisable for a shorter commute. However, if you want to explore Belgrade and enjoy its nightlife, staying in the city centre is a better choice, though it comes with a longer commute to the Expo."
+  - question: "When should I book accommodation for Expo 2027?"
+    answer: "You should book accommodation as early as your dates allow due to high demand. With an expected 4 million visitors and limited hotel capacity, especially near the Expo site, early booking is crucial to secure a good location and reasonable rates."
+  - question: "What types of accommodation are available near the Expo site?"
+    answer: "Near the Expo site, you can find modern hotels and serviced apartments in New Belgrade and the Surčin area. However, the Surčin area is less urban and primarily serves as a logistics base, while New Belgrade offers more amenities and a calmer atmosphere."
+  - question: "What should I consider when choosing where to stay for Expo 2027?"
+    answer: "Consider what will dominate your days during your trip. If you will spend most of your time at the Expo, choose accommodation near the site. If you want to experience Belgrade's culture and nightlife, opt for the historic centre, accepting the longer commute to the Expo."
 ---
 
 ## Where should you stay for Expo 2027?

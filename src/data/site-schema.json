@@ -30,7 +30,8 @@
           "linksTo": [
             "/visit-belgrade/things-to-do-in-belgrade",
             "/visit-belgrade/belgrade-itinerary-3-days",
-            "/plan-your-trip"
+            "/plan-your-trip",
+            "/expo-2027/what-is-it"
           ]
         },
         {
@@ -43,7 +44,8 @@
           "linksTo": [
             "/visit-belgrade/understanding-belgrade",
             "/visit-belgrade/belgrade-museums",
-            "/visit-belgrade/belgrade-itinerary-3-days"
+            "/visit-belgrade/belgrade-itinerary-3-days",
+            "/visit-belgrade/is-belgrade-worth-visiting"
           ]
         },
         {
@@ -56,7 +58,8 @@
           "linksTo": [
             "/visit-belgrade/things-to-do-in-belgrade",
             "/visit-belgrade/belgrade-day-trips",
-            "/visit-belgrade/understanding-belgrade"
+            "/visit-belgrade/understanding-belgrade",
+            "/visit-belgrade/is-belgrade-worth-visiting"
           ]
         },
         {
@@ -69,7 +72,8 @@
           "linksTo": [
             "/visit-belgrade/brutalist-belgrade",
             "/visit-belgrade/zemun",
-            "/visit-belgrade/belgrade-museums"
+            "/visit-belgrade/belgrade-museums",
+            "/visit-belgrade/is-belgrade-worth-visiting"
           ]
         },
         {
@@ -82,7 +86,8 @@
           "linksTo": [
             "/visit-belgrade/understanding-belgrade",
             "/visit-belgrade/brutalist-belgrade",
-            "/visit-belgrade/zemun"
+            "/visit-belgrade/zemun",
+            "/food-and-nightlife/belgrade-nightlife"
           ]
         },
         {
@@ -94,7 +99,9 @@
           "title": "Belgrade museums — hours, prices, and which are worth it",
           "linksTo": [
             "/visit-belgrade/understanding-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/visit-belgrade/is-belgrade-worth-visiting",
+            "/expo-2027/what-is-it"
           ]
         },
         {
@@ -107,7 +114,8 @@
           "linksTo": [
             "/visit-belgrade/understanding-belgrade",
             "/visit-belgrade/belgrade-neighborhoods",
-            "/plan-your-trip/getting-around"
+            "/plan-your-trip/getting-around",
+            "/visit-belgrade/is-belgrade-worth-visiting"
           ]
         },
         {
@@ -119,7 +127,9 @@
           "title": "Brutalist Belgrade — New Belgrade's concrete landmarks and how to see them",
           "linksTo": [
             "/visit-belgrade/understanding-belgrade",
-            "/visit-belgrade/belgrade-museums"
+            "/visit-belgrade/belgrade-museums",
+            "/food-and-nightlife/best-restaurants-in-belgrade",
+            "/food-and-nightlife/belgrade-wine-bars"
           ]
         },
         {
@@ -131,7 +141,9 @@
           "title": "Day trips from Belgrade — Novi Sad, the Iron Gates, and more",
           "linksTo": [
             "/visit-belgrade/belgrade-itinerary-3-days",
-            "/plan-your-trip/stations-and-onward-travel"
+            "/plan-your-trip/stations-and-onward-travel",
+            "/visit-belgrade/is-belgrade-worth-visiting",
+            "/visit-belgrade/things-to-do-in-belgrade"
           ]
         },
         {
@@ -143,7 +155,9 @@
           "title": "Belgrade arenas and stadiums — venues, tours, and what's on",
           "linksTo": [
             "/visit-belgrade/things-to-do-in-belgrade",
-            "/visit-belgrade/belgrade-neighborhoods"
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/visit-belgrade/is-belgrade-worth-visiting",
+            "/visit-belgrade/belgrade-itinerary-3-days"
           ]
         }
       ]
@@ -176,7 +190,9 @@
           "title": "Serbia SIM card & eSIM for tourists",
           "linksTo": [
             "/plan-your-trip/airport-to-city",
-            "/plan-your-trip/money"
+            "/plan-your-trip/money",
+            "/plan-your-trip/getting-around",
+            "/plan-your-trip/stations-and-onward-travel"
           ]
         },
         {
@@ -188,7 +204,9 @@
           "title": "Airport to city — bus vs A1 vs taxi vs CarGo",
           "linksTo": [
             "/plan-your-trip/getting-around",
-            "/expo-2027/getting-there"
+            "/expo-2027/getting-there",
+            "/plan-your-trip/money",
+            "/plan-your-trip/stations-and-onward-travel"
           ]
         },
         {
@@ -200,7 +218,9 @@
           "title": "Money in Belgrade — dinar, cards, tipping",
           "linksTo": [
             "/plan-your-trip/staying-safe",
-            "/plan-your-trip/getting-around"
+            "/plan-your-trip/getting-around",
+            "/plan-your-trip/airport-to-city",
+            "/plan-your-trip/stations-and-onward-travel"
           ]
         },
         {
@@ -212,7 +232,9 @@
           "title": "Belgrade's stations and onward travel",
           "linksTo": [
             "/plan-your-trip/getting-around",
-            "/plan-your-trip/airport-to-city"
+            "/plan-your-trip/airport-to-city",
+            "/plan-your-trip/money",
+            "/plan-your-trip/best-time-to-visit"
           ]
         },
         {
@@ -224,7 +246,9 @@
           "title": "The best time to visit Serbia",
           "linksTo": [
             "/expo-2027/guide",
-            "/visit-belgrade"
+            "/visit-belgrade",
+            "/plan-your-trip/airport-to-city",
+            "/plan-your-trip/getting-around"
           ]
         },
         {
@@ -236,7 +260,9 @@
           "title": "Getting around Belgrade — transport, free PT",
           "linksTo": [
             "/plan-your-trip/airport-to-city",
-            "/visit-belgrade"
+            "/visit-belgrade",
+            "/expo-2027/getting-there",
+            "/plan-your-trip/money"
           ]
         },
         {
@@ -247,7 +273,10 @@
           "priority": "P2",
           "title": "Entry rules and registration for Serbia",
           "linksTo": [
-            "/plan-your-trip/staying-safe"
+            "/plan-your-trip/staying-safe",
+            "/plan-your-trip/airport-to-city",
+            "/plan-your-trip/getting-around",
+            "/plan-your-trip/money"
           ]
         },
         {
@@ -259,7 +288,9 @@
           "title": "Staying safe and healthy in Belgrade",
           "linksTo": [
             "/plan-your-trip/money",
-            "/plan-your-trip/airport-to-city"
+            "/plan-your-trip/airport-to-city",
+            "/visit-belgrade/is-belgrade-worth-visiting",
+            "/plan-your-trip/getting-around"
           ]
         }
       ]
@@ -434,7 +465,8 @@
           "linksTo": [
             "/visit-belgrade/things-to-do-in-belgrade",
             "/visit-belgrade/belgrade-neighborhoods",
-            "/plan-your-trip/getting-around"
+            "/plan-your-trip/getting-around",
+            "/food-and-nightlife/belgrade-kafanas"
           ]
         },
         {
@@ -447,7 +479,8 @@
           "linksTo": [
             "/visit-belgrade/things-to-do-in-belgrade",
             "/visit-belgrade/belgrade-neighborhoods",
-            "/plan-your-trip/money"
+            "/plan-your-trip/money",
+            "/food-and-nightlife/serbian-food"
           ]
         },
         {
@@ -460,7 +493,8 @@
           "linksTo": [
             "/food-and-nightlife/belgrade-grill-and-street-food",
             "/food-and-nightlife/best-restaurants-in-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/food-and-nightlife/belgrade-food-and-drink-by-neighborhood"
           ]
         },
         {
@@ -472,7 +506,9 @@
           "title": "Belgrade cocktail bars — Cetinjska, speakeasies & Dorćol",
           "linksTo": [
             "/food-and-nightlife/belgrade-nightlife",
-            "/food-and-nightlife/belgrade-food-and-drink-by-neighborhood"
+            "/food-and-nightlife/belgrade-food-and-drink-by-neighborhood",
+            "/food-and-nightlife/belgrade-wine-bars",
+            "/food-and-nightlife/belgrade-craft-beer"
           ]
         },
         {
@@ -485,7 +521,8 @@
           "linksTo": [
             "/food-and-nightlife/belgrade-splavovi",
             "/food-and-nightlife/belgrade-kafanas",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/food-and-nightlife/belgrade-craft-beer"
           ]
         },
         {
@@ -498,7 +535,8 @@
           "linksTo": [
             "/food-and-nightlife/belgrade-grill-and-street-food",
             "/plan-your-trip/money",
-            "/plan-your-trip/getting-around"
+            "/plan-your-trip/getting-around",
+            "/medical-tourism/medical-tourism-costs-in-belgrade"
           ]
         },
         {
@@ -511,7 +549,8 @@
           "linksTo": [
             "/food-and-nightlife/serbian-food",
             "/visit-belgrade/belgrade-neighborhoods",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/food-and-nightlife/belgrade-splavovi"
           ]
         },
         {
@@ -524,7 +563,8 @@
           "linksTo": [
             "/food-and-nightlife/serbian-food",
             "/food-and-nightlife/belgrade-wine-bars",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/visit-belgrade/brutalist-belgrade"
           ]
         },
         {
@@ -537,7 +577,8 @@
           "linksTo": [
             "/visit-belgrade/belgrade-neighborhoods",
             "/food-and-nightlife/belgrade-kafanas",
-            "/visit-belgrade/zemun"
+            "/visit-belgrade/zemun",
+            "/food-and-nightlife/serbian-food"
           ]
         },
         {
@@ -550,7 +591,8 @@
           "linksTo": [
             "/food-and-nightlife/belgrade-kafanas",
             "/visit-belgrade/belgrade-neighborhoods",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/food-and-nightlife/serbian-food"
           ]
         },
         {
@@ -563,7 +605,8 @@
           "linksTo": [
             "/food-and-nightlife/belgrade-kafanas",
             "/food-and-nightlife/best-restaurants-in-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/food-and-nightlife/belgrade-cocktail-bars"
           ]
         },
         {
@@ -576,7 +619,8 @@
           "linksTo": [
             "/food-and-nightlife/belgrade-nightlife",
             "/visit-belgrade/belgrade-neighborhoods",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/food-and-nightlife/belgrade-cocktail-bars"
           ]
         },
         {
@@ -589,7 +633,8 @@
           "linksTo": [
             "/food-and-nightlife/serbian-food",
             "/food-and-nightlife/best-restaurants-in-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/food-and-nightlife/belgrade-food-and-drink-by-neighborhood"
           ]
         }
       ]
@@ -622,7 +667,9 @@
           "title": "Where to stay for Expo 2027",
           "linksTo": [
             "/expo-2027/getting-there",
-            "/where-to-stay"
+            "/where-to-stay",
+            "/expo-2027/guide",
+            "/expo-2027/tickets"
           ]
         },
         {
@@ -633,7 +680,10 @@
           "priority": "P1",
           "title": "What is a Specialised Expo, is it worth visiting",
           "linksTo": [
-            "/visit-belgrade"
+            "/visit-belgrade",
+            "/visit-belgrade/is-belgrade-worth-visiting",
+            "/expo-2027/guide",
+            "/expo-2027/getting-there"
           ]
         },
         {
@@ -646,7 +696,8 @@
           "linksTo": [
             "/plan-your-trip",
             "/visit-belgrade",
-            "/where-to-stay"
+            "/where-to-stay",
+            "/expo-2027/getting-there"
           ]
         },
         {
@@ -658,7 +709,9 @@
           "title": "Expo 2027 programme — pavilions, days, sport, music",
           "linksTo": [
             "/food-and-nightlife",
-            "/visit-belgrade/things-to-do"
+            "/visit-belgrade/things-to-do",
+            "/expo-2027/guide",
+            "/expo-2027/getting-there"
           ]
         },
         {
@@ -670,7 +723,9 @@
           "title": "Getting to Expo 2027: Surčin, airport, transport",
           "linksTo": [
             "/plan-your-trip/airport-to-city",
-            "/plan-your-trip/getting-around"
+            "/plan-your-trip/getting-around",
+            "/expo-2027/guide",
+            "/expo-2027/tickets"
           ]
         },
         {
@@ -681,7 +736,10 @@
           "priority": "P2",
           "title": "Participating countries — confirmed & expected",
           "linksTo": [
-            "/visit-belgrade"
+            "/visit-belgrade",
+            "/expo-2027/what-is-it",
+            "/expo-2027/guide",
+            "/expo-2027/getting-there"
           ]
         },
         {
@@ -692,7 +750,10 @@
           "priority": "P1",
           "title": "Expo 2027 tickets — what we know so far",
           "linksTo": [
-            "/plan-your-trip"
+            "/plan-your-trip",
+            "/expo-2027/guide",
+            "/expo-2027/getting-there",
+            "/expo-2027/programme"
           ]
         },
         {
@@ -805,7 +866,9 @@
           "title": "Medical tourism: Serbia vs Turkey (and Hungary)",
           "linksTo": [
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/medical-tourism/choosing-a-clinic-in-belgrade"
+            "/medical-tourism/choosing-a-clinic-in-belgrade",
+            "/medical-tourism/medical-tourism-belgrade",
+            "/medical-tourism/medical-tourism-risks-and-aftercare"
           ]
         },
         {
@@ -818,7 +881,8 @@
           "linksTo": [
             "/medical-tourism/choosing-a-clinic-in-belgrade",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/visit-belgrade/belgrade-neighborhoods"
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/medical-tourism/medical-tourism-risks-and-aftercare"
           ]
         },
         {
@@ -831,7 +895,8 @@
           "linksTo": [
             "/medical-tourism/medical-tourism-risks-and-aftercare",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/plan-your-trip/staying-safe"
+            "/plan-your-trip/staying-safe",
+            "/medical-tourism/medical-tourism-belgrade"
           ]
         },
         {
@@ -844,7 +909,8 @@
           "linksTo": [
             "/medical-tourism/choosing-a-clinic-in-belgrade",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/plan-your-trip/staying-safe"
+            "/plan-your-trip/staying-safe",
+            "/medical-tourism/medical-tourism-belgrade"
           ]
         },
         {
@@ -857,7 +923,8 @@
           "linksTo": [
             "/medical-tourism/medical-tourism-belgrade",
             "/medical-tourism/dental-work-belgrade",
-            "/plan-your-trip/money"
+            "/plan-your-trip/money",
+            "/medical-tourism/medical-tourism-risks-and-aftercare"
           ]
         },
         {
@@ -870,7 +937,8 @@
           "linksTo": [
             "/medical-tourism/dental-implants-explained",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/visit-belgrade/belgrade-neighborhoods"
+            "/visit-belgrade/belgrade-neighborhoods",
+            "/medical-tourism/cosmetic-surgery-belgrade"
           ]
         },
         {
@@ -883,7 +951,8 @@
           "linksTo": [
             "/medical-tourism/medical-tourism-risks-and-aftercare",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/plan-your-trip/staying-safe"
+            "/plan-your-trip/staying-safe",
+            "/medical-tourism/dental-work-belgrade"
           ]
         },
         {
@@ -896,7 +965,8 @@
           "linksTo": [
             "/medical-tourism/hair-transplant-explained",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/medical-tourism/dental-work-belgrade"
           ]
         },
         {
@@ -909,7 +979,8 @@
           "linksTo": [
             "/medical-tourism/medical-tourism-risks-and-aftercare",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/medical-tourism/cosmetic-surgery-belgrade"
           ]
         },
         {
@@ -922,7 +993,8 @@
           "linksTo": [
             "/medical-tourism/medical-tourism-risks-and-aftercare",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/plan-your-trip/staying-safe"
+            "/plan-your-trip/staying-safe",
+            "/medical-tourism/medical-tourism-belgrade"
           ]
         },
         {
@@ -935,7 +1007,8 @@
           "linksTo": [
             "/medical-tourism/dental-work-belgrade",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/medical-tourism/ivf-explained"
           ]
         },
         {
@@ -948,7 +1021,8 @@
           "linksTo": [
             "/medical-tourism/hair-transplant-belgrade",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/medical-tourism/dental-implants-explained"
           ]
         },
         {
@@ -961,7 +1035,8 @@
           "linksTo": [
             "/medical-tourism/medical-tourism-costs-in-belgrade",
             "/medical-tourism/medical-tourism-risks-and-aftercare",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/medical-tourism/dental-implants-explained"
           ]
         },
         {
@@ -974,7 +1049,8 @@
           "linksTo": [
             "/medical-tourism/ivf-explained",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/visit-belgrade/things-to-do-in-belgrade"
+            "/visit-belgrade/things-to-do-in-belgrade",
+            "/medical-tourism/dental-work-belgrade"
           ]
         },
         {
@@ -987,7 +1063,8 @@
           "linksTo": [
             "/medical-tourism/medical-tourism-risks-and-aftercare",
             "/medical-tourism/medical-tourism-costs-in-belgrade",
-            "/plan-your-trip/staying-safe"
+            "/plan-your-trip/staying-safe",
+            "/medical-tourism/cosmetic-surgery-belgrade"
           ]
         }
       ]

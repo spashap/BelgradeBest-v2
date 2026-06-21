@@ -17,15 +17,21 @@ linksTo:
   - "/visit-belgrade/belgrade-neighborhoods"
   - "/food-and-nightlife/belgrade-kafanas"
   - "/visit-belgrade/zemun"
-faqs:
-  - question: "Which neighbourhood is best for going out in Belgrade?"
-    answer: "It depends on the night you want. For traditional kafana dinners with live music, go to Skadarlija. For coffee, wine and craft beer at a gentle pace, Dorćol. For late nights on the river in the big floating clubs (splavovi), Savamala and the riverfront. For cocktails and a dressier crowd, the Cetinjska courtyard or the Beton Hala waterfront. For a calmer evening of river fish, Zemun. There is no single 'best' district — Belgrade's strength is that each area has a clearly different mood."
-  - question: "What is Dorćol known for?"
-    answer: "For food and drink, Dorćol is Belgrade's coffee-and-craft cluster: small cafés and specialty coffee, wine bars and craft-beer bars, plus modern bistros and street-food spots. It is the district for a slow morning over a carefully made coffee, an afternoon of local wines, or an unhurried bistro dinner — a contemporary, lower-key rhythm rather than a big night out. (As a place — its history, layout and sights — Dorćol is covered in the Belgrade neighbourhoods guide.)"
-  - question: "Where do locals go out in Belgrade?"
-    answer: "Locals scatter across several areas rather than one strip. Younger crowds favour the Cetinjska courtyard (a former brewery turned into independent bars and gig venues) and the craft-beer and wine bars of Dorćol; the riverside splavovi of Savamala draw big summer nights; Beton Hala suits a dressier cocktail evening. Everyday neighbourhood eating happens in residential Vračar, and many locals head to Zemun for relaxed riverside fish dinners away from the crowds."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What is the food and drink scene like in Skadarlija?"
+    answer: "Skadarlija's food-and-drink identity is almost entirely centered around kafanas, offering long traditional dinners accompanied by live tamburica music and rakija. Visitors typically come for the kafana experience rather than bars or clubs, with coffee and dessert being secondary. The historic kafanas here are heavily touristed and often priced above neighborhood averages, making it a special dining experience."
+  - question: "What can I expect from the dining options in Dorćol?"
+    answer: "Dorćol is known as the city's coffee-and-craft cluster, featuring small cafés, specialty coffee shops, wine bars, and craft-beer bars, along with modern bistros and street-food spots. The atmosphere is more contemporary and relaxed, making it ideal for leisurely coffee mornings or unhurried dinners. This district is particularly noted for its craft beer scene and serves as a co-working space for digital nomads."
+  - question: "How is the nightlife and food scene in Savamala?"
+    answer: "Savamala's food-and-drink identity is primarily nightlife-led, known for its splavovi (floating clubs) and electronic music venues. Food options are secondary, consisting mainly of casual grills, street food, and some riverfront restaurants. The area attracts a younger crowd and is characterized by large river clubs that focus on the nightlife experience rather than dining."
+  - question: "What type of dining experience can I find in Beton Hala?"
+    answer: "Beton Hala offers a polished waterfront dining experience with a variety of Serbian and international restaurants, cocktail bars, and venues that blend dinner into late-night activities. Set in a converted warehouse, it provides river views and a more refined atmosphere compared to other nightlife areas. The crowd here tends to be dressier and slightly older, making it a great choice for a stylish evening out."
+  - question: "What is the food and drink character of Zemun?"
+    answer: "Zemun's food-and-drink identity leans towards riverside fish restaurants and relaxed kafana-style dining along the Danube. The nightlife here is calmer than in central areas, focusing on long dinners rather than clubs, with a family-friendly atmosphere. Zemun also features its own green market, contributing to its slower, neighborhood feel."
+  - question: "What dining options are available in Vračar?"
+    answer: "Vračar is characterized by its residential and café-dense environment, featuring neighborhood restaurants, brunch spots, and dessert shops clustered around the Temple of Saint Sava. The district is ideal for everyday dining, offering relaxed brunches and casual dinners, and its specialty cafés often serve as informal workspaces for digital workers."
 ---
 
 ## Where to eat and drink in Belgrade, by neighbourhood — how to read this map

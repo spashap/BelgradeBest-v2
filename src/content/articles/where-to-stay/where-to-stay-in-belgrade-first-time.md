@@ -16,13 +16,6 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/visit-belgrade/belgrade-itinerary-3-days"
-faqs:
-  - question: "Where should a first-time visitor stay in Belgrade?"
-    answer: "Stari Grad (Old Town) is usually the safest default for a first visit, because it keeps you within walking distance of Republic Square, Knez Mihailova, Kalemegdan and Skadarlija. Dorćol is a good alternative if you want a more neighbourhood and café feel, and Savamala works if river restaurants and nightlife matter most. Vračar suits travellers who prefer a calmer, central-residential base. Choose by the trade-offs that matter to you, and confirm noise, non-smoking and access details with the property before booking."
-  - question: "Is Stari Grad a good area to stay in?"
-    answer: "For a first-time short break, yes: Stari Grad is the most central tourist district and offers the best walking access to the classic sights, so it is often the best fit. The trade-offs are the usual central-city ones, which is noise on bar and restaurant streets, difficult parking, and apartments that are often in older buildings. If quiet sleep or step-free access matters, pick a courtyard-facing room on a side street and check the building details with the property first."
-  - question: "How many nights do you need in central Belgrade?"
-    answer: "Two to four nights usually suits a first visit. Two full days are often enough to walk the central core, which includes Kalemegdan, Knez Mihailova, Republic Square, Skadarlija and the riverfront, while three to four nights leave room for a slower pace, museums, day trips or Zemun. From a central base in Stari Grad, Dorćol or Savamala, most of the headline sights are walkable, so you rarely need a car."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
@@ -30,6 +23,19 @@ stayTargets:
   - dorcol
   - savamala
   - vracar
+faqs:
+  - question: "What is the best area to stay in Belgrade for first-time visitors?"
+    answer: "For a first trip of two to four days, Stari Grad (Old Town) is the safe default and the best fit for most first-timers. Staying here usually puts you within an easy walk of the city's headline sights, allowing you to see more of Belgrade on foot."
+  - question: "What are some alternative neighborhoods to Stari Grad for accommodation in Belgrade?"
+    answer: "If you're looking for something with a little more local character, consider Dorćol for a café-and-neighbourhood feel, Savamala for river restaurants and nightlife, or Vračar for a calmer, central-residential base. Each area has its own unique vibe and trade-offs regarding noise, walkability, and amenities."
+  - question: "How many nights should I plan for my first visit to Belgrade?"
+    answer: "Two to four nights usually suits a first trip to Belgrade. Two full days are often enough to cover the walkable central core, while three to four nights allow for a slower pace, museums, and possibly a day trip."
+  - question: "What should I know about public transport in Belgrade?"
+    answer: "As of January 1, 2025, Belgrade's city and suburban public transport is free for all passengers, covering various modes like buses and trams. However, the airport A1 minibus is a separate, cash-only service and not part of the free network."
+  - question: "Are there any specific considerations for booking accommodation in Belgrade?"
+    answer: "Yes, confirm whether your accommodation will register your stay within 24 hours, especially if it's a private apartment. Additionally, check if the room is non-smoking and if there are any noise concerns, as well as whether the city tax is included in the rate."
+  - question: "Is it easy to walk around central Belgrade?"
+    answer: "Yes, the central core of Belgrade is genuinely walkable, especially from areas like Stari Grad, Dorćol, or Savamala. Most headline sights are aligned along a walkable route, making it convenient to explore the city on foot."
 ---
 
 ## Where should a first-time visitor stay in Belgrade?

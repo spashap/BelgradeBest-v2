@@ -16,15 +16,21 @@ noindex: false
 linksTo:
   - "/medical-tourism/medical-tourism-costs-in-belgrade"
   - "/medical-tourism/choosing-a-clinic-in-belgrade"
-faqs:
-  - question: "Is Serbia or Turkey cheaper for dental or hair work?"
-    answer: "As a general pattern in 2026, Turkey tends to hold the lowest advertised price floor, especially for high-volume hair-transplant and bundled all-inclusive dental packages, because of the sheer scale of its market. Serbia usually sits a step above Turkey's cheapest quotes and below Western Europe — mid-priced rather than rock-bottom. These are broad tendencies, not fixed prices: any individual quote depends on the procedure, the materials, the case complexity and what a given clinic includes, so compare itemised, like-for-like quotes rather than headline figures. This is not medical or financial advice."
-  - question: "Which is better for medical tourism, Serbia or Turkey?"
-    answer: "Neither is universally \"better\" — they win on different things, so the honest answer is that it depends on what you prioritise. Turkey tends to win on price floor, procedure volume and packaged convenience for some treatments; Serbia/Belgrade tends to win on shorter travel for many Central and Western European travellers, a calmer mid-volume setting and EU-candidate alignment of standards, while typically costing more than Turkey's cheapest options. The right choice depends on the specific procedure, your travel distance, your budget and your comfort with each destination's regulatory picture. Always verify a specific clinic's credentials independently; nothing here is medical advice."
-  - question: "How does Belgrade compare with Budapest for dental work?"
-    answer: "Budapest (Hungary) is the older, more established EU dental-tourism hub, with a long track record and EU regulation, and it is often cited as a quality benchmark for implants and crowns. Belgrade/Serbia is a newer, generally mid-priced alternative that can sit below Hungarian pricing on some procedures while Serbia, as an EU candidate, continues aligning standards. For an EU traveller the deciding factors are usually flight convenience, the specific procedure and the itemised quote rather than country reputation alone. Treat this as orientation, not a recommendation of any clinic, and not medical advice."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "Is there a clear winner between Serbia and Turkey for medical tourism?"
+    answer: "No, there is no single 'winner' between Serbia and Turkey as of 2026; each destination excels in different areas. The better choice depends on the specific procedure and the trade-offs that a traveler values most."
+  - question: "How do Serbia and Turkey compare on price for medical procedures?"
+    answer: "As of 2026, Turkey generally has the lowest advertised price floor, particularly for hair restoration and bundled dental packages. Serbia typically sits at a mid-price level, above Turkey's cheapest quotes but below Western Europe."
+  - question: "Which country is cheaper for dental work, Serbia or Turkey?"
+    answer: "Turkey usually offers the lower price floor for dental work, often through all-inclusive packages, while Serbia is typically mid-priced. However, the cheapest advertised package may not reflect the lowest total cost for an individual's specific case."
+  - question: "Is Serbia or Turkey more affordable for hair transplants?"
+    answer: "Turkey tends to be more affordable for hair transplants due to its high volume of procedures and intense competition. Serbia offers hair transplants at mid-range pricing, but the actual cost can vary based on factors like graft counts and aftercare."
+  - question: "How does Belgrade compare to Budapest for dental work?"
+    answer: "Belgrade is a newer, mid-priced alternative to Budapest, which is an established EU hub with a long track record and regulatory framework. While Budapest is often seen as the quality benchmark, Belgrade can sometimes offer lower quotes for specific procedures."
+  - question: "What should I compare before choosing a medical tourism destination?"
+    answer: "Before deciding, compare the specific procedure, itemized quotes, total costs including all aspects like follow-up care, travel realities, regulatory standards, and the clinic's credentials. This detailed comparison will help clarify the best option for your individual needs."
 ---
 
 ## Is there a single "winner" between Serbia and Turkey?

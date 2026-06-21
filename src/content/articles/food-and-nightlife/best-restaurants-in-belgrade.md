@@ -17,15 +17,21 @@ linksTo:
   - "/food-and-nightlife/serbian-food"
   - "/food-and-nightlife/belgrade-wine-bars"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "Do I need a reservation in Belgrade?"
-    answer: "For the best restaurants in Belgrade — fine-dining rooms, Michelin-listed kitchens, the popular Beton Hala riverfront spots and anything with a river view — yes, book ahead, especially Friday and Saturday and for prime seating by the window. Many serious kitchens take only a limited number of covers a night. Casual bistros, kafanas and neighbourhood places are usually fine to walk into midweek, though a courtesy call never hurts for larger groups. This guidance is indicative as of 2026."
-  - question: "What are the best traditional Serbian restaurants in Belgrade?"
-    answer: "For traditional cooking, the cobbled bohemian quarter of Skadarlija (in Stari Grad, just east of Republic Square) is the showpiece destination — its historic kafanas serve grilled meats, shared platters and live old-town music. Klub Književnika, the decades-old literary-club restaurant founded in 1946 near the centre, is a durable institution. For the modern take on Serbian cooking, the 'New Balkan' movement — flagship Iva New Balkan Cuisine, plus places like Bela Reka, Na Ćošku and Legat 1903 — reworks regional and village recipes into refined menus. See our guide to Serbian food for the dishes themselves."
-  - question: "How expensive is dining in Belgrade?"
-    answer: "Belgrade is noticeably cheaper than Western European capitals — by most cost-of-living trackers, a restaurant meal here runs well below the US or Western-EU average (indicative, as of 2026). A casual mid-range dinner for two is affordable; fine-dining tasting menus at the top rooms cost a fraction of comparable Paris or London tables but are still the city's priciest dining. Prices move with inflation and exchange rates, so check current menus directly before you book rather than relying on a fixed figure."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What is the fine dining scene like in Belgrade?"
+    answer: "Belgrade has a maturing fine-dining scene, with a Michelin Guide selection introduced in 2022, marking the city's entry onto the international dining map. The scene features a mix of traditional Serbian and contemporary cuisine, with a focus on seasonal local sourcing and modern plating."
+  - question: "How many Michelin-listed restaurants are there in Belgrade?"
+    answer: "As of the 2024 edition, the Michelin Belgrade selection highlighted around 22 restaurants, including Bib Gourmand picks. This number is indicative and may change yearly, so it's advisable to check the current edition before making reservations."
+  - question: "What are some recommended fine dining restaurants in Belgrade?"
+    answer: "Notable fine dining options include Salon 1905, which has been repeatedly Michelin-listed, and Langouste, known for its upscale seafood and river views. Other durable options are Klub Književnika, Comunale Caffè e Cucina, and Enso, each with a strong reputation and history."
+  - question: "Where can I find traditional Serbian food in Belgrade?"
+    answer: "For traditional Serbian cuisine, Skadarlija is the go-to area, featuring historic kafanas that serve grilled meats and live music. Klub Književnika also offers a blend of traditional dining with a rich history, making it a solid choice for experiencing Serbian culture."
+  - question: "What is the New Balkan cuisine movement in Belgrade?"
+    answer: "The New Balkan movement represents a contemporary culinary trend in Belgrade, focusing on regional and village recipes reinterpreted in refined menus. Iva New Balkan Cuisine is a flagship restaurant in this movement, recognized with a Michelin Bib Gourmand for its inventive use of local ingredients."
+  - question: "Do I need a reservation at restaurants in Belgrade?"
+    answer: "Yes, it is strongly recommended to make reservations at fine dining and Michelin-listed restaurants, especially on weekends. Casual bistros may allow walk-ins, but calling ahead is advisable for larger groups or popular venues."
 ---
 
 ## Where should you eat in Belgrade?

@@ -17,15 +17,21 @@ linksTo:
   - "/food-and-nightlife/belgrade-kafanas"
   - "/food-and-nightlife/best-restaurants-in-belgrade"
   - "/visit-belgrade/things-to-do-in-belgrade"
-faqs:
-  - question: "Is Serbian wine good?"
-    answer: "Yes — Serbian wine is genuinely worth seeking out, the result of a quality-focused renaissance over the last two decades. The country's best regions — Fruška Gora, Šumadija, Timok, Tri Morave and Vršac — and its indigenous grapes (notably the red Prokupac, often called the pride of Serbia, and the aromatic white Tamjanika) now produce serious, distinctive wines. Belgrade's restaurants and specialist shops routinely list local labels alongside international ones, and a glass of Serbian wine is now an interesting choice rather than a dutiful one."
-  - question: "Where can I do a wine tasting in Belgrade?"
-    answer: "Belgrade has a small but serious wine-bar scene where you can taste across Serbian regions. The more established wine bars are IL Grappolo on Obilićev venac in the centre (open since at least 2018, covering all of Serbia's regions) and Proces Wine Bar (focused on Serbian wines including amber and skin-contact labels). Newer Serbian-wine specialists such as Naše Vino and Wine bar Passage are worth a look but have shorter track records, so check they're still trading first. Guided Serbian wine tastings — typically a flight of several Balkan wines with local snacks, in English — are also run regularly, often in the Dorćol district. Many serious restaurants double as wine venues too, which can be the most practical introduction if you'd rather pair wine with a meal."
-  - question: "What Serbian wine should I try?"
-    answer: "Start with the indigenous grapes. Prokupac is Serbia's flagship red — an ancient variety that ranges from light and fruity to structured, with red-berry, spice and earthy notes. Tamjanika is the aromatic white to try: part of the Muscat family, intensely floral and citrusy, often slightly off-dry. From Fruška Gora, look for Bermet, a unique aromatic fortified dessert wine. Beyond the indigenous labels, the wine bars and wine-forward restaurants will pour quality bottles from Fruška Gora, Šumadija and the other regions — ask the staff to steer you, since they know the small producers."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "Is Serbian wine worth trying in Belgrade?"
+    answer: "Yes, Serbian wine is genuinely worth seeking out, as it has become an interesting choice rather than a dutiful one. This shift is due to a wine-production renaissance over the last two decades, led by small family wineries returning to quality winemaking with ancient indigenous grapes."
+  - question: "What are some good wine bars to visit in Belgrade?"
+    answer: "Two notable wine bars in Belgrade are IL Grappolo and Proces Wine Bar, both of which have been operating since at least 2018. IL Grappolo offers a broad selection of domestic and foreign wines, while Proces focuses on Serbian wines and has a social atmosphere."
+  - question: "What types of rakija can I taste in Belgrade?"
+    answer: "Rakija is a fruit brandy central to Serbian hospitality, with the iconic variety being šljivovica, made from plums. Other common varieties include apricot, quince, pear, and apple, and tastings often involve knowledgeable staff guiding you through the differences."
+  - question: "Where can I experience rakija tastings in Belgrade?"
+    answer: "Dedicated rakija bars in Belgrade offer tastings across many varieties, including homemade labels, with knowledgeable staff to guide the experience. The focus is on the tasting experience rather than specific bars, as the scene can change."
+  - question: "How do wine bars and rakija tastings fit into a night out in Belgrade?"
+    answer: "Wine bars and rakija tastings offer a lower-key going-out mode, focusing on sit-and-taste experiences rather than clubbing. They overlap with the kafana world for rakija and fine dining for wine, providing a good counterweight to the louder nightlife."
+  - question: "What should I know about the pricing for wine and rakija in Belgrade?"
+    answer: "Pricing for wine bars and rakija tastings varies by venue, with domestic wine bottles in clubs reported at roughly 25–40 EUR and individual drinks a few euros each as of 2025–2026. It's advisable to check current menus for specific pricing."
 ---
 
 ## Is Serbian wine good, and why drink it in Belgrade?

@@ -16,15 +16,21 @@ noindex: false
 linksTo:
   - "/food-and-nightlife/belgrade-nightlife"
   - "/food-and-nightlife/belgrade-food-and-drink-by-neighborhood"
-faqs:
-  - question: "Where are the best cocktail bars in Belgrade?"
-    answer: "The best cocktail bars cluster in three areas. Cetinjska — a former brewery courtyard just behind Skadarlija — packs many independent bars into one block and is ideal for bar-hopping. Dorćol, the old district between Knez Mihailova and the Danube, holds the city's most refined, mixology-led cocktail rooms and most of its speakeasies. The centre and riverside Savamala add a rougher, more eclectic option. All three are walkable from one another, so most visitors simply pick a starting district and drift between bars."
-  - question: "What is Cetinjska (the bar street)?"
-    answer: "Cetinjska is a short central street whose former BIP brewery complex (behind Skadarlija, near Trg Republike) has been repurposed into a gated courtyard of independent bars, clubs, gig spaces and art venues. It is unpretentious and a little hidden from the street — you walk through a passage into a yard ringed by small bars, each with its own crowd and sound. It works as a single bar-hopping hub: pick a starting bar and move between them on foot."
-  - question: "Does Belgrade have speakeasies?"
-    answer: "Yes. Belgrade has an established speakeasy scene, concentrated in Dorćol and the centre, where hidden or unmarked cocktail bars sit behind discreet doors with no obvious signage. They focus on serious, made-to-order cocktails in small, intimate rooms. Because these venues open, close and rebrand often, treat any specific name as illustrative — ask a bartender or your hotel for the current ones, and book ahead for the smallest rooms."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What are the best areas for cocktail bars in Belgrade?"
+    answer: "The best areas for cocktail bars in Belgrade are Cetinjska, Dorćol, and the central and Savamala districts. Cetinjska is known for its energy and bar-hopping atmosphere, while Dorćol features high-end cocktail bars and speakeasies. The central area offers convenience with various bars close to main sights, and Savamala provides a grittier, eclectic late-night scene."
+  - question: "What is Cetinjska known for?"
+    answer: "Cetinjska is known as the easiest place to drink cocktails in Belgrade, featuring a courtyard of independent bars and clubs. It is located just behind Skadarlija and offers a lively atmosphere with a focus on fun, unfussy cocktails. Visitors can simply arrive and drift between bars without needing a plan or reservation."
+  - question: "What can I expect from the Dorćol cocktail scene?"
+    answer: "The Dorćol cocktail scene is characterized by small, design-led bars focused on serious mixology and intimate settings. It is the heart of Belgrade's high-end cocktail culture, with a variety of bars located on quiet residential streets. Visitors can expect made-to-order cocktails and a more settled atmosphere compared to the energetic vibe of Cetinjska."
+  - question: "Are there speakeasies in Belgrade?"
+    answer: "Yes, Belgrade has an established speakeasy scene, primarily located in Dorćol and the city center. These hidden bars feature discreet entrances and intimate settings, focusing on well-crafted cocktails. However, they frequently open, close, and rebrand, so it's best to ask local bartenders for current recommendations."
+  - question: "What is the nightlife like in the center and Savamala?"
+    answer: "The nightlife in the central area around Knez Mihailova and Trg Republike is convenient, with many bars within walking distance of main attractions. Savamala, on the other hand, has a more eclectic and gritty character, featuring warehouse-style spaces and art-leaning bars. While Savamala is less of a guaranteed cocktail destination, it offers an edgier experience near the riverside."
+  - question: "How can I plan a cocktail night in Belgrade?"
+    answer: "To plan a cocktail night in Belgrade, start in Dorćol for a calm cocktail experience, then walk to Cetinjska for a lively bar-hopping atmosphere. Afterward, you can drift into the central area or Savamala for a change of pace. The districts are close enough that you can easily explore multiple areas in under half an hour."
 ---
 
 ## Where are the best cocktail bars in Belgrade?

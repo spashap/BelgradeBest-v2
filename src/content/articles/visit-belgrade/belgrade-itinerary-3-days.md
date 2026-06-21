@@ -17,17 +17,21 @@ linksTo:
   - "/visit-belgrade/things-to-do-in-belgrade"
   - "/visit-belgrade/belgrade-day-trips"
   - "/visit-belgrade/understanding-belgrade"
-faqs:
-  - question: "How many days do you need in Belgrade?"
-    answer: "Three days is the widely agreed sweet spot — enough to walk the central core, add a neighbourhood or two and take a half-day escape without rushing the headline sights. One day covers the central spine; two days adds a neighbourhood and a museum."
-  - question: "Is 3 days enough for Belgrade?"
-    answer: "Yes — three days comfortably covers the walkable old-town core, Vračar (St. Sava and the Tesla museum), an evening in Skadarlija and either Zemun or a day trip on the third day. It is enough to see the headline sights and reach a few quieter corners beyond the centre."
-  - question: "Can you see Belgrade in one day?"
-    answer: "You can cover the central spine in a single day on foot: Republic Square, the Knez Mihailova promenade, Belgrade Fortress at the river confluence and dinner in Skadarlija, all within a few hundred metres of each other. You will miss Vračar, Zemun and any day trip, but the core is genuinely doable in a day."
-  - question: "Is Belgrade walkable for tourists?"
-    answer: "The central core is very walkable — Republic Square, Knez Mihailova and Belgrade Fortress sit within roughly 300–900 metres of each other, with Skadarlija a 5–8 minute walk from the square. The wider city has heavy traffic, but trips out to Vračar, Zemun or Ada use public transport, which has been free for all passengers since January 2025."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "How many days should I plan to stay in Belgrade?"
+    answer: "At least three days is ideal to see Belgrade's main sights and a couple of neighborhoods, according to the consensus across independent itineraries and guides. If you have less time, compressed one- and two-day options are also common, allowing you to cover the central core and some additional sights."
+  - question: "What are the main sights to see in Belgrade in one day?"
+    answer: "In one day, you can cover the central spine on foot, starting from Republic Square, then walking to Knez Mihailova, Belgrade Fortress, and ending with dinner in Skadarlija. This route is all within walking distance and provides a good overview of the city's highlights."
+  - question: "What should I include in a two-day itinerary for Belgrade?"
+    answer: "For a two-day itinerary, keep the first day as outlined for one day, covering Republic Square to Skadarlija. On the second day, you can visit Vračar for the Temple of St. Sava and the Nikola Tesla Museum, along with a museum of your choice, ensuring you experience both the main sights and a neighborhood."
+  - question: "Is public transport available in Belgrade?"
+    answer: "Yes, public transport, including buses, trams, and trolleybuses, has been free for all passengers since January 1, 2025. This makes it easy to move between clusters of sights and out to areas like Zemun or Ada Ciganlija without any fare."
+  - question: "What are some recommended day trips from Belgrade?"
+    answer: "A standard add-on for longer stays is a day trip to Novi Sad, which is reported to be self-guided-friendly and takes about 32–36 minutes by high-speed train. Other options include tours to Sremski Karlovci and Fruška Gora monasteries, or visiting the Iron Gates and Oplenac/Topola, which are more tour-dependent."
+  - question: "When is the best time to visit Belgrade?"
+    answer: "The best months to visit Belgrade are from April to June and September to October, as these months offer mild weather and avoid the heat of July and August. However, keep in mind that Expo 2027 will run from May 15 to August 15, 2027, which may increase crowds and prices during that summer."
 ---
 
 ## How long to stay

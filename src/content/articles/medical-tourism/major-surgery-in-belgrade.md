@@ -17,15 +17,21 @@ linksTo:
   - "/medical-tourism/medical-tourism-risks-and-aftercare"
   - "/medical-tourism/medical-tourism-costs-in-belgrade"
   - "/plan-your-trip/staying-safe"
-faqs:
-  - question: "How much does a knee or hip replacement cost in Belgrade?"
-    answer: "No single price is settled, and any figure should be treated as indicative as of 2026 rather than a quote. Belgrade is generally promoted as cheaper than Western Europe for elective orthopaedics such as knee replacement and hip replacement, but advertised prices are starting points that vary by implant, surgeon, the hospital, your individual case and whether rehabilitation is bundled in — and rehab after major surgery is a substantial, separate cost in itself. Always get a written, itemised quote that states what is and is not included (implant, anaesthesia, hospital stay, follow-up, rehab), and read it alongside our overview of medical tourism costs in Belgrade. Cheaper is not automatically better value once travel, weeks of recovery and aftercare are counted."
-  - question: "What pre-operative tests are required before major surgery in Serbia?"
-    answer: "This is not medical advice, and the exact pre-operative assessment is set by your surgeon and anaesthetist for your specific case — but major joint and spine surgery typically involves a standard work-up before an operation of this size: blood tests, imaging of the affected joint or spine, an ECG and a cardiac/anaesthetic fitness review, and a medication and medical-history check. For a foreign patient the practical point is timing: some of this can be done at home and shared in advance, while parts may be repeated on arrival, so confirm with the clinic exactly which tests they require, which they will accept from your home doctor, and how many days before surgery you need to be in Belgrade."
-  - question: "What rehabilitation is available after major surgery in Serbia, and how long does it take?"
-    answer: "Rehabilitation is the part the 'one-day surgery' framing hides, and it is substantial. Serbian rehabilitation spas offer post-operative programmes, with described durations of roughly four to six weeks after a knee replacement and anywhere from about four weeks to three months after a hip (indicative, as of 2026). Plan for weeks of recovery somewhere rather than a flight home a few days later, budget for rehab as a real cost, and — because major surgery plus a long flight raises deep-vein-thrombosis risk — settle continuity of care and who manages any complication before you travel, not after."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "Is Belgrade a good place for major surgery?"
+    answer: "Belgrade can be a sensible, lower-cost option for elective orthopaedic surgery, such as hip and knee replacements, if you treat it as the major surgery it is and plan seriously for recovery. However, for advanced cardiology, oncology, and bariatric care, Serbia is often not the destination at all."
+  - question: "What types of orthopaedic surgery are available in Belgrade?"
+    answer: "In Belgrade, the orthopaedic surgery marketed to foreign patients primarily includes knee replacements, hip replacements, sports orthopaedics, and some spine and general surgery. While there is significant domestic experience with these procedures, the volume of foreign joint-replacement patients is not as high as the domestic waiting lists might suggest."
+  - question: "How long does recovery take after hip or knee replacement surgery in Belgrade?"
+    answer: "Recovery after hip or knee replacement surgery is substantial, typically taking weeks to months. For knee replacements, rehabilitation is often around four to six weeks, while hip replacements may require anywhere from about four weeks to three months."
+  - question: "What are the risks of flying soon after major surgery?"
+    answer: "Flying too soon after major joint surgery poses a risk of deep vein thrombosis (DVT), especially given the long rehab period required. It's crucial to plan your timeline carefully, as combining recent surgery with a long flight can increase clot risk."
+  - question: "What are the limitations of medical care in Serbia for serious diseases?"
+    answer: "For advanced cardiology, oncology, and bariatric care, Serbia is often not the destination, as many Serbian patients travel abroad for these treatments. There is limited evidence that Belgrade is a strong inbound destination for these serious-disease categories."
+  - question: "What should I consider when planning rehabilitation after surgery in Belgrade?"
+    answer: "Rehabilitation is a significant part of the recovery process, and you should budget for it as a real cost. You need to decide whether to recover in Serbia, where you can stay near your surgeon, or return home sooner, which may complicate continuity of care."
 ---
 
 ## Is Belgrade a good destination for major surgery?

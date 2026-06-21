@@ -16,18 +16,24 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/visit-belgrade/brutalist-belgrade"
-faqs:
-  - question: "Is it better to stay in Old Town or New Belgrade?"
-    answer: "It depends on your trip. The Old Town (Stari Grad) is usually better for first-time, walking-focused sightseeing because you are next to Republic Square, Knez Mihailova, Kalemegdan and the main restaurants and nightlife. New Belgrade is usually better for business stays, families who want larger apartments, anyone arriving by car, and trips built around the airport or the Expo side of the city. There is no single best for everyone, so match the area to your reason for visiting."
-  - question: "How far is New Belgrade from the Old Town?"
-    answer: "New Belgrade sits across the Sava river from the historic core, linked by bridges such as Brankov and the Gazela. The two sides are close in distance, but most New Belgrade blocks are not a comfortable walk to the Old Town's sights, so plan to use public transport, a taxi or a car. Belgrade's city public transport has been free for all passengers since 1 January 2025, which lowers the cost of commuting, but travel time still matters: a free 35-minute ride is not the same as a 10-minute walk."
-  - question: "Which is cheaper, Old Town or New Belgrade?"
-    answer: "Prices move with season, events, conferences and Expo-related demand, so it is safer to think in tiers than fixed numbers. The Old Town tends to sit in the higher convenience tier because you pay for walkability and classic tourist geography. New Belgrade more often falls in the middle, value-for-space tier, where you can get a larger or more modern apartment and easier parking for similar money, with a commute trade-off. Always confirm the final rate, the city tax and any extra fees with the property before booking."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
   - stari-grad
   - new-belgrade
+faqs:
+  - question: "Is it better to stay in Old Town or New Belgrade for first-time visitors?"
+    answer: "For most first-time visitors who plan to spend their days walking to the main sights, the Old Town (Stari Grad) is the safest default. It offers the best walking access to classic sights, restaurants, bars, and nightlife."
+  - question: "What are the advantages of staying in New Belgrade?"
+    answer: "New Belgrade (Novi Beograd) is usually the better fit for business travellers, families wanting more space, and anyone arriving by car. It offers larger, more modern apartments, easier parking, and better logistics for airport access."
+  - question: "What should I consider about parking in Old Town?"
+    answer: "Parking in the Old Town can be difficult as central on-street parking is limited and divided into time-restricted zones. It is best to avoid the Old Town if you arrive by car unless your accommodation has guaranteed parking."
+  - question: "How does public transport affect the choice between Old Town and New Belgrade?"
+    answer: "While free public transport in Belgrade makes commuting from New Belgrade cheaper, it does not erase the convenience of staying in the Old Town. A free 35-minute ride into the centre is still not as quick as a 10-minute walk from Old Town."
+  - question: "What are the trade-offs of staying in the Old Town?"
+    answer: "The Old Town is walkable and lively but can be noisy, has limited parking, and features older, smaller apartments. Light sleepers may find the noise from central streets and nightlife a drawback."
+  - question: "Who should consider staying in New Belgrade?"
+    answer: "Choose New Belgrade if you are travelling for business, need larger accommodations, are arriving by car, or want to be near the airport without staying at it. It is also suitable for families and those attending Expo 2027."
 ---
 
 ## Old Town or New Belgrade: what's the quick answer?

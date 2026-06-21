@@ -16,13 +16,6 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade-first-time"
   - "/visit-belgrade/belgrade-neighborhoods"
-faqs:
-  - question: "What is the best area to stay in Belgrade?"
-    answer: "There is no single best area — only a best fit for your trip. For a first visit, Stari Grad (the Old Town) is the safest default, because it puts you within walking distance of Republic Square, Knez Mihailova, Kalemegdan and most museums. Dorćol is the better fit if you want a café-and-neighbourhood feel, and Savamala if river restaurants and nightlife matter. For quiet and family comfort, Vračar, New Belgrade or Zemun usually work better."
-  - question: "Is Old Town or New Belgrade better?"
-    answer: "It depends on why you are visiting. Old Town (Stari Grad) is better for classic sightseeing and walking — most sights sit within a short stroll. New Belgrade, across the Sava, is usually better for business, parking, larger and more modern apartments, airport-side logistics and Expo 2027 trips, but it is weaker for historic atmosphere and walking to the centre is often impractical, so you would rely on bus, tram or taxi."
-  - question: "Which area is best for families or for nightlife?"
-    answer: "For families, Vračar, New Belgrade and quieter parts of Zemun are usually the easiest fit — more residential, often larger apartments, and away from late-night bar streets. For nightlife, Savamala and Beton Hala, the Strahinjića Bana and Cetinjska pockets of Dorćol, and the Skadarlija area of Stari Grad put you closest to the bars and clubs. The two goals pull in opposite directions, so a good nightlife base is often a poor place to sleep — staying five to ten minutes from the bar street, not on it, is the usual compromise."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
@@ -33,6 +26,19 @@ stayTargets:
   - savski-venac
   - new-belgrade
   - zemun
+faqs:
+  - question: "What are the best areas to stay in Belgrade for first-time visitors?"
+    answer: "The best areas for first-time visitors in Belgrade are Stari Grad, Dorćol, or Savamala. These locations are all central, on the right bank, and within walking distance of key attractions like Republic Square, Knez Mihailova, and the Kalemegdan fortress."
+  - question: "Which area in Belgrade is recommended for families?"
+    answer: "For families, Vračar, New Belgrade, or a quieter part of Zemun are recommended. These areas offer more space and a calmer environment compared to the busier bar streets."
+  - question: "Where should I stay in Belgrade if I am visiting for business?"
+    answer: "If you are visiting for business or attending Expo 2027, New Belgrade is usually the most practical choice. It features modern amenities, wide boulevards, and good access to the airport."
+  - question: "What is the best area in Belgrade for nightlife?"
+    answer: "Savamala and Beton Hala, along with the Dorćol bar pockets and Stari Grad around Skadarlija, are the best areas for nightlife in Belgrade. These locations are known for their vibrant nightlife scene with numerous clubs and bars."
+  - question: "Is Zemun a good place to stay for a romantic getaway?"
+    answer: "Yes, Zemun is considered a great base for a slower, more romantic stay. It features a charming old town atmosphere, riverside restaurants, and is ideal for couples or repeat visitors."
+  - question: "What should I know about registration and taxes when staying in Belgrade?"
+    answer: "Foreign visitors in Belgrade must have their stay registered within 24 hours, typically handled by hotels or registered providers. Additionally, there is a small per-night tourist tax that may be included in the rate or added separately at check-in or check-out."
 ---
 
 ## Where should you stay in Belgrade?

@@ -16,19 +16,25 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/plan-your-trip/visa-and-entry"
-faqs:
-  - question: "Should I book a hotel or an apartment in Belgrade?"
-    answer: "For a short first visit, a hotel is usually the best fit: check-in is simple, the property handles your 24-hour foreigner registration, and a non-smoking room is easy to request. For families, longer stays, or anyone who wants a kitchen, laundry and more space for the money, a private or serviced apartment is often better value — provided you confirm with the host that they will register your stay, that the payment and any deposit are clearly stated, and that you booked through a protected platform or a verifiable agency. Choose by the trip, not by a star rating."
-  - question: "Are Airbnb apartments safe and legal in Belgrade?"
-    answer: "Most short-term apartments in Belgrade are legitimate, but treat them like any big-city rental market. Book through a protected platform (Booking.com, Airbnb, Expedia) or a verifiable local agency, and keep payment inside that platform unless you have deliberately chosen and checked a direct agency with a real address, reviews and written terms. The biggest warning sign is not cash itself — some genuine Belgrade agencies do take a deposit or advance — but pressure to leave the platform, wire money to a private account, or pay before you can verify the property. Confirm the host can explain foreigner registration; a host who cannot is a red flag."
-  - question: "Do apartment hosts register foreign guests?"
-    answer: "They are supposed to. Serbian official sources state that accommodation providers and people hosting foreign nationals must register the visitor's stay with the competent authority within 24 hours, and registered accommodation such as hotels, hostels and apartments can do this electronically. Hotels normally handle it automatically. With a private apartment, do not assume it happens — ask before booking: 'Will you register my stay within 24 hours?' Do not rely on the claim that every host does it, and keep your registration clean if your trip is tied to a visa, bank or residence plan."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
   - stari-grad
   - dorcol
   - new-belgrade
+faqs:
+  - question: "What type of accommodation should I choose for a short visit to Belgrade?"
+    answer: "For a short first visit, a hotel is the best choice. Hotels offer easy check-in, help with foreigner registration, and the ability to request a non-smoking room."
+  - question: "Are serviced apartments a good option for families visiting Belgrade?"
+    answer: "Yes, serviced apartments are a great option for families as they provide more space, a kitchen, and often a washing machine. They are typically found in newer buildings and offer a balance between hotel amenities and apartment space."
+  - question: "What should I confirm before booking a private apartment in Belgrade?"
+    answer: "Before booking a private apartment, confirm that the host will register your stay within 24 hours, whether the apartment is non-smoking, how you will collect the keys, and any deposit or city tax requirements. It's important to clarify these details to avoid potential issues."
+  - question: "What are the advantages of staying in a hostel in Belgrade?"
+    answer: "Hostels in Belgrade are budget-friendly and social, making them ideal for solo travelers or those on a tight budget. They are usually centrally located and offer helpful staff, but expect shared bathrooms and less privacy."
+  - question: "Is a floating accommodation a good choice for my stay in Belgrade?"
+    answer: "Floating accommodations can provide a memorable experience for couples or repeat visitors wanting to enjoy the river atmosphere. However, they are not recommended as a default base due to potential noise from nearby clubs and logistical challenges."
+  - question: "How can I ensure the safety of my apartment booking in Belgrade?"
+    answer: "To ensure the safety of your apartment booking, use a protected platform like Booking.com or Airbnb, and avoid any requests to cancel your booking and rebook privately. Look for clear communication from the host regarding registration and payment terms."
 ---
 
 ## Should you book a hotel or an apartment in Belgrade?

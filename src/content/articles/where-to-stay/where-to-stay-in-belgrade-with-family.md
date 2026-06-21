@@ -16,19 +16,25 @@ noindex: false
 linksTo:
   - "/where-to-stay/where-to-stay-in-belgrade"
   - "/where-to-stay/belgrade-hotels-vs-apartments"
-faqs:
-  - question: "Which area of Belgrade is best for families?"
-    answer: "There is no single best area, but the strongest fits are usually Vračar (central and residential, near Saint Sava Temple and parks), New Belgrade (larger, newer apartments with easier parking and logistics), and quieter parts of Zemun (a calmer, Danube-side feel). All three avoid the heaviest nightlife streets. A quiet side street of Stari Grad or Dorćol can also work, but only if you confirm the exact street is calm. The district name matters less than the specific building, so check noise, lift and non-smoking with the property before you book."
-  - question: "Are apartments or hotels better for families in Belgrade?"
-    answer: "It depends on your priorities. Apartments and aparthotels usually give families more space, a kitchen, a washing machine and often two separate sleeping areas, which suits longer stays and younger children — but quality varies by listing and you should confirm the host will register your stay. Hotels are usually simpler for check-in, registration and late arrivals, and it is easier to formally request a non-smoking room, though rooms are often smaller than an apartment at the same budget. Many families pick a serviced apartment for space and a hotel for a short, fuss-free trip."
-  - question: "Is Belgrade good for travelling with kids?"
-    answer: "Yes, Belgrade is generally a good city to visit with children. It has large parks such as Tašmajdan and Kalemegdan, riverside promenades, a residential everyday life away from the tourist core, and city public transport that has been free for all passengers since 1 January 2025. The main things to plan for are choosing a quiet, non-smoking base with a lift, and confirming family details such as air conditioning in the bedroom and the nearest supermarket and pharmacy. As with any city, choose your micro-location carefully rather than relying on the district name alone."
 isFaqCandidate: true
 unknowns: []
 stayTargets:
   - vracar
   - new-belgrade
   - zemun
+faqs:
+  - question: "What are the best areas for families to stay in Belgrade?"
+    answer: "The best areas for families to stay in Belgrade are Vračar, New Belgrade, and quieter parts of Zemun. Vračar is a central residential district, New Belgrade offers larger apartments and easier parking, while Zemun provides a calmer, Danube-side atmosphere. Families should also consider quiet side streets in Stari Grad or Dorćol, but confirm the specific street's calmness and suitability."
+  - question: "Why is Vračar a good choice for families?"
+    answer: "Vračar is a great choice for families because it is a central residential area that feels like everyday life, with parks, supermarkets, and restaurants. It is walkable to central sights and has the landmark Saint Sava Temple nearby. However, families should be aware that it can be on the pricier side and may have some traffic noise."
+  - question: "What makes New Belgrade suitable for families?"
+    answer: "New Belgrade is suitable for families as it offers larger and newer apartments, making it practical for those with strollers or a lot of luggage. The area has easier parking, close shopping centres, and free public transport, which can help with commuting. However, it lacks the historic atmosphere of the Old Town, so families should plan for transport to central sights."
+  - question: "Is Zemun a family-friendly area to stay in?"
+    answer: "Yes, Zemun is family-friendly, providing a slower pace and a picturesque Danube-side experience. The area features a long promenade and riverside restaurants, making it more relaxed than the city center. Families should consider the hilly terrain in some parts and factor in transport time to central attractions."
+  - question: "What should families avoid when choosing accommodation in Belgrade?"
+    answer: "Families should avoid apartments directly above bars, clubs, or busy tram lines, as these locations can be noisy. It's also advisable to steer clear of party hostels, smoking-friendly units, and upper floors without lifts, as these can pose challenges for families with children."
+  - question: "What should families confirm before booking an apartment in Belgrade?"
+    answer: "Families should confirm several details before booking an apartment, including whether the property is non-smoking, if there is a lift, and whether air conditioning is available in the bedrooms. Additionally, it's important to check for quiet hours, the condition of sofa-beds, kitchen and laundry amenities, and the proximity of supermarkets and pharmacies."
 ---
 
 ## Where should families stay in Belgrade?

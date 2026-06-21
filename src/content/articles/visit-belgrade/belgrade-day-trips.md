@@ -16,17 +16,21 @@ noindex: false
 linksTo:
   - "/visit-belgrade/belgrade-itinerary-3-days"
   - "/plan-your-trip/stations-and-onward-travel"
-faqs:
-  - question: "What are the best day trips from Belgrade?"
-    answer: "The most common day trips are Novi Sad (often paired with Sremski Karlovci and the Fruška Gora monasteries), the Iron Gates / Đerdap gorge with Golubac Fortress and the Lepenski Vir archaeological site, and Oplenac at Topola — the royal mausoleum in the Šumadija region. Of these, only Novi Sad is genuinely easy to do on your own in a single day; the others are largely tour-dependent."
-  - question: "How do I get from Belgrade to Novi Sad?"
-    answer: "The Soko high-speed train reaches Novi Sad in about 32 to 36 minutes, with several departures daily — the standout self-guided option. Intercity buses cover the same route in around an hour and ten minutes. Fares are low, commonly a few euros (train roughly 400–500 RSD second class; bus from about €3–5 as of 2026, indicative). Once there, Petrovaradin Fortress and the city centre are walkable without a guide."
-  - question: "Is the train from Belgrade to Novi Sad fast?"
-    answer: "Yes. The Soko high-speed train makes the trip in roughly 32 to 36 minutes, far quicker than the bus's hour and ten. It runs several times a day and is cheap, which is why Novi Sad is the easiest do-it-yourself day trip from Belgrade."
-  - question: "Can you visit the Iron Gates from Belgrade in a day?"
-    answer: "Yes, but realistically only by tour. By public transport, Belgrade to Golubac alone is about two hours fifty-three minutes by bus with only one or two services a day, and you'd still need local transport to reach Golubac Fortress and Lepenski Vir. Private day tours run roughly nine to ten hours; indicative pricing was around €399 for one to three people or €599 for four to seven per tour (last observed 2024, verify before booking), plus entrance fees and an optional boat ride."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What are the best day trips from Belgrade?"
+    answer: "The best day trips from Belgrade include Novi Sad, the Iron Gates / Đerdap gorge, and Oplenac at Topola. Novi Sad is the only destination that is genuinely friendly for self-guided visits, while the other two are largely tour-dependent if you have just one day."
+  - question: "How can I get to Novi Sad from Belgrade?"
+    answer: "You can get to Novi Sad from Belgrade easily by taking the Soko high-speed train, which reaches it in about 32 to 36 minutes, or by intercity bus, which takes approximately 1 hour and 10 minutes. Fares are generally low, commonly a few euros, making it an affordable option for travelers."
+  - question: "What is there to do in Novi Sad?"
+    answer: "In Novi Sad, you can explore the pedestrian core around Trg Slobode, visit the neo-Gothic Catholic cathedral, and enjoy local cafés and bakeries. The must-see attraction is Petrovaradin Fortress, which offers stunning views of the city and the Danube, and features walking paths and guided tours of its underground tunnels."
+  - question: "Should I include Sremski Karlovci and Fruška Gora in my Novi Sad trip?"
+    answer: "If you want to include Sremski Karlovci and the Fruška Gora monasteries in your trip, it is recommended to take a guided day tour, as public transport connections are awkward. These tours typically last around 8 to 10 hours and are priced at approximately US$85 per person, but you should verify current prices before booking."
+  - question: "Can I visit the Iron Gates independently?"
+    answer: "Visiting the Iron Gates independently is not practical for a single day, as it is tour-dependent. Public transport from Belgrade to Golubac takes about 2 hours and 53 minutes, and you would need additional local transport to reach the sites, making a guided tour the better option."
+  - question: "How do I visit Oplenac and Topola?"
+    answer: "To visit Oplenac and Topola, you will need to take a guided tour or rent a car, as there is no simple direct train and public transport options are awkward. Guided tours typically last around 8 to 9 hours and range in price from approximately €40 to €250 per person, depending on group size."
 ---
 
 ## What are the best day trips from Belgrade?

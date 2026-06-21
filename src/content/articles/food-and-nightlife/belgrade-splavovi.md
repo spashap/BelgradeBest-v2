@@ -17,15 +17,21 @@ linksTo:
   - "/visit-belgrade/things-to-do-in-belgrade"
   - "/visit-belgrade/belgrade-neighborhoods"
   - "/plan-your-trip/getting-around"
-faqs:
-  - question: "Are the splavovi still open in 2026?"
-    answer: "Yes. As of 2026 the floating-club scene is still running, but it is in the middle of a city-led shake-up. A multi-year river clean-up removed many of the older, informally moored rafts from their original quays through 2024 and 2025, and the city is replacing them with a smaller number of regulated, licensed splavovi. The scene survives and the summer season still happens — but the exact lineup, the count and the precise quay where the busiest clubs sit are changing year to year, so verify the current cluster locally when you arrive."
-  - question: "When is splav season in Belgrade?"
-    answer: "Roughly May through September, with June usually the month when full programming is in place and the scene is at its peak through high summer. Outside that window the same crowds — and often the same operators — move back to indoor clubs, so a January visitor will find the riverside scene has migrated inside."
-  - question: "Do you need a reservation for a splav?"
-    answer: "For the big, high-capacity clubbing splavovi and the more exclusive venues, effectively yes — reservations are strongly expected, especially on Friday and Saturday nights. Turning up without one at a busy venue can mean being turned away or left with nowhere to sit. Casual riverside bars and restaurant-style splavovi are more walk-in friendly. Booking directly or through a reputable agency also reduces the table-minimum and door-fee surprises."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "What are splavovi in Belgrade?"
+    answer: "Splavovi are floating river clubs and bars in Belgrade, serving as the city's signature nightlife format. They range from casual riverside bars and restaurants to high-capacity nightclubs, all moored along the Sava and Danube rivers."
+  - question: "When is the best time to visit splavovi?"
+    answer: "The best time to visit splavovi is during the main season, which runs roughly from May through September, with June typically having full programming in place. Belgrade's nightlife is seasonal, with indoor clubs closing at the end of spring and crowds moving to the riverbank."
+  - question: "Are splavovi still open in 2026?"
+    answer: "Yes, the splavovi scene is still running in 2026, but it is currently undergoing changes due to a city-wide clean-up and regulation drive. Many older splavovi have been removed or relocated, so visitors should confirm the current venues locally."
+  - question: "Where can I find splavovi in Belgrade?"
+    answer: "Most splavovi are located along the Sava river, particularly at the Savski kej and the pier behind the Belgrade Fair, with the Savamala district being associated with larger clubs. The Danube side offers a mix of clubbing and more relaxed venues, including family-friendly options."
+  - question: "Do I need a reservation to visit splavovi?"
+    answer: "Yes, reservations are strongly recommended for large-capacity splavovi and exclusive clubs, especially on weekends. Casual riverside bars and restaurant-style splavovi are generally more walk-in friendly."
+  - question: "What should I know about pricing at splavovi?"
+    answer: "While entry is often advertised as free, seated tables usually have a minimum spend, meaning 'free entry' does not guarantee a cheap night. Prices for drinks and table minimums can vary, so it's important to check current menus before visiting."
 ---
 
 ## What are the splavovi in Belgrade?

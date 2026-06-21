@@ -16,17 +16,21 @@ noindex: false
 linksTo:
   - "/visit-belgrade/understanding-belgrade"
   - "/visit-belgrade/belgrade-museums"
-faqs:
-  - question: "What is Brutalist Belgrade?"
-    answer: "Brutalist Belgrade usually means New Belgrade (Novi Beograd), the monumental socialist city planned and built on the left bank of the Sava after the Second World War. Designated a municipality in 1952, with residential 'Blok' construction beginning in 1948, it functions today as an open-air catalogue of socialist-modernist and Brutalist planning and housing — landmark concrete towers like Genex and the city gates, plus the great residential Blokovi."
-  - question: "Where is New Belgrade and how do you get there?"
-    answer: "New Belgrade sits on the left bank of the Sava, across the river from the old town (Stari Grad) — a short tram or bus ride from the centre, crossing one of the Sava bridges. Its anchors spread across the left bank: Ušće at the Sava–Danube confluence, the Blokovi (residential blocks) inland, and the Genex / Western City Gate further out toward the airport approach. It is a quarter you walk and ride through, not a single ticketed site."
-  - question: "Can you go inside the Genex Tower?"
-    answer: "No. The Genex Tower (Western City Gate) is reported closed and inaccessible to visitors — its rotating restaurant at the top is closed, one tower is still inhabited as housing, and the commercial tower is largely empty. Genex is best experienced from outside, from the surrounding streets where its bridge-linked silhouette reads most clearly."
-  - question: "Are the New Belgrade blocks open to visitors?"
-    answer: "The Blokovi are living residential neighbourhoods, not attractions — there is no ticketing and no official visitor policy. You can walk through them on public paths and courtyards, but treat them as people's homes: view respectfully from public space and do not enter buildings or stairwells. The visitable indoor modernist venues nearby are the Museum of Contemporary Art at Ušće, and the Sava Centre and Palata Srbija when their programmes allow."
 isFaqCandidate: true
 unknowns: []
+faqs:
+  - question: "Why should I visit Belgrade for Brutalism?"
+    answer: "Belgrade is a unique destination for Brutalism, particularly in New Belgrade, which was planned and built after WWII as a monumental socialist city. It serves as an open-air catalogue of socialist modernist and Brutalist architecture, allowing visitors to experience a living residential neighborhood rather than traditional tourist attractions."
+  - question: "What are some notable Brutalist buildings in Belgrade?"
+    answer: "Some notable Brutalist buildings in Belgrade include the Genex Tower, Eastern City Gate, and Karaburma 'Toblerone' Tower. These structures are primarily residential and should be viewed from the outside, as they are not open for interior tours."
+  - question: "How can I see the New Belgrade Blocks?"
+    answer: "The New Belgrade Blocks, or Blokovi, are living residential areas that can be explored on foot. Visitors should stay on public paths and treat the blocks as neighborhoods rather than tourist attractions, as there is no official visitor policy or ticketing."
+  - question: "What modernist venues can I visit inside in Belgrade?"
+    answer: "You can visit the Museum of Contemporary Art (MoCAB) and the Sava Centre, which host events and exhibitions. Palata Srbija is occasionally open for special events, but access is not guaranteed on a daily basis."
+  - question: "How long should I plan for a visit to Brutalist Belgrade?"
+    answer: "A half-day is commonly suggested for a walk or ride through New Belgrade to see its Brutalist landmarks. This allows time to combine selected blocks, view Genex from the outside, and visit MoCAB, with optional stops at the Sava Centre and riverfront."
+  - question: "Are there guided tours for Brutalist architecture in Belgrade?"
+    answer: "Yes, some operators run dedicated Brutalism tours in Belgrade. However, the itinerary shapes and tour prices are perishable, so it's best to check current offerings before planning your visit."
 ---
 
 ## What is Brutalist Belgrade?
