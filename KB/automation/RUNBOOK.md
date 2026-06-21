@@ -149,6 +149,25 @@ just push the repo (GitHub Actions must be enabled). Optional — add a repo sec
 
 ---
 
+## #8 Question radar (built 2026-06-21)
+
+Daily discovery of Belgrade question threads worth a manual reply — DISCOVERY only,
+never auto-posting. Scans target subreddits, ranks by opportunity (on-topic + a real
+question + few existing answers + fresh).
+
+- Auth: **app-only OAuth** (`client_credentials`) with `REDDIT_CLIENT_ID` +
+  `REDDIT_CLIENT_SECRET` — no username/password. Falls back to Reddit's public
+  `.json` search automatically if the token is refused. Node built-ins only.
+- Runs in the cloud (`.github/workflows/question-radar.yml`, daily 06:00 UTC) →
+  ranked list in the Actions run summary. Local: `node scripts/question-radar.mjs`.
+- **Setup:** the two `REDDIT_*` repo secrets are already added. Push, then open
+  Actions → "Question radar" → **Run workflow** to test now. *Optional:* repo secret
+  `RADAR_WEBHOOK_URL` for a Slack/Discord ping. Edit `SUBREDDITS`/`TOPICS` in the
+  script to tune.
+- **You still reply by hand** — that line is deliberate (auto-posting = spam).
+
+---
+
 ## Verification checklist (owner — visible/build steps)
 
 > Note: `npm run preview` does NOT work with the `@astrojs/vercel` adapter. Use

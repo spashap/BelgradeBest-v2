@@ -1,0 +1,26 @@
+name: Question radar
+
+# Runs in GitHub's cloud — your computer does NOT need to be on.
+# Daily scan of Belgrade-related subreddits for fresh question threads worth a
+# manual reply; results land in the workflow run summary (+ optional webhook).
+on:
+  schedule:
+    - cron: "0 6 * * *" # every day 06:00 UTC
+  workflow_dispatch: {} # run on demand from the Actions tab
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Scan for Belgrade questions
+        run: node scripts/question-radar.mjs --days 7 --top 25
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT: "belgradebest-radar/1.0 by u/IstartCommentsPorn"
+          # Optional: set this repo secret for a Slack/Discord ping.
+          RADAR_WEBHOOK_URL: ${{ secrets.RADAR_WEBHOOK_URL }}
