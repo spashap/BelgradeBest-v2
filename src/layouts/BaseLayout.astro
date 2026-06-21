@@ -42,10 +42,17 @@ const layoutCss =
     <meta property="og:site_name" content={CONFIG.brand.name} />
     <meta property="og:type" content={meta.ogType} />
     <meta property="og:locale" content={CONFIG.brand.ogLocale} />
+    <meta property="og:image" content={meta.image} />
+    <meta property="og:image:alt" content={meta.imageAlt} />
 
     <meta name="twitter:card" content={CONFIG.seo.twitterCard} />
     <meta name="twitter:title" content={meta.title} />
     <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:image" content={meta.image} />
+    <meta name="twitter:image:alt" content={meta.imageAlt} />
+    {CONFIG.seo.twitterSite ? <meta name="twitter:site" content={CONFIG.seo.twitterSite} /> : null}
+
+    <link rel="alternate" type="application/rss+xml" title={`${CONFIG.brand.name} — latest`} href="/rss.xml" />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />

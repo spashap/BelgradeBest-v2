@@ -16,6 +16,9 @@ node_modules/
 # raw full-res hero source PNGs (kept locally for re-cropping; not deployed)
 heroes-src/
 
+# social syndication state (local run log; not deployed)
+scripts/.syndicate-state.json
+
 # os / editor
 .DS_Store
 Thumbs.db

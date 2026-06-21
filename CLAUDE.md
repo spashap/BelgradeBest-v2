@@ -138,6 +138,20 @@ the slug is in the `articles` content collection.
   in the Vercel dashboard. Code: `src/lib/admin/analytics.ts`.
 - All admin routes are `noindex` + excluded from the sitemap.
 
+## Automated SEO / marketing (added 2026-06-21 — see `KB/automation/RUNBOOK.md`)
+
+Low-effort, fully-automatable growth tactics. **Automatic on every build:** richer
+JSON-LD (`lib/schemas.ts` — Organization logo/sameAs, Article author/publisher.logo);
+OG/Twitter social-card tags on every page (`lib/metadata.ts` + `BaseLayout`, hero or
+the branded `public/images/og-default.png`); `/rss.xml` + `/llms.txt` endpoints;
+IndexNow ping on production builds only (`indexNow()` integration in
+`astro.config.mjs`, key file `public/<key>.txt`). **Owner-run scripts** (need `.env`,
+NOT deployed): `gen-internal-links.mjs` (append-only `linksTo` filler),
+`gen-faqs.mjs` (AEO FAQ generation → frontmatter `faqs` → FAQPage JSON-LD),
+`gen-og-default.mjs`, and `syndicate.mjs` (social posting — INERT until X/LinkedIn/
+Facebook tokens are set; add profile URLs to `brand.sameAs`). New config keys:
+`brand.logoPath`, `brand.sameAs`, `seo.defaultOgImage`, `seo.twitterSite`.
+
 ## Commands
 
 ```bash

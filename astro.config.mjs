@@ -60,6 +60,60 @@ for (const p of pagesData.pages) {
 
 const pathOf = (url) => new URL(url).pathname.replace(/\/$/, "");
 
+// ── IndexNow auto-ping ──────────────────────────────────────────────────────
+// On a production Vercel build, submit the indexable URL set to IndexNow
+// (Bing/Yandex/Seznam/…) so new + changed pages get crawled fast — a real lever
+// on a young domain. Runs inside `astro:build:done` (always fires on Vercel's
+// `astro build`), so no npm-lifecycle/.vercelignore concerns. The key is public
+// by design (hosted at /<key>.txt). Never fails the build; no-ops off-prod.
+const INDEXNOW_KEY = "14ec77dc669e4a48947348a73e9ee9b7";
+function indexNow() {
+  return {
+    name: "indexnow-ping",
+    hooks: {
+      "astro:build:done": async ({ pages, logger }) => {
+        try {
+          if (process.env.VERCEL_ENV !== "production") {
+            logger.info("skipped (not a production Vercel build)");
+            return;
+          }
+          const host = new URL(SITE).host;
+          const urls = [];
+          const seen = new Set();
+          for (const { pathname } of pages) {
+            const trimmed = String(pathname).replace(/^\//, "").replace(/\/$/, "");
+            // canonical content pages only — drop assets/endpoints + admin/api
+            if (trimmed.includes(".") || trimmed.startsWith("admin") || trimmed.startsWith("api/")) continue;
+            const key = trimmed === "" ? "" : `/${trimmed}`;
+            if (NOINDEX.has(key)) continue;
+            const url = `${SITE}${key}`;
+            if (seen.has(url)) continue;
+            seen.add(url);
+            urls.push(url);
+          }
+          if (urls.length === 0) {
+            logger.warn("no indexable URLs to submit");
+            return;
+          }
+          const res = await fetch("https://api.indexnow.org/indexnow", {
+            method: "POST",
+            headers: { "Content-Type": "application/json; charset=utf-8" },
+            body: JSON.stringify({
+              host,
+              key: INDEXNOW_KEY,
+              keyLocation: `${SITE}/${INDEXNOW_KEY}.txt`,
+              urlList: urls,
+            }),
+          });
+          logger.info(`submitted ${urls.length} URLs → ${res.status} ${res.statusText}`);
+        } catch (err) {
+          logger.warn(`ping failed (non-fatal): ${err?.message ?? err}`);
+        }
+      },
+    },
+  };
+}
+
 export default defineConfig({
   site: SITE,
   // Public pages are prerendered to static HTML (the default). Only the /admin
@@ -108,5 +162,6 @@ export default defineConfig({
         return item;
       },
     }),
+    indexNow(),
   ],
 });

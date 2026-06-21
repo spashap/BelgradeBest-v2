@@ -4,6 +4,31 @@
 
 import { SITE, EXPO, CONFIG } from "./site";
 
+// Brand logo as a schema.org ImageObject (reused by Organization + publisher).
+// Google's article rich results want a publisher logo; this gives one source.
+const LOGO_URL = `${SITE.origin}${(CONFIG.brand as { logoPath?: string }).logoPath ?? "/apple-icon.png"}`;
+function logoImage() {
+  return { "@type": "ImageObject", url: LOGO_URL };
+}
+
+// Verified social/profile URLs (Organization.sameAs). Populated from
+// site-config brand.sameAs as the social accounts come online — empty = omitted.
+function sameAs(): string[] {
+  const s = (CONFIG.brand as { sameAs?: string[] }).sameAs ?? [];
+  return s.filter((u) => typeof u === "string" && u.trim().length > 0);
+}
+
+// The publisher Organization, embedded in Article/Event so every page declares
+// the same authoritative publisher (name + url + logo). One definition.
+function publisherOrg() {
+  return {
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.origin,
+    logo: logoImage(),
+  };
+}
+
 type ArticleInput = {
   title: string;
   description: string;
@@ -19,18 +44,22 @@ export function articleSchema(a: ArticleInput) {
     "@type": "Article",
     headline: a.title,
     description: a.description,
-    mainEntityOfPage: a.url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": a.url },
     url: a.url,
     inLanguage: CONFIG.brand.locale,
     isAccessibleForFree: true,
-    ...(a.datePublished ? { datePublished: a.datePublished } : {}),
+    // datePublished defaults to the last-updated date when no distinct publish
+    // date is tracked, so the field is always present for rich results.
+    ...(a.datePublished || a.dateModified
+      ? { datePublished: a.datePublished ?? a.dateModified }
+      : {}),
     ...(a.dateModified ? { dateModified: a.dateModified } : {}),
     ...(a.imageUrl ? { image: a.imageUrl } : {}),
-    publisher: {
-      "@type": "Organization",
-      name: SITE.name,
-      url: SITE.origin,
-    },
+    // The brand is the author/publisher (a source-checked editorial guide, not a
+    // single byline) — declared consistently for E-E-A-T.
+    author: { "@type": "Organization", name: SITE.name, url: SITE.origin },
+    publisher: publisherOrg(),
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.origin },
   };
 }
 
@@ -85,12 +114,15 @@ export function breadcrumbSchema(crumbs: Crumb[]) {
 }
 
 export function organizationSchema() {
+  const same = sameAs();
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE.name,
     url: SITE.origin,
     description: SITE.tagline,
+    logo: logoImage(),
+    ...(same.length ? { sameAs: same } : {}),
   };
 }
 

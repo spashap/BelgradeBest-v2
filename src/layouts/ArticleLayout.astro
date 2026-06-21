@@ -34,19 +34,23 @@ const crumbRoot = { name: c?.title ?? leg, href: SITE.origin + (c?.href ?? `/${l
 const rn =
   leg === "expo-2027" ? CONFIG.chrome.article.readNextExpo : CONFIG.chrome.article.readNextEvergreen;
 
+const resolvedHero = heroForPath(href, d.heroAlt ?? d.heroLabel);
+const heroAbs = resolvedHero ? SITE.origin + resolvedHero.src : undefined;
+
 const meta = pageMetadata({
   title: d.title,
   description: d.description,
   path: href,
   noindex: d.noindex,
+  image: resolvedHero?.src,
+  imageAlt: d.heroAlt ?? resolvedHero?.alt ?? d.title,
 });
 
 const { Content, headings } = await render(entry);
-const resolvedHero = heroForPath(href, d.heroAlt ?? d.heroLabel);
 const targets = await relatedFor(leg, d.slug);
 
 const schemas: object[] = [
-  articleSchema({ title: d.title, description: d.description, url, dateModified: d.lastUpdated }),
+  articleSchema({ title: d.title, description: d.description, url, dateModified: d.lastUpdated, imageUrl: heroAbs }),
   ...(leg === "expo-2027" ? [expoEventSchema()] : []),
   breadcrumbSchema([
     { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },

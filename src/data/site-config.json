@@ -5,12 +5,16 @@
     "domain": "belgradebest.com",
     "origin": "https://belgradebest.com",
     "locale": "en",
-    "ogLocale": "en_US"
+    "ogLocale": "en_US",
+    "logoPath": "/apple-icon.png",
+    "sameAs": []
   },
   "seo": {
     "titleSeparator": " — ",
     "ogType": "article",
     "twitterCard": "summary_large_image",
+    "defaultOgImage": "/images/og-default.png",
+    "twitterSite": "",
     "rootTitle": "BelgradeBest — An English guide to Belgrade",
     "rootDescription": "An honest, English-first guide to Belgrade for foreign visitors — what to see, where to stay, how to plan, and what's coming with Expo 2027.",
     "homeTitle": "Belgrade Travel Guide — An Honest English Guide to the City",
