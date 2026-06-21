@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import ArticleHero from "../../components/ArticleHero.astro";
+import MarkdownInline from "../../components/MarkdownInline.astro";
+import InternalLinkBlock from "../../components/InternalLinkBlock.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { SITE, CONFIG } from "../../lib/site";
+import { articleSchema, breadcrumbSchema, faqSchema } from "../../lib/schemas";
+import { articlesByHref } from "../../lib/articles";
+import { thumbForPath } from "../../lib/hero";
+import type { RelatedLink } from "../../lib/links";
+import {
+  validAreas,
+  areaSection,
+  areaTitle,
+  areaDescription,
+  areaBodyMarkdown,
+  type Area,
+} from "../../lib/areas";
+
+// Programmatic neighbourhood pages — one static page per VALID area record
+// (thin-content guard in lib/areas.ts). Indexing is gated by the config flag so
+// the set ships noindex-first for review, then flips on with one edit.
+export function getStaticPaths() {
+  return validAreas().map((a) => ({ params: { area: a.slug }, props: { area: a } }));
+}
+
+interface Props {
+  area: Area;
+}
+const { area } = Astro.props;
+
+const indexable = (CONFIG as { programmatic?: { areasIndexable?: boolean } }).programmatic?.areasIndexable === true;
+const href = `/${areaSection.slug}/${area.slug}`;
+const url = SITE.origin + href;
+
+const meta = pageMetadata({
+  title: areaTitle(area),
+  description: areaDescription(area),
+  path: href,
+  noindex: !indexable,
+});
+
+// Resolve related-article links to render-ready cards (drop hidden/missing).
+const byHref = await articlesByHref();
+const targets: RelatedLink[] = [];
+for (const link of area.relatedArticles) {
+  const a = byHref.get(link);
+  if (!a || a.data.visible === false) continue;
+  const title = a.data.shortTitle || a.data.title;
+  const thumb = thumbForPath(link, title);
+  targets.push({ href: link, title, body: a.data.description, heroSrc: thumb?.src, heroAlt: thumb?.alt });
+}
+
+const body = areaBodyMarkdown(area);
+
+const schemas: object[] = [
+  articleSchema({ title: areaTitle(area), description: areaDescription(area), url }),
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: areaSection.title, url: `${SITE.origin}/${areaSection.slug}` },
+    { name: area.name, url },
+  ]),
+  faqSchema(area.faqs),
+];
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={areaSection.eyebrow} title={area.name} lede={area.lede} />
+
+  <Container>
+    <ArticleHero src={`/images/areas/${area.slug}.svg`} alt={`${area.name}, Belgrade neighbourhood`} caption={null} />
+  </Container>
+
+  <Container variant="article">
+    <article class="c-article">
+      <MarkdownInline markdown={body} />
+    </article>
+  </Container>
+
+  <InternalLinkBlock
+    eyebrow="Keep planning"
+    title="Read next on BelgradeBest"
+    intro="Practical, honest guides to help you choose a base and plan the rest of your trip."
+    targets={targets}
+  />
+
+  <Schema schemas={schemas} />
+</BaseLayout>

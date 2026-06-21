@@ -21,6 +21,9 @@
     "homeDescription": "An honest English guide to Belgrade for foreign visitors: what to see and do, where to stay, what to eat, how to get around, staying safe, and planning an Expo 2027 trip.",
     "homeNoindex": false
   },
+  "programmatic": {
+    "areasIndexable": true
+  },
   "expo": {
     "name": "Expo 2027 Belgrade",
     "shortName": "Expo 2027",
@@ -105,6 +108,10 @@
             },
             {
               "ref": "medical-tourism",
+              "visible": true
+            },
+            {
+              "ref": "areas",
               "visible": true
             }
           ]

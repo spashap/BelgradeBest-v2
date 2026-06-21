@@ -7,6 +7,7 @@ import { join } from "node:path";
 import schema from "./src/data/site-schema.json" with { type: "json" };
 import config from "./src/data/site-config.json" with { type: "json" };
 import pagesData from "./src/data/site-pages.json" with { type: "json" };
+import areasData from "./src/data/areas.json" with { type: "json" };
 
 // Per-article last-modified dates for the sitemap, read from each markdown
 // file's `lastUpdated` frontmatter (a freshness signal for search engines).
@@ -56,6 +57,12 @@ for (const leg of schema.legs) {
 }
 for (const p of pagesData.pages) {
   if (p.noindex) NOINDEX.add(`/${p.slug}`);
+}
+// Programmatic /areas pages ship noindex-first: keep them (and the hub) out of
+// the sitemap + IndexNow until `programmatic.areasIndexable` is flipped to true.
+if (config.programmatic?.areasIndexable !== true) {
+  NOINDEX.add("/areas");
+  for (const a of areasData.areas) NOINDEX.add(`/areas/${a.slug}`);
 }
 
 const pathOf = (url) => new URL(url).pathname.replace(/\/$/, "");

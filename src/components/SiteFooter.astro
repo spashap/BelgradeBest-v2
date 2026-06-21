@@ -2,6 +2,7 @@
 import Container from "./Container.astro";
 import { CONFIG, interp } from "../lib/site";
 import { clusterBySlug, utilityPages } from "../lib/clusters";
+import { areaSection } from "../lib/areas";
 
 // Footer from chrome.footer + DERIVED links (leg titles/hrefs from clusters,
 // utility-page titles/paths from utilityPages). Degrades to a one-line footer
@@ -18,7 +19,16 @@ function visibleRefs(items: RefItem[]): string[] {
     .map((it) => it.ref);
 }
 
+// Standalone sections that aren't legs or utility pages (e.g. the programmatic
+// /areas hub). Gated on their publish flag so a footer ref auto-hides if the
+// section is turned off. Resolves regardless of the column's `kind`.
+const areasOn = (CONFIG as { programmatic?: { areasIndexable?: boolean } }).programmatic?.areasIndexable === true;
+const SPECIAL: Record<string, ResolvedLink> = areasOn
+  ? { [areaSection.slug]: { title: areaSection.title, href: `/${areaSection.slug}` } }
+  : {};
+
 function resolveRef(kind: string, slug: string): ResolvedLink | null {
+  if (SPECIAL[slug]) return SPECIAL[slug];
   if (kind === "legs") {
     const c = clusterBySlug(slug);
     // Master gate: a leg hidden in the structure (visible:false) drops from the

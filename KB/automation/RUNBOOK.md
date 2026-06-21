@@ -5,8 +5,11 @@ Built 2026-06-21. Implements the low/very-low-effort tactics from
 output stays static; the scripts run on the owner's machine and are NOT deployed
 (`scripts/` is `.vercelignore`'d).
 
-> **Not deployed yet.** Per project convention nothing was committed/pushed.
-> Run `npm run build` to verify, then `scripts\push-to-git.bat` when ready.
+> **Status (2026-06-21): DEPLOYED.** The 5 build-automatic features (#3 IndexNow,
+> #4 llms.txt, #6 schema, #10 OG cards, #12 RSS) are live. The two owner-run
+> scripts **#1 `gen-internal-links.mjs` and #2 `gen-faqs.mjs` were run, reviewed,
+> and pushed** — internal links are filled and FAQ blocks/JSON-LD are generated
+> across articles. Remaining tactics below are pending the owner's green light.
 
 ---
 
@@ -96,22 +99,86 @@ Once any social profile exists, add its public URL to `brand.sameAs` in
 
 ---
 
+## #5 Programmatic SEO — Belgrade area pages (built 2026-06-21)
+
+Data-driven neighbourhood pages generated statically at build time — one page per
+valid record in `src/data/areas.json` (10 areas shipped). Each renders unique
+prose, FAQ, Article + FAQPage + Breadcrumb JSON-LD, and internal links.
+
+- **Route:** `/areas` (hub) + `/areas/<area>` (e.g. `/areas/dorcol`).
+- **Thin-content guard** (`src/lib/areas.ts → validArea`): a record missing
+  substantial fields is simply NOT generated, so no weak page can ship.
+- **Ships noindex-first.** `site-config.json → programmatic.areasIndexable` is
+  `false`, so the pages build but carry `noindex` and stay out of the sitemap +
+  IndexNow. **Nothing to install.**
+
+**To review then publish:**
+1. `npm run build && npm run preview` → open `/areas` and a few `/areas/<slug>`;
+   read them for accuracy/quality.
+2. When happy, set `programmatic.areasIndexable: true` in `src/data/site-config.json`,
+   rebuild and push. They then enter the sitemap and get IndexNow-pinged automatically.
+3. To add more areas: append records to `src/data/areas.json` (same shape), then
+   regenerate thumbnails and rebuild — pages appear on the next build.
+
+**Thumbnails are lightweight SVGs, not AI images** (no API cost). Each area gets a
+branded vector card (name + Cyrillic + river side on brand paper) used as the card
+thumbnail and the page hero. Regenerate after editing `areas.json`:
+
+```bash
+node scripts/gen-area-thumbs.mjs --force   # → public/images/areas/<slug>.svg
+```
+
+Optionally link to the area pages from existing articles (admin → Links, or by
+hand) once they're indexable, to pass them internal-link equity.
+
+## #9 Content-freshness monitor (built 2026-06-21)
+
+Read-only scan that flags articles whose perishable facts (prices, rates, years,
+hours, "as of…") may be going stale, ranked by review priority. Uses only Node
+built-ins — **no install**.
+
+```bash
+node scripts/check-freshness.mjs                 # → KB/automation/freshness-report.md
+node scripts/check-freshness.mjs --months 6 --top 30
+```
+
+**Runs in the cloud, PC off:** `.github/workflows/freshness.yml` runs it every
+Monday 07:00 UTC and prints the ranked list to the Actions run summary. Setup:
+just push the repo (GitHub Actions must be enabled). Optional — add a repo secret
+`FRESHNESS_WEBHOOK_URL` (a Slack/Discord incoming-webhook URL) to also get a ping.
+
+---
+
 ## Verification checklist (owner — visible/build steps)
 
-1. `npm run build` — should succeed; confirm `dist/rss.xml`, `dist/llms.txt`,
-   `dist/14ec77dc669e4a48947348a73e9ee9b7.txt`, `dist/images/og-default.png` exist.
-2. `npm run preview` → view source on an article: `og:image`, `twitter:image`,
-   `rel="alternate"` RSS link, and the enriched Article JSON-LD are present.
+> Note: `npm run preview` does NOT work with the `@astrojs/vercel` adapter. Use
+> `npm run dev` to review pages, or serve the built static output (below). With
+> this adapter the build writes static HTML to **`.vercel/output/static/`**, not
+> `dist/`.
+
+1. `npm run build` — should succeed; confirm `.vercel/output/static/rss.xml`,
+   `…/llms.txt`, `…/14ec77dc669e4a48947348a73e9ee9b7.txt`,
+   `…/images/og-default.png`, and `…/areas/dorcol/index.html` exist.
+2. Review pages: `npm run dev` → open `/areas`, an article, etc.; or
+   `npx serve .vercel/output/static` for a production-accurate view. View source:
+   `og:image`, `twitter:image`, `rel="alternate"` RSS link, enriched Article
+   JSON-LD present; area pages carry `noindex` until the flag is flipped.
 3. After deploy: run an article URL through Google's **Rich Results Test** and a
    social card validator.
 
 ## Files added / changed
 
-- Added: `scripts/gen-internal-links.mjs`, `scripts/gen-faqs.mjs`,
-  `scripts/gen-og-default.mjs`, `scripts/syndicate.mjs`,
-  `src/pages/rss.xml.ts`, `src/pages/llms.txt.ts`,
-  `public/images/og-default.png`, `public/14ec77dc669e4a48947348a73e9ee9b7.txt`,
-  this runbook.
-- Changed: `src/lib/schemas.ts`, `src/lib/metadata.ts`,
-  `src/layouts/BaseLayout.astro`, `src/layouts/ArticleLayout.astro`,
-  `astro.config.mjs`, `src/data/site-config.json`, `.gitignore`.
+First batch (deployed): `scripts/gen-internal-links.mjs`, `scripts/gen-faqs.mjs`,
+`scripts/gen-og-default.mjs`, `scripts/syndicate.mjs`, `src/pages/rss.xml.ts`,
+`src/pages/llms.txt.ts`, `public/images/og-default.png`,
+`public/14ec77dc669e4a48947348a73e9ee9b7.txt`; changed `src/lib/schemas.ts`,
+`src/lib/metadata.ts`, `BaseLayout.astro`, `ArticleLayout.astro`,
+`astro.config.mjs`, `site-config.json`, `.gitignore`.
+
+Second batch (#5 + #9 — added 2026-06-21, **not yet pushed**):
+- Added: `src/data/areas.json`, `src/lib/areas.ts`, `src/pages/areas/[area].astro`,
+  `src/pages/areas/index.astro`, `scripts/gen-area-thumbs.mjs`,
+  `public/images/areas/*.svg` (10 thumbnails), `scripts/check-freshness.mjs`,
+  `.github/workflows/freshness.yml`.
+- Changed: `astro.config.mjs` (areas import + noindex gating),
+  `src/data/site-config.json` (`programmatic.areasIndexable` flag).

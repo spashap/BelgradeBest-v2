@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import Grid from "../../components/Grid.astro";
+import Card from "../../components/Card.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { SITE, CONFIG } from "../../lib/site";
+import { breadcrumbSchema } from "../../lib/schemas";
+import { validAreas, areaSection } from "../../lib/areas";
+
+// Hub for the programmatic neighbourhood pages. noindex-first, same as the
+// area pages, until the config flag is flipped on.
+const areas = validAreas();
+const indexable = (CONFIG as { programmatic?: { areasIndexable?: boolean } }).programmatic?.areasIndexable === true;
+
+const meta = pageMetadata({
+  title: `${areaSection.title} — where to stay by area`,
+  description: areaSection.lede,
+  path: `/${areaSection.slug}`,
+  noindex: !indexable,
+});
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: areaSection.title, url: `${SITE.origin}/${areaSection.slug}` },
+  ]),
+];
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={areaSection.eyebrow} title={areaSection.title} lede={areaSection.lede} />
+
+  <Container>
+    <Grid>
+      {
+        areas.map((a) => (
+          <Card
+            href={`/${areaSection.slug}/${a.slug}`}
+            title={a.name}
+            body={a.lede}
+            src={`/images/areas/${a.slug}.svg`}
+            imgAlt={`${a.name}, Belgrade`}
+          />
+        ))
+      }
+    </Grid>
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

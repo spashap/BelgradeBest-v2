@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "section": {
+    "slug": "areas",
+    "eyebrow": "Where to stay",
+    "title": "Belgrade by neighbourhood",
+    "lede": "A plain-English guide to Belgrade's main areas — where each one sits, what it's like to stay there, and who it suits. Use these to choose a base before you book."
+  },
+  "areas": [
+    {
+      "slug": "stari-grad",
+      "name": "Stari Grad",
+      "localName": "Стари град",
+      "municipality": "Stari Grad",
+      "riverSide": "Right (Belgrade) bank, on the high ground above the Sava–Danube confluence",
+      "walkToCenter": "You're in it — Republic Square and the Knez Mihailova promenade are here",
+      "lede": "Stari Grad is Belgrade's old town and the easiest first base — the fortress, the main pedestrian street and most headline sights are within a short walk.",
+      "character": "Stari Grad (\"Old Town\") is the historic core: Habsburg-era facades, the Knez Mihailova promenade, Republic Square, and Kalemegdan park wrapped around the Belgrade Fortress. It is the most walkable, most sightseeing-dense part of the city, and the part visitors picture when they imagine central Belgrade.\n\nBecause it is the centre, it is also the busiest and, in peak season, the priciest. Streets near Republic Square and Skadarlija can be lively late into the night, so a room on a quieter side street is worth asking for.",
+      "gettingAround": "Almost everything central is on foot. City buses, trams and trolleybuses have been free for all passengers since 2025, and the airport bus and taxis reach the centre easily.",
+      "stayNotes": "The widest choice of hotels and short-stay apartments in the city, from boutique to upscale. Best value is in spring and autumn; book ahead for summer and any Expo-period dates.",
+      "bestFor": ["first-time visitors", "sightseeing on foot", "short city breaks"],
+      "notIdealFor": ["travellers who want quiet at night", "budget-only stays in high season"],
+      "nearby": ["Kalemegdan & the Belgrade Fortress", "Knez Mihailova promenade", "Skadarlija", "Dorćol"],
+      "faqs": [
+        { "question": "Is Stari Grad a good area to stay in Belgrade for the first time?", "answer": "Yes — it's the most convenient first base. You're within walking distance of the fortress, the main promenade and most central sights, and it's easy to manage in English. The trade-off is that it's the busiest and often the most expensive part of the city." },
+        { "question": "Is Stari Grad noisy at night?", "answer": "It can be, especially around Republic Square and the Skadarlija dining street. If you're a light sleeper, ask for a room on a courtyard or quieter side street rather than facing a main square." }
+      ],
+      "relatedArticles": ["/visit-belgrade/things-to-do-in-belgrade", "/visit-belgrade/belgrade-itinerary-3-days", "/visit-belgrade/belgrade-neighborhoods"]
+    },
+    {
+      "slug": "dorcol",
+      "name": "Dorćol",
+      "localName": "Дорћол",
+      "municipality": "Stari Grad",
+      "riverSide": "Right bank, sloping down from the old town toward the Danube",
+      "walkToCenter": "About 10–15 minutes on foot to Republic Square",
+      "lede": "Dorćol is the old town's relaxed, creative neighbour — walkable to the centre but calmer, with a strong café, bar and restaurant scene.",
+      "character": "Dorćol sits just east of Stari Grad, running down toward the Danube. It mixes some of the oldest streets in the city with a contemporary, design-led feel: independent cafés, wine bars, galleries and good restaurants, plus the riverside around Dorćol Platz and the Beton Hala stretch.\n\nIt's central without being touristy, which is exactly why many repeat visitors and longer-stay travellers prefer it. The grid of streets makes it easy to find your way around on foot.",
+      "gettingAround": "Comfortably walkable to the old town and fortress; free city transport and taxis cover anything further. The riverside is a flat, pleasant walk.",
+      "stayNotes": "Mostly apartments and smaller boutique hotels rather than big chains. A strong pick if you want a local, residential feel within walking distance of the centre.",
+      "bestFor": ["repeat visitors", "café and food lovers", "longer stays"],
+      "notIdealFor": ["travellers who need a large hotel with full facilities", "step-free access on the steeper streets"],
+      "nearby": ["Danube riverside & Beton Hala", "Kalemegdan", "Stari Grad", "Skadarlija"],
+      "faqs": [
+        { "question": "Is Dorćol a good area to stay in Belgrade?", "answer": "Yes, especially if you want somewhere central but calmer than the old town. It's a 10–15 minute walk to Republic Square, with one of the city's best café and restaurant scenes and a relaxed, residential feel." },
+        { "question": "Is Dorćol walkable to the main sights?", "answer": "Yes. The fortress, Knez Mihailova and Republic Square are all within a short, flat-to-gentle walk, and the Danube riverside is right there too." }
+      ],
+      "relatedArticles": ["/food-and-nightlife/belgrade-nightlife", "/visit-belgrade/belgrade-neighborhoods", "/visit-belgrade/things-to-do-in-belgrade"]
+    },
+    {
+      "slug": "vracar",
+      "name": "Vračar",
+      "localName": "Врачар",
+      "municipality": "Vračar",
+      "riverSide": "Right bank, on the higher ground inland from the old town",
+      "walkToCenter": "About 15–20 minutes on foot, or a short ride",
+      "lede": "Vračar is the smart, residential district around the Temple of Saint Sava — central enough to walk, leafier and quieter than the old town.",
+      "character": "Vračar is one of Belgrade's most desirable residential areas, built around the vast Temple of Saint Sava and the leafy streets nearby. It's well-to-do and settled, with good cafés, bakeries and the Kalenić green market, but without the constant tourist churn of Stari Grad.\n\nIt suits visitors who want a calmer, lived-in base while staying close to the centre, and it's popular with longer-stay and returning travellers for the same reason.",
+      "gettingAround": "Walkable to the centre for the energetic; otherwise free trams and buses connect it quickly. Flat-to-gently-sloping streets.",
+      "stayNotes": "A mix of apartments and a few hotels. Generally calmer and sometimes better value than the old town for similar quality.",
+      "bestFor": ["quieter, residential feel", "longer stays", "travellers who want local life"],
+      "notIdealFor": ["people who want to roll out of bed into the main sights", "big-resort facilities"],
+      "nearby": ["Temple of Saint Sava", "Kalenić market", "Slavija square", "the old town (a walk away)"],
+      "faqs": [
+        { "question": "Is Vračar a good area to stay in Belgrade?", "answer": "Yes, if you prefer a quieter, residential base over the tourist core. It's an upscale, leafy district around the Temple of Saint Sava, with good local cafés and markets and an easy walk or short ride to the centre." },
+        { "question": "How far is Vračar from the city centre?", "answer": "Roughly a 15–20 minute walk to Republic Square, or a few minutes by tram or bus. It feels calmer than the old town while staying genuinely central." }
+      ],
+      "relatedArticles": ["/visit-belgrade/belgrade-neighborhoods", "/visit-belgrade/things-to-do-in-belgrade", "/plan-your-trip/getting-around"]
+    },
+    {
+      "slug": "savamala",
+      "name": "Savamala",
+      "localName": "Савамала",
+      "municipality": "Savski Venac / Stari Grad",
+      "riverSide": "Right bank, along the Sava waterfront below the old town",
+      "walkToCenter": "About 10–15 minutes on foot to Republic Square",
+      "lede": "Savamala is the post-industrial riverside quarter below the old town — nightlife and design energy alongside the big Belgrade Waterfront development.",
+      "character": "Savamala runs along the Sava between the old town and the river. Once a faded warehouse district, it became Belgrade's creative-and-nightlife hub, and it now sits next to the large, modern Belgrade Waterfront (Beograd na vodi) project with its towers, mall and promenade.\n\nThe result is a area of contrasts: heritage facades and clubs on one side, shiny new riverfront on the other. It's lively after dark and convenient to the centre, but it's a working, changing district rather than a polished one.",
+      "gettingAround": "Walkable to the old town; the riverfront promenade and free city transport make the rest easy. Some streets are busy with traffic.",
+      "stayNotes": "Newer apartments and hotels, especially around the Waterfront, plus characterful conversions. Good for nightlife and river views; check noise if you want quiet.",
+      "bestFor": ["nightlife", "modern riverfront stays", "design and architecture fans"],
+      "notIdealFor": ["light sleepers near clubs", "travellers wanting a traditional old-town feel"],
+      "nearby": ["Belgrade Waterfront & Galerija mall", "Sava promenade", "the old town", "Beton Hala"],
+      "faqs": [
+        { "question": "Is Savamala a good area to stay in Belgrade?", "answer": "It's a good base if you want nightlife, the river and modern accommodation close to the centre. It blends a creative bar-and-club scene with the new Belgrade Waterfront development, all a short walk from the old town — though it's livelier and more in-flux than the historic core." },
+        { "question": "Is Savamala safe at night?", "answer": "It's a busy, popular nightlife area and generally fine with the usual city-centre care. As anywhere with crowds and bars, watch your belongings and use registered taxis or apps late at night." }
+      ],
+      "relatedArticles": ["/food-and-nightlife/belgrade-nightlife", "/food-and-nightlife/belgrade-splavovi", "/plan-your-trip/staying-safe"]
+    },
+    {
+      "slug": "zemun",
+      "name": "Zemun",
+      "localName": "Земун",
+      "municipality": "Zemun",
+      "riverSide": "Right bank of the Danube, downstream — a former separate town northwest of the centre",
+      "walkToCenter": "About 20–30 minutes by bus or taxi to the old town; not a walk",
+      "lede": "Zemun is the old Habsburg river town folded into Belgrade — low-rise, charming and Danube-side, with a distinct village feel.",
+      "character": "Zemun was a separate town under Austro-Hungarian rule and still feels like one: pastel houses, a relaxed Danube quay (Kej) lined with fish restaurants, and the Gardoš tower on the hill with views over the river. It's one of the most atmospheric parts of greater Belgrade.\n\nThe trade-off is distance — it's northwest of the centre, so you trade quick access to the main sights for charm, riverside dining and a quieter pace. Many visitors love it as a base; others prefer it as a half-day trip.",
+      "gettingAround": "Free city buses connect Zemun to the centre, and taxis are inexpensive; budget 20–30 minutes. Within Zemun it's flat and walkable along the quay.",
+      "stayNotes": "Apartments and small hotels, often near the quay. Good value and character; best if you don't mind a short commute to the centre.",
+      "bestFor": ["riverside charm", "quieter stays", "travellers happy to commute to the centre"],
+      "notIdealFor": ["first-timers who want to walk to the main sights", "very short trips"],
+      "nearby": ["Zemun Quay (Kej)", "Gardoš (Millennium) Tower", "Danube riverside", "Great War Island viewpoints"],
+      "faqs": [
+        { "question": "Is Zemun a good area to stay in Belgrade?", "answer": "Zemun is a lovely, atmospheric base if you value riverside charm and a quieter pace over walking distance to the main sights. It feels like a separate Danube town, with great fish restaurants on the quay — but budget 20–30 minutes to reach central Belgrade." },
+        { "question": "How do you get from Zemun to central Belgrade?", "answer": "Free city buses run frequently to the centre, and taxis are cheap and quick. Allow roughly 20–30 minutes depending on traffic." }
+      ],
+      "relatedArticles": ["/visit-belgrade/zemun", "/visit-belgrade/belgrade-neighborhoods", "/visit-belgrade/belgrade-day-trips"]
+    },
+    {
+      "slug": "novi-beograd",
+      "name": "Novi Beograd (New Belgrade)",
+      "localName": "Нови Београд",
+      "municipality": "Novi Beograd",
+      "riverSide": "Left bank, across the Sava from the old town",
+      "walkToCenter": "A few minutes by bus or taxi across the river; walkable to the old town via the bridges for the energetic",
+      "lede": "New Belgrade is the modern, planned half of the city across the Sava — wide boulevards, business hotels, the arena and the famous socialist-modernist blocks.",
+      "character": "Novi Beograd is the post-war, planned city on the flat left bank: broad avenues, big residential blocks (a magnet for fans of brutalist and socialist-modernist architecture), business districts, shopping malls and the Štark Arena. It's where many international chain hotels and conference venues sit.\n\nIt's practical and well-connected rather than picturesque, with the riverside (including the splav nightclubs moored along the banks) and Ada Ciganlija within easy reach.",
+      "gettingAround": "Excellent transport links by free bus across the bridges; taxis are quick. The blocks are large, so walking distances within New Belgrade can be longer than they look.",
+      "stayNotes": "The city's main cluster of international business hotels, plus modern apartments. Good for conferences, fairs, the arena and airport access; less so for old-town atmosphere.",
+      "bestFor": ["business and conference travellers", "arena events", "modern/chain hotels and architecture fans"],
+      "notIdealFor": ["visitors wanting historic atmosphere", "those who dislike long blocks and big roads"],
+      "nearby": ["Štark Arena", "Sava riverside & splav clubs", "Ada Ciganlija", "Belgrade Fair / shopping malls"],
+      "faqs": [
+        { "question": "Is New Belgrade a good area to stay?", "answer": "It's the best base for business travel, trade fairs and arena events, with most of the city's international hotels and good transport across the river. It's modern and practical rather than historic, so leisure visitors who want old-town charm may prefer the right bank." },
+        { "question": "How far is New Belgrade from the old town?", "answer": "Just across the Sava — a few minutes by bus or taxi over the bridges, and walkable for the energetic. Transport links are among the best in the city." }
+      ],
+      "relatedArticles": ["/visit-belgrade/brutalist-belgrade", "/food-and-nightlife/belgrade-splavovi", "/visit-belgrade/belgrade-arenas-and-stadiums"]
+    },
+    {
+      "slug": "skadarlija",
+      "name": "Skadarlija",
+      "localName": "Скадарлија",
+      "municipality": "Stari Grad",
+      "riverSide": "Right bank, a short cobbled street within the old town",
+      "walkToCenter": "In the centre — a few minutes' walk from Republic Square",
+      "lede": "Skadarlija is Belgrade's bohemian quarter — a short cobbled street of traditional kafanas, music and old-Belgrade atmosphere, right in the centre.",
+      "character": "Skadarlija is really one historic, cobblestoned street (Skadarska) and its immediate surroundings, long associated with poets, musicians and traditional kafana dining. In the evenings it's atmospheric and lively, with live music spilling out of the restaurants.\n\nStaying here puts you in the thick of central Belgrade with a strong sense of place — but it's a dining-and-nightlife street, so expect evening noise and crowds.",
+      "gettingAround": "Entirely central and walkable; everything in the old town is minutes away on foot, with free transport for anything further.",
+      "stayNotes": "Mostly apartments and small properties on and around the street. Atmospheric but potentially noisy at night — ask about the room's aspect.",
+      "bestFor": ["atmosphere and traditional dining", "central short stays", "music and kafana culture"],
+      "notIdealFor": ["light sleepers", "travellers wanting modern quiet hotels"],
+      "nearby": ["Republic Square", "Bajloni market", "Dorćol", "Knez Mihailova"],
+      "faqs": [
+        { "question": "Is Skadarlija a good place to stay in Belgrade?", "answer": "It's a characterful, very central choice if you love atmosphere and traditional kafana dining. You're a few minutes from Republic Square in the heart of the old town — but it's a lively dining-and-music street, so expect evening noise." },
+        { "question": "What is Skadarlija known for?", "answer": "It's Belgrade's bohemian quarter — a cobbled street of historic kafanas (traditional taverns) with live music and old-Belgrade character, often compared to a local Montmartre." }
+      ],
+      "relatedArticles": ["/food-and-nightlife/belgrade-kafanas", "/food-and-nightlife/belgrade-nightlife", "/visit-belgrade/things-to-do-in-belgrade"]
+    },
+    {
+      "slug": "vozdovac",
+      "name": "Voždovac",
+      "localName": "Вождовац",
+      "municipality": "Voždovac",
+      "riverSide": "Right bank, on the higher ground south of the centre",
+      "walkToCenter": "About 10–15 minutes by bus or taxi to Slavija/centre; mostly not a walk",
+      "lede": "Voždovac is a large, settled residential district south of the centre — calmer and often cheaper, with easy transport in.",
+      "character": "Voždovac spreads south from the inner city around the Avala road. It's a genuine residential district — quiet streets, local markets and everyday Belgrade life rather than sights — shading into greener, more suburban ground toward Avala mountain.\n\nIt suits budget-conscious or longer-stay visitors who don't mind a short ride to the centre in exchange for lower prices and a calmer setting.",
+      "gettingAround": "Well served by free buses to Slavija and the centre; taxis are cheap. Distances are too far to walk to the main sights.",
+      "stayNotes": "Mainly apartments at lower prices than the centre. A practical pick for value and quiet, less so for atmosphere.",
+      "bestFor": ["budget and value", "longer or quieter stays", "travellers happy to use transport"],
+      "notIdealFor": ["first-timers who want to walk everywhere", "sightseeing-on-the-doorstep stays"],
+      "nearby": ["Slavija square", "Temple of Saint Sava (toward Vračar)", "Avala mountain (further south)", "local green markets"],
+      "faqs": [
+        { "question": "Is Voždovac a good area to stay in Belgrade?", "answer": "It's a sensible choice for value and quiet on a longer stay. It's a large residential district south of the centre with good bus links, so you trade walking distance to the sights for lower prices and a calmer, local setting." },
+        { "question": "Is Voždovac central?", "answer": "It's inner-suburban rather than central — roughly 10–15 minutes by bus or taxi to Slavija and the centre, with no realistic walk to the main sights." }
+      ],
+      "relatedArticles": ["/plan-your-trip/getting-around", "/visit-belgrade/belgrade-neighborhoods", "/plan-your-trip/money"]
+    },
+    {
+      "slug": "senjak-dedinje",
+      "name": "Senjak & Dedinje",
+      "localName": "Сењак и Дедиње",
+      "municipality": "Savski Venac",
+      "riverSide": "Right bank, on the leafy heights southwest of the centre",
+      "walkToCenter": "About 10–15 minutes by taxi or bus; not a practical walk",
+      "lede": "Senjak and Dedinje are Belgrade's leafy, upscale residential heights — embassies, villas and quiet streets near the big parks.",
+      "character": "Senjak and neighbouring Dedinje are among the city's most prestigious residential areas: detached villas, tree-lined streets, embassies and institutions like the House of Flowers and the Royal Compound. It's green, calm and exclusive.\n\nThere's little nightlife or shopping on the doorstep, which is the point — it's a peaceful, comfortable base near Topčider and Košutnjak parks, a short ride from the centre.",
+      "gettingAround": "Buses and trams toward Topčider plus cheap taxis; the parks are walkable from here. The centre is a short ride, not a walk.",
+      "stayNotes": "Upscale apartments and a few high-end properties. Best for travellers who want quiet, greenery and space over being in the middle of things.",
+      "bestFor": ["quiet and greenery", "upscale residential stays", "park lovers"],
+      "notIdealFor": ["nightlife seekers", "budget travellers", "those wanting shops and sights at the door"],
+      "nearby": ["Topčider Park", "Košutnjak forest park", "House of Flowers / Tito's Mausoleum", "Royal Compound (Dedinje)"],
+      "faqs": [
+        { "question": "Is Dedinje or Senjak a good area to stay in Belgrade?", "answer": "Yes if you want a quiet, green, upscale base and don't mind a short ride into the centre. These are leafy embassy-and-villa districts near the big parks, with little nightlife or shopping nearby — peaceful rather than central." },
+        { "question": "What's near Senjak and Dedinje?", "answer": "The Topčider and Košutnjak parks, the House of Flowers (Tito's mausoleum) and the Royal Compound are all close, making it a green, calm part of the city." }
+      ],
+      "relatedArticles": ["/visit-belgrade/belgrade-museums", "/visit-belgrade/belgrade-neighborhoods", "/plan-your-trip/getting-around"]
+    },
+    {
+      "slug": "cukarica-ada",
+      "name": "Čukarica & Ada Ciganlija",
+      "localName": "Чукарица и Ада Циганлија",
+      "municipality": "Čukarica",
+      "riverSide": "Right bank of the Sava, southwest — beside the Ada Ciganlija lake and island",
+      "walkToCenter": "About 15–20 minutes by bus or taxi to the centre",
+      "lede": "Čukarica is the green riverside district beside Ada Ciganlija — Belgrade's lake-and-beach island — good for active, outdoorsy stays in summer.",
+      "character": "Čukarica stretches along the Sava southwest of the centre and wraps around Ada Ciganlija, the forested river island with a swimming lake, beaches, cycling paths and sports that locals treat as \"Belgrade's sea\" in summer. Neighbourhoods like Banovo Brdo are settled and residential.\n\nIt's a practical, greener base, especially if you want running, cycling or the lake on your doorstep, with a short ride into the centre for sightseeing.",
+      "gettingAround": "Free buses and cheap taxis reach the centre in 15–20 minutes; Ada Ciganlija is walkable or a short ride, and great for cycling.",
+      "stayNotes": "Mostly apartments at mid-to-lower prices. Best in warmer months when the lake and parks are the draw.",
+      "bestFor": ["active and outdoorsy travellers", "summer lake-and-beach stays", "value away from the centre"],
+      "notIdealFor": ["visitors who want old-town atmosphere", "winter trips focused on indoor sights"],
+      "nearby": ["Ada Ciganlija lake & beaches", "Banovo Brdo", "Sava cycling paths", "Košutnjak park (toward Senjak)"],
+      "faqs": [
+        { "question": "Is Čukarica or Ada Ciganlija a good area to stay in Belgrade?", "answer": "It's a good base for active, outdoorsy or summer stays, right by the Ada Ciganlija lake and its beaches, cycling and sports. It's greener and often cheaper than the centre, with a 15–20 minute ride in for sightseeing." },
+        { "question": "What is Ada Ciganlija?", "answer": "Ada Ciganlija is a forested river island on the Sava with a swimming lake, beaches and sports facilities — hugely popular with locals in summer and sometimes called Belgrade's sea." }
+      ],
+      "relatedArticles": ["/visit-belgrade/things-to-do-in-belgrade", "/plan-your-trip/best-time-to-visit", "/visit-belgrade/belgrade-day-trips"]
+    }
+  ]
+}
