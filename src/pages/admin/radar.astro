@@ -1,0 +1,121 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { readRadarFeed, readRadarState } from "../../lib/admin/store";
+
+// Operator view of the daily question radar. Reads the feed (written by the
+// radar job) + the action-state file, joins them, and lets you filter/sort and
+// tick off threads you've replied to. Server-rendered (prerender=false).
+const feed = await readRadarFeed();
+const state = await readRadarState();
+
+const sp = Astro.url.searchParams;
+const err = sp.get("error");
+const ok = sp.get("ok");
+const queued = sp.get("queued");
+const sort = sp.get("sort") || "score"; // score | new | old
+const topic = sp.get("topic") || ""; // topic filter
+const show = sp.get("show") || "open"; // open | done | all
+
+const topics = [...new Set(feed.items.flatMap((i) => i.topics ?? []))].sort();
+
+let rows = feed.items.map((it) => ({ ...it, actioned: state[it.id]?.actioned === true }));
+if (topic) rows = rows.filter((r) => (r.topics ?? []).includes(topic));
+if (show === "open") rows = rows.filter((r) => !r.actioned);
+else if (show === "done") rows = rows.filter((r) => r.actioned);
+if (sort === "new") rows.sort((a, b) => Date.parse(b.firstSeen) - Date.parse(a.firstSeen));
+else if (sort === "old") rows.sort((a, b) => Date.parse(a.firstSeen) - Date.parse(b.firstSeen));
+else rows.sort((a, b) => b.score - a.score);
+
+const openCount = feed.items.filter((i) => state[i.id]?.actioned !== true).length;
+const back = `/admin/radar?sort=${encodeURIComponent(sort)}&topic=${encodeURIComponent(topic)}&show=${encodeURIComponent(show)}`;
+const fmtDate = (iso?: string | null) => (iso ? iso.slice(0, 10) : "—");
+---
+<AdminLayout title="Question radar">
+  {err ? <div class="err">{err}</div> : null}
+  {ok ? <div class="ok">Saved.</div> : null}
+  {queued ? <div class="ok">Radar run started — it takes ~1–2 minutes, then refresh this page to see new threads.</div> : null}
+
+  <div class="row" style="justify-content:space-between;align-items:flex-start">
+    <p class="muted" style="margin:0;max-width:680px">
+      Belgrade threads the daily radar found — reply by hand on Reddit, then mark <b>Actioned</b>.
+      Automated posting is intentionally not done.
+      {feed.generatedAt ? ` Feed updated ${fmtDate(feed.generatedAt)}.` : " Feed not generated yet — the job runs daily."}
+      <b> {openCount} open</b> of {feed.items.length}.
+    </p>
+    <form method="post" action="/api/admin/radar">
+      <input type="hidden" name="action" value="run" />
+      <input type="hidden" name="back" value={back} />
+      <button type="submit" title="Scan Reddit now (runs the GitHub Actions workflow)">↻ Run radar now</button>
+    </form>
+  </div>
+
+  <form method="get" class="panel">
+    <div class="row">
+      <label>Sort
+        <select name="sort">
+          <option value="score" selected={sort === "score"}>Best opportunity</option>
+          <option value="new" selected={sort === "new"}>Newest</option>
+          <option value="old" selected={sort === "old"}>Oldest</option>
+        </select>
+      </label>
+      <label>Topic
+        <select name="topic">
+          <option value="" selected={topic === ""}>All topics</option>
+          {topics.map((t) => <option value={t} selected={t === topic}>{t}</option>)}
+        </select>
+      </label>
+      <label>Show
+        <select name="show">
+          <option value="open" selected={show === "open"}>Open</option>
+          <option value="done" selected={show === "done"}>Actioned</option>
+          <option value="all" selected={show === "all"}>All</option>
+        </select>
+      </label>
+      <button type="submit">Apply</button>
+      <a href="/admin/radar" class="muted" style="margin-left:6px">reset</a>
+    </div>
+  </form>
+
+  <div class="panel">
+    <table>
+      <tr>
+        <th></th><th>thread</th><th>sub</th><th>comments</th><th>found</th><th>score</th><th></th>
+      </tr>
+      {
+        rows.map((r) => (
+          <tr style={r.actioned ? "opacity:.5" : ""}>
+            <td>{r.isQuestion ? "❓" : ""}</td>
+            <td>
+              <a href={r.url} target="_blank" rel="noopener noreferrer">{r.title}</a>
+              <div class="muted" style="font-size:12px">{(r.topics ?? []).join(", ")}</div>
+            </td>
+            <td class="muted">{r.sub}</td>
+            <td>{r.comments}</td>
+            <td class="muted">{fmtDate(r.firstSeen)}</td>
+            <td>{Number(r.score).toFixed(1)}</td>
+            <td>
+              <form class="inline" method="post" action="/api/admin/radar">
+                <input type="hidden" name="id" value={r.id} />
+                <input type="hidden" name="actioned" value={r.actioned ? "0" : "1"} />
+                <input type="hidden" name="back" value={back} />
+                <button class="ghost" type="submit">{r.actioned ? "Reopen" : "Mark actioned"}</button>
+              </form>
+            </td>
+          </tr>
+        ))
+      }
+      {
+        rows.length === 0 ? (
+          <tr>
+            <td colspan="7" class="muted">
+              {feed.items.length === 0
+                ? "The radar hasn't produced a feed yet — run the Question radar workflow, then refresh."
+                : "No threads match this filter."}
+            </td>
+          </tr>
+        ) : null
+      }
+    </table>
+  </div>
+</AdminLayout>

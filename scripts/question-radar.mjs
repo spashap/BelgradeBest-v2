@@ -21,6 +21,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const REPORT = join(ROOT, "KB", "automation", "question-radar.md");
+const FEED = join(ROOT, "src", "data", "radar", "questions.json"); // structured feed the /admin/radar page reads
 const STATE = join(ROOT, "scripts", ".radar-state.json");
 
 const USER_AGENT = process.env.REDDIT_USER_AGENT || "belgradebest-radar/1.0 by u/IstartCommentsPorn";
@@ -173,6 +174,31 @@ async function main() {
   mkdirSync(dirname(REPORT), { recursive: true });
   writeFileSync(REPORT, report);
   console.log(`Wrote ${REPORT} — ${top.length} threads (of ${byId.size} scanned).`);
+
+  // Update the rolling JSON feed the /admin/radar page reads. Preserve each
+  // item's firstSeen, refresh lastSeen, and drop items not seen for 45 days.
+  const nowIso = new Date().toISOString();
+  let prevItems = [];
+  try { if (existsSync(FEED)) prevItems = JSON.parse(readFileSync(FEED, "utf8")).items || []; } catch {}
+  const prevById = new Map(prevItems.map((it) => [it.id, it]));
+  const RETAIN_DAYS = 45;
+  const feed = new Map();
+  for (const it of prevItems) {
+    const last = Date.parse(it.lastSeen || it.firstSeen || nowIso);
+    if (!isNaN(last) && (Date.now() - last) / 86400000 <= RETAIN_DAYS) feed.set(it.id, it);
+  }
+  for (const r of ranked) {
+    const existing = prevById.get(r.id);
+    feed.set(r.id, {
+      id: r.id, title: r.title, url: r.url, sub: r.sub, comments: r.comments,
+      topics: r.hits, score: Number(r.score.toFixed(1)), isQuestion: r.isQuestion,
+      firstSeen: existing?.firstSeen || nowIso, lastSeen: nowIso,
+    });
+  }
+  const merged = [...feed.values()].sort((a, b) => b.score - a.score).slice(0, 120);
+  mkdirSync(dirname(FEED), { recursive: true });
+  writeFileSync(FEED, JSON.stringify({ generatedAt: nowIso, items: merged }, null, 2) + "\n");
+  console.log(`Updated radar feed: ${merged.length} items → ${FEED}`);
 
   if (process.env.GITHUB_STEP_SUMMARY) {
     try { appendFileSync(process.env.GITHUB_STEP_SUMMARY, report + "\n"); } catch {}

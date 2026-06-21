@@ -264,3 +264,107 @@ export async function setNavItemVisible(
     }
   }, `admin: ${visible ? "show" : "hide"} nav item ${index} in ${target}${target === "footer-col" ? `[${col}]` : ""}`);
 }
+
+// ---- question radar (data/radar/*) ----------------------------------------
+// Two files: questions.json is the discovery FEED written by the radar job
+// (admin reads only); state.json holds the operator's per-item "actioned" flags
+// (admin writes). Splitting them means the daily job and the admin never fight
+// over the same file.
+
+const REL_RADAR_FEED = "src/data/radar/questions.json";
+const REL_RADAR_STATE = "src/data/radar/state.json";
+
+export type RadarItem = {
+  id: string;
+  title: string;
+  url: string;
+  sub: string;
+  comments: number;
+  topics: string[];
+  score: number;
+  isQuestion?: boolean;
+  firstSeen: string; // ISO date first discovered
+  lastSeen: string; // ISO date most recently in the feed
+};
+export type RadarFeed = { generatedAt: string | null; items: RadarItem[] };
+export type RadarStateEntry = { actioned: boolean; note?: string; updatedAt: string };
+export type RadarState = Record<string, RadarStateEntry>;
+
+async function getFileOrEmpty(rel: string): Promise<FileState> {
+  try {
+    return await getFile(rel);
+  } catch {
+    return { text: "", sha: null };
+  }
+}
+
+export async function readRadarFeed(): Promise<RadarFeed> {
+  const { text } = await getFileOrEmpty(REL_RADAR_FEED);
+  if (!text) return { generatedAt: null, items: [] };
+  try {
+    const f = JSON.parse(text);
+    return { generatedAt: f.generatedAt ?? null, items: Array.isArray(f.items) ? f.items : [] };
+  } catch {
+    return { generatedAt: null, items: [] };
+  }
+}
+
+export async function readRadarState(): Promise<RadarState> {
+  const { text } = await getFileOrEmpty(REL_RADAR_STATE);
+  if (!text) return {};
+  try {
+    return JSON.parse(text) as RadarState;
+  } catch {
+    return {};
+  }
+}
+
+export async function setRadarActioned(id: string, actioned: boolean): Promise<void> {
+  const clean = String(id).trim();
+  if (!clean) throw new Error("empty id");
+  const { text, sha } = await getFileOrEmpty(REL_RADAR_STATE);
+  let state: RadarState = {};
+  if (text) {
+    try {
+      state = JSON.parse(text);
+    } catch {
+      state = {};
+    }
+  }
+  state[clean] = { actioned, updatedAt: new Date().toISOString() };
+  await putFile(
+    REL_RADAR_STATE,
+    JSON.stringify(state, null, 2) + "\n",
+    `admin: radar ${actioned ? "actioned" : "reopened"} ${clean}`,
+    sha,
+  );
+}
+
+// Manually kick off the question-radar GitHub Actions workflow (workflow_dispatch)
+// so the operator can refresh the feed on demand from /admin/radar. Needs the
+// admin GITHUB_TOKEN to allow Actions (classic PAT `repo` scope, or a fine-grained
+// token with "Actions: write"). The run takes ~1–2 min, then it commits the feed.
+export async function triggerRadarWorkflow(): Promise<void> {
+  if (!usingGitHub()) {
+    throw new Error("Run-now needs GitHub mode (GITHUB_TOKEN + GITHUB_REPO). In local dev, run: node scripts/question-radar.mjs");
+  }
+  const url = `https://api.github.com/repos/${ghRepo()}/actions/workflows/question-radar.yml/dispatches`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${ghToken()}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "belgradebest-v2-admin",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ ref: ghBranch() }),
+  });
+  if (!res.ok) {
+    const detail = await res.text();
+    throw new Error(
+      res.status === 403 || res.status === 404
+        ? `Couldn't start the workflow (${res.status}). The admin token likely lacks Actions permission — give it 'workflow' scope (classic PAT) or 'Actions: write' (fine-grained).`
+        : `Workflow dispatch failed: ${res.status} ${detail}`,
+    );
+  }
+}

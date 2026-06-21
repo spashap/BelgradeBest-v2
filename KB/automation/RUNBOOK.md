@@ -158,12 +158,18 @@ question + few existing answers + fresh).
 - Auth: **app-only OAuth** (`client_credentials`) with `REDDIT_CLIENT_ID` +
   `REDDIT_CLIENT_SECRET` — no username/password. Falls back to Reddit's public
   `.json` search automatically if the token is refused. Node built-ins only.
-- Runs in the cloud (`.github/workflows/question-radar.yml`, daily 06:00 UTC) →
-  ranked list in the Actions run summary. Local: `node scripts/question-radar.mjs`.
+- Runs in the cloud (`.github/workflows/question-radar.yml`, daily 06:00 UTC). The
+  job writes a structured feed to `src/data/radar/questions.json` and **commits it
+  back** (workflow has `contents: write`), plus the Actions run summary + optional
+  webhook. Local: `node scripts/question-radar.mjs`.
+- **Review in the admin panel: `/admin/radar`** — reads the feed, lets you filter by
+  topic, sort by date/opportunity, and tick **Actioned** on threads you've replied
+  to. Action flags persist in `src/data/radar/state.json` (written via the same
+  GitHub-backed admin store; the daily job never touches it, so they don't clash).
 - **Setup:** the two `REDDIT_*` repo secrets are already added. Push, then open
-  Actions → "Question radar" → **Run workflow** to test now. *Optional:* repo secret
-  `RADAR_WEBHOOK_URL` for a Slack/Discord ping. Edit `SUBREDDITS`/`TOPICS` in the
-  script to tune.
+  Actions → "Question radar" → **Run workflow** to populate the feed, then open
+  `/admin/radar`. *Optional:* repo secret `RADAR_WEBHOOK_URL` for a Slack/Discord
+  ping. Edit `SUBREDDITS`/`TOPICS` in the script to tune.
 - **You still reply by hand** — that line is deliberate (auto-posting = spam).
 
 ---
