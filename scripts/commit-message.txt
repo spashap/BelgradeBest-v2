@@ -1,1 +1,1 @@
-Admin analytics (Search Console + GA4 via service account); admin login via ADMIN_ENTRY; robots/sitemap/GA4 SEO setup
+Fix admin login (disable Astro checkOrigin behind Vercel proxy); admin analytics (GSC+GA4); ADMIN_ENTRY login

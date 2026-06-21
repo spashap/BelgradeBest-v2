@@ -68,6 +68,12 @@ export default defineConfig({
   output: "static",
   adapter: vercel(),
   trailingSlash: "never",
+  // The admin login/forms POST same-origin, but Astro's default checkOrigin CSRF
+  // guard misfires behind Vercel's proxy (compares the Origin header to Vercel's
+  // internal host) and blocks them with "Cross-site POST form submissions are
+  // forbidden". The only on-demand routes are /admin + /api/admin, which are
+  // password-gated (ADMIN_ENTRY); the public site is fully static. Safe to disable.
+  security: { checkOrigin: false },
   // Local dev + preview run on :5000 (project convention). The admin tool is a
   // separate process on :4000. Production builds are static (port is irrelevant).
   server: { port: 5000, host: false },
