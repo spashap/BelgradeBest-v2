@@ -30,8 +30,10 @@ REM Ensure a git identity exists (commit fails silently without one).
 git config user.email >nul 2>&1 || git config user.email "spashap@gmail.com"
 git config user.name  >nul 2>&1 || git config user.name  "Pavel"
 
-REM Commit message: use whatever you typed after the filename, else a timestamp.
+REM Commit message: (1) whatever you type after the filename, else (2) the first
+REM line of scripts\commit-message.txt, else (3) a timestamp.
 set "MSG=%*"
+if "%MSG%"=="" if exist "%~dp0commit-message.txt" set /p MSG=<"%~dp0commit-message.txt"
 if "%MSG%"=="" set "MSG=Update BelgradeBest site (%date% %time%)"
 
 echo Staging all changes...

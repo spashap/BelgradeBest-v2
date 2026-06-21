@@ -1,31 +1,74 @@
 ---
 export const prerender = false;
 import AdminLayout from "../../layouts/AdminLayout.astro";
-import { ga4TopPages, vercelInfo } from "../../lib/admin/analytics";
+import { ga4TopPages, searchConsoleTopQueries, searchConsoleTopPages } from "../../lib/admin/analytics";
 
-const ga = await ga4TopPages();
-const v = vercelInfo();
+const [ga, gscQ, gscP] = await Promise.all([
+  ga4TopPages(),
+  searchConsoleTopQueries(),
+  searchConsoleTopPages(),
+]);
+const pct = (n: number) => `${(n * 100).toFixed(1)}%`;
+const pos = (n: number) => n.toFixed(1);
 ---
 <AdminLayout title="Analytics">
-  <h2>Google Analytics 4 — top pages (28 days)</h2>
+  <h2>Search Console — top queries (28 days)</h2>
   <div class="panel">
     {
-      ga.configured ? (
-        <table>
-          <tr><th>page</th><th>views</th><th>users</th></tr>
-          {ga.rows.map((r) => (
-            <tr><td class="slug">{r.path}</td><td>{r.views}</td><td>{r.users}</td></tr>
-          ))}
-        </table>
+      gscQ.configured ? (
+        gscQ.rows.length ? (
+          <table>
+            <tr><th>query</th><th>clicks</th><th>impr.</th><th>CTR</th><th>pos.</th></tr>
+            {gscQ.rows.map((r) => (
+              <tr><td>{r.key}</td><td>{r.clicks}</td><td>{r.impressions}</td><td>{pct(r.ctr)}</td><td>{pos(r.position)}</td></tr>
+            ))}
+          </table>
+        ) : (
+          <p class="muted">Connected — no query data yet (new sites take days/weeks to gather search data).</p>
+        )
       ) : (
-        <p class="muted">GA4 not configured. {ga.reason}</p>
+        <p class="muted">Search Console not configured. {gscQ.reason}</p>
       )
     }
   </div>
 
-  <h2>Vercel Web Analytics</h2>
+  <h2>Search Console — top pages (28 days)</h2>
   <div class="panel">
-    <p class="muted">{v.note}</p>
-    <p><a href={v.dashboardUrl} target="_blank" rel="noreferrer">Open Vercel dashboard ↗</a></p>
+    {
+      gscP.configured ? (
+        gscP.rows.length ? (
+          <table>
+            <tr><th>page</th><th>clicks</th><th>impr.</th><th>CTR</th><th>pos.</th></tr>
+            {gscP.rows.map((r) => (
+              <tr><td class="slug">{r.key}</td><td>{r.clicks}</td><td>{r.impressions}</td><td>{pct(r.ctr)}</td><td>{pos(r.position)}</td></tr>
+            ))}
+          </table>
+        ) : (
+          <p class="muted">Connected — no page data yet.</p>
+        )
+      ) : (
+        <p class="muted">Search Console not configured. {gscP.reason}</p>
+      )
+    }
+  </div>
+
+  <h2>Google Analytics 4 — top pages (28 days)</h2>
+  <div class="panel">
+    {
+      ga.configured ? (
+        ga.rows.length ? (
+          <table>
+            <tr><th>page</th><th>views</th><th>users</th></tr>
+            {ga.rows.map((r) => (
+              <tr><td class="slug">{r.path}</td><td>{r.views}</td><td>{r.users}</td></tr>
+            ))}
+          </table>
+        ) : (
+          <p class="muted">Connected — no traffic in the last 28 days yet.</p>
+        )
+      ) : (
+        <p class="muted">GA4 not configured. {ga.reason}</p>
+      )
+    }
   </div>
 </AdminLayout>

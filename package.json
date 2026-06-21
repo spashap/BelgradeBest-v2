@@ -17,6 +17,7 @@
     "@fontsource-variable/newsreader": "^5.2.5",
     "@google-analytics/data": "^4.12.1",
     "astro": "^5.6.1",
+    "google-auth-library": "^9.15.0",
     "marked": "^15.0.12"
   },
   "allowScripts": {

@@ -9,9 +9,10 @@ export function env(key: string): string | undefined {
 }
 
 // Admin password — UNSET = admin is open (the chosen "no auth to start"). Set
-// ADMIN_PASSWORD later (env var) to require a login; nothing else changes.
+// ADMIN_ENTRY (preferred) or ADMIN_PASSWORD (legacy) to require a login at
+// /admin; nothing else changes. /admin stays reachable on the web either way.
 export function adminPassword(): string | undefined {
-  const p = env("ADMIN_PASSWORD");
+  const p = env("ADMIN_ENTRY") ?? env("ADMIN_PASSWORD");
   return p && p.length > 0 ? p : undefined;
 }
 

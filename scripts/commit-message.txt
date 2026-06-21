@@ -1,0 +1,1 @@
+Admin analytics (Search Console + GA4 via service account); admin login via ADMIN_ENTRY; robots/sitemap/GA4 SEO setup
