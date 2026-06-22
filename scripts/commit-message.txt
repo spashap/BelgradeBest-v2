@@ -1,1 +1,1 @@
-SEO QA fixes: E-E-A-T utility pages (about/how-we-make-money/contact/privacy); drop orphan /invest-and-relocate links; Serbia->Belgrade keyword alignment; remove dup paragraph + leaked internal note; consistent arena naming; Serbians->Serbs; medical eyebrow + hero alt
+Fix radar feed JSON (resolve merge conflict); push-bat now pulls-then-pushes with auto-resolve; add taxis + car-rental articles; contact email -> admin@out25.com

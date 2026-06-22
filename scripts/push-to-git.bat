@@ -48,6 +48,20 @@ if errorlevel 1 (
   echo No changes to commit - pushing any unpushed commits anyway.
 )
 
+REM Pull any remote commits FIRST (the question-radar job commits its feed to
+REM GitHub, so origin can be ahead of this machine). -X theirs auto-resolves the
+REM auto-generated radar feed in favour of the remote copy, so this never stops
+REM to ask. Done after the local commit so the working tree is clean.
+echo.
+echo Syncing with origin first (the radar may have committed updates)...
+git pull --no-rebase --no-edit -X theirs origin main
+if errorlevel 1 (
+  echo.
+  echo SYNC FAILED - a conflict git could not auto-resolve. Run 'git status'.
+  pause
+  exit /b 1
+)
+
 echo.
 echo Pushing to origin...
 git push -u origin HEAD
