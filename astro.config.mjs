@@ -8,6 +8,7 @@ import schema from "./src/data/site-schema.json" with { type: "json" };
 import config from "./src/data/site-config.json" with { type: "json" };
 import pagesData from "./src/data/site-pages.json" with { type: "json" };
 import areasData from "./src/data/areas.json" with { type: "json" };
+import glossaryData from "./src/data/glossary.json" with { type: "json" };
 
 // Per-article last-modified dates for the sitemap, read from each markdown
 // file's `lastUpdated` frontmatter (a freshness signal for search engines).
@@ -63,6 +64,11 @@ for (const p of pagesData.pages) {
 if (config.programmatic?.areasIndexable !== true) {
   NOINDEX.add("/areas");
   for (const a of areasData.areas) NOINDEX.add(`/areas/${a.slug}`);
+}
+// Programmatic /glossary spoke pages ship noindex-first too — same gate.
+if (config.programmatic?.glossaryIndexable !== true) {
+  NOINDEX.add("/glossary");
+  for (const t of glossaryData.terms) NOINDEX.add(`/glossary/${t.slug}`);
 }
 
 const pathOf = (url) => new URL(url).pathname.replace(/\/$/, "");

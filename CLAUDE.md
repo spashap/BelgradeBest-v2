@@ -152,6 +152,18 @@ NOT deployed): `gen-internal-links.mjs` (append-only `linksTo` filler),
 Facebook tokens are set; add profile URLs to `brand.sameAs`). New config keys:
 `brand.logoPath`, `brand.sameAs`, `seo.defaultOgImage`, `seo.twitterSite`.
 
+## Knowledge pages — `/glossary` (hub-and-spoke SEO, built 2026-06-22)
+
+First "knowledge pages" spoke set (spec: `KB/automation/knowledge-pages-spec.md`),
+same machinery as `/areas`: data `src/data/glossary.json` → lib `src/lib/glossary.ts`
+(`validTerm` thin-content guard) → pages `src/pages/glossary/[term].astro` +
+`index.astro` → branded SVG thumbs (`scripts/gen-glossary-thumbs.mjs`). Per page:
+`Article` + `DefinedTerm` + `BreadcrumbList` + `FAQPage` JSON-LD. **Ships
+noindex-first** behind `site-config.json → programmatic.glossaryIndexable` (`false`).
+The multiplier is the owner-run `scripts/gen-glossary-links.mjs`, which wraps the
+first mention of each term in article bodies in a link to its spoke (append-only,
+idempotent). Run/publish steps: `KB/automation/RUNBOOK.md → Knowledge pages`.
+
 ## Commands
 
 ```bash
@@ -171,6 +183,16 @@ build scripts once (`npm approve-scripts esbuild`, `sharp`; `protobufjs` in admi
   self-verify** (verify non-visible things by static inspection of `dist/`).
 - Commit/push only when asked. The remote is `spashap/BelgradeBest-v2` (set it up if
   absent). End commit messages with the Co-Authored-By trailer.
+- **ALWAYS update `scripts/commit-message.txt` as the final step of any change set the
+  owner will push.** When run with no argument, `push-to-git.bat` commits this file
+  VERBATIM via `git commit -F` (first line = subject, rest = body), so write it as a
+  complete commit message and **end it with the `Co-Authored-By: Claude
+  <noreply@anthropic.com>` trailer**. A stale file = a misleading commit. The owner has
+  had to remind about this repeatedly — do it automatically, before telling them to run
+  the bat. (The bat reads the file directly, so punctuation in the message is always safe.)
+- `push-to-git.bat` now pulls (`--no-rebase --no-edit -X theirs`) before pushing, because
+  the question-radar job commits its feed to GitHub and can leave origin ahead of the
+  owner's machine. Don't remove that sync step.
 
 ## What NOT to do
 

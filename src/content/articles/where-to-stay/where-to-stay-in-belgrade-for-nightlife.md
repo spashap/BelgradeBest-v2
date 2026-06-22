@@ -41,9 +41,9 @@ faqs:
 
 If a great night out is the point of your trip, base yourself in one of Belgrade's three central nightlife zones:
 
-- **Savamala / Beton Hala and the Sava riverfront** — clubs, bars and river restaurants, with the closest access to the floating splav clubs in season.
+- **Savamala / Beton Hala and the Sava riverfront** — clubs, bars and river restaurants, with the closest access to the floating [splav](/glossary/splav) clubs in season.
 - **Dorćol, around Strahinjića Bana and Cetinjska** — the city's café-and-bar belt, lively and walkable, with a more neighbourhood feel.
-- **Stari Grad, around Skadarlija** — the bohemian kafana quarter, traditional music and old-town bars a few minutes from Republic Square.
+- **Stari Grad, around [Skadarlija](/glossary/skadarlija)** — the bohemian [kafana](/glossary/kafana) quarter, traditional music and old-town bars a few minutes from Republic Square.
 
 All three are central, walkable to each other, and put the action on your doorstep. But there is one rule that beats every "best area" list: **the perfect nightlife location is usually a bad sleep location.** A flat directly above a bar street on Strahinjića Bana, on the Beton Hala riverfront, or on cobbled Skadarska gives you a wonderful night and a terrible morning — noise carries until the early hours, and you will hear it.
 
@@ -80,7 +80,7 @@ Dorćol is the move if you want the bars close but a slightly more local, less t
 
 ## Stari Grad and Skadarlija: the old-town bohemian base
 
-**Stari Grad** is the historic core — Republic Square, Knez Mihailova, Kalemegdan — and the most central, walkable place to stay in Belgrade generally. For nightlife specifically, its draw is **Skadarlija**: the cobblestoned bohemian quarter around Skadarska Street, full of traditional kafanas and live-music venues, a 5–8 minute walk from Republic Square. The adjoining **Cetinjska** pocket bridges it to Dorćol.
+**Stari Grad** is the historic core — Republic Square, Knez Mihailova, [Kalemegdan](/glossary/kalemegdan) — and the most central, walkable place to stay in Belgrade generally. For nightlife specifically, its draw is **Skadarlija**: the cobblestoned bohemian quarter around Skadarska Street, full of traditional kafanas and live-music venues, a 5–8 minute walk from Republic Square. The adjoining **Cetinjska** pocket bridges it to Dorćol.
 
 Staying here means everything is on foot — sights by day, bars and kafanas by night — and you are central enough to reach Savamala and the river quickly. The trade-offs are the classic central-city ones, plus a nightlife edge:
 
@@ -145,8 +145,4 @@ Short-stay nightlife trips often mean apartments, which run different mechanics 
 ## Quick reference
 
 - **Best fit for nightlife:** Savamala / Beton Hala (clubs and river splavovi), Dorćol / Strahinjića Bana / Cetinjska (bars and neighbourhood feel), Stari Grad / Skadarlija (kafanas and old-town walkability).
-- **The one rule:** the perfect nightlife spot is usually a bad sleep spot — stay 5–10 minutes from the loud street, not on it. Prefer courtyard-facing rooms.
-- **Splavovi:** Sava-side rafts are closest from Savamala / Waterfront; warm-season only; moorings shift — confirm before planning around one. Details in the [splavovi guide](/food-and-nightlife/belgrade-splavovi).
-- **Getting home:** official taxi or app, meter on, RSD cash ready; ask reception to call one.
-- **Check before booking:** non-smoking confirmed in writing, late check-in possible, deposit/payment terms clear, host registers your stay, city tax included or separate.
-- **For venues, not beds:** see the [Belgrade nightlife guide](/food-and-nightlife/belgrade-nightlife) and the broader [where to stay in Belgrade](/where-to-stay/where-to-stay-in-belgrade) overview.
+- **The one rule:** the perfect nightlife spot is usually a b

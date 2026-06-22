@@ -46,7 +46,7 @@ This page is the vegetarian and vegan lens. For the dishes themselves, see [Serb
 
 If you want a meal where everything on the menu is suitable, a few dedicated vegan and vegetarian restaurants are worth knowing — and they cluster near the centre, so they're easy to fold into a day of sightseeing.
 
-**Radost Fina Kuhinjica** is the durable anchor and the usual answer to "best vegan restaurant in Belgrade." It serves vegetarian and vegan comfort food — Tex-Mex, burgers, Balkan salads and cakes — in a hidden, garden-set spot near Kalemegdan (reported at Pariska 3, in the Stari Grad old-town core; see [Visit Belgrade](/visit-belgrade/things-to-do-in-belgrade) for the district). It's widely described as the first restaurant in the region dedicated exclusively to vegetarian and vegan cooking, reportedly operating since 2014, and it flags gluten-free options too. Widely reviewed in travel media with a strong visitor reputation, it's the safe recommendation if you only have time for one dedicated venue.
+**Radost Fina Kuhinjica** is the durable anchor and the usual answer to "best vegan restaurant in Belgrade." It serves vegetarian and vegan comfort food — Tex-Mex, burgers, Balkan salads and cakes — in a hidden, garden-set spot near [Kalemegdan](/glossary/kalemegdan) (reported at Pariska 3, in the Stari Grad old-town core; see [Visit Belgrade](/visit-belgrade/things-to-do-in-belgrade) for the district). It's widely described as the first restaurant in the region dedicated exclusively to vegetarian and vegan cooking, reportedly operating since 2014, and it flags gluten-free options too. Widely reviewed in travel media with a strong visitor reputation, it's the safe recommendation if you only have time for one dedicated venue.
 
 **Mayka** is an established vegetarian restaurant with a large menu and notable seitan dishes (a reported standout for anyone after a meaty texture without the meat). It has fewer independent English-language sources than Radost, but it's a reliable second name to keep in mind.
 
@@ -58,47 +58,4 @@ In practice, much of the good plant-based eating in Belgrade happens at venues t
 
 It's worth knowing that "best vegan" lists for the city are frequently dominated by these mainstream venues offering plant-based options, rather than by fully plant-based restaurants. So don't be put off by a steakhouse-heavy menu: a good kitchen here will often build you a satisfying meal if you ask. The practical upshot for a strict vegan is that you have far more options than the short list of dedicated restaurants implies — you just have to flag your needs early and clearly.
 
-## Are there vegetarian options in Serbian cuisine?
-
-Yes — and not just by accident. Some traditional dishes are accidentally plant-friendly, which gives you useful fallbacks almost anywhere. The headline example is prebranac (slow-baked beans with onion, paprika and bay — a protein-rich staple, sometimes called the "king" of the festive table). Salads and certain bakery items are common and frequently meat-free as well.
-
-But the bigger, more reliable lever is the Orthodox fasting tradition, explained next — it's the single most useful thing an outsider can know about eating plant-based here.
-
-The caveat matters throughout: cheese and hidden animal fats are common in Serbian cooking, so vegetarians should clarify ingredients, especially in salads and baked goods. A dish can look meat-free and still be cooked in lard or finished with cheese.
-
-## Posna (fasting) food: the accidental-vegan hack
-
-The most useful word a vegan can learn in Serbia is **posna** (you'll also see *posno* or *posni* — Serbian word endings shift). Posna means "fasting" food. During the Orthodox Christian fasts that punctuate the calendar, observant Serbs avoid meat, dairy and eggs — so dishes prepared in the posna style are made to exclude animal products by tradition, which makes them effectively vegan. Because this is woven into everyday Serbian cooking, "fasting" versions of familiar dishes turn up on ordinary menus, in bakeries and at markets, not just during fasts.
-
-Knowing the word lets you flip a menu. Many traditional dishes have a posna form: as well as prebranac (baked beans), there's posna sarma (cabbage rolls stuffed with rice and walnuts rather than mince), punjena paprika (stuffed peppers in a meat-free version), vegetable risotto (rižoto od povrća), and ajvar — the roasted red-pepper spread you eat with bread. Ask for the posna version and a kitchen will often steer you to a plant-based plate without fuss.
-
-One catch to remember: under Orthodox rules, **fish and honey still count as posna**. So a dish labelled posna can contain fish or honey. If you avoid those too, confirm — but for excluding meat, dairy and eggs, "posna" is your best single cue, and "fasting dishes" are your most dependable plant-based options because they're prepared to exclude animal products by definition.
-
-## Can you eat gluten-free in Belgrade?
-
-Improving, but uneven — plan a little. Few venues advertise formal allergen protocols and dedicated gluten-free restaurants are scarce, though some places flag gluten-free options, including Radost Fina Kuhinjica among the dedicated venues. The big traps are obvious once you know them: wheat is everywhere in Serbia's celebrated bread and pastry culture (burek, bakery items, breaded dishes), and flour can hide as a thickener in stews and sauces.
-
-The practical response is the same as for any allergy here: communicate directly with staff, lead with your need rather than hoping a dish is safe, and be cautious in small kafanas where a single fryer or board makes cross-contamination likely.
-
-## Halal, kosher and allergies
-
-A brief, honest word on related needs. Explicitly halal Serbian-food venues are reported to be rare (indicative, as of 2026); many halal options you'll find are Middle Eastern or fast-food rather than traditional Serbian dishes — vegetarian and fish dishes are a common fallback for Muslim visitors.
-
-Kosher dining is reported to rely largely on self-catering or pre-arranged meals, so plan ahead if this matters to you. Allergy handling is reported as ad hoc — few venues advertise formal allergen protocols. The practical response is to communicate directly with staff, and to be cautious in small kafanas where cross-contamination is likely.
-
-## How to eat well, practically
-
-The short version: English-speaking vegetarians can reportedly now eat well across mid-range and fine-dining venues (indicative, as of 2026), but dedicated vegan restaurants are few and clustered near the centre. Strict vegans should research and reserve ahead rather than wandering and hoping.
-
-A few habits help:
-
-- **Lead with the dedicated anchors** — Radost first, Mayka second — when you want a no-stress, fully-suitable meal.
-- **At mainstream venues, ask the kitchen directly** and mention vegan or gluten-free needs early; a good kitchen will build you a plate.
-- **Learn the word posna** and lean on fasting dishes and prebranac when options look thin — it's the outsider's secret weapon here.
-- **Always check salads and baked goods** for cheese, animal fat, or wheat, and confirm whether a "posna" dish contains fish or honey if you avoid those.
-
-If you're planning your days around food, the wider guide to [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) can help you anchor meals near where you'll already be.
-
-## What's still unknown
-
-The broad shape of the scene — improving, but meat-centred, with dedicated venues few, and the posna tradition a durable help — is stable. The newer end is not. Veggessence and the newer fully-vegan spots are perishable examples drawn largely from social and forum sources, so opening hours, menus and even continued operation can change without notice. Treat any single newer venue as something to confirm on the day rather than rely on.
+## Are the

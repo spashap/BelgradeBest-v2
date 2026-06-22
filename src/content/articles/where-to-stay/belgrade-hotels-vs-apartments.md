@@ -44,7 +44,7 @@ Pick the **type of accommodation by the kind of trip you are taking**, not by th
 - **Short first visit, business trip, or late arrival → a hotel.** Check-in is easy, reception can help with taxis and luggage, your foreigner registration is handled for you, and a non-smoking room is simple to request.
 - **Family, longer stay, or anyone who wants a kitchen and more room for the money → a serviced or private apartment.** You get space, laundry and a more local feel — once you have cleared the registration, payment and booking-safety checks below.
 - **Tight budget or solo and social → a hostel.** Central and cheap, with the usual noise and shared-bathroom trade-offs.
-- **A novelty river stay → a floating raft (splav).** A memorable niche option, not a default base.
+- **A novelty river stay → a floating raft ([splav](/glossary/splav)).** A memorable niche option, not a default base.
 
 The decision really turns on a few apartment-specific differentiators that hotels mostly remove for you: **will the host register you within 24 hours, how do payment and the deposit work, how do you actually get the keys, and is the listing genuine.** Those are the heart of this guide.
 
@@ -171,3 +171,4 @@ There is no single best answer — only the best fit for your trip:
 - **A novelty river night:** a **floating stay**, as an experience rather than a base.
 
 Whatever the type, the same rule holds for apartments: **confirm registration, deposit, key handover and listing safety in writing before you pay.** For choosing the right area to put yourself in, see [where to stay in Belgrade](/where-to-stay/where-to-stay-in-belgrade).
+                                                                          

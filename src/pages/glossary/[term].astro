@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import ArticleHero from "../../components/ArticleHero.astro";
+import MarkdownInline from "../../components/MarkdownInline.astro";
+import InternalLinkBlock from "../../components/InternalLinkBlock.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { SITE, CONFIG } from "../../lib/site";
+import { articleSchema, breadcrumbSchema, faqSchema, definedTermSchema } from "../../lib/schemas";
+import { articlesByHref } from "../../lib/articles";
+import { thumbForPath } from "../../lib/hero";
+import type { RelatedLink } from "../../lib/links";
+import {
+  validTerms,
+  termsByHref,
+  glossarySection,
+  termTitle,
+  termDescription,
+  termBodyMarkdown,
+  type GlossaryTerm,
+} from "../../lib/glossary";
+
+// Programmatic glossary spoke pages — one static page per VALID term record
+// (thin-content guard in lib/glossary.ts). Indexing is gated by the config flag
+// so the set ships noindex-first for review, then flips on with one edit.
+export function getStaticPaths() {
+  return validTerms().map((t) => ({ params: { term: t.slug }, props: { term: t } }));
+}
+
+interface Props {
+  term: GlossaryTerm;
+}
+const { term } = Astro.props;
+
+const indexable = (CONFIG as { programmatic?: { glossaryIndexable?: boolean } }).programmatic?.glossaryIndexable === true;
+const href = `/${glossarySection.slug}/${term.slug}`;
+const url = SITE.origin + href;
+
+const meta = pageMetadata({
+  title: termTitle(term),
+  description: termDescription(term),
+  path: href,
+  noindex: !indexable,
+});
+
+// Resolve related links to render-ready cards. A target is either an ARTICLE
+// (resolved from the content collection — drop hidden/missing) or another
+// GLOSSARY term (spoke-to-spoke link — resolved from the glossary data with its
+// branded SVG thumbnail). Anything that resolves to neither is dropped.
+const byHref = await articlesByHref();
+const glossByHref = termsByHref();
+const targets: RelatedLink[] = [];
+const seen = new Set<string>();
+for (const link of term.related) {
+  if (seen.has(link) || link === href) continue;
+  seen.add(link);
+  const g = glossByHref.get(link);
+  if (g) {
+    targets.push({
+      href: link,
+      title: g.term,
+      body: g.short,
+      heroSrc: `/images/glossary/${g.slug}.svg`,
+      heroAlt: `${g.term} — Belgrade glossary`,
+    });
+    continue;
+  }
+  const a = byHref.get(link);
+  if (!a || a.data.visible === false) continue;
+  const title = a.data.shortTitle || a.data.title;
+  const thumb = thumbForPath(link, title);
+  targets.push({ href: link, title, body: a.data.description, heroSrc: thumb?.src, heroAlt: thumb?.alt });
+}
+
+const body = termBodyMarkdown(term);
+
+const schemas: object[] = [
+  articleSchema({ title: termTitle(term), description: termDescription(term), url }),
+  definedTermSchema({
+    name: term.term,
+    description: term.short,
+    url,
+    setUrl: `${SITE.origin}/${glossarySection.slug}`,
+    setName: glossarySection.title,
+  }),
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: glossarySection.title, url: `${SITE.origin}/${glossarySection.slug}` },
+    { name: term.term, url },
+  ]),
+  faqSchema(term.faqs),
+];
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={glossarySection.eyebrow} title={term.term} lede={term.short} />
+
+  <Container>
+    <ArticleHero src={`/images/glossary/${term.slug}.svg`} alt={`${term.term} — Belgrade glossary`} caption={null} />
+  </Container>
+
+  <Container variant="article">
+    <article class="c-article">
+      <MarkdownInline markdown={body} />
+    </article>
+  </Container>
+
+  <InternalLinkBlock
+    eyebrow="Keep exploring"
+    title="Read next on BelgradeBest"
+    intro="Practical, honest guides and definitions to help you understand Belgrade and plan your trip."
+    targets={targets}
+  />
+
+  <Schema schemas={schemas} />
+</BaseLayout>

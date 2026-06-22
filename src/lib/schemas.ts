@@ -113,6 +113,25 @@ export function faqSchema(items: FaqItem[]) {
   };
 }
 
+// DefinedTerm for glossary spoke pages — declares the page as a dictionary-style
+// definition that belongs to the site's glossary DefinedTermSet (helps "what is X"
+// + AI answer-engine citation). Paired with Article + FAQPage on the same page.
+type DefinedTermInput = { name: string; description: string; url: string; setUrl: string; setName: string };
+export function definedTermSchema(t: DefinedTermInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name: t.name,
+    description: t.description,
+    url: t.url,
+    inDefinedTermSet: {
+      "@type": "DefinedTermSet",
+      name: t.setName,
+      url: t.setUrl,
+    },
+  };
+}
+
 type Crumb = { name: string; url: string };
 export function breadcrumbSchema(crumbs: Crumb[]) {
   return {

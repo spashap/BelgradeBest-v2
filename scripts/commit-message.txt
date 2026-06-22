@@ -1,1 +1,19 @@
-Expo Event JSON-LD: add image/organizer/offers (clears Google rich-result warnings); fix radar feed JSON conflict; push-bat now pulls-then-pushes; add taxis + car-rental articles; contact email -> admin@out25.com
+Build /glossary knowledge-pages spoke set (hub-and-spoke SEO) and publish it
+
+First "knowledge pages" set per KB/automation/knowledge-pages-spec.md, reusing the
+/areas machinery: 11 source-checked Belgrade glossary terms with a thin-content
+guard, DefinedTerm + Article + FAQPage + Breadcrumb JSON-LD, branded SVG thumbs,
+and an append-only/idempotent article->spoke auto-linker. Ships noindex-first
+behind programmatic.glossaryIndexable.
+
+- Add src/data/glossary.json (section + 11 terms), src/lib/glossary.ts (validTerm
+  guard, accessors, body builder), src/pages/glossary/[term].astro + index.astro
+- Add definedTermSchema to src/lib/schemas.ts
+- Add scripts/gen-glossary-thumbs.mjs + public/images/glossary/*.svg (11)
+- Add scripts/gen-glossary-links.mjs (first-mention auto-linker) and apply it:
+  +68 article->spoke links across 32 articles (append-only, integrity-verified)
+- Gate via astro.config.mjs noindex block; set programmatic.glossaryIndexable:true
+  (indexable: enters sitemap + IndexNow ping on prod build)
+- Document in CLAUDE.md, RUNBOOK.md, knowledge-pages-spec.md
+
+Co-Authored-By: Claude <noreply@anthropic.com>

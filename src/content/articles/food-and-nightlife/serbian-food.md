@@ -54,9 +54,9 @@ If you only remember a short list, make it this one. Each dish below says what i
 
 The grill — *roštilj* — is the heart of everyday Serbian eating, and these are the orders you'll see everywhere.
 
-**Ćevapi** (also called ćevapčići) — Serbia's national dish. They are small grilled minced-meat sausages — beef, pork, lamb or a mix — served with flatbread, raw onions and accompaniments like kajmak and ajvar. *Why try it:* this is the quintessential grill order and the single most Serbian thing you can eat — cheap, fast, satisfying and available almost anywhere from a street kiosk to a kafana.
+**Ćevapi** (also called [ćevapčići](/glossary/cevapi)) — Serbia's national dish. They are small grilled minced-meat sausages — beef, pork, lamb or a mix — served with flatbread, raw onions and accompaniments like kajmak and ajvar. *Why try it:* this is the quintessential grill order and the single most Serbian thing you can eat — cheap, fast, satisfying and available almost anywhere from a street kiosk to a [kafana](/glossary/kafana).
 
-**Pljeskavica** — a large grilled minced-meat patty, the Serbian relative of a burger, usually eaten in or alongside flatbread. The Leskovac style (from the south) is a well-known spicy variant. *Why try it:* it's the heartier, hand-held cousin of ćevapi — order it stuffed with kajmak or topped with the spreads for the full effect.
+**[Pljeskavica](/glossary/pljeskavica)** — a large grilled minced-meat patty, the Serbian relative of a burger, usually eaten in or alongside flatbread. The Leskovac style (from the south) is a well-known spicy variant. *Why try it:* it's the heartier, hand-held cousin of ćevapi — order it stuffed with kajmak or topped with the spreads for the full effect.
 
 **Karađorđeva šnicla** — a Serbian signature: a rolled, breaded and fried veal or pork escalope stuffed with kajmak, often served with tartar sauce. *Why try it:* it's the indulgent, restaurant-style dish on this list — rich, crisp on the outside, oozing kajmak inside, and unmistakably Serbian. A great "special occasion" order.
 
@@ -66,54 +66,4 @@ The grill — *roštilj* — is the heart of everyday Serbian eating, and these 
 
 **Sarma** — cabbage rolls: fermented or pickled cabbage leaves stuffed with minced meat and rice, then slow-cooked, often in a rich tomato-and-smoked-meat sauce. *Why try it:* it's arguably the most widely cooked dish in Serbian homes and the comfort food locals miss most when abroad. A winter and special-occasion dish, so it's best in the colder months.
 
-**Prebranac** — slow-baked seasoned beans, a humble staple. *Why try it:* it's deeply traditional, filling, and one of the few classic dishes that is accidentally vegan in its fasting (*posna*) version — useful to know if you're avoiding meat.
-
-## Staples, spreads and breads
-
-Two spreads define Serbian food more than any single dish, so it's worth knowing them before anything else.
-
-**Kajmak** — a clotted-cream dairy spread, rich and mild, somewhere between clotted cream, butter and a young cheese. *Why it matters:* it's the universal accompaniment — smeared on bread, melted over grilled meat, stuffed inside karađorđeva. If a waiter offers it, say yes.
-
-**Ajvar** — a roasted red-pepper relish, smoky and sweet, made by roasting and blending red peppers (sometimes with aubergine). It comes in sweet/mild and hot versions. *Why it matters:* it's the red counterpoint to white kajmak, and the two together are the defining pairing on almost any Serbian plate.
-
-**Urnebes** — a spicy cheese-and-pepper salad and spread from the south of Serbia (the Niš and Leskovac region), made with crumbled cheese, hot peppers and garlic. *Why try it:* it's creamy but genuinely fiery — the dish to order if you actively want heat (see the spice question below).
-
-The bakery is its own institution, and several of the best-loved things to eat in Belgrade come from it rather than the grill.
-
-**Burek** — a flaky, coiled filled pastry (meat, cheese, or other fillings), eaten with yoghurt and treated as a proper meal in its own right, often for breakfast or after a night out. *Why try it:* it's the everyday pastry locals queue for; buttery, generous and very cheap. The cheese and other non-meat versions make it an easy vegetarian win.
-
-**Gibanica** — a layered cheese-and-egg pastry, softer and more custardy than burek. *Why try it:* it's the homely, holiday-table pastry — and a reliable vegetarian option.
-
-**Komplet lepinja** — a rich western-Serbian flatbread dish built with kajmak, gravy and egg, baked together in a flatbread. *Why try it:* it's an indulgent regional speciality and a hearty breakfast that few visitors know to order.
-
-For something fresh on the side, **shopska salad** — tomato, cucumber, pepper and onion, topped with grated white cheese — is the ubiquitous vegetable plate across the Balkans, and a reliable order at any table to balance the meat.
-
-## Is Serbian food spicy?
-
-Mostly, no. Traditional Serbian food is savoury and hearty rather than chilli-hot, so the great majority of dishes — ćevapi, sarma, karađorđeva, burek — are mild. The heat is optional and concentrated in a few southern items: spicy ajvar, **urnebes** (the fiery cheese-and-pepper spread above), **Leskovac-style pljeskavica**, and dishes that come from the south of Serbia, where chilli peppers are part of the local style. In short, you choose your spice level rather than having it forced on you — ask for the *ljuto* (hot) version if you want it, or skip it if you don't.
-
-## Sweets and the pastry shop
-
-Serbian dessert culture sits at a crossroads. There are Ottoman-influenced sweets such as **baklava** (layered filo, nuts and syrup), and Austro-Hungarian-style cakes and custards such as **krempita** (a vanilla custard slice). Both are served in the *poslastičarnica* — the pastry-shop tradition that gives sweets their own dedicated space, separate from the grill and the kafana. *Why it matters:* dessert here is a destination in its own right, not an afterthought tacked onto a restaurant meal — locals go out specifically for cake, ice cream and coffee.
-
-## What do Serbs drink with their food?
-
-**Rakija** — fruit brandy, most iconically *šljivovica* (plum) — is central to Serbian hospitality and table culture. It's drunk before, during and after meals, and offering it is a gesture of welcome. The traditional everyday coffee is **Turkish-style coffee**, served strong, in a small cup, and unhurried.
-
-Rakija, wine, craft beer and coffee each have a deeper home elsewhere in this section of the guide, so here they're named as part of the table rather than explored in depth. Follow the dedicated drink pages when you want the full story on Serbian wine, the brewery scene, or coffee culture.
-
-## How Serbs eat
-
-Meals are long and communal. The **kafana** — the traditional tavern — is the emblematic social eating-and-drinking space, where food and conversation stretch across hours, often with live old-town music. Dishes are frequently shared from central platters rather than plated individually, so eating becomes something you do together rather than alone, with the spreads in the middle and everyone reaching in.
-
-Serbian food is widely described as very affordable by European-capital standards, with generous portions, framing the city as an underrated, good-value food destination (indicative, as of 2026). That value is part of why long, shared meals feel so natural here.
-
-If you'd like to build a day around food and the wider city, the [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) guide helps you fit meals into the rest of a visit.
-
-## Practical notes for foreigners
-
-**Vegetarians and vegans:** you can eat well in Belgrade, but it's worth knowing the cuisine is meat-centred, and cheese and animal fats are common. Some dishes are accidentally plant-friendly — prebranac (beans), *posna* or fasting versions of dishes, cheese-free burek, gibanica and the salads — but it's wise to clarify ingredients before ordering, especially in salads and baked goods where hidden cheese or fat is common. Strict vegans should plan ahead rather than assume.
-
-**Menus and language:** in touristy areas — Knez Mihailova, Skadarlija, Beton Hala and the riverfront — menus are usually bilingual and staff speak at least basic English. In neighbourhood kafanas, menus may be Serbian-only, so learning a few dish names from this page (or using a translation app) goes a long way.
-
-Beyond that, the best approach is simply to lean into how the food is meant to be eaten: order a few things, put the spreads in the middle, take your time, and let the meal run long. That's the heart of Serbian food culture, and it travels well to any table you sit down at.
+**Prebranac** — slow-baked seasoned beans, a humble staple. *Why try it:

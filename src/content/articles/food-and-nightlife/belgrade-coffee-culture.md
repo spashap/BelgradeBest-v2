@@ -44,42 +44,14 @@ Coffee here is less a beverage than a social institution. "Dođi na kafu" — co
 
 ## What is Serbian (domaća) coffee?
 
-Traditional Serbian coffee — domaća kafa, literally "homemade coffee," and also called turska kafa (Turkish coffee) or crna kafa (black coffee) — is the older of the city's two coffee experiences: thick, strong, brewed and served in the traditional way, and central to both home life and kafana culture. It is finely-ground, unfiltered coffee simmered in a small copper pot called a džezva, then poured into a small cup, usually with sugar and a glass of water on the side.
+Traditional Serbian coffee — domaća kafa, literally "homemade coffee," and also called turska kafa (Turkish coffee) or crna kafa (black coffee) — is the older of the city's two coffee experiences: thick, strong, brewed and served in the traditional way, and central to both home life and [kafana](/glossary/kafana) culture. It is finely-ground, unfiltered coffee simmered in a small copper pot called a džezva, then poured into a small cup, usually with sugar and a glass of water on the side.
 
 The brewing is unhurried by design. The water (and sugar, if you take it) is brought up to heat, the ground coffee is added and briefly brought up again so a rich foam — pena, sometimes called kajmak — forms on top, and the grounds are left to settle to the bottom of the cup. You do not drink it fast: you let it settle, you sip slowly, and you let the conversation stretch out. It is traditionally served with a piece of ratluk (Turkish delight) alongside, the sweetness balancing the bitterness. It is less a quick caffeine hit than a reason to sit down.
 
-Because this style of coffee is so bound up with the kafana — the traditional tavern where coffee and rakija both live — we leave the full story of those rooms to our guide to [Belgrade kafanas](/food-and-nightlife/belgrade-kafanas). For now it is enough to know that a Turkish coffee in a kafana or an old-fashioned café is part of the everyday social fabric, not a tourist ritual.
+Because this style of coffee is so bound up with the kafana — the traditional tavern where coffee and [rakija](/glossary/rakija) both live — we leave the full story of those rooms to our guide to [Belgrade kafanas](/food-and-nightlife/belgrade-kafanas). For now it is enough to know that a Turkish coffee in a kafana or an old-fashioned café is part of the everyday social fabric, not a tourist ritual.
 
 ## Where is the best specialty coffee in Belgrade? The Dorćol scene
 
 For specialty coffee, head to Dorćol. The modern specialty wave is built around single-origin beans, micro-roasting and careful brewing — espresso and pour-over rather than the traditional džezva — and this scene is widely reported to cluster in Dorćol, the central district just north and north-east of Republic Square, where micro-roasters and specialty cafés are concentrated. Dorćol is one of the central districts you may already be exploring; we leave its full character to our overview of [Belgrade's neighbourhoods](/visit-belgrade/belgrade-neighborhoods) and treat it here simply as the specialty-coffee heart of the city.
 
-The roaster most often named as the anchor of this movement is **D59B**, whose original café **Pržionica** opened in 2012 and is reported to be the city's oldest specialty-coffee roaster; it roasts on-site in Dorćol's former industrial quarter and is a regular fixture in specialty-coffee coverage of the city. Treat it as an illustrative landmark rather than the only address: individual specialty cafés open, move and close faster than any guide can keep up with, so we deliberately avoid pinning the whole scene to a single name. The cluster itself — and the standard of coffee you can expect from it — is the durable fact. Walk a few blocks through Dorćol and you will find it.
-
-## What is Belgrade café culture actually like?
-
-Whatever you order, the texture of café life here is consistent: outdoor, social and lingering. Locals sit for long coffee-and-conversation sessions, and cafés function as everyday meeting places — and, in the specialty spots, increasingly as co-working spaces too. The unwritten rule is that nobody is rushing you. A single coffee can hold a table for an hour or more, and that is entirely normal.
-
-That same no-rush culture is why Belgrade has become a comfortable city for remote workers: the specialty cafés of Dorćol and Vračar double as informal co-working spaces, the broadband is reliable, and you will not be moved on after forty-five minutes. Digital nomads tend to gravitate to the specialty spots for exactly this reason — good coffee and an unhurried table — but, as with the roasters, specific laptop-friendly cafés are perishable, so the durable advice is to look for a specialty café in Dorćol or Vračar rather than a fixed address (as of 2026).
-
-This slow café culture is one of the most pleasant, low-cost things to do in the city — a way to watch Belgrade go about its day. If you are still building an itinerary, our list of [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) sits naturally alongside an afternoon spent doing very little over a cup.
-
-## How much does coffee cost in Belgrade?
-
-A traditional Turkish coffee in an everyday, non-touristy café is commonly reported at around 150–300 RSD, with prime locations charging more; specialty coffee and dessert-shop prices vary widely. Treat all of these as indicative as of 2026 and check current menus rather than relying on a fixed figure. Either way, lingering over coffee is one of the cheaper pleasures of the city — the cost of the cup buys you the table for as long as you want it.
-
-## Sweets and the poslastičarnica tradition
-
-Coffee in Belgrade rarely travels alone. The poslastičarnica — the pastry and sweet shop — is its natural companion, and a handful of these institutions are old enough to count as landmarks in their own right.
-
-**Pelivan** is widely described as the oldest pastry shop in Belgrade, and arguably in Serbia, reported to have operated since 1851. That mid-19th-century pedigree makes it the obvious starting point for anyone curious about the city's sweet tradition. **Specijal** is a family pastry shop reported to have stood in the same spot since 1963, later adding a gelato concept — six decades in one place, and still going.
-
-For a single famous order, the pastry shop at **Hotel Moskva** is known for the "Moskva šnit" cake, a frequently-cited must-try woven into the fabric of the historic hotel itself. It is the kind of thing locals will tell a visitor to try at least once.
-
-On the more modern end, **Crna Ovca** is an artisan ice-cream brand reported to be popular across the city and a regular fixture in dessert guides. It is younger than the historic houses but has built a strong enough following to feel durable.
-
-Beyond these, Belgrade has a churn of newer dessert venues — doughnut shops, crêperies, matcha and wagashi-style spots — that English-language blogs cover enthusiastically. They are worth seeking out if that is your thing, but they are inherently perishable, so we mention them as a category rather than a fixed list. The historic houses are the safe bets; the trend spots are a moving target.
-
-## How to use the scene
-
-The simplest approach is to let the two coffee worlds do different jobs. Use a traditional Turkish coffee — in a kafana or an old-style café — to slow down and soak up the social texture. Use Dorćol's specialty cafés when you want a precisely-made espresso or pour-over and, perhaps, a quiet corner to work. Then pair either with a stop at one of the historic poslastičarnice. None of this needs booking, planning or rushing; that is rather the point.
+The roaster most often named as the anchor of this movement is **D59B**, whose original café **Pržionica** opened in 2012 and is reported to be the city's oldest specialty-coffee roaster; it 

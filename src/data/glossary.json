@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "section": {
+    "slug": "glossary",
+    "eyebrow": "Belgrade explained",
+    "title": "Belgrade A–Z glossary",
+    "lede": "Plain-English definitions of the Belgrade words travellers actually run into — on menus, on the river, and in everyday life. Each entry explains what the term means, why it matters, and what to expect."
+  },
+  "terms": [
+    {
+      "slug": "kafana",
+      "term": "Kafana",
+      "localTerm": "Кафана",
+      "category": "Food & drink",
+      "pronunciation": "ka-FA-na",
+      "aliases": ["kafanas", "kafane"],
+      "short": "A kafana is a traditional Serbian tavern — an unpretentious place for grilled meat, rakija, strong coffee and, often, live music, and it sits at the heart of Belgrade's social life.",
+      "body": "A kafana is the Serbian equivalent of a tavern or old-school bistro: a cosy, usually informal place built around food, drink and long conversation rather than fast service. The classic kafana serves home-style Serbian cooking — grilled meats, salads, bean stew, cheese and bread — washed down with rakija, domestic beer or wine. Many are decorated with old photographs and memorabilia, and the best-known ones have been trading for a century or more.\n\nWhat makes a kafana more than just a restaurant is its role as a social institution. Historically it was where people met to talk politics, do business, mourn and celebrate, and that spirit survives. Evenings often bring live music — frequently traditional starogradska (\"old town\") songs or a small band moving between tables — and meals are meant to be unhurried.\n\nFor a visitor, a kafana is the most authentic way to eat and drink in Belgrade. Expect generous portions, table service, and a bill that is usually very reasonable by Western European standards. The densest cluster of historic kafanas is along Skadarlija, the city's old bohemian street.",
+      "related": ["/food-and-nightlife/belgrade-kafanas", "/glossary/rakija", "/glossary/skadarlija", "/food-and-nightlife/serbian-food"],
+      "faqs": [
+        { "question": "What is the difference between a kafana and a restaurant?", "answer": "A restaurant is judged mainly on its food; a kafana is judged on the whole experience — homely Serbian cooking, rakija and wine, an unhurried pace and often live traditional music. Kafanas are usually more informal and more social, and many double as a neighbourhood meeting place rather than just somewhere to eat." },
+        { "question": "What should I order in a Belgrade kafana?", "answer": "Start with a rakija (fruit brandy) and a plate of cheese, kajmak and bread, then move to grilled meats such as ćevapi or a mixed grill, or a slow-cooked dish like sarma or pasulj (bean stew). It's normal to share several plates across the table." }
+      ]
+    },
+    {
+      "slug": "rakija",
+      "term": "Rakija",
+      "localTerm": "Ракија",
+      "category": "Food & drink",
+      "pronunciation": "RA-kee-ya",
+      "aliases": ["rakias", "rakijas", "šljivovica", "sljivovica"],
+      "short": "Rakija is a strong fruit brandy that is Serbia's national drink — typically 40% alcohol or higher, distilled from plums, grapes, quinces or other fruit, and offered as a welcome and a toast.",
+      "body": "Rakija is a distilled fruit spirit and the unofficial national drink of Serbia. It is usually around 40% alcohol by volume, and home-made versions can be considerably stronger. The most iconic type is šljivovica, made from plums, but rakija is also distilled from grapes (lozovača), quinces (dunjevača), apricots, pears and other fruit, so a single name covers a whole family of brandies.\n\nRakija is woven into social life. It is offered to guests on arrival, used to toast at celebrations, and drunk slowly before or after a meal rather than as a party shot. The customary toast is \"živeli\" (cheers). Many families take pride in home-distilled rakija, and being offered someone's homemade batch is a mark of hospitality.\n\nFor visitors, rakija is the natural thing to order in a kafana or to bring home as a gift. It is best sipped, not knocked back — the good stuff is meant to be tasted. Bottled brands are sold in every supermarket, while bars and specialist rakija bars pour a wide range by the glass.",
+      "related": ["/food-and-nightlife/serbian-food", "/glossary/kafana", "/food-and-nightlife/belgrade-kafanas"],
+      "faqs": [
+        { "question": "How strong is rakija?", "answer": "Commercially bottled rakija is usually about 40% alcohol by volume, similar to whisky or vodka. Home-distilled rakija can be stronger — sometimes well above 50% — so treat an offered homemade glass with respect and sip it slowly." },
+        { "question": "What is the most popular type of rakija?", "answer": "Šljivovica, made from plums, is the classic and most iconic Serbian rakija. Grape-based lozovača and quince dunjevača are also common. They differ in aroma and smoothness, so it's worth trying a few." }
+      ]
+    },
+    {
+      "slug": "splav",
+      "term": "Splav",
+      "localTerm": "Сплав",
+      "category": "Nightlife",
+      "pronunciation": "splav",
+      "aliases": ["splavovi", "splavs"],
+      "short": "A splav is a floating barge on the Sava or Danube that operates as a bar, club or restaurant — the splavovi are a defining feature of Belgrade's summer nightlife.",
+      "body": "A splav (plural splavovi) is a raft or barge moored on the bank of the Sava or Danube and fitted out as a bar, nightclub or restaurant. They line several stretches of riverbank, and together they form one of the things Belgrade is most famous for after dark. In summer especially, much of the city's nightlife moves onto the water.\n\nThe splavovi range widely in style. Some are loud, high-energy clubs with big-name DJs and bottle service that run until dawn; others are relaxed café-bars or floating restaurants where you sit out over the river with a drink and a meal. Music spans electronic, pop, and Serbian turbo-folk, so it pays to pick a splav that matches the night you want.\n\nMany splavovi are seasonal, busiest from late spring through early autumn, and the bigger clubs may have dress codes or guest lists at the weekend. They are spread out along the rivers, so a taxi or ride-hailing app is the usual way to reach them.",
+      "related": ["/food-and-nightlife/belgrade-splavovi", "/food-and-nightlife/belgrade-nightlife"],
+      "faqs": [
+        { "question": "What is a splav in Belgrade?", "answer": "A splav is a barge or raft floating on the Sava or Danube that has been turned into a bar, club or restaurant. Collectively, the splavovi are a signature part of Belgrade's nightlife, particularly in the warmer months." },
+        { "question": "When is the splav season?", "answer": "The river-club scene is busiest from roughly late spring to early autumn, when the open-air splavovi come fully to life. Some operate year-round in an enclosed form, but the classic experience is a warm summer night out on the water." }
+      ]
+    },
+    {
+      "slug": "menjacnica",
+      "term": "Menjačnica",
+      "localTerm": "Мењачница",
+      "category": "Practical",
+      "pronunciation": "men-YACH-nee-tsa",
+      "short": "A menjačnica is a licensed currency-exchange office. They are common across Belgrade, usually offer better rates than airports or hotels, and exchange cash quickly with no commission.",
+      "body": "A menjačnica is a registered currency-exchange bureau. You will see them throughout central Belgrade — on shopping streets, in malls and near markets — marked with the word \"menjačnica\" and a rate board. They exchange foreign cash for Serbian dinars (RSD) and vice versa, and licensed ones generally offer noticeably better rates than the airport or hotel desks.\n\nUsing one is straightforward: hand over your cash, and you are paid at the displayed rate. Reputable menjačnice do not charge a separate commission — the rate is the rate — and they are obliged to give a receipt. It is still worth comparing the buy/sell spread at one or two before changing a large sum, and counting your money before leaving the counter.\n\nSerbia uses the dinar, not the euro, so some cash exchange is usually necessary even though cards are widely accepted. Euros are the easiest foreign currency to change; rates for other currencies vary more.",
+      "related": ["/plan-your-trip/money", "/glossary/busplus"],
+      "faqs": [
+        { "question": "Are menjačnica exchange offices in Belgrade safe to use?", "answer": "Yes — licensed menjačnice are legitimate, regulated businesses and are generally the cheapest way to change cash, usually beating airport and hotel rates. Use one with a clearly displayed rate board, confirm there is no commission, and always take the receipt." },
+        { "question": "Do I need cash in Belgrade or can I use cards?", "answer": "Cards are accepted in most hotels, restaurants and shops, but you will still want some dinars in cash for markets, small cafés, taxis and tips. Changing a moderate amount of euros at a menjačnica on arrival covers most needs." }
+      ]
+    },
+    {
+      "slug": "cevapi",
+      "term": "Ćevapi",
+      "localTerm": "Ћевапи",
+      "category": "Food & drink",
+      "pronunciation": "CHE-va-pee",
+      "aliases": ["ćevapčići", "cevapcici", "cevapi", "ćevap", "cevap"],
+      "short": "Ćevapi are small grilled sausages of minced meat — the most iconic Serbian street food and grill dish, served in flatbread (lepinja) with chopped onion and kajmak.",
+      "body": "Ćevapi (singular ćevap; also called ćevapčići) are little fingers of seasoned minced meat, grilled over charcoal. They are the cornerstone of Balkan grill cooking and one of the defining tastes of Belgrade. The meat is usually a beef or beef-and-lamb mix, and the appeal is in the char, the spicing and the freshness off the grill.\n\nThe standard serving is five or ten ćevapi tucked into a warm, soft flatbread called lepinja or somun, with finely chopped raw onion on the side and often a spoon of kajmak (a rich clotted-cream spread) and ajvar (roasted red-pepper relish). It is eaten by hand as fast food or on a plate in a grill restaurant (roštiljnica).\n\nĆevapi are cheap, filling and everywhere — from kiosks and bakeries to dedicated grill houses. They sit alongside pljeskavica (a large grilled patty) as the two dishes most visitors should try at least once.",
+      "related": ["/food-and-nightlife/belgrade-grill-and-street-food", "/glossary/pljeskavica", "/food-and-nightlife/serbian-food"],
+      "faqs": [
+        { "question": "What are ćevapi made of?", "answer": "Ćevapi are small grilled rolls of minced meat, most often beef or a beef-and-lamb blend, seasoned and shaped by hand before being charcoal-grilled. They are typically served in lepinja flatbread with raw onion and kajmak." },
+        { "question": "How do you eat ćevapi?", "answer": "The classic way is in a warm flatbread (lepinja) with chopped onion and a spread of kajmak, eaten by hand. A portion is usually five or ten pieces, and ajvar (pepper relish) is a common addition." }
+      ]
+    },
+    {
+      "slug": "pljeskavica",
+      "term": "Pljeskavica",
+      "localTerm": "Пљескавица",
+      "category": "Food & drink",
+      "pronunciation": "plyes-KA-vee-tsa",
+      "aliases": ["pljeskavice"],
+      "short": "Pljeskavica is a large, flat grilled patty of seasoned minced meat — often described as the Serbian burger — served in flatbread or on a plate with traditional toppings.",
+      "body": "Pljeskavica is a big, thin, charcoal-grilled patty of minced meat, related to ćevapi but formed into a single round rather than small sausages. It is one of the staples of Serbian grill cooking and a direct counterpart to the hamburger, though the meat, spicing and toppings make it distinctly Balkan.\n\nIt is commonly served either in a soft bun or flatbread as a hand-held meal, or on a plate with side dishes. Toppings and styles vary: a popular version is the gurmanska or \"gourmet\" pljeskavica stuffed with cheese and kajmak, and it is usually finished with onion, ajvar, kajmak or urnebes (a spicy cheese spread).\n\nLike ćevapi, pljeskavica is inexpensive and widely available, from late-night grill kiosks to sit-down restaurants. Trying both is a good way to understand the heart of everyday Belgrade eating.",
+      "related": ["/food-and-nightlife/belgrade-grill-and-street-food", "/glossary/cevapi", "/food-and-nightlife/serbian-food"],
+      "faqs": [
+        { "question": "Is pljeskavica the same as a burger?", "answer": "It's the closest Serbian equivalent — a grilled minced-meat patty in bread — but it is typically larger and thinner than a Western burger, more heavily seasoned, charcoal-grilled, and dressed with Balkan toppings like kajmak, ajvar and raw onion rather than ketchup and lettuce." },
+        { "question": "What is a gurmanska pljeskavica?", "answer": "A gurmanska (\"gourmet\") pljeskavica is a richer version in which the patty is stuffed or layered with cheese and kajmak, making it juicier and more indulgent than the plain version." }
+      ]
+    },
+    {
+      "slug": "burek",
+      "term": "Burek",
+      "localTerm": "Бурек",
+      "category": "Food & drink",
+      "pronunciation": "BU-rek",
+      "aliases": ["bureks", "bureci"],
+      "short": "Burek is a flaky, coiled pastry of thin filo layers filled with meat, cheese or other fillings — a hugely popular Belgrade breakfast and snack, sold by weight in bakeries.",
+      "body": "Burek is a baked pastry made from thin sheets of filo-style dough layered or coiled around a filling and baked until golden and flaky. The most traditional filling is minced meat, but cheese (sa sirom), spinach-and-cheese, and potato versions are everywhere. It is a defining food of Belgrade's bakeries (pekare) and one of the most popular quick meals in the city.\n\nIt is most associated with breakfast, often eaten with a drink of plain or fruit yoghurt, but bakeries sell it all day. You usually order it by weight — pointing at the tray and asking for a portion — and it is handed over hot. Round, coiled bureks and tray-baked slices are both common.\n\nBurek is cheap, filling and meat-free options are easy to find, which makes it a reliable on-the-go meal for visitors. A piece of burek and a yoghurt is one of the most authentic and economical breakfasts in Belgrade.",
+      "related": ["/food-and-nightlife/belgrade-grill-and-street-food", "/food-and-nightlife/serbian-food", "/food-and-nightlife/vegetarian-and-vegan-belgrade"],
+      "faqs": [
+        { "question": "What is burek filled with?", "answer": "The classic filling is minced meat, but cheese, spinach-and-cheese, and potato bureks are all widely sold. Cheese and vegetable versions make burek an easy vegetarian option." },
+        { "question": "How do you order burek in Belgrade?", "answer": "Go to a bakery (pekara), point at the type you want, and it is usually sold and priced by weight, then served hot. It pairs traditionally with a cup of plain or fruit yoghurt." }
+      ]
+    },
+    {
+      "slug": "skadarlija",
+      "term": "Skadarlija",
+      "localTerm": "Скадарлија",
+      "category": "Places",
+      "pronunciation": "ska-DAR-lee-ya",
+      "short": "Skadarlija is Belgrade's historic bohemian quarter — a short cobbled street lined with traditional kafanas, long associated with the city's poets, artists and musicians.",
+      "body": "Skadarlija is a cobblestoned street and the surrounding quarter that is Belgrade's old bohemian district. Centred on Skadarska Street, it became, in the late 19th and early 20th centuries, the haunt of writers, actors and musicians, and it is often compared to the Montmartre of Paris for that artistic association.\n\nToday Skadarlija is best known for its concentration of traditional kafanas, several of which have operated for over a hundred years. In the evenings the street fills with diners, and live traditional music — strolling bands playing old Belgrade songs — moves among the tables. The setting, with its cobbles, lanterns and period facades, is deliberately atmospheric.\n\nIt is one of the most visitor-friendly places to experience a classic kafana evening, a short walk from Republic Square in the city centre. It can be touristy and prices run a little higher than a neighbourhood kafana, but it remains a genuine piece of Belgrade's cultural history.",
+      "related": ["/food-and-nightlife/belgrade-kafanas", "/glossary/kafana", "/visit-belgrade/things-to-do-in-belgrade"],
+      "faqs": [
+        { "question": "What is Skadarlija known for?", "answer": "Skadarlija is Belgrade's historic bohemian street, famous for its cobblestones, period atmosphere and cluster of traditional kafanas with live old-town music. It has long been linked to the city's writers, artists and musicians." },
+        { "question": "Is Skadarlija worth visiting?", "answer": "Yes, especially for an evening meal in a historic kafana with live music — it's one of the easiest ways to experience traditional Belgrade dining. It is popular and a little pricier than ordinary neighbourhood kafanas, but the setting is unique and it is central." }
+      ]
+    },
+    {
+      "slug": "ada-ciganlija",
+      "term": "Ada Ciganlija",
+      "localTerm": "Ада Циганлија",
+      "category": "Places",
+      "pronunciation": "A-da tsi-GAN-lee-ya",
+      "short": "Ada Ciganlija is a former river island on the Sava turned into Belgrade's main beach and recreation area — nicknamed \"Belgrade's sea\" for its lake, swimming and summer crowds.",
+      "body": "Ada Ciganlija is a river island on the Sava that was connected to the bank and dammed to create an artificial lake, Savsko jezero. It is Belgrade's most popular outdoor recreation spot, and locals affectionately call it \"Belgrade's sea\" (Beogradsko more) because of its long pebble-and-grass beaches and swimming water close to the city.\n\nIn summer it draws huge crowds for swimming, sunbathing and watersports. Around the lake there are walking and cycling paths, cafés and bars, and facilities for activities ranging from kayaking and paddleboarding to bungee jumping. It functions as a green escape from the city heat and is easy to reach from the centre.\n\nOutside the swimming season it remains a pleasant place to walk, run or cycle, with forested paths around the water. For visitors in the warmer months, it is the obvious place to cool off without leaving Belgrade.",
+      "related": ["/visit-belgrade/things-to-do-in-belgrade", "/visit-belgrade/belgrade-day-trips"],
+      "faqs": [
+        { "question": "Why is Ada Ciganlija called Belgrade's sea?", "answer": "It is a dammed river island whose lake has long pebble-and-grass beaches and swimming water, so Belgraders treat it as their seaside — hence the nickname \"Belgrade's sea\" (Beogradsko more). It's the city's main place to swim and sunbathe in summer." },
+        { "question": "What can you do at Ada Ciganlija?", "answer": "In summer: swim, sunbathe, and try watersports like kayaking and paddleboarding. Year-round you can walk, run or cycle the lakeside paths, and there are cafés, bars and adventure activities such as bungee jumping." }
+      ]
+    },
+    {
+      "slug": "kalemegdan",
+      "term": "Kalemegdan",
+      "localTerm": "Калемегдан",
+      "category": "Places",
+      "pronunciation": "ka-le-MEG-dan",
+      "short": "Kalemegdan is the large park surrounding the Belgrade Fortress, set on the ridge above the confluence of the Sava and Danube — the city's central green space and most-visited landmark.",
+      "body": "Kalemegdan is the park that wraps around the Belgrade Fortress (Beogradska tvrđava), occupying the high ground where the Sava meets the Danube. The fortress has been fought over and rebuilt for two thousand years, and the surrounding park is the city's historic heart and its biggest central green space. In everyday speech \"Kalemegdan\" is used for the whole fortress-and-park complex.\n\nInside you will find the fortress ramparts and gates, the Victor monument overlooking the rivers, the Military Museum, Belgrade Zoo, churches, an open-air collection of military hardware, and wide viewpoints over the water — among the best free views in the city. Paths, lawns and shaded benches make it a place locals come to stroll, sit and watch the sunset.\n\nEntry to the park is free and it is right beside the old town and the Knez Mihailova promenade, which makes it the natural first stop for any visitor. Individual museums and attractions inside may charge admission.",
+      "related": ["/visit-belgrade/things-to-do-in-belgrade", "/visit-belgrade/belgrade-museums"],
+      "faqs": [
+        { "question": "What is the difference between Kalemegdan and the Belgrade Fortress?", "answer": "The Belgrade Fortress is the historic citadel itself; Kalemegdan is the large park surrounding it. In practice people use \"Kalemegdan\" loosely to mean the whole fortress-and-park area above the Sava–Danube confluence." },
+        { "question": "Is Kalemegdan free to visit?", "answer": "Yes — the park and fortress grounds are free to enter and open daily, and the river viewpoints cost nothing. Some attractions inside, such as the Military Museum and the zoo, charge separate admission." }
+      ]
+    },
+    {
+      "slug": "busplus",
+      "term": "BusPlus",
+      "localTerm": "БусПлус",
+      "category": "Practical",
+      "pronunciation": "bus-plus",
+      "short": "BusPlus was Belgrade's public-transport smart-card and ticketing system. It has been discontinued — city buses, trams and trolleybuses are now free to ride, with no ticket or card needed.",
+      "body": "BusPlus was the electronic ticketing system for Belgrade's public transport — a contactless smart card you topped up and tapped to pay for buses, trams and trolleybuses. For years it was the standard way to pay fares, and travellers still search for it when planning a trip.\n\nIt is no longer needed. Belgrade phased out paid fares and, from 1 January 2025, made its city and suburban public transport free for all passengers, making it the largest city in Europe to do so. There is no longer any ticket, card or app required to ride the regular network: you simply board a bus, tram or trolleybus and take a seat.\n\nA few special services sit outside the free network and are paid on board — most notably the A1 airport minibus and certain express (E) lines. But for ordinary city travel, the old BusPlus card is history and getting around by public transport costs nothing.",
+      "related": ["/plan-your-trip/getting-around", "/plan-your-trip/money"],
+      "faqs": [
+        { "question": "Do I still need a BusPlus card in Belgrade?", "answer": "No. Belgrade made its city buses, trams and trolleybuses free for everyone from 1 January 2025, and the BusPlus ticketing system is no longer in use. You just board and ride — no card, ticket or app is required for the regular network." },
+        { "question": "Is all public transport in Belgrade free now?", "answer": "Regular city and suburban buses, trams and trolleybuses are free. A few special services are still paid on board, including the A1 airport minibus and some express (E) lines, but everyday public transport within the city costs nothing." }
+      ]
+    }
+  ]
+}

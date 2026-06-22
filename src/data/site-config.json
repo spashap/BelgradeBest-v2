@@ -22,7 +22,8 @@
     "homeNoindex": false
   },
   "programmatic": {
-    "areasIndexable": true
+    "areasIndexable": true,
+    "glossaryIndexable": true
   },
   "expo": {
     "name": "Expo 2027 Belgrade",

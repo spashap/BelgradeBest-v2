@@ -65,7 +65,7 @@ For the exact routes from each base to the venue (and from the airport), see [ge
 
 ## Staying in the historic centre: Stari Grad and Vračar
 
-If you came for Belgrade as much as for the Expo, base in the **old town**. The historic core — **Stari Grad** around Knez Mihailova, Republic Square and Kalemegdan, plus neighbouring **Vračar** and **Dorćol** — is the walkable, café-dense, nightlife-rich city most visitors picture. You can sightsee on foot and step out to restaurants and bars without a car.
+If you came for Belgrade as much as for the Expo, base in the **old town**. The historic core — **Stari Grad** around Knez Mihailova, Republic Square and [Kalemegdan](/glossary/kalemegdan), plus neighbouring **Vračar** and **Dorćol** — is the walkable, café-dense, nightlife-rich city most visitors picture. You can sightsee on foot and step out to restaurants and bars without a car.
 
 The cost is the commute. The centre sits on the right bank of the Sava, so every Expo day means a cross-river trip out to Surčin on the western edge of town. That is manageable, but it is a real daily journey rather than a short hop, and traffic during a major event is unpredictable.
 
@@ -94,12 +94,4 @@ Two consequences follow:
 - **Rooms near Surčin and in New Belgrade will go first** and command premium prices. Early booking is how you secure both the location and a sane rate.
 - **Apartments and outlying stays will fill the gap.** Private apartments are expected to absorb much of the overflow, and shuttle links from neighbouring cities such as Novi Sad and Šabac have been floated to tap rooms beyond Belgrade. These are fallback options if central and near-site hotels are gone.
 
-We deliberately do not quote specific prices or live availability here — those numbers move week to week and would be out of date almost immediately. The durable advice is the strategy: **book early, book flexible.** Reserve a refundable room as soon as you commit to the dates, then keep an eye out for better-located or better-priced rooms as the calendar fills. For the booking-platform mechanics and apartment-versus-hotel detail, see the [where to stay guide](/where-to-stay).
-
-## Quick reference
-
-- **Site:** Surčin, western Belgrade — ~15 km from the centre, ~5 km from Nikola Tesla Airport, between New Belgrade and the Sava.
-- **Closest base:** New Belgrade / Surčin (airport side) — shortest commute, newest hotels, quieter setting.
-- **City base:** Stari Grad / Vračar — historic, walkable Belgrade, longer cross-river commute.
-- **Best all-round:** New Belgrade — sits between the two.
-- **Booking:** roughly 8,000 hotel rooms in 2026 plus ~2,000 planned, against 4 million-plus expected visitors — book early and flexible.
+We deliberately do not quote specific prices or live availability here — those numbers move week to week and would be out of date almost immediately. The durable advice is the strategy: **book early, book flexible.** Reserve a refundable room as soon as you commit to the dates, then keep an eye out for better-located or better-priced rooms as the calendar fills. For the booking-platform mechanics and apartment-versu

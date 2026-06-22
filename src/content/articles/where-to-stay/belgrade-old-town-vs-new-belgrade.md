@@ -49,7 +49,7 @@ Both can work for almost anyone. The difference is what you optimise for: the Ol
 
 ## How are the two sides laid out?
 
-Belgrade sits where the **Sava** and **Danube** rivers meet. The historic core is on the right bank, east and south-east of the confluence, with **Kalemegdan Fortress** overlooking the meeting of the rivers and **Republic Square** and **Knez Mihailova** as the most useful central orientation points.
+Belgrade sits where the **Sava** and **Danube** rivers meet. The historic core is on the right bank, east and south-east of the confluence, with **[Kalemegdan](/glossary/kalemegdan) Fortress** overlooking the meeting of the rivers and **Republic Square** and **Knez Mihailova** as the most useful central orientation points.
 
 **Stari Grad** is the central old-city district on that right bank. It covers the historic core between the river confluence and the Terazije–Slavija ridge, and it packs the main sights, museums, theatres, restaurants and nightlife into a dense, walkable grid.
 
@@ -62,7 +62,7 @@ Stari Grad is the most central tourist area, and it is the area the Tourist Orga
 - Republic Square and Knez Mihailova.
 - The National Museum and National Theatre.
 - Kalemegdan Fortress.
-- Skadarlija, the bohemian kafana street.
+- [Skadarlija](/glossary/skadarlija), the bohemian [kafana](/glossary/kafana) street.
 - Dorćol and Kosančićev Venac.
 - A large share of the city's restaurants, bars and hotels.
 
@@ -146,4 +146,4 @@ Whatever you find, confirm the final rate, the small per-night city tax, and any
 - Have an early flight or want to be near the airport without staying at it.
 - Are planning a trip built around Expo 2027 on the western side of the city.
 
-If you are torn, a useful compromise is a New Belgrade block on the **Sava riverfront facing the Old Town**, or the **Ušće** area, where you get modern space and bridge access while keeping the historic side within a short hop. Either way, match the area to your reason for visiting, and confirm the practical details, parking, elevator, non-smoking status and tourist registration, with the property before you commit.
+If you are torn, a useful compromise is a New Belgrade block on the **Sava riverfront facing the Old Town**, or the **Ušće** area, where you get modern space and bridge access while keeping the historic side within a short hop. Either way, match the area to your reason for vis

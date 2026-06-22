@@ -43,7 +43,7 @@ faqs:
 
 ## Where should you stay in Belgrade?
 
-For most first-time visitors, the best fit is **Stari Grad** (the Old Town), **Dorćol** or **Savamala** — all central, all on the right bank, all within walking distance of Republic Square, Knez Mihailova and the Kalemegdan fortress. If you want quiet and family comfort instead, lean toward **Vračar**, **New Belgrade** or **Zemun**. If you are here for business or Expo 2027, the **New Belgrade** side is usually the most practical. And if you want a slower, romantic, Danube-side stay, **Zemun** is the one to reach for.
+For most first-time visitors, the best fit is **Stari Grad** (the Old Town), **Dorćol** or **Savamala** — all central, all on the right bank, all within walking distance of Republic Square, Knez Mihailova and the [Kalemegdan](/glossary/kalemegdan) fortress. If you want quiet and family comfort instead, lean toward **Vračar**, **New Belgrade** or **Zemun**. If you are here for business or Expo 2027, the **New Belgrade** side is usually the most practical. And if you want a slower, romantic, Danube-side stay, **Zemun** is the one to reach for.
 
 That is the short answer. The rest of this page gives you the orientation to choose with confidence, a brief on each main area, and the handful of local stay-mechanics — registration, the city tax, smoking rooms, quiet hours, heating season — that quietly shape a Belgrade booking. It is a hub, not a hotel list: it points you to the deeper pages where each decision gets its own treatment.
 
@@ -59,7 +59,7 @@ Different trips reward different bases. Here is the one-line version for the mos
 
 - **First-time short break:** Stari Grad, Dorćol or Savamala — maximum walkability to the sights.
 - **Couple, cafés and culture:** Dorćol, Vračar or Zemun — more neighbourhood feel.
-- **Nightlife:** Savamala and Beton Hala, the Dorćol bar pockets, or Stari Grad around Skadarlija.
+- **Nightlife:** Savamala and Beton Hala, the Dorćol bar pockets, or Stari Grad around [Skadarlija](/glossary/skadarlija).
 - **Family with kids:** Vračar, New Belgrade or a quieter part of Zemun — space and calm over bar streets.
 - **Business or conference:** New Belgrade or central Savski Venac.
 - **Longer stay or digital nomad:** Dorćol, Vračar, New Belgrade or Zemun.
@@ -118,4 +118,4 @@ For booking safety, the general rule is to use a protected platform or a verifia
 
 ## Choosing well
 
-If you take only one thing from this page: pick the area for your trip, then check the exact street and building before you pay, because in Belgrade the micro-location often matters more than the district name. A first-timer is usually happiest in Stari Grad, Dorćol or Savamala; a family or a longer stay in Vračar, New Belgrade or Zemun; a business or Expo trip on the New Belgrade side. From there, the deeper persona and comparison pages — starting with the [first-time guide](/where-to-stay/where-to-stay-in-belgrade-first-time) — take each choice further, while the [neighbourhoods overview](/visit-belgrade/belgrade-neighborhoods) fills in the character of the districts themselves.
+If you take only one thing from this page: pick the area for your trip, then check the exact street and building before you pay, because in Belgrade the micro-location often matters more than the district name. A first-timer is usually happiest in Stari Grad, Dorćol or Savamala; a family or a longer stay in Vračar, New Belgrade or Zemun; a business or Expo trip on the New Belgrade side. From there, the deeper persona and comparison pages — starting with the [first-time guide](/where-to-st

@@ -30,11 +30,11 @@ REM Ensure a git identity exists (commit fails silently without one).
 git config user.email >nul 2>&1 || git config user.email "spashap@gmail.com"
 git config user.name  >nul 2>&1 || git config user.name  "Pavel"
 
-REM Commit message: (1) whatever you type after the filename, else (2) the first
-REM line of scripts\commit-message.txt, else (3) a timestamp.
+REM Commit message source:
+REM   (1) text you type after the filename -> used as the commit subject, or
+REM   (2) scripts\commit-message.txt        -> committed verbatim with -F, so any
+REM       punctuation in the message ( ) / : < > can NEVER break this script.
 set "MSG=%*"
-if "%MSG%"=="" if exist "%~dp0commit-message.txt" set /p MSG=<"%~dp0commit-message.txt"
-if "%MSG%"=="" set "MSG=Update BelgradeBest site (%date% %time%)"
 
 echo Staging all changes...
 git add -A
@@ -42,8 +42,18 @@ git add -A
 REM Commit only if something is staged.
 git diff --cached --quiet
 if errorlevel 1 (
-  echo Committing: !MSG!
-  git commit -m "!MSG!" -m "Co-Authored-By: Claude <noreply@anthropic.com>"
+  if defined MSG (
+    echo Committing your message: !MSG!
+    git commit -m "!MSG!" -m "Co-Authored-By: Claude <noreply@anthropic.com>"
+  ) else (
+    if exist "%~dp0commit-message.txt" (
+      echo Committing from scripts\commit-message.txt ...
+      git commit -F "%~dp0commit-message.txt"
+    ) else (
+      echo Committing with a timestamp message ...
+      git commit -m "Update BelgradeBest site (%date% %time%)" -m "Co-Authored-By: Claude <noreply@anthropic.com>"
+    )
+  )
 ) else (
   echo No changes to commit - pushing any unpushed commits anyway.
 )

@@ -42,7 +42,7 @@ faqs:
 
 For a first trip of two to four days, **Stari Grad (Old Town) is the safe default**, and the best fit for most first-timers. Staying here usually puts you within an easy walk of the city's headline sights, so you lose less time getting around and see more of Belgrade on foot.
 
-Belgrade sits where the **Sava** and **Danube** rivers meet, and the historic core is on the old-city side, just east and south-east of that confluence. **Kalemegdan Fortress** overlooks the meeting of the rivers; **Republic Square** and the pedestrian **Knez Mihailova** street are the two orientation points everything else hangs off. Stari Grad wraps around all three, which is why it is the standard first-visit answer.
+Belgrade sits where the **Sava** and **Danube** rivers meet, and the historic core is on the old-city side, just east and south-east of that confluence. **[Kalemegdan](/glossary/kalemegdan) Fortress** overlooks the meeting of the rivers; **Republic Square** and the pedestrian **Knez Mihailova** street are the two orientation points everything else hangs off. Stari Grad wraps around all three, which is why it is the standard first-visit answer.
 
 If you want something with a little more local character, three central alternatives are worth a look:
 
@@ -59,7 +59,7 @@ Stari Grad is the most central tourist municipality, described officially as Bel
 - Republic Square and Knez Mihailova
 - The National Museum and National Theatre
 - Kalemegdan Fortress and its park
-- Skadarlija, the cobbled bohemian kafana quarter
+- [Skadarlija](/glossary/skadarlija), the cobbled bohemian [kafana](/glossary/kafana) quarter
 - Kosančićev Venac and the Sava-side old streets
 - A dense spread of restaurants, bars and hotels
 
@@ -149,6 +149,4 @@ This is the upside that makes a first visit easy. From Stari Grad, Dorćol or Sa
 
 ## A simple way to decide
 
-If you want the safest, most walkable first-time base, choose **Stari Grad** and pick a quieter side street. If you want central with more local café character, look at **Dorćol**. If river restaurants and nightlife are the point, head to **Savamala**. If you would rather have a calmer, residential central base, especially with family, go for **Vračar**.
-
-Whichever you pick, run the same final checks with the property before you pay: is the room non-smoking, is it quiet (courtyard-facing if central), will they register your stay, is there an elevator if you need one, and is the city tax included or added separately. Get those confirmed and a first Belgrade trip is hard to get wrong.
+If you want the safest, most walkable first-time base, choose **Stari Grad** and pick a quieter side street. If you want central with more local café character, look at **Dorćol**. If river restaurants and nightlife are the point, head to **Savamala**. If you woul

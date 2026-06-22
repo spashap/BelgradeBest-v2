@@ -51,7 +51,7 @@ The law allows hotels, motels, hostels and other accommodation facilities to per
 
 In plain terms: smoke-free rooms are part of how the system is meant to work, but designated smoking rooms are legal, so a property can have both. That is exactly why you confirm rather than guess.
 
-A note on **restaurants, cafés and bars**, since smoke-sensitive visitors usually ask: the same law lets food-and-drink venues set up designated smoking and non-smoking areas, or smoking rooms, under conditions, and smaller venues can choose to be entirely smoking or entirely non-smoking if they meet the rules. The practical upshot is that some Belgrade cafés and kafanas can still be smoky indoors. That is a dining-out question rather than an accommodation one, so plan for it separately, but it is the same legal background.
+A note on **restaurants, cafés and bars**, since smoke-sensitive visitors usually ask: the same law lets food-and-drink venues set up designated smoking and non-smoking areas, or smoking rooms, under conditions, and smaller venues can choose to be entirely smoking or entirely non-smoking if they meet the rules. The practical upshot is that some Belgrade cafés and [kafanas](/glossary/kafana) can still be smoky indoors. That is a dining-out question rather than an accommodation one, so plan for it separately, but it is the same legal background.
 
 ## How do I avoid a smoky room in Belgrade?
 
@@ -97,4 +97,4 @@ For families and smoke-sensitive travellers who also want a calmer base, areas l
 
 ## The bottom line
 
-Belgrade can be uncomfortable for smoke-sensitive travellers, because Serbian law permits designated smoking rooms in accommodation. That is the official baseline, not a reason to worry, as long as you act on it: **book a non-smoking property, confirm the exact room or apartment is smoke-free in writing, read recent reviews for smoke keywords, and pick a fully non-smoking place if you have asthma, allergies or young children.** Do that, and a smoke-free stay in Belgrade is straightforward to arrange.
+Belgrade can be uncomfortable for smoke-sensitive travellers, because Serbian law permits designated smoking rooms in accommodation. That is the official baseline, not a reason to worry, as long as you act 

@@ -77,7 +77,7 @@ The trade-offs are different from Dorćol's. Vračar is **not waterfront** and h
 | **Feel** | Eclectic, café/bar, going-out energy | Central-residential, calmer, lived-in |
 | **Rivers** | Slopes toward the Danube; river walk close | Not on a river |
 | **Best for** | Couples, younger travellers, nomads, nightlife, repeat visitors | Families, longer stays, calm central base |
-| **Sights nearby** | Old core, Kalemegdan, Danube quay | Saint Sava Temple, Nikola Tesla Museum |
+| **Sights nearby** | Old core, [Kalemegdan](/glossary/kalemegdan), Danube quay | Saint Sava Temple, Nikola Tesla Museum |
 | **Nightlife** | Strong (Strahinjića Bana, Cetinjska) | Low — a feature, not a bug |
 | **Noise risk** | Higher in nightlife pockets | Mainly traffic near Slavija / big boulevards |
 | **Lodging type** | Apartment-dominated; listing quality varies | Apartments and hotels; residential blocks |
@@ -124,4 +124,4 @@ Two final practical notes. Book through a protected platform or a verifiable age
 
 ## Dorćol vs Vračar, in short
 
-Both are excellent "central but local" bases, so the decision is about the kind of trip you want. Choose **Dorćol** for café-and-nightlife energy, an eclectic feel and closeness to the Danube and the old core — and be willing to vet the exact street and listing. Choose **Vračar** for a calmer, residential base that suits families and longer stays, accepting that it is inland and can be pricier. Get the micro-location right in either, confirm the checks above before you arrive, and the rest of central Belgrade is easy to enjoy on foot.
+Both are excellent "central but local" bases, so the decision is about the kind of trip you want. Choose **Dorćol** for café-and-nightlife energy, an eclectic feel and closeness to the Danube and the old core — and be willing to vet the exact street and listing. Choose **Vračar** for a calmer, residential base that suits families and longer stays, accepting that it is inland and can be pricier. Get the micro-location right in either, confirm the checks abo

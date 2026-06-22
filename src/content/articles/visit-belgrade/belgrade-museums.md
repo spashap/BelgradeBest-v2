@@ -37,7 +37,7 @@ Belgrade's museums are individually small enough that you can fit two or three i
 
 The core set worth your time is the Nikola Tesla Museum, the National Museum of Serbia, the Museum of Contemporary Art (MoCAB), the Museum of Yugoslavia with the House of Flowers, the Military Museum and the Ethnographic Museum. The Historical Museum of Serbia, the Natural History Museum and the commercial Museum of Illusions sit a tier below as options rather than essentials.
 
-Geographically they cluster in three places. Most sit in or beside the historic core on the right bank — the National Museum on Republic Square, the Military Museum inside Kalemegdan fortress, the Ethnographic and Historical museums on central squares, and the Tesla Museum a short hop south in Vračar — so you can chain several on foot. The Museum of Yugoslavia stands apart, up the hill toward the Dedinje and Senjak embassy districts south of the centre, reached by tram or bus. MoCAB is the one across the water, in New Belgrade at Ušće on the far bank of the Sava. Plan the right-bank cluster as one walking day and treat the Museum of Yugoslavia and MoCAB as separate trips.
+Geographically they cluster in three places. Most sit in or beside the historic core on the right bank — the National Museum on Republic Square, the Military Museum inside [Kalemegdan](/glossary/kalemegdan) fortress, the Ethnographic and Historical museums on central squares, and the Tesla Museum a short hop south in Vračar — so you can chain several on foot. The Museum of Yugoslavia stands apart, up the hill toward the Dedinje and Senjak embassy districts south of the centre, reached by tram or bus. MoCAB is the one across the water, in New Belgrade at Ušće on the far bank of the Sava. Plan the right-bank cluster as one walking day and treat the Museum of Yugoslavia and MoCAB as separate trips.
 
 ## Nikola Tesla Museum (Vračar)
 
@@ -73,26 +73,4 @@ Tickets are 800 RSD full; 600 RSD for Serbian residents; 200 RSD for resident st
 
 ## Military Museum (Kalemegdan)
 
-Where it is: inside Belgrade Fortress (Kalemegdan), on the ridge above the Sava–Danube confluence at the north-west edge of the old town, a short walk from Republic Square along Knez Mihailova. Because it sits within the fortress park, you can combine it with the walls, viewpoints and the wider park in a single visit.
-
-Inside Kalemegdan fortress, the Military Museum covers Serbian and regional military history, with outdoor hardware displayed in the surrounding park. As of 2026 it opens Tuesday to Sunday 10:00–17:00, with the last ticket sold at 16:00, and closes on Mondays and on specified holidays (1–2 January, 7 January, 1–2 May and 11 November). Tickets are 350 RSD for adults, 250 RSD for students and pupils, and 500 RSD for a family, with group discounts available.
-
-## Ethnographic Museum
-
-Where it is: centrally located in the Stari Grad old town, within easy walking distance of Republic Square and the Knez Mihailova pedestrian area, so it slots neatly into a right-bank walking day.
-
-One of the region's notable ethnographic collections, centrally located. As of 2026 it opens Thursday to Tuesday 10:00–20:00 and closes on Wednesdays, with ticket sales stopping 30 minutes before closing. Permanent-exhibition tickets are 600 RSD for adults, 300 RSD reduced, and 700 RSD for a family of up to five, with group rates; a guided-group option runs at around 1,000 RSD per group. Free admission on Mondays is reported.
-
-## Secondary museums
-
-The **Historical Museum of Serbia** sits at Trg Nikole Pašića 11, a central square just east of Terazije and a few minutes' walk from Republic Square, so it is firmly inside the right-bank cluster. It is exhibition-driven; its main location opens Tuesday to Sunday 12:00–20:00, with last entry at 19:00, and closes on Mondays. Ticket prices sit on the individual exhibition pages, and 2026 pricing is not published as a fixed figure on the official source — so check imus.org.rs rather than relying on a quoted price.
-
-Also present in the visitor set are the **Natural History Museum** and the commercial **Museum of Illusions** — both worth a brief mention as options rather than core stops.
-
-## Free-admission days at a glance
-
-If you're watching costs, the recurring free days are worth planning around, though they are perishable and stated here as current as of 2026: MoCAB is free on the first Wednesday of each month, the Museum of Yugoslavia on the first Thursday, the National Museum every Sunday, and the Ethnographic Museum on Mondays (reported). Because these rules change, confirm on the relevant official site before you rely on one.
-
-## What's still unknown
-
-The Historical Museum of Serbia does not publish a single fixed 2026 ticket price on its official site — prices live on each exhibition's page — so we don't quote a figure here. Everything in this guide is indicative as of 2026; hours, prices and free-day rules are the most perishable details, and the official museum sites are always the final word.
+Where it is: inside Belgrade Fortress (Kalemegdan), on the ridge above the Sava–Danube confluence at the north-west edge of the old town, a 

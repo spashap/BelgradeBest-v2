@@ -131,6 +131,61 @@ node scripts/gen-area-thumbs.mjs --force   # → public/images/areas/<slug>.svg
 Optionally link to the area pages from existing articles (admin → Links, or by
 hand) once they're indexable, to pass them internal-link equity.
 
+## Knowledge pages — Belgrade glossary (hub-and-spoke SEO, built 2026-06-22)
+
+The first "knowledge pages" spoke set from `KB/automation/knowledge-pages-spec.md`:
+a programmatic **glossary** of granular "what is X" definition pages, linked down
+from the hand-written articles (hubs) and back up (spokes). Same machinery as
+`/areas` — data file + lib guard + two pages + SVG thumbs + noindex-first flag.
+
+- **Route:** `/glossary` (hub, A–Z) + `/glossary/<term>` (e.g. `/glossary/kafana`).
+- **Data:** `src/data/glossary.json` — `section` + 11 source-checked terms shipped
+  (kafana, rakija, splav, menjačnica, ćevapi, pljeskavica, burek, skadarlija,
+  ada-ciganlija, kalemegdan, busplus). Each record: `term, localTerm, category,
+  pronunciation?, aliases?, short, body, related[], faqs[]`.
+- **Thin-content guard** (`src/lib/glossary.ts → validTerm`): a record missing a
+  real definition (`short` ≥40, `body` ≥280) or lacking ≥1 related link / ≥1 FAQ
+  is simply NOT generated — no weak page can ship.
+- **Schema:** each page emits `Article` + `DefinedTerm` (in a `DefinedTermSet`) +
+  `BreadcrumbList` + `FAQPage` JSON-LD (`lib/schemas.ts → definedTermSchema`).
+- **Cross-links:** a record's `related` may point to articles OR other glossary
+  terms (`/glossary/rakija`); the page resolves both into "Read next" cards.
+- **Ships noindex-first.** `site-config.json → programmatic.glossaryIndexable` is
+  `false`, so pages build but carry `noindex` and stay out of the sitemap +
+  IndexNow until reviewed. **Nothing to install.**
+
+**Thumbnails** are lightweight branded SVGs (no API cost), one per term, used as
+the card thumbnail and page hero. Already generated to `public/images/glossary/`.
+Regenerate after editing `glossary.json`:
+
+```bash
+node scripts/gen-glossary-thumbs.mjs --force   # → public/images/glossary/<slug>.svg
+```
+
+**The auto-linker (the multiplier)** — `scripts/gen-glossary-links.mjs` wraps the
+**first mention** of each term in every article body in a link to its spoke page.
+Append-only, idempotent, one link per term per article; skips headings, code and
+text already inside a link; touches only the body, never frontmatter.
+
+```bash
+node scripts/gen-glossary-links.mjs            # REPORT → KB/seo/glossary-link-suggestions.md
+node scripts/gen-glossary-links.mjs --write    # apply to src/content/articles/**.md
+node scripts/gen-glossary-links.mjs --write food-and-nightlife/serbian-food  # limit to article(s)
+```
+A dry run currently proposes **68 links across 32 articles** — review the report,
+then `--write` and review the git diff. (Not yet applied — owner runs `--write`.)
+
+**To review then publish:**
+1. `npm run build` — confirm `.vercel/output/static/glossary/index.html` and
+   `…/glossary/kafana/index.html` exist; `npm run dev` → open `/glossary` and a few
+   term pages; view source for the `DefinedTerm` + `FAQPage` JSON-LD and `noindex`.
+2. Optionally run `node scripts/gen-glossary-links.mjs --write` and review the diff
+   to pass article→spoke link equity (recommended before flipping indexable).
+3. When happy, set `programmatic.glossaryIndexable: true` in `site-config.json`,
+   rebuild and push → the hub + term pages enter the sitemap and get IndexNow-pinged.
+4. To grow the set: append records to `glossary.json` (same shape, demand-validate
+   topics from `/admin/radar`), regenerate thumbs, re-run the auto-linker, rebuild.
+
 ## #9 Content-freshness monitor (built 2026-06-21)
 
 Read-only scan that flags articles whose perishable facts (prices, rates, years,
@@ -207,3 +262,12 @@ Second batch (#5 + #9 — added 2026-06-21, **not yet pushed**):
   `.github/workflows/freshness.yml`.
 - Changed: `astro.config.mjs` (areas import + noindex gating),
   `src/data/site-config.json` (`programmatic.areasIndexable` flag).
+
+Third batch (knowledge pages / glossary — added 2026-06-22, **not yet pushed**):
+- Added: `src/data/glossary.json`, `src/lib/glossary.ts`,
+  `src/pages/glossary/[term].astro`, `src/pages/glossary/index.astro`,
+  `scripts/gen-glossary-thumbs.mjs`, `scripts/gen-glossary-links.mjs`,
+  `public/images/glossary/*.svg` (11 thumbnails).
+- Changed: `src/lib/schemas.ts` (`definedTermSchema`), `astro.config.mjs`
+  (glossary import + noindex gating), `src/data/site-config.json`
+  (`programmatic.glossaryIndexable: false`).

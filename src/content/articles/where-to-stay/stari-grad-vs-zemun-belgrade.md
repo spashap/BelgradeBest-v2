@@ -46,7 +46,7 @@ Neither is "the best" in the abstract. They trade off differently on walkability
 
 ## Where do these two areas sit?
 
-Belgrade sits where the **Sava** and **Danube** rivers meet, and the historic core is on the old-city side, just east and south-east of that confluence. **Kalemegdan Fortress** overlooks the meeting of the rivers, and **Republic Square** with the pedestrian **Knez Mihailova** street are the two orientation points everything else hangs off.
+Belgrade sits where the **Sava** and **Danube** rivers meet, and the historic core is on the old-city side, just east and south-east of that confluence. **[Kalemegdan](/glossary/kalemegdan) Fortress** overlooks the meeting of the rivers, and **Republic Square** with the pedestrian **Knez Mihailova** street are the two orientation points everything else hangs off.
 
 **Stari Grad** wraps around all three. It is the most central tourist municipality — described officially as Belgrade's tourist, cultural, historical and business heart — so a base here usually puts the classic sights a short walk away.
 
@@ -59,7 +59,7 @@ Stari Grad is the safe default for a first Belgrade visit, and the best fit for 
 - Republic Square and Knez Mihailova
 - The National Museum and National Theatre
 - Kalemegdan Fortress and its park
-- Skadarlija, the cobbled bohemian kafana quarter
+- [Skadarlija](/glossary/skadarlija), the cobbled bohemian [kafana](/glossary/kafana) quarter
 - Kosančićev Venac and the Sava-side old streets
 - A dense spread of restaurants, bars and hotels
 
@@ -132,6 +132,4 @@ Whichever you pick, run the same final checks with the property before you pay. 
 - **Noise.** Stari Grad's bar streets and Zemun's quay restaurants can both run late. Ask whether the room faces the street or a courtyard, and check recent reviews for noise.
 - **Building access.** Both areas have older buildings. Confirm whether there is an elevator, which floor the unit is on, and whether there are entrance steps — Zemun's Gardoš streets are also steep and narrow.
 - **Tourist tax.** Belgrade charges a small per-night residence tax (160 RSD per day for adults as of the latest official source, with reductions for children and exemptions for long stays), collected by the property. Hotels often build it into the rate; apartments may add it as a separate line, so check the house rules.
-- **City tax and payment terms.** For apartments especially, confirm whether the city tax is included, how you get the keys, and whether a deposit or advance payment applies — and keep payment inside a protected booking platform or a verifiable agency.
-
-If you want the full picture of every Belgrade neighbourhood and how they compare, the [where to stay in Belgrade](/where-to-stay/where-to-stay-in-belgrade) overview lays them all out. And if Zemun's atmosphere is pulling at you, the [Zemun](/visit-belgrade/zemun) guide covers what there is to see and do once you are there.
+- **City 

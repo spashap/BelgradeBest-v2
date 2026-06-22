@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import Grid from "../../components/Grid.astro";
+import Card from "../../components/Card.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { SITE, CONFIG } from "../../lib/site";
+import { breadcrumbSchema } from "../../lib/schemas";
+import { validTerms, glossarySection } from "../../lib/glossary";
+
+// Hub for the programmatic glossary spoke pages. noindex-first, same as the term
+// pages, until `programmatic.glossaryIndexable` is flipped on. Sorted A–Z.
+const terms = validTerms().slice().sort((a, b) => a.term.localeCompare(b.term));
+const indexable = (CONFIG as { programmatic?: { glossaryIndexable?: boolean } }).programmatic?.glossaryIndexable === true;
+
+const meta = pageMetadata({
+  title: `${glossarySection.title} — Belgrade & Serbian words explained`,
+  description: glossarySection.lede,
+  path: `/${glossarySection.slug}`,
+  noindex: !indexable,
+});
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: glossarySection.title, url: `${SITE.origin}/${glossarySection.slug}` },
+  ]),
+];
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={glossarySection.eyebrow} title={glossarySection.title} lede={glossarySection.lede} />
+
+  <Container>
+    <Grid>
+      {
+        terms.map((t) => (
+          <Card
+            href={`/${glossarySection.slug}/${t.slug}`}
+            title={t.term}
+            body={t.short}
+            src={`/images/glossary/${t.slug}.svg`}
+            imgAlt={`${t.term} — Belgrade glossary`}
+          />
+        ))
+      }
+    </Grid>
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>
