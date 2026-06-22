@@ -14,6 +14,8 @@ behind programmatic.glossaryIndexable.
   +68 article->spoke links across 32 articles (append-only, integrity-verified)
 - Gate via astro.config.mjs noindex block; set programmatic.glossaryIndexable:true
   (indexable: enters sitemap + IndexNow ping on prod build)
+- List /glossary + /areas in /llms.txt so AI answer engines discover the spokes
 - Document in CLAUDE.md, RUNBOOK.md, knowledge-pages-spec.md
+- Harden scripts/push-to-git.bat: commit the message file via -F (punctuation-safe)
 
 Co-Authored-By: Claude <noreply@anthropic.com>

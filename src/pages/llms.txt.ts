@@ -2,6 +2,8 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { SITE, CONFIG } from "../lib/site";
 import { clusters } from "../lib/clusters";
+import { validTerms, glossarySection } from "../lib/glossary";
+import { validAreas, areaSection } from "../lib/areas";
 
 // /llms.txt — a clean, link-first map of the site for LLM answer engines
 // (ChatGPT, Perplexity, Google AI Overviews, Claude). Follows the llms.txt
@@ -53,6 +55,37 @@ export const GET: APIRoute = async () => {
       lines.push(`- [${clean(a.data.title)}](${url}): ${clean(a.data.description)}`);
     }
     lines.push("");
+  }
+
+  // Programmatic knowledge sets (data-driven, not in the articles collection):
+  // list them here too so answer engines see the long-tail definition/area pages.
+  // Each is gated by its own indexable flag, so it stays out while noindex-first.
+  const prog = (CONFIG as { programmatic?: { areasIndexable?: boolean; glossaryIndexable?: boolean } }).programmatic ?? {};
+  if (prog.glossaryIndexable === true) {
+    const terms = validTerms().slice().sort((a, b) => a.term.localeCompare(b.term));
+    if (terms.length) {
+      lines.push(`## ${glossarySection.title}`);
+      lines.push("");
+      lines.push(clean(glossarySection.lede));
+      lines.push("");
+      for (const t of terms) {
+        lines.push(`- [${clean(t.term)}](${SITE.origin}/${glossarySection.slug}/${t.slug}): ${clean(t.short)}`);
+      }
+      lines.push("");
+    }
+  }
+  if (prog.areasIndexable === true) {
+    const areas = validAreas();
+    if (areas.length) {
+      lines.push(`## ${areaSection.title}`);
+      lines.push("");
+      lines.push(clean(areaSection.lede));
+      lines.push("");
+      for (const a of areas) {
+        lines.push(`- [${clean(a.name)}](${SITE.origin}/${areaSection.slug}/${a.slug}): ${clean(a.lede)}`);
+      }
+      lines.push("");
+    }
   }
 
   // Key non-article pages.
