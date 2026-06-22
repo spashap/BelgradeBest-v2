@@ -1,22 +1,44 @@
 {
-  "generatedAt": "2026-06-21T13:51:35.987Z",
+  "generatedAt": "2026-06-22T11:43:37.834Z",
   "items": [
+    {
+      "id": "1ubvfj1",
+      "title": "Hot take: A large percentage of digital nomads are terrible at finding good deals on lodging",
+      "url": "https://www.reddit.com/r/digitalnomad/comments/1ubvfj1/hot_take_a_large_percentage_of_digital_nomads_are/",
+      "sub": "r/digitalnomad",
+      "comments": 40,
+      "topics": [
+        "stay",
+        "apartment",
+        "neighborhood",
+        "transport",
+        "bus",
+        "taxi",
+        "money",
+        "bar",
+        "worth it"
+      ],
+      "score": 35.1,
+      "isQuestion": true,
+      "firstSeen": "2026-06-22T11:43:37.834Z",
+      "lastSeen": "2026-06-22T11:43:37.834Z"
+    },
     {
       "id": "1uautjo",
       "title": "r/Belgrade, where do you actually eat in Belgrade?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uautjo/rbelgrade_where_do_you_actually_eat_in_belgrade/",
       "sub": "r/Belgrade",
-      "comments": 6,
+      "comments": 7,
       "topics": [
         "area",
         "restaurant",
         "food",
         "see"
       ],
-      "score": 20,
+      "score": 19.5,
       "isQuestion": true,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1ubqdkv",
@@ -28,10 +50,10 @@
         "stay",
         "where to stay"
       ],
-      "score": 17.5,
+      "score": 17,
       "isQuestion": true,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u6cuw5",
@@ -60,10 +82,10 @@
       "topics": [
         "see"
       ],
-      "score": 13.9,
+      "score": 13.5,
       "isQuestion": true,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u6l44k",
@@ -77,25 +99,25 @@
         "bus",
         "see"
       ],
-      "score": 12.5,
+      "score": 12.1,
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u73jv2",
       "title": "Dorcol Restaurant recommendation",
       "url": "https://www.reddit.com/r/Belgrade/comments/1u73jv2/dorcol_restaurant_recommendation/",
       "sub": "r/Belgrade",
-      "comments": 5,
+      "comments": 6,
       "topics": [
         "dorcol",
         "restaurant"
       ],
-      "score": 11.8,
+      "score": 11.4,
       "isQuestion": true,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u9kp47",
@@ -108,10 +130,10 @@
         "airport",
         "taxi"
       ],
-      "score": 11.2,
+      "score": 10.7,
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u98pw0",
@@ -123,10 +145,10 @@
         "neighborhood",
         "days"
       ],
-      "score": 11,
+      "score": 10.6,
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u9yfug",
@@ -137,38 +159,10 @@
       "topics": [
         "see"
       ],
-      "score": 10.4,
+      "score": 10,
       "isQuestion": true,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
-    },
-    {
-      "id": "1uboi2u",
-      "title": "Pop/pop-punk/rock Clubs",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uboi2u/poppoppunkrock_clubs/",
-      "sub": "r/Belgrade",
-      "comments": 3,
-      "topics": [
-        "club"
-      ],
-      "score": 9.5,
-      "isQuestion": false,
-      "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
-    },
-    {
-      "id": "1u7ua4v",
-      "title": "Gde ste Basketaši iz Zemuna, Blok 8, 9, 11... Zašto su tereni prazne?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1u7ua4v/gde_ste_basketaši_iz_zemuna_blok_8_9_11_zašto_su/",
-      "sub": "r/Belgrade",
-      "comments": 10,
-      "topics": [
-        "zemun"
-      ],
-      "score": 9.2,
-      "isQuestion": true,
-      "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u5mkbx",
@@ -187,6 +181,20 @@
       "lastSeen": "2026-06-21T13:51:35.987Z"
     },
     {
+      "id": "1u7ua4v",
+      "title": "Gde ste Basketaši iz Zemuna, Blok 8, 9, 11... Zašto su tereni prazne?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1u7ua4v/gde_ste_basketaši_iz_zemuna_blok_8_9_11_zašto_su/",
+      "sub": "r/Belgrade",
+      "comments": 10,
+      "topics": [
+        "zemun"
+      ],
+      "score": 8.8,
+      "isQuestion": true,
+      "firstSeen": "2026-06-21T13:51:35.987Z",
+      "lastSeen": "2026-06-22T11:43:37.834Z"
+    },
+    {
       "id": "1u9uvlw",
       "title": "WORLD CUP LATE GAMES",
       "url": "https://www.reddit.com/r/Belgrade/comments/1u9uvlw/world_cup_late_games/",
@@ -195,24 +203,38 @@
       "topics": [
         "bar"
       ],
-      "score": 8.4,
+      "score": 7.9,
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
-      "id": "1ub1px3",
-      "title": "Rude customer service and taxi drivers",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1ub1px3/rude_customer_service_and_taxi_drivers/",
+      "id": "1ucf625",
+      "title": "Botox",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ucf625/botox/",
       "sub": "r/Belgrade",
-      "comments": 40,
+      "comments": 4,
       "topics": [
-        "taxi"
+        "area"
       ],
-      "score": 6.1,
+      "score": 6.4,
+      "isQuestion": false,
+      "firstSeen": "2026-06-22T11:43:37.834Z",
+      "lastSeen": "2026-06-22T11:43:37.834Z"
+    },
+    {
+      "id": "1uboi2u",
+      "title": "Pop/pop-punk/rock Clubs",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uboi2u/poppoppunkrock_clubs/",
+      "sub": "r/Belgrade",
+      "comments": 4,
+      "topics": [
+        "club"
+      ],
+      "score": 6,
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u5lqg6",
@@ -244,6 +266,20 @@
       "lastSeen": "2026-06-21T13:51:35.987Z"
     },
     {
+      "id": "1ub1px3",
+      "title": "Rude customer service and taxi drivers",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ub1px3/rude_customer_service_and_taxi_drivers/",
+      "sub": "r/Belgrade",
+      "comments": 40,
+      "topics": [
+        "taxi"
+      ],
+      "score": 5.6,
+      "isQuestion": false,
+      "firstSeen": "2026-06-21T13:51:35.987Z",
+      "lastSeen": "2026-06-22T11:43:37.834Z"
+    },
+    {
       "id": "1u8r0m5",
       "title": "Konačno uvedena direktna autobuska linija između Srbije i Rumunije",
       "url": "https://www.reddit.com/r/serbia/comments/1u8r0m5/konačno_uvedena_direktna_autobuska_linija_između/",
@@ -252,24 +288,24 @@
       "topics": [
         "bus"
       ],
-      "score": 4.7,
+      "score": 4.3,
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u8ah5q",
       "title": "Uzdignuti trolejbus (elevated BRT)",
       "url": "https://www.reddit.com/r/Belgrade/comments/1u8ah5q/uzdignuti_trolejbus_elevated_brt/",
       "sub": "r/Belgrade",
-      "comments": 50,
+      "comments": 54,
       "topics": [
         "bus"
       ],
-      "score": 4.5,
+      "score": 4,
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
       "id": "1u6gdq0",
@@ -280,10 +316,10 @@
       "topics": [
         "club"
       ],
-      "score": 3.5,
+      "score": 3,
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
-      "lastSeen": "2026-06-21T13:51:35.987Z"
+      "lastSeen": "2026-06-22T11:43:37.834Z"
     }
   ]
 }
