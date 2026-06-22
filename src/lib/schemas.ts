@@ -63,7 +63,8 @@ export function articleSchema(a: ArticleInput) {
   };
 }
 
-export function expoEventSchema() {
+export function expoEventSchema(imageUrl?: string) {
+  const image = imageUrl || `${SITE.origin}${(CONFIG.seo as { defaultOgImage?: string }).defaultOgImage ?? "/images/og-default.png"}`;
   return {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -73,6 +74,19 @@ export function expoEventSchema() {
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     description: CONFIG.expo.eventDescription,
+    // Recommended fields Google asks for on Event rich results.
+    image: [image],
+    organizer: {
+      "@type": "Organization",
+      name: EXPO.name,
+    },
+    // Ticketing isn't on sale yet, so this points at our tickets guide and is
+    // marked PreOrder rather than asserting a price we don't have.
+    offers: {
+      "@type": "Offer",
+      url: `${SITE.origin}/expo-2027/tickets`,
+      availability: "https://schema.org/PreOrder",
+    },
     location: {
       "@type": "Place",
       name: `${EXPO.venue}, ${EXPO.city}`,

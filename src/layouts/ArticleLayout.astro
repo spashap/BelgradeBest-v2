@@ -51,7 +51,7 @@ const targets = await relatedFor(leg, d.slug);
 
 const schemas: object[] = [
   articleSchema({ title: d.title, description: d.description, url, dateModified: d.lastUpdated, imageUrl: heroAbs }),
-  ...(leg === "expo-2027" ? [expoEventSchema()] : []),
+  ...(leg === "expo-2027" ? [expoEventSchema(heroAbs)] : []),
   breadcrumbSchema([
     { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
     { name: crumbRoot.name, url: crumbRoot.href },

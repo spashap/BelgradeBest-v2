@@ -1,1 +1,1 @@
-Fix radar feed JSON (resolve merge conflict); push-bat now pulls-then-pushes with auto-resolve; add taxis + car-rental articles; contact email -> admin@out25.com
+Expo Event JSON-LD: add image/organizer/offers (clears Google rich-result warnings); fix radar feed JSON conflict; push-bat now pulls-then-pushes; add taxis + car-rental articles; contact email -> admin@out25.com

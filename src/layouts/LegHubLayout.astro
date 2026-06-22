@@ -29,7 +29,8 @@ const meta = hubMetadata(clusterSlug);
 const legHero = heroForLeg(clusterSlug);
 const planned = getPlannedChildren(clusterSlug);
 const built = new Map((await articlesForLeg(clusterSlug)).map((a) => [a.data.slug, a]));
-const extraSchemas = clusterSlug === "expo-2027" ? [expoEventSchema()] : [];
+const extraSchemas =
+  clusterSlug === "expo-2027" ? [expoEventSchema(legHero ? SITE.origin + legHero.src : undefined)] : [];
 
 function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
