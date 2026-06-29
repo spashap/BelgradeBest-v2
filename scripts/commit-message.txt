@@ -1,21 +1,23 @@
-Build /glossary knowledge-pages spoke set (hub-and-spoke SEO) and publish it
+Redesign /admin Analytics: high-tech dashboard with richer GA4 data
 
-First "knowledge pages" set per KB/automation/knowledge-pages-spec.md, reusing the
-/areas machinery: 11 source-checked Belgrade glossary terms with a thin-content
-guard, DefinedTerm + Article + FAQPage + Breadcrumb JSON-LD, branded SVG thumbs,
-and an append-only/idempotent article->spoke auto-linker. Ships noindex-first
-behind programmatic.glossaryIndexable.
+Replace the three plain GA4/GSC tables with a live operator dashboard. The page
+stays server-rendered (prerender=false) so every load fetches live; adds a
+date-range selector, a Refresh control, a "fetched at" UTC stamp, and a realtime
+"active now" pill. Prioritizes browsing patterns, trends, and traffic sources.
 
-- Add src/data/glossary.json (section + 11 terms), src/lib/glossary.ts (validTerm
-  guard, accessors, body builder), src/pages/glossary/[term].astro + index.astro
-- Add definedTermSchema to src/lib/schemas.ts
-- Add scripts/gen-glossary-thumbs.mjs + public/images/glossary/*.svg (11)
-- Add scripts/gen-glossary-links.mjs (first-mention auto-linker) and apply it:
-  +68 article->spoke links across 32 articles (append-only, integrity-verified)
-- Gate via astro.config.mjs noindex block; set programmatic.glossaryIndexable:true
-  (indexable: enters sitemap + IndexNow ping on prod build)
-- List /glossary + /areas in /llms.txt so AI answer engines discover the spokes
-- Document in CLAUDE.md, RUNBOOK.md, knowledge-pages-spec.md
-- Harden scripts/push-to-git.bat: commit the message file via -F (punctuation-safe)
+- src/lib/admin/analytics.ts: add ga4Overview(days) — one batched pull (2x
+  batchRunReports) returning headline KPIs with period-over-period deltas
+  (visitors/sessions/views/engagement rate/avg engagement/views-per-session),
+  a daily trend series, traffic channels, devices, geo, new-vs-returning,
+  landing pages (sessions/avg-engage/bounce) and top pages (views/users/engage).
+  Add ga4Realtime() for active-users-now. Both degrade gracefully like the
+  existing helpers; existing ga4TopPages/GSC functions kept intact.
+- src/pages/admin/analytics.astro: rebuilt UI in the dark admin shell —
+  KPI stat-cards with up/down deltas, inline-SVG sparklines (no JS chart lib),
+  realtime pulse pill, 7/28/90-day range segmented control, traffic-source/
+  device/geo/new-vs-returning bar lists, landing-page + top-page browsing-
+  pattern tables, retained Search Console queries/pages sections.
+
+No new deps, no DB, public site untouched (admin-only, still noindex).
 
 Co-Authored-By: Claude <noreply@anthropic.com>

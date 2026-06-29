@@ -1,26 +1,271 @@
 ---
 export const prerender = false;
 import AdminLayout from "../../layouts/AdminLayout.astro";
-import { ga4TopPages, searchConsoleTopQueries, searchConsoleTopPages } from "../../lib/admin/analytics";
+import {
+  ga4Overview,
+  ga4Realtime,
+  searchConsoleTopQueries,
+  searchConsoleTopPages,
+} from "../../lib/admin/analytics";
 
-const [ga, gscQ, gscP] = await Promise.all([
-  ga4TopPages(),
+const sp = Astro.url.searchParams;
+const days = [7, 28, 90].includes(Number(sp.get("days"))) ? Number(sp.get("days")) : 28;
+
+const [ov, rt, gscQ, gscP] = await Promise.all([
+  ga4Overview(days),
+  ga4Realtime(),
   searchConsoleTopQueries(),
   searchConsoleTopPages(),
 ]);
-const pct = (n: number) => `${(n * 100).toFixed(1)}%`;
+
+const fetchedAt = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC";
+
+// formatters
+const fmtNum = (n: number) => Math.round(n).toLocaleString("en-US");
+const fmtPct = (n: number) => `${(n * 100).toFixed(1)}%`;
 const pos = (n: number) => n.toFixed(1);
+const fmtDur = (s: number) => {
+  s = Math.round(s);
+  return s >= 60 ? `${Math.floor(s / 60)}m ${s % 60}s` : `${s}s`;
+};
+type Delta = { txt: string; dir: "up" | "down" | "flat" | "new" };
+const fmtDelta = (d: number | null): Delta => {
+  if (d === null) return { txt: "new", dir: "new" };
+  if (Math.abs(d) < 0.001) return { txt: "0%", dir: "flat" };
+  return { txt: `${d > 0 ? "+" : ""}${(d * 100).toFixed(0)}%`, dir: d > 0 ? "up" : "down" };
+};
+
+// inline-SVG sparkline → polyline points + area path
+const W = 520, H = 46, PAD = 3;
+function points(vals: number[]) {
+  if (!vals.length) return "";
+  const max = Math.max(...vals, 1);
+  const step = vals.length > 1 ? W / (vals.length - 1) : 0;
+  return vals
+    .map((v, i) => `${(i * step).toFixed(1)},${(H - PAD - (v / max) * (H - PAD * 2)).toFixed(1)}`)
+    .join(" ");
+}
+const areaPath = (vals: number[]) => {
+  const pts = points(vals);
+  return pts ? `M0,${H} L${pts.replace(/ /g, " L")} L${W},${H} Z` : "";
+};
+
+const kpis = ov.configured
+  ? [
+      { label: "Visitors", value: fmtNum(ov.kpis.users.value), d: fmtDelta(ov.kpis.users.delta) },
+      { label: "Sessions", value: fmtNum(ov.kpis.sessions.value), d: fmtDelta(ov.kpis.sessions.delta) },
+      { label: "Pageviews", value: fmtNum(ov.kpis.views.value), d: fmtDelta(ov.kpis.views.delta) },
+      { label: "Engagement rate", value: fmtPct(ov.kpis.engagementRate.value), d: fmtDelta(ov.kpis.engagementRate.delta) },
+      { label: "Avg engagement", value: fmtDur(ov.kpis.avgEngagement.value), d: fmtDelta(ov.kpis.avgEngagement.delta) },
+      { label: "Views / session", value: ov.kpis.viewsPerSession.value.toFixed(1), d: fmtDelta(ov.kpis.viewsPerSession.delta) },
+    ]
+  : [];
+
+const usersSeries = ov.configured ? ov.timeseries.map((t) => t.users) : [];
+const viewsSeries = ov.configured ? ov.timeseries.map((t) => t.views) : [];
+
+// bar-list helper data
+const barMax = (rows: { v: number }[]) => Math.max(1, ...rows.map((r) => r.v));
+const channels = ov.configured ? ov.channels.map((c) => ({ name: c.name, v: c.sessions })) : [];
+const devices = ov.configured ? ov.devices.map((d) => ({ name: d.name, v: d.users })) : [];
+const countries = ov.configured ? ov.countries.map((c) => ({ name: c.name, v: c.users })) : [];
+const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.users })) : [];
 ---
 <AdminLayout title="Analytics">
-  <h2>Search Console — top queries (28 days)</h2>
+  <style is:inline>
+    .ax-bar{display:flex;align-items:center;gap:18px;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap}
+    .ax-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+    .seg a{padding:6px 12px;text-decoration:none;color:var(--soft);font-size:13px;border-right:1px solid var(--line)}
+    .seg a:last-child{border-right:0}
+    .seg a.on{background:var(--accent);color:#fff}
+    .stamp{font-family:ui-monospace,monospace;font-size:12px;color:var(--soft)}
+    .live{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--ok);color:var(--ok);
+      border-radius:99px;padding:4px 12px;font-size:12px;font-family:ui-monospace,monospace}
+    .live .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 1.8s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(111,174,132,.6)}70%{box-shadow:0 0 0 7px rgba(111,174,132,0)}100%{box-shadow:0 0 0 0 rgba(111,174,132,0)}}
+    .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+    .kpi{background:linear-gradient(180deg,#241e18,#1d1813);border:1px solid var(--line);border-radius:10px;padding:14px 15px;position:relative;overflow:hidden}
+    .kpi::after{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+    .kpi .k-label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+    .kpi .k-val{font-size:26px;font-weight:700;font-family:ui-monospace,monospace;margin:6px 0 4px;letter-spacing:-.01em}
+    .k-delta{font-size:12px;font-family:ui-monospace,monospace}
+    .k-delta.up{color:var(--ok)} .k-delta.down{color:#e0816a} .k-delta.flat,.k-delta.new{color:var(--soft)}
+    .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .blist{margin:0} .blist .b-row{margin-bottom:9px}
+    .blist .b-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px}
+    .blist .b-top .b-name{color:var(--ink)} .blist .b-top .b-val{color:var(--soft);font-family:ui-monospace,monospace}
+    .blist .b-track{height:7px;background:#15110d;border-radius:99px;overflow:hidden}
+    .blist .b-fill{height:100%;background:linear-gradient(90deg,var(--accent),#e8a16a);border-radius:99px}
+    .spark-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .spark h4{margin:0 0 6px;font-size:12px;color:var(--soft);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+    .spark .s-now{font-family:ui-monospace,monospace;font-size:18px;color:var(--ink)}
+    @media(max-width:640px){.spark-wrap{grid-template-columns:1fr}}
+    td.num,th.num{text-align:right;font-family:ui-monospace,monospace}
+    .section-head{display:flex;align-items:baseline;gap:10px}
+    .section-head .hint{font-size:12px;color:var(--soft)}
+  </style>
+
+  <!-- Control bar -->
+  <div class="ax-bar">
+    <div class="ax-controls">
+      <span class="stamp">Range</span>
+      <div class="seg">
+        {[7, 28, 90].map((d) => (
+          <a href={`/admin/analytics?days=${d}`} class={d === days ? "on" : ""}>{d}d</a>
+        ))}
+      </div>
+      <a href={`/admin/analytics?days=${days}&r=${Date.now()}`} class="seg" style="padding:6px 12px;text-decoration:none;color:var(--ink)">↻ Refresh</a>
+    </div>
+    <div class="ax-controls">
+      {rt ? (
+        <span class="live"><span class="dot"></span>{rt.active} active now</span>
+      ) : null}
+      <span class="stamp">fetched {fetchedAt}</span>
+    </div>
+  </div>
+
+  {
+    ov.configured ? (
+      <>
+        <!-- KPI cards -->
+        <div class="kpis">
+          {kpis.map((k) => (
+            <div class="kpi">
+              <div class="k-label">{k.label}</div>
+              <div class="k-val">{k.value}</div>
+              <div class={`k-delta ${k.d.dir}`}>
+                {k.d.dir === "up" ? "▲ " : k.d.dir === "down" ? "▼ " : ""}{k.d.txt}
+                {k.d.dir !== "new" ? <span class="muted"> vs prev {days}d</span> : <span class="muted"> (no prior data)</span>}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Trend sparklines -->
+        <div class="panel">
+          <div class="spark-wrap">
+            <div class="spark">
+              <h4>Visitors · {days}d</h4>
+              <div class="s-now">{fmtNum(ov.kpis.users.value)}</div>
+              <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} preserveAspectRatio="none" style="margin-top:6px;display:block">
+                <path d={areaPath(usersSeries)} fill="rgba(210,105,63,.16)" />
+                <polyline points={points(usersSeries)} fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" />
+              </svg>
+            </div>
+            <div class="spark">
+              <h4>Pageviews · {days}d</h4>
+              <div class="s-now">{fmtNum(ov.kpis.views.value)}</div>
+              <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} preserveAspectRatio="none" style="margin-top:6px;display:block">
+                <path d={areaPath(viewsSeries)} fill="rgba(111,174,132,.16)" />
+                <polyline points={points(viewsSeries)} fill="none" stroke="var(--ok)" stroke-width="2" vector-effect="non-scaling-stroke" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Traffic sources / devices / geo -->
+        <div class="grid3">
+          <div class="panel">
+            <div class="section-head"><h2 style="margin:0 0 12px">Traffic sources</h2></div>
+            <div class="blist">
+              {channels.length ? channels.map((r) => (
+                <div class="b-row">
+                  <div class="b-top"><span class="b-name">{r.name}</span><span class="b-val">{fmtNum(r.v)}</span></div>
+                  <div class="b-track"><div class="b-fill" style={`width:${Math.max(2, (r.v / barMax(channels)) * 100)}%`} /></div>
+                </div>
+              )) : <p class="muted">No data yet.</p>}
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2 style="margin:0 0 12px">Devices</h2>
+            <div class="blist">
+              {devices.length ? devices.map((r) => (
+                <div class="b-row">
+                  <div class="b-top"><span class="b-name">{r.name}</span><span class="b-val">{fmtNum(r.v)}</span></div>
+                  <div class="b-track"><div class="b-fill" style={`width:${Math.max(2, (r.v / barMax(devices)) * 100)}%`} /></div>
+                </div>
+              )) : <p class="muted">No data yet.</p>}
+            </div>
+            <h2 style="margin:18px 0 12px">New vs returning</h2>
+            <div class="blist">
+              {newRet.length ? newRet.map((r) => (
+                <div class="b-row">
+                  <div class="b-top"><span class="b-name">{r.name}</span><span class="b-val">{fmtNum(r.v)}</span></div>
+                  <div class="b-track"><div class="b-fill" style={`width:${Math.max(2, (r.v / barMax(newRet)) * 100)}%`} /></div>
+                </div>
+              )) : <p class="muted">No data yet.</p>}
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2 style="margin:0 0 12px">Top countries</h2>
+            <div class="blist">
+              {countries.length ? countries.map((r) => (
+                <div class="b-row">
+                  <div class="b-top"><span class="b-name">{r.name}</span><span class="b-val">{fmtNum(r.v)}</span></div>
+                  <div class="b-track"><div class="b-fill" style={`width:${Math.max(2, (r.v / barMax(countries)) * 100)}%`} /></div>
+                </div>
+              )) : <p class="muted">No data yet.</p>}
+            </div>
+          </div>
+        </div>
+
+        <!-- Browsing patterns -->
+        <div class="section-head" style="margin-top:8px">
+          <h2>Landing pages</h2><span class="hint">where visitors enter — sessions, avg engagement, bounce</span>
+        </div>
+        <div class="panel">
+          {ov.landingPages.length ? (
+            <table>
+              <tr><th>landing page</th><th class="num">sessions</th><th class="num">avg engage</th><th class="num">bounce</th></tr>
+              {ov.landingPages.map((r) => (
+                <tr>
+                  <td class="slug">{r.path}</td>
+                  <td class="num">{fmtNum(r.sessions)}</td>
+                  <td class="num">{fmtDur(r.avgEngagement)}</td>
+                  <td class="num">{fmtPct(r.bounceRate)}</td>
+                </tr>
+              ))}
+            </table>
+          ) : <p class="muted">No landing-page data yet.</p>}
+        </div>
+
+        <div class="section-head">
+          <h2>Top pages</h2><span class="hint">most-viewed content + engagement depth</span>
+        </div>
+        <div class="panel">
+          {ov.topPages.length ? (
+            <table>
+              <tr><th>page</th><th class="num">views</th><th class="num">visitors</th><th class="num">avg engage</th></tr>
+              {ov.topPages.map((r) => (
+                <tr>
+                  <td class="slug">{r.path}</td>
+                  <td class="num">{fmtNum(r.views)}</td>
+                  <td class="num">{fmtNum(r.users)}</td>
+                  <td class="num">{fmtDur(r.avgEngagement)}</td>
+                </tr>
+              ))}
+            </table>
+          ) : <p class="muted">No traffic in this range yet.</p>}
+        </div>
+      </>
+    ) : (
+      <div class="panel"><p class="muted">GA4 not configured. {ov.reason}</p></div>
+    )
+  }
+
+  <!-- Search Console -->
+  <div class="section-head"><h2>Search Console — top queries</h2><span class="hint">28 days</span></div>
   <div class="panel">
     {
       gscQ.configured ? (
         gscQ.rows.length ? (
           <table>
-            <tr><th>query</th><th>clicks</th><th>impr.</th><th>CTR</th><th>pos.</th></tr>
+            <tr><th>query</th><th class="num">clicks</th><th class="num">impr.</th><th class="num">CTR</th><th class="num">pos.</th></tr>
             {gscQ.rows.map((r) => (
-              <tr><td>{r.key}</td><td>{r.clicks}</td><td>{r.impressions}</td><td>{pct(r.ctr)}</td><td>{pos(r.position)}</td></tr>
+              <tr><td>{r.key}</td><td class="num">{r.clicks}</td><td class="num">{r.impressions}</td><td class="num">{fmtPct(r.ctr)}</td><td class="num">{pos(r.position)}</td></tr>
             ))}
           </table>
         ) : (
@@ -32,15 +277,15 @@ const pos = (n: number) => n.toFixed(1);
     }
   </div>
 
-  <h2>Search Console — top pages (28 days)</h2>
+  <div class="section-head"><h2>Search Console — top pages</h2><span class="hint">28 days</span></div>
   <div class="panel">
     {
       gscP.configured ? (
         gscP.rows.length ? (
           <table>
-            <tr><th>page</th><th>clicks</th><th>impr.</th><th>CTR</th><th>pos.</th></tr>
+            <tr><th>page</th><th class="num">clicks</th><th class="num">impr.</th><th class="num">CTR</th><th class="num">pos.</th></tr>
             {gscP.rows.map((r) => (
-              <tr><td class="slug">{r.key}</td><td>{r.clicks}</td><td>{r.impressions}</td><td>{pct(r.ctr)}</td><td>{pos(r.position)}</td></tr>
+              <tr><td class="slug">{r.key}</td><td class="num">{r.clicks}</td><td class="num">{r.impressions}</td><td class="num">{fmtPct(r.ctr)}</td><td class="num">{pos(r.position)}</td></tr>
             ))}
           </table>
         ) : (
@@ -48,26 +293,6 @@ const pos = (n: number) => n.toFixed(1);
         )
       ) : (
         <p class="muted">Search Console not configured. {gscP.reason}</p>
-      )
-    }
-  </div>
-
-  <h2>Google Analytics 4 — top pages (28 days)</h2>
-  <div class="panel">
-    {
-      ga.configured ? (
-        ga.rows.length ? (
-          <table>
-            <tr><th>page</th><th>views</th><th>users</th></tr>
-            {ga.rows.map((r) => (
-              <tr><td class="slug">{r.path}</td><td>{r.views}</td><td>{r.users}</td></tr>
-            ))}
-          </table>
-        ) : (
-          <p class="muted">Connected — no traffic in the last 28 days yet.</p>
-        )
-      ) : (
-        <p class="muted">GA4 not configured. {ga.reason}</p>
       )
     }
   </div>
