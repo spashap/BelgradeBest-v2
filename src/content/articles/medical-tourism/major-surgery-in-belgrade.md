@@ -1,9 +1,9 @@
 ---
 leg: "medical-tourism"
 slug: "major-surgery-in-belgrade"
-title: "Major surgery in Belgrade — orthopaedics, and the honest limits"
+title: "Major surgery in Belgrade — orthopaedics and honest limits"
 shortTitle: "Major surgery"
-description: "A neutral due-diligence guide to major surgery Belgrade / orthopaedic surgery Serbia: hip and knee replacement, pre-op assessment, rehab and DVT risk — plus an honest account of where Serbia is NOT a leading destination (advanced cardiology, oncology, bariatric)."
+description: "Major surgery in Belgrade: hip and knee replacement, pre-op assessment, rehab and DVT risk — and where Serbia is honestly not a leading destination."
 lede: "Belgrade does elective orthopaedics — hip and knee replacement, spine and general surgery — for foreign patients, but it's major surgery with serious recovery, and flying too soon is its own risk. And the honest part marketing omits: for advanced cardiology, oncology and bariatric care, Serbia often isn't the destination — Serbs themselves travel abroad for some of it."
 heroLabel: "Major surgery in Belgrade / hero"
 heroAlt: "A bright orthopaedic rehabilitation room with parallel bars by a window"

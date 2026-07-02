@@ -1,9 +1,9 @@
 ---
 leg: "where-to-stay"
 slug: "where-to-stay-in-belgrade-for-business"
-title: "Where to Stay in Belgrade for Business: Best Areas for a Work Trip"
+title: "Where to Stay in Belgrade for Business: Best Areas"
 shortTitle: "For business"
-description: "Where to stay in Belgrade for business: how to choose between New Belgrade business hotels, central Savski Venac, and Stari Grad — by meeting location, airport access and parking."
+description: "Where to stay in Belgrade for business: New Belgrade business hotels vs central Savski Venac and Stari Grad, by meeting location and airport access."
 lede: "For most business and conference trips, the best fit is New Belgrade — it has the city's cluster of business hotels, the easiest road and airport access, and the most reliable parking. Stay central in Savski Venac or a Stari Grad business hotel if your meetings are downtown and you want walkable evenings. The single decision that matters more than the district name: confirm the traffic route to where you actually need to be each morning."
 heroLabel: "Where to stay in Belgrade for business / hero"
 heroAlt: "New Belgrade business district with high-rise hotels and wide boulevards across the Sava from the old city"

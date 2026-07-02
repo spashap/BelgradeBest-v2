@@ -1,4 +1,6 @@
 import data from "../data/areas.json";
+import { metaTrim } from "./text";
+import { validTerms, glossarySection } from "./glossary";
 
 // Programmatic "Belgrade by neighbourhood" area pages. Data-driven (src/data/
 // areas.json), rendered statically via src/pages/areas/[area].astro. A hard
@@ -23,6 +25,7 @@ export type Area = {
   nearby: string[];
   faqs: AreaFaq[];
   relatedArticles: string[];
+  updated?: string;
 };
 
 export type AreaSection = { slug: string; eyebrow: string; title: string; lede: string };
@@ -40,7 +43,7 @@ export function validArea(a: Partial<Area>): a is Area {
     a.riverSide &&
     a.walkToCenter &&
     typeof a.lede === "string" && a.lede.length >= 40 &&
-    typeof a.character === "string" && a.character.length >= 280 &&
+    typeof a.character === "string" && a.character.length >= 350 &&
     typeof a.gettingAround === "string" && a.gettingAround.length >= 40 &&
     typeof a.stayNotes === "string" && a.stayNotes.length >= 40 &&
     Array.isArray(a.bestFor) && a.bestFor.length >= 2 &&
@@ -67,12 +70,38 @@ export function areaBySlug(slug: string): Area | undefined {
 
 const list = (items: string[]) => items.join(", ");
 
+// Resolve a "nearby" name to a sibling spoke link when one exists — area pages
+// first, then glossary terms — so nearby mentions carry internal-link equity
+// instead of rendering as plain text. Unmatched names pass through unchanged.
+function linkNearby(item: string, selfSlug: string): string {
+  const lower = item.toLowerCase();
+  for (const a of validAreas()) {
+    if (a.slug === selfSlug) continue;
+    const i = lower.indexOf(a.name.toLowerCase());
+    if (i >= 0) {
+      const hit = item.slice(i, i + a.name.length);
+      return `${item.slice(0, i)}[${hit}](/${areaSection.slug}/${a.slug})${item.slice(i + a.name.length)}`;
+    }
+  }
+  for (const t of validTerms()) {
+    const i = lower.indexOf(t.term.toLowerCase());
+    if (i >= 0) {
+      const hit = item.slice(i, i + t.term.length);
+      return `${item.slice(0, i)}[${hit}](/${glossarySection.slug}/${t.slug})${item.slice(i + t.term.length)}`;
+    }
+  }
+  return item;
+}
+
 // SEO title/description for an area page (answer-style, query-shaped).
 export function areaTitle(a: Area): string {
   return `${a.name}, Belgrade — neighbourhood guide & where to stay`;
 }
 export function areaDescription(a: Area): string {
-  return `${a.name} in Belgrade: where it sits (${a.riverSide.toLowerCase()}), what it's like, who it suits, getting around, and what's nearby. ${a.lede}`.slice(0, 320);
+  // The lede is already a hand-written summary; keep proper-noun casing intact
+  // and stay inside the ~155-char SERP snippet window.
+  const base = a.lede.includes("Belgrade") ? a.lede : `${a.lede} A Belgrade neighbourhood guide.`;
+  return metaTrim(base);
 }
 
 // Build the article BODY markdown (H2+) from the structured record. The H1, lede
@@ -104,7 +133,7 @@ export function areaBodyMarkdown(a: Area): string {
   parts.push("");
   parts.push(a.stayNotes);
   parts.push("");
-  parts.push(`**Nearby:** ${list(a.nearby)}.`);
+  parts.push(`**Nearby:** ${list(a.nearby.map((n) => linkNearby(n, a.slug)))}.`);
   parts.push("");
   parts.push("## Common questions");
   parts.push("");

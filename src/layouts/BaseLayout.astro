@@ -1,6 +1,10 @@
 ---
 import "@fontsource-variable/inter";
 import "@fontsource-variable/newsreader";
+// Hashed URLs of the two always-needed Latin font files, for <link rel=preload>
+// (English copy renders with these on every page; other subsets load on demand).
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import newsreaderWoff2 from "@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url";
 import "../styles/globals.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
@@ -31,6 +35,16 @@ const layoutCss =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={newsreaderWoff2} crossorigin />
+    {
+      import.meta.env.PROD ? (
+        <>
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <link rel="preconnect" href="https://www.google-analytics.com" />
+        </>
+      ) : null
+    }
     <title>{meta.title}</title>
     <meta name="description" content={meta.description} />
     <link rel="canonical" href={meta.canonical} />

@@ -10,6 +10,8 @@ interface Props {
   imageLabel: string;
   imageRatio?: string;
   src?: string;
+  srcset?: string;
+  sizes?: string;
   imgAlt?: string;
 }
 const {
@@ -21,13 +23,15 @@ const {
   imageLabel,
   imageRatio = "21/9",
   src,
+  srcset,
+  sizes,
   imgAlt,
 } = Astro.props;
 ---
 <a href={href} class="c-featured">
   {
     src ? (
-      <ArticleHero src={src} alt={imgAlt ?? imageLabel} caption={null} />
+      <ArticleHero src={src} srcset={srcset} sizes={sizes} alt={imgAlt ?? imageLabel} caption={null} />
     ) : (
       <Placeholder ratio={imageRatio} label={imageLabel} />
     )

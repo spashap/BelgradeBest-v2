@@ -550,6 +550,8 @@ a.c-gtk__link:hover {
 .c-header__nav a {
   font-family: var(--display); font-weight: 500; font-size: var(--t-body);
   color: var(--ink); text-decoration: none;
+  /* Mobile menu rows must be real ~44px touch targets (padding, not margin). */
+  padding: var(--s2) 0;
 }
 .c-header__nav a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
 @media (min-width: 760px) {
@@ -558,8 +560,53 @@ a.c-gtk__link:hover {
     display: flex !important; flex-direction: row; flex-wrap: wrap; align-items: center;
     gap: var(--s4) var(--s5); position: static; background: none; border: 0; padding: 0; margin: 0; box-shadow: none;
   }
-  .c-header__nav a { font-size: var(--t-small); white-space: nowrap; }
+  .c-header__nav a { font-size: var(--t-small); white-space: nowrap; padding: 0; }
 }
+
+/* --- c-article-meta : the small dated byline under the page intro ("Updated
+   20 June 2026 · BelgradeBest editorial"). Freshness shown to readers, not
+   just to crawlers via dateModified. --- */
+.c-article-meta {
+  font-family: var(--body);
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+  margin: calc(-1 * var(--s4)) 0 var(--s4);
+}
+
+/* --- c-unknowns : "still unknown / unconfirmed" trust block on articles —
+   renders the frontmatter `unknowns` list as a visibly honest aside. --- */
+.c-unknowns {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  padding: var(--s4) var(--s5);
+  margin: var(--s6) 0 0;
+}
+.c-unknowns h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: var(--t-h4, var(--t-body));
+  margin: 0 0 var(--s2);
+}
+.c-unknowns ul { margin: 0; padding-left: var(--s5); }
+.c-unknowns li { margin-bottom: var(--s1); color: var(--ink-soft); }
+.c-unknowns li::marker { color: var(--accent); }
+
+/* --- c-breadcrumbs : visible breadcrumb trail (mirrors BreadcrumbList JSON-LD).
+   Small, quiet, sits above the page intro on spoke pages. --- */
+.c-breadcrumbs {
+  font-family: var(--body);
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+  padding: var(--s4) 0 0;
+}
+.c-breadcrumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s1); }
+.c-breadcrumbs li { display: inline-flex; align-items: center; gap: var(--s1); }
+.c-breadcrumbs li + li::before { content: "›"; color: var(--line-strong, var(--line)); }
+.c-breadcrumbs a { color: var(--ink-soft); text-decoration: none; }
+.c-breadcrumbs a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+.c-breadcrumbs [aria-current="page"] { color: var(--ink); }
 
 /* --- c-wordmark : the BelgradeBest text wordmark (display face, weight 900) --- */
 .c-wordmark {

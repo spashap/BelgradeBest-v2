@@ -1,9 +1,9 @@
 ---
 leg: "visit-belgrade"
 slug: "zemun"
-title: "Zemun — Belgrade's Austro-Hungarian old town and Gardoš Tower"
+title: "Zemun — Belgrade's Austro-Hungarian old town & Gardoš Tower"
 shortTitle: "Zemun"
-description: "Things to do in Zemun, Belgrade's old Austro-Hungarian town upriver on the Danube — preserved 18th–19th-century streets, the riverside quay and the hilltop Gardoš Tower, as an easy half-day from Belgrade."
+description: "Things to do in Zemun, Belgrade's old Austro-Hungarian town on the Danube — preserved old streets, the riverside quay and the hilltop Gardoš Tower."
 lede: "Zemun is the old Austro-Hungarian town now part of Belgrade, set upriver along the Danube northwest of the centre — a Habsburg river settlement of low streets crowned by the hilltop Gardoš Tower. It's the city's most legible Austro-Hungarian layer, and an easy half-day."
 heroLabel: "Zemun and Gardoš Tower / hero"
 heroAlt: "Zemun's riverside old town and the Gardoš Tower"

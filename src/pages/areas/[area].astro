@@ -5,6 +5,7 @@ import Container from "../../components/Container.astro";
 import ArticleHero from "../../components/ArticleHero.astro";
 import MarkdownInline from "../../components/MarkdownInline.astro";
 import InternalLinkBlock from "../../components/InternalLinkBlock.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Schema from "../../components/Schema.astro";
 import { pageMetadata } from "../../lib/metadata";
 import { SITE, CONFIG } from "../../lib/site";
@@ -58,7 +59,13 @@ for (const link of area.relatedArticles) {
 const body = areaBodyMarkdown(area);
 
 const schemas: object[] = [
-  articleSchema({ title: areaTitle(area), description: areaDescription(area), url }),
+  articleSchema({
+    title: areaTitle(area),
+    description: areaDescription(area),
+    url,
+    imageUrl: `${SITE.origin}/images/areas/${area.slug}.svg`,
+    dateModified: area.updated,
+  }),
   breadcrumbSchema([
     { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
     { name: areaSection.title, url: `${SITE.origin}/${areaSection.slug}` },
@@ -68,6 +75,13 @@ const schemas: object[] = [
 ];
 ---
 <BaseLayout meta={meta}>
+  <Breadcrumbs
+    crumbs={[
+      { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+      { name: areaSection.title, href: `/${areaSection.slug}` },
+      { name: area.name },
+    ]}
+  />
   <PageIntro eyebrow={areaSection.eyebrow} title={area.name} lede={area.lede} />
 
   <Container>

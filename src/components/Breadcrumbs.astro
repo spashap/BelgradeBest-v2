@@ -1,0 +1,28 @@
+---
+import Container from "./Container.astro";
+
+// Visible breadcrumb trail — the HTML counterpart of breadcrumbSchema() so the
+// page shows the same hierarchy the BreadcrumbList JSON-LD claims. The last
+// crumb is the current page (no link).
+interface Crumb {
+  name: string;
+  href?: string;
+}
+interface Props {
+  crumbs: Crumb[];
+}
+const { crumbs } = Astro.props;
+---
+<nav class="c-breadcrumbs" aria-label="Breadcrumb">
+  <Container>
+    <ol>
+      {crumbs.map((c, i) =>
+        i < crumbs.length - 1 && c.href ? (
+          <li><a href={c.href}>{c.name}</a></li>
+        ) : (
+          <li><span aria-current="page">{c.name}</span></li>
+        ),
+      )}
+    </ol>
+  </Container>
+</nav>

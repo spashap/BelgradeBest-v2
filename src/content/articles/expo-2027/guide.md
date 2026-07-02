@@ -3,7 +3,7 @@ leg: "expo-2027"
 slug: "guide"
 title: "The complete visitor guide to Expo 2027 Belgrade"
 shortTitle: "Complete visitor guide"
-description: "The Expo 2027 visit guide for foreign visitors — how many days you need, what to book first, when it's busiest, and how to plan a Belgrade trip around the Specialised Expo (15 May–15 Aug 2027)."
+description: "Expo 2027 Belgrade visitor guide: how many days you need, what to book first, when it's busiest, and how to plan a trip around 15 May–15 Aug 2027."
 lede: "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. This is the visitor hub — how many days to plan, what to book first, when it's busiest, what's confirmed versus still unknown, and where to go next for tickets, getting there, and where to stay."
 heroLabel: "Expo 2027 complete guide / hero"
 heroAlt: "Expo 2027 and the Belgrade skyline at golden hour — the complete visitor guide"
@@ -44,7 +44,7 @@ This page is the visitor hub. It orients you, then routes you to the focused pag
 
 ## What is Expo 2027 Belgrade?
 
-Expo 2027 Belgrade is a Specialised Expo — not a Universal or World Expo — hosted by Belgrade, Serbia. It runs from 15 May to 15 August 2027: ninety-three days across three full months. The official theme is "Play for Humanity: Sport and Music for All." This is the first Specialised Expo ever held in the Western Balkans, and the first world exposition held on the territory of the former Yugoslavia. Serbia won the right to host it in a BIE vote, beating bids that included Spain (Málaga), the United States (Minnesota), Thailand and Argentina. The event has two official mascots, Rastko and Milica, presented as the "superheroes of play" and inspired by contemporary Serbian culture.
+Expo 2027 Belgrade is a Specialised Expo — not a Universal or World Expo — hosted by Belgrade, Serbia. It runs from 15 May to 15 August 2027: ninety-three days across three full months. The official theme is "Play for Humanity: Sport and Music for All." This is the first Specialised Expo ever held in the Western Balkans, and the first world exposition held on the territory of the former Yugoslavia. Serbia won the right to host it in a [BIE vote](https://www.bie-paris.org/site/en/2027-belgrade), beating bids that included Spain (Málaga), the United States (Minnesota), Thailand and Argentina. The event has two official mascots, Rastko and Milica, presented as the "superheroes of play" and inspired by contemporary Serbian culture.
 
 A "Specialised" Expo is shorter and tighter than the big Universal Expos: three months, one focused theme, and a more compact site. If you want the full explainer on what that category means and whether it's worth the trip, we keep it on a dedicated page — [what is a Specialised Expo, and is it worth visiting](/expo-2027/what-is-it).
 
@@ -56,7 +56,7 @@ Because the site is right beside the airport, many visitors will arrive almost o
 
 ## How many countries are taking part?
 
-As of mid-2026, the official Participants page states that 137 nations have formally committed, with a note that more are coming. The figure has grown over time — the official site earlier said "over 120 nations," a July 2025 release reported 117, and the count reached 137 by early 2026 — and it may keep rising, so treat it as current rather than final. (The April 2026 International Participants Meeting in Belgrade drew delegates from 137 countries, reaffirming the figure.) That already exceeds the previous Specialised Expo, Astana 2017, which hosted 115–117 participating countries, making Serbia a record holder for a Specialised Expo by participant count. Each participating country is expected to have a National Day and to present itself through pavilions, exhibitions, events, innovations, culture and cuisine. The full public list of all 137 participants is not yet completely published; the official page names a large subset.
+As of mid-2026, the [official Participants page](https://expobelgrade2027.org/en/participants) states that 137 nations have formally committed, with a note that more are coming. The figure has grown over time — the official site earlier said "over 120 nations," a July 2025 release reported 117, and the count reached 137 by early 2026 — and it may keep rising, so treat it as current rather than final. (The April 2026 International Participants Meeting in Belgrade drew delegates from 137 countries, reaffirming the figure.) That already exceeds the previous Specialised Expo, Astana 2017, which hosted 115–117 participating countries, making Serbia a record holder for a Specialised Expo by participant count. Each participating country is expected to have a National Day and to present itself through pavilions, exhibitions, events, innovations, culture and cuisine. The full public list of all 137 participants is not yet completely published; the official page names a large subset.
 
 A few national pavilions have surfaced in reporting — Germany has launched a roughly €7.5 million tender for a pavilion under the "Play for Progress" sub-theme; Italy's foreign minister has said Italy is preparing one of its largest-ever pavilions; the UAE and Saudi Arabia have confirmed participation, the latter aligning its pavilion with its Vision 2030 agenda. Treat those as reported plans rather than confirmed designs. For the running list and pavilion news, see our [participating countries](/expo-2027/participants) page.
 
@@ -68,7 +68,7 @@ That means **there is nothing to book on the ticket side right now**, which chan
 
 ## Do you need a visa for Expo 2027?
 
-There is no announced Expo-specific visa or visa waiver for ordinary foreign visitors; an "Expo visa" exists, but only for accredited participants and staff, not general visitors. As general context only, Serbia operates a long-standing visa-free policy for roughly 90 countries, and most visitors from the EU, US and UK do not need a visa. None of this is Expo-specific. Verify your own country's status with the Serbian Ministry of Foreign Affairs before booking.
+There is no announced Expo-specific visa or visa waiver for ordinary foreign visitors; an "Expo visa" exists, but only for accredited participants and staff, not general visitors. As general context only, Serbia operates a long-standing visa-free policy for roughly 90 countries, and most visitors from the EU, US and UK do not need a visa. None of this is Expo-specific. Verify your own country's status with the [Serbian Ministry of Foreign Affairs](https://www.mfa.gov.rs/en/citizens/travel-serbia/visa-regime) before booking.
 
 One Serbia-specific rule catches visitors out: you must be **registered within 24 hours** of arrival. Hotels and registered rentals handle this automatically; private hosts must register you at the police. That, plus money, SIMs and the rest of the practical first-24-hours detail, lives in [plan your trip](/plan-your-trip) — specifically [entry rules and registration](/plan-your-trip/visa-and-entry) and [money in Belgrade](/plan-your-trip/money). Keep visa and money questions there; this hub just points you to them.
 

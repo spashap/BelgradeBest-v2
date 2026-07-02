@@ -1,9 +1,9 @@
 ---
 leg: "food-and-nightlife"
 slug: "best-restaurants-in-belgrade"
-title: "Best restaurants in Belgrade — fine dining, Michelin and New Balkan"
+title: "Best restaurants in Belgrade — Michelin and New Balkan"
 shortTitle: "Best restaurants"
-description: "Where to eat in Belgrade: the best restaurants in Belgrade by area and category — the Michelin selection, fine dining, New Balkan and traditional Serbian, Beton Hala and restaurants with a view, plus reservation and price guidance."
+description: "The best restaurants in Belgrade by area and category — the Michelin selection, fine dining, New Balkan cooking and Beton Hala's riverside tables."
 lede: "Looking for the best restaurants in Belgrade? The city grew up fast — a Michelin selection since 2022, two starred kitchens, and a confident 'New Balkan' movement. Here's where to eat, organised by area and by what you want the evening to be, with durable anchors you can book confidently and honest flags on what's new."
 heroLabel: "Best restaurants in Belgrade / hero"
 heroAlt: "A plated fine-dining New Balkan dish with a glass of wine"

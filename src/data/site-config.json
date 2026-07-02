@@ -35,7 +35,8 @@
     "country": "Serbia",
     "venue": "Surčin",
     "theme": "Play for Humanity: Sport and Music for All",
-    "eventDescription": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin, themed 'Play for Humanity: Sport and Music for All'."
+    "eventDescription": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin, themed 'Play for Humanity: Sport and Music for All'.",
+    "officialUrl": "https://expobelgrade2027.org"
   },
   "chrome": {
     "wordmark": {
@@ -113,6 +114,10 @@
             },
             {
               "ref": "areas",
+              "visible": true
+            },
+            {
+              "ref": "glossary",
               "visible": true
             }
           ]
@@ -244,12 +249,36 @@
       "title": "Good to know about Belgrade",
       "intro": "The handful of facts that make a first visit easier — each links to the full guide.",
       "items": [
-        { "label": "Money", "text": "Serbia uses the dinar (RSD); cards are widely accepted, but keep some cash for kiosks and markets.", "href": "/plan-your-trip/money" },
-        { "label": "Getting around", "text": "City buses, trams and trolleybuses have been free for everyone since 2025.", "href": "/plan-your-trip/getting-around" },
-        { "label": "Visas & entry", "text": "Many nationalities enter visa-free for up to 90 days — confirm your own case before you fly.", "href": "/plan-your-trip/visa-and-entry" },
-        { "label": "Is it safe?", "text": "Belgrade is generally safe; the real risks are pickpockets in crowds and taxi overcharging.", "href": "/plan-your-trip/staying-safe" },
-        { "label": "When to go", "text": "April–June and September–October are the sweet spot; July–August is hot and lively.", "href": "/plan-your-trip/best-time-to-visit" },
-        { "label": "Expo 2027", "text": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin.", "href": "/expo-2027" }
+        {
+          "label": "Money",
+          "text": "Serbia uses the dinar (RSD); cards are widely accepted, but keep some cash for kiosks and markets.",
+          "href": "/plan-your-trip/money"
+        },
+        {
+          "label": "Getting around",
+          "text": "City buses, trams and trolleybuses have been free for everyone since 2025.",
+          "href": "/plan-your-trip/getting-around"
+        },
+        {
+          "label": "Visas & entry",
+          "text": "Many nationalities enter visa-free for up to 90 days — confirm your own case before you fly.",
+          "href": "/plan-your-trip/visa-and-entry"
+        },
+        {
+          "label": "Is it safe?",
+          "text": "Belgrade is generally safe; the real risks are pickpockets in crowds and taxi overcharging.",
+          "href": "/plan-your-trip/staying-safe"
+        },
+        {
+          "label": "When to go",
+          "text": "April–June and September–October are the sweet spot; July–August is hot and lively.",
+          "href": "/plan-your-trip/best-time-to-visit"
+        },
+        {
+          "label": "Expo 2027",
+          "text": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin.",
+          "href": "/expo-2027"
+        }
       ]
     },
     "faqSection": {
@@ -259,12 +288,30 @@
       "title": "Belgrade, frequently asked",
       "intro": "Quick, honest answers to what visitors ask most — each explored in depth across the guides.",
       "faqs": [
-        { "question": "Is Belgrade worth visiting?", "answer": "Yes. Belgrade rewards you with a layered, lived-in city — a riverside fortress, distinct neighbourhoods, big nightlife and hearty food — rather than a polished postcard old town. It is affordable, walkable in the centre, and easy to manage in English." },
-        { "question": "Is Belgrade safe for tourists?", "answer": "Belgrade is generally safe, including for solo and night-time visitors taking normal precautions. The realistic risks are petty pickpocketing in crowds and taxi or exchange overcharging, not violent crime." },
-        { "question": "How many days do you need in Belgrade?", "answer": "Three days is the comfortable sweet spot — the central sights, a neighbourhood or two, and a half-day trip. One to two days still covers the walkable old-town core." },
-        { "question": "What is the best area to stay in Belgrade?", "answer": "Stari Grad, the old town, is the easiest base for a first visit, with Dorćol, Savamala and Vračar as strong alternatives depending on your budget and whether you want nightlife or quiet." },
-        { "question": "Is public transport free in Belgrade?", "answer": "Yes. Since January 2025, Belgrade's city and suburban buses, trams and trolleybuses have been free for all passengers, with no ticket required." },
-        { "question": "When is Expo 2027 in Belgrade?", "answer": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027, on a site at Surčin near Nikola Tesla Airport." }
+        {
+          "question": "Is Belgrade worth visiting?",
+          "answer": "Yes. Belgrade rewards you with a layered, lived-in city — a riverside fortress, distinct neighbourhoods, big nightlife and hearty food — rather than a polished postcard old town. It is affordable, walkable in the centre, and easy to manage in English."
+        },
+        {
+          "question": "Is Belgrade safe for tourists?",
+          "answer": "Belgrade is generally safe, including for solo and night-time visitors taking normal precautions. The realistic risks are petty pickpocketing in crowds and taxi or exchange overcharging, not violent crime."
+        },
+        {
+          "question": "How many days do you need in Belgrade?",
+          "answer": "Three days is the comfortable sweet spot — the central sights, a neighbourhood or two, and a half-day trip. One to two days still covers the walkable old-town core."
+        },
+        {
+          "question": "What is the best area to stay in Belgrade?",
+          "answer": "Stari Grad, the old town, is the easiest base for a first visit, with Dorćol, Savamala and Vračar as strong alternatives depending on your budget and whether you want nightlife or quiet."
+        },
+        {
+          "question": "Is public transport free in Belgrade?",
+          "answer": "Yes. Since January 2025, Belgrade's city and suburban buses, trams and trolleybuses have been free for all passengers, with no ticket required."
+        },
+        {
+          "question": "When is Expo 2027 in Belgrade?",
+          "answer": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027, on a site at Surčin near Nikola Tesla Airport."
+        }
       ]
     },
     "ethosSection": {

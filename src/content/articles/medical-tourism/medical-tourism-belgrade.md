@@ -3,7 +3,7 @@ leg: "medical-tourism"
 slug: "medical-tourism-belgrade"
 title: "Medical tourism in Belgrade — an honest overview"
 shortTitle: "Medical tourism in Belgrade"
-description: "An honest, due-diligence overview of medical tourism in Belgrade and Serbia — is it safe, which procedures Belgrade clinics are known for, whether doctors speak English, and the real (not headline) savings — before the dedicated guides."
+description: "Medical tourism in Belgrade, honestly: is it safe, which procedures clinics are known for, whether doctors speak English, and the real savings."
 lede: "Belgrade is a real medical-tourism market — strongest in dental work, with cosmetic surgery, fertility and more alongside it. Here's the honest overview: who comes, why, whether it's safe, what you actually save, and what to verify before you book — before the dedicated guides."
 heroLabel: "Medical tourism in Belgrade / hero"
 heroAlt: "A calm modern private-clinic reception in soft daylight"
@@ -42,7 +42,7 @@ unknowns: []
 
 Medical tourism in Belgrade is, in practice, a private-clinic market that treats foreign patients alongside locals — most visibly in dental work, with cosmetic surgery, fertility and other fields alongside it. If you are weighing a procedure in Serbia from abroad, this page is your map: it orients you honestly before you commit, then routes you to the dedicated guides for the detail. It is not a sales pitch, not a clinic directory, and not medical advice. Whether Belgrade is right for *you* depends on your procedure, your home-country alternatives, and how much you are willing to verify before you book — and verifying is the theme of everything below.
 
-The scale of the market is meaningful but not precisely known: sector and professional-association estimates (Serbian Chamber of Commerce and industry figures, not an official registry) suggest Serbia receives roughly 40,000–60,000 foreign patients per year for medical and dental treatment. Treat that as indicative, as of 2025, not a settled count.
+The scale of the market is meaningful but not precisely known: [sector and professional-association estimates](https://www.serbianmonitor.com/en/foreigners-most-often-come-to-serbia-for-dental-procedures-and-cosmetic-surgery/) (Serbian Chamber of Commerce and industry figures, not an official registry) suggest Serbia receives roughly 40,000–60,000 foreign patients per year for medical and dental treatment. Treat that as indicative, as of 2025, not a settled count.
 
 The shape of the market is clearer than its exact size. Dental work is the dominant category — sector estimates attribute up to roughly 80% of foreign health-tourism demand to dental services — followed by cosmetic and plastic surgery, with fertility, orthopaedic and other fields also represented. These proportions are reported estimates, as of 2025, not audited statistics.
 

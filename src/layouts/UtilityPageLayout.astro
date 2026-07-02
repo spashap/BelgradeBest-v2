@@ -3,19 +3,41 @@ import BaseLayout from "./BaseLayout.astro";
 import PageIntro from "../components/PageIntro.astro";
 import Container from "../components/Container.astro";
 import MarkdownInline from "../components/MarkdownInline.astro";
+import Schema from "../components/Schema.astro";
 import { pageMetadata } from "../lib/metadata";
+import { SITE, CONFIG } from "../lib/site";
+import { breadcrumbSchema } from "../lib/schemas";
 import type { SitePage } from "../lib/site-pages";
 
 interface Props {
   page: SitePage;
 }
 const { page } = Astro.props;
+const url = `${SITE.origin}/${page.slug}`;
 const meta = pageMetadata({
   title: page.seoTitle || page.title,
   description: page.seoDescription || page.lede,
   path: `/${page.slug}`,
   noindex: page.noindex,
 });
+
+// Page-level JSON-LD: breadcrumb everywhere; /about is typed AboutPage (the
+// editorial-standards page other schemas point at via publishingPrinciples).
+const schemas: object[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": page.slug === "about" ? "AboutPage" : "WebPage",
+    name: page.seoTitle || page.title,
+    description: page.seoDescription || page.lede,
+    url,
+    inLanguage: CONFIG.brand.locale,
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.origin },
+  },
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: page.title, url },
+  ]),
+];
 ---
 <BaseLayout meta={meta}>
   <PageIntro eyebrow={page.eyebrow} title={page.title} lede={page.lede} />
@@ -24,4 +46,5 @@ const meta = pageMetadata({
       <MarkdownInline markdown={page.body} />
     </article>
   </Container>
+  <Schema schemas={schemas} />
 </BaseLayout>

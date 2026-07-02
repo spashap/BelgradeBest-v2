@@ -1,9 +1,9 @@
 ---
 leg: "food-and-nightlife"
 slug: "belgrade-cocktail-bars"
-title: "Best Cocktail Bars in Belgrade: Cetinjska, Speakeasies & the Dorćol Scene"
+title: "Best Cocktail Bars in Belgrade: Cetinjska & Speakeasies"
 shortTitle: "Cocktail bars"
-description: "Best cocktail bars Belgrade by district: the Cetinjska courtyard of bars, hidden speakeasies, and the high-end Dorćol cocktail scene — where to drink and how each area feels."
+description: "Best cocktail bars in Belgrade by district: the Cetinjska courtyard, hidden speakeasies and the high-end Dorćol scene — where to drink in each area."
 lede: "Belgrade's best cocktail bars cluster in three walkable pockets: Cetinjska — a former brewery courtyard near Skadarlija packed with independent bars — for energy and bar-hopping; Dorćol for polished, mixology-led cocktail rooms and a growing speakeasy scene; and the centre/Savamala for a rougher, riverside edge. Pick the district that fits the night you want, then wander."
 heroLabel: "Belgrade cocktail bars / hero"
 heroAlt: "A dimly lit Belgrade cocktail bar with a bartender mixing a drink"

@@ -1,9 +1,9 @@
 ---
 leg: "medical-tourism"
 slug: "medical-tourism-serbia-vs-turkey"
-title: "Medical Tourism: Serbia vs Turkey (and Hungary), Honestly Compared"
+title: "Medical tourism: Serbia vs Turkey, honestly compared"
 shortTitle: "Serbia vs Turkey"
-description: "Medical tourism Serbia vs Turkey, compared neutrally for dental, hair and cosmetic work — where each tends to win or lose on price, volume, distance, regulation and language, as of 2026. Not a clinic ad, not medical advice."
+description: "Medical tourism Serbia vs Turkey, compared neutrally for dental, hair and cosmetic work — price, volume, distance, regulation and language, as of 2026."
 lede: "There is no single \"winner\" between Serbia and Turkey for medical travel — it depends on the procedure and what you weigh most. As of 2026 the broad pattern is: Turkey is the high-volume, lowest-floor price leader; Belgrade/Serbia sits mid-priced and closer for many EU travellers; Hungary is the long-established EU dental hub. This page lays out those trade-offs neutrally so you can judge for yourself."
 heroLabel: "Medical tourism Serbia vs Turkey / hero"
 heroAlt: "Neutral comparison of Serbia, Turkey and Hungary for medical travel"

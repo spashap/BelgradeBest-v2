@@ -3,11 +3,11 @@ leg: "food-and-nightlife"
 slug: "eating-and-drinking-in-belgrade"
 title: "Eating and drinking in Belgrade — how it actually works"
 shortTitle: "Eating & drinking"
-description: "A Belgrade food and drink guide: how the food scene fits together, what to eat, what it costs in 2026, and the practical mechanics — cash vs card, tipping, hours, reservations, dress codes and late-night food."
+description: "Eating and drinking in Belgrade: what the food scene is, what it costs as of 2026, plus cash vs card, tipping, opening hours, reservations and dress codes."
 lede: "Belgrade is an easy, late, good-value city to eat and drink in once you know how it fits together. This is the overview — what the food scene is, what to eat and drink, what it costs, and the mechanics of paying, tipping, hours, booking and dress — with links out to the deep guides for each part."
 heroLabel: "Eating and drinking in Belgrade / hero"
 heroAlt: "A Belgrade café table at night with coffee, a drink and a bill tray"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-07-02"
 order: 5
 visible: true
 intent: "both"
@@ -28,11 +28,11 @@ faqs:
     question: "Can I pay by card in Belgrade?"
   - answer: "There is no legally enforced tipping norm in Serbia; tipping is discretionary. The local custom is to round up small bills and leave around 5–10% on full meals when service is good (reported), usually in cash even when you pay the bill by card."
     question: "How much should I tip in Belgrade?"
-  - answer: "Many restaurants serve until around 23:00 or later, while bars and clubs commonly stay open until roughly 04:00–06:00. The big going-out nights are typically Thursday through Sunday, with some venues running until about 08:00 (reported)."
+  - answer: "Many restaurants serve until around 23:00 or later, while bars and clubs commonly stay open until roughly 04:00–06:00. The big going-out nights are typically Thursday through Sunday, with some venues running until about 08:00 (reported), and waterfront venues at Beton Hala blend dining into nightlife with hours like 10:00–04:00 daily (reported, as of 2026)."
     question: "How late do restaurants and clubs stay open?"
-  - answer: "Reservations are effectively required for large-capacity splavovi and exclusive clubs, especially at weekends, and fine-dining or Michelin-listed restaurants strongly recommend booking for prime seating."
+  - answer: "Reservations are effectively required for large-capacity splavovi and exclusive clubs, especially at weekends, and fine-dining or Michelin-listed restaurants strongly recommend booking for prime seating. For casual restaurants, kafanas on ordinary nights and grill counters, walking in is normal."
     question: "Do I need to book a table?"
-  - answer: "Belgrade has a strong late-night food culture centred on burek, pizza, gyros and grilled meat, and 24-hour bakeries serving burek are a standard post-club option."
+  - answer: "Belgrade has a strong late-night food culture centred on burek, pizza, gyros and grilled meat, and 24-hour bakeries serving burek with drinking yoghurt are the standard post-club option — one is rarely more than a few blocks away wherever you end the night."
     question: "What's open for food after the clubs close?"
   - answer: "Serbia's legal drinking age is 18. ID checks are more common at busy nightclubs than at sit-down venues, and younger-looking guests are more likely to be carded, so carry photo ID."
     question: "What is the legal drinking age?"
@@ -66,4 +66,32 @@ Each format has its own deep guide:
 
 Belgrade is a grilled-meat city first. The signatures are **ćevapi** (small grilled minced-meat fingers) and **pljeskavica** (a large Serbian-style burger patty), eaten with raw onion, **kajmak** (a rich cream-cheese spread) and **lepinja** flatbread. The other thing everyone eats is **burek** — a flaky, filled pastry (meat, cheese or spinach) that is the classic breakfast and the standard food after a night out.
 
-Beyond the grill, the dishes that define a proper sit-down Serbian meal include **karađorđeva šnicla** (a rolled, breaded cutlet stuffed with kajmak — Serbia's answer to cordon bleu), **sarma** (cabbage rolls stuffed with minced meat and rice, slow-cooked for hours), and shared **meze** starters. The national drink is **rakija**, a strong fruit brandy — plum **[šljivovica](/glossary/rakija)** above all — traditionally taken as a small pour before the meal with a toast of
+Beyond the grill, the dishes that define a proper sit-down Serbian meal include **karađorđeva šnicla** (a rolled, breaded cutlet stuffed with kajmak — Serbia's answer to cordon bleu), **sarma** (cabbage rolls stuffed with minced meat and rice, slow-cooked for hours), and shared **meze** starters. The national drink is **rakija**, a strong fruit brandy — plum **[šljivovica](/glossary/rakija)** above all — traditionally taken as a small pour before the meal with a toast of *"Živeli!"*. The sweet tooth is served by the **poslastičarnica** (pastry shop) tradition, whose most famous single item is the Moskva šnit cake at the historic Hotel Moskva.
+
+## How much does eating and drinking cost?
+
+Belgrade is inexpensive by Western-European standards, though no longer ultra-cheap. Indicative benchmarks (all reported as of 2024–2026, all moving with inflation and the exchange rate — check current menus): a casual restaurant meal runs roughly **€10 per person**, and a full sit-down dinner with a drink and dessert around **€12–20 per person**. A coffee is commonly **150–300 RSD** in non-touristy cafés; a draft local beer around **300–350 RSD** in an ordinary bar. On the nightlife side, club and splav drinks are reported around **2–4 EUR for a beer** and **5–7 EUR for a cocktail**, with seated tables at big splavovi carrying minimum spends even when entry is free. A full kafana meal for two at a mid-range central or Skadarlija venue is reported around **4,000–8,000 RSD**. Street food sits below all of this — the cheapest way to eat in the city.
+
+## Cash, cards and tipping
+
+**Cards are widely accepted** — most mid-range and high-end restaurants, splavovi and hotel bars take them, and travellers commonly report paying around 70–90% of city expenses by card (indicative, as of 2026). Cash still matters at the small end: carry dinars for kafanas (especially tips), bakeries, markets, dessert shops and small local bars. Where to get dinars at a fair rate — and the exchange-office tricks to avoid — is covered in [money in Belgrade](/plan-your-trip/money).
+
+**Tipping is discretionary** — there is no legally enforced norm in Serbia. The local custom (reported) is to round up small café bills and leave around 5–10% on full meals when service is good, usually in cash even when the bill itself goes on a card — many terminals can't add a tip, so keep small notes back for it.
+
+## Hours: Belgrade runs late
+
+Many restaurants serve until around **23:00 or later**, and bars and clubs commonly stay open until roughly **04:00–06:00** — the big going-out nights are typically Thursday through Sunday, with some venues reported running to about 08:00. The waterfront blurs the line entirely: some Beton Hala venues run roughly 10:00–04:00 daily (reported, as of 2026), carrying a dinner table straight into the night. The practical consequence for a visitor: dinner at 21:00 or 22:00 is normal, not late, and you will never be the last table.
+
+## Reservations, dress codes and ID
+
+**Reservations** are effectively required for large-capacity splavovi and exclusive clubs, especially at weekends, and fine-dining or Michelin-listed restaurants strongly recommend booking for prime seating. Casual restaurants, everyday kafanas and grill counters are walk-in territory.
+
+**Dress codes** exist at the top of the scene: fine dining expects smart-casual to elegant (shorts and sportswear frowned upon), and splavovi and clubs enforce smart-casual minimum — bans on sandals for men are reported at mainstream clubs. Specific door policies change; when in doubt, dress one notch up.
+
+**The legal drinking age is 18.** ID checks are more common at busy nightclubs than at sit-down venues, and younger-looking guests are more likely to be carded — carry photo ID on club nights.
+
+## Late-night food and the traps to know
+
+After the clubs, Belgrade eats **burek, pizza, gyros and grilled meat**, and the 24-hour bakery is the standard stop — the full late-night map lives in the [grill and street food guide](/food-and-nightlife/belgrade-grill-and-street-food).
+
+Two recurring tourist-trap warnings, both easy to defuse (reported, as of 2026). At showpiece kafanas — Skadarlija above all — live-music nights can carry music charges or higher prices, so check before the band reaches your table. On splavovi, confirm whether a table minimum is **per table or per person** before you sit; "free entry" is not a cheap night at a prime table. And for getting home afterwards, use a reputable, registered transport option — the how is covered in [getting around Belgrade](/plan-your-trip/getting-around).

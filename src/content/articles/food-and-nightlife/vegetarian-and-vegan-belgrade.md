@@ -1,9 +1,9 @@
 ---
 leg: "food-and-nightlife"
 slug: "vegetarian-and-vegan-belgrade"
-title: "Vegetarian and vegan Belgrade — how to eat well in a meat city"
+title: "Vegetarian and vegan Belgrade — eating well in a meat city"
 shortTitle: "Vegetarian & vegan"
-description: "Vegan Belgrade and vegetarian restaurants Belgrade, explained for visitors: the best dedicated venues, vegan-friendly mainstream spots, gluten-free options, and the Orthodox posna (fasting) dishes that are accidentally vegan."
+description: "Vegan and vegetarian Belgrade: the best dedicated venues, vegan-friendly mainstream spots, and the Orthodox posna dishes that are accidentally vegan."
 lede: "Is Belgrade good for vegans? Yes — more than its meat-city reputation suggests. Here's the honest landscape: the dedicated vegan and vegetarian restaurants worth knowing, the mainstream kitchens that cater well, gluten-free notes, and the Orthodox posna (fasting) dishes that happen to be plant-based almost anywhere you go."
 heroLabel: "Vegetarian and vegan Belgrade / hero"
 heroAlt: "A colourful vegetarian spread of grilled vegetables, beans and salad"

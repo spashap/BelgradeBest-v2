@@ -1,23 +1,77 @@
-Redesign /admin Analytics: high-tech dashboard with richer GA4 data
+SEO overhaul: apply the 2026-07-02 audit fixes across code, schema and content
 
-Replace the three plain GA4/GSC tables with a live operator dashboard. The page
-stays server-rendered (prerender=false) so every load fetches live; adds a
-date-range selector, a Refresh control, a "fetched at" UTC stamp, and a realtime
-"active now" pill. Prioritizes browsing patterns, trends, and traffic sources.
+Implements the full action plan from KB/seo/ACTION-PLAN-2026-07-02.md (reports
+included in this commit). Highlights:
 
-- src/lib/admin/analytics.ts: add ga4Overview(days) — one batched pull (2x
-  batchRunReports) returning headline KPIs with period-over-period deltas
-  (visitors/sessions/views/engagement rate/avg engagement/views-per-session),
-  a daily trend series, traffic channels, devices, geo, new-vs-returning,
-  landing pages (sessions/avg-engage/bounce) and top pages (views/users/engage).
-  Add ga4Realtime() for active-users-now. Both degrade gracefully like the
-  existing helpers; existing ga4TopPages/GSC functions kept intact.
-- src/pages/admin/analytics.astro: rebuilt UI in the dark admin shell —
-  KPI stat-cards with up/down deltas, inline-SVG sparklines (no JS chart lib),
-  realtime pulse pill, 7/28/90-day range segmented control, traffic-source/
-  device/geo/new-vs-returning bar lists, landing-page + top-page browsing-
-  pattern tables, retained Search Console queries/pages sections.
+On-page / content (all 65 articles):
+- Trim every title to <=60 chars and every description to ~140-155 (agents
+  covered all legs); plan-your-trip/money got a real keyword title.
+- Expand the 8 thin articles to ~1,000-1,200 words each from the repo KBs
+  (nightlife, serbian-food, food-by-neighborhood, grill-street-food,
+  eating-and-drinking, staying-safe, neighborhoods, itinerary-3-days).
+  Root cause found: these + 2 expo files had been committed TRUNCATED
+  mid-sentence in the gen-glossary-links commit (e928564); lost text restored
+  from git history before expanding.
+- Medical price bullet lists converted to markdown tables (costs, dental,
+  cosmetic, hair) + expo tickets got a not-yet-announced price table scaffold.
+- 16 external citations added, every URL verified live (BIE, official
+  expobelgrade2027.org, Serbian MFA, Serbian Monitor/Chamber of Commerce).
+- belgrade-neighborhoods repositioned as the character piece and cross-linked
+  to /areas spokes (de-cannibalized vs the /areas hub).
 
-No new deps, no DB, public site untouched (admin-only, still noindex).
+E-E-A-T (no personal identity, per owner decision):
+- /about rewritten as a full editorial-standards page (research process,
+  AI-assisted + manually reviewed, confirmed/reported/unknown, corrections,
+  medical-content policy); typed AboutPage in JSON-LD.
+- publishingPrinciples -> /about on Organization + every Article.
+- Visible "Updated {date}" byline on all articles; unknowns frontmatter now
+  renders as a "Still unknown" trust block (new .c-article-meta/.c-unknowns).
+
+Internal linking / programmatic:
+- /glossary added to the footer; visible breadcrumbs on glossary + area spokes
+  (new Breadcrumbs.astro + .c-breadcrumbs).
+- lib/links.ts relatedFor() now resolves /areas/* and /glossary/* linksTo
+  targets; 40 linksTo additions wired every zero-inbound article + area spokes
+  into the graph (site-schema.json).
+- Area "nearby" names now link to sibling area/glossary spokes (lib/areas.ts).
+- Glossary titles grammar-fixed via per-record question field ("What are
+  cevapi?", "What is Skadarlija?"); guard floors raised (body>=600, faqs>=2;
+  area character>=350).
+- areas.ts meta-description bug fixed (no more lowercased proper nouns /
+  320-char cap; ledes trimmed to ~155 via new lib/text.ts metaTrim).
+
+Schema:
+- Event emitted on the /expo-2027 hub only (removed duplicate from 7 articles);
+  organizer.url -> https://expobelgrade2027.org (verified); logo width/height.
+- Glossary/area Article blocks now carry image + dateModified (new updated
+  fields in glossary.json/areas.json).
+- Utility pages get WebPage/AboutPage + BreadcrumbList.
+
+Performance:
+- public/icon.svg replaced: 1.22 MB base64-PNG wrapper -> 375-byte vector.
+- Responsive heroes: -640/-960 webp variants generated for all 72 heroes;
+  lib/hero.ts builds srcset/sizes; ArticleHero/FeaturedTile/layouts consume it;
+  gen-hero.mjs + optimize-heroes.mjs emit variants for future heroes.
+- 56 orphan hero PNGs deleted (130 MB; webp coverage verified 100%).
+- Font preload + GA preconnect in BaseLayout (prod only).
+
+Infra:
+- vercel.json: security headers (nosniff, XFO, referrer-policy,
+  permissions-policy, CSP allowing GA/Vercel) + immutable caching for /_astro.
+- Custom 404 page (src/pages/404.astro).
+- /llms-full.txt endpoint (full markdown bodies for AI answer engines).
+- robots.txt: deprecated Host: directive dropped; AI-crawler policy documented.
+- Sitemap lastmod is now real per-page everywhere (updated fields + hub
+  inheritance in astro.config.mjs; no more build-time churn); /areas +
+  /glossary hubs get priority 0.7. Mobile nav tap targets padded to ~44px.
+
+Docs: CLAUDE.md indexing posture refreshed (six legs + glossary + areas are
+live-indexable; only invest-and-relocate dark; /admin is password-gated).
+
+Owner actions still open: add www.belgradebest.com in Vercel Domains (TLS cert
+currently fails on www) and populate brand.sameAs when social profiles exist.
+
+Build verified: 99 sitemap URLs, no noindex/admin leaks, srcset + breadcrumbs +
+schema changes confirmed in dist output.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

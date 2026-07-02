@@ -1,9 +1,9 @@
 ---
 leg: "food-and-nightlife"
 slug: "belgrade-coffee-culture"
-title: "Belgrade coffee culture — Turkish tradition, specialty roasters and sweets"
+title: "Belgrade coffee culture — Turkish tradition to specialty"
 shortTitle: "Coffee & sweets"
-description: "Belgrade coffee culture and best cafes in Belgrade — the Turkish-coffee (domaća kafa) ritual, the Dorćol specialty-coffee wave and roasters, digital-nomad cafés, and historic poslastičarnica sweet shops."
+description: "Belgrade coffee culture: the Turkish-coffee (domaća kafa) ritual, Dorćol's specialty roasters, digital-nomad cafés and historic sweet shops."
 lede: "Belgrade runs on coffee — long, social, lingering coffee — from thick domaća (Turkish-style) cups in a džezva to a serious specialty scene in Dorćol. Here's the city's coffee culture, where to find the best cafes, and the historic sweet shops that go with it."
 heroLabel: "Belgrade coffee culture / hero"
 heroAlt: "A Turkish coffee in a copper džezva with a slice of cake on a café table"

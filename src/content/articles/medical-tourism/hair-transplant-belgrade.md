@@ -3,7 +3,7 @@ leg: "medical-tourism"
 slug: "hair-transplant-belgrade"
 title: "Hair transplant in Belgrade — costs and Serbia vs Turkey"
 shortTitle: "Hair transplant"
-description: "A neutral due-diligence guide to a hair transplant in Belgrade: mid-price positioning vs Turkey and Western Europe, indicative FUE and DHI cost per graft as of 2026, what 'all-inclusive' leaves out, how many days you need to stay, and honest, contested limits on long-term results."
+description: "Hair transplant in Belgrade: indicative FUE and DHI cost per graft, Serbia vs Turkey pricing, what 'all-inclusive' leaves out, and how long to stay."
 lede: "Belgrade is marketed as quality-value for hair transplants — cheaper than Western Europe, usually dearer than Turkey. This is the honest, clinic-neutral Belgrade guide: indicative cost bands and per-graft pricing as of 2026, FUE versus DHI, how long to budget for the trip, what 'all-inclusive' really covers, and why one session and a fixed price rarely tell the whole story."
 heroLabel: "Hair transplant in Belgrade / hero"
 heroAlt: "A specialist examining a patient's hairline at a mirror during a consultation"
@@ -38,7 +38,15 @@ A hair transplant in Belgrade is a mid-price option: usually cheaper than Wester
 
 ## How much does a hair transplant cost in Belgrade?
 
-As of 2026, indicative all-inclusive Belgrade FUE ranges run roughly ~€1,900 for up to ~1,500 grafts; ~€2,800–€3,800 for ~1,500–3,000 grafts; and ~€3,900–€5,200 for 3,000+ grafts — usually including the surgery and local transfers, sometimes a hotel, but excluding flights. The figures here are indicative and perishable: treat them as a rough map, not a quote, and confirm current numbers with any clinic directly.
+As of 2026, indicative all-inclusive Belgrade FUE ranges run as follows — usually including the surgery and local transfers, sometimes a hotel, but excluding flights:
+
+| Procedure | Typical price in Belgrade | Notes / what's included |
+| --- | --- | --- |
+| FUE, up to ~1,500 grafts | ~€1,900 (indicative, as of 2026) | "All-inclusive" — usually the surgery and local transfers, sometimes a hotel; flights excluded |
+| FUE, ~1,500–3,000 grafts | ~€2,800–€3,800 (indicative, as of 2026) | Same inclusions pattern |
+| FUE, 3,000+ grafts | ~€3,900–€5,200 (indicative, as of 2026) | Same inclusions pattern; larger cases are likelier to need a second session |
+
+The figures here are indicative and perishable: treat them as a rough map, not a quote, and confirm current numbers with any clinic directly.
 
 The shape of these bands is more durable than the exact euros. Price scales with graft count, the headline figure tends to fold in the surgery and your local transfers, and flights are your own cost on top. Beyond that, you are into clinic-by-clinic variation, which is why a single advertised number rarely settles the question. Every figure on this page is drawn from clinic-side marketing, so the genuinely useful step is to take the structure — price scales with grafts, surgery and transfers usually in, flights and extras usually out — and apply it to whatever current numbers a clinic gives you.
 

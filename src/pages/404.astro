@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Container from "../components/Container.astro";
+import { pageMetadata } from "../lib/metadata";
+import { clusters } from "../lib/clusters";
+
+// Branded 404 — Vercel serves dist/404.html for any unknown path with a real
+// 404 status. Links back into the visible sections so a dead end still routes
+// the reader (and crawlers) somewhere useful.
+const meta = pageMetadata({
+  title: "Page not found",
+  description: "That page doesn't exist on BelgradeBest. Start from the guide's main sections instead.",
+  path: "/404",
+  noindex: true,
+});
+const sections = clusters.filter((c) => !c.hidden);
+---
+<BaseLayout meta={meta}>
+  <PageIntro
+    eyebrow="404"
+    title="That page doesn't exist"
+    lede="The link may be old, or the address mistyped. Everything on BelgradeBest is reachable from these sections."
+  />
+  <Container variant="read">
+    <article class="c-article">
+      <ul>
+        <li><a href="/">Home — the whole guide at a glance</a></li>
+        {sections.map((c) => <li><a href={c.href}>{c.title}</a></li>)}
+        <li><a href="/areas">Belgrade by neighbourhood</a></li>
+        <li><a href="/glossary">Belgrade A–Z glossary</a></li>
+      </ul>
+      <p>Think this page should exist? <a href="/contact">Tell us</a> — a broken link report is genuinely useful.</p>
+    </article>
+  </Container>
+</BaseLayout>

@@ -37,6 +37,17 @@ async function convert(pngPath, heroOut, thumbOut, makeThumb) {
   before += kb(pngPath);
   await sharp(pngPath).resize(1600, 686, { fit: "cover", position: "attention" }).webp({ quality: 80 }).toFile(heroOut);
   after += kb(heroOut);
+  // Responsive width variants (<base>-640.webp / -960.webp) — lib/hero.ts
+  // builds srcset from these so phones skip the 1600px master.
+  const base = heroOut.replace(/\.webp$/, "");
+  for (const w of [640, 960]) {
+    const out = `${base}-${w}.webp`;
+    await sharp(pngPath)
+      .resize(w, Math.round((w * 686) / 1600), { fit: "cover", position: "attention" })
+      .webp({ quality: 75 })
+      .toFile(out);
+    after += kb(out);
+  }
   if (makeThumb) {
     await sharp(pngPath).resize(640, 360, { fit: "cover", position: "attention" }).webp({ quality: 72 }).toFile(thumbOut);
     after += kb(thumbOut);

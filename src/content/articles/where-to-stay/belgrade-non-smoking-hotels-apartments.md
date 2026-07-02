@@ -1,9 +1,9 @@
 ---
 leg: "where-to-stay"
 slug: "belgrade-non-smoking-hotels-apartments"
-title: "Non-Smoking Hotels in Belgrade: How to Book a Smoke-Free Stay"
+title: "Non-Smoking Hotels in Belgrade: Book a Smoke-Free Stay"
 shortTitle: "Non-smoking stays"
-description: "Non-smoking hotels in Belgrade and Belgrade non-smoking apartments: Serbian law allows designated smoking rooms, so book and confirm a smoke-free room in writing."
+description: "Non-smoking hotels and apartments in Belgrade: Serbian law still allows smoking rooms, so how to book — and confirm in writing — a smoke-free stay."
 lede: "Belgrade can be smoky, and Serbian law lets accommodation set aside designated smoking rooms, so the safest move for smoke-sensitive travellers is to book a property described as non-smoking and then confirm the exact room or apartment is smoke-free in writing before you pay."
 heroLabel: "Belgrade non-smoking hotels and apartments / hero"
 heroAlt: "Clean, airy Belgrade hotel room with an open window and no ashtrays, suggesting a smoke-free stay"

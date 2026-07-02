@@ -3,7 +3,7 @@ leg: "expo-2027"
 slug: "tickets"
 title: "Expo 2027 tickets — what we know so far"
 shortTitle: "Tickets"
-description: "Expo 2027 Belgrade tickets: honest, up-to-date tracking of price, where to buy, and when tickets go on sale. Prices and a sales date are not yet officially announced as of June 2026 — we update this page the moment they are."
+description: "Expo 2027 Belgrade tickets: prices, where to buy and the on-sale date are not yet announced as of June 2026 — we track every official update here."
 lede: "Expo 2027 Belgrade ticket prices, categories, and a sales start date are not yet officially announced. This page tracks what's confirmed, what's only reported by third parties, and what's still unknown — and is updated the moment official ticket information drops."
 heroLabel: "Expo 2027 tickets / hero"
 heroAlt: "The entrance to Expo 2027 in Belgrade at golden hour"
@@ -48,9 +48,18 @@ Expo 2027 ticket prices are **not yet announced** as of June 2026. The organiser
 
 For context on what to *expect* (clearly: expected, not confirmed), Specialised-Expo tickets at recent editions have typically been sold as a tiered range — single-day adult tickets, discounted child/student/senior tickets, and multi-day or season passes — usually cheaper if bought online in advance than at the gate. Belgrade's organiser has not confirmed any of this structure, but it's the normal pattern and gives you a sense of how pricing will likely be framed when it appears.
 
+The table below is a tracker, not a price list. The ticket types are the *typical* Specialised-Expo structure, not confirmed Belgrade categories — every cell stays "Not yet announced" until the organiser publishes real figures (as of June 2026), and we will fill it in the moment they do:
+
+| Ticket type | Price | Status |
+| --- | --- | --- |
+| Single-day adult | — | Not yet announced |
+| Child / student / senior concessions | — | Not yet announced |
+| Multi-day pass | — | Not yet announced |
+| Season pass | — | Not yet announced |
+
 ## Where will Expo 2027 tickets be sold?
 
-The **official Expo 2027 website (expobelgrade2027.org)** is the primary channel for ticket information, and its programme page is where the "Tickets available soon" status currently appears. When prices and a sales mechanism are announced, this is where they will show up first.
+The **[official Expo 2027 website](https://expobelgrade2027.org/en/intro) (expobelgrade2027.org)** is the primary channel for ticket information, and its programme page is where the "Tickets available soon" status currently appears. When prices and a sales mechanism are announced, this is where they will show up first.
 
 Beyond that, no sales channel has been confirmed as of June 2026 — there is no official word on whether tickets will sell through the website only, a dedicated app, authorised resellers or travel partners, or on-site at the gate. For most major Expos, the official website and app are the main sales points, often supplemented by authorised resellers, but for Belgrade this is expected, not confirmed. **Buy only through channels the official site explicitly names** once they're published, to avoid unofficial resellers.
 

@@ -1,9 +1,9 @@
 ---
 leg: "food-and-nightlife"
 slug: "belgrade-wine-bars"
-title: "Belgrade wine bars and rakija — Serbian wine and fruit brandy, and where to taste them"
+title: "Belgrade wine bars — Serbian wine, rakija and where to taste"
 shortTitle: "Wine & rakija"
-description: "A guide to Belgrade wine bars and Serbian wine tasting — the wine renaissance, the regions and indigenous grapes, the bars worth a visit, and the rakija tradition behind the bottle."
+description: "Belgrade wine bars and Serbian wine tasting — the regions and indigenous grapes, the bars worth a visit, and the rakija tradition behind the bottle."
 lede: "Beyond the clubs, Belgrade has a quieter going-out mode built on Serbian wine and rakija. Here's the wine renaissance and its regions, the indigenous grapes to try, the Belgrade wine bars worth a visit, where to do a wine tasting, and how the fruit-brandy tradition actually works."
 heroLabel: "Belgrade wine bars and rakija / hero"
 heroAlt: "Glasses of Serbian wine and rakija bottles on a wine-bar counter"

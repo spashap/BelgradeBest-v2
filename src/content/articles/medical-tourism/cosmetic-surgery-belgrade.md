@@ -1,9 +1,9 @@
 ---
 leg: "medical-tourism"
 slug: "cosmetic-surgery-belgrade"
-title: "Cosmetic surgery in Belgrade — procedures, costs and cautions"
+title: "Cosmetic surgery in Belgrade — costs, risks and cautions"
 shortTitle: "Cosmetic surgery"
-description: "Cosmetic surgery in Belgrade, neutral and trust-first: plastic surgery Belgrade prices and indicative cost bands for breast augmentation, tummy tuck, liposuction, mommy makeover, rhinoplasty, facelift and blepharoplasty, each procedure's documented risks, how long to stay, how to check a surgeon's credentials, and the DVT-and-recovery caution before you fly. Not a clinic ad and not medical advice."
+description: "Cosmetic surgery in Belgrade: indicative prices for breast augmentation, rhinoplasty and tummy tuck, documented risks, and when it's safe to fly."
 lede: "Belgrade markets cosmetic surgery to foreign patients as good value — and it can be, but it's a mid-price destination, not a cheap miracle, and these are real operations with real risks. Here's the honest version: the common procedures (breast augmentation, tummy tuck, liposuction, mommy makeover, rhinoplasty, facelift, blepharoplasty), their documented complication rates, indicative prices, how to check a surgeon's credentials, how long to stay, and why recovery has to come before your flight home."
 heroLabel: "Cosmetic surgery in Belgrade / hero"
 heroAlt: "A calm surgical consultation room with chairs and a clipboard in daylight"
@@ -79,7 +79,15 @@ This page summarises the clinical picture faithfully rather than recommending an
 
 The figures below are indicative and perishable — treat them as a starting point for getting current quotes, not as fixed prices, and re-confirm them at the time you book.
 
-As of 2026, indicative Belgrade examples run roughly: breast augmentation ~€3,200–€5,100; rhinoplasty ~€2,500–€3,400; abdominoplasty ~€2,500–€4,000. Liposuction is usually priced per area and the mommy makeover is the sum of its components, so neither has a single quotable figure. Some clinics state the price includes anaesthesia, theatre, the surgical team and one hospital night with follow-up, with extra nights at around €100 per night, and an initial consultation free only if you proceed. Facilitators may add "free accommodation" or transfers whose terms vary, so read those terms closely before assuming anything is genuinely included.
+| Procedure | Typical price in Belgrade | Notes / what's included |
+| --- | --- | --- |
+| Breast augmentation | ~€3,200–€5,100 (indicative, as of 2026) | Some clinics state the price includes anaesthesia, theatre, the surgical team and one hospital night with follow-up |
+| Rhinoplasty | ~€2,500–€3,400 (indicative, as of 2026) | Same stated inclusions pattern; extra nights reported at around €100 per night |
+| Abdominoplasty (tummy tuck) | ~€2,500–€4,000 (indicative, as of 2026) | Same stated inclusions pattern; longer recovery before flying home |
+| Liposuction | No single quotable figure | Usually priced per area treated — confirm directly |
+| Mommy makeover (combined) | No single quotable figure | The sum of its components; must be quoted for your specific combination |
+
+Beyond those lines, some clinics offer an initial consultation free only if you proceed, and facilitators may add "free accommodation" or transfers whose terms vary — read those terms closely before assuming anything is genuinely included. Every figure in the table is indicative Belgrade price-list data, as of 2026, not a quote.
 
 On savings, be careful with the headline maths. The savings versus Western prices are real — Belgrade is well below UK, US, German and Australian prices for comparable advertised procedures. But the headline figures are marketing, and the honest all-in saving after travel, accommodation and extras is lower than the percentages clinics quote. We don't echo a flat "X% cheaper" figure as fact. Our [medical tourism costs in Belgrade](/medical-tourism/medical-tourism-costs-in-belgrade) page covers the 20–60% all-in reality and how to build a truthful comparison for your own case.
 

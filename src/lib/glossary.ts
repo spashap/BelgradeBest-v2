@@ -1,4 +1,5 @@
 import data from "../data/glossary.json";
+import { metaTrim } from "./text";
 
 // Programmatic "Belgrade A–Z" glossary spoke pages (hub-and-spoke SEO). Same
 // machinery as lib/areas.ts: data-driven (src/data/glossary.json), rendered
@@ -18,6 +19,8 @@ export type GlossaryTerm = {
   body: string;
   related: string[];
   faqs: GlossaryFaq[];
+  question?: string;
+  updated?: string;
 };
 
 export type GlossarySection = { slug: string; eyebrow: string; title: string; lede: string };
@@ -34,9 +37,9 @@ export function validTerm(t: Partial<GlossaryTerm>): t is GlossaryTerm {
     t.term &&
     t.category &&
     typeof t.short === "string" && t.short.length >= 40 &&
-    typeof t.body === "string" && t.body.length >= 280 &&
+    typeof t.body === "string" && t.body.length >= 600 &&
     Array.isArray(t.related) && t.related.length >= 1 &&
-    Array.isArray(t.faqs) && t.faqs.length >= 1
+    Array.isArray(t.faqs) && t.faqs.length >= 2
   );
 }
 
@@ -64,10 +67,13 @@ export function termsByHref(): Map<string, GlossaryTerm> {
 // SEO title/description for a term page (answer-style, query-shaped — wins
 // "what is X" + AI-citation). Kept short enough for SERP/OG.
 export function termTitle(t: GlossaryTerm): string {
-  return `What is a ${t.term}? Belgrade & Serbia glossary`;
+  // Per-record `question` carries the grammatically correct form ("What are
+  // ćevapi?", "What is Skadarlija?"); the fallback drops the article rather
+  // than mis-applying "a" to proper nouns and plurals.
+  return `${t.question ?? `What is ${t.term}?`} Belgrade & Serbia glossary`;
 }
 export function termDescription(t: GlossaryTerm): string {
-  return t.short.slice(0, 320);
+  return metaTrim(t.short);
 }
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);

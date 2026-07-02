@@ -5,6 +5,7 @@ import Container from "../../components/Container.astro";
 import ArticleHero from "../../components/ArticleHero.astro";
 import MarkdownInline from "../../components/MarkdownInline.astro";
 import InternalLinkBlock from "../../components/InternalLinkBlock.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Schema from "../../components/Schema.astro";
 import { pageMetadata } from "../../lib/metadata";
 import { SITE, CONFIG } from "../../lib/site";
@@ -77,7 +78,13 @@ for (const link of term.related) {
 const body = termBodyMarkdown(term);
 
 const schemas: object[] = [
-  articleSchema({ title: termTitle(term), description: termDescription(term), url }),
+  articleSchema({
+    title: termTitle(term),
+    description: termDescription(term),
+    url,
+    imageUrl: `${SITE.origin}/images/glossary/${term.slug}.svg`,
+    dateModified: term.updated,
+  }),
   definedTermSchema({
     name: term.term,
     description: term.short,
@@ -94,6 +101,13 @@ const schemas: object[] = [
 ];
 ---
 <BaseLayout meta={meta}>
+  <Breadcrumbs
+    crumbs={[
+      { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+      { name: glossarySection.title, href: `/${glossarySection.slug}` },
+      { name: term.term },
+    ]}
+  />
   <PageIntro eyebrow={glossarySection.eyebrow} title={term.term} lede={term.short} />
 
   <Container>

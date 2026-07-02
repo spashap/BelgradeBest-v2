@@ -1,9 +1,9 @@
 ---
 leg: "where-to-stay"
 slug: "where-to-stay-in-belgrade-for-nightlife"
-title: "Where to Stay in Belgrade for Nightlife: Best Areas, and the Sleep Trap to Avoid"
+title: "Where to Stay in Belgrade for Nightlife: Best Party Areas"
 shortTitle: "For nightlife"
-description: "Where to stay in Belgrade for nightlife: why Savamala, Dorćol and Stari Grad are the best party areas — but why you should sleep 5–10 minutes from the bar street, not on it. Plus splav season, late-night taxis, noise rules and deposits."
+description: "Where to stay in Belgrade for nightlife: Savamala, Dorćol and Stari Grad are the party areas — but sleep 5–10 minutes from the bar street, not on it."
 lede: "If nightlife is your priority, base yourself near Savamala and Beton Hala, Dorćol (Strahinjića Bana and Cetinjska), or Stari Grad around Skadarlija — these put the bars, clubs and river splavovi on your doorstep. But the one rule that matters most: the perfect nightlife location is usually a bad sleep location. Stay 5–10 minutes' walk from the loud street, not directly on it, and you get the night out and the lie-in."
 heroLabel: "Where to stay in Belgrade for nightlife / hero"
 heroAlt: "Map-style view of central Belgrade showing the Savamala riverfront, Dorćol and Stari Grad nightlife zones at night"

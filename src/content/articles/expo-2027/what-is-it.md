@@ -1,9 +1,9 @@
 ---
 leg: "expo-2027"
 slug: "what-is-it"
-title: "What is a Specialised Expo, and is Expo 2027 Belgrade worth visiting?"
+title: "What is Expo 2027 Belgrade — and is it worth visiting?"
 shortTitle: "What is it"
-description: "What is Expo 2027 Belgrade? A plain-English explainer of the first Specialised Expo in the Western Balkans — its \"Play for Humanity\" theme, dates, Surčin site, mascots Rastko and Milica, post-Expo legacy, and whether it's worth visiting."
+description: "What is Expo 2027 Belgrade? A plain-English guide to the first Specialised Expo in the Western Balkans — dates, theme, site, legacy, whether to go."
 lede: "Expo 2027 Belgrade is the first Specialised Expo ever held in the Western Balkans — a BIE-recognised, theme-focused international exposition running 15 May to 15 August 2027 in Surčin, under the theme \"Play for Humanity: Sport and Music for All.\" Here's what that means, and whether it's worth your time."
 heroLabel: "What is a Specialised Expo / hero"
 heroAlt: "Belgrade's rivers and skyline at golden hour — the host city of Expo 2027"
@@ -48,7 +48,7 @@ Expo 2027 Belgrade is a **Specialised Expo** — a BIE-recognised, theme-focused
 
 The word "Expo" covers two different things. A **Universal (World) Expo** is the large, broad-scope kind, held over six months on a wide-open theme. A **Specialised Expo** — the category Expo 2027 Belgrade belongs to — is narrower: it lasts **three months** and is built around a **single declared theme**. Specialised Expos are designed to address a specific challenge facing humanity, and are held in the years between the larger World Expos.
 
-Expo 2027 is officially recognised by the **Bureau International des Expositions (BIE)**, the Paris-based intergovernmental body that sanctions official expos, following Serbia's election as host at the BIE General Assembly and the approval of its Recognition Dossier. It is also the **first Specialised Expo held in the Western Balkans** — official messaging frames it as a once-in-a-generation event for Serbia and the region. The Government of Serbia is the organiser and host country, working under BIE supervision through an established government organising committee.
+Expo 2027 is officially recognised by the **[Bureau International des Expositions (BIE)](https://www.bie-paris.org/site/en/2027-belgrade)**, the Paris-based intergovernmental body that sanctions official expos, following Serbia's election as host at the BIE General Assembly and [the approval of its Recognition Dossier](https://www.bie-paris.org/site/en/news-announcements/specialised-expo/bie-general-assembly-recognises-specialised-expo-2027-belgrade). It is also the **first Specialised Expo held in the Western Balkans** — official messaging frames it as a once-in-a-generation event for Serbia and the region. The Government of Serbia is the organiser and host country, working under BIE supervision through an established government organising committee.
 
 ## When and where is Expo 2027 Belgrade?
 
@@ -77,7 +77,7 @@ One honest caveat: as of June 2026, **no full public daily calendar** of concert
 
 ## How big is it, really?
 
-Scale matters when you're deciding whether to travel for something. As of **June 2026**, the official Participants page states that **137 nations** have formally committed; elsewhere the official site refers to "over 120 nations," and a July 2025 release reported **117 confirmed**. The number has grown over time and may keep changing — Expo 2027 has already surpassed the previous Specialised Expo host, Astana — so it's best read as "137 as of June 2026," not a final figure. (For the running list, see [participating countries](/expo-2027/participants).)
+Scale matters when you're deciding whether to travel for something. As of **June 2026**, the [official Participants page](https://expobelgrade2027.org/en/participants) states that **137 nations** have formally committed; elsewhere the official site refers to "over 120 nations," and a July 2025 release reported **117 confirmed**. The number has grown over time and may keep changing — Expo 2027 has already surpassed the previous Specialised Expo host, Astana — so it's best read as "137 as of June 2026," not a final figure. (For the running list, see [participating countries](/expo-2027/participants).)
 
 For visitors, the official Participants FAQ **projects around 4.1 million visits over the 93 days** — averaging roughly 44,652 per day, with peaks up to around 89,304. Treat this as a projection, not a count. Other statements have referenced figures from 2.6–3 million up to "over four million," so the estimates range widely and should be read as provisional.
 

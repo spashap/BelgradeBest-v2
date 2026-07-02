@@ -1,7 +1,7 @@
 ---
 leg: "where-to-stay"
 slug: "where-to-stay-in-belgrade-first-time"
-title: "Where to Stay in Belgrade for the First Time: Best Areas & Tips"
+title: "Where to Stay in Belgrade for the First Time: Best Areas"
 shortTitle: "First-time visitors"
 description: "Where to stay in Belgrade for the first time: Stari Grad is the safe default, with Dorćol, Savamala and Vračar alternatives, plus first-timer gotchas."
 lede: "For a first visit of two to four days, the best fit for most travellers is Stari Grad (Old Town): it usually puts you within an easy walk of Republic Square, Knez Mihailova, Kalemegdan and Skadarlija, so you spend less time commuting and more time seeing the city."

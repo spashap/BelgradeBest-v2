@@ -47,7 +47,7 @@ src/
   lib/                               # clusters, content-plan, schemas, metadata, hero, leg-status, links, articles, site, routes, types
   pages/  index.astro · [leg]/index.astro · [leg]/[slug].astro · about/privacy/contact/how-we-make-money · robots.txt.ts
   styles/globals.css                 # THE design system (tokens + L3 classes), ported verbatim
-public/images/                       # heroes — FLAT: images/expo-2027/<slug>-hero.png ; legs/<leg>/hero.png
+public/images/                       # heroes — FLAT: images/expo-2027/<slug>-hero.webp (+ -640/-960 variants) ; legs/<leg>/hero.webp
   middleware.ts                      # auth gate for /admin (open until ADMIN_PASSWORD set)
   pages/admin/ + pages/api/admin/    # the /admin app (server-rendered, prerender=false)
   lib/admin/                         # env, store (GitHub/local), analytics
@@ -80,8 +80,11 @@ does not define them.
 - **Structure / nav / chrome / layout / homepage** → the three `src/data/*.json`
   masters. **Single-source law: store references (slugs/hrefs); derive titles/labels
   at render** (`clusters.ts`, `content-plan.ts`, `links.ts`).
-- **Heroes** → `public/images/expo-2027/<slug>-hero.png` (FLAT dir, all legs — locked
-  convention `lib/hero.ts` depends on; do NOT reorganize) and `images/legs/<leg>/hero.png`.
+- **Heroes** → `public/images/expo-2027/<slug>-hero.webp` (FLAT dir, all legs — locked
+  convention `lib/hero.ts` depends on; do NOT reorganize) and `images/legs/<leg>/hero.webp`.
+  Each master has `-640.webp`/`-960.webp` responsive variants (emitted by
+  `gen-hero.mjs`/`optimize-heroes.mjs`; `lib/hero.ts` builds `srcset` from them).
+  The old PNG fallbacks were deleted 2026-07-02 (webp coverage is 100%).
   Cache-busted by file mtime.
 - **New article**: add the `.md` (frontmatter `leg` + `slug`), add/confirm the slug
   in `site-schema.json`, drop a hero PNG. **New leg**: also add it to `LEGS` in
@@ -98,15 +101,23 @@ inline markdown (leg body, utility pages) via `components/MarkdownInline.astro`
 (`marked`). JSON-LD: Article + Breadcrumb everywhere, Event on `expo-2027`, FAQPage
 when `faqs` present.
 
-## SEO / indexing posture
+## SEO / indexing posture (updated 2026-07-02)
 
-Per-leg `noindex` in `site-schema.json` is preserved from the old site. **Indexable
-today: `expo-2027`, `food-and-nightlife`, `medical-tourism`.** The other legs
-(`visit-belgrade`, `plan-your-trip`, `where-to-stay`, `invest-and-relocate`) are
-`noindex` and are **excluded from the sitemap**. The porter propagates leg `noindex`
-to each article's frontmatter. **To turn a leg on for search:** set `noindex: false`
-on the leg in `site-schema.json` AND update the affected articles' frontmatter
-`noindex` (or re-run the porter). The sitemap re-includes it automatically.
+Per-leg `noindex` lives in `site-schema.json`. **Indexable today: everything
+except `invest-and-relocate`** — `expo-2027`, `food-and-nightlife`,
+`medical-tourism`, `visit-belgrade`, `plan-your-trip`, `where-to-stay` are all
+live in the sitemap, and the programmatic sets are flipped on too
+(`site-config.json → programmatic.glossaryIndexable` and `areasIndexable` are
+both `true`). Only `invest-and-relocate` remains `noindex` + hidden. **To turn a
+leg on/off for search:** set `noindex` on the leg in `site-schema.json` AND
+update the affected articles' frontmatter `noindex` (or re-run the porter). The
+sitemap re-includes/excludes it automatically. Sitemap `lastmod` is real per-page
+(article frontmatter `lastUpdated`; `updated` fields in glossary/areas/site-pages
+JSON; hubs inherit their newest child) — do NOT let it fall back to build time.
+
+A full SEO audit + prioritized fixes live in `KB/seo/FULL-AUDIT-REPORT-2026-07-02.md`
+and `KB/seo/ACTION-PLAN-2026-07-02.md` (most items applied 2026-07-02; the www-TLS
+cert fix in Vercel Domains and `brand.sameAs` population remain owner actions).
 
 Astro adds `id` anchors to body headings (only difference from the old
 `react-markdown` output) — kept intentionally as an SEO win (jump links + AI passage
@@ -129,9 +140,9 @@ the slug is in the `articles` content collection.
   via the GitHub Contents API (`GITHUB_TOKEN` + `GITHUB_REPO` + `GITHUB_BRANCH`),
   which auto-triggers a Vercel rebuild so the static site goes live (~1 min). NO DB.
   In dev (no token) it writes the local file directly (instant). Code: `src/lib/admin/store.ts`.
-- **Auth (`src/middleware.ts`)**: `ADMIN_PASSWORD` UNSET = `/admin` is OPEN (current
-  state, by choice). Set that env var to require a login (`/admin/login`); the cookie
-  is a hash of the password. Nothing else changes.
+- **Auth (`src/middleware.ts`)**: `ADMIN_PASSWORD` is SET in production — `/admin`
+  302s to `/admin/login` (verified live 2026-07-02). Unsetting the env var would
+  leave it open; the cookie is a hash of the password. Nothing else changes.
 - **Analytics**: GA4 Data API via `GA_PROPERTY_ID` + `GA_CREDENTIALS_JSON` (inline
   service-account JSON; on Vercel needs `npm approve-scripts protobufjs` to have run
   at install — Vercel runs install scripts normally). Vercel Web Analytics is viewed
@@ -159,7 +170,8 @@ same machinery as `/areas`: data `src/data/glossary.json` → lib `src/lib/gloss
 (`validTerm` thin-content guard) → pages `src/pages/glossary/[term].astro` +
 `index.astro` → branded SVG thumbs (`scripts/gen-glossary-thumbs.mjs`). Per page:
 `Article` + `DefinedTerm` + `BreadcrumbList` + `FAQPage` JSON-LD. **Ships
-noindex-first** behind `site-config.json → programmatic.glossaryIndexable` (`false`).
+noindex-first** behind `site-config.json → programmatic.glossaryIndexable`
+(**flipped to `true` — glossary + areas are live and indexable**).
 The multiplier is the owner-run `scripts/gen-glossary-links.mjs`, which wraps the
 first mention of each term in article bodies in a link to its spoke (append-only,
 idempotent). Run/publish steps: `KB/automation/RUNBOOK.md → Knowledge pages`.

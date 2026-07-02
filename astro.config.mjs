@@ -31,6 +31,30 @@ try {
   /* no articles dir — leave map empty */
 }
 
+// Real lastmod for non-article pages too (previously they re-stamped BUILD_DATE
+// on every deploy — lastmod churn teaches crawlers to ignore the field).
+// Sources: per-record `updated` in glossary.json/areas.json, per-page `updated`
+// in site-pages.json; hubs get the newest date of their children.
+const iso = (d) => new Date(d).toISOString();
+const maxDate = (dates) => (dates.length ? iso(dates.reduce((a, b) => (a > b ? a : b))) : undefined);
+for (const t of glossaryData.terms) if (t.updated) LASTMOD[`/glossary/${t.slug}`] = iso(t.updated);
+for (const a of areasData.areas) if (a.updated) LASTMOD[`/areas/${a.slug}`] = iso(a.updated);
+for (const p of pagesData.pages) if (p.updated) LASTMOD[`/${p.slug}`] = iso(p.updated);
+{
+  const g = maxDate(glossaryData.terms.map((t) => t.updated).filter(Boolean));
+  if (g) LASTMOD["/glossary"] = g;
+  const ar = maxDate(areasData.areas.map((a) => a.updated).filter(Boolean));
+  if (ar) LASTMOD["/areas"] = ar;
+  // Leg hubs + home: newest article date is the honest proxy for "last changed".
+  for (const leg of schema.legs) {
+    const dates = leg.slugs.map((s) => LASTMOD[`/${leg.slug}/${s.slug}`]).filter(Boolean);
+    const m = maxDate(dates);
+    if (m) LASTMOD[`/${leg.slug}`] = m;
+  }
+  const home = maxDate(Object.values(LASTMOD));
+  if (home) LASTMOD[""] = home;
+}
+
 // Production domain. Canonical/sitemap URLs use this even while the V2 build is
 // served from a temporary *.vercel.app URL (domain switch happens later).
 const SITE = config.brand.origin;
@@ -167,8 +191,10 @@ export default defineConfig({
         if (path === "") {
           item.priority = 1.0;
         } else if (segs.length === 1) {
-          item.priority = LEG_SLUGS.has(segs[0]) ? 0.9 : 0.3; // leg hub vs utility page
-          if (!LEG_SLUGS.has(segs[0])) item.changefreq = "yearly";
+          // Leg hubs 0.9, programmatic section hubs 0.7, utility pages 0.3.
+          const isProgHub = segs[0] === "areas" || segs[0] === "glossary";
+          item.priority = LEG_SLUGS.has(segs[0]) ? 0.9 : isProgHub ? 0.7 : 0.3;
+          if (!LEG_SLUGS.has(segs[0]) && !isProgHub) item.changefreq = "yearly";
         } else {
           item.priority = 0.8;
         }

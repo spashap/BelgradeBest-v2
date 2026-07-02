@@ -3,6 +3,7 @@ import Container from "./Container.astro";
 import { CONFIG, interp } from "../lib/site";
 import { clusterBySlug, utilityPages } from "../lib/clusters";
 import { areaSection } from "../lib/areas";
+import { glossarySection } from "../lib/glossary";
 
 // Footer from chrome.footer + DERIVED links (leg titles/hrefs from clusters,
 // utility-page titles/paths from utilityPages). Degrades to a one-line footer
@@ -22,10 +23,15 @@ function visibleRefs(items: RefItem[]): string[] {
 // Standalone sections that aren't legs or utility pages (e.g. the programmatic
 // /areas hub). Gated on their publish flag so a footer ref auto-hides if the
 // section is turned off. Resolves regardless of the column's `kind`.
-const areasOn = (CONFIG as { programmatic?: { areasIndexable?: boolean } }).programmatic?.areasIndexable === true;
-const SPECIAL: Record<string, ResolvedLink> = areasOn
-  ? { [areaSection.slug]: { title: areaSection.title, href: `/${areaSection.slug}` } }
-  : {};
+const prog = (CONFIG as { programmatic?: { areasIndexable?: boolean; glossaryIndexable?: boolean } }).programmatic;
+const SPECIAL: Record<string, ResolvedLink> = {
+  ...(prog?.areasIndexable === true
+    ? { [areaSection.slug]: { title: areaSection.title, href: `/${areaSection.slug}` } }
+    : {}),
+  ...(prog?.glossaryIndexable === true
+    ? { [glossarySection.slug]: { title: glossarySection.title, href: `/${glossarySection.slug}` } }
+    : {}),
+};
 
 function resolveRef(kind: string, slug: string): ResolvedLink | null {
   if (SPECIAL[slug]) return SPECIAL[slug];

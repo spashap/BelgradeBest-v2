@@ -12,7 +12,14 @@ import { clusterBySlug } from "./clusters";
 // surfaces stop loading the full-size hero. Returns a cache-busted src (file
 // mtime) + alt, or null when no asset exists. Build-time only (SSG).
 
-export type ResolvedHero = { src: string; alt: string } | null;
+export type ResolvedHero = { src: string; alt: string; srcset?: string; sizes?: string } | null;
+
+// Rendered hero width tops out at the layout max (site-config layout.maxWidth ≈
+// 1180px), full-bleed below it — so phones can take the 640/960 variants
+// instead of the 1600px master.
+const HERO_SIZES = "(max-width: 700px) 100vw, (max-width: 1240px) 96vw, 1180px";
+const VARIANT_WIDTHS = [640, 960] as const;
+const FULL_WIDTH = 1600;
 
 const pub = (...p: string[]) => join(process.cwd(), "public", "images", ...p);
 function mtime(abs: string): number {
@@ -32,10 +39,30 @@ function pick(dirParts: string[], names: string[], urlBase: string): { src: stri
   return null;
 }
 
+// Build a srcset from pre-generated width variants (<base>-640.webp, -960.webp;
+// see scripts/optimize-heroes.mjs). Only webp masters have variants; when none
+// exist the caller just gets src (no srcset) and behavior is unchanged.
+function srcsetFor(dirParts: string[], name: string, urlBase: string): { srcset: string; sizes: string } | null {
+  const m = name.match(/^(.+)\.webp$/);
+  if (!m) return null;
+  const entries: string[] = [];
+  for (const w of VARIANT_WIDTHS) {
+    const vName = `${m[1]}-${w}.webp`;
+    const abs = pub(...dirParts, vName);
+    if (existsSync(abs)) entries.push(`${urlBase}/${vName}?v=${mtime(abs)} ${w}w`);
+  }
+  if (entries.length === 0) return null;
+  const full = pub(...dirParts, name);
+  entries.push(`${urlBase}/${name}?v=${mtime(full)} ${FULL_WIDTH}w`);
+  return { srcset: entries.join(", "), sizes: HERO_SIZES };
+}
+
 // Per-slug article hero (flat dir for every leg — locked convention). WebP → PNG.
 export function heroForSlug(slug: string, alt?: string): ResolvedHero {
   const got = pick(["expo-2027"], [`${slug}-hero.webp`, `${slug}-hero.png`], "/images/expo-2027");
-  return got ? { src: got.src, alt: alt ?? slug } : null;
+  if (!got) return null;
+  const responsive = srcsetFor(["expo-2027"], `${slug}-hero.webp`, "/images/expo-2027");
+  return { src: got.src, alt: alt ?? slug, ...(responsive ?? {}) };
 }
 
 // Per-slug card thumbnail. Small WebP → falls back to the full hero if absent.
@@ -50,7 +77,8 @@ export function heroForLeg(leg: string, alt?: string): ResolvedHero {
   const got = pick(["legs", leg], ["hero.webp", "hero.png"], `/images/legs/${leg}`);
   if (!got) return null;
   const c = clusterBySlug(leg);
-  return { src: got.src, alt: alt ?? c?.hero?.alt ?? c?.title ?? leg };
+  const responsive = srcsetFor(["legs", leg], "hero.webp", `/images/legs/${leg}`);
+  return { src: got.src, alt: alt ?? c?.hero?.alt ?? c?.title ?? leg, ...(responsive ?? {}) };
 }
 
 // Per-leg card thumbnail. Small WebP → falls back to the full leg hero if absent.

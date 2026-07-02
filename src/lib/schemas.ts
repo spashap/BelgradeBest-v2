@@ -8,8 +8,13 @@ import { SITE, EXPO, CONFIG } from "./site";
 // Google's article rich results want a publisher logo; this gives one source.
 const LOGO_URL = `${SITE.origin}${(CONFIG.brand as { logoPath?: string }).logoPath ?? "/apple-icon.png"}`;
 function logoImage() {
-  return { "@type": "ImageObject", url: LOGO_URL };
+  return { "@type": "ImageObject", url: LOGO_URL, width: 180, height: 180 };
 }
+
+// The editorial-standards page — how the guide is researched and corrected.
+// Declared machine-readably on Organization + every Article (E-E-A-T signal
+// that doesn't depend on a personal byline).
+const PRINCIPLES_URL = `${SITE.origin}/about`;
 
 // Verified social/profile URLs (Organization.sameAs). Populated from
 // site-config brand.sameAs as the social accounts come online — empty = omitted.
@@ -59,6 +64,7 @@ export function articleSchema(a: ArticleInput) {
     // single byline) — declared consistently for E-E-A-T.
     author: { "@type": "Organization", name: SITE.name, url: SITE.origin },
     publisher: publisherOrg(),
+    publishingPrinciples: PRINCIPLES_URL,
     isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.origin },
   };
 }
@@ -79,6 +85,7 @@ export function expoEventSchema(imageUrl?: string) {
     organizer: {
       "@type": "Organization",
       name: EXPO.name,
+      url: (CONFIG.expo as { officialUrl?: string }).officialUrl ?? `${SITE.origin}/expo-2027`,
     },
     // Ticketing isn't on sale yet, so this points at our tickets guide and is
     // marked PreOrder rather than asserting a price we don't have.
@@ -155,6 +162,7 @@ export function organizationSchema() {
     url: SITE.origin,
     description: SITE.tagline,
     logo: logoImage(),
+    publishingPrinciples: PRINCIPLES_URL,
     ...(same.length ? { sameAs: same } : {}),
   };
 }

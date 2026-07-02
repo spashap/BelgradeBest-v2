@@ -110,6 +110,13 @@ async function main() {
   // 21:9 hero (1600x686) + 16:9 thumb (640x360), center-cropped to salient area.
   await sharp(raw).resize(1600, 686, { fit: "cover", position: "attention" }).webp({ quality: 80 }).toFile(heroPath);
   await sharp(raw).resize(640, 360, { fit: "cover", position: "attention" }).webp({ quality: 72 }).toFile(thumbPath);
+  // Responsive width variants for srcset (built into srcset by lib/hero.ts).
+  for (const w of [640, 960]) {
+    await sharp(raw)
+      .resize(w, Math.round((w * 686) / 1600), { fit: "cover", position: "attention" })
+      .webp({ quality: 75 })
+      .toFile(heroPath.replace(/\.webp$/, `-${w}.webp`));
+  }
 
   const { statSync } = await import("node:fs");
   const kb = (p) => Math.round(statSync(p).size / 1024) + " KB";

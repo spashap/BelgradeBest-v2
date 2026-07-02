@@ -2,6 +2,8 @@ import schema from "../data/site-schema.json";
 import { clusterBySlug } from "./clusters";
 import { thumbForPath } from "./hero";
 import { articlesByHref } from "./articles";
+import { validAreas, areaSection } from "./areas";
+import { termsByHref, glossarySection } from "./glossary";
 
 // Internal-link model. The SINGLE editable master for related links is
 // data/site-schema.json (slug.linksTo) — the local admin writes it; the site
@@ -30,6 +32,37 @@ function normalize(link: string, leg: string): string {
   return `/${leg}/${link}`;
 }
 
+// Resolve a programmatic-spoke href (/areas/<slug>, /glossary/<slug>) to a card,
+// so linksTo entries can point at those pages too — same reference-not-copy rule.
+function spokeForHref(href: string): RelatedLink | null {
+  const [section, spokeSlug] = href.replace(/^\//, "").split("/");
+  if (section === areaSection.slug) {
+    const a = validAreas().find((x) => x.slug === spokeSlug);
+    if (a) {
+      return {
+        href,
+        title: `${a.name} — neighbourhood guide`,
+        body: a.lede,
+        heroSrc: `/images/areas/${a.slug}.svg`,
+        heroAlt: `${a.name}, Belgrade neighbourhood`,
+      };
+    }
+  }
+  if (section === glossarySection.slug) {
+    const t = termsByHref().get(href);
+    if (t) {
+      return {
+        href,
+        title: t.term,
+        body: t.short,
+        heroSrc: `/images/glossary/${t.slug}.svg`,
+        heroAlt: `${t.term} — Belgrade glossary`,
+      };
+    }
+  }
+  return null;
+}
+
 export async function relatedFor(leg: string, slug: string): Promise<RelatedLink[]> {
   const byHref = await articlesByHref();
   const out: RelatedLink[] = [];
@@ -43,7 +76,12 @@ export async function relatedFor(leg: string, slug: string): Promise<RelatedLink
     let body: string | undefined;
     if (segs.length >= 2) {
       const a = byHref.get(href);
-      if (!a || a.data.visible === false) continue; // drop dangling/hidden targets
+      if (!a || a.data.visible === false) {
+        // Not an article — try the programmatic spokes before dropping.
+        const spoke = spokeForHref(href);
+        if (spoke) out.push(spoke);
+        continue;
+      }
       title = a.data.shortTitle || a.data.title;
       body = a.data.description;
     } else if (segs.length === 1) {

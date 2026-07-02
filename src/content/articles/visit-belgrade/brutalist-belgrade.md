@@ -1,9 +1,9 @@
 ---
 leg: "visit-belgrade"
 slug: "brutalist-belgrade"
-title: "Brutalist Belgrade — New Belgrade's concrete landmarks and how to see them"
+title: "Brutalist Belgrade — New Belgrade's concrete landmarks"
 shortTitle: "Brutalist Belgrade"
-description: "Brutalist Belgrade: where to see New Belgrade architecture across the Sava — Genex / Western City Gate, the Eastern City Gate, the Blokovi and Ušće — with the honest rule on viewing residential buildings respectfully."
+description: "Brutalist Belgrade: where to see New Belgrade's concrete landmarks across the Sava — Genex Tower, the Eastern City Gate, the Blokovi and Ušće."
 lede: "Brutalist Belgrade is New Belgrade (Novi Beograd), the planned socialist quarter on the left bank of the Sava, across the river from the old town. It's an open-air catalogue of socialist-modernist architecture — Genex, the city gates, the great residential blocks. Here's what to see, where it is, and the honest rule: most of it is people's homes, seen from outside."
 heroLabel: "Brutalist Belgrade / hero"
 heroAlt: "New Belgrade's brutalist concrete towers"

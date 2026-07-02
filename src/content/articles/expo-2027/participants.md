@@ -3,7 +3,7 @@ leg: "expo-2027"
 slug: "participants"
 title: "Expo 2027 participating countries — confirmed and expected"
 shortTitle: "Participants"
-description: "Expo 2027 participating countries: how many nations are taking part (137 committed as of 2026), the official country list, pavilion zones, and which countries have announced pavilion plans for Belgrade."
+description: "Expo 2027 participating countries: 137 nations committed as of 2026, the official list, how pavilions are zoned, and which pavilion plans are public."
 lede: "As of mid-2026, the official Participants page lists 137 countries as formally committed to Expo 2027 Belgrade — a record for a Specialised Expo, and a number still expected to grow. This page tracks how many countries are taking part, who is confirmed, how the pavilions are organised into zones, and where individual pavilion plans have been announced."
 heroLabel: "Expo 2027 participants / hero"
 heroAlt: "International flags and the Belgrade skyline — participating countries at Expo 2027"
@@ -39,11 +39,11 @@ unknowns:
 
 ## How many countries are taking part in Expo 2027?
 
-As of 2026, **137 countries have formally committed** to Expo 2027 Belgrade. That is the figure on the official Participants page, which carries a note that more are coming, and it is the same number reported at the second International Participants Meeting held in Belgrade in April 2026, where around 500 delegates gathered to plan their national presence.
+As of 2026, **137 countries have formally committed** to Expo 2027 Belgrade. That is the figure on the [official Participants page](https://expobelgrade2027.org/en/participants), which carries a note that more are coming, and it is the same number reported at the second International Participants Meeting held in Belgrade in April 2026, where around 500 delegates gathered to plan their national presence.
 
 Read that 137 as a snapshot, not a final total. The count has climbed steadily: roughly 94 in May 2025, then 114–118 by mid-2025 (the organisers cited 114 countries after the first International Planning Meeting in June 2025, rising to 117–118), 120 in September 2025, and 137 by early–mid 2026. The organisers describe it as still growing, so the number you see today may already be higher tomorrow.
 
-This total already exceeds the previous Specialised Expo, Astana 2017, which hosted between 115 and 117 participating countries. By participant count, that makes Serbia a record holder for a Specialised Expo. Serbia's original stated target was 100 countries by the end of 2025, later revised upward toward 120 or more — and the actual count overshot both goals.
+This total already exceeds the previous [Specialised Expo](https://www.bie-paris.org/site/en/expo-index/all-specialised-expos), Astana 2017, which hosted between 115 and 117 participating countries. By participant count, that makes Serbia a record holder for a Specialised Expo. Serbia's original stated target was 100 countries by the end of 2025, later revised upward toward 120 or more — and the actual count overshot both goals.
 
 ## Which countries are on the Expo 2027 list?
 
@@ -55,7 +55,7 @@ Non-official consolidations, such as beinbelgrade.com, aggregate a publicly conf
 
 ## Is my country participating in Expo 2027?
 
-The honest answer is: the best way to confirm is the **official Participants page** at expobelgrade2027.org/en/participants. With 137 nations committed and counting, most major economies and a wide spread of smaller states are taking part — but because the official list is published as a partial, sometimes-duplicated set of names rather than a tidy table, absence from what you can see today does not always mean absence from the event.
+The honest answer is: the best way to confirm is the **[official Participants page](https://expobelgrade2027.org/en/participants)** at expobelgrade2027.org/en/participants. With 137 nations committed and counting, most major economies and a wide spread of smaller states are taking part — but because the official list is published as a partial, sometimes-duplicated set of names rather than a tidy table, absence from what you can see today does not always mean absence from the event.
 
 If your country appears among the named examples above, it is confirmed. If it does not, check two places: the official page first, then a non-official tracker such as beinbelgrade.com, which has captured press announcements (the United States, France, the UAE, North Macedonia, Turkmenistan, the Maldives and others) ahead of the official table. Where you find a country announced in the press but not yet on the official page, read it as reported-but-not-yet-officially-listed rather than confirmed.
 

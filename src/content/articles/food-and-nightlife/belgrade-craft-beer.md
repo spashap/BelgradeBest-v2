@@ -1,9 +1,9 @@
 ---
 leg: "food-and-nightlife"
 slug: "belgrade-craft-beer"
-title: "Belgrade craft beer — breweries, taprooms and the Dorćol scene"
+title: "Belgrade craft beer — breweries, taprooms and Dorćol"
 shortTitle: "Craft beer"
-description: "Belgrade craft beer: Serbia's craft-beer capital — the flagship breweries (Dogma, Kabinet), the taprooms and beer bars clustered around Dorćol and Savamala (Samo Pivo, Krafter), and how to plan a craft crawl or brewery tour."
+description: "Belgrade craft beer: flagship breweries Dogma and Kabinet, the taprooms and beer bars around Dorćol and Savamala, and planning a brewery crawl."
 lede: "Belgrade is Serbia's craft-beer capital, with a taproom-and-brewery scene clustered around Dorćol and Savamala. Here are the flagship breweries, the central beer bars, the domestic labels to look for, and how to plan a craft crawl — with the volatile bar scene flagged honestly."
 heroLabel: "Belgrade craft beer / hero"
 heroAlt: "A row of taps and craft beer glasses on a Belgrade taproom bar"

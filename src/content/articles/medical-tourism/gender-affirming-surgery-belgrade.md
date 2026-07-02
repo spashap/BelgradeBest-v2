@@ -1,9 +1,9 @@
 ---
 leg: "medical-tourism"
 slug: "gender-affirming-surgery-belgrade"
-title: "Gender-affirming surgery in Belgrade — what to expect, staging and recovery"
+title: "Gender-affirming surgery in Belgrade — an honest guide"
 shortTitle: "Gender-affirming surgery"
-description: "A neutral, clinical due-diligence guide to gender-affirming surgery in Belgrade — the city's standing as an international centre, the procedures (phalloplasty, metoidioplasty, vaginoplasty, chest surgery) at a what-to-expect level, the staged and long-stay reality, honest complication and revision framing, continuity of care back home, and the cross-border legal and identity-document considerations. Not medical or legal advice."
+description: "Gender-affirming surgery in Belgrade: the city's standing, procedures at a what-to-expect level, staging, long stays and honest revision framing."
 lede: "Belgrade is an established international centre for gender-affirming and complex reconstructive surgery. This is a respectful, clinical due-diligence guide for an adult weighing the trip — the city's standing, what the procedures involve, and above all the staged, long-stay, high-revision-burden reality that makes planning matter — not a surgical manual, not a clinic advertisement, and not a verdict on whether to proceed. Nothing here is medical or legal advice; seek qualified professional advice."
 heroLabel: "Gender-affirming surgery in Belgrade / hero"
 heroAlt: "A calm, comfortable room in soft morning light with a packed travel bag"

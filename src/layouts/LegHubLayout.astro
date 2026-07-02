@@ -42,7 +42,7 @@ function fmtDate(iso: string) {
   <Container>
     {
       legHero ? (
-        <ArticleHero src={legHero.src} alt={legHero.alt} caption={null} />
+        <ArticleHero src={legHero.src} srcset={legHero.srcset} sizes={legHero.sizes} alt={legHero.alt} caption={null} />
       ) : (
         <Placeholder
           ratio="21/9"

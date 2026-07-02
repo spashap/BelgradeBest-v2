@@ -9,7 +9,7 @@ import ArticleToc from "../components/ArticleToc.astro";
 import StayLinks from "../components/StayLinks.astro";
 import InternalLinkBlock from "../components/InternalLinkBlock.astro";
 import Schema from "../components/Schema.astro";
-import { articleSchema, expoEventSchema, faqSchema, breadcrumbSchema } from "../lib/schemas";
+import { articleSchema, faqSchema, breadcrumbSchema } from "../lib/schemas";
 import { SITE, CONFIG, interp } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
 import { heroForPath } from "../lib/hero";
@@ -49,9 +49,17 @@ const meta = pageMetadata({
 const { Content, headings } = await render(entry);
 const targets = await relatedFor(leg, d.slug);
 
+// Human-readable freshness stamp (same source as schema dateModified).
+const updatedLabel = (() => {
+  const t = Date.parse(d.lastUpdated);
+  if (Number.isNaN(t)) return null;
+  return new Date(t).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+})();
+
+// Event JSON-LD lives on the /expo-2027 hub only (LegHubLayout) — re-declaring
+// it on every expo article duplicated the Event with inconsistent images.
 const schemas: object[] = [
   articleSchema({ title: d.title, description: d.description, url, dateModified: d.lastUpdated, imageUrl: heroAbs }),
-  ...(leg === "expo-2027" ? [expoEventSchema(heroAbs)] : []),
   breadcrumbSchema([
     { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
     { name: crumbRoot.name, url: crumbRoot.href },
@@ -63,10 +71,23 @@ if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
 <BaseLayout meta={meta}>
   <PageIntro eyebrow={eyebrow} title={d.title} lede={d.lede} />
 
+  {
+    updatedLabel ? (
+      <Container variant="article">
+        <p class="c-article-meta">Updated {updatedLabel} · Source-checked by the BelgradeBest editorial process</p>
+      </Container>
+    ) : null
+  }
+
   <Container>
     {
       resolvedHero ? (
-        <ArticleHero src={resolvedHero.src} alt={d.heroAlt ?? resolvedHero.alt} />
+        <ArticleHero
+          src={resolvedHero.src}
+          srcset={resolvedHero.srcset}
+          sizes={resolvedHero.sizes}
+          alt={d.heroAlt ?? resolvedHero.alt}
+        />
       ) : (
         <Placeholder ratio="21/9" label={d.heroLabel} />
       )
@@ -79,6 +100,14 @@ if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
       <article class="c-article">
         <Content />
       </article>
+      {
+        d.unknowns && d.unknowns.length > 0 ? (
+          <aside class="c-unknowns">
+            <h2>Still unknown or unconfirmed</h2>
+            <ul>{d.unknowns.map((u: string) => <li>{u}</li>)}</ul>
+          </aside>
+        ) : null
+      }
       <StayLinks targets={d.stayTargets} />
     </div>
   </Container>

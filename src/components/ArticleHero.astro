@@ -3,17 +3,23 @@ import { CONFIG } from "../lib/site";
 interface Props {
   src: string;
   alt: string;
+  // Responsive variants (from lib/hero.ts) — phones fetch the 640/960 files
+  // instead of the 1600px master. Absent = plain src, unchanged behavior.
+  srcset?: string;
+  sizes?: string;
   // Subtle credit under the hero. Defaults to the AI-generated label; pass
   // null/"" to suppress (leg-hub + featured tile do this).
   caption?: string | null;
 }
-const { src, alt, caption = CONFIG.chrome.article.heroCaption } = Astro.props;
+const { src, alt, srcset, sizes, caption = CONFIG.chrome.article.heroCaption } = Astro.props;
 ---
 <figure class="c-hero">
   <div class="c-hero-media">
     <!-- Above-the-fold hero: eager + high priority (LCP). object-fit:cover via globals.css. -->
     <img
       src={src}
+      srcset={srcset}
+      sizes={srcset ? sizes : undefined}
       alt={alt}
       width="1600"
       height="686"

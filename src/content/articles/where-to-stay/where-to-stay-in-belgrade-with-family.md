@@ -1,9 +1,9 @@
 ---
 leg: "where-to-stay"
 slug: "where-to-stay-in-belgrade-with-family"
-title: "Where to Stay in Belgrade With Family: Best Family-Friendly Areas"
+title: "Where to Stay in Belgrade With Family: Best Areas for Kids"
 shortTitle: "With family"
-description: "Where to stay in Belgrade with family: the most family-friendly areas (Vračar, New Belgrade, quieter Zemun), apartments vs hotels, and the checks that make a stay with kids easier."
+description: "Where to stay in Belgrade with family: the most family-friendly areas — Vračar, New Belgrade and quieter Zemun — plus apartments vs hotels for kids."
 lede: "For most families, the best fit is a quiet, residential base with a lift and space to spread out: central Vračar, the larger apartments of New Belgrade, or a calmer pocket of Zemun. Belgrade is a good city to visit with kids — the trick is choosing the right micro-location and confirming a handful of family details before you book."
 heroLabel: "Where to stay in Belgrade with family / hero"
 heroAlt: "A family walking a quiet residential street in central Belgrade, near a park, with apartment buildings in the background."

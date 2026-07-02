@@ -1,9 +1,9 @@
 ---
 leg: "medical-tourism"
 slug: "ivf-and-fertility-belgrade"
-title: "IVF and fertility in Belgrade — the law, eligibility and costs"
+title: "IVF and fertility in Belgrade — law, eligibility and costs"
 shortTitle: "IVF & fertility (law)"
-description: "IVF Belgrade / fertility Serbia, handled honestly: the Serbian legal and eligibility picture for fertility treatment — the 2017 ART law, the contested donor egg/sperm question, surrogacy's criminal-offence status, IVF cost for foreigners and what 'success rates' really mean. The clinical IVF process is explained separately. Not medical or legal advice."
+description: "IVF in Belgrade and Serbia's fertility law, honestly: the 2017 ART law, eligibility, the contested donor question, surrogacy's illegality, and costs."
 lede: "Serbia treats most foreign patients as an own-gamete IVF destination — donor and surrogacy rules are legally complex, contested and evolving. This page signposts the law, eligibility, cost and success-rate caveats for IVF in Belgrade honestly (always: verify the current position and seek independent legal and medical advice); the clinical IVF process is a click away."
 heroLabel: "IVF and fertility in Belgrade / hero"
 heroAlt: "A bound document, reading glasses and a green sprig on a sunlit desk"
