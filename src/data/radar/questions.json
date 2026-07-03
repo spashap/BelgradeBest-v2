@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T08:47:54.871Z",
+  "generatedAt": "2026-07-03T08:54:47.115Z",
   "items": [
     {
       "id": "1ubvfj1",
@@ -54,10 +54,10 @@
         "days",
         "worth it"
       ],
-      "score": 19.8,
+      "score": 19.3,
       "isQuestion": true,
       "firstSeen": "2026-07-01T09:36:54.494Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1ui3o3z",
@@ -70,10 +70,10 @@
         "bus",
         "restaurant"
       ],
-      "score": 18.7,
+      "score": 18.2,
       "isQuestion": true,
       "firstSeen": "2026-06-29T10:46:43.969Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1udlffw",
@@ -119,10 +119,10 @@
         "club",
         "bar"
       ],
-      "score": 16.5,
+      "score": 16,
       "isQuestion": true,
       "firstSeen": "2026-06-30T09:24:34.232Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1u6cuw5",
@@ -141,6 +141,22 @@
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
       "lastSeen": "2026-06-21T13:51:35.987Z"
+    },
+    {
+      "id": "1ulwvb1",
+      "title": "I offer a room for free if someone needs it for a couple of days in August",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ulwvb1/i_offer_a_room_for_free_if_someone_needs_it_for_a/",
+      "sub": "r/Belgrade",
+      "comments": 1,
+      "topics": [
+        "stay",
+        "money",
+        "days"
+      ],
+      "score": 15.3,
+      "isQuestion": false,
+      "firstSeen": "2026-07-03T08:54:47.115Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1ubqdkv",
@@ -162,14 +178,14 @@
       "title": "Any recommendations for somewhere to go with a large group (20+) on Saturday the 11th of July? We want somewhere with a good atmosphere and will accommodate a big group of people for drinks.",
       "url": "https://www.reddit.com/r/Belgrade/comments/1ukiuju/any_recommendations_for_somewhere_to_go_with_a/",
       "sub": "r/Belgrade",
-      "comments": 0,
+      "comments": 1,
       "topics": [
         "atm"
       ],
-      "score": 14.1,
+      "score": 13.6,
       "isQuestion": true,
       "firstSeen": "2026-07-02T08:47:54.871Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1uiou1x",
@@ -182,10 +198,10 @@
         "apartment",
         "days"
       ],
-      "score": 14,
+      "score": 13.5,
       "isQuestion": false,
       "firstSeen": "2026-06-29T10:46:43.969Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1uipwly",
@@ -197,39 +213,10 @@
         "club",
         "bar"
       ],
-      "score": 13.1,
+      "score": 12.6,
       "isQuestion": true,
       "firstSeen": "2026-06-30T09:24:34.232Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
-    },
-    {
-      "id": "1uhjxrt",
-      "title": "shall i do Novi Sad and Sremski Karlovci on one day . I mean take a tain from Belgrade &amp; return back same day o shall i. keep 2 seperate days?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uhjxrt/shall_i_do_novi_sad_and_sremski_karlovci_on_one/",
-      "sub": "r/Belgrade",
-      "comments": 3,
-      "topics": [
-        "days"
-      ],
-      "score": 12.3,
-      "isQuestion": true,
-      "firstSeen": "2026-06-28T08:45:12.283Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
-    },
-    {
-      "id": "1uhfg3m",
-      "title": "Belgrade or Montenegro for a solo birthday trip next week?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uhfg3m/belgrade_or_montenegro_for_a_solo_birthday_trip/",
-      "sub": "r/Belgrade",
-      "comments": 5,
-      "topics": [
-        "nightlife",
-        "food"
-      ],
-      "score": 12.3,
-      "isQuestion": true,
-      "firstSeen": "2026-06-28T08:45:12.283Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1u6l44k",
@@ -247,6 +234,35 @@
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
       "lastSeen": "2026-06-22T11:43:37.834Z"
+    },
+    {
+      "id": "1uhjxrt",
+      "title": "shall i do Novi Sad and Sremski Karlovci on one day . I mean take a tain from Belgrade &amp; return back same day o shall i. keep 2 seperate days?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uhjxrt/shall_i_do_novi_sad_and_sremski_karlovci_on_one/",
+      "sub": "r/Belgrade",
+      "comments": 3,
+      "topics": [
+        "days"
+      ],
+      "score": 11.8,
+      "isQuestion": true,
+      "firstSeen": "2026-06-28T08:45:12.283Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
+    },
+    {
+      "id": "1uhfg3m",
+      "title": "Belgrade or Montenegro for a solo birthday trip next week?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uhfg3m/belgrade_or_montenegro_for_a_solo_birthday_trip/",
+      "sub": "r/Belgrade",
+      "comments": 5,
+      "topics": [
+        "nightlife",
+        "food"
+      ],
+      "score": 11.8,
+      "isQuestion": true,
+      "firstSeen": "2026-06-28T08:45:12.283Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1u73jv2",
@@ -352,20 +368,6 @@
       "lastSeen": "2026-06-27T08:30:23.593Z"
     },
     {
-      "id": "1ui4oxl",
-      "title": "is the train or bus better to go to nis from belgrade after 8 pm",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1ui4oxl/is_the_train_or_bus_better_to_go_to_nis_from/",
-      "sub": "r/Belgrade",
-      "comments": 4,
-      "topics": [
-        "bus"
-      ],
-      "score": 9.7,
-      "isQuestion": true,
-      "firstSeen": "2026-06-29T10:46:43.969Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
-    },
-    {
       "id": "1ue7y05",
       "title": "Dates and connections",
       "url": "https://www.reddit.com/r/Belgrade/comments/1ue7y05/dates_and_connections/",
@@ -396,46 +398,18 @@
       "lastSeen": "2026-06-25T08:53:01.606Z"
     },
     {
-      "id": "1uha6jk",
-      "title": "Can someone explain what this emblem is?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uha6jk/can_someone_explain_what_this_emblem_is/",
+      "id": "1ui4oxl",
+      "title": "is the train or bus better to go to nis from belgrade after 8 pm",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ui4oxl/is_the_train_or_bus_better_to_go_to_nis_from/",
       "sub": "r/Belgrade",
-      "comments": 76,
+      "comments": 4,
       "topics": [
-        "see"
+        "bus"
       ],
       "score": 9.2,
       "isQuestion": true,
-      "firstSeen": "2026-06-28T08:45:12.283Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
-    },
-    {
-      "id": "1uh59wx",
-      "title": "Recommendation for travelling this July around the Balkans",
-      "url": "https://www.reddit.com/r/Europetravel/comments/1uh59wx/recommendation_for_travelling_this_july_around/",
-      "sub": "r/Europetravel",
-      "comments": 13,
-      "topics": [
-        "days"
-      ],
-      "score": 9.1,
-      "isQuestion": true,
-      "firstSeen": "2026-06-28T08:45:12.283Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
-    },
-    {
-      "id": "1uh3ufs",
-      "title": "Protest or Paycheck: What's a Foreign Worker's Place in Serbian Politics?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uh3ufs/protest_or_paycheck_whats_a_foreign_workers_place/",
-      "sub": "r/Belgrade",
-      "comments": 9,
-      "topics": [
-        "hotel"
-      ],
-      "score": 9.1,
-      "isQuestion": true,
-      "firstSeen": "2026-06-28T08:45:12.283Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "firstSeen": "2026-06-29T10:46:43.969Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1u98pw0",
@@ -451,21 +425,6 @@
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
       "lastSeen": "2026-06-25T08:53:01.606Z"
-    },
-    {
-      "id": "1ukogpy",
-      "title": "Canadian bike-packer looking for friends in Belgrade",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1ukogpy/canadian_bikepacker_looking_for_friends_in/",
-      "sub": "r/Belgrade",
-      "comments": 23,
-      "topics": [
-        "club",
-        "bar"
-      ],
-      "score": 9.1,
-      "isQuestion": false,
-      "firstSeen": "2026-07-02T08:47:54.871Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
     },
     {
       "id": "1u5mkbx",
@@ -484,6 +443,63 @@
       "lastSeen": "2026-06-21T13:51:35.987Z"
     },
     {
+      "id": "1uha6jk",
+      "title": "Can someone explain what this emblem is?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uha6jk/can_someone_explain_what_this_emblem_is/",
+      "sub": "r/Belgrade",
+      "comments": 76,
+      "topics": [
+        "see"
+      ],
+      "score": 8.7,
+      "isQuestion": true,
+      "firstSeen": "2026-06-28T08:45:12.283Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
+    },
+    {
+      "id": "1uh59wx",
+      "title": "Recommendation for travelling this July around the Balkans",
+      "url": "https://www.reddit.com/r/Europetravel/comments/1uh59wx/recommendation_for_travelling_this_july_around/",
+      "sub": "r/Europetravel",
+      "comments": 13,
+      "topics": [
+        "days"
+      ],
+      "score": 8.6,
+      "isQuestion": true,
+      "firstSeen": "2026-06-28T08:45:12.283Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
+    },
+    {
+      "id": "1uh3ufs",
+      "title": "Protest or Paycheck: What's a Foreign Worker's Place in Serbian Politics?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uh3ufs/protest_or_paycheck_whats_a_foreign_workers_place/",
+      "sub": "r/Belgrade",
+      "comments": 9,
+      "topics": [
+        "hotel"
+      ],
+      "score": 8.6,
+      "isQuestion": true,
+      "firstSeen": "2026-06-28T08:45:12.283Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
+    },
+    {
+      "id": "1ukogpy",
+      "title": "Canadian bike-packer looking for friends in Belgrade",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ukogpy/canadian_bikepacker_looking_for_friends_in/",
+      "sub": "r/Belgrade",
+      "comments": 51,
+      "topics": [
+        "club",
+        "bar"
+      ],
+      "score": 8.6,
+      "isQuestion": false,
+      "firstSeen": "2026-07-02T08:47:54.871Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
+    },
+    {
       "id": "1ug0hnq",
       "title": "Best Non Schengen European City for July - August?",
       "url": "https://www.reddit.com/r/digitalnomad/comments/1ug0hnq/best_non_schengen_european_city_for_july_august/",
@@ -495,35 +511,6 @@
       "score": 8.5,
       "isQuestion": true,
       "firstSeen": "2026-06-26T08:56:04.377Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
-    },
-    {
-      "id": "1ujhnxd",
-      "title": "First summer in the Baltics. looking for recommendations",
-      "url": "https://www.reddit.com/r/digitalnomad/comments/1ujhnxd/first_summer_in_the_baltics_looking_for/",
-      "sub": "r/digitalnomad",
-      "comments": 3,
-      "topics": [
-        "bar"
-      ],
-      "score": 8.5,
-      "isQuestion": false,
-      "firstSeen": "2026-06-30T09:24:34.232Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
-    },
-    {
-      "id": "1ujetjw",
-      "title": "SCAM - Flex To Go car rental Belgrade, Serbia: forced to buy €450+ insurance despite Full Protection VIPcars.",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1ujetjw/scam_flex_to_go_car_rental_belgrade_serbia_forced/",
-      "sub": "r/Belgrade",
-      "comments": 5,
-      "topics": [
-        "stay",
-        "airport"
-      ],
-      "score": 8.4,
-      "isQuestion": false,
-      "firstSeen": "2026-06-30T09:24:34.232Z",
       "lastSeen": "2026-07-02T08:47:54.871Z"
     },
     {
@@ -597,6 +584,20 @@
       "lastSeen": "2026-06-30T09:24:34.232Z"
     },
     {
+      "id": "1ujhnxd",
+      "title": "First summer in the Baltics. looking for recommendations",
+      "url": "https://www.reddit.com/r/digitalnomad/comments/1ujhnxd/first_summer_in_the_baltics_looking_for/",
+      "sub": "r/digitalnomad",
+      "comments": 3,
+      "topics": [
+        "bar"
+      ],
+      "score": 8,
+      "isQuestion": false,
+      "firstSeen": "2026-06-30T09:24:34.232Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
+    },
+    {
       "id": "1ue9snq",
       "title": "Serbia Has a Free Legal Aid Law — So Where Are the Lawyers?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1ue9snq/serbia_has_a_free_legal_aid_law_so_where_are_the/",
@@ -625,6 +626,21 @@
       "lastSeen": "2026-06-26T08:56:04.377Z"
     },
     {
+      "id": "1ujetjw",
+      "title": "SCAM - Flex To Go car rental Belgrade, Serbia: forced to buy €450+ insurance despite Full Protection VIPcars.",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ujetjw/scam_flex_to_go_car_rental_belgrade_serbia_forced/",
+      "sub": "r/Belgrade",
+      "comments": 5,
+      "topics": [
+        "stay",
+        "airport"
+      ],
+      "score": 7.9,
+      "isQuestion": false,
+      "firstSeen": "2026-06-30T09:24:34.232Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
+    },
+    {
       "id": "1uhw8r1",
       "title": "English Speaking Dentist for easy Wisdom Tooth extraction.",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uhw8r1/english_speaking_dentist_for_easy_wisdom_tooth/",
@@ -634,25 +650,25 @@
         "dentist",
         "surgery"
       ],
-      "score": 7.6,
+      "score": 7.1,
       "isQuestion": false,
       "firstSeen": "2026-06-29T10:46:43.969Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1uh50xj",
       "title": "Grupe prepune devojaka 18-35 kojima se nude od admina skoro svaki dan 'besplatni' provodi u razlicitim objektima u Beogradu",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uh50xj/grupe_prepune_devojaka_1835_kojima_se_nude_od/",
       "sub": "r/Belgrade",
-      "comments": 46,
+      "comments": 47,
       "topics": [
         "splav",
         "kafana"
       ],
-      "score": 7.1,
+      "score": 6.6,
       "isQuestion": false,
       "firstSeen": "2026-06-28T08:45:12.283Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1u9uvlw",
@@ -698,20 +714,6 @@
       "lastSeen": "2026-06-30T09:24:34.232Z"
     },
     {
-      "id": "1ukekzw",
-      "title": "Vintage/antique shops in the city",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1ukekzw/vintageantique_shops_in_the_city/",
-      "sub": "r/Belgrade",
-      "comments": 4,
-      "topics": [
-        "area"
-      ],
-      "score": 6,
-      "isQuestion": false,
-      "firstSeen": "2026-07-01T09:36:54.494Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
-    },
-    {
       "id": "1u5lqg6",
       "title": "Belgrade Car Rental",
       "url": "https://www.reddit.com/r/Belgrade/comments/1u5lqg6/belgrade_car_rental/",
@@ -741,6 +743,20 @@
       "lastSeen": "2026-06-21T13:51:35.987Z"
     },
     {
+      "id": "1ukekzw",
+      "title": "Vintage/antique shops in the city",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ukekzw/vintageantique_shops_in_the_city/",
+      "sub": "r/Belgrade",
+      "comments": 6,
+      "topics": [
+        "area"
+      ],
+      "score": 5.5,
+      "isQuestion": false,
+      "firstSeen": "2026-07-01T09:36:54.494Z",
+      "lastSeen": "2026-07-03T08:54:47.115Z"
+    },
+    {
       "id": "1ujfoc7",
       "title": "Novi Belgrade",
       "url": "https://www.reddit.com/r/Belgrade/comments/1ujfoc7/novi_belgrade/",
@@ -749,10 +765,10 @@
       "topics": [
         "days"
       ],
-      "score": 5.4,
+      "score": 4.9,
       "isQuestion": false,
       "firstSeen": "2026-06-30T09:24:34.232Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1uix7re",
@@ -763,10 +779,10 @@
       "topics": [
         "bus"
       ],
-      "score": 5.2,
+      "score": 4.7,
       "isQuestion": false,
       "firstSeen": "2026-06-30T09:24:34.232Z",
-      "lastSeen": "2026-07-02T08:47:54.871Z"
+      "lastSeen": "2026-07-03T08:54:47.115Z"
     },
     {
       "id": "1ucf625",
