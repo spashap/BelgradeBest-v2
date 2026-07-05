@@ -1,0 +1,34 @@
+---
+// Copy-paste embed code box (c-snippet) with a one-click Copy button.
+// Used by the widget/badge pages — the "all complexity on our side" pattern.
+interface Props {
+  label: string;
+  code: string;
+}
+const { label, code } = Astro.props;
+---
+<div class="c-snippet">
+  <div class="c-snippet__head">
+    <span class="c-snippet__label">{label}</span>
+    <button class="c-btn c-btn--ghost" type="button" data-copy>Copy</button>
+  </div>
+  <pre>{code}</pre>
+</div>
+
+<script>
+  // Wire every copy button on the page (Astro dedupes this component script).
+  document.querySelectorAll<HTMLButtonElement>(".c-snippet [data-copy]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const pre = btn.closest(".c-snippet")?.querySelector("pre");
+      if (!pre) return;
+      try {
+        await navigator.clipboard.writeText(pre.textContent ?? "");
+        const old = btn.textContent;
+        btn.textContent = "Copied ✓";
+        setTimeout(() => (btn.textContent = old), 1600);
+      } catch {
+        /* clipboard blocked — user can still select the text */
+      }
+    });
+  });
+</script>

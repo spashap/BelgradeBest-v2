@@ -9,6 +9,7 @@ import config from "./src/data/site-config.json" with { type: "json" };
 import pagesData from "./src/data/site-pages.json" with { type: "json" };
 import areasData from "./src/data/areas.json" with { type: "json" };
 import glossaryData from "./src/data/glossary.json" with { type: "json" };
+import expoParticipants from "./src/data/expo-participants.json" with { type: "json" };
 
 // Per-article last-modified dates for the sitemap, read from each markdown
 // file's `lastUpdated` frontmatter (a freshness signal for search engines).
@@ -40,6 +41,12 @@ const maxDate = (dates) => (dates.length ? iso(dates.reduce((a, b) => (a > b ? a
 for (const t of glossaryData.terms) if (t.updated) LASTMOD[`/glossary/${t.slug}`] = iso(t.updated);
 for (const a of areasData.areas) if (a.updated) LASTMOD[`/areas/${a.slug}`] = iso(a.updated);
 for (const p of pagesData.pages) if (p.updated) LASTMOD[`/${p.slug}`] = iso(p.updated);
+// Standalone .astro pages (no data master of their own): the tracker inherits
+// the participant dataset's `updated`; the rest carry a hand-bumped date here —
+// bump it when the page content changes (never let these fall to BUILD_DATE).
+LASTMOD["/expo-2027/tracker"] = iso(expoParticipants.updated);
+LASTMOD["/expo-2027/countdown"] = iso("2026-07-05");
+LASTMOD["/for-businesses"] = iso("2026-07-05");
 {
   const g = maxDate(glossaryData.terms.map((t) => t.updated).filter(Boolean));
   if (g) LASTMOD["/glossary"] = g;

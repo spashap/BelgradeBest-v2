@@ -139,6 +139,38 @@ export function definedTermSchema(t: DefinedTermInput) {
   };
 }
 
+// Dataset for data pages (the Expo participant tracker) — declares the page's
+// numbers as a citable, downloadable dataset (Google Dataset Search + AI answer
+// engines both consume this).
+type DatasetInput = {
+  name: string;
+  description: string;
+  url: string;
+  dateModified: string;
+  jsonUrl: string;
+  keywords?: string[];
+};
+export function datasetSchema(d: DatasetInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: d.name,
+    description: d.description,
+    url: d.url,
+    dateModified: d.dateModified,
+    inLanguage: CONFIG.brand.locale,
+    isAccessibleForFree: true,
+    license: `${SITE.origin}/about`,
+    creator: publisherOrg(),
+    ...(d.keywords?.length ? { keywords: d.keywords.join(", ") } : {}),
+    distribution: {
+      "@type": "DataDownload",
+      encodingFormat: "application/json",
+      contentUrl: d.jsonUrl,
+    },
+  };
+}
+
 type Crumb = { name: string; url: string };
 export function breadcrumbSchema(crumbs: Crumb[]) {
   return {

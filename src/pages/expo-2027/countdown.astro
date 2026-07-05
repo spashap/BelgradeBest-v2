@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import Snippet from "../../components/Snippet.astro";
+import Note from "../../components/Note.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { SITE, EXPO, CONFIG } from "../../lib/site";
+import { breadcrumbSchema } from "../../lib/schemas";
+
+// Static page inside the expo-2027 leg (a real file wins over [leg]/[slug]).
+// The free countdown embed is a link-building asset: every embed carries an
+// attribution link home. lastmod for the sitemap lives in astro.config.mjs.
+const PATH = "/expo-2027/countdown";
+
+const EMBED = `<div data-bb-expo-countdown></div>
+<script src="${SITE.origin}/widgets/expo-countdown.js" async><\/script>`;
+
+const meta = pageMetadata({
+  title: "Expo 2027 countdown widget — free embed for your site",
+  description:
+    "A free, no-tracking countdown to Expo 2027 Belgrade (opens 15 May 2027) you can embed on any website with two lines of HTML. No cookies, no scripts phoning home.",
+  path: PATH,
+});
+
+const crumbs = [
+  { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+  { name: EXPO.shortName, href: "/expo-2027" },
+  { name: "Countdown widget" },
+];
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: EXPO.shortName, url: `${SITE.origin}/expo-2027` },
+    { name: "Countdown widget", url: `${SITE.origin}${PATH}` },
+  ]),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow="Free embed"
+    title="Expo 2027 countdown widget"
+    lede={`Writing about ${EXPO.name}? Add a live countdown to the opening day (15 May 2027) to your site with two lines of HTML. Free, lightweight, and it never tracks your readers.`}
+  />
+
+  <Container variant="read">
+    <SectionHead title="What it looks like" />
+    <div data-bb-expo-countdown></div>
+    <script is:inline src="/widgets/expo-countdown.js" async></script>
+    <p class="u-stack-md">
+      The widget counts down to the opening on 15 May 2027; during the Expo it switches to days
+      remaining until the close on 15 August 2027. It matches any site: one small card, system
+      fonts, no layout shifts.
+    </p>
+
+    <SectionHead title="Add it to your site" intro="Copy the two lines below and paste them where the countdown should appear." />
+    <Snippet label="Embed code" code={EMBED} />
+    <ul>
+      <li><strong>WordPress:</strong> add a <em>Custom HTML</em> block and paste the code.</li>
+      <li><strong>Wix / Squarespace:</strong> use the <em>Embed HTML / Code</em> element and paste the code.</li>
+      <li><strong>Any other site:</strong> paste it into the page's HTML — it works anywhere plain HTML works.</li>
+    </ul>
+
+    <Note>
+      <strong>Free to use, one condition:</strong> keep the small "Countdown by BelgradeBest" attribution
+      link intact — that's the license. The widget loads no cookies, no analytics, and makes no
+      network requests from your readers' browsers.
+    </Note>
+
+    <SectionHead title="About Expo 2027 Belgrade" />
+    <p>
+      Belgrade hosts a {EXPO.classification} from 15 May to 15 August 2027 at {EXPO.venue}, themed
+      “{EXPO.theme}”. Our <a href="/expo-2027">Expo 2027 guide</a> tracks everything that's
+      confirmed, reported, or still unknown — and the
+      <a href="/expo-2027/tracker">participant tracker</a> follows which countries are taking part.
+    </p>
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

@@ -1,77 +1,50 @@
-SEO overhaul: apply the 2026-07-02 audit fixes across code, schema and content
+Platform Phase 0: Expo participant tracker, countdown widget, badge, /for-businesses
 
-Implements the full action plan from KB/seo/ACTION-PLAN-2026-07-02.md (reports
-included in this commit). Highlights:
+First build phase of KB/platform/PLATFORM-PLAN.md (included, rev-b + Phase 0
+marked done). Four link-building assets, all static:
 
-On-page / content (all 65 articles):
-- Trim every title to <=60 chars and every description to ~140-155 (agents
-  covered all legs); plan-your-trip/money got a real keyword title.
-- Expand the 8 thin articles to ~1,000-1,200 words each from the repo KBs
-  (nightlife, serbian-food, food-by-neighborhood, grill-street-food,
-  eating-and-drinking, staying-safe, neighborhoods, itinerary-3-days).
-  Root cause found: these + 2 expo files had been committed TRUNCATED
-  mid-sentence in the gen-glossary-links commit (e928564); lost text restored
-  from git history before expanding.
-- Medical price bullet lists converted to markdown tables (costs, dental,
-  cosmetic, hair) + expo tickets got a not-yet-announced price table scaffold.
-- 16 external citations added, every URL verified live (BIE, official
-  expobelgrade2027.org, Serbian MFA, Serbian Monitor/Chamber of Commerce).
-- belgrade-neighborhoods repositioned as the character piece and cross-linked
-  to /areas spokes (de-cannibalized vs the /areas hub).
+Participant tracker (/expo-2027/tracker):
+- New data master src/data/expo-participants.json (web-researched 2026-07-05,
+  every entry sourced): official counter 139 international participants, 93
+  publicly named countries with region + confirmation dates, growth timeline
+  94 -> 117 -> 120 -> 137 -> 139, organiser expectations, sources, caveats.
+- lib/expo-participants.ts (typed accessor, byRegion stats) + tracker page:
+  stat tiles, timeline + region + full country tables, sources & method,
+  cite-this note. JSON-LD: Article + Dataset + BreadcrumbList (new
+  datasetSchema() in lib/schemas.ts).
+- Open data endpoint /data/expo-2027-participants.json (same master,
+  Dataset.distribution points at it).
 
-E-E-A-T (no personal identity, per owner decision):
-- /about rewritten as a full editorial-standards page (research process,
-  AI-assisted + manually reviewed, confirmed/reported/unknown, corrections,
-  medical-content policy); typed AboutPage in JSON-LD.
-- publishingPrinciples -> /about on Organization + every Article.
-- Visible "Updated {date}" byline on all articles; unknowns frontmatter now
-  renders as a "Still unknown" trust block (new .c-article-meta/.c-unknowns).
+Countdown widget (link magnet for anyone writing about the Expo):
+- public/widgets/expo-countdown.js — self-contained embed (no cookies, no
+  external requests), counts down to 15 May 2027, switches to days-left
+  during the Expo; attribution link back is the license.
+- /expo-2027/countdown — demo + copy-paste embed code + per-platform steps.
 
-Internal linking / programmatic:
-- /glossary added to the footer; visible breadcrumbs on glossary + area spokes
-  (new Breadcrumbs.astro + .c-breadcrumbs).
-- lib/links.ts relatedFor() now resolves /areas/* and /glossary/* linksTo
-  targets; 40 linksTo additions wired every zero-inbound article + area spokes
-  into the graph (site-schema.json).
-- Area "nearby" names now link to sibling area/glossary spokes (lib/areas.ts).
-- Glossary titles grammar-fixed via per-record question field ("What are
-  cevapi?", "What is Skadarlija?"); guard floors raised (body>=600, faqs>=2;
-  area character>=350).
-- areas.ts meta-description bug fixed (no more lowercased proper nouns /
-  320-char cap; ledes trimmed to ~155 via new lib/text.ts metaTrim).
+Badge + business landing:
+- public/badges/featured-on-belgradebest.svg (Warm Editorial, inline colors
+  by necessity — renders on third-party sites).
+- /for-businesses — the platform pitch: free page, GBP website-field how-to,
+  badge embed code, claim-by-email CTA (admin@belgradebest.com) until the
+  Phase-2 self-serve claim flow ships.
 
-Schema:
-- Event emitted on the /expo-2027 hub only (removed duplicate from 7 articles);
-  organizer.url -> https://expobelgrade2027.org (verified); logo width/height.
-- Glossary/area Article blocks now carry image + dateModified (new updated
-  fields in glossary.json/areas.json).
-- Utility pages get WebPage/AboutPage + BreadcrumbList.
+Design-law library additions (globals.css): .c-stats/.c-stat tiles,
+.c-data-table (also styles markdown tables inside .c-article — the medical
+price tables were unstyled until now), .c-snippet + Snippet.astro copy-button
+component.
 
-Performance:
-- public/icon.svg replaced: 1.22 MB base64-PNG wrapper -> 375-byte vector.
-- Responsive heroes: -640/-960 webp variants generated for all 72 heroes;
-  lib/hero.ts builds srcset/sizes; ArticleHero/FeaturedTile/layouts consume it;
-  gen-hero.mjs + optimize-heroes.mjs emit variants for future heroes.
-- 56 orphan hero PNGs deleted (130 MB; webp coverage verified 100%).
-- Font preload + GA preconnect in BaseLayout (prod only).
+Content: expo-2027/participants.md refreshed 137 -> 139 (official counter,
+US confirmed 2026-05-11), cross-linked to the tracker throughout, lastUpdated
+bumped; description/lede/FAQs updated to match.
 
-Infra:
-- vercel.json: security headers (nosniff, XFO, referrer-policy,
-  permissions-policy, CSP allowing GA/Vercel) + immutable caching for /_astro.
-- Custom 404 page (src/pages/404.astro).
-- /llms-full.txt endpoint (full markdown bodies for AI answer engines).
-- robots.txt: deprecated Host: directive dropped; AI-crawler policy documented.
-- Sitemap lastmod is now real per-page everywhere (updated fields + hub
-  inheritance in astro.config.mjs; no more build-time churn); /areas +
-  /glossary hubs get priority 0.7. Mobile nav tap targets padded to ~44px.
+Infra: astro.config.mjs sitemap lastmod for the three new pages (tracker
+inherits expo-participants.json `updated`; countdown + for-businesses carry
+hand-bumped dates — never BUILD_DATE).
 
-Docs: CLAUDE.md indexing posture refreshed (six legs + glossary + areas are
-live-indexable; only invest-and-relocate dark; /admin is password-gated).
-
-Owner actions still open: add www.belgradebest.com in Vercel Domains (TLS cert
-currently fails on www) and populate brand.sameAs when social profiles exist.
-
-Build verified: 99 sitemap URLs, no noindex/admin leaks, srcset + breadcrumbs +
-schema changes confirmed in dist output.
+Build verified: all three pages prerendered + in sitemap with real lastmod,
+tracker renders 93 countries / 110 table rows, Dataset JSON-LD present,
+badge/widget/data files in dist. Pre-existing (not from this change): the
+glob-loader "Duplicate id participants" build warning also fires on the
+previous commit.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

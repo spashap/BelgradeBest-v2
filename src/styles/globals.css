@@ -809,6 +809,103 @@ a.c-gtk__link:hover {
   margin-bottom: var(--s2);
 }
 
+/* --- c-stats / c-stat : headline-number tiles (data pages: Expo tracker).
+   A row of big citable figures with small labels — the "in numbers" pattern. --- */
+.c-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--s4);
+  margin: var(--s5) 0;
+}
+.c-stat {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s4) var(--s5);
+}
+.c-stat__num {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: var(--t-h2);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--accent-ink);
+}
+.c-stat__label {
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+  margin-top: var(--s1);
+}
+
+/* --- c-data-table : tabular data (trackers, price tables). The wrapper owns
+   horizontal overflow so wide tables scroll instead of breaking the page.
+   Markdown tables inside .c-article share the same cell styling. --- */
+.c-data-table { overflow-x: auto; margin: var(--s5) 0; }
+.c-data-table table,
+.c-article table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: var(--t-small);
+  margin: 0 0 var(--s4);
+}
+.c-data-table th,
+.c-article th {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-eyebrow);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: left;
+}
+.c-data-table th,
+.c-data-table td,
+.c-article th,
+.c-article td {
+  padding: var(--s3) var(--s4);
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.c-data-table tbody tr:last-child td,
+.c-article tbody tr:last-child td { border-bottom: none; }
+.c-data-table table { margin: 0; }
+
+/* --- c-snippet : copy-paste embed code (widgets, badges). Pre block + copy
+   button; the tiny script in the page wires the button. --- */
+.c-snippet {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: var(--s4) 0;
+}
+.c-snippet__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  padding: var(--s2) var(--s4);
+  border-bottom: 1px solid var(--line);
+}
+.c-snippet__label {
+  font-family: var(--display);
+  font-size: var(--t-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.c-snippet pre {
+  padding: var(--s4);
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
 /* --- Motion polish (global). Smooth in-page jumps for the topic index; all
    hover/zoom motion disabled for users who prefer reduced motion. --- */
 @media (prefers-reduced-motion: no-preference) {

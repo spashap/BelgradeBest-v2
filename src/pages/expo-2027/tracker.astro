@@ -1,0 +1,193 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import Note from "../../components/Note.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { SITE, EXPO, CONFIG } from "../../lib/site";
+import { articleSchema, breadcrumbSchema, datasetSchema } from "../../lib/schemas";
+import {
+  TRACKER,
+  participants,
+  timeline,
+  byRegion,
+  namedCount,
+  officialCount,
+  updated,
+} from "../../lib/expo-participants";
+
+// The independent participant tracker — a citable data page (link magnet):
+// headline figures, growth timeline, and the full named-country table. Data
+// master: src/data/expo-participants.json (bump `updated` on every edit; it
+// drives dateModified here and sitemap lastmod in astro.config.mjs).
+const PATH = "/expo-2027/tracker";
+const URL_ = `${SITE.origin}${PATH}`;
+const regions = byRegion();
+
+const fmt = (d: string) =>
+  new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+
+const meta = pageMetadata({
+  title: "Expo 2027 participant tracker — countries confirmed so far",
+  description: `${officialCount} international participants are confirmed for Expo 2027 Belgrade, ${namedCount} countries publicly named. The independent tracker: full list by region, confirmation dates, growth timeline, and sources.`,
+  path: PATH,
+});
+
+const crumbs = [
+  { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+  { name: EXPO.shortName, href: "/expo-2027" },
+  { name: "Participant tracker" },
+];
+
+const schemas: object[] = [
+  articleSchema({
+    title: `Expo 2027 participant tracker — ${officialCount} confirmed, ${namedCount} named`,
+    description: meta.description,
+    url: URL_,
+    dateModified: updated,
+  }),
+  datasetSchema({
+    name: "Expo 2027 Belgrade participant tracker",
+    description:
+      "Confirmed international participants of Expo 2027 Belgrade: official count, publicly named countries with regions and confirmation dates, and the growth timeline — with sources.",
+    url: URL_,
+    dateModified: updated,
+    jsonUrl: `${SITE.origin}/data/expo-2027-participants.json`,
+    keywords: ["Expo 2027", "Belgrade", "participating countries", "Specialised Expo", "Serbia"],
+  }),
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: EXPO.shortName, url: `${SITE.origin}/expo-2027` },
+    { name: "Participant tracker", url: URL_ },
+  ]),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow={`Updated ${fmt(updated)}`}
+    title="Expo 2027 participant tracker"
+    lede={`Who is coming to ${EXPO.name}, in numbers: the official participant count, every country a source has publicly named, and how the total has grown — independently tracked and sourced.`}
+  />
+
+  <Container variant="read">
+    <div class="c-stats">
+      <div class="c-stat">
+        <div class="c-stat__num">{officialCount}</div>
+        <div class="c-stat__label">confirmed international participants (official counter)</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat__num">{namedCount}</div>
+        <div class="c-stat__label">countries publicly named so far</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat__num">{regions.length}</div>
+        <div class="c-stat__label">continents represented among named countries</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat__num">№1</div>
+        <div class="c-stat__label">largest Specialised Expo by participants — Astana 2017's record fell in July 2025</div>
+      </div>
+    </div>
+
+    <Note>
+      <strong>Read the two numbers honestly.</strong> The official counter claims
+      {officialCount} confirmed international participants, but the official page names only a
+      subset. Our table lists the {namedCount} countries a source has actually named — absence
+      from it does not mean absence from the Expo. Background:
+      <a href="/expo-2027/participants">who's coming to Expo 2027</a>.
+    </Note>
+
+    <SectionHead
+      title="How the number has grown"
+      intro="Confirmed-participant milestones, each linked to its source."
+    />
+    <div class="c-data-table">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Count</th><th>Milestone</th></tr>
+        </thead>
+        <tbody>
+          {timeline.map((t) => (
+            <tr>
+              <td>{fmt(t.date)}</td>
+              <td>{t.count ?? "—"}</td>
+              <td><a href={t.source} rel="nofollow noopener">{t.event}</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <SectionHead
+      title="Named countries by region"
+      intro={TRACKER.namedNote}
+    />
+    <div class="c-data-table">
+      <table>
+        <thead>
+          <tr><th>Region</th><th>Named countries</th></tr>
+        </thead>
+        <tbody>
+          {regions.map((r) => (
+            <tr><td>{r.region}</td><td>{r.count}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <SectionHead title={`All ${namedCount} publicly named countries`} />
+    <div class="c-data-table">
+      <table>
+        <thead>
+          <tr><th>Country</th><th>Region</th><th>Confirmation reported</th></tr>
+        </thead>
+        <tbody>
+          {participants.map((p) => (
+            <tr>
+              <td>{p.name}{p.host ? " (host)" : ""}</td>
+              <td>{p.region}</td>
+              <td>{p.announced ? fmt(p.announced) : "—"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <SectionHead title="What the organisers expect" />
+    <ul>
+      <li><strong>Countries:</strong> {TRACKER.expected.countries}.</li>
+      <li><strong>Visitors:</strong> {TRACKER.expected.visitors}.</li>
+      <li><strong>Programme:</strong> {TRACKER.expected.events}.</li>
+    </ul>
+
+    <SectionHead title="Sources & method" />
+    <ul>
+      {TRACKER.sources.map((s) => (
+        <li><a href={s.url} rel="nofollow noopener">{s.url}</a> — {s.note}</li>
+      ))}
+    </ul>
+    <p>Caveats we track so you don't have to:</p>
+    <ul>
+      {TRACKER.caveats.map((c) => <li>{c}</li>)}
+    </ul>
+
+    <Note tone="gold">
+      <strong>Citing this page?</strong> The tracker is free to cite with attribution and a link
+      to <a href={PATH}>belgradebest.com{PATH}</a>. The raw data is downloadable as
+      <a href="/data/expo-2027-participants.json">JSON</a>, and there's a free
+      <a href="/expo-2027/countdown">embeddable Expo 2027 countdown</a> for your own site.
+    </Note>
+
+    <p>
+      Planning around the event? Start with the <a href="/expo-2027">Expo 2027 guide</a> — tickets,
+      getting there, and <a href="/expo-2027/where-to-stay-for-expo">where to stay for the Expo</a>.
+    </p>
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>
