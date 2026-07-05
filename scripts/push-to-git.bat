@@ -30,6 +30,15 @@ REM Ensure a git identity exists (commit fails silently without one).
 git config user.email >nul 2>&1 || git config user.email "spashap@gmail.com"
 git config user.name  >nul 2>&1 || git config user.name  "Pavel"
 
+REM Bump the site version once per push (V<MM>.<mmm>, shown in the footer +
+REM admin dashboard; master file src\data\version.json). Skipped when the
+REM working tree is clean (nothing new to release). A failed bump never blocks
+REM the push. Major bumps are manual: node scripts\bump-version.mjs --major
+git status --porcelain | findstr . >nul
+if not errorlevel 1 (
+  node "%~dp0bump-version.mjs" || echo WARNING: version bump failed - pushing without it.
+)
+
 REM Commit message source:
 REM   (1) text you type after the filename -> used as the commit subject, or
 REM   (2) scripts\commit-message.txt        -> committed verbatim with -F, so any

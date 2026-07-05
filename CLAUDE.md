@@ -205,6 +205,11 @@ build scripts once (`npm approve-scripts esbuild`, `sharp`; `protobufjs` in admi
 - `push-to-git.bat` now pulls (`--no-rebase --no-edit -X theirs`) before pushing, because
   the question-radar job commits its feed to GitHub and can leave origin ahead of the
   owner's machine. Don't remove that sync step.
+- **Site versioning (V<MM>.<mmm>)**: master `src/data/version.json`, formatted by
+  `src/lib/version.ts`, shown in the public footer + admin dashboard. `push-to-git.bat`
+  auto-runs `scripts/bump-version.mjs` (minor +1) before each push when the tree is
+  dirty. Major bump is an owner command only: `node scripts/bump-version.mjs --major`
+  (major +1, minor resets to 001). Never bump by hand-editing the JSON.
 
 ## What NOT to do
 

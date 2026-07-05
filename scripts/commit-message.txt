@@ -1,4 +1,4 @@
-Platform Phase 0: Expo participant tracker, countdown widget, badge, /for-businesses
+Platform Phase 0 + site versioning: tracker, widget, badge, /for-businesses
 
 First build phase of KB/platform/PLATFORM-PLAN.md (included, rev-b + Phase 0
 marked done). Four link-building assets, all static:
@@ -40,6 +40,14 @@ bumped; description/lede/FAQs updated to match.
 Infra: astro.config.mjs sitemap lastmod for the three new pages (tracker
 inherits expo-participants.json `updated`; countdown + for-businesses carry
 hand-bumped dates — never BUILD_DATE).
+
+Site versioning (V<MM>.<mmm>): new master src/data/version.json +
+lib/version.ts formatter, rendered in the public footer and the admin
+dashboard badge. scripts/bump-version.mjs bumps minor (+1) or major
+(--major, resets minor to 001); push-to-git.bat now auto-bumps the minor
+before every push when the tree is dirty (non-fatal if node is missing).
+Seeded at 01.000 so this first versioned push publishes as V01.001.
+CLAUDE.md documents the scheme.
 
 Build verified: all three pages prerendered + in sitemap with real lastmod,
 tracker renders 93 countries / 110 table rows, Dataset JSON-LD present,

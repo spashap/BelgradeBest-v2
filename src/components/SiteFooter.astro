@@ -4,6 +4,7 @@ import { CONFIG, interp } from "../lib/site";
 import { clusterBySlug, utilityPages } from "../lib/clusters";
 import { areaSection } from "../lib/areas";
 import { glossarySection } from "../lib/glossary";
+import { VERSION } from "../lib/version";
 
 // Footer from chrome.footer + DERIVED links (leg titles/hrefs from clusters,
 // utility-page titles/paths from utilityPages). Degrades to a one-line footer
@@ -75,7 +76,7 @@ const social = ((f?.social ?? []) as { url: string; label: string; visible?: boo
   !f ? (
     <footer class="c-site-footer">
       <Container>
-        <p>{copyright}</p>
+        <p>{copyright} · {VERSION}</p>
       </Container>
     </footer>
   ) : (
@@ -107,7 +108,7 @@ const social = ((f?.social ?? []) as { url: string; label: string; visible?: boo
         </div>
 
         <div class="c-footer__bar">
-          <span class="c-footer__copy">{copyright}</span>
+          <span class="c-footer__copy">{copyright} · {VERSION}</span>
           {legal.length > 0 || social.length > 0 ? (
             <span class="c-footer__meta">
               {legal.map((it) => <a href={it.href}>{it.title}</a>)}
