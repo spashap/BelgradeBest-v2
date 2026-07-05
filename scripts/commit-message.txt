@@ -1,58 +1,56 @@
-Platform Phase 0 + site versioning: tracker, widget, badge, /for-businesses
+Platform Phase 1: claimable-listings engine + 12 Expo pavilion profiles
 
-First build phase of KB/platform/PLATFORM-PLAN.md (included, rev-b + Phase 0
-marked done). Four link-building assets, all static:
+Implements Phase 1 of KB/platform/PLATFORM-PLAN.md (status updated in the
+plan; CLAUDE.md documents the new machinery).
 
-Participant tracker (/expo-2027/tracker):
-- New data master src/data/expo-participants.json (web-researched 2026-07-05,
-  every entry sourced): official counter 139 international participants, 93
-  publicly named countries with region + confirmation dates, growth timeline
-  94 -> 117 -> 120 -> 137 -> 139, organiser expectations, sources, caveats.
-- lib/expo-participants.ts (typed accessor, byRegion stats) + tracker page:
-  stat tiles, timeline + region + full country tables, sources & method,
-  cite-this note. JSON-LD: Article + Dataset + BreadcrumbList (new
-  datasetSchema() in lib/schemas.ts).
-- Open data endpoint /data/expo-2027-participants.json (same master,
-  Dataset.distribution points at it).
+Listings engine:
+- Per-listing data masters src/data/listings/<leg>/<slug>.json -> new
+  src/lib/listings.ts: eager glob loader, validListing thin-content guard
+  (summary >=80 chars, about >=300, facts >=2 — sub-threshold listings stay
+  unpublished stubs), SECTION per-leg URL segment map (expo-2027 ->
+  "pavilions"), newestUpdated for hub freshness.
+- T4 listing template src/pages/expo-2027/pavilions/[slug].astro: at-a-glance
+  facts table with per-row sources, announced/reported editorial paragraphs,
+  quotes, sources list, "claim this page" note -> /for-businesses; JSON-LD
+  Article + BreadcrumbList.
+- Pavilion directory hub /expo-2027/pavilions: stat tiles, profiled list, and
+  a directory row for every one of the 93 named participant countries
+  (built-vs-pending, mirroring the leg-hub pattern); ItemList JSON-LD.
+- noindex-first behind site-config.json -> programmatic.listingsIndexable
+  (false): astro.config.mjs enumerates listing paths into NOINDEX + sitemap
+  exclusion and mirrors the SECTION map; per-listing `updated` drives lastmod
+  once the flag flips. Tracker cross-link gated on the same flag.
 
-Countdown widget (link magnet for anyone writing about the Expo):
-- public/widgets/expo-countdown.js — self-contained embed (no cookies, no
-  external requests), counts down to 15 May 2027, switches to days-left
-  during the Expo; attribution link back is the license.
-- /expo-2027/countdown — demo + copy-paste embed code + per-platform steps.
+Content — 12 pavilion profiles, web-researched 2026-07-05, every fact
+sourced (official ministries, JETRO/METI, State Dept, WKO, ekapija, ANSA):
+Japan (Basic Plan, Kirie logo, contract + ambassadors), Germany (EUR 7.5M
+tender, 972 m2), Italy (contract + "Play together"), Serbia (EUR 40M host
+pavilion, 30,000 m2, Artbeat Lab), USA (Vita Motus design, Trivandi ops),
+Russia ("Play to be"), Saudi Arabia, Austria (EU-wide tender, 75/25
+financing), Switzerland, Turkiye, UAE, China (World Expo Museum 330 m2).
 
-Badge + business landing:
-- public/badges/featured-on-belgradebest.svg (Warm Editorial, inline colors
-  by necessity — renders on third-party sites).
-- /for-businesses — the platform pitch: free page, GBP website-field how-to,
-  badge embed code, claim-by-email CTA (admin@belgradebest.com) until the
-  Phase-2 self-serve claim flow ships.
+Page thickening (owner request, same session): every pavilion page now also
+carries (a) a "Where to find the pavilion" geography block + "Visiting — the
+practical context" block, templated once from verified getting-there facts
+(Surcin, 5 km from airport / 13.5 km from centre, International Participant
+Area -> future Belgrade Fair, free city transport, railway status) with
+internal links to getting-there / tickets / where-to-stay-for-expo, and
+(b) 3-4 country-specific FAQs per listing (new `faqs` field) rendered as the
+native-details accordion + FAQPage JSON-LD. Location/transport FAQs stay
+owned by the getting-there article to avoid duplication. Page title pattern
+sharpened to "<X> Pavilion at Expo 2027 Belgrade - theme & plans". Pages now
+run ~900-1,300 words.
 
-Design-law library additions (globals.css): .c-stats/.c-stat tiles,
-.c-data-table (also styles markdown tables inside .c-article — the medical
-price tables were unstyled until now), .c-snippet + Snippet.astro copy-button
-component.
+Indexation: programmatic.listingsIndexable flipped to TRUE (owner decision,
+same session) — pavilion hub + 12 spokes are live-indexable: noindex meta
+dropped, 13 URLs added to the sitemap with real per-listing lastmod, the
+tracker's gated pavilion cross-link activated, and participants.md now links
+the pavilion directory from its pavilion-plans section. IndexNow will submit
+the new URLs automatically on the production build.
 
-Content: expo-2027/participants.md refreshed 137 -> 139 (official counter,
-US confirmed 2026-05-11), cross-linked to the tracker throughout, lastUpdated
-bumped; description/lede/FAQs updated to match.
-
-Infra: astro.config.mjs sitemap lastmod for the three new pages (tracker
-inherits expo-participants.json `updated`; countdown + for-businesses carry
-hand-bumped dates — never BUILD_DATE).
-
-Site versioning (V<MM>.<mmm>): new master src/data/version.json +
-lib/version.ts formatter, rendered in the public footer and the admin
-dashboard badge. scripts/bump-version.mjs bumps minor (+1) or major
-(--major, resets minor to 001); push-to-git.bat now auto-bumps the minor
-before every push when the tree is dirty (non-fatal if node is missing).
-Seeded at 01.000 so this first versioned push publishes as V01.001.
-CLAUDE.md documents the scheme.
-
-Build verified: all three pages prerendered + in sitemap with real lastmod,
-tracker renders 93 countries / 110 table rows, Dataset JSON-LD present,
-badge/widget/data files in dist. Pre-existing (not from this change): the
-glob-loader "Duplicate id participants" build warning also fires on the
-previous commit.
+Build verified: 12 spoke pages + hub prerendered and indexable (no robots
+meta, matching site convention), sitemap at 115 URLs incl. 13 pavilion URLs
+with 2026-07-05 lastmod, hub links all 12 profiles and lists 93 countries,
+12/12 pages carry FAQPage + Article + BreadcrumbList JSON-LD.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

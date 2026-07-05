@@ -1,0 +1,52 @@
+{
+  "slug": "saudi-arabia",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Saudi Arabia Pavilion",
+  "shortName": "Saudi Arabia",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "Saudi Arabia signed its participation contract in April 2026, with a vision built around play as a pathway to opportunity — culture, sport and creative industries empowering individuals and communities.",
+  "blocks": {
+    "about": [
+      "Saudi Arabia signed its participation contract for Expo Belgrade 2027 in April 2026, marking what its Commissioner General called the transition from planning into the full execution phase. The participation is led by Rakan Tarabzoni, Deputy Minister of Economy and Planning for International Economic Affairs and the Kingdom's Commissioner General for Expo Belgrade 2027.",
+      "The Kingdom's stated vision focuses on showcasing play as a pathway to opportunity, and the role of culture, sport and creative industries in empowering individuals and building thriving communities — themes closely aligned with Vision 2030. Saudi Arabia says it will work with the Expo organizer and participating countries to deliver a pavilion and programme fostering collaboration, cultural exchange and people-to-people engagement throughout the Expo. Design and budget details have not been published."
+    ],
+    "facts": [
+      { "label": "Vision", "value": "Play as a pathway to opportunity; culture, sport and creative industries", "source": "https://saudigazette.com.sa/article/660692" },
+      { "label": "Status", "value": "Participation contract signed April 2026 — execution phase", "source": "https://saudigazette.com.sa/article/660692" },
+      { "label": "Commissioner General", "value": "Rakan Tarabzoni, Deputy Minister of Economy and Planning", "source": "https://saudigazette.com.sa/article/660692" },
+      { "label": "Size / budget", "value": "Not disclosed" }
+    ],
+    "quotes": [
+      {
+        "quote": "a pivotal step that moves our participation from the planning stage to the execution phase",
+        "who": "Rakan Tarabzoni, Saudi Commissioner General for Expo Belgrade 2027, on the contract signing",
+        "source": "https://saudigazette.com.sa/article/660692"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is Saudi Arabia's vision for Expo 2027 Belgrade?",
+      "answer": "Showcasing play as a pathway to opportunity, and the role of culture, sport and creative industries in empowering individuals and building thriving communities — themes closely aligned with Vision 2030."
+    },
+    {
+      "question": "When did Saudi Arabia sign its Expo 2027 contract?",
+      "answer": "In April 2026 — a step its Commissioner General called \"pivotal\", moving participation from the planning stage into the execution phase."
+    },
+    {
+      "question": "Who leads Saudi Arabia's Expo 2027 participation?",
+      "answer": "Rakan Tarabzoni, Deputy Minister of Economy and Planning for International Economic Affairs and the Kingdom's Commissioner General for Expo Belgrade 2027. Pavilion design and budget have not been published."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://saudigazette.com.sa/article/660692", "note": "Contract signing, leadership and vision" }
+    ]
+  },
+  "images": []
+}

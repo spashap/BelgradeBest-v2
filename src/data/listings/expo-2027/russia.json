@@ -1,0 +1,55 @@
+{
+  "slug": "russia",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Russia Pavilion",
+  "shortName": "Russia",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "Russia signed its participation agreement in December 2025 and has announced its pavilion slogan — \"Play to be\" — framing play as essential to music, medicine and high technology.",
+  "blocks": {
+    "about": [
+      "A Russian government decree in July 2025 endorsed participation, with Industry and Trade Minister Anton Alikhanov designated to head the organizing committee and four ministries tasked with drafting proposals. The Participation Agreement was signed on 24 December 2025 in Belgrade by Alexey Gruzdev, Deputy Minister of Industry and Trade and Russia's Commissioner for Expo 2027, together with Serbia's Commissioner General Jagoda Lazarević and Expo Director Danilo Jerinić.",
+      "The pavilion's announced slogan is \"Play to be — I play in order to live, in order to exist\". Russia intends to show how important play is across spheres of life including music, medicine and high technologies. The country has participated in Expo exhibitions since 1981; pavilion design and budget have not been made public."
+    ],
+    "facts": [
+      { "label": "Slogan", "value": "\"Play to be — I play in order to live, in order to exist\"", "source": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation" },
+      { "label": "Status", "value": "Participation agreement signed 24 Dec 2025", "source": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html" },
+      { "label": "Commissioner", "value": "Alexey Gruzdev, Deputy Minister of Industry and Trade", "source": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html" },
+      { "label": "Concept", "value": "Play across music, medicine and high technologies", "source": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation" },
+      { "label": "Size / budget", "value": "Not disclosed" }
+    ],
+    "quotes": [
+      {
+        "quote": "We will be preparing for Russia's participation in EXPO 2027 to demonstrate the special nature of relations between our countries.",
+        "who": "Alexey Gruzdev, Russian Deputy Minister of Industry and Trade and Commissioner for Expo 2027 Belgrade",
+        "source": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is Russia's pavilion slogan at Expo 2027?",
+      "answer": "\"Play to be — I play in order to live, in order to exist.\" Russia intends to show how important play is across spheres of life including music, medicine and high technologies."
+    },
+    {
+      "question": "When did Russia confirm its Expo 2027 participation?",
+      "answer": "A government decree endorsed participation in July 2025, and the Participation Agreement was signed in Belgrade on 24 December 2025 by Deputy Minister of Industry and Trade Alexey Gruzdev, Russia's Commissioner for Expo 2027."
+    },
+    {
+      "question": "Has Russia's pavilion design been published?",
+      "answer": "No — the pavilion's design and budget have not been made public as of mid-2026. Russia has participated in Expo exhibitions since 1981."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://tass.com/economy/1984547", "note": "Government decree endorsing participation" },
+      { "url": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html", "note": "Agreement signing" },
+      { "url": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation", "note": "Official Expo announcement + slogan" }
+    ]
+  },
+  "images": []
+}

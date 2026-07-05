@@ -1,0 +1,61 @@
+{
+  "slug": "serbia",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Serbia Pavilion",
+  "shortName": "Serbia",
+  "status": "tender",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "The host nation's pavilion is the biggest single national project of Expo 2027: a building of up to 30,000 m² with a construction budget around €40 million, designed by Belgrade studio Artbeat Lab, plus a separate €8.5 million exhibition tender.",
+  "blocks": {
+    "about": [
+      "Serbia's national pavilion at the Surčin site is budgeted at RSD 4.68 billion — around €40 million — for construction alone. The design contract went to Belgrade studio Artbeat Lab (RSD 9.92 million), the sole bidder in a Ministry of Finance tender opened on 5 June, with a maximum 90-calendar-day design deadline and a required \"textual and visual explanation of the concept\".",
+      "Per the design tender specifications, the pavilion may reach a maximum gross area of 30,000 m², with a basement plus nine floors including ground level and up to six underground levels — housing multifunctional, gallery and exhibition, educational, administrative, technical and logistics spaces. As the host's permanent flagship, it is an order of magnitude larger than the visiting nations' pavilions.",
+      "A separate tender worth about RSD 1 billion (~€8.5 million) covers the organization and realization of the exhibition inside the pavilion, announced by the Office of the Commissioner of Serbia for International Exhibitions. General Commissioner Žarko Malinović invited bidders to \"contribute with creative ideas so that Serbia presents its creativity, energy and modern identity to the world\"."
+    ],
+    "facts": [
+      { "label": "Role", "value": "Host nation pavilion — permanent flagship of the Surčin site" },
+      { "label": "Status", "value": "Design awarded (Artbeat Lab); exhibition tender announced", "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur" },
+      { "label": "Size", "value": "Up to 30,000 m² gross; 9 floors + up to 6 underground levels", "source": "https://www.ekapija.com/en/news/4727829/national-pavilion-of-serbia-at-expo-2027-to-have-8-floors-and" },
+      { "label": "Construction budget", "value": "RSD 4.68bn (~€40M)", "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur" },
+      { "label": "Designer", "value": "Artbeat Lab, Belgrade (RSD 9.92M design contract)", "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur" },
+      { "label": "Exhibition tender", "value": "~RSD 1bn (~€8.5M) for the interior exhibition", "source": "https://vreme.com/en/drustvo/srbija-trazi-izvodjaca-za-nacionalni-paviljon-na-ekspu-posao-vredan-85-miliona-evra/" }
+    ],
+    "quotes": [
+      {
+        "quote": "contribute with creative ideas so that Serbia presents its creativity, energy and modern identity to the world",
+        "who": "Žarko Malinović, General Commissioner of Serbia for Expo 2027",
+        "source": "https://vreme.com/en/drustvo/srbija-trazi-izvodjaca-za-nacionalni-paviljon-na-ekspu-posao-vredan-85-miliona-evra/"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How big will Serbia's Expo 2027 pavilion be?",
+      "answer": "Per the design tender specifications, up to 30,000 m² gross — a basement plus nine floors including ground level and up to six underground levels. As the host's permanent flagship it is an order of magnitude larger than the visiting nations' pavilions."
+    },
+    {
+      "question": "How much does the Serbia Pavilion cost?",
+      "answer": "Construction is estimated at RSD 4.68 billion (around €40 million), with a separate tender of about RSD 1 billion (~€8.5 million) for the exhibition inside the pavilion."
+    },
+    {
+      "question": "Who is designing Serbia's national pavilion?",
+      "answer": "Belgrade studio Artbeat Lab won the design contract (RSD 9.92 million) as the sole bidder in a Ministry of Finance tender, with a maximum 90-calendar-day design deadline and a required textual and visual concept explanation."
+    },
+    {
+      "question": "What happens to the Serbia Pavilion after Expo 2027?",
+      "answer": "The pavilion is designed as a permanent building. It sits within the International Participant Area, the zone planned to become the new Belgrade Fair after the Expo closes — part of the event's declared legacy plan."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur", "note": "Budget + design contract" },
+      { "url": "https://www.ekapija.com/en/news/4727829/national-pavilion-of-serbia-at-expo-2027-to-have-8-floors-and", "note": "Size and floor specifications" },
+      { "url": "https://vreme.com/en/drustvo/srbija-trazi-izvodjaca-za-nacionalni-paviljon-na-ekspu-posao-vredan-85-miliona-evra/", "note": "Exhibition tender" }
+    ]
+  },
+  "images": []
+}

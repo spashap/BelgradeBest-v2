@@ -1,0 +1,131 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import PageIntro from "../../../components/PageIntro.astro";
+import Container from "../../../components/Container.astro";
+import SectionHead from "../../../components/SectionHead.astro";
+import Note from "../../../components/Note.astro";
+import Schema from "../../../components/Schema.astro";
+import { pageMetadata } from "../../../lib/metadata";
+import { SITE, EXPO, CONFIG } from "../../../lib/site";
+import { breadcrumbSchema } from "../../../lib/schemas";
+import { listingsForLeg, listingHref, listingsIndexable, newestUpdated } from "../../../lib/listings";
+import { participants } from "../../../lib/expo-participants";
+
+// Pavilion directory hub: every named participant country, linking through to
+// the pavilion profiles that have enough announced substance to publish (the
+// thin-content guard in lib/listings.ts). Built-vs-pending mirrors the leg-hub
+// pattern. noindex-first behind programmatic.listingsIndexable.
+const PATH = "/expo-2027/pavilions";
+const published = listingsForLeg("expo-2027");
+const bySlugName = new Map(published.map((l) => [(l.shortName ?? l.name).toLowerCase(), l]));
+const updated = newestUpdated("expo-2027");
+
+const meta = pageMetadata({
+  title: "Expo 2027 pavilions — announced plans by country",
+  description: `National pavilions of Expo 2027 Belgrade: which of the ${participants.length} publicly named countries have announced pavilion plans, themes and designs — profiled and sourced.`,
+  path: PATH,
+  noindex: !listingsIndexable,
+});
+
+const crumbs = [
+  { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+  { name: EXPO.shortName, href: "/expo-2027" },
+  { name: "Pavilions" },
+];
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: EXPO.shortName, url: `${SITE.origin}/expo-2027` },
+    { name: "Pavilions", url: `${SITE.origin}${PATH}` },
+  ]),
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Expo 2027 Belgrade national pavilions with announced plans",
+    itemListElement: published.map((l, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: l.name,
+      url: `${SITE.origin}${listingHref(l)}`,
+    })),
+  },
+];
+
+// Directory rows: every named country; profile link where one is published.
+const rows = participants.map((p) => ({
+  name: p.name,
+  region: p.region,
+  host: p.host === true,
+  listing: bySlugName.get(p.name.toLowerCase()) ?? null,
+}));
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow="Expo 2027 · Pavilion directory"
+    title="Expo 2027 national pavilions"
+    lede={`Pavilion plans for ${EXPO.name} are announced country by country. We profile each one as soon as there's real, sourced substance — theme, design, budget, dates — and keep a directory row reserved for every named participant.`}
+  />
+
+  <Container variant="read">
+    <div class="c-stats">
+      <div class="c-stat">
+        <div class="c-stat__num">{published.length}</div>
+        <div class="c-stat__label">pavilion profiles published (enough announced to matter)</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat__num">{participants.length}</div>
+        <div class="c-stat__label">named participant countries — see the <a href="/expo-2027/tracker">tracker</a></div>
+      </div>
+    </div>
+
+    {published.length > 0 && (
+      <>
+        <SectionHead title="Profiled pavilions" intro="Countries with announced pavilion plans, each profiled from public sources." />
+        <ul>
+          {published.map((l) => (
+            <li>
+              <a href={listingHref(l)}>{l.name}</a> — {l.summary.split(". ")[0]}.
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    <SectionHead title="All named countries" intro="Every publicly named participant. No profile link yet means no substantive pavilion announcement has been sourced — rows fill in as plans land." />
+    <div class="c-data-table">
+      <table>
+        <thead>
+          <tr><th>Country</th><th>Region</th><th>Pavilion profile</th></tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr>
+              <td>{r.name}{r.host ? " (host)" : ""}</td>
+              <td>{r.region}</td>
+              <td>{r.listing ? <a href={listingHref(r.listing)}>View profile</a> : "—"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <Note>
+      <strong>Represent a pavilion or exhibitor?</strong> Each profile can be
+      <a href="/for-businesses"> claimed for free</a> — you keep it current yourself, we handle
+      the technical side. Profiles are compiled editorially and marked with their sources until
+      then.
+    </Note>
+
+    <p>
+      Keep exploring: <a href="/expo-2027/tracker">participant tracker</a> ·{" "}
+      <a href="/expo-2027/participants">who's coming</a> ·{" "}
+      <a href="/expo-2027">the full Expo 2027 guide</a>
+    </p>
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

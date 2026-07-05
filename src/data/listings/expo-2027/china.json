@@ -1,0 +1,48 @@
+{
+  "slug": "china",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "China Pavilion",
+  "shortName": "China",
+  "status": "concept-only",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "China confirmed in March 2025 but has not yet detailed its national pavilion — the concrete Chinese presence announced so far is the Shanghai World Expo Museum's 330 m² pavilion in the Best Practice Area.",
+  "blocks": {
+    "about": [
+      "China confirmed its participation in March 2025. As of mid-2026, no national pavilion theme, design or budget has been publicly detailed — this profile tracks what is actually announced rather than speculating.",
+      "The concrete Chinese presence confirmed so far sits outside the national pavilion: the Shanghai World Expo Museum will debut a 330-square-metre pavilion in the Best Practice Area (Art and Museum Section), with an exhibition on Expo 2010 Shanghai's impact on urban development, public spaces and city governance, and its post-event legacy — a fitting subject for Belgrade, where the Expo site is itself designed around its afterlife. The museum's participation was formalized via a signing reported by the BIE."
+    ],
+    "facts": [
+      { "label": "National pavilion", "value": "Confirmed 22 Mar 2025; theme/design/budget not yet public", "source": "https://expobelgrade2027.org/en/participants" },
+      { "label": "Confirmed presence", "value": "Shanghai World Expo Museum — 330 m² pavilion, Best Practice Area", "source": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/" },
+      { "label": "Museum exhibition", "value": "Expo 2010 Shanghai's urban impact and post-event legacy", "source": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/" },
+      { "label": "Formalized", "value": "Signing reported by the BIE", "source": "https://www.bie-paris.org/site/en/news-announcements/specialised-expo/world-expo-museum-to-participate-in-expo-2027-belgrade" }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "Is China building a pavilion at Expo 2027 Belgrade?",
+      "answer": "China confirmed its participation on 22 March 2025, but no national pavilion theme, design or budget had been publicly detailed as of mid-2026."
+    },
+    {
+      "question": "What Chinese presence at Expo 2027 is already confirmed?",
+      "answer": "The Shanghai World Expo Museum will debut a 330 m² pavilion in the Best Practice Area (Art and Museum Section), with an exhibition on Expo 2010 Shanghai's impact on urban development, public spaces and city governance — and its post-event legacy."
+    },
+    {
+      "question": "Why is the World Expo Museum exhibition relevant to Belgrade?",
+      "answer": "Its subject — what a city keeps after an Expo ends — mirrors Belgrade's own plan: the Expo 2027 site is explicitly designed around its afterlife, with the International Participant Area becoming the new Belgrade Fair."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://www.bastillepost.com/global/article/4574479-china-confirms-its-participation-in-expo-2027-belgrade", "note": "Participation confirmation" },
+      { "url": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/", "note": "World Expo Museum pavilion details" },
+      { "url": "https://www.bie-paris.org/site/en/news-announcements/specialised-expo/world-expo-museum-to-participate-in-expo-2027-belgrade", "note": "BIE announcement" }
+    ]
+  },
+  "images": []
+}

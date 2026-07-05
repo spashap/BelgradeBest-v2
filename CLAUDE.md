@@ -115,6 +115,17 @@ sitemap re-includes/excludes it automatically. Sitemap `lastmod` is real per-pag
 (article frontmatter `lastUpdated`; `updated` fields in glossary/areas/site-pages
 JSON; hubs inherit their newest child) — do NOT let it fall back to build time.
 
+**Claimable listings (platform, Phase 1 — see `KB/platform/PLATFORM-PLAN.md`):**
+per-listing masters `src/data/listings/<leg>/<slug>.json` → `src/lib/listings.ts`
+(thin-content guard `validListing`, per-leg URL segment map `SECTION`) → pages
+`src/pages/expo-2027/pavilions/` (hub + `[slug]`). Ships **noindex-first** behind
+`site-config.json → programmatic.listingsIndexable` (astro.config mirrors the
+gate + a `LISTING_SECTION` copy of the segment map — keep in sync). Bump each
+listing's `updated` on edit (drives dateModified + sitemap lastmod). The Expo
+data page `/expo-2027/tracker` renders `src/data/expo-participants.json` (bump
+its `updated` too); `/expo-2027/countdown`, `/for-businesses`, badge + widget
+in `public/` are the Phase-0 link assets.
+
 A full SEO audit + prioritized fixes live in `KB/seo/FULL-AUDIT-REPORT-2026-07-02.md`
 and `KB/seo/ACTION-PLAN-2026-07-02.md` (most items applied 2026-07-02; the www-TLS
 cert fix in Vercel Domains and `brand.sameAs` population remain owner actions).

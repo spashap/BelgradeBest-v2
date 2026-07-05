@@ -1,0 +1,52 @@
+{
+  "slug": "united-arab-emirates",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "UAE Pavilion",
+  "shortName": "United Arab Emirates",
+  "status": "concept-only",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "The UAE pavilion is expected to showcase sustainable energy and smart-city innovation, and to work as a business bridge between Emirati companies and Serbian enterprises — with a dedicated National Day of Emirati culture.",
+  "blocks": {
+    "about": [
+      "The UAE — a major backer of Belgrade's wider development projects — is expected to bring a pavilion showcasing innovations in sustainable energy and smart cities, featuring what coverage describes as cutting-edge innovations in sustainability and technology. Beyond the showcase, the pavilion is framed as a bridge connecting Emirati companies with Serbian enterprises.",
+      "The UAE will have a dedicated National Day at Expo 2027 featuring cultural showcases such as traditional Emirati music or sports events. A Serbian Expo advisor told Gulf News the entire event will reflect the partnership: \"the entire EXPO 2027 will be a showcase because without the support of our friends from UAE, this event simply would not be as successful\". Pavilion design and budget have not been announced."
+    ],
+    "facts": [
+      { "label": "Expected focus", "value": "Sustainable energy, smart cities, technology showcase", "source": "https://gulfnews.com/world/the-uae-at-expo-2027-belgrade-1.500316369" },
+      { "label": "Business angle", "value": "Bridge between Emirati companies and Serbian enterprises", "source": "https://gulfnews.com/world/the-uae-at-expo-2027-belgrade-1.500316369" },
+      { "label": "National Day", "value": "Dedicated day with Emirati cultural showcases", "source": "https://gulfnews.com/world/the-uae-at-expo-2027-belgrade-1.500316369" },
+      { "label": "Size / budget", "value": "Not disclosed" }
+    ],
+    "quotes": [
+      {
+        "quote": "We would be glad to see leading UAE companies expand their presence in Serbia or find new markets through Expo 2027.",
+        "who": "CEO of Expo 2027 Ltd (as reported by Gulf News)",
+        "source": "https://gulfnews.com/world/the-uae-at-expo-2027-belgrade-1.500316369"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What will the UAE Pavilion showcase at Expo 2027?",
+      "answer": "Coverage points to innovations in sustainable energy and smart cities — cutting-edge sustainability and technology — with the pavilion also framed as a business bridge connecting Emirati companies with Serbian enterprises."
+    },
+    {
+      "question": "Will the UAE have a National Day at Expo 2027?",
+      "answer": "Yes — a dedicated National Day featuring Emirati cultural showcases such as traditional music or sports events."
+    },
+    {
+      "question": "Is the UAE pavilion design or budget public?",
+      "answer": "No — neither has been announced as of mid-2026. The UAE is also one of the major backers of Belgrade's wider development projects around the Expo."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://gulfnews.com/world/the-uae-at-expo-2027-belgrade-1.500316369", "note": "Gulf News on the UAE at Expo 2027" }
+    ]
+  },
+  "images": []
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "turkiye",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Türkiye Pavilion",
+  "shortName": "Türkiye",
+  "status": "concept-only",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "Türkiye, confirmed in January 2025, is expected to bring a performance-heavy presence — traditional dances like Halay, Horon and Zeybek, Turkish music and sports, delivered through interactive content and workshops.",
+  "blocks": {
+    "about": [
+      "Türkiye confirmed its participation in January 2025, announced after a meeting between Turkish Ambassador to Serbia Ilhan Saygili and Dušan Borovčanin, Director of EXPO 2027 d.o.o. Belgrade, where the two discussed showcasing Türkiye's cultural heritage, traditions and innovations at the event.",
+      "Per the organizer, Türkiye's presence is expected to feature dynamic presentations of Turkish music, traditional games, sports and contemporary achievements — including traditional dances such as Halay, Horon and Zeybek, traditional musical instruments, and appearances built around famous Turkish athletes and musicians — delivered through interactive content, performances and workshops. Pavilion design, size and budget have not been announced."
+    ],
+    "facts": [
+      { "label": "Expected showcase", "value": "Halay, Horon and Zeybek dances; Turkish music, games, sports; interactive workshops", "source": "https://www.expobelgrade2027.org/en/participants/turkey" },
+      { "label": "Status", "value": "Participation confirmed 11 Jan 2025", "source": "https://expobelgrade2027.org/en/participants" },
+      { "label": "Announced via", "value": "Ambassador Ilhan Saygili with Expo director Dušan Borovčanin", "source": "https://expobelgrade2027.org/news_60.php" },
+      { "label": "Size / budget", "value": "Not disclosed" }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "What will Türkiye show at Expo 2027 Belgrade?",
+      "answer": "Per the organizer, dynamic presentations of Turkish music, traditional games, sports and contemporary achievements — including the traditional dances Halay, Horon and Zeybek, traditional instruments, and appearances built around famous Turkish athletes and musicians — through interactive content, performances and workshops."
+    },
+    {
+      "question": "When did Türkiye confirm its participation?",
+      "answer": "On 11 January 2025, announced after a meeting between Turkish Ambassador to Serbia Ilhan Saygili and Expo director Dušan Borovčanin."
+    },
+    {
+      "question": "Is the Türkiye pavilion design public?",
+      "answer": "No — the pavilion's design, size and budget have not been announced as of mid-2026."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://expobelgrade2027.org/news_60.php", "note": "Confirmation announcement" },
+      { "url": "https://www.expobelgrade2027.org/en/participants/turkey", "note": "Organizer's Türkiye page" }
+    ]
+  },
+  "images": []
+}

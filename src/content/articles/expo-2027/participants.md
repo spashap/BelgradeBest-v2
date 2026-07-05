@@ -77,7 +77,7 @@ The exhibition is laid out in **three main zones**:
 - **The International Participant Area** — where the participating countries' national pavilions sit. This zone becomes the new permanent home of the Belgrade Fair and is described as housing the 130-plus national pavilions.
 - **The Best Practice and Corporate Area** — a showcase of real-world solutions (cities, companies and communities) rather than concepts, reported as around 45 modular timber pavilions arranged along the main promenade on a uniform 9×9-metre grid, with green roofs.
 
-The three zones are designed to interconnect for a seamless visitor route through the site. A handful of countries have signalled their pavilion plans, all of which should be read as announced intentions rather than finished designs:
+The three zones are designed to interconnect for a seamless visitor route through the site. A handful of countries have signalled their pavilion plans — we profile each one, fact by sourced fact, in our [pavilion directory](/expo-2027/pavilions) — all of which should be read as announced intentions rather than finished designs:
 
 - **Germany** launched a public tender for its temporary pavilion, reported at around €7.5 million, contributing under the sub-theme "Play for Progress."
 - **Italy** is reported by its foreign ministry and its ambassador to Serbia to be preparing one of the largest pavilions, focused on people — meeting Italian athletes, musicians, researchers and students — built on five principles.

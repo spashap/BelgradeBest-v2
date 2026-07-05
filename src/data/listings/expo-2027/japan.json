@@ -1,0 +1,68 @@
+{
+  "slug": "japan",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Japan Pavilion",
+  "shortName": "Japan",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "Japan brings one of the most fully developed pavilion programmes to Expo 2027 Belgrade: an official Basic Plan themed \"Play and Connect, Together — Playful Spirit of Japan\", a Kirie paper-cut logo, a signed participation contract, and two promotional ambassadors.",
+  "blocks": {
+    "about": [
+      "Japan's participation was endorsed by the Cabinet on 8 August 2025, with METI as lead ministry and JETRO as the implementing organization. The Japan Pavilion Basic Plan followed on 27 October 2025, drafted after three rounds of an expert planning committee. Its core idea: \"to play is to connect\" — with openness and flexibility expressed through the architecture and deliberate emotional room, \"especially in the form of humor\". The plan explicitly links the pavilion to the legacy of Expo 2025 Osaka.",
+      "In May 2026, one year before opening, Japan unveiled the pavilion's logo: a paper-cut floral motif cut from a single sheet in the Kirie tradition, by graphic designer Kobayashi Ikki — elements that appear separate but remain connected as one composition, symbolizing play that transcends divisions and language barriers. The participation contract was signed on 10 June 2026 at the Expo 2027 Playground in Belgrade by Commissioner Yoshimura Sachiko, witnessed by Serbian Trade Minister Lazar Radević and Ambassador Takahiro Tsutsumi.",
+      "Two promotional ambassadors front the pavilion: conductor Shimura Kenichi, Principal Guest Conductor of the Serbian Philharmonic Orchestra from 2026, and Nakajima Sachiko — musician, mathematician and STEAM educator, producer of the \"Jellyfish Pavilion\" at Expo 2025 Osaka. Pavilion size, design and budget have not been disclosed."
+    ],
+    "facts": [
+      { "label": "Theme", "value": "\"Play and Connect, Together — Playful Spirit of Japan\"", "source": "https://www.jetro.go.jp/en/news/releases/2025/f6f032bc5a50bb33.html" },
+      { "label": "Status", "value": "Basic Plan published 27 Oct 2025; participation contract signed 10 Jun 2026", "source": "https://www.jetro.go.jp/en/news/releases/2026/43d825be6a15425a.html" },
+      { "label": "Lead organisations", "value": "METI (lead ministry), MEXT (deputy), JETRO (implementing)", "source": "https://www.meti.go.jp/english/press/2025/0808_001.html" },
+      { "label": "Commissioner", "value": "Yoshimura Sachiko, Commissioner of the Japanese Section", "source": "https://www.jetro.go.jp/en/news/releases/2026/43d825be6a15425a.html" },
+      { "label": "Logo", "value": "Kirie (paper-cut) floral motif by Kobayashi Ikki, unveiled May 2026", "source": "https://www.meti.go.jp/english/press/2026/0515_002.html" },
+      { "label": "Ambassadors", "value": "Shimura Kenichi (conductor), Nakajima Sachiko (STEAM educator)", "source": "https://www.jetro.go.jp/en/news/releases/2026/43d825be6a15425a.html" },
+      { "label": "Size / budget", "value": "Not disclosed" }
+    ],
+    "quotes": [
+      {
+        "quote": "We hope that the Japan pavilion will be a place where diverse forms of Japanese 'play' allow visitors from Serbia and around the world to connect, meet new people, and make new discoveries.",
+        "who": "Yoshimura Sachiko, Commissioner of the Japanese Section",
+        "source": "https://www.jetro.go.jp/en/news/releases/2026/43d825be6a15425a.html"
+      },
+      {
+        "quote": "Everyone is allowed to be different. I am free to be myself. I hope Kirie serves as an opportunity for everyone to become friends.",
+        "who": "Kobayashi Ikki, Japan Pavilion logo designer",
+        "source": "https://www.jetro.go.jp/en/news/releases/2026/3841a441b1df614e.html"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the theme of the Japan Pavilion at Expo 2027?",
+      "answer": "\"Play and Connect, Together — Playful Spirit of Japan\", set by the Japan Pavilion Basic Plan of October 2025. Its core idea is that \"to play is to connect\", with openness and flexibility expressed through the architecture and deliberate emotional room, especially in the form of humor. The plan explicitly builds on the legacy of Expo 2025 Osaka."
+    },
+    {
+      "question": "What does the Japan Pavilion logo mean?",
+      "answer": "The logo, unveiled in May 2026, is a paper-cut floral motif cut from a single sheet in the Japanese Kirie tradition, designed by Kobayashi Ikki. Its elements appear separate but remain connected as one composition — symbolizing play that transcends divisions and language barriers."
+    },
+    {
+      "question": "Is the Japan Pavilion's design or size public yet?",
+      "answer": "No. As of mid-2026 the pavilion's size, architecture and budget have not been disclosed — the Basic Plan covers the theme and approach. Japan's participation contract was signed on 10 June 2026, so expect design details to follow."
+    },
+    {
+      "question": "Who represents Japan at Expo 2027 Belgrade?",
+      "answer": "Yoshimura Sachiko is Commissioner of the Japanese Section. Two promotional ambassadors were appointed: conductor Shimura Kenichi, Principal Guest Conductor of the Serbian Philharmonic from 2026, and Nakajima Sachiko, the musician, mathematician and STEAM educator who produced the \"Jellyfish Pavilion\" at Expo 2025 Osaka."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://www.meti.go.jp/english/press/2025/0808_001.html", "note": "Cabinet endorsement, ministry roles" },
+      { "url": "https://www.jetro.go.jp/en/news/releases/2025/f6f032bc5a50bb33.html", "note": "Japan Pavilion Basic Plan" },
+      { "url": "https://www.meti.go.jp/english/press/2026/0515_002.html", "note": "Logo unveiling" },
+      { "url": "https://www.jetro.go.jp/en/news/releases/2026/43d825be6a15425a.html", "note": "Contract signing + ambassadors" }
+    ]
+  },
+  "images": []
+}

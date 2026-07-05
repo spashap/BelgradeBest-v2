@@ -18,6 +18,7 @@ import {
   officialCount,
   updated,
 } from "../../lib/expo-participants";
+import { listingsIndexable } from "../../lib/listings";
 
 // The independent participant tracker — a citable data page (link magnet):
 // headline figures, growth timeline, and the full named-country table. Data
@@ -186,6 +187,12 @@ const schemas: object[] = [
     <p>
       Planning around the event? Start with the <a href="/expo-2027">Expo 2027 guide</a> — tickets,
       getting there, and <a href="/expo-2027/where-to-stay-for-expo">where to stay for the Expo</a>.
+      {listingsIndexable && (
+        <>
+          {" "}For country-by-country plans, see the{" "}
+          <a href="/expo-2027/pavilions">pavilion profiles</a>.
+        </>
+      )}
     </p>
   </Container>
 

@@ -1,0 +1,50 @@
+{
+  "slug": "united-states",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "USA Pavilion",
+  "shortName": "United States",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "The United States confirmed in May 2026 and moved fast: the State Department has already appointed Vita Motus to design the USA Pavilion and Trivandi USA to run operations, with a focus on American leadership in sports and music.",
+  "blocks": {
+    "about": [
+      "The United States formally confirmed its participation in May 2026, when Serbian President Aleksandar Vučić and U.S. Under Secretary of State for Public Diplomacy Sarah Rogers signed a bilateral participation agreement in Belgrade — making the US one of the later big confirmations, pushing the participant count past 137.",
+      "Weeks later, the State Department announced its delivery team: design studio Vita Motus leads the design of the USA Pavilion, and Trivandi USA leads operations and delivery. Trivandi comes directly from running operations for the USA Pavilion at Expo 2025 Osaka — which welcomed more than 1.8 million visitors — and is appointed for both Expo 2027 Belgrade and Expo 2030 Riyadh.",
+      "Per the State Department, the pavilion will demonstrate American leadership and excellence in sports and music, and position the United States as a premier economic partner in the Balkans and globally. Trivandi describes the Belgrade pavilion as focused on sport and entertainment, \"celebrating the United States' global leadership in those industries\"."
+    ],
+    "facts": [
+      { "label": "Focus", "value": "American leadership in sports and music; economic partnership", "source": "https://www.miragenews.com/state-dept-awards-contracts-for-usa-pavilion-at-1681305/" },
+      { "label": "Status", "value": "Bilateral agreement signed 11 May 2026; design/ops contracts awarded late May 2026", "source": "https://www.state.gov/releases/office-of-the-spokesperson/2026/05/u-s-department-of-state-awards-design-build-and-operations-contracts-for-the-usa-pavilion-at-expo-2027-in-belgrade-serbia/" },
+      { "label": "Design", "value": "Vita Motus", "source": "https://www.state.gov/releases/office-of-the-spokesperson/2026/05/u-s-department-of-state-awards-design-build-and-operations-contracts-for-the-usa-pavilion-at-expo-2027-in-belgrade-serbia/" },
+      { "label": "Operations", "value": "Trivandi USA (also ran USA Pavilion at Expo 2025 Osaka — 1.8M+ visitors)", "source": "https://www.trivandi.com/en/media/post/trivandi-appointed-as-operations-partner-for-usa-pavilions-at-expo-2027-belgrade-and-expo-2030-riyadh" },
+      { "label": "Size / budget", "value": "Not disclosed" }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "Is the United States participating in Expo 2027 Belgrade?",
+      "answer": "Yes. The US formally confirmed in May 2026, when Serbian President Aleksandar Vučić and US Under Secretary of State Sarah Rogers signed a bilateral participation agreement in Belgrade."
+    },
+    {
+      "question": "Who is designing and running the USA Pavilion?",
+      "answer": "The State Department appointed design studio Vita Motus to lead the pavilion's design and Trivandi USA to lead operations and delivery. Trivandi ran operations for the USA Pavilion at Expo 2025 Osaka, which welcomed more than 1.8 million visitors, and is appointed for both Belgrade 2027 and Riyadh 2030."
+    },
+    {
+      "question": "What will the USA Pavilion focus on?",
+      "answer": "Per the State Department, demonstrating American leadership and excellence in sports and music, and positioning the United States as a premier economic partner in the Balkans and globally. Design, size and budget have not been published yet."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://washington.mfa.gov.rs/en/press-service/announcements-and-notifications/united-states-confirms-participation-specialized-exhibition-expo-2027-belgrade", "note": "Participation agreement" },
+      { "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/05/u-s-department-of-state-awards-design-build-and-operations-contracts-for-the-usa-pavilion-at-expo-2027-in-belgrade-serbia/", "note": "State Dept contract awards" },
+      { "url": "https://www.trivandi.com/en/media/post/trivandi-appointed-as-operations-partner-for-usa-pavilions-at-expo-2027-belgrade-and-expo-2030-riyadh", "note": "Operations partner announcement" }
+    ]
+  },
+  "images": []
+}

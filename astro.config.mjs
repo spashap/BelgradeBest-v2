@@ -101,6 +101,38 @@ if (config.programmatic?.glossaryIndexable !== true) {
   NOINDEX.add("/glossary");
   for (const t of glossaryData.terms) NOINDEX.add(`/glossary/${t.slug}`);
 }
+// Claimable listings (Phase 1: /expo-2027/pavilions) — noindex-first behind
+// programmatic.listingsIndexable. Section segments mirror src/lib/listings.ts
+// SECTION (keep in sync). lastmod comes from each listing file's `updated`;
+// the hub inherits the newest one.
+const LISTING_SECTION = { "expo-2027": "pavilions" };
+const LISTINGS_INDEXABLE = config.programmatic?.listingsIndexable === true;
+for (const [leg, section] of Object.entries(LISTING_SECTION)) {
+  if (!LISTINGS_INDEXABLE) NOINDEX.add(`/${leg}/${section}`);
+}
+try {
+  const LISTINGS_DIR = "src/data/listings";
+  for (const leg of readdirSync(LISTINGS_DIR)) {
+    const legDir = join(LISTINGS_DIR, leg);
+    if (!statSync(legDir).isDirectory()) continue;
+    const hub = `/${leg}/${LISTING_SECTION[leg] ?? "places"}`;
+    const dates = [];
+    for (const file of readdirSync(legDir)) {
+      if (!file.endsWith(".json")) continue;
+      const j = JSON.parse(readFileSync(join(legDir, file), "utf8"));
+      const p = `${hub}/${j.slug ?? file.replace(/\.json$/, "")}`;
+      if (j.updated) {
+        LASTMOD[p] = iso(j.updated);
+        dates.push(LASTMOD[p]);
+      }
+      if (!LISTINGS_INDEXABLE) NOINDEX.add(p);
+    }
+    const m = maxDate(dates);
+    if (m) LASTMOD[hub] = m;
+  }
+} catch {
+  /* no listings yet */
+}
 
 const pathOf = (url) => new URL(url).pathname.replace(/\/$/, "");
 

@@ -1,0 +1,49 @@
+{
+  "slug": "austria",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Austria Pavilion",
+  "shortName": "Austria",
+  "status": "tender",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "Austria signed in April 2026 and is running an EU-wide two-stage tender for its pavilion — jointly financed by the economy ministry (75%) and the Austrian Economic Chamber (25%), with an unusually explicit business agenda in Serbia.",
+  "blocks": {
+    "about": [
+      "Austria signed its Expo 2027 participation agreement on 17 April 2026 — Government Commissioner Philipp Gady, Serbia's General Commissioner Jagoda Lazarević and Expo Director Danilo Jerinić were the signatories. Participation is jointly handled and financed by the Federal Ministry for Economy, Energy and Tourism (75%) and the Austrian Economic Chamber WKÖ (25%).",
+      "An EU-wide, two-stage procurement procedure is under way for the conception, design and implementation of Austria's contribution. The pavilion is planned to present Austrian innovation, creative diversity and economic strength, with a visitor experience emphasizing playfulness, creativity, openness and internationalism, complemented by an accompanying programme of business, tourism, sport and cultural events.",
+      "Austria frames its participation in openly economic terms: Serbia is one of its most important trade partners in Southeast Europe, with unused export potential the ministry puts at over €400 million through 2029. Austria is the third-largest foreign investor in Serbia, with more than 800 Austrian companies active in the country."
+    ],
+    "facts": [
+      { "label": "Concept", "value": "Innovation, creative diversity, economic strength — playful, open visitor experience", "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad" },
+      { "label": "Status", "value": "Agreement signed 17 Apr 2026; EU-wide two-stage tender running", "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad" },
+      { "label": "Commissioner", "value": "Philipp Gady, Government Commissioner", "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad" },
+      { "label": "Financing", "value": "75% Federal Ministry for Economy, Energy and Tourism / 25% WKÖ", "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad" },
+      { "label": "Economic context", "value": ">€400M unused export potential to 2029; 800+ Austrian companies in Serbia", "source": "https://www.bmwet.gv.at/Themen/International/EXPO/Expo-2027-Belgrad.html" }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "What will the Austria Pavilion present at Expo 2027?",
+      "answer": "Austrian innovation, creative diversity and economic strength, through a visitor experience emphasizing playfulness, creativity, openness and internationalism — complemented by an accompanying programme of business, tourism, sport and cultural events."
+    },
+    {
+      "question": "Who is paying for Austria's Expo 2027 pavilion?",
+      "answer": "Participation is jointly financed by the Federal Ministry for Economy, Energy and Tourism (75%) and the Austrian Economic Chamber WKÖ (25%). An EU-wide, two-stage tender for the concept, design and implementation is under way."
+    },
+    {
+      "question": "Why is Austria investing in Expo 2027 Belgrade?",
+      "answer": "The economy ministry frames it economically: Serbia is one of Austria's most important trade partners in Southeast Europe, with unused export potential put at over €400 million through 2029. Austria is the third-largest foreign investor in Serbia, with more than 800 Austrian companies active there."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://www.wko.at/oe/news/oesterreich-expo-belgrad", "note": "WKÖ: signing, tender, concept" },
+      { "url": "https://www.bmwet.gv.at/Themen/International/EXPO/Expo-2027-Belgrad.html", "note": "Ministry: financing and economic framing" }
+    ]
+  },
+  "images": []
+}
