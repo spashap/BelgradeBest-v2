@@ -11,11 +11,14 @@ Gatekeeper agencies matter because they hold the exhibitor lists. Categories
 
 Last full run: **2026-07-05** (32 prospects: 16 gatekeepers + 15 event-level
 companies + 1 container category; 9 verified public emails).
-Last external run: **2026-07-06** — owner-run Perplexity Deep Research
-(processed record: `research/2026-07-06-perplexity-prospects.md`; +7 prospects
-incl. the UAE Commissioner General, +Turkmenistan category). External research
-is a valid input channel: give the owner the runbook-based prompt, then VERIFY
-spot-checks before seeding (2 of 3 A-claims held; 1 source page had vanished).
+Last external run: **2026-07-06 ×2** — owner-run Perplexity Deep Research
+(records: `research/2026-07-06-perplexity-prospects.md` and
+`research/2026-07-06-perplexity-pavilions-batch2.md`). Batch 2 took profiles
+12 → **19** (+4 gatekeepers). External research is a valid input channel:
+give the owner the runbook prompt, VERIFY spot-checks, then **fan drafting
+out to Sonnet subagents and review at full quality** — the review pass caught
+real defects (stitched quotes, escaped URLs, wrong-source dates) every time,
+so never skip it.
 
 ---
 
@@ -151,6 +154,13 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
 - **Türkiye** proposal call closes **17 Aug 2026** → find the awarded organizer.
 - **Turkmenistan** pavilion design+construction tender closed 13 Apr 2026 →
   winner not yet public.
+- **Slovakia** architectural competition closed 14 May 2026 → winner not
+  public (Slovakia Travel; companies can register for the program since
+  mid-May 2026 — booth-list angle).
+- **South Korea** KOTRA exhibition-service tender (₩9bn) closed 29 Apr 2026 →
+  winner not public.
+- **BiH** contract signed 2–3 Jul 2026 → pavilion details to follow;
+  **North Macedonia** commissioner still unnamed.
 - **Germany**: Messe Düsseldorf sub-procurements (communication, catering,
   shop) on evergabe-online.de — not public yet / may need portal access.
 - **Serbia pavilion**: Architizer (C) names PowerChina Serbia as GC and ALEATEK

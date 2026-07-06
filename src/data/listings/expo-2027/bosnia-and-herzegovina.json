@@ -1,0 +1,54 @@
+{
+  "slug": "bosnia-and-herzegovina",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Bosnia and Herzegovina Pavilion",
+  "shortName": "Bosnia and Herzegovina",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "summary": "Bosnia and Herzegovina signed its Expo 2027 participation contract in Belgrade in early July 2026, with its booth pitched as a showcase for the country's business, tourism and cultural potential to an expected four million visitors.",
+  "blocks": {
+    "about": [
+      "Bosnia and Herzegovina signed its contract to take part in Expo 2027 Belgrade on 2–3 July 2026, at a ceremony held at the EXPO 2027 Playground. The signing brought together Serbia's Commissioner General Jagoda Lazarević, EXPO 2027 director Danilo Jerinić, and Staša Košarac, BiH's Minister of Foreign Trade and Economic Relations, who serves as the country's Commissioner General for Expo 2027.",
+      "Lazarević described the exhibition as a regional rather than purely Serbian project, pointing to an expected four million visitors that she said would benefit the wider region, not just Serbia. Košarac framed Expo 2027 as a development opportunity for BiH's economy, giving it a chance to connect with Serbia and with international partners among the roughly 140 expected participants. Officials said BiH's booth would be at an \"attractive location\" and would present the country's business, tourism and cultural potential, but the pavilion's design, size and detailed content have not been made public."
+    ],
+    "facts": [
+      { "label": "Status", "value": "Participation contract signed 2–3 July 2026 in Belgrade", "source": "https://www.tanjug.rs/english/economy/263654/contract-on-bosnia-and-herzegovinas-expo-2027-participation-signed-in-belgrade/vest" },
+      { "label": "Commissioner General (BiH)", "value": "Staša Košarac, Minister of Foreign Trade and Economic Relations", "source": "https://www.tanjug.rs/english/economy/263654/contract-on-bosnia-and-herzegovinas-expo-2027-participation-signed-in-belgrade/vest" },
+      { "label": "Planned focus", "value": "Business, tourism and cultural potential, at an \"attractive location\"", "source": "https://www.blic.rs/biznis/bosna-i-hercegovina-potpisala-ugovor-o-ucescu-na-specijalizovanoj-izlozbi-ekspo-2027/4r6j984" },
+      { "label": "Expected Expo scale", "value": "Around 4 million visitors and roughly 140 participants", "source": "https://www.blic.rs/biznis/bosna-i-hercegovina-potpisala-ugovor-o-ucescu-na-specijalizovanoj-izlozbi-ekspo-2027/4r6j984" },
+      { "label": "Pavilion design / size", "value": "Not disclosed" }
+    ],
+    "quotes": [
+      {
+        "quote": "EXPO is not only a Serbian project, but a regional project. We expect around four million visitors, and I am confident that the citizens of not only Serbia, but the whole region, will benefit from this event.",
+        "who": "Jagoda Lazarević, Serbia's Commissioner General for Expo 2027, at the BiH contract signing",
+        "source": "https://www.tanjug.rs/english/economy/263654/contract-on-bosnia-and-herzegovinas-expo-2027-participation-signed-in-belgrade/vest"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "When did Bosnia and Herzegovina sign its Expo 2027 contract?",
+      "answer": "On 2–3 July 2026, at a ceremony at the EXPO 2027 Playground in Belgrade, signed alongside Serbia's Commissioner General Jagoda Lazarević and EXPO 2027 director Danilo Jerinić."
+    },
+    {
+      "question": "Who leads Bosnia and Herzegovina's Expo 2027 participation?",
+      "answer": "Staša Košarac, BiH's Minister of Foreign Trade and Economic Relations, who serves as the country's Commissioner General for Expo 2027."
+    },
+    {
+      "question": "What will Bosnia and Herzegovina's pavilion show?",
+      "answer": "Officials say the booth will be at an \"attractive location\" and will showcase the country's business, tourism and cultural potential. Pavilion design, size and detailed content have not been published."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://www.tanjug.rs/english/economy/263654/contract-on-bosnia-and-herzegovinas-expo-2027-participation-signed-in-belgrade/vest", "note": "Contract signing, officials present, and Lazarević quote" },
+      { "url": "https://www.blic.rs/biznis/bosna-i-hercegovina-potpisala-ugovor-o-ucescu-na-specijalizovanoj-izlozbi-ekspo-2027/4r6j984", "note": "Košarac remarks on economic opportunity and Expo scale" }
+    ]
+  },
+  "images": []
+}

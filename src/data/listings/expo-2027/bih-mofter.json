@@ -1,0 +1,24 @@
+{
+  "slug": "bih-mofter",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "bosnia-and-herzegovina",
+  "name": "BiH Ministry of Foreign Trade and Economic Relations",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": "https://www.mvteo.gov.ba",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "Staša Košarac (Minister & Commissioner General)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Commissioner office for BiH's Expo 2027 section — contract signed 2-3 Jul 2026 (fresh!). Košarac frames the Expo as an economy-connecting opportunity — warm angle for the fact-check + exhibitor-pages email once a public email is found. Sources (B): tanjug.rs 263654, blic.rs."
+  }
+}

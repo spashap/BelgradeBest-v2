@@ -1,0 +1,75 @@
+{
+  "slug": "azerbaijan",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Azerbaijan Pavilion",
+  "shortName": "Azerbaijan",
+  "status": "concept-only",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "summary": "A World Expo veteran with award-winning pavilions from Milan to Dubai, Azerbaijan has confirmed its participation and plans to showcase traditional dance, music and games — though pavilion design, size and budget are not yet public.",
+  "blocks": {
+    "about": [
+      "Azerbaijan confirmed its participation in Expo 2027 Belgrade in April 2025, and arrives with one of the stronger World Expo track records among confirmed participants: award-winning pavilions at Expo 2015 Milan (\"Treasure of Biodiversity\"), Expo 2017 Astana (\"Land of Fire: Energy from Past to Future\"), Expo 2019 Beijing and Expo 2020 Dubai, according to the organizer's participant page.",
+      "Per the organizer's participant page, the expected showcase leans heavily on culture and tradition: dances including Nalbaki, Yalli, Terekeme, Uzundara and Qaval; games such as Zorkhana and the UNESCO-recognized Chovgan; strengths in wrestling, judo and chess; and music ranging from Mugham to contemporary jazz. The page describes Azerbaijan as \"a land where ancient traditions and modern achievements harmoniously coexist.\" It also frames the pavilion in the context of a Serbia-Azerbaijan strategic partnership declaration and joint action plan, positioning Expo 2027 as a further step in that relationship. Pavilion design, footprint, budget and the appointed commissioner general are not yet public — this profile will update once the organizer or Azerbaijan's own delegation releases those details."
+    ],
+    "facts": [
+      {
+        "label": "Participation confirmed",
+        "value": "5 April 2025",
+        "source": "https://belgradebest.com/expo-2027/tracker"
+      },
+      {
+        "label": "Prior World Expo pavilions",
+        "value": "Milan 2015, Astana 2017, Beijing 2019, Dubai 2020",
+        "source": "https://expobelgrade2027.org/en/participants/azerbaijan"
+      },
+      {
+        "label": "Expected showcase",
+        "value": "Traditional dance (Nalbaki, Yalli, Terekeme, Uzundara, Qaval), games (Zorkhana, Chovgan), Mugham-to-jazz music",
+        "source": "https://expobelgrade2027.org/en/participants/azerbaijan"
+      },
+      {
+        "label": "Bilateral context",
+        "value": "Framed around a Serbia-Azerbaijan strategic partnership declaration and joint action plan",
+        "source": "https://expobelgrade2027.org/en/participants/azerbaijan"
+      },
+      {
+        "label": "Pavilion design, size, budget, commissioner",
+        "value": "Not yet announced"
+      }
+    ],
+    "quotes": [
+      {
+        "quote": "A land where ancient traditions and modern achievements harmoniously coexist.",
+        "who": "Expo 2027 Belgrade organizer, Azerbaijan participant page",
+        "source": "https://expobelgrade2027.org/en/participants/azerbaijan"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Is Azerbaijan confirmed for Expo 2027 Belgrade?",
+      "answer": "Yes. Azerbaijan confirmed its participation in April 2025, and it brings notable World Expo experience, having built award-winning pavilions at Milan 2015, Astana 2017, Beijing 2019 and Dubai 2020."
+    },
+    {
+      "question": "What will Azerbaijan's pavilion showcase?",
+      "answer": "Per the organizer's participant page, expect a strong cultural program: traditional dances (Nalbaki, Yalli, Terekeme, Uzundara, Qaval), games including the UNESCO-recognized Chovgan and Zorkhana, wrestling, judo and chess, and music spanning Mugham to contemporary jazz."
+    },
+    {
+      "question": "Has Azerbaijan revealed pavilion design or budget details?",
+      "answer": "No. As of this writing, the pavilion's design, footprint, budget and appointed commissioner general have not been made public by the organizer or by Azerbaijan's delegation."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      {
+        "url": "https://expobelgrade2027.org/en/participants/azerbaijan",
+        "note": "Official Expo 2027 Belgrade organizer page for Azerbaijan"
+      }
+    ]
+  },
+  "images": []
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "israel-commissioner",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "israel",
+  "name": "State of Israel Section for Expo 2027 (Commissioner's office)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "Yahel Vilan (Commissioner, former Ambassador to Serbia)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Israel's section commissioner — agreement signed ~1 Feb 2026. Vilan is a former Ambassador to Serbia (backed the Expo bid) — likely reachable via the Israeli Embassy in Belgrade. No email published. Source (A): expobelgrade2027.org news."
+  }
+}

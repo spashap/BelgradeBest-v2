@@ -1,117 +1,43 @@
-Platform: /manage claim portal, CSV import, corporate-area page, OG cards,
-feeds + internal links, tracker-news playbook
+Pavilions batch 2: 12 -> 19 published profiles (+4 gatekeeper prospects)
 
-Seven items in the owner's chosen order (KB plan + CLAUDE.md updated).
+Processes the owner's second Perplexity Deep Research run using the
+token-economics pipeline: Fable triage -> verification spot-checks -> 7
+PARALLEL SONNET SUBAGENTS drafted the profile JSONs -> Fable review pass.
+Audit record: KB/platform/research/2026-07-06-perplexity-pavilions-batch2.md;
+runbook updated (last-run, watch list, and the Sonnet-fan-out pattern
+documented as standard practice — the review pass caught real defects:
+a stitched-together quote, HTML-escaped URLs, a wrong-source date).
 
-1) Internal links: expo articles now link the pavilion pages — participants.md
-   (country bullets -> profiles, +Germany/Italy facts refreshed), programme.md
-   (thematic-pavilion bullets -> Germany/Italy; new national-pavilions
-   paragraph), guide.md (participants section rewritten: 139 count, tracker +
-   pavilion links; FAQ count fixed). lastUpdated bumped on all three.
+Verified before drafting: KOTRA's KRW 9bn Korean-pavilion tender confirmed
+directly on kia.or.kr; Slovakia's first-participation-contract + M Pavilion
+confirmed on the organizer's official news.
 
-2) Feeds: /rss.xml now includes published pavilion/exhibitor profiles (gated
-   on listingsIndexable) sorted into the same 50-item stream; /llms.txt gains
-   an "Expo 2027 pavilions & data" section (tracker, directory, corporate
-   area, every published profile incl. children).
+7 new published pavilion profiles (all sourced, FAQPage-carrying):
+- Slovakia — the batch's richest: 648 m2 in Hall 6 over two floors, first
+  Participation Contract of the whole Expo (12 Nov 2025), architectural
+  competition (EUR 414k design / EUR 3.85M build estimates), concept
+  "Slovakia - A Playground of Opportunities".
+- South Korea — KOTRA KRW 9bn exhibition-service tender, negotiated-bid,
+  contract to 30 Nov 2027.
+- Bosnia and Herzegovina — contract signed 2-3 Jul 2026 (days old),
+  Commissioner Stasa Kosarac.
+- Israel — participation agreement ~1 Feb 2026, Commissioner Yahel Vilan.
+- Azerbaijan — World Expo veteran (Milan/Astana/Beijing/Dubai), culture-led
+  showcase per the organizer's page.
+- North Macedonia — "experiential tourism" narrative, concept-only.
+- Turkmenistan — upgraded from category stub to full profile (tender
+  re-announced, closed 13 Apr 2026, winner unknown); slug migrated
+  turkmenistan-pavilion -> turkmenistan, agency child repointed, stub deleted.
 
-3) New page /expo-2027/corporate-area — the only substantive public explainer
-   of the Best Practice & Corporate Area (~45 modular timber pavilions, 9x9 m
-   grid, Werner Sobek engineering; WEM as first named occupant; the two
-   documented routes in: organizer partnerships + PKS). Article + FAQPage +
-   Breadcrumb JSON-LD; linked from participants.md + pavilion hub; in
-   sitemap w/ hand-bumped lastmod.
+4 new gatekeeper prospects (unpublished, operator-only): Slovakia Travel
+(companies REGISTER for Slovakia's Expo program since mid-May 2026 —
+booth-list angle), KOTRA World Expo Team, BiH Ministry of Foreign Trade,
+Israel Section Commissioner office. Turkmenistan ministry notes enriched
+with published phone numbers.
 
-4) OG social cards: new scripts/gen-listing-og.mjs -> public/images/og/
-   (18 cards: every published listing + tracker/pavilions/corporate-area/
-   countdown/for-businesses). CROP-SAFE: all text center-anchored and sized to
-   survive a worst-case CENTER-SQUARE thumbnail crop (verified by cropping the
-   longest-title card to 630x630 and inspecting); overflow words merge (never
-   dropped) with auto font-shrink. Wired via new lib/og.ts (build-time
-   existsSync -> pageMetadata image) on ListingPage + the five fixed pages.
+Assets regenerated: 25 OG cards, 20 QR codes.
 
-5) Bulk CSV importer: importListings() in platform-store (quoted-field CSV
-   parser, optional header, per-row errors don't abort, existing slugs
-   skipped) + action=import on /api/admin/platform + paste-textarea block on
-   the admin category screen. Ready for exhibitor-list day.
-
-6) /manage business portal (Phase 2 core):
-   - Magic-link auth: issueManageToken()/revokeManageToken() (raw token shown
-     ONCE on an admin response page w/ copy button; sha256 stored in the
-     listing; rotate + revoke buttons per booth row), findByToken() +
-     constant-time tokenMatches().
-   - /manage edit page (server-rendered, X-Robots-Tag + meta noindex, kept out
-     of the sitemap via NOINDEX — the integration would otherwise list it):
-     summary/about/website form prefilled, up to 3 photos resized client-side
-     (canvas -> JPEG <=~700KB) into hidden base64 fields, friendly invalid-link
-     screen, saved/error states.
-   - /api/manage/save: re-verifies the token, sanitizes text (angle brackets
-     neutralized, length caps), commits photos as binary files (new
-     putBinary() in the shared store, sha-aware overwrites) then the listing
-     JSON (claimed=true, updated bumped), notifies the owner via new
-     lib/admin/notify.ts (Resend when RESEND_API_KEY/EMAIL_FROM set, console
-     fallback until then).
-   - validListing(): claimed listings publish on summary>=80 + about>=200
-     (facts stay required for editorial pages); og-script rule synced.
-     ListingPage renders a Photos gallery + "About X" heading for claimed
-     pages; the claimed disclaimer note already existed.
-   - CLAUDE.md: /manage + /api/manage/* + /api/listing-request added to the
-     sanctioned server-rendered surface.
-
-7) Docs: KB/platform/TRACKER-NEWS-PLAYBOOK.md — the announcement->update->
-   pitch cycle for earning tracker citations (24h cycle, pitch template,
-   hooks calendar, anti-mass-mail rules).
-
-8b) Card-thumb trimming fix (owner report: "Senjak & Dedinje", "Novi Beograd
-   (New Belgrade)" cut at the sides): the area/glossary SVG thumbs are shown
-   in .c-card__img with a 16:11 object-fit:cover crop — only the central
-   ~998px of the 1600px canvas is visible — but both generators sized titles
-   against a 1320px budget (assuming 16:9). gen-area-thumbs.mjs +
-   gen-glossary-thumbs.mjs now size EVERY text line (title, local-name,
-   subtitle, glossary eyebrow) against a 940px SAFE window via a shared
-   fitFont() helper; all 21 thumbs regenerated with --force and the two
-   offenders verified by rasterizing + cropping to the exact card window.
-
-8) OG crop-safety audit (owner report): inventoried every og:image in the
-   built site. Articles/hubs use photo heroes (safe); the 18 new cards were
-   already center-safe (re-verified Saudi Arabia + tracker via 630x630 center
-   crops); glossary/area thumbs already center-anchored (safe). The one real
-   offender: og-default.png (used by 29 pages: home, glossary, areas, utility)
-   was LEFT-aligned. gen-og-default.mjs rebuilt to the same center-anchored
-   crop-safe layout (all text within the center square; wordmark sized to
-   fit) and regenerated — square-crop verified.
-
-9) Partners page relaunched as THE landing page + widget showroom (owner:
-   "this is my window, my business card"):
-   - Widget concept shipped: BelgradeBest is the DATA SOURCE — widget scripts
-     are Astro endpoints with our data baked in at build, so every deploy
-     refreshes every embed on every partner site. No client fetches, no
-     cookies, no tracking; attribution link (target=_blank) is the license.
-   - Four Expo widgets: countdown (upgraded: color attrs + render API),
-     NEW participant counter (/widgets/expo-stats.js — official count, named
-     countries, continents, tracker-updated date), NEW quick-facts card
-     (/widgets/expo-facts.js — dates/site/distances/transit), NEW pavilion
-     spotlight (/widgets/expo-pavilion.js — data-country picks any published
-     profile). Shared generator lib/widget-js.ts (hex-sanitized data-bg/fg/
-     accent theming, esc/card/row helpers, window.<Global>.render for live
-     preview). All four syntax-checked with node --check.
-   - /for-businesses rebuilt as a landing page (new owner-sanctioned lp-*
-     chrome in globals.css): sticky section nav (Widgets · Who we are · What
-     we do · Badge & tools · Get listed · Contact), widget showroom with LIVE
-     previews + per-widget color pickers (+ country selector) that re-render
-     the preview AND rewrite the embed snippet in real time, SEO-targeted
-     copy per widget (keyword headings + descriptive paragraphs), "who we
-     are" authority section with real build-time stats (guides, 139 tracked,
-     93 named, pavilion profiles) + methodology links, condensed SEO-war +
-     get-listed + contact sections, and a 5-question widget FAQ with FAQPage
-     JSON-LD.
-
-Build verified: clean build, og:image wired on pavilion/tracker/corporate/
-for-businesses pages, corporate-area in sitemap, /manage OUT of sitemap,
-new og-default shipped, 4 widget scripts emitted with baked data (139/93 in
-stats, pavilion map populated) and node --check-clean, landing page renders
-nav + all four showroom blocks + FAQPage, function bundle still 115MB.
-
-Owner note: outreach sending starts after admin@belgradebest.com exists;
-portal + drafts + playbook are all ready for that moment.
+Build verified: 19 pavilion pages + WEM child prerendered, 21 pavilion URLs
+in the sitemap, 64 listing JSONs parse, zero contact leakage in public HTML.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

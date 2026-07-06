@@ -1,0 +1,76 @@
+---
+export const prerender = false;
+// Per-listing edit history + one-click restore. Every edit (admin, manage
+// portal, research seeding) is a commit — this screen lists them and restores
+// any prior version AS A NEW COMMIT (nothing is ever destroyed). GitHub mode
+// only; local dev shows a note.
+import AdminLayout from "../../../layouts/AdminLayout.astro";
+import { listingHistory, platformUsingGitHub } from "../../../lib/admin/platform-store";
+import { env } from "../../../lib/admin/env";
+
+const url = new URL(Astro.request.url);
+const leg = url.searchParams.get("leg") ?? "";
+const slug = url.searchParams.get("slug") ?? "";
+const ok = url.searchParams.get("ok");
+const error = url.searchParams.get("error");
+if (!/^[a-z0-9-]+$/.test(leg) || !/^[a-z0-9-]+$/.test(slug)) return Astro.redirect("/admin/platform");
+
+const gh = platformUsingGitHub();
+const history = gh ? await listingHistory(leg, slug) : [];
+const repo = env("GITHUB_REPO");
+const BACK = `/admin/platform/history?leg=${leg}&slug=${slug}`;
+---
+
+<AdminLayout title={`History — ${leg}/${slug}`}>
+  <p class="crumbs">
+    <a href="/admin/platform">Platform</a> › <a href={`/admin/platform/${leg}`}>{leg}</a> ›
+    <b>{slug} — history</b>
+  </p>
+
+  {ok ? <div class="ok">Restored — a new commit was created; the rebuild goes live in ~1 min.</div> : null}
+  {error ? <div class="err">{error}</div> : null}
+
+  <div class="panel">
+    {
+      !gh ? (
+        <p class="muted">
+          History/restore uses the GitHub API and works in production (GITHUB_TOKEN +
+          GITHUB_REPO). In local dev, use <span class="slug">git log -- src/data/listings/{leg}/{slug}.json</span>.
+        </p>
+      ) : history.length === 0 ? (
+        <p class="muted">No commits found for this listing.</p>
+      ) : (
+        <table>
+          <tr><th>when (UTC)</th><th>change</th><th>sha</th><th></th></tr>
+          {history.map((c, i) => (
+            <tr>
+              <td class="muted">{c.date}</td>
+              <td>{c.message}</td>
+              <td class="slug">
+                {repo ? <a href={`https://github.com/${repo}/commit/${c.sha}`} target="_blank" rel="noopener">{c.sha.slice(0, 7)}</a> : c.sha.slice(0, 7)}
+              </td>
+              <td>
+                {i === 0 ? (
+                  <span class="badge live">current</span>
+                ) : (
+                  <form method="post" action="/api/admin/platform" class="inline">
+                    <input type="hidden" name="action" value="restore" />
+                    <input type="hidden" name="leg" value={leg} />
+                    <input type="hidden" name="slug" value={slug} />
+                    <input type="hidden" name="ref" value={c.sha} />
+                    <input type="hidden" name="back" value={BACK} />
+                    <button class="ghost">restore this version</button>
+                  </form>
+                )}
+              </td>
+            </tr>
+          ))}
+        </table>
+      )
+    }
+    <p class="muted">
+      Restoring creates a NEW commit with the old content — the full history always survives.
+      Use it to undo a bad self-edit from the manage portal in one click.
+    </p>
+  </div>
+</AdminLayout>

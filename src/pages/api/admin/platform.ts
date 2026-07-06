@@ -55,6 +55,11 @@ a{color:var(--accent)}button{background:var(--accent);color:#fff;border:0;border
 <p><a href="${back.startsWith("/admin/platform") ? back : "/admin/platform"}">← back</a></p></body></html>`;
       return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8" } });
     }
+    if (form.get("action") === "restore") {
+      const { restoreListingVersion } = await import("../../../lib/admin/platform-store");
+      await restoreListingVersion(leg, slug, String(form.get("ref") ?? ""));
+      return redirect(`${safeBack}?ok=1`);
+    }
     if (form.get("action") === "revoke-token") {
       await revokeManageToken(leg, slug);
       return redirect(`${safeBack}?ok=token+revoked`);

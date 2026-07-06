@@ -1,0 +1,77 @@
+{
+  "slug": "turkmenistan",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Turkmenistan Pavilion",
+  "shortName": "Turkmenistan",
+  "status": "tender",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "summary": "Turkmenistan's participation in Expo 2027 Belgrade was approved by President Serdar Berdimuhamedov in March 2026, but who will design and build its pavilion is not yet public after the government's construction tender was re-announced.",
+  "blocks": {
+    "about": [
+      "Turkmenistan's presence at Expo 2027 was approved at a Cabinet meeting chaired by President Serdar Berdimuhamedov, with the government stating the country will present its national achievements at the Belgrade exposition. The announcement, carried by the state news portal in March 2026, confirms participation but does not describe a pavilion concept, size or budget.",
+      "The Ministry of Trade and Foreign Economic Relations has since re-announced an international tender for the design and construction of Turkmenistan's national pavilion, with applications due by 13 April 2026. Tender documents were available at the Ministry's office at 52 Archabil Avenue in Ashgabat. That the tender was re-opened rather than awarded suggests the first round did not produce a winning bid, though this is our inference from the re-announcement rather than a stated fact. As of this writing, no winning contractor, design, footprint or budget has been made public."
+    ],
+    "facts": [
+      {
+        "label": "Participation status",
+        "value": "Approved by Cabinet decision, March 2026",
+        "source": "https://turkmenistan.gov.tm/en/post/104177/turkmenistan-will-present-its-achievements-expo-2027-belgrade"
+      },
+      {
+        "label": "Pavilion tender",
+        "value": "Re-announced internationally; applications closed 13 April 2026, 18:00",
+        "source": "https://business.com.tm/post/15309/turkmenistan-invites-companies-to-build-national-pavilion-for-expo-2027"
+      },
+      {
+        "label": "Tender documentation office",
+        "value": "52 Archabil Avenue, Ashgabat",
+        "source": "https://turkmenportal.com/en/news/99778-turkmenistan-has-reopened-the-tender-for-the-construction-of-a-pavilion-for-the-world-expo-2027"
+      },
+      {
+        "label": "Pavilion design, size and budget",
+        "value": "Not publicly disclosed as of this writing",
+        "source": "https://business.com.tm/info/7931/ministry-of-trade-and-foreign-economic-relations-reannounces-international-tender-for-construction-of-national-pavilion-at-expo-2027"
+      }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "Is Turkmenistan confirmed to participate in Expo 2027 Belgrade?",
+      "answer": "Yes. Turkmenistan's participation was approved at a Cabinet meeting chaired by President Serdar Berdimuhamedov in March 2026, with the government stating it will present its national achievements at the exposition."
+    },
+    {
+      "question": "Who is building Turkmenistan's pavilion, and what will it look like?",
+      "answer": "This is not public. The Ministry of Trade and Foreign Economic Relations re-announced an international tender for the pavilion's design and construction, with applications closing 13 April 2026, but no winning bidder, design or floor plan has been announced."
+    },
+    {
+      "question": "Why was the pavilion tender re-announced?",
+      "answer": "The government has not stated a reason. The re-announcement of an international tender, rather than an award, suggests the initial round did not produce a selected contractor — this is an inference based on the re-opening, not a confirmed fact."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      {
+        "url": "https://turkmenistan.gov.tm/en/post/104177/turkmenistan-will-present-its-achievements-expo-2027-belgrade",
+        "note": "State news portal: Cabinet approval of Turkmenistan's Expo 2027 participation, 2026-03-13"
+      },
+      {
+        "url": "https://business.com.tm/post/15309/turkmenistan-invites-companies-to-build-national-pavilion-for-expo-2027",
+        "note": "Business.com.tm: international tender invitation for pavilion design/construction"
+      },
+      {
+        "url": "https://business.com.tm/info/7931/ministry-of-trade-and-foreign-economic-relations-reannounces-international-tender-for-construction-of-national-pavilion-at-expo-2027",
+        "note": "Ministry notice: re-announcement of the pavilion construction tender"
+      },
+      {
+        "url": "https://turkmenportal.com/en/news/99778-turkmenistan-has-reopened-the-tender-for-the-construction-of-a-pavilion-for-the-world-expo-2027",
+        "note": "Turkmenportal: tender documentation location and contact details"
+      }
+    ]
+  },
+  "images": []
+}

@@ -1,0 +1,107 @@
+{
+  "slug": "slovakia",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Slovakia Pavilion",
+  "shortName": "Slovakia",
+  "status": "tender",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "summary": "Slovakia was the first country to sign a Participation Contract for Expo 2027, securing a 648 m² 'M Pavilion' in Hall 6 built around a 'Living Playground' concept, with the architectural competition now closed and a winner not yet announced.",
+  "blocks": {
+    "about": [
+      "Slovakia signed the first Participation Contract of the entire Expo 2027 on 12 November 2025, at the EXPO 2027 Playground. The contract was signed by Danilo Jerinić, director of organizer EXPO 2027 d.o.o., Serbia's Commissioner General Jagoda Lazarević, and Slovakia's Commissioner General Lukáš Parízek, and assigns Slovakia a medium-category 'M Pavilion' space.",
+      "That space is Hall 6 of the Expo site: 648 m² spread over two above-ground floors. National tourism organization Slovakia Travel ran an architectural design competition, verified by the Slovak Chamber of Architects, with submissions due via e-procurement by 14 May 2026. The competition brief estimated roughly €414,000 excluding VAT for the design services themselves, and around €3.85 million excluding VAT for the subsequent construction works — figures that are estimates from the tender documents, not a final build cost.",
+      "The pavilion's public concept, presented alongside the competition, is 'Slovakia – A Playground of Opportunities,' with the slogan 'Where Game Turns into Opportunity.' Since mid-May 2026, Slovak companies have been able to register to take part in the country's Expo 2027 program. The winning design has not yet been made public."
+    ],
+    "facts": [
+      {
+        "label": "Participation Contract signed",
+        "value": "12 Nov 2025 — the first such contract signed for Expo 2027",
+        "source": "https://expobelgrade2027.org/en/news/participation-contract-with-slovakia-signed-a-new-chapter-in-serbianslovak-cooperation"
+      },
+      {
+        "label": "Pavilion location and size",
+        "value": "Hall 6 of the Expo site; 648 m² over two above-ground floors ('M Pavilion' category)",
+        "source": "https://www.tasr.sk/tasr-clanok/TASR:2026041100000159"
+      },
+      {
+        "label": "Design competition deadline",
+        "value": "Submissions due 14 May 2026 via e-procurement; competition verified by the Slovak Chamber of Architects",
+        "source": "https://www.tasr.sk/tasr-clanok/TASR:2026041100000159"
+      },
+      {
+        "label": "Estimated design services budget",
+        "value": "Approx. €414,000 excluding VAT",
+        "source": "https://www.eurobrew.sk/en/aktuality_d.php?id=6520&page=0"
+      },
+      {
+        "label": "Estimated construction budget",
+        "value": "Approx. €3.85 million excluding VAT",
+        "source": "https://www.eurobrew.sk/en/aktuality_d.php?id=6520&page=0"
+      },
+      {
+        "label": "Pavilion concept",
+        "value": "'Slovakia – A Playground of Opportunities,' slogan 'Where Game Turns into Opportunity'",
+        "source": "https://www.tasr.sk/tasr-clanok/TASR:2026061900000084"
+      }
+    ],
+    "quotes": [
+      {
+        "quote": "the first step towards creating a pavilion that will not only be visually attractive, but also a strong story about Slovakia as a country of opportunities",
+        "who": "Lukáš Parízek, Slovakia's Commissioner General for Expo 2027, on the architectural contest",
+        "source": "https://www.tasr.sk/tasr-clanok/TASR:2026041100000159"
+      },
+      {
+        "quote": "Our ambition is to present Slovakia as a modern and self-confident country that can address the world not only with content but also with form. The pavilion will be a key element of this presentation.",
+        "who": "Matej Fekete, director of Slovakia Travel",
+        "source": "https://www.eurobrew.sk/en/aktuality_d.php?id=6520&page=0"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Has Slovakia confirmed its participation in Expo 2027?",
+      "answer": "Yes. Slovakia signed the first Participation Contract of the whole Expo, on 12 November 2025, with Slovakia's Commissioner General Lukáš Parízek and EXPO 2027 d.o.o. director Danilo Jerinić among the signatories."
+    },
+    {
+      "question": "How big is the Slovak pavilion and where is it?",
+      "answer": "It occupies Hall 6 of the Expo site, with 648 m² of space over two above-ground floors, classed as a medium 'M Pavilion.'"
+    },
+    {
+      "question": "Who designed the Slovak pavilion?",
+      "answer": "That isn't public yet. Slovakia Travel ran an architectural design competition (verified by the Slovak Chamber of Architects) with submissions due 14 May 2026, but a winning design has not been announced."
+    },
+    {
+      "question": "What is the theme of Slovakia's pavilion?",
+      "answer": "The public concept is 'Slovakia – A Playground of Opportunities,' under the slogan 'Where Game Turns into Opportunity.' Since mid-May 2026, Slovak companies can register to take part in the country's Expo 2027 program."
+    },
+    {
+      "question": "How much will the pavilion cost?",
+      "answer": "Tender documents estimated roughly €414,000 excluding VAT for design services and about €3.85 million excluding VAT for construction — estimates from the competition brief, not a confirmed final cost."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      {
+        "url": "https://expobelgrade2027.org/en/news/participation-contract-with-slovakia-signed-a-new-chapter-in-serbianslovak-cooperation",
+        "note": "Official Expo 2027 organizer news: Participation Contract signing, 12 Nov 2025"
+      },
+      {
+        "url": "https://www.tasr.sk/tasr-clanok/TASR:2026041100000159",
+        "note": "TASR: architectural competition launch, pavilion size, competition rules"
+      },
+      {
+        "url": "https://www.eurobrew.sk/en/aktuality_d.php?id=6520&page=0",
+        "note": "Eurobrew: competition budget estimates and Slovakia Travel director quote"
+      },
+      {
+        "url": "https://www.tasr.sk/tasr-clanok/TASR:2026061900000084",
+        "note": "TASR: pavilion concept and slogan, Slovak company registration"
+      }
+    ]
+  },
+  "images": []
+}

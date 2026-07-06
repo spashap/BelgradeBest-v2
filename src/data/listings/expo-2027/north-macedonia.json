@@ -1,0 +1,47 @@
+{
+  "slug": "north-macedonia",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "North Macedonia Pavilion",
+  "shortName": "North Macedonia",
+  "status": "concept-only",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "summary": "North Macedonia confirmed its participation in August 2025 with a stated focus on 'experiential tourism' — natural landmarks like Lake Ohrid and Matka Canyon, ancient archaeology and traditional crafts — though no pavilion design or commissioner has been named.",
+  "blocks": {
+    "about": [
+      "North Macedonia confirmed its participation on 22 August 2025, joining what was then 119 confirmed countries at Expo 2027 Belgrade, per the organizer's announcement.",
+      "A Serbia Business profile published the same day describes the intended narrative as 'experiential tourism' — affordable, safe and welcoming travel, with households offering traditional cuisine and crafts and visitors engaging directly with traditional trades and skills. The profile highlights likely pavilion content drawn from the country's natural assets (Matka Canyon, Lake Ohrid and its biosphere reserve), archaeology (more than 4,700 sites, including the Kokino observatory and the ancient city of Stobi), religious landmarks, musical and dance traditions, and gastronomy, with the stated aim of offering visitors an immersive experience engaging all the senses. Pavilion design, size, budget and the implementing organization or commissioner have not been made public."
+    ],
+    "facts": [
+      { "label": "Status", "value": "Participation confirmed 22 Aug 2025", "source": "https://expobelgrade2027.org/en/news/north-macedonia-confirmed-participation-in-expo-2027-belgrade" },
+      { "label": "Stated theme", "value": "\"Experiential tourism\" — traditional cuisine, crafts and trades", "source": "https://serbia-business.eu/north-macedonia-confirms-participation-in-expo-2027-belgrade-showcasing-natural-beauty-culture-and-heritage/" },
+      { "label": "Expected showcase", "value": "Matka Canyon, Lake Ohrid, Kokino observatory, Stobi, religious sites, music and dance, gastronomy", "source": "https://serbia-business.eu/north-macedonia-confirms-participation-in-expo-2027-belgrade-showcasing-natural-beauty-culture-and-heritage/" },
+      { "label": "Design / commissioner", "value": "Not disclosed" }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "What will North Macedonia show at Expo 2027 Belgrade?",
+      "answer": "No pavilion design has been published. A Serbia Business profile describes an intended focus on 'experiential tourism' drawing on natural landmarks (Matka Canyon, Lake Ohrid), archaeology (the Kokino observatory, the ancient city of Stobi, and 4,700-plus recorded sites), religious landmarks, musical and dance traditions, and gastronomy."
+    },
+    {
+      "question": "When did North Macedonia confirm its participation?",
+      "answer": "On 22 August 2025, per the Expo 2027 Belgrade organizer's news announcement, joining what was then 119 confirmed countries."
+    },
+    {
+      "question": "Is the North Macedonia pavilion design public?",
+      "answer": "No — pavilion design, size, budget and the implementing organization or commissioner have not been announced as of mid-2026."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://expobelgrade2027.org/en/news/north-macedonia-confirmed-participation-in-expo-2027-belgrade", "note": "Organizer's confirmation announcement" },
+      { "url": "https://serbia-business.eu/north-macedonia-confirms-participation-in-expo-2027-belgrade-showcasing-natural-beauty-culture-and-heritage/", "note": "Serbia Business profile of the intended narrative" }
+    ]
+  },
+  "images": []
+}

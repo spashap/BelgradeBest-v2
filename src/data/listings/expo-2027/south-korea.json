@@ -1,0 +1,74 @@
+{
+  "slug": "south-korea",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "South Korea Pavilion",
+  "shortName": "South Korea",
+  "status": "tender",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "summary": "South Korea is tendering its Expo 2027 Belgrade pavilion through KOTRA at a budget of 9,000,000,000 KRW (roughly €5.6 million), with bids due 29 April 2026 and a contract running through 30 November 2027.",
+  "blocks": {
+    "about": [
+      "South Korea is preparing its presence at Expo 2027 Belgrade through a tender run by KOTRA (Korea Trade-Investment Promotion Agency), the state trade body whose World Expo team put out a call for the \"2027 Belgrade Expo Korean Pavilion Exhibition Service,\" per the Korean Architects Association (KIA) notice. The tendered budget is 9,000,000,000 KRW (roughly €5.6 million at current rates), covering a comprehensive exhibition-service scope: architectural design, interior construction, video production and industrial design are all within the bid's remit, and eligible bidders include registered architectural offices, interior construction firms, video production companies and industrial design firms.",
+      "Bids were due 29 April 2026 at 12:00, submitted through Korea's Nara Market e-procurement portal, with the winning bidder to be chosen by negotiated bid rather than lowest price — a selection method Korean public tenders use when design and technical quality are weighted alongside cost. The resulting contract is structured as a phased, long-term agreement running from commencement through 30 November 2027, spanning the exposition's operating period. As of this writing, the pavilion's theme, design and the winning bidder have not been made public."
+    ],
+    "facts": [
+      {
+        "label": "Tendered budget",
+        "value": "9,000,000,000 KRW (roughly €5.6 million)",
+        "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+      },
+      {
+        "label": "Bid deadline",
+        "value": "29 April 2026, 12:00, via Korea's Nara Market e-procurement portal",
+        "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+      },
+      {
+        "label": "Contract term",
+        "value": "From commencement through 30 November 2027",
+        "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+      },
+      {
+        "label": "Selection method",
+        "value": "Negotiated bid (not lowest-price)",
+        "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+      },
+      {
+        "label": "Implementing agency",
+        "value": "KOTRA (Korea Trade-Investment Promotion Agency), World Expo team",
+        "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+      }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "Who is organizing South Korea's pavilion at Expo 2027 Belgrade?",
+      "answer": "KOTRA (Korea Trade-Investment Promotion Agency), through its World Expo team, put out the tender for the \"2027 Belgrade Expo Korean Pavilion Exhibition Service,\" per the Korean Architects Association's published notice."
+    },
+    {
+      "question": "What is the budget for South Korea's Expo 2027 pavilion?",
+      "answer": "The tendered budget is 9,000,000,000 KRW, roughly €5.6 million at current exchange rates, per the Korean Architects Association's tender notice."
+    },
+    {
+      "question": "What will South Korea's pavilion look like or be themed around?",
+      "answer": "Not yet public. The tender covers exhibition-service scope (architecture, interior construction, video production, industrial design), but the theme, design and the winning bidder have not been announced as of this writing."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      {
+        "url": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8",
+        "note": "Korean Architects Association (KIA) tender notice for the 2027 Belgrade Expo Korean Pavilion Exhibition Service — verified 2026-07-06"
+      },
+      {
+        "url": "https://tenderimpulse.com/government-tenders/korea/2027-belgrade-expo-korean-pavilion-exhibition-service-11982098",
+        "note": "Corroborating tender aggregator listing"
+      }
+    ]
+  },
+  "images": []
+}

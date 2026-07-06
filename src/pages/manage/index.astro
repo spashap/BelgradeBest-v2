@@ -10,7 +10,7 @@ import Container from "../../components/Container.astro";
 import SectionHead from "../../components/SectionHead.astro";
 import Note from "../../components/Note.astro";
 import { pageMetadata } from "../../lib/metadata";
-import { listingHref } from "../../lib/listings";
+import { listingHref, validListing } from "../../lib/listings";
 import { findByToken } from "../../lib/admin/platform-store";
 
 Astro.response.headers.set("X-Robots-Tag", "noindex, nofollow");
@@ -111,6 +111,25 @@ const liveUrl = listing ? listingHref(listing) : "";
           site republishes automatically. We're notified of every change and can help if
           anything looks wrong — nothing you do here is irreversible.
         </Note>
+
+        {validListing(listing) && (
+          <>
+            <SectionHead title="Your tools" />
+            <ul>
+              <li>
+                <strong>Your page:</strong> <a href={liveUrl} target="_blank" rel="noopener">belgradebest.com{liveUrl}</a>{" "}
+                — use it as the website link on your Google Business Profile.
+              </li>
+              <li>
+                <strong>Your QR code:</strong>{" "}
+                <a href={`/images/qr/${listing.leg}--${listing.slug}.svg`} target="_blank" rel="noopener" download>
+                  download (SVG)
+                </a>{" "}
+                — print it on menus, flyers or stickers; it opens your page.
+              </li>
+            </ul>
+          </>
+        )}
       </>
     )}
   </Container>

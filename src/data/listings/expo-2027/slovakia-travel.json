@@ -1,0 +1,24 @@
+{
+  "slug": "slovakia-travel",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "slovakia",
+  "name": "Slovakia Travel",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": "https://slovakia.travel",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "Matej Fekete (director); Lukáš Parízek (Commissioner General)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "National tourism org running Slovakia's pavilion program: architectural competition closed 14 May 2026 (winner not public — WATCH); Slovak companies can register for the Expo 2027 program since mid-May 2026 — ask for the registration route + company list angle. No email published in coverage. Sources (B): tasr.sk TASR:2026041100000159 + TASR:2026061900000084."
+  }
+}

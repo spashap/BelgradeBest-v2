@@ -143,6 +143,52 @@ export async function createListing(input: NewListing): Promise<string> {
   return slug;
 }
 
+// ── Listing history & revert (GitHub mode) ───────────────────────────────────
+// Every edit is a commit, so history/rollback come free from the GitHub API.
+// Local dev has no wrapper here — the UI shows a GitHub-mode note instead.
+import { env } from "./env";
+
+type GhCommit = { sha: string; date: string; message: string };
+
+async function gh(pathAndQuery: string): Promise<unknown> {
+  const res = await fetch(`https://api.github.com/repos/${env("GITHUB_REPO")}/${pathAndQuery}`, {
+    headers: {
+      Authorization: `Bearer ${env("GITHUB_TOKEN")}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "belgradebest-v2-admin",
+    },
+  });
+  if (!res.ok) throw new Error(`GitHub ${pathAndQuery} failed: ${res.status}`);
+  return res.json();
+}
+
+export async function listingHistory(leg: string, slug: string): Promise<GhCommit[]> {
+  if (!usingGitHub()) return [];
+  const rel = `${DIR}/${leg}/${slug}.json`;
+  const branch = env("GITHUB_BRANCH") || "main";
+  const commits = (await gh(`commits?path=${encodeURIComponent(rel)}&sha=${branch}&per_page=20`)) as {
+    sha: string;
+    commit: { message: string; committer?: { date?: string }; author?: { date?: string } };
+  }[];
+  return commits.map((c) => ({
+    sha: c.sha,
+    date: (c.commit.committer?.date ?? c.commit.author?.date ?? "").slice(0, 16).replace("T", " "),
+    message: c.commit.message.split("\n")[0].slice(0, 100),
+  }));
+}
+
+// Restore = read the file as it was at `ref`, write it as a NEW commit (the
+// history keeps everything; nothing is destroyed).
+export async function restoreListingVersion(leg: string, slug: string, ref: string): Promise<void> {
+  if (!usingGitHub()) throw new Error("restore needs GitHub mode (prod)");
+  if (!/^[a-f0-9]{7,40}$/.test(ref)) throw new Error("bad ref");
+  const rel = `${DIR}/${leg}/${slug}.json`;
+  const at = (await gh(`contents/${rel}?ref=${ref}`)) as { content: string };
+  const oldText = Buffer.from(at.content, "base64").toString("utf8");
+  const { sha } = await getFile(rel);
+  await putFile(rel, oldText, `admin(platform): restore ${leg}/${slug} to ${ref.slice(0, 7)}`, sha);
+}
+
 // ── Manage-portal tokens & self-serve saves ──────────────────────────────────
 // Magic-link auth: the RAW token exists only in the emailed link; the listing
 // stores its sha256. Issue rotates (old links die); revoke clears.

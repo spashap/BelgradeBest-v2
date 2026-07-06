@@ -1,0 +1,21 @@
+{
+  "slug": "kotra",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "south-korea",
+  "name": "KOTRA — World Expo Team",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": "https://www.kotra.or.kr",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Korea Trade-Investment Promotion Agency; its World Expo team tendered the Korean Pavilion Exhibition Service (KRW 9bn, bids closed 29 Apr 2026 — winner not public, WATCH). KOTRA also organizes Korean company participation — prime booth-list gatekeeper. No email published; tender ran via Nara Market. Source (A, verified): kia.or.kr notice 19682."
+  }
+}

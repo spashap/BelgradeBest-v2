@@ -1,0 +1,64 @@
+{
+  "slug": "israel",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Israel Pavilion",
+  "shortName": "Israel",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "summary": "Israel signed its Expo 2027 Belgrade participation agreement in early February 2026, becoming an official participant under BIE rules, though no details on its pavilion's theme, design or size have been made public yet.",
+  "blocks": {
+    "about": [
+      "Israel formalised its place at Expo 2027 Belgrade when the Agreement on the Participation of the State of Israel was signed around 1 February 2026 by Expo 2027 Commissioner General Jagoda Lazarević and Yahel Vilan, Commissioner of the State of Israel Section for Expo 2027 Belgrade. Vilan is a former Israeli Ambassador to Serbia, and the organiser's news release notes he backed Serbia's Expo bid while serving in that role.",
+      "The agreement sets out Israel's mode of participation and starts the operational steps that come with being an official participant under BIE rules and the 1928 Paris Convention. At the signing, Lazarević said she believes Israel \"will present in its pavilion everything it is widely recognised for\", while Vilan called Israel's participation \"an exceptional opportunity for Serbia\" and said he is confident Israel will help make Expo 2027 \"among the very best\" international exhibitions. As of this writing, Israel's pavilion theme, architectural design and floor size have not been announced publicly — this page will be updated once the organiser or Israel's section releases those details."
+    ],
+    "facts": [
+      {
+        "label": "Participation status",
+        "value": "Official participant — agreement signed",
+        "source": "https://expobelgrade2027.org/en/news/the-state-of-israel-signs-expo-2027-participation-agreement"
+      },
+      {
+        "label": "Agreement signed",
+        "value": "Around 1 February 2026",
+        "source": "https://expobelgrade2027.org/en/news/the-state-of-israel-signs-expo-2027-participation-agreement"
+      },
+      {
+        "label": "Signed for Israel by",
+        "value": "Yahel Vilan, Commissioner, State of Israel Section for Expo 2027 Belgrade (former Ambassador to Serbia)",
+        "source": "https://expobelgrade2027.org/en/news/the-state-of-israel-signs-expo-2027-participation-agreement"
+      },
+      {
+        "label": "Pavilion theme / design / size",
+        "value": "Not yet publicly announced"
+      }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "Has Israel confirmed it is taking part in Expo 2027 Belgrade?",
+      "answer": "Yes. Israel signed its official Agreement on the Participation of the State of Israel around 1 February 2026, making it a confirmed participant under BIE rules."
+    },
+    {
+      "question": "Who signed the agreement on Israel's behalf?",
+      "answer": "Yahel Vilan, Commissioner of the State of Israel Section for Expo 2027 Belgrade and a former Israeli Ambassador to Serbia, signed alongside Expo 2027 Commissioner General Jagoda Lazarević."
+    },
+    {
+      "question": "What will Israel's pavilion look like or focus on?",
+      "answer": "That has not been made public. The signed agreement covers Israel's formal mode of participation, not pavilion theme, design or size — those details are expected to follow in a later announcement."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      {
+        "url": "https://expobelgrade2027.org/en/news/the-state-of-israel-signs-expo-2027-participation-agreement",
+        "note": "Official Expo 2027 Belgrade news release announcing Israel's signed participation agreement"
+      }
+    ]
+  },
+  "images": []
+}
