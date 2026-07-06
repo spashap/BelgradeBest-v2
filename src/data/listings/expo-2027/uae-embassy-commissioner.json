@@ -1,0 +1,24 @@
+{
+  "slug": "uae-embassy-commissioner",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "united-arab-emirates",
+  "name": "UAE Embassy in Belgrade — Commissioner General's office",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": "https://www.mofa.gov.ae/en/missions/belgrade",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "H.E. Ahmed Hatem Almenhali (Ambassador & Commissioner General)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "FILLS THE UAE GAP: MOFA officially names Ambassador Ahmed Hatem Almenhali as Commissioner General of the UAE for Expo 2027 Belgrade (VERIFIED A on mofa.gov.ae 2026-07-06; note earlier press spelling 'Ahmed Barghash Al Menhali' — MOFA spelling wins). No email published; embassy contact routes via mofa.gov.ae/en/missions/belgrade."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "belgrade-fair",
+  "leg": "expo-2027",
+  "type": "supplier",
+  "parent": "partners-and-suppliers",
+  "name": "Belgrade Fair (Beogradski sajam)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Won the rental procurement for the pre-Expo SHOWROOM (Hall 5); EXPO 2027 d.o.o. then tendered showroom design/build there. Venue contact for demo/promo presence. Source (B): ekapija.com/en/news/5017620"
+  }
+}

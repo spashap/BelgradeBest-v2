@@ -1,29 +1,48 @@
-Fix Vercel deploy: serverless function 292MB -> 115MB (250MB limit)
+Prospects: process 2026-07-06 Perplexity deep-research run (+7, UAE gap filled)
 
-The deploy failed with: function "_render" 292MB uncompressed > 250MB limit.
+Owner ran the runbook's external-research prompt on Perplexity Deep Research;
+results verified by spot-check and processed per
+KB/platform/PROSPECT-RESEARCH-RUNBOOK.md. Audit record:
+KB/platform/research/2026-07-06-perplexity-prospects.md.
 
-Diagnosis (from the locally produced .vercel/output): the admin store reads
-repo files with DYNAMIC paths (join(process.cwd(), rel) in
-lib/admin/store.ts getFile/listDir — the pattern the new platform module
-leans on), which makes Vercel's file tracer (@vercel/nft) fall back to
-including the ENTIRE working directory in the function: .git alone was
-~150MB, plus public/ heroes (20MB), a traced copy of dist/client (24MB),
-KB/, scripts/, package-lock — and .env, which must never ship in a bundle.
+Verification before seeding (the treat-as-C-until-checked rule):
+- UAE Commissioner General VERIFIED A on mofa.gov.ae: H.E. Ahmed Hatem
+  Almenhali (supersedes the earlier press spelling "Ahmed Barghash Al
+  Menhali") — our UAE gatekeeper gap is filled.
+- SVORA's "Official Pavilion Contractor" positioning confirmed on its own
+  page title; caveat recorded that "official" is self-description.
+- AHK Serbien's published email source page now 404s — email seeded with an
+  unverified-current caveat.
 
-Fix: new slimServerlessFunction() integration in astro.config.mjs (same
-pattern as indexNow) — after the adapter bundles the function, it prunes the
-traced junk from .vercel/output/functions/_render.func. The adapter's own
-excludeFiles option can't do this (exact-file matches only, no globs, as of
-@astrojs/vercel 8.2.11). Kept: node_modules (GA4/GSC libs), src/ (bundled
-JSON fallbacks), configs, and CRITICALLY dist/server (the function handler
-is dist/server/entry.mjs — only dist/client is pruned; guarded by a comment).
+Seeded (7 prospects + 1 category, all unpublished stubs):
+- svora, alchemy-projects (world-expo specialist: UAE Dubai 2020 / UK Astana
+  2017 / USA Osaka 2025 pavilions; opened a Belgrade entity for Expo 2027),
+  belgrade-fair (pre-Expo showroom venue), ahk-serbien (German-SME chamber
+  gatekeeper) under partners-and-suppliers;
+- aleatek-studio under serbia (Architizer credits it as Serbia-pavilion
+  architect w/ PowerChina Serbia as GC — credibility C, corroborate before
+  outreach/publishing);
+- uae-embassy-commissioner under united-arab-emirates;
+- turkmenistan-pavilion category + turkmenistan-ministry-trade agency
+  (pavilion tender closed 13 Apr 2026, winner unknown — watch).
 
-None of the pruned content is needed at runtime: on Vercel all admin
-reads/writes go through the GitHub Contents API (local FS is dev-only) and
-static assets are served from the static output.
+Patched existing prospects: pks-chamber (A-grade role: recruits companies
+into the corporate participants + best-practice zones, Global Business
+Summit — THE corporate-area booth gatekeeper), nussli-group (contact person:
+Gökhan Yilmaz, Director Expo Division), italy-commissariat (full sponsorship
+tiers Bronze EUR 5-25k -> Platinum 100k+, PEC address, call PDF).
 
-Verified locally: function 313MB -> 115MB, handler file present, and the
-server entry module imports cleanly (smoke test). Bonus: .env no longer
-ships inside the function bundle.
+Public pages (A-grade facts only, updated bumped): World Expo Museum child
+page (MoU signed 7 May 2026 Shanghai; Expo 2010 original materials; official
+website link) and UAE pavilion (Commissioner General fact, MOFA source).
+
+Runbook updated: last-run + external-research channel documented, new
+sources (country MFA mission pages pattern, partners/sponsor-tiers PDF,
+business.com.tm, architizer-as-C), watch list refreshed (Turkmenistan winner,
+Serbia pavilion GC/architect corroboration, PKS as corporate-zone recruiter).
+
+Verified: 54 listing JSONs parse, build clean, public pavilion pages
+unchanged at 13 + child, WEM + UAE enrichments render, zero contact leakage
+in public HTML.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

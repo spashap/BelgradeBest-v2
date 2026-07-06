@@ -1,0 +1,24 @@
+{
+  "slug": "ahk-serbien",
+  "leg": "expo-2027",
+  "type": "chamber",
+  "parent": "partners-and-suppliers",
+  "name": "German-Serbian Chamber of Commerce (AHK Serbien)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": "https://serbien.ahk.de",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "membership@ahk.rs"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Runs Expo-2027-focused business events (construction conference under the German Market Development Program; CEBAC Conference: EXPO 2027 with 13 European chambers). Gatekeeper to German SMEs eyeing Expo work. CAVEAT: email was published on the CEBAC event page which now 404s (checked 2026-07-06) — standard AHK membership contact, treat as unverified-current."
+  }
+}

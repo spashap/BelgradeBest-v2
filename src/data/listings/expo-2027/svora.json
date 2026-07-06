@@ -1,0 +1,21 @@
+{
+  "slug": "svora",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "SVORA",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": "https://www.svora.group/expo2027/",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Belgrade event/creative agency marketing itself as 'Expo 2027 Belgrade Official Pavilion Contractor' (turnkey pavilion/stand/show delivery). CAVEAT: 'official' is SELF-described marketing, not an organizer designation — verified via their own page title 2026-07-06. No public email; site contact form."
+  }
+}

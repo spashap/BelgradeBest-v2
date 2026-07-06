@@ -7,7 +7,7 @@
   "status": "concept-only",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-05",
+  "updated": "2026-07-06",
   "summary": "The UAE pavilion is expected to showcase sustainable energy and smart-city innovation, and to work as a business bridge between Emirati companies and Serbian enterprises — with a dedicated National Day of Emirati culture.",
   "blocks": {
     "about": [
@@ -18,6 +18,7 @@
       { "label": "Expected focus", "value": "Sustainable energy, smart cities, technology showcase", "source": "https://gulfnews.com/world/the-uae-at-expo-2027-belgrade-1.500316369" },
       { "label": "Business angle", "value": "Bridge between Emirati companies and Serbian enterprises", "source": "https://gulfnews.com/world/the-uae-at-expo-2027-belgrade-1.500316369" },
       { "label": "National Day", "value": "Dedicated day with Emirati cultural showcases", "source": "https://gulfnews.com/world/the-uae-at-expo-2027-belgrade-1.500316369" },
+      { "label": "Commissioner General", "value": "H.E. Ahmed Hatem Almenhali, Ambassador of the UAE to Serbia", "source": "https://www.mofa.gov.ae/en/missions/belgrade/media-hub/embassy-news/13-2-2026-7" },
       { "label": "Size / budget", "value": "Not disclosed" }
     ],
     "quotes": [

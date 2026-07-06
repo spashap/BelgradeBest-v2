@@ -1,0 +1,21 @@
+{
+  "slug": "aleatek-studio",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "serbia",
+  "name": "ALEATEK Studio",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-06",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Listed as ARCHITECT of the Serbia National Pavilion (~13,544 m2 net, 'under construction') on Architizer, alongside PowerChina Serbia as general contractor and Artbeat (exhibition). CAVEAT: credibility C (aggregator) — corroborate via official Serbian source before outreach or publishing. Source: architizer.com/projects/serbia-national-pavilion-at-expo-2027-belgrade/"
+  }
+}

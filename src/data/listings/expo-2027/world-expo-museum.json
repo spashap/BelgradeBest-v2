@@ -8,7 +8,7 @@
   "status": "announced",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-05",
+  "updated": "2026-07-06",
   "summary": "The Shanghai World Expo Museum brings a 330 m² pavilion to the Best Practice Area of Expo 2027 Belgrade — an exhibition on what Expo 2010 Shanghai left its city, shown at an Expo explicitly designed around its own afterlife.",
   "blocks": {
     "about": [
@@ -18,7 +18,8 @@
     "facts": [
       { "label": "What", "value": "330 m² pavilion in the Best Practice Area (Art and Museum Section)", "source": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/" },
       { "label": "Exhibition", "value": "Expo 2010 Shanghai's urban impact and post-event legacy", "source": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/" },
-      { "label": "Status", "value": "Participation formalized — signing reported by the BIE", "source": "https://www.bie-paris.org/site/en/news-announcements/specialised-expo/world-expo-museum-to-participate-in-expo-2027-belgrade" }
+      { "label": "Status", "value": "Participation formalized — MoU signed 7 May 2026 in Shanghai (WEM + BIE + EXPO 2027 Belgrade)", "source": "https://www.expo-museum.org/sbbwg/n281/n337/n407/u1ai30296.html" },
+      { "label": "Exhibits", "value": "Integrates original materials from Expo 2010 Shanghai into the Belgrade exhibition", "source": "https://www.expo-museum.org/sbbwg/n281/n337/n407/u1ai30296.html" }
     ],
     "quotes": []
   },
@@ -33,10 +34,11 @@
     }
   ],
   "links": {
-    "website": null,
+    "website": "https://www.expo-museum.org",
     "sources": [
       { "url": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/", "note": "Pavilion size and exhibition subject" },
-      { "url": "https://www.bie-paris.org/site/en/news-announcements/specialised-expo/world-expo-museum-to-participate-in-expo-2027-belgrade", "note": "BIE announcement" }
+      { "url": "https://www.bie-paris.org/site/en/news-announcements/specialised-expo/world-expo-museum-to-participate-in-expo-2027-belgrade", "note": "BIE announcement" },
+      { "url": "https://www.expo-museum.org/sbbwg/n281/n337/n407/u1ai30296.html", "note": "WEM's own announcement — MoU of 7 May 2026, Expo 2010 materials" }
     ]
   },
   "images": []

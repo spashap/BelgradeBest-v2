@@ -9,8 +9,13 @@ the target is the **booth** — individual businesses (~10k at full Expo scale).
 Gatekeeper agencies matter because they hold the exhibitor lists. Categories
 (pavilions) are containers. Never design a run around government pages.
 
-Last full run: **2026-07-05** (32 prospects seeded: 16 gatekeepers + 15
-event-level companies + 1 container category; 9 verified public emails).
+Last full run: **2026-07-05** (32 prospects: 16 gatekeepers + 15 event-level
+companies + 1 container category; 9 verified public emails).
+Last external run: **2026-07-06** — owner-run Perplexity Deep Research
+(processed record: `research/2026-07-06-perplexity-prospects.md`; +7 prospects
+incl. the UAE Commissioner General, +Turkmenistan category). External research
+is a valid input channel: give the owner the runbook-based prompt, then VERIFY
+spot-checks before seeding (2 of 3 A-claims held; 1 source page had vanished).
 
 ---
 
@@ -78,7 +83,17 @@ New/updated files only — no manual DB anywhere:
 
 **Company self-announcements** — search `"expo 2027" belgrade` site-wide and in
 news; suppliers brag (the NUSSLI pattern: their own project page announced
-on-site presence + `expo@nussli.com`).
+on-site presence + `expo@nussli.com`; same for SVORA's landing page).
+
+**Additions from the 2026-07-06 external run:**
+- Country MFA mission pages name commissioners — pattern:
+  `mofa.gov.ae/en/missions/belgrade` gave the UAE Commissioner General.
+- `expobelgrade2027.org/en/experience/partners` + `/docs/List-of-Benefits-and-Sponsor-Categories.pdf` — sponsor tiers (names appear here eventually).
+- `business.com.tm` — Turkmenistan tender notices.
+- `architizer.com` — project credits (ALEATEK/PowerChina on the Serbia
+  pavilion) — **treat as C, corroborate officially before outreach/publishing**.
+- Bilateral chambers (AHK Serbien, CEBAC members) run Expo-focused business
+  events — gatekeepers to foreign SMEs.
 
 ## 4. Hard rules (best practices — non-negotiable)
 
@@ -128,19 +143,27 @@ on-site presence + `expo@nussli.com`).
    rewrite `scripts/commit-message.txt`, summarize actionable finds to the
    owner (especially anything with a deadline).
 
-## 6. Watch list (update every run)
+## 6. Watch list (update every run — last updated 2026-07-06)
 
-- **Italy** sponsorship call closed 31 Aug 2026 → find who sponsored (each
-  sponsor = booth-grade prospect under Italy).
-- **Türkiye** proposal call closed 17 Aug 2026 → find the awarded organizer.
+- **Italy** sponsorship call closes **31 Aug 2026** (tiers Bronze €5–25k →
+  Platinum €100k+; PEC amb.belgrado@cert.esteri.it) → after close, find who
+  sponsored (each sponsor = booth-grade prospect under Italy).
+- **Türkiye** proposal call closes **17 Aug 2026** → find the awarded organizer.
+- **Turkmenistan** pavilion design+construction tender closed 13 Apr 2026 →
+  winner not yet public.
 - **Germany**: Messe Düsseldorf sub-procurements (communication, catering,
-  shop) expected on evergabe-online.de → each winner is a prospect.
-- **Best Practice & Corporate Area**: ~45 timber pavilions designed, occupants
-  unannounced → watch expobelgrade2027.org news; only World Expo Museum named.
-- **UAE**: implementing entity still unnamed (`uaepavilion.ae` still
-  Osaka-era). **Russia**: operator unnamed. **Saudi**: no program page yet.
-- **Sponsor tiers**: only Telekom Srbija + Air Serbia (Platinum) named so far;
-  more tiers will fill in — expobelgrade2027.org news.
+  shop) on evergabe-online.de — not public yet / may need portal access.
+- **Serbia pavilion**: Architizer (C) names PowerChina Serbia as GC and ALEATEK
+  Studio as architect (~13,544 m² net, under construction) → corroborate via
+  official source, then enrich the Serbia pavilion page + upgrade prospects.
+- **Best Practice & Corporate Area**: ~45 corporate pavilions, occupants
+  unannounced (only World Expo Museum named). **PKS is the recruiting partner**
+  for this zone (institutional agreement) — the corporate-area booth gatekeeper.
+- **UAE**: Commissioner General FOUND (Amb. Ahmed Hatem Almenhali, MOFA) —
+  still watch for the implementing operator (`uaepavilion.ae` still Osaka-era).
+  **Russia**: operator unnamed. **Saudi**: no program page yet.
+- **Sponsor tiers**: only Telekom Srbija + Air Serbia (Platinum) named; the
+  partners page shows categories only — watch for names.
 - **Exhibitor lists**: none published yet anywhere. When one lands → bulk mode.
 - **National Day schedule**: unpublished; when it lands, update pavilions +
   the participants article.

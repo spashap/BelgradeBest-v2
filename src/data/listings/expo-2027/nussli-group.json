@@ -7,7 +7,7 @@
   "summary": "",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-05",
+  "updated": "2026-07-06",
   "blocks": {},
   "links": {
     "website": "https://www.nussli.com",
@@ -15,7 +15,8 @@
   },
   "images": [],
   "contact": {
-    "email": "expo@nussli.com"
+    "email": "expo@nussli.com",
+    "person": "Gökhan Yilmaz, Director Expo Division"
   },
   "outreach": {
     "status": "none",
