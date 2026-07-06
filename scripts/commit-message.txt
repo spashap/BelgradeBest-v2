@@ -1,112 +1,29 @@
-Admin platform redesigned around the north star: booths, not pavilions
+Fix Vercel deploy: serverless function 292MB -> 115MB (250MB limit)
 
-Restructures /admin/platform per the owner's core clarification: the atomic
-unit of the platform is the BOOTH — the individual business inside a pavilion
-(~10k prospects across the Expo; same pattern later for other legs).
-Pavilions are just categories/containers; government pavilion pages are a
-maybe-later bonus. The admin is now a drill-down PROSPECT DATABASE, not a
-listings CMS. KB plan + CLAUDE.md context preserved; north star recorded.
+The deploy failed with: function "_render" 292MB uncompressed > 250MB limit.
 
-New structure (drill-down):
-- /admin/platform — LEGS as navigational cards (all 7 legs from the schema,
-  ready to grow): businesses count headline + categories / with-email /
-  contacted / claimed meta per leg; inactive legs render as ghost cards that
-  open ready-to-set-up. Below: booth-level funnel (north-star numbers), GA4
-  traffic w/ deltas, GSC indexation feedback.
-- /admin/platform/[leg] — CATEGORIES as cards (Expo: pavilions), each showing
-  its booth rollup (count / w-email / contacted / claimed) + page state.
-  "Add category" form + one-click category creation for every named Expo
-  country still missing one (from the tracker dataset).
-- /admin/platform/[leg]/[category] — THE working screen: booth table designed
-  for outreach sessions — add-business form (name/email/person/website/notes
-  -> creates an unpublished prospect stub via new createListing()), per-row
-  contact+notes+claimed save, stage badge with quick-advance buttons and
-  auto-stamped dates, per-booth email draft (open mailto / copy), stage
-  filter chips with counts, category-page controls tucked into the header.
-- Old screens re-scoped as cross-cutting tools: /listings -> "Search" (flat
-  filterable list), /outreach -> "Queue" (all-stage work queue; now shows
-  parent context). Shared sub-nav: Legs · Queue · Search.
+Diagnosis (from the locally produced .vercel/output): the admin store reads
+repo files with DYNAMIC paths (join(process.cwd(), rel) in
+lib/admin/store.ts getFile/listDir — the pattern the new platform module
+leans on), which makes Vercel's file tracer (@vercel/nft) fall back to
+including the ENTIRE working directory in the function: .git alone was
+~150MB, plus public/ heroes (20MB), a traced copy of dist/client (24MB),
+KB/, scripts/, package-lock — and .env, which must never ship in a bundle.
 
-Machinery:
-- platform-store: createListing() (slugify w/ diacritics strip, overwrite
-  guard, minimal stub JSON — thin guard keeps it off the public site) used by
-  the extended /api/admin/platform (action=create).
-- New lib/admin/outreach-draft.ts: one draft builder for all screens;
-  template resolution "<leg>:<type>" -> "<leg>" -> default; placeholders now
-  include {parentName}/{parentUrl}.
-- New "expo-2027:booth" template in outreach-templates.json: pitches the
-  PARENT pavilion page and frames the booth's own page as reserved — a
-  prospect stub's URL is 404 until claimed, so booth emails must never link
-  it.
-- AdminLayout: navigational card styles (.cards/.card + ghost) and crumbs.
+Fix: new slimServerlessFunction() integration in astro.config.mjs (same
+pattern as indexNow) — after the adapter bundles the function, it prunes the
+traced junk from .vercel/output/functions/_render.func. The adapter's own
+excludeFiles option can't do this (exact-file matches only, no globs, as of
+@astrojs/vercel 8.2.11). Kept: node_modules (GA4/GSC libs), src/ (bundled
+JSON fallbacks), configs, and CRITICALLY dist/server (the function handler
+is dist/server/entry.mjs — only dist/client is pruned; guarded by a comment).
 
-Also in this change set — /for-businesses relaunched as the Partners page:
-- New pitch: "We fight the SEO war for you" — AI-validated credibility
-  (sourced, cross-checked profiles), typed structured data, technical SEO
-  (static speed, real lastmod, IndexNow), AI-search readiness (ChatGPT/
-  Perplexity/AI Overviews citability), compounding site authority — with an
-  honest no-ranking-promises note in brand voice.
-- Full tools arsenal on-page with copy buttons: badge embed + Expo countdown
-  embed + where-to-paste steps + GBP website-field how-to; "coming with
-  claimed pages" (QR, menu URL, monthly stats email) trailed.
-- GET LISTED form -> new public serverless POST /api/listing-request:
-  honeypot + length caps + email shape check, writes a lead JSON to
-  src/data/leads/ via the shared GitHub store (a commit in prod, no DB),
-  redirects with ?sent=1 (static page toggles success/error notes
-  client-side). New .c-listing-form styles in globals.css (design law).
-- Admin Platform home: new "Inbound leads" panel reading src/data/leads/
-  (latest 15) with process instructions.
-- Footer: "How we make money" slot replaced by "Partners" -> /for-businesses
-  (SiteFooter SPECIAL entry + site-config footer ref swap; the
-  how-we-make-money PAGE stays for E-E-A-T and is linked from the pitch).
+None of the pruned content is needed at runtime: on Vercel all admin
+reads/writes go through the GitHub Contents API (local FS is dev-only) and
+static assets are served from the static output.
 
-Prospect database seeded — 32 researched outreach targets (2026-07-05 web
-sweep, every entry sourced; the platform's first real pipeline):
-- 16 pavilion gatekeepers (type agency/contractor) under their pavilions:
-  JETRO + METI (Japan), Messe Duesseldorf (Germany - awarded 28 May 2026),
-  Italy Commissariat (LIVE sponsorship call, deadline 31 Aug 2026,
-  economico.belgrado@esteri.it) + ICE Belgrade, BMWET (EXPO@bmwet.gv.at) +
-  WKO Expo Buero (office@expoaustria.at), US State Dept Expo Unit
-  (expo@state.gov) + Vita Motus + Trivandi USA, Presence Switzerland,
-  Turkiye Ministry of Trade (expo2027@ticaret.gov.tr, call deadline 17 Aug
-  2026), Minpromtorg, CCPIT, Serbia Commissioner Office + EXPO 2027 BELGRADE
-  d.o.o. (info@ + partnerships komercijalizacija@expobelgrade2027.org),
-  Artbeat Lab.
-- 15 event-level companies under a new "Expo 2027 Partners & Suppliers"
-  container category: Platinum sponsors Telekom Srbija + Air Serbia, PKS,
-  POWERCHINA, Millennium Team (office@millenniumteam.rs), Werner Sobek AG,
-  Danilo Dangubic Architects, VOGT, Fenwick Iribarren, MC Group, Stratcom,
-  the collective-pavilions consortium (Contributor/CRE/ARCVS), NUSSLI
-  (expo@nussli.com — sells pavilion build services to our exact audience).
-- All are unpublished stubs (thin guard) with contact + sourced role notes in
-  operator-only fields; verified zero contact leakage into public HTML.
-- New "expo-2027:agency" email template (fact-check + share-with-exhibitors
-  ask); draft resolution now falls back child -> "<leg>:booth" -> leg ->
-  default, so sponsors/contractors get the booth-style pitch automatically.
-- Pavilion pages enriched from the same research: Germany (Messe Duesseldorf
-  implementation fact + paragraph, status -> announced), Switzerland (walk-
-  through mountain panorama by Werner Sobek + Dangubic + VOGT, run by
-  Presence Switzerland; status -> announced).
-
-Docs: new KB/platform/PROSPECT-RESEARCH-RUNBOOK.md — the repeatable "check
-for new businesses" procedure (prospect taxonomy, proven source list incl.
-per-country program URLs + tender portals, hard rules like never-invent-
-emails and dedupe-before-seeding, step-by-step run procedure, verification
-checklist, watch list with upcoming deadlines, use cases incl. bulk exhibitor
--list mode, and the proven agent prompt templates). CLAUDE.md points to it.
-
-Navigation: header gets a second level for leg business sections. New
-navSectionsFor() in lib/listings.ts (SECTION_TITLE map) renders "Pavilions"
-under Expo 2027 — shown only while the section has published listings AND
-listingsIndexable is on; every future leg inherits its own sub-level
-automatically when its SECTION entry + listings land. SiteHeader: leg items
-with subs render a dropdown (desktop: hover / keyboard focus-within / caret
-click for touch, aria-expanded wired; mobile burger: sub renders inline,
-indented, always visible). New .c-header__item/__caret/__sub styles in
-globals.css per the design law.
-
-Build verified clean; footer shows Partners; public pavilion pages unchanged
-at 13 + child (stubs stay unpublished); all 46 listing JSONs validate; header
-renders the Pavilions sub-item site-wide.
+Verified locally: function 313MB -> 115MB, handler file present, and the
+server entry module imports cleanly (smoke test). Bonus: .env no longer
+ships inside the function bundle.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

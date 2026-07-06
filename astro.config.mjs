@@ -192,6 +192,62 @@ function indexNow() {
   };
 }
 
+// ── Serverless-function slimming ────────────────────────────────────────────
+// The admin store reads repo files with DYNAMIC paths (join(process.cwd(),
+// rel) in lib/admin/store.ts getFile/listDir), which makes Vercel's file
+// tracer (@vercel/nft) fall back to including the ENTIRE working directory in
+// the serverless function — .git alone (~150MB) blew the 250MB uncompressed
+// function limit. The adapter's `excludeFiles` can't help (exact-file matches
+// only, no globs, as of @astrojs/vercel 8.2.11), so this integration prunes
+// the traced junk from the function folder after bundling. None of it is
+// needed at runtime: on Vercel all admin reads/writes go through the GitHub
+// Contents API (local FS is dev-only), static assets are served from the
+// static output, and .env must never ship inside a bundle. node_modules and
+// src/ (bundled-JSON fallbacks) stay.
+// Registered AFTER the other integrations so it runs once the function folder
+// exists; the adapter's own astro:build:done only copies static files after
+// this, so nothing races.
+function slimServerlessFunction() {
+  return {
+    name: "slim-serverless-function",
+    hooks: {
+      "astro:build:done": async ({ logger }) => {
+        const { existsSync, rmSync, readdirSync: rd } = await import("node:fs");
+        const base = ".vercel/output/functions/_render.func";
+        if (!existsSync(base)) {
+          logger.info("no _render.func — nothing to slim");
+          return;
+        }
+        // CAUTION: the function handler is dist/server/entry.mjs — prune only
+        // dist/client (the traced copy of the static site), NEVER dist/server.
+        const JUNK = [
+          ".git", ".github", ".astro", ".claude", ".vercel",
+          ".env", ".env.example", ".gitattributes", ".gitignore", ".vercelignore",
+          "public", "dist/client", "KB", "scripts",
+          "package-lock.json", "CLAUDE.md", "automated-marketing-plan.md",
+        ];
+        let removed = 0;
+        for (const rel of JUNK) {
+          const p = join(base, rel);
+          if (existsSync(p)) {
+            rmSync(p, { recursive: true, force: true });
+            removed++;
+          }
+        }
+        // Stray traced artifacts with flattened absolute paths (e.g. old
+        // scratchpad files) — anything that isn't part of the runtime set.
+        for (const name of rd(base)) {
+          if (/^Users/i.test(name)) {
+            rmSync(join(base, name), { recursive: true, force: true });
+            removed++;
+          }
+        }
+        logger.info(`pruned ${removed} traced entries from _render.func (kept node_modules, src, config)`);
+      },
+    },
+  };
+}
+
 export default defineConfig({
   site: SITE,
   // Public pages are prerendered to static HTML (the default). Only the /admin
@@ -243,5 +299,6 @@ export default defineConfig({
       },
     }),
     indexNow(),
+    slimServerlessFunction(),
   ],
 });
