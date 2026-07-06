@@ -4,31 +4,37 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import PageIntro from "../components/PageIntro.astro";
 import Container from "../components/Container.astro";
 import SectionHead from "../components/SectionHead.astro";
-import Snippet from "../components/Snippet.astro";
 import Note from "../components/Note.astro";
+import Faq from "../components/Faq.astro";
 import Schema from "../components/Schema.astro";
 import { pageMetadata } from "../lib/metadata";
 import { ogImage } from "../lib/og";
 import { SITE, CONFIG } from "../lib/site";
-import { breadcrumbSchema } from "../lib/schemas";
+import { breadcrumbSchema, faqSchema } from "../lib/schemas";
+import { listingsForLeg } from "../lib/listings";
+import { officialCount, namedCount } from "../lib/expo-participants";
+import { getCollection } from "astro:content";
 
-// The platform pitch page ("Partners" in the footer) — outreach emails land
-// here. Core pitch: we fight the SEO war for the business. Includes the full
-// embed-tools arsenal and the listing-request form (POST /api/listing-request
-// → lead file via the GitHub store → surfaces in /admin/platform).
+// THE PARTNERS LANDING — the business card of the platform (owner: "this is
+// my window"). Landing-page layout (lp-* chrome in globals.css), sticky
+// section nav, and the widget showroom: live previews with color controls
+// that rewrite each embed snippet in real time. Widget concept: partners
+// paste two lines; our build bakes fresh data into the scripts, so every
+// deploy updates every embed. lastmod in astro.config.mjs.
 const PATH = "/for-businesses";
 const CONTACT_EMAIL = "admin@belgradebest.com";
+
+const pavilions = listingsForLeg("expo-2027");
+const articleCount = (await getCollection("articles")).filter((a) => a.data.visible !== false && a.data.noindex !== true).length;
 
 const BADGE_EMBED = `<a href="${SITE.origin}/?utm_source=badge&utm_medium=embed">
   <img src="${SITE.origin}/badges/featured-on-belgradebest.svg"
        alt="Featured on BelgradeBest" width="200" height="56" loading="lazy"></a>`;
-const COUNTDOWN_EMBED = `<div data-bb-expo-countdown></div>
-<script src="${SITE.origin}/widgets/expo-countdown.js" async><\/script>`;
 
 const meta = pageMetadata({
-  title: "For businesses — we fight the SEO war for you",
+  title: "For businesses & partners — we fight the SEO war for you",
   description:
-    "Stop fighting Google alone. A free page on BelgradeBest gets your business AI-validated credibility, full structured data, and a place inside a site built to rank — for Expo 2027 exhibitors, restaurants, hotels and clinics.",
+    "Free Expo 2027 widgets (countdown, participant counter, quick facts, pavilion spotlight), free business pages, and a team that fights the SEO war for you — BelgradeBest for partners.",
   path: PATH,
   image: ogImage("for-businesses"),
 });
@@ -36,6 +42,34 @@ const meta = pageMetadata({
 const crumbs = [
   { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
   { name: "For businesses" },
+];
+
+const widgetFaqs = [
+  {
+    question: "Are the BelgradeBest widgets really free?",
+    answer:
+      "Yes — free for any website, commercial or personal. The only condition is the small attribution link back to BelgradeBest built into each widget; that link is the license.",
+  },
+  {
+    question: "Do the widgets track my visitors?",
+    answer:
+      "No. The scripts set no cookies, load no analytics, and make no network requests from your readers' browsers. All data is baked into the script itself when our site publishes.",
+  },
+  {
+    question: "How do the widgets stay up to date?",
+    answer:
+      "BelgradeBest is the data source. When our Expo 2027 tracker or pavilion profiles update, our site republishes and the widget scripts are regenerated with the new data — every embed on every site updates automatically, with nothing for you to do.",
+  },
+  {
+    question: "Can I change the widget colors to match my site?",
+    answer:
+      "Yes — every widget accepts three optional attributes on its <div>: data-bg (background), data-fg (text) and data-accent, each a hex color. Use the live controls on this page to preview a combination; the embed code updates as you adjust.",
+  },
+  {
+    question: "How do I get my business listed on BelgradeBest?",
+    answer:
+      "Use the get-listed form on this page (or email us). We set up your page free of charge and send you a private edit link — no account or password needed — so you control your text and photos yourself.",
+  },
 ];
 
 const schemas: object[] = [
@@ -47,176 +81,369 @@ const schemas: object[] = [
     url: `${SITE.origin}${PATH}`,
     inLanguage: CONFIG.brand.locale,
   },
+  faqSchema(widgetFaqs),
   breadcrumbSchema([
     { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
     { name: "For businesses", url: `${SITE.origin}${PATH}` },
   ]),
+];
+
+// Widget registry — drives the showroom blocks + the wiring script.
+const WIDGETS = [
+  {
+    id: "w-countdown",
+    attr: "data-bb-expo-countdown",
+    file: "expo-countdown.js",
+    global: "BBExpoCountdown",
+    title: "Expo 2027 countdown widget",
+    seo: "A live countdown to the opening of Expo 2027 Belgrade (15 May 2027) for your website, blog or event page. It switches to days-remaining once the Expo opens, needs two lines of HTML, and works on WordPress, Wix, Squarespace or any site that accepts an HTML embed.",
+  },
+  {
+    id: "w-stats",
+    attr: "data-bb-expo-stats",
+    file: "expo-stats.js",
+    global: "BBExpoStats",
+    title: "Expo 2027 participant counter",
+    seo: `How many countries are taking part in Expo 2027? This widget answers it live on your page: the official confirmed count (${officialCount} at publish time), the number of publicly named countries, and continents represented — fed by our independently maintained, fully sourced participant tracker. When a new country confirms, your embed updates automatically.`,
+  },
+  {
+    id: "w-facts",
+    attr: "data-bb-expo-facts",
+    file: "expo-facts.js",
+    global: "BBExpoFacts",
+    title: "Expo 2027 quick facts card",
+    seo: "The five things every visitor asks about Expo 2027 Belgrade — dates (15 May – 15 August 2027), the Surčin site, distance from Nikola Tesla Airport and the city centre, and how to get around — in one compact, embeddable card. Ideal for travel blogs, hotel sites and event pages covering the Expo.",
+  },
+  {
+    id: "w-pavilion",
+    attr: "data-bb-expo-pavilion",
+    file: "expo-pavilion.js",
+    global: "BBExpoPavilion",
+    title: "Pavilion spotlight widget",
+    seo: "Showcase a country's Expo 2027 pavilion on your site: name, current status and a one-line summary from our sourced pavilion profiles, linked to the full page. Pick the country with a single attribute — perfect for national chambers of commerce, trade portals and country-specific travel sites.",
+    countries: pavilions.map((p) => ({ slug: p.slug, name: p.shortName ?? p.name })),
+  },
 ];
 ---
 
 <BaseLayout meta={meta}>
   <Breadcrumbs crumbs={crumbs} />
   <PageIntro
-    eyebrow="For Belgrade businesses & Expo 2027 exhibitors"
+    eyebrow="For Belgrade businesses · Expo 2027 exhibitors · publishers"
     title="We fight the SEO war for you"
-    lede="Getting found on Google — and now inside AI answers — is a technology war: structured data, page speed, authority, constant algorithm change. Most businesses can't win it alone, and shouldn't have to. BelgradeBest is the independent English guide visitors already read; a free page here puts our whole machine behind your business."
+    lede="BelgradeBest is the independent English guide to Belgrade and the data source for Expo 2027. Businesses get a free page inside a site built to rank; publishers get free, self-updating widgets fed by our research. This page is everything we offer — and how to plug in."
   />
 
-  <Container variant="read">
-    <SectionHead
-      title="Why join instead of fighting alone"
-      intro="One business against Google is a losing match. A business inside an authority site inherits everything the site has already won."
-    />
-    <ul>
-      <li>
-        <strong>AI-validated credibility.</strong> Every profile is built and checked with
-        advanced AI research tools: facts cross-checked against official sources, each claim
-        carrying its citation. Search engines — and AI assistants — treat verified, sourced
-        pages very differently from marketing copy.
-      </li>
-      <li>
-        <strong>Structured data, done properly.</strong> Your page ships with the machine-readable
-        markup Google requires for rich results — typed to your business (restaurant menus,
-        hotels, clinics, Expo exhibitors), with FAQ schema on top. Most business websites have
-        none of this; ours is generated and validated automatically.
-      </li>
-      <li>
-        <strong>Technical SEO you never think about.</strong> Static pages that load in
-        milliseconds, clean Core Web Vitals, sitemaps with real update dates, instant
-        search-engine pings on every change. The infrastructure war — handled.
-      </li>
-      <li>
-        <strong>Built for AI search, not just Google.</strong> ChatGPT, Perplexity and Google's
-        AI Overviews increasingly answer travellers directly. Our pages are engineered to be
-        cited by them — machine-readable feeds, quotable sourced passages, question-and-answer
-        markup. Your business inside those answers, without you touching a line of code.
-      </li>
-      <li>
-        <strong>Authority that compounds.</strong> Your page doesn't stand alone — it's linked
-        from the guides visitors actually read, inside a site whose authority grows with every
-        article. A new website starts from zero; you start from ours.
-      </li>
-    </ul>
-    <Note>
-      <strong>The honest version of this pitch:</strong> nobody can honestly promise rankings.
-      What we promise is that your page gets the same technology and editorial standards as the
-      rest of this site — and that it costs you nothing.
-    </Note>
+  <nav class="lp-nav" aria-label="Page sections">
+    <Container>
+      <ul>
+        <li><a href="#widgets">Widgets</a></li>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#what-we-do">What we do</a></li>
+        <li><a href="#tools">Badge &amp; tools</a></li>
+        <li><a href="#get-listed">Get listed</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </Container>
+  </nav>
 
-    <SectionHead title="What you get" />
-    <ul>
-      <li><strong>A free English page</strong> for your business — photos, your description, hours, links, and (for restaurants) your menu with prices.</li>
-      <li><strong>Your own web address</strong> you can print on cards and menus — and if you don't have a website, this <em>is</em> your website.</li>
-      <li><strong>Edit it yourself</strong>: no account, no password — a private link lets you update your page in minutes. Changes go live automatically.</li>
-      <li><strong>Expo 2027 exhibitors:</strong> your page lives under your pavilion's profile in our <a href="/expo-2027/pavilions">pavilion directory</a> — the English landing page for your presence at the event.</li>
-    </ul>
-    <Note>
-      <strong>Free means free.</strong> We never charge businesses for their page. BelgradeBest is
-      an independent guide — how we fund it is explained on
-      <a href="/how-we-make-money">how we make money</a>, and pages edited by a business are
-      clearly marked "information provided by the business".
-    </Note>
-
-    <SectionHead title="Get listed — tell us about your business" intro="Fill this in and we'll set up your page and send you the private edit link. No obligations, no cost." />
-    <div id="bb-form-sent" hidden>
-      <Note tone="ok">
-        <strong>Received — thank you.</strong> We'll review your request and reply to the email
-        you gave us, usually within a couple of days.
-      </Note>
-    </div>
-    <div id="bb-form-error" hidden>
-      <Note tone="warn">
-        <strong>That didn't go through.</strong> Please try again, or email us directly at{" "}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
-      </Note>
-    </div>
-    <form method="post" action="/api/listing-request" class="c-listing-form" id="bb-listing-form">
-      <label>Business name *<input type="text" name="business" required maxlength="120" /></label>
-      <label>Category *
-        <select name="category" required>
-          <option value="expo-exhibitor">Expo 2027 exhibitor / booth</option>
-          <option value="restaurant-bar">Restaurant / café / bar / club</option>
-          <option value="hotel-apartments">Hotel / apartments</option>
-          <option value="clinic">Clinic / medical</option>
-          <option value="tour-attraction">Tour / attraction</option>
-          <option value="other">Other</option>
-        </select>
-      </label>
-      <label>Contact person<input type="text" name="person" maxlength="80" /></label>
-      <label>Email *<input type="email" name="email" required maxlength="120" /></label>
-      <label>Website / social<input type="text" name="website" maxlength="200" /></label>
-      <label>Anything we should know<textarea name="message" rows="3" maxlength="1000"></textarea></label>
-      <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
-      <button class="c-btn" type="submit">Request my free page</button>
-    </form>
-    <p>
-      Prefer email? Write to <a href={`mailto:${CONTACT_EMAIL}?subject=List%20my%20business%20on%20BelgradeBest`}>{CONTACT_EMAIL}</a>
-      {" "}from your business address, or use the <a href="/contact">contact page</a>.
-    </p>
-    <script is:inline>
-      // Static page: the endpoint redirects back with ?sent=1 / ?error=1 —
-      // toggle the result notes client-side.
-      (function () {
-        var p = new URLSearchParams(location.search);
-        if (p.get("sent") === "1") {
-          document.getElementById("bb-form-sent").hidden = false;
-          document.getElementById("bb-listing-form").hidden = true;
-        } else if (p.get("error")) {
-          document.getElementById("bb-form-error").hidden = false;
-        }
-      })();
-    </script>
-
-    <SectionHead
-      title="Free tools for your own website"
-      intro="Everything below is copy-paste — no technical skills needed, and none of it tracks your visitors."
-    />
-
-    <h3>The badge</h3>
-    <p>
-      Featured in one of our guides? Show it. The badge links visitors to the guide that
-      recommends you.
-    </p>
-    <p>
-      <img
-        src="/badges/featured-on-belgradebest.svg"
-        alt="Featured on BelgradeBest badge preview"
-        width="200"
-        height="56"
-        loading="lazy"
+  <section class="lp-section" id="widgets">
+    <Container variant="read">
+      <SectionHead
+        eyebrow="Free embeds — we are the data source"
+        title="Expo 2027 widgets for your website"
+        intro="Paste two lines of HTML once. The data inside each widget is published by BelgradeBest — when our tracker or profiles update, every embed on every site updates automatically. No cookies, no tracking, no maintenance; the small attribution link is the whole license. Use the controls to match your site's colors — the embed code updates as you adjust."
       />
-    </p>
-    <Snippet label="Badge embed code" code={BADGE_EMBED} />
+    </Container>
+    <Container>
+      {WIDGETS.map((w) => (
+        <div id={w.id}>
+          <Container variant="read">
+            <h3>{w.title}</h3>
+            <p>{w.seo}</p>
+          </Container>
+          <div class="lp-widget">
+            <div class="lp-widget__preview">
+              <div data-mount {...{ [w.attr]: "" }} {...(w.countries ? { "data-country": "japan" } : {})}></div>
+            </div>
+            <div>
+              <div class="lp-controls" data-controls-for={w.id}>
+                <label>Background <input type="color" value="#f7f3ec" data-k="bg" /></label>
+                <label>Text <input type="color" value="#211b16" data-k="fg" /></label>
+                <label>Accent <input type="color" value="#b5462b" data-k="accent" /></label>
+                {w.countries ? (
+                  <label>Country
+                    <select data-country-select>
+                      {w.countries.map((c) => (
+                        <option value={c.slug} selected={c.slug === "japan"}>{c.name}</option>
+                      ))}
+                    </select>
+                  </label>
+                ) : null}
+                <button class="c-btn c-btn--ghost" type="button" data-reset>Reset</button>
+              </div>
+              <div class="c-snippet">
+                <div class="c-snippet__head">
+                  <span class="c-snippet__label">Embed code — updates with your choices</span>
+                  <button class="c-btn c-btn--ghost" type="button" data-copy>Copy</button>
+                </div>
+                <pre data-snippet></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+      <Container variant="read">
+        <p>
+          <strong>Where to paste:</strong> WordPress — a <em>Custom HTML</em> block; Wix /
+          Squarespace — the <em>Embed HTML / Code</em> element; anywhere else — any spot plain
+          HTML works. One script per widget type serves any number of widgets on the page.
+        </p>
+      </Container>
+    </Container>
+  </section>
 
-    <h3>Expo 2027 countdown widget</h3>
-    <p>
-      A live countdown to the Expo's opening day for your site or blog — it switches to
-      days-remaining once the gates open. Details and a live demo on the{" "}
-      <a href="/expo-2027/countdown">widget page</a>.
-    </p>
-    <Snippet label="Countdown embed code" code={COUNTDOWN_EMBED} />
+  <section class="lp-section" id="who-we-are">
+    <Container variant="read">
+      <SectionHead
+        eyebrow="Who we are"
+        title="The research effort behind the pages"
+        intro="BelgradeBest is an independent, English-first guide to Belgrade — built on a source-checked knowledge base and an AI-assisted research pipeline with human editorial review. We mark every fact as confirmed, reported or unknown, and we show our sources."
+      />
+      <div class="c-stats">
+        <div class="c-stat">
+          <div class="c-stat__num">{articleCount}</div>
+          <div class="c-stat__label">in-depth guides, source-checked and maintained</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">{officialCount}</div>
+          <div class="c-stat__label">Expo 2027 participants tracked — the independent tracker</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">{namedCount}</div>
+          <div class="c-stat__label">countries individually named &amp; sourced in our data</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">{pavilions.length}</div>
+          <div class="c-stat__label">pavilion profiles researched fact-by-fact with citations</div>
+        </div>
+      </div>
+      <p>
+        The methodology is public: our <a href="/about">editorial standards</a> explain how pages
+        are researched, checked and corrected. The Expo data behind the widgets lives on the{" "}
+        <a href="/expo-2027/tracker">participant tracker</a> (downloadable as{" "}
+        <a href="/data/expo-2027-participants.json">open JSON</a>) and the{" "}
+        <a href="/expo-2027/pavilions">pavilion directory</a> — every claim linked to its source.
+      </p>
+    </Container>
+  </section>
 
-    <h3>Where to paste these</h3>
-    <ul>
-      <li><strong>WordPress:</strong> add a <em>Custom HTML</em> block and paste the code.</li>
-      <li><strong>Wix / Squarespace:</strong> use the <em>Embed HTML / Code</em> element.</li>
-      <li><strong>Any other site:</strong> anywhere plain HTML works — e.g. your footer.</li>
-    </ul>
-    <p class="u-stack-md">
-      Coming with claimed pages: a printable QR code for your page, a linkable menu URL for
-      Google Business Profile, and a monthly email with your page's visitor numbers.
-    </p>
+  <section class="lp-section" id="what-we-do">
+    <Container variant="read">
+      <SectionHead
+        eyebrow="What we do"
+        title="Why join instead of fighting Google alone"
+        intro="Getting found — on Google and now inside AI answers — is a technology war: structured data, page speed, authority, constant algorithm change. A business inside an authority site inherits everything the site has already won."
+      />
+      <ul>
+        <li><strong>AI-validated credibility.</strong> Profiles are built and checked with advanced AI research tools — facts cross-checked against official sources, each claim carrying its citation. Search engines and AI assistants treat verified pages very differently from marketing copy.</li>
+        <li><strong>Structured data, done properly.</strong> Machine-readable markup typed to your business (menus, hotels, clinics, Expo exhibitors) with FAQ schema on top — generated and validated automatically.</li>
+        <li><strong>Technical SEO you never think about.</strong> Static pages, clean Core Web Vitals, real-date sitemaps, instant search-engine pings on every change.</li>
+        <li><strong>Built for AI search.</strong> ChatGPT, Perplexity and Google's AI Overviews increasingly answer travellers directly — our pages ship the machine-readable feeds and quotable sourced passages they cite.</li>
+        <li><strong>Authority that compounds.</strong> Your page is linked from guides visitors actually read; a new website starts from zero — you start from ours.</li>
+      </ul>
+      <SectionHead title="What a listed business gets" />
+      <ul>
+        <li><strong>A free English page</strong> — photos, your description, hours, links, menus for restaurants.</li>
+        <li><strong>Your own web address</strong> — and if you don't have a website, this <em>is</em> your website: point your Google Business Profile at it (<em>Edit profile → Contact → Website</em>).</li>
+        <li><strong>Edit it yourself</strong> — a private link, no account, changes live in minutes.</li>
+        <li><strong>Expo 2027 exhibitors</strong> — your page lives under your pavilion in the <a href="/expo-2027/pavilions">directory</a>.</li>
+      </ul>
+      <Note>
+        <strong>Free means free — and honest means honest.</strong> We never charge businesses for
+        their page (<a href="/how-we-make-money">how we fund the guide</a> is public), pages
+        edited by a business are clearly marked, and nobody can honestly promise rankings — what
+        we promise is the same technology and editorial standards as the rest of this site.
+      </Note>
+    </Container>
+  </section>
 
-    <SectionHead
-      title="No website? Point Google at your free page"
-      intro="Google Business Profile lets any business set a website link. Use your BelgradeBest page:"
-    />
-    <ol>
-      <li>Open <a href="https://business.google.com" rel="noopener">business.google.com</a> and sign in to your business profile.</li>
-      <li>Choose <em>Edit profile → Contact → Website</em>.</li>
-      <li>Paste your BelgradeBest page address and save. Your Google Maps listing now links to a real English page about you.</li>
-    </ol>
-  </Container>
+  <section class="lp-section" id="tools">
+    <Container variant="read">
+      <SectionHead
+        eyebrow="Badge & tools"
+        title="Show the recommendation"
+        intro="Featured in one of our guides? The badge links your visitors to the guide that recommends you."
+      />
+      <p>
+        <img src="/badges/featured-on-belgradebest.svg" alt="Featured on BelgradeBest badge preview" width="200" height="56" loading="lazy" />
+      </p>
+      <div class="c-snippet">
+        <div class="c-snippet__head">
+          <span class="c-snippet__label">Badge embed code</span>
+          <button class="c-btn c-btn--ghost" type="button" data-copy>Copy</button>
+        </div>
+        <pre>{BADGE_EMBED}</pre>
+      </div>
+      <p class="u-stack-md">
+        Coming with claimed pages: a printable QR code for your page, a linkable menu URL for
+        Google Business Profile, and a monthly email with your page's visitor numbers.
+      </p>
+    </Container>
+  </section>
+
+  <section class="lp-section" id="get-listed">
+    <Container variant="read">
+      <SectionHead
+        eyebrow="Get listed"
+        title="Tell us about your business"
+        intro="Fill this in and we'll set up your page and send you the private edit link. No obligations, no cost."
+      />
+      <div id="bb-form-sent" hidden>
+        <Note tone="ok">
+          <strong>Received — thank you.</strong> We'll review your request and reply to the email
+          you gave us, usually within a couple of days.
+        </Note>
+      </div>
+      <div id="bb-form-error" hidden>
+        <Note tone="warn">
+          <strong>That didn't go through.</strong> Please try again, or email us directly at{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        </Note>
+      </div>
+      <form method="post" action="/api/listing-request" class="c-listing-form" id="bb-listing-form">
+        <label>Business name *<input type="text" name="business" required maxlength="120" /></label>
+        <label>Category *
+          <select name="category" required>
+            <option value="expo-exhibitor">Expo 2027 exhibitor / booth</option>
+            <option value="restaurant-bar">Restaurant / café / bar / club</option>
+            <option value="hotel-apartments">Hotel / apartments</option>
+            <option value="clinic">Clinic / medical</option>
+            <option value="tour-attraction">Tour / attraction</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label>Contact person<input type="text" name="person" maxlength="80" /></label>
+        <label>Email *<input type="email" name="email" required maxlength="120" /></label>
+        <label>Website / social<input type="text" name="website" maxlength="200" /></label>
+        <label>Anything we should know<textarea name="message" rows="3" maxlength="1000"></textarea></label>
+        <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
+        <button class="c-btn" type="submit">Request my free page</button>
+      </form>
+    </Container>
+  </section>
+
+  <section class="lp-section lp-section--last" id="contact">
+    <Container variant="read">
+      <SectionHead eyebrow="Contact" title="Talk to us" />
+      <p>
+        Partnerships, corrections, widget requests, press:{" "}
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> — or the{" "}
+        <a href="/contact">contact page</a>. We usually reply within two working days. If you're
+        writing about Expo 2027, our <a href="/expo-2027/tracker">participant tracker</a> is free
+        to cite with attribution.
+      </p>
+      <SectionHead title="Widgets & listings — quick answers" />
+      <Faq faqs={widgetFaqs} />
+    </Container>
+  </section>
 
   <Schema schemas={schemas} />
+
+  <script is:inline src="/widgets/expo-countdown.js" async></script>
+  <script is:inline src="/widgets/expo-stats.js" async></script>
+  <script is:inline src="/widgets/expo-facts.js" async></script>
+  <script is:inline src="/widgets/expo-pavilion.js" async></script>
+
+  <script is:inline>
+    // Widget showroom wiring: color/country controls re-render the live
+    // preview AND rewrite the embed snippet; copy buttons; form result notes.
+    (function () {
+      var ORIGIN = "https://belgradebest.com";
+      var DEFAULTS = { bg: "#f7f3ec", fg: "#211b16", accent: "#b5462b" };
+      var BLOCKS = [
+        { id: "w-countdown", attr: "data-bb-expo-countdown", file: "expo-countdown.js", global: "BBExpoCountdown" },
+        { id: "w-stats", attr: "data-bb-expo-stats", file: "expo-stats.js", global: "BBExpoStats" },
+        { id: "w-facts", attr: "data-bb-expo-facts", file: "expo-facts.js", global: "BBExpoFacts" },
+        { id: "w-pavilion", attr: "data-bb-expo-pavilion", file: "expo-pavilion.js", global: "BBExpoPavilion" },
+      ];
+
+      BLOCKS.forEach(function (w) {
+        var block = document.getElementById(w.id);
+        if (!block) return;
+        var mount = block.querySelector("[data-mount]");
+        var pre = block.querySelector("[data-snippet]");
+        var sel = block.querySelector("[data-country-select]");
+
+        function snippet() {
+          var attrs = w.attr;
+          if (sel) attrs += ' data-country="' + sel.value + '"';
+          ["bg", "fg", "accent"].forEach(function (k) {
+            var v = mount.dataset[k];
+            if (v && v.toLowerCase() !== DEFAULTS[k]) attrs += " data-" + k + '="' + v + '"';
+          });
+          pre.textContent = "<div " + attrs + "></div>\n<script src=\"" + ORIGIN + "/widgets/" + w.file + "\" async><\/script>";
+        }
+        function rerender() {
+          var api = window[w.global];
+          if (api && api.render) api.render(mount);
+          snippet();
+        }
+
+        block.querySelectorAll('input[type="color"]').forEach(function (inp) {
+          inp.addEventListener("input", function () {
+            mount.dataset[inp.dataset.k] = inp.value;
+            rerender();
+          });
+        });
+        if (sel)
+          sel.addEventListener("change", function () {
+            mount.dataset.country = sel.value;
+            rerender();
+          });
+        var reset = block.querySelector("[data-reset]");
+        if (reset)
+          reset.addEventListener("click", function () {
+            ["bg", "fg", "accent"].forEach(function (k) {
+              delete mount.dataset[k];
+            });
+            block.querySelectorAll('input[type="color"]').forEach(function (inp) {
+              inp.value = DEFAULTS[inp.dataset.k];
+            });
+            if (sel) { sel.value = "japan"; mount.dataset.country = "japan"; }
+            rerender();
+          });
+        snippet();
+        // Widgets may finish loading after this script — re-render once ready.
+        var tries = 0;
+        var t = setInterval(function () {
+          if (window[w.global] || ++tries > 40) {
+            clearInterval(t);
+            rerender();
+          }
+        }, 150);
+      });
+
+      // Copy buttons (snippets + badge).
+      document.querySelectorAll("[data-copy]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var pre = btn.closest(".c-snippet").querySelector("pre");
+          navigator.clipboard.writeText(pre.textContent).then(function () {
+            var old = btn.textContent;
+            btn.textContent = "Copied ✓";
+            setTimeout(function () { btn.textContent = old; }, 1600);
+          });
+        });
+      });
+
+      // Get-listed form result states (?sent=1 / ?error=…).
+      var p = new URLSearchParams(location.search);
+      if (p.get("sent") === "1") {
+        document.getElementById("bb-form-sent").hidden = false;
+        document.getElementById("bb-listing-form").hidden = true;
+      } else if (p.get("error")) {
+        document.getElementById("bb-form-error").hidden = false;
+      }
+    })();
+  </script>
 </BaseLayout>

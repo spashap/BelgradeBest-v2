@@ -80,9 +80,36 @@ Seven items in the owner's chosen order (KB plan + CLAUDE.md updated).
    crop-safe layout (all text within the center square; wordmark sized to
    fit) and regenerated — square-crop verified.
 
+9) Partners page relaunched as THE landing page + widget showroom (owner:
+   "this is my window, my business card"):
+   - Widget concept shipped: BelgradeBest is the DATA SOURCE — widget scripts
+     are Astro endpoints with our data baked in at build, so every deploy
+     refreshes every embed on every partner site. No client fetches, no
+     cookies, no tracking; attribution link (target=_blank) is the license.
+   - Four Expo widgets: countdown (upgraded: color attrs + render API),
+     NEW participant counter (/widgets/expo-stats.js — official count, named
+     countries, continents, tracker-updated date), NEW quick-facts card
+     (/widgets/expo-facts.js — dates/site/distances/transit), NEW pavilion
+     spotlight (/widgets/expo-pavilion.js — data-country picks any published
+     profile). Shared generator lib/widget-js.ts (hex-sanitized data-bg/fg/
+     accent theming, esc/card/row helpers, window.<Global>.render for live
+     preview). All four syntax-checked with node --check.
+   - /for-businesses rebuilt as a landing page (new owner-sanctioned lp-*
+     chrome in globals.css): sticky section nav (Widgets · Who we are · What
+     we do · Badge & tools · Get listed · Contact), widget showroom with LIVE
+     previews + per-widget color pickers (+ country selector) that re-render
+     the preview AND rewrite the embed snippet in real time, SEO-targeted
+     copy per widget (keyword headings + descriptive paragraphs), "who we
+     are" authority section with real build-time stats (guides, 139 tracked,
+     93 named, pavilion profiles) + methodology links, condensed SEO-war +
+     get-listed + contact sections, and a 5-question widget FAQ with FAQPage
+     JSON-LD.
+
 Build verified: clean build, og:image wired on pavilion/tracker/corporate/
 for-businesses pages, corporate-area in sitemap, /manage OUT of sitemap,
-new og-default shipped, function bundle still 115MB after pruning.
+new og-default shipped, 4 widget scripts emitted with baked data (139/93 in
+stats, pavilion map populated) and node --check-clean, landing page renders
+nav + all four showroom blocks + FAQPage, function bundle still 115MB.
 
 Owner note: outreach sending starts after admin@belgradebest.com exists;
 portal + drafts + playbook are all ready for that moment.

@@ -1,20 +1,29 @@
 /* BelgradeBest — Expo 2027 Belgrade countdown widget (free embed).
  * Usage (on any site):
- *   <script src="https://belgradebest.com/widgets/expo-countdown.js" async></script>
- * or, to control placement:
  *   <div data-bb-expo-countdown></div>
  *   <script src="https://belgradebest.com/widgets/expo-countdown.js" async></script>
+ * Optional color attributes on the div (hex): data-bg, data-fg, data-accent.
  *
  * Self-contained by design: no external requests, no cookies, no tracking.
- * Colors are inlined (this runs on third-party pages with no access to the
- * BelgradeBest stylesheet). Attribution link is part of the free license.
+ * The attribution link is the free license. window.BBExpoCountdown.render(el)
+ * re-renders a mount (used by the live preview on belgradebest.com/for-businesses).
  */
 (function () {
   "use strict";
   var OPEN = new Date(2027, 4, 15); // 15 May 2027 (local time)
   var CLOSE = new Date(2027, 7, 15, 23, 59, 59); // 15 Aug 2027
   var LINK = "https://belgradebest.com/expo-2027?utm_source=countdown-widget&utm_medium=embed";
-  var SCRIPT = document.currentScript; // captured now — null inside deferred callbacks
+  var SCRIPT = document.currentScript;
+  var HEX = /^#[0-9a-fA-F]{3,8}$/;
+
+  function theme(el) {
+    var d = el.dataset || {};
+    return {
+      bg: HEX.test(d.bg || "") ? d.bg : "#f7f3ec",
+      fg: HEX.test(d.fg || "") ? d.fg : "#211b16",
+      accent: HEX.test(d.accent || "") ? d.accent : "#b5462b",
+    };
+  }
 
   function state() {
     var now = new Date();
@@ -29,16 +38,15 @@
 
   function render(el) {
     var s = state();
+    var t = theme(el);
     el.innerHTML =
-      '<div style="box-sizing:border-box;max-width:300px;background:#f7f3ec;border:1px solid #e2d8c9;border-radius:4px;padding:18px 20px;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;color:#211b16;line-height:1.4">' +
-      '<div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#b5462b;margin-bottom:6px">Expo 2027 Belgrade</div>' +
+      '<div style="box-sizing:border-box;max-width:300px;background:' + t.bg + ";border:1px solid " + t.fg + '26;border-top:4px solid ' + t.accent + ';border-radius:6px;padding:18px 20px;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;color:' + t.fg + ';line-height:1.4">' +
+      '<div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:' + t.accent + ';margin-bottom:6px">Expo 2027 Belgrade</div>' +
       (s.num !== null
-        ? '<div style="font-size:44px;font-weight:800;letter-spacing:-0.02em;color:#8f3621;line-height:1">' + s.num + "</div>"
+        ? '<div style="font-size:44px;font-weight:800;letter-spacing:-0.02em;color:' + t.fg + ';line-height:1">' + s.num + "</div>"
         : "") +
-      '<div style="font-size:14px;color:#6b5f54;margin-top:4px">' + s.label + "</div>" +
-      '<div style="font-size:12px;color:#6b5f54;margin-top:10px;border-top:1px solid #e2d8c9;padding-top:8px">Countdown by <a href="' +
-      LINK +
-      '" target="_blank" rel="noopener" style="color:#8f3621;text-decoration:underline">BelgradeBest</a> — the honest English guide to Belgrade</div>' +
+      '<div style="font-size:14px;opacity:.75;margin-top:4px">' + s.label + "</div>" +
+      '<div style="font-size:12px;opacity:.75;margin-top:10px;border-top:1px solid ' + t.fg + '26;padding-top:8px">Countdown by <a href="' + LINK + '" target="_blank" rel="noopener" style="color:' + t.accent + ';text-decoration:underline">BelgradeBest</a> — the honest English guide to Belgrade</div>' +
       "</div>";
   }
 
@@ -55,13 +63,13 @@
     for (var i = 0; i < targets.length; i++) {
       targets[i].setAttribute("data-bb-rendered", "1");
       render(targets[i]);
-      // refresh hourly so a tab left open ticks over at midnight
       (function (el) {
         setInterval(function () { render(el); }, 36e5);
       })(targets[i]);
     }
   }
 
+  window.BBExpoCountdown = { render: render };
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", mount);
   } else {
