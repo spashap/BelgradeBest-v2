@@ -2,6 +2,8 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { SITE, CONFIG } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
+import { listingsForLeg, childrenOf, listingHref, listingsIndexable } from "../lib/listings";
+import { metaTrim } from "../lib/text";
 
 // Static RSS 2.0 feed of the latest articles — hand-rolled (no dependency), so
 // it builds with the rest of the static site. Excludes hidden (visible:false)
@@ -20,23 +22,51 @@ const rfc822 = (iso: string): string => {
 export const GET: APIRoute = async () => {
   const articles = (await getCollection("articles"))
     .filter((a) => a.data.visible !== false && a.data.noindex !== true)
-    .sort((a, b) => +new Date(b.data.lastUpdated) - +new Date(a.data.lastUpdated))
+    .map((a) => ({
+      title: a.data.title,
+      href: `/${a.data.leg}/${a.data.slug}`,
+      date: a.data.lastUpdated,
+      category: clusterBySlug(a.data.leg)?.title ?? a.data.leg,
+      description: a.data.description,
+    }));
+
+  // Published pavilion/listing profiles join the feed (gated on the same
+  // indexable flag as the pages themselves) — answer engines and subscribers
+  // see pavilion updates the same way they see article updates.
+  const listings = listingsIndexable
+    ? listingsForLeg("expo-2027").flatMap((p) => [
+        {
+          title: `${p.name} at Expo 2027 Belgrade`,
+          href: listingHref(p),
+          date: p.updated,
+          category: "Expo 2027 pavilions",
+          description: metaTrim(p.summary),
+        },
+        ...childrenOf("expo-2027", p.slug).map((c) => ({
+          title: `${c.name} at Expo 2027 Belgrade`,
+          href: listingHref(c),
+          date: c.updated,
+          category: "Expo 2027 pavilions",
+          description: metaTrim(c.summary),
+        })),
+      ])
+    : [];
+
+  const entries = [...articles, ...listings]
+    .sort((a, b) => +new Date(b.date) - +new Date(a.date))
     .slice(0, 50);
 
-  const items = articles
-    .map((a) => {
-      const href = `/${a.data.leg}/${a.data.slug}`;
-      const url = SITE.origin + href;
-      const cluster = clusterBySlug(a.data.leg);
-      const category = cluster?.title ?? a.data.leg;
+  const items = entries
+    .map((e) => {
+      const url = SITE.origin + e.href;
       return [
         "    <item>",
-        `      <title>${esc(a.data.title)}</title>`,
+        `      <title>${esc(e.title)}</title>`,
         `      <link>${esc(url)}</link>`,
         `      <guid isPermaLink="true">${esc(url)}</guid>`,
-        `      <pubDate>${rfc822(a.data.lastUpdated)}</pubDate>`,
-        `      <category>${esc(category)}</category>`,
-        `      <description>${esc(a.data.description)}</description>`,
+        `      <pubDate>${rfc822(e.date)}</pubDate>`,
+        `      <category>${esc(e.category)}</category>`,
+        `      <description>${esc(e.description)}</description>`,
         "    </item>",
       ].join("\n");
     })

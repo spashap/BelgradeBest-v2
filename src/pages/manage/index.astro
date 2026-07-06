@@ -1,0 +1,142 @@
+---
+export const prerender = false;
+// The self-serve business portal (Phase 2 of KB/platform/PLATFORM-PLAN.md).
+// Auth = magic link: /manage?token=<64-hex> issued from the admin category
+// screen; the listing stores only the sha256. No accounts, no passwords.
+// Sanctioned server-rendered surface alongside /admin (see CLAUDE.md).
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import Note from "../../components/Note.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { listingHref } from "../../lib/listings";
+import { findByToken } from "../../lib/admin/platform-store";
+
+Astro.response.headers.set("X-Robots-Tag", "noindex, nofollow");
+
+const token = Astro.url.searchParams.get("token") ?? "";
+const saved = Astro.url.searchParams.get("saved") === "1";
+const error = Astro.url.searchParams.get("error");
+const listing = token ? await findByToken(token) : null;
+
+const meta = pageMetadata({
+  title: "Manage your page",
+  description: "Edit your business page on BelgradeBest.",
+  path: "/manage",
+  noindex: true,
+});
+
+const aboutText = (listing?.blocks?.about ?? []).join("\n\n");
+const liveUrl = listing ? listingHref(listing) : "";
+---
+
+<BaseLayout meta={meta}>
+  <PageIntro
+    eyebrow="BelgradeBest · business portal"
+    title={listing ? `Manage: ${listing.name}` : "Manage your page"}
+    lede={listing
+      ? "Edit the text and photos below and hit save — your changes go live on the public page within about two minutes. No account needed; keep your private link safe."
+      : "This page needs your private manage link."}
+  />
+
+  <Container variant="read">
+    {!listing ? (
+      <Note tone="warn">
+        <strong>This link isn't valid (or was rotated).</strong> Manage links are private and
+        can be re-issued — write to us at{" "}
+        <a href="mailto:admin@belgradebest.com">admin@belgradebest.com</a> from your business
+        address and we'll send you a fresh one. Or learn what this is about on{" "}
+        <a href="/for-businesses">for businesses</a>.
+      </Note>
+    ) : (
+      <>
+        {saved && (
+          <Note tone="ok">
+            <strong>Saved.</strong> Your page is rebuilding — changes appear at{" "}
+            <a href={liveUrl}>{liveUrl}</a> within ~2 minutes.
+          </Note>
+        )}
+        {error && (
+          <Note tone="warn">
+            <strong>That didn't save:</strong> {error}. Please try again — or email{" "}
+            <a href="mailto:admin@belgradebest.com">admin@belgradebest.com</a>.
+          </Note>
+        )}
+
+        <SectionHead
+          title="Your page content"
+          intro="Plain text only (no HTML). The summary is the first paragraph visitors read; the description below it can be several paragraphs — separate them with an empty line."
+        />
+        <form method="post" action="/api/manage/save" class="c-listing-form" id="bb-manage-form">
+          <input type="hidden" name="token" value={token} />
+          <input type="hidden" name="leg" value={listing.leg} />
+          <input type="hidden" name="slug" value={listing.slug} />
+          <label>
+            Summary (1–2 sentences, min. 80 characters) *
+            <textarea name="summary" rows="3" required minlength="80" maxlength="400">{listing.summary}</textarea>
+          </label>
+          <label>
+            About your business (min. 200 characters) *
+            <textarea name="about" rows="10" required minlength="200" maxlength="4000">{aboutText}</textarea>
+          </label>
+          <label>
+            Website (https://…)
+            <input type="text" name="website" value={listing.links?.website ?? ""} maxlength="200" />
+          </label>
+
+          <SectionHead title="Photos" intro="Up to three. They're resized in your browser before upload — any normal photo works." />
+          {[1, 2, 3].map((n) => (
+            <label>
+              Photo {n}{listing.images?.[n - 1] ? " (replaces the current one)" : ""}
+              <input type="file" accept="image/*" data-photo={n} />
+              <input type="hidden" name={`img${n}`} value="" />
+            </label>
+          ))}
+          {listing.images?.length ? (
+            <p class="u-stack-md">
+              Current photos:{" "}
+              {listing.images.map((src, i) => (
+                <a href={src} target="_blank" rel="noopener">photo {i + 1}</a>
+              ))}
+            </p>
+          ) : null}
+
+          <button class="c-btn" type="submit" id="bb-save">Save — goes live in ~2 minutes</button>
+        </form>
+
+        <Note>
+          <strong>What happens when you save:</strong> your page is marked "managed by the{" "}
+          {listing.shortName ?? listing.name} team", the content above replaces ours, and the
+          site republishes automatically. We're notified of every change and can help if
+          anything looks wrong — nothing you do here is irreversible.
+        </Note>
+      </>
+    )}
+  </Container>
+
+  <script is:inline>
+    // Client-side photo resize: longest edge ≤1600px, JPEG ~0.82 → base64 into
+    // the hidden field. Keeps uploads small enough for the serverless limit.
+    document.querySelectorAll("[data-photo]").forEach(function (input) {
+      input.addEventListener("change", function () {
+        var file = input.files && input.files[0];
+        if (!file) return;
+        var img = new Image();
+        img.onload = function () {
+          var max = 1600;
+          var scale = Math.min(1, max / Math.max(img.width, img.height));
+          var c = document.createElement("canvas");
+          c.width = Math.round(img.width * scale);
+          c.height = Math.round(img.height * scale);
+          c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+          var url = c.toDataURL("image/jpeg", 0.82);
+          if (url.length > 900000) url = c.toDataURL("image/jpeg", 0.6);
+          input.parentElement.querySelector('input[type="hidden"]').value = url;
+          URL.revokeObjectURL(img.src);
+        };
+        img.src = URL.createObjectURL(file);
+      });
+    });
+  </script>
+</BaseLayout>

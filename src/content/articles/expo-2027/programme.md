@@ -7,7 +7,7 @@ description: "Expo 2027 programme: pavilions, National Days, sport and music und
 lede: "Expo 2027's theme — Play for Humanity: Sport and Music for All — frames the official programme. This page is your guide to what's on: the pavilions and themed areas, the sport and music programming, the National Days, and an honest account of which dates, opening hours and headline acts are not yet published."
 heroLabel: "Expo 2027 programme / hero"
 heroAlt: "The Expo 2027 promenade in Belgrade at golden hour — sport, music and play"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-07-06"
 order: 3
 visible: true
 intent: "both"
@@ -52,9 +52,11 @@ The official theme of Expo 2027 is **"Play for Humanity: Sport and Music for All
 The official concept describes three thematic pavilions plus a Forum:
 
 - The **Power of Play Pavilion** is built around the science and psychology of play.
-- The **Play for Progress Pavilion** focuses on innovation and technological breakthroughs driven by playful exploration. (Germany's pavilion tender, for example, explicitly references contributing under this "Play for Progress" sub-theme.)
-- The **Play Together Pavilion** treats sport, music and collaborative play as tools for social connection.
+- The **Play for Progress Pavilion** focuses on innovation and technological breakthroughs driven by playful exploration. ([Germany's pavilion](/expo-2027/pavilions/germany), for example, explicitly contributes under this "Play for Progress" sub-theme.)
+- The **Play Together Pavilion** treats sport, music and collaborative play as tools for social connection — the same sub-theme [Italy has chosen](/expo-2027/pavilions/italy) for its national pavilion.
 - The **Forum** hosts talks, panels, workshops and networking on play's role in society.
+
+The thematic pavilions sit alongside the 130-plus **national pavilions**, announced country by country — we profile each one with sourced facts in the [pavilion directory](/expo-2027/pavilions), from [Japan's](/expo-2027/pavilions/japan) fully published plan to host [Serbia's](/expo-2027/pavilions/serbia) ~€40 million permanent flagship.
 
 Alongside the pavilions, the Expo highlights several thematic programmes that run as strands through the whole event:
 

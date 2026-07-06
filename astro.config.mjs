@@ -46,7 +46,8 @@ for (const p of pagesData.pages) if (p.updated) LASTMOD[`/${p.slug}`] = iso(p.up
 // bump it when the page content changes (never let these fall to BUILD_DATE).
 LASTMOD["/expo-2027/tracker"] = iso(expoParticipants.updated);
 LASTMOD["/expo-2027/countdown"] = iso("2026-07-05");
-LASTMOD["/for-businesses"] = iso("2026-07-05");
+LASTMOD["/expo-2027/corporate-area"] = iso("2026-07-06");
+LASTMOD["/for-businesses"] = iso("2026-07-06");
 {
   const g = maxDate(glossaryData.terms.map((t) => t.updated).filter(Boolean));
   if (g) LASTMOD["/glossary"] = g;
@@ -77,6 +78,10 @@ const LEG_SLUGS = new Set(schema.legs.map((l) => l.slug));
 // A hidden leg/slug is removed from every public surface, so it must not appear
 // in the sitemap either. Unhiding re-adds it automatically.
 const NOINDEX = new Set();
+// The business manage portal (server-rendered, token-gated) must never be
+// indexed or listed — the sitemap integration would otherwise include the
+// bare route.
+NOINDEX.add("/manage");
 if (config.seo.homeNoindex) NOINDEX.add("");
 for (const leg of schema.legs) {
   const legHidden = leg.visible === false;

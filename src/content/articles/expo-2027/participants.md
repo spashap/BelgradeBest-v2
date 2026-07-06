@@ -75,14 +75,16 @@ The exhibition is laid out in **three main zones**:
 
 - **The Thematic Area** — built around Expo 2027's pillars of education, music, sport and innovation, housing the thematic pavilions where the central "Play" theme is told.
 - **The International Participant Area** — where the participating countries' national pavilions sit. This zone becomes the new permanent home of the Belgrade Fair and is described as housing the 130-plus national pavilions.
-- **The Best Practice and Corporate Area** — a showcase of real-world solutions (cities, companies and communities) rather than concepts, reported as around 45 modular timber pavilions arranged along the main promenade on a uniform 9×9-metre grid, with green roofs.
+- **The Best Practice and Corporate Area** — a showcase of real-world solutions (cities, companies and communities) rather than concepts, reported as around 45 modular timber pavilions arranged along the main promenade on a uniform 9×9-metre grid, with green roofs. We cover this zone — who's in it and how companies join — in our [Corporate & Best Practice Area guide](/expo-2027/corporate-area).
 
 The three zones are designed to interconnect for a seamless visitor route through the site. A handful of countries have signalled their pavilion plans — we profile each one, fact by sourced fact, in our [pavilion directory](/expo-2027/pavilions) — all of which should be read as announced intentions rather than finished designs:
 
-- **Germany** launched a public tender for its temporary pavilion, reported at around €7.5 million, contributing under the sub-theme "Play for Progress."
-- **Italy** is reported by its foreign ministry and its ambassador to Serbia to be preparing one of the largest pavilions, focused on people — meeting Italian athletes, musicians, researchers and students — built on five principles.
-- The **UAE** has confirmed participation, framing it as strengthening international cooperation.
-- **Saudi Arabia** signed its participation contract, with a pavilion reportedly planned around Vision 2030 themes of sport, culture and creative industries.
+- **[Germany](/expo-2027/pavilions/germany)** ran a ~€7.5 million tender for its 972 m² pavilion under the sub-theme "Play for Progress" — implementation was awarded to Messe Düsseldorf in May 2026.
+- **[Italy](/expo-2027/pavilions/italy)** signed its pavilion contract in April 2026, planning an immersive experience around "Play together", with a dedicated space for Italy's regions.
+- The **[UAE](/expo-2027/pavilions/united-arab-emirates)** has confirmed participation, framing it as strengthening international cooperation.
+- **[Saudi Arabia](/expo-2027/pavilions/saudi-arabia)** signed its participation contract, with a pavilion reportedly planned around Vision 2030 themes of sport, culture and creative industries.
+
+Other pavilions we profile include [Japan](/expo-2027/pavilions/japan) (the most developed public plan), host [Serbia](/expo-2027/pavilions/serbia) (the ~€40 million permanent flagship), the [USA](/expo-2027/pavilions/united-states), [Switzerland](/expo-2027/pavilions/switzerland) and more — see the full [pavilion directory](/expo-2027/pavilions).
 
 ## What's still unknown
 

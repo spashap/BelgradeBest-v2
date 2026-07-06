@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import Note from "../../components/Note.astro";
+import Faq from "../../components/Faq.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { ogImage } from "../../lib/og";
+import { SITE, EXPO, CONFIG } from "../../lib/site";
+import { articleSchema, breadcrumbSchema, faqSchema } from "../../lib/schemas";
+
+// The only substantive public explainer of the Expo's corporate zone — an SEO
+// page ("expo 2027 corporate pavilion" queries), the landing page for
+// corporate-booth outreach, and the natural home of future occupant profiles.
+// lastmod lives in astro.config.mjs — bump it when this page changes.
+const PATH = "/expo-2027/corporate-area";
+const UPDATED = "2026-07-06";
+
+const meta = pageMetadata({
+  title: "Expo 2027 Corporate & Best Practice Area — how companies exhibit",
+  description:
+    "The corporate zone of Expo 2027 Belgrade: ~45 modular timber pavilions on a 9×9 m grid, who has joined so far, how companies get a pavilion, and who to talk to — sourced and updated.",
+  path: PATH,
+  image: ogImage("corporate-area"),
+});
+
+const crumbs = [
+  { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+  { name: EXPO.shortName, href: "/expo-2027" },
+  { name: "Corporate & Best Practice Area" },
+];
+
+const faqs = [
+  {
+    question: "What is the Best Practice and Corporate Area at Expo 2027?",
+    answer:
+      "One of the three zones of the 25-hectare Expo site: a showcase of real-world solutions from companies, cities and communities — rather than concepts — reported as around 45 modular timber pavilions arranged along the main promenade on a uniform 9×9-metre grid, with green roofs.",
+  },
+  {
+    question: "Which companies are exhibiting in the corporate area?",
+    answer:
+      "As of mid-2026, the only publicly named occupant is the World Expo Museum from Shanghai, which signed for a 330 m² pavilion in the zone's Art and Museum Section. The remaining occupants have not been announced — this page tracks them as they are named.",
+  },
+  {
+    question: "How does a company get a pavilion at Expo 2027?",
+    answer:
+      "Two routes are publicly documented: the organizer's partnership programme (EXPO 2027 BELGRADE d.o.o. publishes sponsor categories and a partnerships contact on its Play With Us page), and the Chamber of Commerce and Industry of Serbia (PKS), which signed an institutional partnership to recruit domestic and international companies into the corporate participants and best-practice zones.",
+  },
+  {
+    question: "What happens to the corporate pavilions after the Expo?",
+    answer:
+      "The Expo site is explicitly designed around its afterlife: the International Participant Area becomes the new Belgrade Fair, and the wider Surčin development (National Stadium, housing, transport) is planned to outlive the 93-day event. The modular timber design of the corporate pavilions fits that legacy-first approach.",
+  },
+];
+
+const schemas: object[] = [
+  articleSchema({
+    title: "Expo 2027 Corporate & Best Practice Area — how companies exhibit",
+    description: meta.description,
+    url: `${SITE.origin}${PATH}`,
+    dateModified: UPDATED,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: EXPO.shortName, url: `${SITE.origin}/expo-2027` },
+    { name: "Corporate & Best Practice Area", url: `${SITE.origin}${PATH}` },
+  ]),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow="Expo 2027 · The corporate zone"
+    title="The Corporate & Best Practice Area"
+    lede={`Alongside the national pavilions, ${EXPO.name} reserves a whole zone for companies, cities and communities showing real-world solutions — around 45 modular pavilions that most coverage of the Expo ignores. Here's what's confirmed about the zone, who has joined, and how a company gets in.`}
+  />
+
+  <Container variant="read">
+    <SectionHead title="What the zone is" />
+    <p>
+      The Expo site at {EXPO.venue} is organised into three interconnecting zones: the Thematic
+      Area (the <a href="/expo-2027/programme">official programme's</a> three thematic pavilions),
+      the International Participant Area (the <a href="/expo-2027/pavilions">national pavilions</a>,
+      which becomes the new Belgrade Fair after the event), and this one — the
+      <strong> Best Practice and Corporate Area</strong>: a showcase of working solutions from
+      companies, cities and communities rather than concepts.
+    </p>
+    <p>
+      The zone is reported as around <strong>45 modular timber pavilions</strong> arranged along
+      the main promenade on a uniform <strong>9×9-metre grid</strong>, with green roofs — with
+      structural and facade engineering by Werner Sobek AG, the firm also engineering the wider
+      site. The uniform modular design keeps corporate build costs predictable and fits the
+      Expo's legacy-first planning.
+    </p>
+
+    <SectionHead title="Who has joined so far" />
+    <p>
+      As of mid-2026, one occupant is publicly named: the
+      <a href="/expo-2027/pavilions/china/world-expo-museum"> World Expo Museum (Shanghai)</a> —
+      the official museum of the World Expo movement — which signed a memorandum on 7 May 2026
+      for a <strong>330 m² pavilion</strong> in the zone's Art and Museum Section, with an
+      exhibition on what Expo 2010 left Shanghai. The remaining pavilions' occupants have not
+      been announced; we add each one to this page and the
+      <a href="/expo-2027/pavilions"> directory</a> as it is named.
+    </p>
+
+    <SectionHead title="How a company gets a pavilion" />
+    <p>Two routes are publicly documented:</p>
+    <ul>
+      <li>
+        <strong>The organizer's partnership programme.</strong> EXPO 2027 BELGRADE d.o.o.
+        publishes its sponsor categories and benefits and runs a partnerships office — start at
+        the official{" "}
+        <a href="https://expobelgrade2027.org/en/play-with-us" rel="nofollow noopener">Play With Us</a>{" "}
+        page. Tier sponsors named so far: Telekom Srbija and Air Serbia (both Platinum).
+      </li>
+      <li>
+        <strong>The Chamber of Commerce and Industry of Serbia (PKS).</strong> Under an
+        institutional partnership with the organizer, PKS recruits domestic and international
+        companies into the corporate participants and best-practice zones and co-designs the
+        Expo's business programme, including a planned Global Business Summit.
+      </li>
+    </ul>
+
+    <Note>
+      <strong>Exhibiting or supplying the Expo?</strong> We profile every announced participant
+      — free, sourced, and claimable by your team. Get your company's page via{" "}
+      <a href="/for-businesses">for businesses</a>.
+    </Note>
+
+    <SectionHead title="Corporate & Best Practice Area — quick answers" />
+    <Faq faqs={faqs} />
+
+    <SectionHead title="Sources" />
+    <ul>
+      <li><a href="https://www.wernersobek.com/projects/expo-2027-belgrade/" rel="nofollow noopener">wernersobek.com</a> — engineering of the site incl. the 45 modular timber pavilions</li>
+      <li><a href="https://www.bie-paris.org/site/en/news-announcements/specialised-expo/world-expo-museum-to-participate-in-expo-2027-belgrade" rel="nofollow noopener">bie-paris.org</a> — World Expo Museum participation</li>
+      <li><a href="https://expobelgrade2027.org/en/news/agreement-on-institutional-partnership-signed-between-expo-2027-and-the-chamber-of-commerce-and-industry-of-serbia" rel="nofollow noopener">expobelgrade2027.org</a> — PKS institutional partnership</li>
+      <li><a href="https://expobelgrade2027.org/en/play-with-us" rel="nofollow noopener">expobelgrade2027.org/en/play-with-us</a> — partnership programme</li>
+    </ul>
+
+    <p>
+      Keep exploring: <a href="/expo-2027/pavilions">pavilion directory</a> ·{" "}
+      <a href="/expo-2027/tracker">participant tracker</a> ·{" "}
+      <a href="/expo-2027">the full Expo 2027 guide</a>
+    </p>
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

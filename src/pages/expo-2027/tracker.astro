@@ -7,6 +7,7 @@ import SectionHead from "../../components/SectionHead.astro";
 import Note from "../../components/Note.astro";
 import Schema from "../../components/Schema.astro";
 import { pageMetadata } from "../../lib/metadata";
+import { ogImage } from "../../lib/og";
 import { SITE, EXPO, CONFIG } from "../../lib/site";
 import { articleSchema, breadcrumbSchema, datasetSchema } from "../../lib/schemas";
 import {
@@ -35,6 +36,7 @@ const meta = pageMetadata({
   title: "Expo 2027 participant tracker — countries confirmed so far",
   description: `${officialCount} international participants are confirmed for Expo 2027 Belgrade, ${namedCount} countries publicly named. The independent tracker: full list by region, confirmation dates, growth timeline, and sources.`,
   path: PATH,
+  image: ogImage("tracker"),
 });
 
 const crumbs = [

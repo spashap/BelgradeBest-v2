@@ -8,6 +8,7 @@ import Snippet from "../components/Snippet.astro";
 import Note from "../components/Note.astro";
 import Schema from "../components/Schema.astro";
 import { pageMetadata } from "../lib/metadata";
+import { ogImage } from "../lib/og";
 import { SITE, CONFIG } from "../lib/site";
 import { breadcrumbSchema } from "../lib/schemas";
 
@@ -29,6 +30,7 @@ const meta = pageMetadata({
   description:
     "Stop fighting Google alone. A free page on BelgradeBest gets your business AI-validated credibility, full structured data, and a place inside a site built to rank — for Expo 2027 exhibitors, restaurants, hotels and clinics.",
   path: PATH,
+  image: ogImage("for-businesses"),
 });
 
 const crumbs = [

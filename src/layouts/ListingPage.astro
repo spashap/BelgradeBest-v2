@@ -14,6 +14,7 @@ import { pageMetadata } from "../lib/metadata";
 import { SITE, EXPO, CONFIG } from "../lib/site";
 import { articleSchema, breadcrumbSchema, faqSchema } from "../lib/schemas";
 import { metaTrim } from "../lib/text";
+import { ogImage } from "../lib/og";
 import {
   listingHref,
   listingsIndexable,
@@ -50,6 +51,8 @@ const meta = pageMetadata({
   description: metaTrim(listing.summary),
   path,
   noindex: !listingsIndexable,
+  image: ogImage(`pavilion-${listing.slug}`),
+  imageAlt: `${listing.name} at Expo 2027 Belgrade — profile on BelgradeBest`,
 });
 
 const crumbTrail = [
@@ -132,8 +135,29 @@ if (faqs.length > 0) schemas.push(faqSchema(faqs));
 
     {about.length > 0 && (
       <>
-        <SectionHead title="What's been announced" />
+        <SectionHead title={listing.claimed ? `About ${short}` : "What's been announced"} />
         {about.map((p) => <p>{p}</p>)}
+      </>
+    )}
+
+    {(listing.images ?? []).length > 0 && (
+      <>
+        <SectionHead title="Photos" />
+        <div class="c-grid">
+          {(listing.images ?? []).map((src, i) => (
+            <figure>
+              <img
+                src={src}
+                alt={`${listing.name} — photo ${i + 1}`}
+                loading="lazy"
+                decoding="async"
+                width="640"
+                height="480"
+                style="width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line)"
+              />
+            </figure>
+          ))}
+        </div>
       </>
     )}
 

@@ -98,6 +98,24 @@ const short = category.shortName ?? category.name;
       {" "}<b>{short}</b> page and frames the business's own page as reserved — it goes live when
       they claim it (or when we add real content).
     </p>
+    <details>
+      <summary class="muted">Bulk import (paste CSV) — for when exhibitor lists publish</summary>
+      <form method="post" action="/api/admin/platform">
+        <input type="hidden" name="action" value="import" />
+        <input type="hidden" name="leg" value={leg} />
+        <input type="hidden" name="type" value="booth" />
+        <input type="hidden" name="parent" value={catSlug} />
+        <input type="hidden" name="back" value={BACK} />
+        <textarea name="csv" placeholder={"name,email,person,website,notes\nAcme d.o.o.,info@acme.rs,Ana Petrović,https://acme.rs,from exhibitor list PDF"}></textarea>
+        <div class="row" style="margin-top:8px">
+          <button>Import rows</button>
+          <span class="muted">
+            Header row optional; quoted fields supported. Existing slugs are skipped
+            (append-only) — every row becomes an unpublished booth stub under <b>{short}</b>.
+          </span>
+        </div>
+      </form>
+    </details>
   </div>
 
   <h2>
@@ -166,6 +184,24 @@ const short = category.shortName ?? category.name;
                 {mailto ? <a href={mailto}>open</a> : <span class="muted">no email</span>}
                 {" · "}
                 <button class="ghost" type="button" data-copy-draft data-subject={draft.subject} data-body={draft.body}>copy</button>
+                <div class="row" style="margin-top:4px">
+                  <form method="post" action="/api/admin/platform" class="inline">
+                    <input type="hidden" name="action" value="token" />
+                    <input type="hidden" name="leg" value={b.leg} />
+                    <input type="hidden" name="slug" value={b.slug} />
+                    <input type="hidden" name="back" value={BACK} />
+                    <button class="ghost">{b.manage?.tokenHash ? "rotate link" : "manage link"}</button>
+                  </form>
+                  {b.manage?.tokenHash ? (
+                    <form method="post" action="/api/admin/platform" class="inline">
+                      <input type="hidden" name="action" value="revoke-token" />
+                      <input type="hidden" name="leg" value={b.leg} />
+                      <input type="hidden" name="slug" value={b.slug} />
+                      <input type="hidden" name="back" value={BACK} />
+                      <button class="ghost">revoke</button>
+                    </form>
+                  ) : null}
+                </div>
               </td>
               <td class="muted">{b.updated}</td>
             </tr>

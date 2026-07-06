@@ -7,6 +7,7 @@ import SectionHead from "../../../components/SectionHead.astro";
 import Note from "../../../components/Note.astro";
 import Schema from "../../../components/Schema.astro";
 import { pageMetadata } from "../../../lib/metadata";
+import { ogImage } from "../../../lib/og";
 import { SITE, EXPO, CONFIG } from "../../../lib/site";
 import { breadcrumbSchema } from "../../../lib/schemas";
 import { listingsForLeg, listingHref, listingsIndexable, newestUpdated } from "../../../lib/listings";
@@ -26,6 +27,7 @@ const meta = pageMetadata({
   description: `National pavilions of Expo 2027 Belgrade: which of the ${participants.length} publicly named countries have announced pavilion plans, themes and designs — profiled and sourced.`,
   path: PATH,
   noindex: !listingsIndexable,
+  image: ogImage("pavilions"),
 });
 
 const crumbs = [
@@ -122,6 +124,7 @@ const rows = participants.map((p) => ({
 
     <p>
       Keep exploring: <a href="/expo-2027/tracker">participant tracker</a> ·{" "}
+      <a href="/expo-2027/corporate-area">the Corporate &amp; Best Practice Area</a> ·{" "}
       <a href="/expo-2027/participants">who's coming</a> ·{" "}
       <a href="/expo-2027">the full Expo 2027 guide</a>
     </p>

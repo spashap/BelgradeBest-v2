@@ -56,9 +56,10 @@ export type Listing = {
   links?: { website?: string | null; sources?: ListingSource[] };
   images?: string[];
   faqs?: { question: string; answer: string }[]; // rendered + FAQPage JSON-LD
-  // ── operator-only (admin/outreach; NEVER rendered publicly) ──
+  // ── operator-only (admin/outreach/manage; NEVER rendered publicly) ──
   contact?: { email?: string; person?: string; source?: string };
   outreach?: { status?: OutreachStatus; sentAt?: string; repliedAt?: string; notes?: string };
+  manage?: { tokenHash?: string; issued?: string }; // /manage magic-link auth
 };
 
 // URL section segment per leg (e.g. /expo-2027/pavilions/<slug>). New legs add
@@ -83,10 +84,13 @@ export const allListings: Listing[] = all
   .sort((a, b) => a.leg.localeCompare(b.leg) || a.name.localeCompare(b.name, "en"));
 
 // Thin-content guard: a listing publishes only when it would make a real page.
-// (Pavilions carry no images yet, so the image requirement starts with business
-// types in Phase 4.) Sub-threshold listings stay as stubs awaiting data/claim.
+// Editorial (unclaimed) listings need sourced substance: summary + about +
+// facts. CLAIMED listings publish on the business's own content (summary +
+// about; facts optional — a restaurant owner won't write sourced fact rows).
+// Keep the editorial rule in sync with scripts/gen-listing-og.mjs `publishes`.
 export function validListing(l: Listing): boolean {
   const aboutLen = (l.blocks?.about ?? []).join(" ").length;
+  if (l.claimed) return Boolean(l.name && l.summary && l.summary.length >= 80 && aboutLen >= 200);
   const facts = l.blocks?.facts?.length ?? 0;
   return Boolean(l.name && l.summary && l.summary.length >= 80 && aboutLen >= 300 && facts >= 2);
 }

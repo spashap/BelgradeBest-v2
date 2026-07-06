@@ -243,8 +243,9 @@ build scripts once (`npm approve-scripts esbuild`, `sharp`; `protobufjs` in admi
   in lockstep if you ever must).
 - Do not move the production domain to V2 without the owner's explicit go (old
   project is the rollback).
-- Do not make PUBLIC pages server-rendered — only `/admin` + `/api/admin/*` may set
-  `prerender = false`. Keep the public site static.
+- Do not make PUBLIC pages server-rendered — only `/admin` + `/api/admin/*`,
+  the business portal `/manage` + `/api/manage/*`, and `/api/listing-request`
+  may set `prerender = false`. Keep the public site static.
 - Do not deploy `scripts/` (`.vercelignore`'d). Do not leave `/admin` write-enabled
   AND password-less for long — set `ADMIN_PASSWORD` once the token is wired.
 ```

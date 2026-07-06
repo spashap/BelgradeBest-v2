@@ -36,24 +36,29 @@ const esc = (s) =>
 const WORDMARK_LEAD = "Belgrade";
 const WORDMARK_ACCENT = "Best";
 const TAGLINE = "An honest English guide to Belgrade";
-const SUB = "What to see · Where to stay · Food & nightlife · Expo 2027";
+const SUB = "What to see · Where to stay · Food · Expo 2027";
 
+// CROP-SAFE LAYOUT: some apps (chat previews, mobile thumbnails) crop the
+// 1200×630 card to a CENTER SQUARE (~630 px wide), so all text is
+// center-anchored and sized to fit within ~x 285–915. Decorative full-width
+// bars may crop; text never does. (Matches scripts/gen-listing-og.mjs.)
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
   <rect width="${W}" height="${H}" fill="${PAPER}"/>
   <rect x="0" y="0" width="${W}" height="14" fill="${ACCENT}"/>
-  <rect x="80" y="120" width="120" height="6" fill="${ACCENT}"/>
-  <text x="80" y="300" font-family="Inter, Arial, Helvetica, sans-serif" font-size="104" font-weight="800" fill="${INK}">${esc(
+  <text x="600" y="170" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" font-weight="600" letter-spacing="4" fill="${ACCENT}">BELGRADE, HONESTLY</text>
+  <rect x="540" y="200" width="120" height="5" fill="${ACCENT}"/>
+  <text x="600" y="330" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="84" font-weight="800" fill="${INK}">${esc(
     WORDMARK_LEAD,
   )}<tspan fill="${ACCENT}">${esc(WORDMARK_ACCENT)}</tspan></text>
-  <text x="82" y="370" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="${INK}">${esc(
+  <text x="600" y="410" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="${INK_SOFT}">${esc(
     TAGLINE,
   )}</text>
-  <text x="82" y="430" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" fill="${INK_SOFT}">${esc(
+  <text x="600" y="465" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" fill="${INK_SOFT}">${esc(
     SUB,
   )}</text>
-  <line x1="80" y1="520" x2="${W - 80}" y2="520" stroke="${LINE}" stroke-width="2"/>
-  <text x="80" y="565" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" font-weight="600" fill="${ACCENT}">belgradebest.com</text>
+  <line x1="200" y1="524" x2="1000" y2="524" stroke="${LINE}" stroke-width="2"/>
+  <text x="600" y="572" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="600" fill="${ACCENT}">belgradebest.com</text>
 </svg>`;
 
 async function main() {

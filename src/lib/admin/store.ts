@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync, renameSync } from "node:fs";
-import { join } from "node:path";
+import { join, dirname } from "node:path";
 import { env } from "./env";
 // Bundled snapshots used as a read fallback on Vercel serverless, where the raw
 // source JSON files are not present on disk (so readFileSync would throw).
@@ -80,6 +80,31 @@ export async function putFile(rel: string, text: string, message: string, sha: s
   const tmp = `${abs}.tmp-${process.pid}`;
   writeFileSync(tmp, text, "utf8");
   renameSync(tmp, abs);
+}
+
+// Binary sibling of putFile: content arrives already base64-encoded (image
+// uploads from the manage portal). GitHub mode PUTs it directly; local mode
+// decodes to disk. sha=null creates; pass a sha to overwrite.
+export async function putBinary(rel: string, base64: string, message: string, sha: string | null): Promise<void> {
+  if (usingGitHub()) {
+    const url = `https://api.github.com/repos/${ghRepo()}/contents/${rel}`;
+    const res = await fetch(url, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${ghToken()}`,
+        Accept: "application/vnd.github+json",
+        "User-Agent": "belgradebest-v2-admin",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message, content: base64, branch: ghBranch(), ...(sha ? { sha } : {}) }),
+    });
+    if (!res.ok) throw new Error(`GitHub PUT ${rel} failed: ${res.status} ${await res.text()}`);
+    return;
+  }
+  const abs = join(process.cwd(), rel);
+  const { mkdirSync } = await import("node:fs");
+  mkdirSync(dirname(abs), { recursive: true });
+  writeFileSync(abs, Buffer.from(base64, "base64"));
 }
 
 // List a directory (names + kind). GitHub mode reads the Contents API; local

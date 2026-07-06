@@ -8,6 +8,7 @@ import Snippet from "../../components/Snippet.astro";
 import Note from "../../components/Note.astro";
 import Schema from "../../components/Schema.astro";
 import { pageMetadata } from "../../lib/metadata";
+import { ogImage } from "../../lib/og";
 import { SITE, EXPO, CONFIG } from "../../lib/site";
 import { breadcrumbSchema } from "../../lib/schemas";
 
@@ -24,6 +25,7 @@ const meta = pageMetadata({
   description:
     "A free, no-tracking countdown to Expo 2027 Belgrade (opens 15 May 2027) you can embed on any website with two lines of HTML. No cookies, no scripts phoning home.",
   path: PATH,
+  image: ogImage("countdown"),
 });
 
 const crumbs = [

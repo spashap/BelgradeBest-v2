@@ -4,6 +4,8 @@ import { SITE, CONFIG } from "../lib/site";
 import { clusters } from "../lib/clusters";
 import { validTerms, glossarySection } from "../lib/glossary";
 import { validAreas, areaSection } from "../lib/areas";
+import { listingsForLeg, childrenOf, listingHref, listingsIndexable } from "../lib/listings";
+import { metaTrim } from "../lib/text";
 
 // /llms.txt — a clean, link-first map of the site for LLM answer engines
 // (ChatGPT, Perplexity, Google AI Overviews, Claude). Follows the llms.txt
@@ -83,6 +85,38 @@ export const GET: APIRoute = async () => {
       lines.push("");
       for (const a of areas) {
         lines.push(`- [${clean(a.name)}](${SITE.origin}/${areaSection.slug}/${a.slug}): ${clean(a.lede)}`);
+      }
+      lines.push("");
+    }
+  }
+
+  // Expo 2027 platform pages: the pavilion directory + data assets. Gated on
+  // the listings indexable flag, like the other programmatic sets.
+  if (listingsIndexable) {
+    const pavilions = listingsForLeg("expo-2027");
+    if (pavilions.length) {
+      lines.push("## Expo 2027 pavilions & data");
+      lines.push("");
+      lines.push(
+        clean(
+          "Sourced profiles of national pavilions at Expo 2027 Belgrade (theme, design, budget, status), plus the independent participant tracker with the full named-country list and growth timeline.",
+        ),
+      );
+      lines.push("");
+      lines.push(
+        `- [Expo 2027 participant tracker](${SITE.origin}/expo-2027/tracker): The official participant count, every publicly named country by region, and the growth timeline — sourced and downloadable as JSON.`,
+      );
+      lines.push(
+        `- [Pavilion directory](${SITE.origin}/expo-2027/pavilions): Every named participant country, with profiles for pavilions that have announced plans.`,
+      );
+      lines.push(
+        `- [Corporate & Best Practice Area](${SITE.origin}/expo-2027/corporate-area): The Expo's corporate zone — ~45 modular pavilions, who has joined, and how companies get in.`,
+      );
+      for (const p of pavilions) {
+        lines.push(`- [${clean(p.name)}](${SITE.origin}${listingHref(p)}): ${clean(metaTrim(p.summary, 140))}`);
+        for (const c of childrenOf("expo-2027", p.slug)) {
+          lines.push(`- [${clean(c.name)}](${SITE.origin}${listingHref(c)}): ${clean(metaTrim(c.summary, 140))}`);
+        }
       }
       lines.push("");
     }

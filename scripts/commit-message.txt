@@ -1,48 +1,80 @@
-Prospects: process 2026-07-06 Perplexity deep-research run (+7, UAE gap filled)
+Platform: /manage claim portal, CSV import, corporate-area page, OG cards,
+feeds + internal links, tracker-news playbook
 
-Owner ran the runbook's external-research prompt on Perplexity Deep Research;
-results verified by spot-check and processed per
-KB/platform/PROSPECT-RESEARCH-RUNBOOK.md. Audit record:
-KB/platform/research/2026-07-06-perplexity-prospects.md.
+Seven items in the owner's chosen order (KB plan + CLAUDE.md updated).
 
-Verification before seeding (the treat-as-C-until-checked rule):
-- UAE Commissioner General VERIFIED A on mofa.gov.ae: H.E. Ahmed Hatem
-  Almenhali (supersedes the earlier press spelling "Ahmed Barghash Al
-  Menhali") — our UAE gatekeeper gap is filled.
-- SVORA's "Official Pavilion Contractor" positioning confirmed on its own
-  page title; caveat recorded that "official" is self-description.
-- AHK Serbien's published email source page now 404s — email seeded with an
-  unverified-current caveat.
+1) Internal links: expo articles now link the pavilion pages — participants.md
+   (country bullets -> profiles, +Germany/Italy facts refreshed), programme.md
+   (thematic-pavilion bullets -> Germany/Italy; new national-pavilions
+   paragraph), guide.md (participants section rewritten: 139 count, tracker +
+   pavilion links; FAQ count fixed). lastUpdated bumped on all three.
 
-Seeded (7 prospects + 1 category, all unpublished stubs):
-- svora, alchemy-projects (world-expo specialist: UAE Dubai 2020 / UK Astana
-  2017 / USA Osaka 2025 pavilions; opened a Belgrade entity for Expo 2027),
-  belgrade-fair (pre-Expo showroom venue), ahk-serbien (German-SME chamber
-  gatekeeper) under partners-and-suppliers;
-- aleatek-studio under serbia (Architizer credits it as Serbia-pavilion
-  architect w/ PowerChina Serbia as GC — credibility C, corroborate before
-  outreach/publishing);
-- uae-embassy-commissioner under united-arab-emirates;
-- turkmenistan-pavilion category + turkmenistan-ministry-trade agency
-  (pavilion tender closed 13 Apr 2026, winner unknown — watch).
+2) Feeds: /rss.xml now includes published pavilion/exhibitor profiles (gated
+   on listingsIndexable) sorted into the same 50-item stream; /llms.txt gains
+   an "Expo 2027 pavilions & data" section (tracker, directory, corporate
+   area, every published profile incl. children).
 
-Patched existing prospects: pks-chamber (A-grade role: recruits companies
-into the corporate participants + best-practice zones, Global Business
-Summit — THE corporate-area booth gatekeeper), nussli-group (contact person:
-Gökhan Yilmaz, Director Expo Division), italy-commissariat (full sponsorship
-tiers Bronze EUR 5-25k -> Platinum 100k+, PEC address, call PDF).
+3) New page /expo-2027/corporate-area — the only substantive public explainer
+   of the Best Practice & Corporate Area (~45 modular timber pavilions, 9x9 m
+   grid, Werner Sobek engineering; WEM as first named occupant; the two
+   documented routes in: organizer partnerships + PKS). Article + FAQPage +
+   Breadcrumb JSON-LD; linked from participants.md + pavilion hub; in
+   sitemap w/ hand-bumped lastmod.
 
-Public pages (A-grade facts only, updated bumped): World Expo Museum child
-page (MoU signed 7 May 2026 Shanghai; Expo 2010 original materials; official
-website link) and UAE pavilion (Commissioner General fact, MOFA source).
+4) OG social cards: new scripts/gen-listing-og.mjs -> public/images/og/
+   (18 cards: every published listing + tracker/pavilions/corporate-area/
+   countdown/for-businesses). CROP-SAFE: all text center-anchored and sized to
+   survive a worst-case CENTER-SQUARE thumbnail crop (verified by cropping the
+   longest-title card to 630x630 and inspecting); overflow words merge (never
+   dropped) with auto font-shrink. Wired via new lib/og.ts (build-time
+   existsSync -> pageMetadata image) on ListingPage + the five fixed pages.
 
-Runbook updated: last-run + external-research channel documented, new
-sources (country MFA mission pages pattern, partners/sponsor-tiers PDF,
-business.com.tm, architizer-as-C), watch list refreshed (Turkmenistan winner,
-Serbia pavilion GC/architect corroboration, PKS as corporate-zone recruiter).
+5) Bulk CSV importer: importListings() in platform-store (quoted-field CSV
+   parser, optional header, per-row errors don't abort, existing slugs
+   skipped) + action=import on /api/admin/platform + paste-textarea block on
+   the admin category screen. Ready for exhibitor-list day.
 
-Verified: 54 listing JSONs parse, build clean, public pavilion pages
-unchanged at 13 + child, WEM + UAE enrichments render, zero contact leakage
-in public HTML.
+6) /manage business portal (Phase 2 core):
+   - Magic-link auth: issueManageToken()/revokeManageToken() (raw token shown
+     ONCE on an admin response page w/ copy button; sha256 stored in the
+     listing; rotate + revoke buttons per booth row), findByToken() +
+     constant-time tokenMatches().
+   - /manage edit page (server-rendered, X-Robots-Tag + meta noindex, kept out
+     of the sitemap via NOINDEX — the integration would otherwise list it):
+     summary/about/website form prefilled, up to 3 photos resized client-side
+     (canvas -> JPEG <=~700KB) into hidden base64 fields, friendly invalid-link
+     screen, saved/error states.
+   - /api/manage/save: re-verifies the token, sanitizes text (angle brackets
+     neutralized, length caps), commits photos as binary files (new
+     putBinary() in the shared store, sha-aware overwrites) then the listing
+     JSON (claimed=true, updated bumped), notifies the owner via new
+     lib/admin/notify.ts (Resend when RESEND_API_KEY/EMAIL_FROM set, console
+     fallback until then).
+   - validListing(): claimed listings publish on summary>=80 + about>=200
+     (facts stay required for editorial pages); og-script rule synced.
+     ListingPage renders a Photos gallery + "About X" heading for claimed
+     pages; the claimed disclaimer note already existed.
+   - CLAUDE.md: /manage + /api/manage/* + /api/listing-request added to the
+     sanctioned server-rendered surface.
+
+7) Docs: KB/platform/TRACKER-NEWS-PLAYBOOK.md — the announcement->update->
+   pitch cycle for earning tracker citations (24h cycle, pitch template,
+   hooks calendar, anti-mass-mail rules).
+
+8) OG crop-safety audit (owner report): inventoried every og:image in the
+   built site. Articles/hubs use photo heroes (safe); the 18 new cards were
+   already center-safe (re-verified Saudi Arabia + tracker via 630x630 center
+   crops); glossary/area thumbs already center-anchored (safe). The one real
+   offender: og-default.png (used by 29 pages: home, glossary, areas, utility)
+   was LEFT-aligned. gen-og-default.mjs rebuilt to the same center-anchored
+   crop-safe layout (all text within the center square; wordmark sized to
+   fit) and regenerated — square-crop verified.
+
+Build verified: clean build, og:image wired on pavilion/tracker/corporate/
+for-businesses pages, corporate-area in sitemap, /manage OUT of sitemap,
+new og-default shipped, function bundle still 115MB after pruning.
+
+Owner note: outreach sending starts after admin@belgradebest.com exists;
+portal + drafts + playbook are all ready for that moment.
 
 Co-Authored-By: Claude <noreply@anthropic.com>
