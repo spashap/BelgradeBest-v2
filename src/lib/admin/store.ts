@@ -25,7 +25,9 @@ export const usingGitHub = () => !!(ghRepo() && ghToken());
 
 type FileState = { text: string; sha: string | null };
 
-async function getFile(rel: string): Promise<FileState> {
+// getFile/putFile/listDir are exported for sibling stores (platform-store.ts)
+// so every admin surface shares one GitHub/local persistence implementation.
+export async function getFile(rel: string): Promise<FileState> {
   if (usingGitHub()) {
     const url = `https://api.github.com/repos/${ghRepo()}/contents/${rel}?ref=${ghBranch()}`;
     const res = await fetch(url, {
@@ -52,7 +54,7 @@ async function getFile(rel: string): Promise<FileState> {
   }
 }
 
-async function putFile(rel: string, text: string, message: string, sha: string | null): Promise<void> {
+export async function putFile(rel: string, text: string, message: string, sha: string | null): Promise<void> {
   if (usingGitHub()) {
     const url = `https://api.github.com/repos/${ghRepo()}/contents/${rel}`;
     const res = await fetch(url, {
@@ -78,6 +80,33 @@ async function putFile(rel: string, text: string, message: string, sha: string |
   const tmp = `${abs}.tmp-${process.pid}`;
   writeFileSync(tmp, text, "utf8");
   renameSync(tmp, abs);
+}
+
+// List a directory (names + kind). GitHub mode reads the Contents API; local
+// mode reads the FS. Callers must handle absence (returns []).
+export type DirEntry = { name: string; dir: boolean };
+export async function listDir(rel: string): Promise<DirEntry[]> {
+  if (usingGitHub()) {
+    const url = `https://api.github.com/repos/${ghRepo()}/contents/${rel}?ref=${ghBranch()}`;
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${ghToken()}`,
+        Accept: "application/vnd.github+json",
+        "User-Agent": "belgradebest-v2-admin",
+      },
+    });
+    if (res.status === 404) return [];
+    if (!res.ok) throw new Error(`GitHub LIST ${rel} failed: ${res.status} ${await res.text()}`);
+    const json = (await res.json()) as { name: string; type: string }[];
+    return Array.isArray(json) ? json.map((e) => ({ name: e.name, dir: e.type === "dir" })) : [];
+  }
+  try {
+    const { readdirSync, statSync } = await import("node:fs");
+    const abs = join(process.cwd(), rel);
+    return readdirSync(abs).map((name) => ({ name, dir: statSync(join(abs, name)).isDirectory() }));
+  } catch {
+    return [];
+  }
 }
 
 // ---- schema model ----

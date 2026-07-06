@@ -1,0 +1,24 @@
+{
+  "slug": "serbia-commissioner-office",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "serbia",
+  "name": "Office of the Commissioner of Serbia for International Exhibitions",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://javne-nabavke.rs",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "Žarko Malinović (Commissioner General)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Implements the host National Pavilion; ran the ~EUR 8.5M exhibition tender via the Public Procurement Portal. Ex-PKS (Chamber of Commerce, which runs the expo business program/B2B)."
+  }
+}

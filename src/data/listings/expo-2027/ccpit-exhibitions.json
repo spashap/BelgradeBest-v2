@@ -1,0 +1,24 @@
+{
+  "slug": "ccpit-exhibitions",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "china",
+  "name": "CCPIT — Exhibition Management Department",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.ccpit.org/a/20241023/2024102393r9.html",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "Li Qingshuang (Government Representative)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Organizes the China Pavilion. Phone 010-88075050; theme-proposal call closed Nov 2024; no open exhibitor call as of Jul 2026."
+  }
+}

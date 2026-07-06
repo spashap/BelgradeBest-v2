@@ -32,6 +32,9 @@ const SPECIAL: Record<string, ResolvedLink> = {
   ...(prog?.glossaryIndexable === true
     ? { [glossarySection.slug]: { title: glossarySection.title, href: `/${glossarySection.slug}` } }
     : {}),
+  // The platform pitch page — footer-labelled "Partners" (owner decision
+  // 2026-07-05, replacing the how-we-make-money footer slot).
+  "for-businesses": { title: "Partners", href: "/for-businesses" },
 };
 
 function resolveRef(kind: string, slug: string): ResolvedLink | null {

@@ -1,0 +1,21 @@
+{
+  "slug": "partners-and-suppliers",
+  "leg": "expo-2027",
+  "type": "category",
+  "name": "Expo 2027 Partners & Suppliers",
+  "shortName": "Partners & Suppliers",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Container for event-level sponsors/contractors/suppliers (not tied to a national pavilion)."
+  }
+}

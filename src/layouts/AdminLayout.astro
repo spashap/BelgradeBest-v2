@@ -8,6 +8,7 @@ const { title } = Astro.props;
 const path = Astro.url.pathname;
 const nav = [
   ["/admin", "Dashboard"],
+  ["/admin/platform", "Platform"],
   ["/admin/links", "Links"],
   ["/admin/structure", "Structure"],
   ["/admin/navigation", "Navigation"],
@@ -33,13 +34,23 @@ const nav = [
       .badge{font-size:11px;padding:2px 7px;border-radius:99px;border:1px solid var(--line);color:var(--soft)}
       .badge.live{color:var(--ok);border-color:var(--ok)}.badge.hidden{color:var(--accent);border-color:var(--accent)}
       textarea{width:100%;min-height:84px;background:#120f0c;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px;font-family:ui-monospace,monospace;font-size:13px}
-      input[type=password]{background:#120f0c;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px;font-size:14px}
+      input[type=password],input[type=text],select{background:#120f0c;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px;font-size:14px}
+      input[type=text],select{padding:5px 8px;font-size:13px}
       button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:7px 12px;cursor:pointer;font-size:13px}
       button.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
       table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line)}th{color:var(--soft);font-weight:600}
       .muted{color:var(--soft)}form.inline{display:inline}
       .err{background:#3a1f17;border:1px solid var(--accent);color:#f0c9bb;padding:10px 14px;border-radius:8px;margin:0 0 14px}
       .ok{background:#1e2a22;border:1px solid var(--ok);color:#bfe6cd;padding:10px 14px;border-radius:8px;margin:0 0 14px}
+      /* drill-down navigation cards (Platform module: legs → categories) */
+      .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:0 0 14px}
+      a.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+      a.card:hover{border-color:var(--accent)}
+      a.card.ghost{opacity:.55;border-style:dashed}
+      .card .num{font-size:22px;font-weight:700}
+      .card .lbl{color:var(--soft);font-size:13px}
+      .card .meta{margin-top:6px;font-size:12px;color:var(--soft);display:flex;gap:8px;flex-wrap:wrap}
+      .crumbs{color:var(--soft);font-size:13px;margin:0 0 12px}.crumbs a{color:var(--soft)}.crumbs b{color:var(--ink)}
     </style>
   </head>
   <body>

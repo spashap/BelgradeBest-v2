@@ -1,0 +1,21 @@
+{
+  "slug": "vogt-landscape",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "VOGT Landscape Architects",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.vogt-la.com",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Landscape planning for the Expo site (Werner Sobek-led team). Source: wernersobek.com."
+  }
+}

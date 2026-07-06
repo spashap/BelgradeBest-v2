@@ -1,0 +1,24 @@
+{
+  "slug": "ice-belgrade",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "italy",
+  "name": "ICE / Italian Trade Agency — Belgrade",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.ice.it",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "Antonio Ventresca (Vice Commissioner)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Trade-promotion arm supporting business participation, with Confindustria Serbia + Italian-Serbian Chamber. Route via embassy email economico.belgrado@esteri.it."
+  }
+}

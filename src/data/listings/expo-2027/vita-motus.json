@@ -1,0 +1,21 @@
+{
+  "slug": "vita-motus",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "united-states",
+  "name": "Vita Motus",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://usapavilion.us/",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Design lead for the USA Pavilion (State Dept award, May 2026). Inquiries route via expo@state.gov."
+  }
+}

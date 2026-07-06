@@ -11,20 +11,23 @@ import { pageMetadata } from "../lib/metadata";
 import { SITE, CONFIG } from "../lib/site";
 import { breadcrumbSchema } from "../lib/schemas";
 
-// The platform pitch page — outreach emails land here. Grows into the full
-// claim flow (Phase 2 of KB/platform/PLATFORM-PLAN.md); for now it explains
-// the free page + tools and collects interest by email.
+// The platform pitch page ("Partners" in the footer) — outreach emails land
+// here. Core pitch: we fight the SEO war for the business. Includes the full
+// embed-tools arsenal and the listing-request form (POST /api/listing-request
+// → lead file via the GitHub store → surfaces in /admin/platform).
 const PATH = "/for-businesses";
 const CONTACT_EMAIL = "admin@belgradebest.com";
 
 const BADGE_EMBED = `<a href="${SITE.origin}/?utm_source=badge&utm_medium=embed">
   <img src="${SITE.origin}/badges/featured-on-belgradebest.svg"
        alt="Featured on BelgradeBest" width="200" height="56" loading="lazy"></a>`;
+const COUNTDOWN_EMBED = `<div data-bb-expo-countdown></div>
+<script src="${SITE.origin}/widgets/expo-countdown.js" async><\/script>`;
 
 const meta = pageMetadata({
-  title: "For Belgrade businesses — your free page on BelgradeBest",
+  title: "For businesses — we fight the SEO war for you",
   description:
-    "Featured in our Belgrade guide? Get a free page for your restaurant, hotel, clinic or venue — photos, your info, a verified badge, and tools that work even if you have no website.",
+    "Stop fighting Google alone. A free page on BelgradeBest gets your business AI-validated credibility, full structured data, and a place inside a site built to rank — for Expo 2027 exhibitors, restaurants, hotels and clinics.",
   path: PATH,
 });
 
@@ -52,18 +55,58 @@ const schemas: object[] = [
 <BaseLayout meta={meta}>
   <Breadcrumbs crumbs={crumbs} />
   <PageIntro
-    eyebrow="For Belgrade businesses"
-    title="Your free page on BelgradeBest"
-    lede="BelgradeBest is the independent English guide foreign visitors read before they arrive — including for Expo 2027. If we've featured your restaurant, hotel, clinic, venue or pavilion, you can have your own page here: free, in English, and under your control."
+    eyebrow="For Belgrade businesses & Expo 2027 exhibitors"
+    title="We fight the SEO war for you"
+    lede="Getting found on Google — and now inside AI answers — is a technology war: structured data, page speed, authority, constant algorithm change. Most businesses can't win it alone, and shouldn't have to. BelgradeBest is the independent English guide visitors already read; a free page here puts our whole machine behind your business."
   />
 
   <Container variant="read">
+    <SectionHead
+      title="Why join instead of fighting alone"
+      intro="One business against Google is a losing match. A business inside an authority site inherits everything the site has already won."
+    />
+    <ul>
+      <li>
+        <strong>AI-validated credibility.</strong> Every profile is built and checked with
+        advanced AI research tools: facts cross-checked against official sources, each claim
+        carrying its citation. Search engines — and AI assistants — treat verified, sourced
+        pages very differently from marketing copy.
+      </li>
+      <li>
+        <strong>Structured data, done properly.</strong> Your page ships with the machine-readable
+        markup Google requires for rich results — typed to your business (restaurant menus,
+        hotels, clinics, Expo exhibitors), with FAQ schema on top. Most business websites have
+        none of this; ours is generated and validated automatically.
+      </li>
+      <li>
+        <strong>Technical SEO you never think about.</strong> Static pages that load in
+        milliseconds, clean Core Web Vitals, sitemaps with real update dates, instant
+        search-engine pings on every change. The infrastructure war — handled.
+      </li>
+      <li>
+        <strong>Built for AI search, not just Google.</strong> ChatGPT, Perplexity and Google's
+        AI Overviews increasingly answer travellers directly. Our pages are engineered to be
+        cited by them — machine-readable feeds, quotable sourced passages, question-and-answer
+        markup. Your business inside those answers, without you touching a line of code.
+      </li>
+      <li>
+        <strong>Authority that compounds.</strong> Your page doesn't stand alone — it's linked
+        from the guides visitors actually read, inside a site whose authority grows with every
+        article. A new website starts from zero; you start from ours.
+      </li>
+    </ul>
+    <Note>
+      <strong>The honest version of this pitch:</strong> nobody can honestly promise rankings.
+      What we promise is that your page gets the same technology and editorial standards as the
+      rest of this site — and that it costs you nothing.
+    </Note>
+
     <SectionHead title="What you get" />
     <ul>
       <li><strong>A free English page</strong> for your business — photos, your description, hours, links, and (for restaurants) your menu with prices.</li>
       <li><strong>Your own web address</strong> you can print on cards and menus — and if you don't have a website, this <em>is</em> your website.</li>
-      <li><strong>Structured data built in</strong> so Google and AI assistants read your page correctly — we handle all the technical work.</li>
       <li><strong>Edit it yourself</strong>: no account, no password — a private link lets you update your page in minutes. Changes go live automatically.</li>
+      <li><strong>Expo 2027 exhibitors:</strong> your page lives under your pavilion's profile in our <a href="/expo-2027/pavilions">pavilion directory</a> — the English landing page for your presence at the event.</li>
     </ul>
     <Note>
       <strong>Free means free.</strong> We never charge businesses for their page. BelgradeBest is
@@ -72,20 +115,66 @@ const schemas: object[] = [
       clearly marked "information provided by the business".
     </Note>
 
-    <SectionHead
-      title="No website? Point Google at your free page"
-      intro="Google Business Profile lets any business set a website link. Use your BelgradeBest page:"
-    />
-    <ol>
-      <li>Open <a href="https://business.google.com" rel="noopener">business.google.com</a> and sign in to your business profile.</li>
-      <li>Choose <em>Edit profile → Contact → Website</em>.</li>
-      <li>Paste your BelgradeBest page address and save. That's it — your Google Maps listing now links to a real English page about you.</li>
-    </ol>
+    <SectionHead title="Get listed — tell us about your business" intro="Fill this in and we'll set up your page and send you the private edit link. No obligations, no cost." />
+    <div id="bb-form-sent" hidden>
+      <Note tone="ok">
+        <strong>Received — thank you.</strong> We'll review your request and reply to the email
+        you gave us, usually within a couple of days.
+      </Note>
+    </div>
+    <div id="bb-form-error" hidden>
+      <Note tone="warn">
+        <strong>That didn't go through.</strong> Please try again, or email us directly at{" "}
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+      </Note>
+    </div>
+    <form method="post" action="/api/listing-request" class="c-listing-form" id="bb-listing-form">
+      <label>Business name *<input type="text" name="business" required maxlength="120" /></label>
+      <label>Category *
+        <select name="category" required>
+          <option value="expo-exhibitor">Expo 2027 exhibitor / booth</option>
+          <option value="restaurant-bar">Restaurant / café / bar / club</option>
+          <option value="hotel-apartments">Hotel / apartments</option>
+          <option value="clinic">Clinic / medical</option>
+          <option value="tour-attraction">Tour / attraction</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label>Contact person<input type="text" name="person" maxlength="80" /></label>
+      <label>Email *<input type="email" name="email" required maxlength="120" /></label>
+      <label>Website / social<input type="text" name="website" maxlength="200" /></label>
+      <label>Anything we should know<textarea name="message" rows="3" maxlength="1000"></textarea></label>
+      <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
+      <button class="c-btn" type="submit">Request my free page</button>
+    </form>
+    <p>
+      Prefer email? Write to <a href={`mailto:${CONTACT_EMAIL}?subject=List%20my%20business%20on%20BelgradeBest`}>{CONTACT_EMAIL}</a>
+      {" "}from your business address, or use the <a href="/contact">contact page</a>.
+    </p>
+    <script is:inline>
+      // Static page: the endpoint redirects back with ?sent=1 / ?error=1 —
+      // toggle the result notes client-side.
+      (function () {
+        var p = new URLSearchParams(location.search);
+        if (p.get("sent") === "1") {
+          document.getElementById("bb-form-sent").hidden = false;
+          document.getElementById("bb-listing-form").hidden = true;
+        } else if (p.get("error")) {
+          document.getElementById("bb-form-error").hidden = false;
+        }
+      })();
+    </script>
 
     <SectionHead
-      title="Show it off: the badge"
-      intro="Featured in one of our guides? Put the badge on your site — it links visitors to the guide that recommends you."
+      title="Free tools for your own website"
+      intro="Everything below is copy-paste — no technical skills needed, and none of it tracks your visitors."
     />
+
+    <h3>The badge</h3>
+    <p>
+      Featured in one of our guides? Show it. The badge links visitors to the guide that
+      recommends you.
+    </p>
     <p>
       <img
         src="/badges/featured-on-belgradebest.svg"
@@ -96,20 +185,35 @@ const schemas: object[] = [
       />
     </p>
     <Snippet label="Badge embed code" code={BADGE_EMBED} />
+
+    <h3>Expo 2027 countdown widget</h3>
     <p>
-      Paste it anywhere HTML works — a WordPress <em>Custom HTML</em> block, a Wix/Squarespace
-      <em>Embed</em> element, or your site footer. Writing about Expo 2027? There's also a free
-      <a href="/expo-2027/countdown">embeddable countdown widget</a>.
+      A live countdown to the Expo's opening day for your site or blog — it switches to
+      days-remaining once the gates open. Details and a live demo on the{" "}
+      <a href="/expo-2027/countdown">widget page</a>.
+    </p>
+    <Snippet label="Countdown embed code" code={COUNTDOWN_EMBED} />
+
+    <h3>Where to paste these</h3>
+    <ul>
+      <li><strong>WordPress:</strong> add a <em>Custom HTML</em> block and paste the code.</li>
+      <li><strong>Wix / Squarespace:</strong> use the <em>Embed HTML / Code</em> element.</li>
+      <li><strong>Any other site:</strong> anywhere plain HTML works — e.g. your footer.</li>
+    </ul>
+    <p class="u-stack-md">
+      Coming with claimed pages: a printable QR code for your page, a linkable menu URL for
+      Google Business Profile, and a monthly email with your page's visitor numbers.
     </p>
 
-    <SectionHead title="Claim your page" />
-    <p>
-      Self-serve claiming opens soon. Until then, one email does it: write to
-      <a href={`mailto:${CONTACT_EMAIL}?subject=Claim%20my%20page%20on%20BelgradeBest`}>{CONTACT_EMAIL}</a>
-      from your business address with your business name, and we'll set up your page and send you
-      the private edit link when claiming opens. You can also reach us via the
-      <a href="/contact">contact page</a>.
-    </p>
+    <SectionHead
+      title="No website? Point Google at your free page"
+      intro="Google Business Profile lets any business set a website link. Use your BelgradeBest page:"
+    />
+    <ol>
+      <li>Open <a href="https://business.google.com" rel="noopener">business.google.com</a> and sign in to your business profile.</li>
+      <li>Choose <em>Edit profile → Contact → Website</em>.</li>
+      <li>Paste your BelgradeBest page address and save. Your Google Maps listing now links to a real English page about you.</li>
+    </ol>
   </Container>
 
   <Schema schemas={schemas} />

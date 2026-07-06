@@ -1,0 +1,43 @@
+{
+  "slug": "world-expo-museum",
+  "leg": "expo-2027",
+  "type": "organization",
+  "parent": "china",
+  "name": "World Expo Museum (Shanghai)",
+  "shortName": "World Expo Museum",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "summary": "The Shanghai World Expo Museum brings a 330 m² pavilion to the Best Practice Area of Expo 2027 Belgrade — an exhibition on what Expo 2010 Shanghai left its city, shown at an Expo explicitly designed around its own afterlife.",
+  "blocks": {
+    "about": [
+      "The World Expo Museum in Shanghai — the official museum of the World Expo movement — will debut a 330-square-metre pavilion in Expo 2027 Belgrade's Best Practice Area, in its Art and Museum Section. Its participation was formalized via a signing reported by the BIE, making it one of the first named non-state participants of the Belgrade event.",
+      "The exhibition examines Expo 2010 Shanghai's impact on urban development, public spaces and city governance — and its post-event legacy. That subject lands well in Belgrade: the Expo 2027 site is itself designed around its afterlife, with the International Participant Area becoming the new Belgrade Fair and the wider Surčin development (housing, National Stadium, transport) planned to outlive the 93-day event."
+    ],
+    "facts": [
+      { "label": "What", "value": "330 m² pavilion in the Best Practice Area (Art and Museum Section)", "source": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/" },
+      { "label": "Exhibition", "value": "Expo 2010 Shanghai's urban impact and post-event legacy", "source": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/" },
+      { "label": "Status", "value": "Participation formalized — signing reported by the BIE", "source": "https://www.bie-paris.org/site/en/news-announcements/specialised-expo/world-expo-museum-to-participate-in-expo-2027-belgrade" }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "What is the World Expo Museum showing at Expo 2027?",
+      "answer": "A 330 m² pavilion in the Best Practice Area's Art and Museum Section, with an exhibition on Expo 2010 Shanghai's impact on urban development, public spaces and city governance — and what the city kept after the event ended."
+    },
+    {
+      "question": "Is this part of the China Pavilion?",
+      "answer": "No — it is a separate presence in the Best Practice Area, alongside China's national participation. We profile it under China as a related Chinese participant; China's own national pavilion details have not been published yet."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      { "url": "https://www.inparkmagazine.com/world-expo-museum-specialized-expo-2027-belgrade-signing/amp/", "note": "Pavilion size and exhibition subject" },
+      { "url": "https://www.bie-paris.org/site/en/news-announcements/specialised-expo/world-expo-museum-to-participate-in-expo-2027-belgrade", "note": "BIE announcement" }
+    ]
+  },
+  "images": []
+}

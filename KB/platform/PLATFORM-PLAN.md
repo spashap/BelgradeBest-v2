@@ -5,6 +5,15 @@ platform where Belgrade businesses (Expo pavilions/exhibitors first, then per-le
 businesses) claim and **self-manage** a free page — "we are their free website" —
 with outreach, claim flow, and badge/backlink mechanics managed from `/admin`.
 
+**⭐ NORTH STAR (owner, 2026-07-05 — design everything around this):** the atomic
+unit is the **BOOTH** — the individual business inside a pavilion (~10,000
+prospects), NOT the pavilion. Pavilions (and future leg groupings) are just
+categories/containers; governments claiming pavilion pages becomes plausible only
+after ~10 claimed booths per pavilion prove value. The admin is a **prospect
+database** (drill-down: Legs → categories → booth table; add prospects in-admin;
+per-booth email pipeline). Booth stubs stay unpublished until claimed, so booth
+outreach emails pitch the PARENT page (`{parentUrl}`), never the booth's own URL.
+
 Rev-b changes (owner notes 2026-07-05): **self-serve editing without owner
 validation** (trust-first + disclaimer + safety net), email = `admin@belgradebest.com`
 + Resend/Brevo as env placeholders (owner wires them on Vercel later), **no
@@ -153,7 +162,7 @@ from venue websites via polite owner-run crawler in `scripts/` (not deployed).
 |---|---|---|
 | **0 — SEO step-0** | ✅ **DONE 2026-07-05** (socials/sameAs deferred by owner): `/expo-2027/tracker` (participant data page + open JSON at `/data/expo-2027-participants.json`, data master `src/data/expo-participants.json` — bump `updated` on edits), `/expo-2027/countdown` + `public/widgets/expo-countdown.js` (free embed, attribution link), `public/badges/featured-on-belgradebest.svg` + `/for-businesses` landing (claim CTA = mailto until Phase 2). New library classes: `.c-stats/.c-stat`, `.c-data-table` (also styles `.c-article table`), `.c-snippet` + `Snippet.astro`. | S–M |
 | **1 — Listings engine + Expo pilot** | ✅ **DONE 2026-07-05**: `src/lib/listings.ts` (per-listing JSON masters, `validListing` guard, `SECTION` URL map) + `/expo-2027/pavilions` hub (93-country directory, built-vs-pending) + `[slug]` template; **12 researched pavilion profiles seeded** (Japan, Germany, Italy, Serbia, USA, Russia, Saudi Arabia, Austria, Switzerland, Türkiye, UAE, China — every fact sourced); `programmatic.listingsIndexable` **flipped to `true` 2026-07-05** (pages enriched first: geography + visiting blocks templated from getting-there facts, 3–4 sourced FAQs each + FAQPage JSON-LD, ~900–1,300 words/page); tracker + participants-article cross-links live. URL deviation from plan: expo uses `/pavilions/`, not `/places/` (per-leg segment via `SECTION`). | M (≈ a day) |
-| **2 — Self-serve portal** | `/manage` + `/api/manage/*` (token auth, edit form, image upload, save→commit), disclaimer block, email placeholders w/ no-key fallback, admin Listings page (history/revert/tokens) | M–L |
+| **2 — Self-serve portal** | `/manage` + `/api/manage/*` (token auth, edit form, image upload, save→commit), disclaimer block, email placeholders w/ no-key fallback, admin Listings page (history/revert/tokens). **Partial 2026-07-05 (admin half done, redesigned around the north star):** drill-down module — `/admin/platform` (LEG cards + booth funnel + GA4/GSC), `/admin/platform/[leg]` (category cards w/ booth rollups + add-category + one-click create for missing Expo countries), `/admin/platform/[leg]/[category]` (**the working screen**: add-business prospect form → `createListing()` stub, per-booth contact/stage/draft/claim management, stage filters). Cross-cutting: `/listings` = Search, `/outreach` = Queue. Draft builder `lib/admin/outreach-draft.ts` (template resolution `<leg>:<type>` → `<leg>` → default; `{parentName}/{parentUrl}` placeholders; booth template sells the parent page). Runtime reads/writes via `platform-store.ts` + `/api/admin/platform`. **Hierarchy shipped:** `parent` field → child routes (`ListingPage.astro` serves both levels; child publishes only with its parent; seeded: World Expo Museum under China). Still open: `/manage` business portal (token auth, edit form, image upload), transactional email, history/revert UI, bulk CSV import of booth prospects. | M–L |
 | **3 — Outreach** | admin Outreach page: contacts + statuses (GitHub store), template editor, magic-link generation, send via mailbox / copy-paste at first | M |
 | **4 — Per-leg rollout** | food-and-nightlife first (menu block), then where-to-stay, medical (YMYL guardrails), visit/plan | M per leg |
 | **5 — Toolkit polish** | QR gen, platform how-tos, GBP guide, GA4 monthly digest, menu pages | S–M |

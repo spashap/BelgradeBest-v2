@@ -1,0 +1,144 @@
+---
+export const prerender = false;
+// Platform module — LISTINGS manager. Every listing (published + stubs, all
+// legs) with hierarchy (children indented under parents), quality/freshness
+// signals, and per-row control: claimed flag + contact, saved through
+// /api/admin/platform (GitHub commit → redeploy; instant in this module).
+// Editorial content edits go through the GitHub edit deep-link.
+import AdminLayout from "../../../layouts/AdminLayout.astro";
+import { listingHref, validListing } from "../../../lib/listings";
+import { readListings, type AdminListing } from "../../../lib/admin/platform-store";
+import { env } from "../../../lib/admin/env";
+
+const url = new URL(Astro.request.url);
+const ok = url.searchParams.get("ok");
+const error = url.searchParams.get("error");
+const legFilter = url.searchParams.get("leg") ?? "";
+const show = url.searchParams.get("show") ?? ""; // "" | stubs | claimed | unclaimed | stale
+const q = (url.searchParams.get("q") ?? "").toLowerCase();
+
+const listings = await readListings();
+const legs = [...new Set(listings.map((l) => l.leg))];
+
+const DAY = 864e5;
+const ageDays = (iso: string) => Math.floor((Date.now() - new Date(iso).getTime()) / DAY);
+const STALE_AFTER = 45;
+
+// Order: top-level alphabetical, each followed by its children (indented).
+const ordered: (AdminListing & { depth: number })[] = [];
+for (const parent of listings.filter((l) => !l.parent)) {
+  ordered.push({ ...parent, depth: 0 });
+  for (const child of listings.filter((l) => l.leg === parent.leg && l.parent === parent.slug)) {
+    ordered.push({ ...child, depth: 1 });
+  }
+}
+// Orphans (parent file missing) still show, flagged at depth 0.
+for (const l of listings.filter((x) => x.parent && !listings.some((p) => p.leg === x.leg && p.slug === x.parent))) {
+  ordered.push({ ...l, depth: 0 });
+}
+
+const visible = ordered.filter((l) => {
+  if (legFilter && l.leg !== legFilter) return false;
+  if (show === "stubs" && validListing(l)) return false;
+  if (show === "claimed" && !l.claimed) return false;
+  if (show === "unclaimed" && l.claimed) return false;
+  if (show === "stale" && ageDays(l.updated) <= STALE_AFTER) return false;
+  if (q && !`${l.name} ${l.slug} ${l.type}`.toLowerCase().includes(q)) return false;
+  return true;
+});
+
+const repo = env("GITHUB_REPO");
+const branch = env("GITHUB_BRANCH") || "main";
+const editUrl = (l: AdminListing) =>
+  repo ? `https://github.com/${repo}/edit/${branch}/${l.rel}` : null;
+const BACK = "/admin/platform/listings";
+---
+
+<AdminLayout title="Platform — listings">
+  <p class="row">
+    <a href="/admin/platform">Legs</a> · <a href="/admin/platform/outreach">Queue</a> ·
+    <b>Search</b>
+  </p>
+
+  {ok ? <div class="ok">Saved. (Prod: the commit triggers a rebuild; this module already shows the new state.)</div> : null}
+  {error ? <div class="err">{error}</div> : null}
+
+  <div class="panel">
+    <form method="get" class="row">
+      <select name="leg">
+        <option value="">all legs</option>
+        {legs.map((leg) => <option value={leg} selected={leg === legFilter}>{leg}</option>)}
+      </select>
+      <select name="show">
+        <option value="">everything</option>
+        <option value="stubs" selected={show === "stubs"}>thin stubs only</option>
+        <option value="claimed" selected={show === "claimed"}>claimed only</option>
+        <option value="unclaimed" selected={show === "unclaimed"}>unclaimed only</option>
+        <option value="stale" selected={show === "stale"}>stale only (&gt;{STALE_AFTER}d)</option>
+      </select>
+      <input type="text" name="q" value={q} placeholder="search name/slug/type" />
+      <button>Filter</button>
+      <span class="muted">{visible.length} of {listings.length}</span>
+    </form>
+  </div>
+
+  <div class="panel">
+    <table>
+      <tr><th>listing</th><th>type</th><th>quality</th><th>updated</th><th>contact + claim</th><th></th></tr>
+      {
+        visible.map((l) => {
+          const okPub = validListing(l);
+          const stale = ageDays(l.updated) > STALE_AFTER;
+          const gh = editUrl(l);
+          return (
+            <tr>
+              <td>
+                {l.depth > 0 ? <span class="muted">↳ </span> : null}
+                <a href={listingHref(l)} target="_blank" rel="noopener">{l.name}</a>
+                <div class="muted slug">{l.leg}/{l.slug}{l.parent ? ` · under ${l.parent}` : ""}</div>
+              </td>
+              <td>
+                <span class="badge">{l.type}</span>
+                {l.status ? <div class="muted">{l.status}</div> : null}
+              </td>
+              <td>
+                {okPub ? <span class="badge live">published</span> : <span class="badge hidden">thin</span>}
+                <div class="muted">{l.faqs?.length ?? 0} FAQs</div>
+              </td>
+              <td class={stale ? "" : "muted"}>
+                {l.updated}
+                {stale ? <div><span class="badge hidden">stale</span></div> : null}
+              </td>
+              <td>
+                <form method="post" action="/api/admin/platform" class="row">
+                  <input type="hidden" name="leg" value={l.leg} />
+                  <input type="hidden" name="slug" value={l.slug} />
+                  <input type="hidden" name="back" value={BACK} />
+                  <input type="hidden" name="claimedPresent" value="1" />
+                  <input type="text" name="contactEmail" value={l.contact?.email ?? ""} placeholder="email" style="width:170px" />
+                  <input type="text" name="contactPerson" value={l.contact?.person ?? ""} placeholder="person / role" style="width:120px" />
+                  <label class="muted" style="white-space:nowrap">
+                    <input type="checkbox" name="claimed" value="1" checked={l.claimed} /> claimed
+                  </label>
+                  <button>Save</button>
+                </form>
+                <div class="muted">
+                  outreach: {l.outreach?.status ?? "none"}
+                  {l.outreach?.sentAt ? ` · sent ${l.outreach.sentAt}` : ""}
+                  {l.outreach?.repliedAt ? ` · replied ${l.outreach.repliedAt}` : ""}
+                </div>
+              </td>
+              <td>{gh ? <a href={gh} target="_blank" rel="noopener">edit</a> : <span class="muted slug">{l.rel}</span>}</td>
+            </tr>
+          );
+        })
+      }
+    </table>
+    <p class="muted">
+      "claimed" here is the master flag: it renders the "managed by the team" disclaimer on the
+      live page. Content edits: "edit" opens the JSON on GitHub — commit and <b>bump `updated`</b>.
+      The guard publishes only summary ≥80 + about ≥300 chars + ≥2 facts. Note: the claimed
+      checkbox saves as part of its row's Save (unchecked = unclaimed).
+    </p>
+  </div>
+</AdminLayout>

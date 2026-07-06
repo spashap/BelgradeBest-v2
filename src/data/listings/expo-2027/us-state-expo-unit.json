@@ -1,0 +1,24 @@
+{
+  "slug": "us-state-expo-unit",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "united-states",
+  "name": "U.S. Department of State — Expo Unit",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://usapavilion.us/",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "expo@state.gov"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Lead entity for the USA Pavilion. Sponsorship contacts also published: HaysMA@state.gov, TitusCF@state.gov (usapavilion.us). No Belgrade-specific sponsor call yet as of Jul 2026."
+  }
+}

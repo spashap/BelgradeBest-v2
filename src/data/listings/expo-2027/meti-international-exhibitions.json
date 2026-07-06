@@ -1,0 +1,21 @@
+{
+  "slug": "meti-international-exhibitions",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "japan",
+  "name": "METI — International Exhibitions Office",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.meti.go.jp/english/press/2026/0515_002.html",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Lead ministry for Japan Pavilion. No public email; phone +81-3-3501-0289. Source: jetro.go.jp/en/news/releases/2026/43d825be6a15425a.html"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "trivandi-usa",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "united-states",
+  "name": "Trivandi USA",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.trivandi.com",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Operations & delivery partner for the USA Pavilion (~100 staff planned; ran Osaka 2025 USA pavilion ops). Contact form only, no public email."
+  }
+}

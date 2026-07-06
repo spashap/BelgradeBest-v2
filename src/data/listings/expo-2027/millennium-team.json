@@ -1,0 +1,24 @@
+{
+  "slug": "millennium-team",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "Millennium Team",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://millenniumteam.rs",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "office@millenniumteam.rs"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Contractor for EXPO unit E1 (83.1 ha): seven exhibition halls, entrance, admin + energy infrastructure (Ministry of Finance). Email from their own project page. Source: millenniumteam.rs/en/project/expo-2027/"
+  }
+}

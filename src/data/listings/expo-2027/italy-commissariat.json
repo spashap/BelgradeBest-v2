@@ -1,0 +1,25 @@
+{
+  "slug": "italy-commissariat",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "italy",
+  "name": "Commissariato Generale — Embassy of Italy in Belgrade",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://ambbelgrado.esteri.it",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "economico.belgrado@esteri.it",
+    "person": "Amb. Luca Gori (Commissioner General)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "LIVE sponsorship call (financial + in-kind) for the ~1,000 m2 Italy Pavilion, open to all economic operators, DEADLINE 31 Aug 2026. Tel +381 11 3066100. Call: esteri.it (June 2026 notice)."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_readme": "Outreach email templates. Resolution (most specific wins): '<leg>:<type>' (e.g. 'expo-2027:booth') → '<leg>' → 'default'. Placeholders: {name} {short} {pageUrl} {parentName} {parentUrl}. Booth templates should sell {parentUrl} — a prospect stub's own page is unpublished until claimed. Edit here (commit → redeploy).",
+  "expo-2027:agency": {
+    "subject": "The {parentName} on BelgradeBest — free English pages for your exhibitors",
+    "body": "Hello,\n\nI run BelgradeBest.com, the independent English guide visitors use to plan around Expo 2027 Belgrade. We maintain a sourced profile of the {parentName}:\n\n{parentUrl}\n\nTwo things I'd value from your team:\n\n1. A quick fact-check — if anything on that page is outdated or wrong, tell us and we'll fix it the same day.\n2. We offer every company exhibiting in your pavilion a free English profile page under it — their description, photos and links, kept under their own control. If you can share this offer with your exhibitors (or share the exhibitor list), each of them gets an English-language landing page for the event at no cost.\n\nHow we fund the guide is public on the site; there is no charge to you or to them. Happy to answer anything — just reply to this email.\n\nBest regards,\nPavel\nBelgradeBest.com\n\nP.S. If you'd rather not hear from us, reply \"unsubscribe\" and we won't write again."
+  },
+  "expo-2027:booth": {
+    "subject": "Exhibiting in the {parentName} at Expo 2027? A free English page for {name}",
+    "body": "Hello,\n\nI run BelgradeBest.com, the independent English guide visitors use to plan around Expo 2027 Belgrade. We maintain sourced profiles of the Expo's pavilions — including the {parentName}:\n\n{parentUrl}\n\nWe're now adding the businesses exhibiting at the event, and a page for {name} is reserved. Claiming it is free: you add your description, photos, links and contact details, and the page goes live as your English-language presence for the Expo — it also works as the website link on a Google Business Profile if you don't run your own site.\n\nNo cost and no catch — how we fund the guide is public on the site. To claim the page or fix any detail, just reply to this email.\n\nBest regards,\nPavel\nBelgradeBest.com\n\nP.S. If you'd rather not hear from us, reply \"unsubscribe\" and we won't write again."
+  },
+  "default": {
+    "subject": "Your {name} profile on BelgradeBest — free page, yours to control",
+    "body": "Hello,\n\nI run BelgradeBest.com, the independent English guide to Belgrade. We've published a sourced profile of {name}:\n\n{pageUrl}\n\nIt's free, and you can take control of it — correct any facts, add photos and your own description, and use it as your official English page (it also works as the website link on a Google Business Profile if you don't run your own site).\n\nNo cost and no catch — how we fund the guide is public on the site. If you'd like edit access or a correction, just reply to this email.\n\nBest regards,\nPavel\nBelgradeBest.com\n\nP.S. If you'd rather not hear from us, reply \"unsubscribe\" and we won't write again."
+  },
+  "expo-2027": {
+    "subject": "{short} at Expo 2027 — your profile on BelgradeBest, free to claim",
+    "body": "Hello,\n\nI run BelgradeBest.com, the independent English guide visitors read when planning around Expo 2027 Belgrade. We maintain a sourced profile of {name}:\n\n{pageUrl}\n\nEvery fact on it is drawn from official announcements and marked with its source. You're welcome to take control of the page — free of charge: correct details, add images and your own text, and keep it current as your plans firm up. Many delegations use pages like this as their English-language landing page for the event.\n\nIf you'd like edit access or spot anything to fix, just reply to this email.\n\nBest regards,\nPavel\nBelgradeBest.com\n\nP.S. If you'd rather not hear from us, reply \"unsubscribe\" and we won't write again."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "messe-duesseldorf",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "germany",
+  "name": "Messe Düsseldorf GmbH",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.messe-duesseldorf.de",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "GraenzdoerfferA@messe-duesseldorf.de",
+    "person": "Dr. Andrea Gränzdörffer (press)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Awarded overall responsibility for the German Pavilion (28 May 2026); concept by 'facts and fiction' (Cologne). CAUTION: email is the PRESS contact. EU-wide sub-procurement (communication/catering/shop) upcoming on evergabe-online.de."
+  }
+}

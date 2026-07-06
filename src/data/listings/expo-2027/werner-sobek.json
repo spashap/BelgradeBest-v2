@@ -1,0 +1,21 @@
+{
+  "slug": "werner-sobek",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "Werner Sobek AG",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.wernersobek.com",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Structural/facade engineering, landscape planning + sustainability for the site incl. the 45 modular 9x9 m timber pavilions of the Best Practice Zone. Source: wernersobek.com/projects/expo-2027-belgrade/"
+  }
+}

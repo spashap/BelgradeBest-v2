@@ -1,0 +1,170 @@
+---
+export const prerender = false;
+// Platform module — OUTREACH pipeline. Per-listing contact → draft → sent →
+// replied → claimed, with drafts rendered from src/data/outreach-templates.json
+// ({name}/{short}/{pageUrl} placeholders). Until the email keys are set
+// (RESEND_API_KEY / EMAIL_FROM — Phase 3), sending is manual-but-one-click:
+// the "draft" button opens the owner's mail app prefilled via mailto:, "copy"
+// puts the same text on the clipboard, and the status buttons track the state
+// (sent/replied stamp their dates automatically).
+import AdminLayout from "../../../layouts/AdminLayout.astro";
+import { listingHref, OUTREACH_STATUSES } from "../../../lib/listings";
+import { readListings, outreachFunnel } from "../../../lib/admin/platform-store";
+import { draftFor, mailtoFor } from "../../../lib/admin/outreach-draft";
+import { env } from "../../../lib/admin/env";
+
+const url = new URL(Astro.request.url);
+const ok = url.searchParams.get("ok");
+const error = url.searchParams.get("error");
+const legFilter = url.searchParams.get("leg") ?? "";
+const stageFilter = url.searchParams.get("stage") ?? "";
+
+const listings = await readListings();
+const legs = [...new Set(listings.map((l) => l.leg))];
+const funnel = outreachFunnel(listings);
+
+const rows = listings
+  .filter((l) => (!legFilter || l.leg === legFilter))
+  .filter((l) => (!stageFilter || (l.outreach?.status ?? "none") === stageFilter))
+  .map((l) => {
+    const d = draftFor(l, listings);
+    return { l, subject: d.subject, body: d.body, mailto: mailtoFor(l, d) };
+  });
+
+const emailConfigured = !!(env("RESEND_API_KEY") || env("BREVO_API_KEY"));
+const repo = env("GITHUB_REPO");
+const branch = env("GITHUB_BRANCH") || "main";
+const tplEdit = repo
+  ? `https://github.com/${repo}/edit/${branch}/src/data/outreach-templates.json`
+  : null;
+const BACK = "/admin/platform/outreach";
+// Quick-advance buttons per current stage — the happy path plus exits.
+const NEXT: Record<string, string[]> = {
+  none: ["queued", "sent"],
+  queued: ["sent", "declined"],
+  sent: ["replied", "declined", "opt-out"],
+  replied: ["claiming", "live", "declined"],
+  claiming: ["live", "declined"],
+  live: [],
+  declined: ["queued"],
+  "opt-out": [],
+};
+---
+
+<AdminLayout title="Platform — outreach">
+  <p class="row">
+    <a href="/admin/platform">Legs</a> · <b>Queue</b> ·
+    <a href="/admin/platform/listings">Search</a>
+  </p>
+
+  {ok ? <div class="ok">Saved.</div> : null}
+  {error ? <div class="err">{error}</div> : null}
+
+  <div class="panel">
+    <div class="row">
+      {funnel.map((f) => (
+        <a class="badge" href={`?stage=${f.status}${legFilter ? `&leg=${legFilter}` : ""}`}>
+          {f.status}: <b>{f.count}</b>
+        </a>
+      ))}
+      {stageFilter ? <a class="badge live" href="?">clear filter</a> : null}
+    </div>
+    <p class="muted">
+      {emailConfigured
+        ? "Email API key detected — automated sending arrives with Phase 3; drafts below remain the manual path."
+        : "No email API key set (RESEND_API_KEY placeholder) — drafts below open your own mail app (mailto) or copy to clipboard; mark rows as sent by hand. Sending automation switches on when the key lands, same pipeline."}
+      {" "}Templates: {tplEdit ? <a href={tplEdit} target="_blank" rel="noopener">edit outreach-templates.json</a> : <span class="slug">src/data/outreach-templates.json</span>}
+      {" "}(placeholders: <span class="slug">{"{name} {short} {pageUrl}"}</span>). Keep volume ≤20–30/day, always honor opt-outs.
+    </p>
+  </div>
+
+  <div class="panel">
+    <form method="get" class="row">
+      <select name="leg">
+        <option value="">all legs</option>
+        {legs.map((leg) => <option value={leg} selected={leg === legFilter}>{leg}</option>)}
+      </select>
+      <select name="stage">
+        <option value="">all stages</option>
+        {OUTREACH_STATUSES.map((s) => <option value={s} selected={s === stageFilter}>{s}</option>)}
+      </select>
+      <button>Filter</button>
+      <span class="muted">{rows.length} listings</span>
+    </form>
+  </div>
+
+  <div class="panel">
+    <table>
+      <tr><th>listing</th><th>contact</th><th>stage</th><th>draft</th><th>notes</th></tr>
+      {
+        rows.map(({ l, subject, body, mailto }) => {
+          const stage = l.outreach?.status ?? "none";
+          return (
+            <tr>
+              <td>
+                <a href={listingHref(l)} target="_blank" rel="noopener">{l.name}</a>
+                <div class="muted slug">{l.leg}{l.parent ? ` › ${l.parent}` : ""} / {l.slug}</div>
+                {l.claimed ? <span class="badge live">claimed</span> : null}
+              </td>
+              <td>
+                {l.contact?.email ? (
+                  <>
+                    <span class="slug">{l.contact.email}</span>
+                    {l.contact.person ? <div class="muted">{l.contact.person}</div> : null}
+                  </>
+                ) : (
+                  <span class="muted">no contact — set in <a href={`/admin/platform/listings?q=${l.slug}`}>Listings</a></span>
+                )}
+              </td>
+              <td>
+                <span class="badge">{stage}</span>
+                {l.outreach?.sentAt ? <div class="muted">sent {l.outreach.sentAt}</div> : null}
+                {l.outreach?.repliedAt ? <div class="muted">replied {l.outreach.repliedAt}</div> : null}
+                <div class="row" style="margin-top:4px">
+                  {(NEXT[stage] ?? []).map((next) => (
+                    <form method="post" action="/api/admin/platform" class="inline">
+                      <input type="hidden" name="leg" value={l.leg} />
+                      <input type="hidden" name="slug" value={l.slug} />
+                      <input type="hidden" name="back" value={BACK} />
+                      <input type="hidden" name="outreachStatus" value={next} />
+                      <button class="ghost">→ {next}</button>
+                    </form>
+                  ))}
+                </div>
+              </td>
+              <td>
+                {mailto ? <a href={mailto}>open draft</a> : <span class="muted">draft ready</span>}
+                {" · "}
+                <button class="ghost" type="button" data-copy-draft data-subject={subject} data-body={body}>copy</button>
+              </td>
+              <td>
+                <form method="post" action="/api/admin/platform" class="row">
+                  <input type="hidden" name="leg" value={l.leg} />
+                  <input type="hidden" name="slug" value={l.slug} />
+                  <input type="hidden" name="back" value={BACK} />
+                  <input type="text" name="outreachNotes" value={l.outreach?.notes ?? ""} placeholder="notes" style="width:150px" />
+                  <button>Save</button>
+                </form>
+              </td>
+            </tr>
+          );
+        })
+      }
+    </table>
+  </div>
+
+  <script is:inline>
+    // Copy the prefilled draft (Subject + body) to the clipboard.
+    document.querySelectorAll("[data-copy-draft]").forEach(function (btn) {
+      btn.addEventListener("click", async function () {
+        var text = "Subject: " + btn.dataset.subject + "\n\n" + btn.dataset.body;
+        try {
+          await navigator.clipboard.writeText(text);
+          var old = btn.textContent;
+          btn.textContent = "copied ✓";
+          setTimeout(function () { btn.textContent = old; }, 1500);
+        } catch (e) {}
+      });
+    });
+  </script>
+</AdminLayout>

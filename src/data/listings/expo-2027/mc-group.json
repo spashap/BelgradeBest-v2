@@ -1,0 +1,21 @@
+{
+  "slug": "mc-group",
+  "leg": "expo-2027",
+  "type": "supplier",
+  "parent": "partners-and-suppliers",
+  "name": "MC Group (Berlin)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Global PR agency for EXPO 2027 (consortium w/ Stratcom International; RSD 69.5M framework). Source: tanjug.rs."
+  }
+}

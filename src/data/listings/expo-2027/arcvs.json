@@ -1,0 +1,21 @@
+{
+  "slug": "arcvs",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "ARCVS d.o.o.",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Belgrade architecture studio in the collective-pavilions design consortium. Source: novaekonomija.rs."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "presence-switzerland",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "switzerland",
+  "name": "Presence Switzerland (FDFA)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.eda.admin.ch/de/eine-welt-im-wandel-expo-2027-belgrad",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "Amb. Alexandre Edelmann"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Runs the Swiss Pavilion (walk-through mountain panorama; engineering Werner Sobek AG + Danilo Dangubic Architects + VOGT). No email verifiable (site blocks fetch) — route via FDFA page or Swiss Embassy Belgrade."
+  }
+}

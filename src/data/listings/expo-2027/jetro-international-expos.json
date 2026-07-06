@@ -1,0 +1,25 @@
+{
+  "slug": "jetro-international-expos",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "japan",
+  "name": "JETRO — International Expos Division",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.jetro.go.jp/en/news/releases/2026/43d825be6a15425a.html",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "jppavilion_pr@materialpr.jp",
+    "person": "Japan Pavilion PR Office (Material Inc.)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Implementing agency, signed the participation contract. CAUTION: listed email is the pavilion PR office for MEDIA inquiries only; general contact +81-3-3582-4688. Contractor tender: jetro.go.jp/procurement/publicoffer/ode/9665732f747fbb01.html"
+  }
+}

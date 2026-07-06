@@ -554,6 +554,18 @@ a.c-gtk__link:hover {
   padding: var(--s2) 0;
 }
 .c-header__nav a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+/* Second nav level: a leg's businesses section (Expo 2027 → Pavilions).
+   Mobile (inside the burger panel): sub renders inline, indented, always
+   visible — no toggle needed, so the caret hides. Desktop: dropdown on
+   hover / keyboard focus / caret click (touch). */
+.c-header__item { display: flex; flex-direction: column; align-items: flex-start; }
+.c-header__caret { display: none; }
+.c-header__sub {
+  display: flex; flex-direction: column;
+  padding-left: var(--s4); border-left: 2px solid var(--line);
+  margin: var(--s1) 0 0 var(--s1);
+}
+.c-header__sub a { font-size: var(--t-small); color: var(--ink-soft); }
 @media (min-width: 760px) {
   .c-burger { display: none; }
   .c-header__nav {
@@ -561,6 +573,22 @@ a.c-gtk__link:hover {
     gap: var(--s4) var(--s5); position: static; background: none; border: 0; padding: 0; margin: 0; box-shadow: none;
   }
   .c-header__nav a { font-size: var(--t-small); white-space: nowrap; padding: 0; }
+  .c-header__item { position: relative; flex-direction: row; align-items: center; gap: 2px; }
+  .c-header__caret {
+    display: inline-block; background: none; border: 0; cursor: pointer;
+    color: var(--ink-soft); font-size: 10px; padding: 4px 2px; line-height: 1;
+  }
+  .c-header__caret:hover { color: var(--accent-ink); }
+  .c-header__sub {
+    display: none; position: absolute; top: 100%; left: 0; z-index: 60;
+    min-width: 170px; margin: 0; padding: var(--s3) var(--s4);
+    background: var(--paper-2); border: 1px solid var(--line); border-left: 1px solid var(--line);
+    border-radius: var(--radius); box-shadow: 0 10px 28px rgba(33, 27, 22, 0.12);
+  }
+  .c-header__item:hover .c-header__sub,
+  .c-header__item:focus-within .c-header__sub,
+  .c-header__item.is-sub-open .c-header__sub { display: flex; }
+  .c-header__sub a { padding: var(--s1) 0; color: var(--ink); }
 }
 
 /* --- c-article-meta : the small dated byline under the page intro ("Updated
@@ -872,6 +900,40 @@ a.c-gtk__link:hover {
 .c-data-table tbody tr:last-child td,
 .c-article tbody tr:last-child td { border-bottom: none; }
 .c-data-table table { margin: 0; }
+
+/* --- c-listing-form : the get-listed request form (for-businesses). Stacked
+   labels, token-styled fields; posts to the serverless lead endpoint. --- */
+.c-listing-form {
+  display: grid;
+  gap: var(--s4);
+  max-width: 480px;
+  margin: var(--s4) 0 var(--s5);
+}
+.c-listing-form label {
+  display: grid;
+  gap: var(--s1);
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-small);
+}
+.c-listing-form input,
+.c-listing-form select,
+.c-listing-form textarea {
+  font-family: var(--body);
+  font-size: var(--t-small);
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s2) var(--s3);
+}
+.c-listing-form input:focus,
+.c-listing-form select:focus,
+.c-listing-form textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.c-listing-form button { justify-self: start; }
 
 /* --- c-snippet : copy-paste embed code (widgets, badges). Pre block + copy
    button; the tiny script in the page wires the button. --- */

@@ -4,7 +4,7 @@
   "type": "pavilion",
   "name": "Germany Pavilion",
   "shortName": "Germany",
-  "status": "tender",
+  "status": "announced",
   "claimed": false,
   "verified": false,
   "updated": "2026-07-05",
@@ -13,7 +13,8 @@
     "about": [
       "Germany's Federal Ministry for Economy and Energy (BMWE) published the tender for the \"technical-organisational implementation of the German participation in Expo 2027 Belgrade\" on 25 August 2025, on the federal e-procurement platform e-Vergabe. The budget is €7.5 million excluding German VAT, with a contract running from 11 May 2026 to 31 December 2027 and at least three qualifying companies competing in a negotiation procedure. A separate €450,000 consultancy contract covers planning and construction advice.",
       "The German Pavilion has a gross floor area of 972 m² in the Expo's \"Large\" category. The building shell is expected to be handed over by the Expo organizer around 15 October 2026, after which Germany fits it out independently inside and out — the tendered services span concept development, planning, interior and exterior fit-out, technical management, dismantling and transport.",
-      "Germany's contribution is planned under the Expo sub-theme \"Play for Progress\", aiming to provide what the tender documents call an attractive contribution to the overall theme \"Play for Humanity: Sport and Music for All\"."
+      "Germany's contribution is planned under the Expo sub-theme \"Play for Progress\", aiming to provide what the tender documents call an attractive contribution to the overall theme \"Play for Humanity: Sport and Music for All\".",
+      "The tender has since been decided: on 28 May 2026, Messe Düsseldorf GmbH was announced as the company with overall responsibility for realizing and operating the German Pavilion, with the concept and cultural programme by Cologne agency facts and fiction. Further EU-wide sub-procurements (communication, catering, shop) are expected on Germany's e-procurement platform."
     ],
     "facts": [
       { "label": "Sub-theme", "value": "\"Play for Progress\"", "source": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" },
@@ -21,7 +22,8 @@
       { "label": "Pavilion size", "value": "972 m² gross floor area — \"Large\" category", "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" },
       { "label": "Budget", "value": "€7.5M implementation tender + €450k consultancy contract", "source": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" },
       { "label": "Client", "value": "Federal Ministry for Economy and Energy (BMWE)", "source": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Ausschreibungen/20250825-technisch-organisatorische-umsetzung-der-deutschen-beteiligung-an-der-expo-2027-belgrade.html" },
-      { "label": "Building handover", "value": "~15 October 2026 (fit-out by Germany thereafter)", "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" }
+      { "label": "Building handover", "value": "~15 October 2026 (fit-out by Germany thereafter)", "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" },
+      { "label": "Implementation", "value": "Messe Düsseldorf GmbH (awarded 28 May 2026); concept & cultural programme by facts and fiction, Cologne", "source": "https://www.messe-duesseldorf.de/de/News_Stories/Newsroom/Messe_D%C3%BCsseldorf_%C3%BCbernimmt_Gesamtverantwortung_f%C3%BCr_deutschen_Pavillon_auf_der_Expo_2027" }
     ],
     "quotes": []
   },

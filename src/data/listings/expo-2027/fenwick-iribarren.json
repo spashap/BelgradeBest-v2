@@ -1,0 +1,21 @@
+{
+  "slug": "fenwick-iribarren",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "Fenwick Iribarren Architects",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.fenwickiribarren.com",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Designed the Expo 2027 Belgrade master plan (basis of Serbia's winning bid). Source: fenwickiribarren.com."
+  }
+}

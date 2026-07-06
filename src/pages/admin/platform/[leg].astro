@@ -1,0 +1,121 @@
+---
+export const prerender = false;
+// Platform module — LEG screen: the leg's categories (Expo: pavilions) as
+// navigational cards, each a container of booths (the actual outreach
+// targets). Every named participant country without a category yet can be
+// created in one click, so the container always exists before booths land.
+import AdminLayout from "../../../layouts/AdminLayout.astro";
+import { validListing, listingHref } from "../../../lib/listings";
+import { readListings } from "../../../lib/admin/platform-store";
+import { readSchema } from "../../../lib/admin/store";
+import { participants } from "../../../lib/expo-participants";
+
+const leg = String(Astro.params.leg ?? "");
+const [listings, schema] = await Promise.all([readListings(), readSchema()]);
+const legMeta = schema.legs.find((l) => l.slug === leg);
+if (!legMeta) return Astro.redirect("/admin/platform?error=unknown+leg");
+
+const url = new URL(Astro.request.url);
+const ok = url.searchParams.get("ok");
+const error = url.searchParams.get("error");
+
+const ls = listings.filter((l) => l.leg === leg);
+const categories = ls.filter((l) => !l.parent);
+const CONTACTED = new Set(["sent", "replied", "claiming", "live"]);
+const catStats = (slug: string) => {
+  const booths = ls.filter((l) => l.parent === slug);
+  return {
+    booths: booths.length,
+    withEmail: booths.filter((b) => b.contact?.email).length,
+    contacted: booths.filter((b) => CONTACTED.has(b.outreach?.status ?? "none")).length,
+    claimed: booths.filter((b) => b.claimed).length,
+  };
+};
+
+// Expo only: countries named in the tracker but with no category listing yet.
+const haveNames = new Set(categories.map((c) => (c.shortName ?? c.name).toLowerCase()));
+const missingCountries =
+  leg === "expo-2027" ? participants.filter((p) => !haveNames.has(p.name.toLowerCase())) : [];
+const BACK = `/admin/platform/${leg}`;
+---
+
+<AdminLayout title={`Platform — ${legMeta.title}`}>
+  <p class="crumbs">
+    <a href="/admin/platform">Platform</a> › <b>{legMeta.title}</b>
+    <span class="muted"> · {categories.length} categories · {ls.filter((l) => l.parent).length} businesses</span>
+  </p>
+
+  {ok ? <div class="ok">Done — {ok}.</div> : null}
+  {error ? <div class="err">{error}</div> : null}
+
+  {
+    categories.length === 0 ? (
+      <div class="panel">
+        <p class="muted">
+          No categories in this leg yet. Create the first container below — for
+          {" "}{legMeta.title}, categories are the venues/groups your businesses belong to.
+        </p>
+      </div>
+    ) : null
+  }
+
+  <div class="cards">
+    {
+      categories.map((c) => {
+        const s = catStats(c.slug);
+        return (
+          <a class="card" href={`/admin/platform/${leg}/${c.slug}`}>
+            <div class="num">{s.booths}</div>
+            <div class="lbl">businesses in <b>{c.shortName ?? c.name}</b></div>
+            <div class="meta">
+              <span>{s.withEmail} w/ email</span>
+              <span>{s.contacted} contacted</span>
+              <span>{s.claimed} claimed</span>
+              <span>{validListing(c) ? "page live" : "page thin"}</span>
+            </div>
+          </a>
+        );
+      })
+    }
+  </div>
+
+  <h2>Add a category</h2>
+  <div class="panel">
+    <form method="post" action="/api/admin/platform" class="row">
+      <input type="hidden" name="action" value="create" />
+      <input type="hidden" name="leg" value={leg} />
+      <input type="hidden" name="type" value={leg === "expo-2027" ? "pavilion" : "category"} />
+      <input type="hidden" name="back" value={BACK} />
+      <input type="text" name="name" placeholder="category name (e.g. France Pavilion)" style="width:280px" required />
+      <button>Create category</button>
+      <span class="muted">creates an unpublished stub — booths can be added immediately; the public page appears only once the stub has real content.</span>
+    </form>
+    {
+      missingCountries.length > 0 ? (
+        <details>
+          <summary class="muted">
+            {missingCountries.length} named Expo countries without a category — one-click create
+          </summary>
+          <table>
+            {missingCountries.map((p) => (
+              <tr>
+                <td>{p.name}</td>
+                <td class="muted">{p.region}</td>
+                <td>
+                  <form method="post" action="/api/admin/platform" class="inline">
+                    <input type="hidden" name="action" value="create" />
+                    <input type="hidden" name="leg" value={leg} />
+                    <input type="hidden" name="type" value="pavilion" />
+                    <input type="hidden" name="back" value={BACK} />
+                    <input type="hidden" name="name" value={`${p.name} Pavilion`} />
+                    <button class="ghost">create</button>
+                  </form>
+                </td>
+              </tr>
+            ))}
+          </table>
+        </details>
+      ) : null
+    }
+  </div>
+</AdminLayout>

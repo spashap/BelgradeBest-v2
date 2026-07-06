@@ -57,7 +57,7 @@ export type GscResult =
   | { configured: true; rows: GscRow[] }
   | { configured: false; reason: string };
 
-async function gscQuery(dimension: "query" | "page"): Promise<GscResult> {
+async function gscQuery(dimension: "query" | "page", pageRegex?: string): Promise<GscResult> {
   const credsJson = env("GA_CREDENTIALS_JSON");
   if (!credsJson) {
     return { configured: false, reason: "Set GA_CREDENTIALS_JSON (the service-account key) in the environment." };
@@ -83,7 +83,19 @@ async function gscQuery(dimension: "query" | "page"): Promise<GscResult> {
       {
         method: "POST",
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ startDate: fmt(start), endDate: fmt(end), dimensions: [dimension], rowLimit: 25 }),
+        body: JSON.stringify({
+          startDate: fmt(start),
+          endDate: fmt(end),
+          dimensions: [dimension],
+          rowLimit: pageRegex ? 50 : 25,
+          ...(pageRegex
+            ? {
+                dimensionFilterGroups: [
+                  { filters: [{ dimension: "page", operator: "includingRegex", expression: pageRegex }] },
+                ],
+              }
+            : {}),
+        }),
       },
     );
     if (!res.ok) {
@@ -105,6 +117,74 @@ async function gscQuery(dimension: "query" | "page"): Promise<GscResult> {
 
 export const searchConsoleTopQueries = () => gscQuery("query");
 export const searchConsoleTopPages = () => gscQuery("page");
+// Platform surface only (pavilions/tracker/countdown/for-businesses) — the
+// early-indexation feedback loop for /admin/platform.
+export const searchConsolePlatformPages = (regex: string) => gscQuery("page", regex);
+
+// ── Platform pages traffic ───────────────────────────────────────────────────
+// Views/users for the claimable-listings surface (pavilion pages, tracker,
+// countdown, /for-businesses) with a previous-period comparison. Powers
+// /admin/platform. Degrades gracefully like the other reports.
+export type PlatformPageRow = { path: string; views: number; users: number; prevViews: number };
+export type PlatformTraffic =
+  | { configured: true; days: number; rows: PlatformPageRow[] }
+  | { configured: false; reason: string };
+
+export async function ga4PlatformPages(prefixes: string[], days = 28): Promise<PlatformTraffic> {
+  const propertyId = env("GA_PROPERTY_ID");
+  if (!propertyId) {
+    return { configured: false, reason: "Set GA_PROPERTY_ID (+ GA_CREDENTIALS_JSON) in the environment." };
+  }
+  let mod: typeof import("@google-analytics/data");
+  try {
+    mod = await import("@google-analytics/data");
+  } catch {
+    return { configured: false, reason: "@google-analytics/data is not installed." };
+  }
+  try {
+    const { BetaAnalyticsDataClient } = mod;
+    const credsJson = env("GA_CREDENTIALS_JSON");
+    const client = credsJson
+      ? new BetaAnalyticsDataClient({ credentials: JSON.parse(credsJson) })
+      : new BetaAnalyticsDataClient();
+    const [resp] = await client.runReport({
+      property: `properties/${propertyId}`,
+      dateRanges: [
+        { startDate: `${days}daysAgo`, endDate: "today" },
+        { startDate: `${days * 2}daysAgo`, endDate: `${days + 1}daysAgo` },
+      ],
+      dimensions: [{ name: "pagePath" }],
+      metrics: [{ name: "screenPageViews" }, { name: "totalUsers" }],
+      dimensionFilter: {
+        orGroup: {
+          expressions: prefixes.map((p) => ({
+            filter: { fieldName: "pagePath", stringFilter: { matchType: "BEGINS_WITH", value: p } },
+          })),
+        },
+      },
+      limit: 200,
+    });
+    // With two dateRanges the API appends an implicit dateRange dimension value
+    // to every row — merge the two periods per path.
+    const byPath = new Map<string, PlatformPageRow>();
+    for (const r of resp.rows ?? []) {
+      const path = r.dimensionValues?.[0]?.value ?? "";
+      const range = r.dimensionValues?.[1]?.value ?? "date_range_0";
+      const row = byPath.get(path) ?? { path, views: 0, users: 0, prevViews: 0 };
+      if (range === "date_range_1") {
+        row.prevViews = num(r.metricValues?.[0]?.value);
+      } else {
+        row.views = num(r.metricValues?.[0]?.value);
+        row.users = num(r.metricValues?.[1]?.value);
+      }
+      byPath.set(path, row);
+    }
+    const rows = [...byPath.values()].sort((a, b) => b.views - a.views);
+    return { configured: true, days, rows };
+  } catch (e) {
+    return { configured: false, reason: `GA4 error: ${(e as Error).message}` };
+  }
+}
 
 // ── Rich GA4 overview ────────────────────────────────────────────────────────
 // One batched pull powering the redesigned Analytics screen: headline KPIs with

@@ -1,0 +1,21 @@
+{
+  "slug": "telekom-srbija",
+  "leg": "expo-2027",
+  "type": "sponsor",
+  "parent": "partners-and-suppliers",
+  "name": "Telekom Srbija",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.telekom.rs",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "First PLATINUM sponsor (4 Dec 2025): full 5G coverage, Wi-Fi zones, AV/media support across the site. Source: expobelgrade2027.org news."
+  }
+}

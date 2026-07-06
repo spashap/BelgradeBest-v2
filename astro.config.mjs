@@ -120,7 +120,9 @@ try {
     for (const file of readdirSync(legDir)) {
       if (!file.endsWith(".json")) continue;
       const j = JSON.parse(readFileSync(join(legDir, file), "utf8"));
-      const p = `${hub}/${j.slug ?? file.replace(/\.json$/, "")}`;
+      // Children (listings with `parent`) live one segment deeper.
+      const slug = j.slug ?? file.replace(/\.json$/, "");
+      const p = j.parent ? `${hub}/${j.parent}/${slug}` : `${hub}/${slug}`;
       if (j.updated) {
         LASTMOD[p] = iso(j.updated);
         dates.push(LASTMOD[p]);

@@ -4,7 +4,7 @@
   "type": "pavilion",
   "name": "Switzerland Pavilion",
   "shortName": "Switzerland",
-  "status": "concept-only",
+  "status": "announced",
   "claimed": false,
   "verified": false,
   "updated": "2026-07-05",
@@ -13,13 +13,14 @@
     "about": [
       "Switzerland was among the very first confirmations, in December 2024. The Swiss foreign ministry frames its Expo participation around a question: how to prepare the human body, mind and logic for a technology-led world full of insecurities, and make humans more resilient for the coming decades.",
       "Per the Expo organizer's participant page, the Swiss presentation will showcase culture, sport and music beyond the clichés: the Alphorn and yodeling, accordion-accompanied dances and Alpine bells, Zurich's Street Parade electronic-music event, and the traditional sports Schwingen (sawdust wrestling), Hornussen, and Steinstossen — stone throwing with stones up to 83.5 kg.",
-      "On the innovation side, the organizer highlights \"Plunder Planet\", a mobile game developed by the Zurich University of the Arts that adjusts its difficulty to the player's heart rate — a literal implementation of the Expo's play-meets-technology theme. Pavilion design and budget have not been announced."
+      "On the innovation side, the organizer highlights \"Plunder Planet\", a mobile game developed by the Zurich University of the Arts that adjusts its difficulty to the player's heart rate — a literal implementation of the Expo's play-meets-technology theme. The pavilion itself is designed as a walk-through artistic mountain panorama, engineered by Werner Sobek AG with Belgrade's Danilo Dangubic Architects and Swiss landscape firm VOGT, and run — as with every Swiss World Expo appearance — by Presence Switzerland at the foreign ministry. The budget has not been announced."
     ],
     "facts": [
       { "label": "Framing", "value": "Resilience of body, mind and logic in a technology-led world", "source": "https://www.eda.admin.ch/en/a-changing-world-expo-2027-in-belgrade" },
       { "label": "Status", "value": "Confirmed 12 Dec 2024 — among the first participants", "source": "https://expobelgrade2027.org/en/participants" },
       { "label": "Showcase", "value": "Alphorn, yodeling, Street Parade, Schwingen, Hornussen, Steinstossen", "source": "https://expobelgrade2027.org/en/participants/switzerland" },
       { "label": "Innovation", "value": "\"Plunder Planet\" — heart-rate-adaptive game by Zurich University of the Arts", "source": "https://expobelgrade2027.org/en/participants/switzerland" },
+      { "label": "Design", "value": "Walk-through artistic mountain panorama — engineering by Werner Sobek AG with Danilo Dangubic Architects and VOGT Landscape; run by Presence Switzerland (FDFA)", "source": "https://www.wernersobek.com/projects/expo-2027-belgrade/" },
       { "label": "Size / budget", "value": "Not disclosed" }
     ],
     "quotes": [

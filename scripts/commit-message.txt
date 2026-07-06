@@ -1,56 +1,112 @@
-Platform Phase 1: claimable-listings engine + 12 Expo pavilion profiles
+Admin platform redesigned around the north star: booths, not pavilions
 
-Implements Phase 1 of KB/platform/PLATFORM-PLAN.md (status updated in the
-plan; CLAUDE.md documents the new machinery).
+Restructures /admin/platform per the owner's core clarification: the atomic
+unit of the platform is the BOOTH — the individual business inside a pavilion
+(~10k prospects across the Expo; same pattern later for other legs).
+Pavilions are just categories/containers; government pavilion pages are a
+maybe-later bonus. The admin is now a drill-down PROSPECT DATABASE, not a
+listings CMS. KB plan + CLAUDE.md context preserved; north star recorded.
 
-Listings engine:
-- Per-listing data masters src/data/listings/<leg>/<slug>.json -> new
-  src/lib/listings.ts: eager glob loader, validListing thin-content guard
-  (summary >=80 chars, about >=300, facts >=2 — sub-threshold listings stay
-  unpublished stubs), SECTION per-leg URL segment map (expo-2027 ->
-  "pavilions"), newestUpdated for hub freshness.
-- T4 listing template src/pages/expo-2027/pavilions/[slug].astro: at-a-glance
-  facts table with per-row sources, announced/reported editorial paragraphs,
-  quotes, sources list, "claim this page" note -> /for-businesses; JSON-LD
-  Article + BreadcrumbList.
-- Pavilion directory hub /expo-2027/pavilions: stat tiles, profiled list, and
-  a directory row for every one of the 93 named participant countries
-  (built-vs-pending, mirroring the leg-hub pattern); ItemList JSON-LD.
-- noindex-first behind site-config.json -> programmatic.listingsIndexable
-  (false): astro.config.mjs enumerates listing paths into NOINDEX + sitemap
-  exclusion and mirrors the SECTION map; per-listing `updated` drives lastmod
-  once the flag flips. Tracker cross-link gated on the same flag.
+New structure (drill-down):
+- /admin/platform — LEGS as navigational cards (all 7 legs from the schema,
+  ready to grow): businesses count headline + categories / with-email /
+  contacted / claimed meta per leg; inactive legs render as ghost cards that
+  open ready-to-set-up. Below: booth-level funnel (north-star numbers), GA4
+  traffic w/ deltas, GSC indexation feedback.
+- /admin/platform/[leg] — CATEGORIES as cards (Expo: pavilions), each showing
+  its booth rollup (count / w-email / contacted / claimed) + page state.
+  "Add category" form + one-click category creation for every named Expo
+  country still missing one (from the tracker dataset).
+- /admin/platform/[leg]/[category] — THE working screen: booth table designed
+  for outreach sessions — add-business form (name/email/person/website/notes
+  -> creates an unpublished prospect stub via new createListing()), per-row
+  contact+notes+claimed save, stage badge with quick-advance buttons and
+  auto-stamped dates, per-booth email draft (open mailto / copy), stage
+  filter chips with counts, category-page controls tucked into the header.
+- Old screens re-scoped as cross-cutting tools: /listings -> "Search" (flat
+  filterable list), /outreach -> "Queue" (all-stage work queue; now shows
+  parent context). Shared sub-nav: Legs · Queue · Search.
 
-Content — 12 pavilion profiles, web-researched 2026-07-05, every fact
-sourced (official ministries, JETRO/METI, State Dept, WKO, ekapija, ANSA):
-Japan (Basic Plan, Kirie logo, contract + ambassadors), Germany (EUR 7.5M
-tender, 972 m2), Italy (contract + "Play together"), Serbia (EUR 40M host
-pavilion, 30,000 m2, Artbeat Lab), USA (Vita Motus design, Trivandi ops),
-Russia ("Play to be"), Saudi Arabia, Austria (EU-wide tender, 75/25
-financing), Switzerland, Turkiye, UAE, China (World Expo Museum 330 m2).
+Machinery:
+- platform-store: createListing() (slugify w/ diacritics strip, overwrite
+  guard, minimal stub JSON — thin guard keeps it off the public site) used by
+  the extended /api/admin/platform (action=create).
+- New lib/admin/outreach-draft.ts: one draft builder for all screens;
+  template resolution "<leg>:<type>" -> "<leg>" -> default; placeholders now
+  include {parentName}/{parentUrl}.
+- New "expo-2027:booth" template in outreach-templates.json: pitches the
+  PARENT pavilion page and frames the booth's own page as reserved — a
+  prospect stub's URL is 404 until claimed, so booth emails must never link
+  it.
+- AdminLayout: navigational card styles (.cards/.card + ghost) and crumbs.
 
-Page thickening (owner request, same session): every pavilion page now also
-carries (a) a "Where to find the pavilion" geography block + "Visiting — the
-practical context" block, templated once from verified getting-there facts
-(Surcin, 5 km from airport / 13.5 km from centre, International Participant
-Area -> future Belgrade Fair, free city transport, railway status) with
-internal links to getting-there / tickets / where-to-stay-for-expo, and
-(b) 3-4 country-specific FAQs per listing (new `faqs` field) rendered as the
-native-details accordion + FAQPage JSON-LD. Location/transport FAQs stay
-owned by the getting-there article to avoid duplication. Page title pattern
-sharpened to "<X> Pavilion at Expo 2027 Belgrade - theme & plans". Pages now
-run ~900-1,300 words.
+Also in this change set — /for-businesses relaunched as the Partners page:
+- New pitch: "We fight the SEO war for you" — AI-validated credibility
+  (sourced, cross-checked profiles), typed structured data, technical SEO
+  (static speed, real lastmod, IndexNow), AI-search readiness (ChatGPT/
+  Perplexity/AI Overviews citability), compounding site authority — with an
+  honest no-ranking-promises note in brand voice.
+- Full tools arsenal on-page with copy buttons: badge embed + Expo countdown
+  embed + where-to-paste steps + GBP website-field how-to; "coming with
+  claimed pages" (QR, menu URL, monthly stats email) trailed.
+- GET LISTED form -> new public serverless POST /api/listing-request:
+  honeypot + length caps + email shape check, writes a lead JSON to
+  src/data/leads/ via the shared GitHub store (a commit in prod, no DB),
+  redirects with ?sent=1 (static page toggles success/error notes
+  client-side). New .c-listing-form styles in globals.css (design law).
+- Admin Platform home: new "Inbound leads" panel reading src/data/leads/
+  (latest 15) with process instructions.
+- Footer: "How we make money" slot replaced by "Partners" -> /for-businesses
+  (SiteFooter SPECIAL entry + site-config footer ref swap; the
+  how-we-make-money PAGE stays for E-E-A-T and is linked from the pitch).
 
-Indexation: programmatic.listingsIndexable flipped to TRUE (owner decision,
-same session) — pavilion hub + 12 spokes are live-indexable: noindex meta
-dropped, 13 URLs added to the sitemap with real per-listing lastmod, the
-tracker's gated pavilion cross-link activated, and participants.md now links
-the pavilion directory from its pavilion-plans section. IndexNow will submit
-the new URLs automatically on the production build.
+Prospect database seeded — 32 researched outreach targets (2026-07-05 web
+sweep, every entry sourced; the platform's first real pipeline):
+- 16 pavilion gatekeepers (type agency/contractor) under their pavilions:
+  JETRO + METI (Japan), Messe Duesseldorf (Germany - awarded 28 May 2026),
+  Italy Commissariat (LIVE sponsorship call, deadline 31 Aug 2026,
+  economico.belgrado@esteri.it) + ICE Belgrade, BMWET (EXPO@bmwet.gv.at) +
+  WKO Expo Buero (office@expoaustria.at), US State Dept Expo Unit
+  (expo@state.gov) + Vita Motus + Trivandi USA, Presence Switzerland,
+  Turkiye Ministry of Trade (expo2027@ticaret.gov.tr, call deadline 17 Aug
+  2026), Minpromtorg, CCPIT, Serbia Commissioner Office + EXPO 2027 BELGRADE
+  d.o.o. (info@ + partnerships komercijalizacija@expobelgrade2027.org),
+  Artbeat Lab.
+- 15 event-level companies under a new "Expo 2027 Partners & Suppliers"
+  container category: Platinum sponsors Telekom Srbija + Air Serbia, PKS,
+  POWERCHINA, Millennium Team (office@millenniumteam.rs), Werner Sobek AG,
+  Danilo Dangubic Architects, VOGT, Fenwick Iribarren, MC Group, Stratcom,
+  the collective-pavilions consortium (Contributor/CRE/ARCVS), NUSSLI
+  (expo@nussli.com — sells pavilion build services to our exact audience).
+- All are unpublished stubs (thin guard) with contact + sourced role notes in
+  operator-only fields; verified zero contact leakage into public HTML.
+- New "expo-2027:agency" email template (fact-check + share-with-exhibitors
+  ask); draft resolution now falls back child -> "<leg>:booth" -> leg ->
+  default, so sponsors/contractors get the booth-style pitch automatically.
+- Pavilion pages enriched from the same research: Germany (Messe Duesseldorf
+  implementation fact + paragraph, status -> announced), Switzerland (walk-
+  through mountain panorama by Werner Sobek + Dangubic + VOGT, run by
+  Presence Switzerland; status -> announced).
 
-Build verified: 12 spoke pages + hub prerendered and indexable (no robots
-meta, matching site convention), sitemap at 115 URLs incl. 13 pavilion URLs
-with 2026-07-05 lastmod, hub links all 12 profiles and lists 93 countries,
-12/12 pages carry FAQPage + Article + BreadcrumbList JSON-LD.
+Docs: new KB/platform/PROSPECT-RESEARCH-RUNBOOK.md — the repeatable "check
+for new businesses" procedure (prospect taxonomy, proven source list incl.
+per-country program URLs + tender portals, hard rules like never-invent-
+emails and dedupe-before-seeding, step-by-step run procedure, verification
+checklist, watch list with upcoming deadlines, use cases incl. bulk exhibitor
+-list mode, and the proven agent prompt templates). CLAUDE.md points to it.
+
+Navigation: header gets a second level for leg business sections. New
+navSectionsFor() in lib/listings.ts (SECTION_TITLE map) renders "Pavilions"
+under Expo 2027 — shown only while the section has published listings AND
+listingsIndexable is on; every future leg inherits its own sub-level
+automatically when its SECTION entry + listings land. SiteHeader: leg items
+with subs render a dropdown (desktop: hover / keyboard focus-within / caret
+click for touch, aria-expanded wired; mobile burger: sub renders inline,
+indented, always visible). New .c-header__item/__caret/__sub styles in
+globals.css per the design law.
+
+Build verified clean; footer shows Partners; public pavilion pages unchanged
+at 13 + child (stubs stay unpublished); all 46 listing JSONs validate; header
+renders the Pavilions sub-item site-wide.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

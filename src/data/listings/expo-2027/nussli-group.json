@@ -1,0 +1,24 @@
+{
+  "slug": "nussli-group",
+  "leg": "expo-2027",
+  "type": "supplier",
+  "parent": "partners-and-suppliers",
+  "name": "NUSSLI Group",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.nussli.com",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "expo@nussli.com"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Expo construction specialist, self-announced ON SITE in Belgrade offering full-service pavilion design/build/fit-out to nations + sponsors — sells to OUR audience; strong partner prospect. Source: nussli.com."
+  }
+}

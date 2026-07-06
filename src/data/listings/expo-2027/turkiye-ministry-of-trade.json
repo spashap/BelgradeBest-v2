@@ -1,0 +1,24 @@
+{
+  "slug": "turkiye-ministry-of-trade",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "turkiye",
+  "name": "Türkiye Ministry of Trade — Expo 2027",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://ticaret.gov.tr/duyurular/expo-2027-belgrad-piyasa-fiyat-arastirmasi-hk",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "expo2027@ticaret.gov.tr"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Coordinates the 648 m2 pavilion (national day 19 May 2027). LIVE call for pavilion project proposals (design/operations/culture/promotion), DEADLINE 17 Aug 2026, to this email."
+  }
+}

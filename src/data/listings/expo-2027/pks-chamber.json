@@ -1,0 +1,21 @@
+{
+  "slug": "pks-chamber",
+  "leg": "expo-2027",
+  "type": "sponsor",
+  "parent": "partners-and-suppliers",
+  "name": "Chamber of Commerce and Industry of Serbia (PKS)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://pks.rs",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Institutional partner (non-financial) supporting the Expo's business programme (forums, B2B). Source: expobelgrade2027.org news."
+  }
+}

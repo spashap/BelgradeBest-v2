@@ -1,0 +1,21 @@
+{
+  "slug": "artbeat-lab",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "serbia",
+  "name": "Artbeat Lab d.o.o. Beograd",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Design contract for Serbia's ~EUR 40M national pavilion (RSD 9.92M, sole bidder, Ministry of Finance tender); interior design credited on eKapija. Source: ekapija.com/en/news/4751657"
+  }
+}

@@ -115,16 +115,27 @@ sitemap re-includes/excludes it automatically. Sitemap `lastmod` is real per-pag
 (article frontmatter `lastUpdated`; `updated` fields in glossary/areas/site-pages
 JSON; hubs inherit their newest child) — do NOT let it fall back to build time.
 
-**Claimable listings (platform, Phase 1 — see `KB/platform/PLATFORM-PLAN.md`):**
+**Claimable listings (platform — see `KB/platform/PLATFORM-PLAN.md`):**
 per-listing masters `src/data/listings/<leg>/<slug>.json` → `src/lib/listings.ts`
-(thin-content guard `validListing`, per-leg URL segment map `SECTION`) → pages
-`src/pages/expo-2027/pavilions/` (hub + `[slug]`). Ships **noindex-first** behind
-`site-config.json → programmatic.listingsIndexable` (astro.config mirrors the
-gate + a `LISTING_SECTION` copy of the segment map — keep in sync). Bump each
-listing's `updated` on edit (drives dateModified + sitemap lastmod). The Expo
-data page `/expo-2027/tracker` renders `src/data/expo-participants.json` (bump
-its `updated` too); `/expo-2027/countdown`, `/for-businesses`, badge + widget
-in `public/` are the Phase-0 link assets.
+(thin-content guard `validListing`, per-leg URL segment map `SECTION`,
+**one-level hierarchy** via `parent` — exhibitors render under their pavilion at
+`/<leg>/<section>/<parent>/<child>`, child publishes only if parent does) →
+`src/layouts/ListingPage.astro` (ONE layout for both levels) + thin routes in
+`src/pages/expo-2027/pavilions/`. Indexable via `programmatic.listingsIndexable`
+(flipped ON 2026-07-05; astro.config mirrors the gate + `LISTING_SECTION`).
+Bump each listing's `updated` on edit (drives dateModified + sitemap lastmod).
+**Operator-only fields `contact` + `outreach` in listing JSON must NEVER render
+publicly** (admin/outreach data). The admin **Platform module**
+(`/admin/platform` Overview · `/listings` manager · `/outreach` pipeline) reads
+listings at REQUEST time via `lib/admin/platform-store.ts` (shared GitHub/local
+store; writes via `/api/admin/platform`) — instant state, no rebuild wait.
+Outreach email drafts render from `src/data/outreach-templates.json`
+(`{name}/{short}/{pageUrl}`); sending automation activates in Phase 3
+(RESEND_API_KEY). **Prospect research ("check for new businesses"): follow
+`KB/platform/PROSPECT-RESEARCH-RUNBOOK.md`** — sources, agent prompts, seeding
+mechanics, verification checklist, watch list (update it every run). Expo data page `/expo-2027/tracker` renders
+`src/data/expo-participants.json` (bump its `updated` too); `/expo-2027/countdown`,
+`/for-businesses`, badge + widget in `public/` are the Phase-0 link assets.
 
 A full SEO audit + prioritized fixes live in `KB/seo/FULL-AUDIT-REPORT-2026-07-02.md`
 and `KB/seo/ACTION-PLAN-2026-07-02.md` (most items applied 2026-07-02; the www-TLS

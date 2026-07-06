@@ -1,0 +1,21 @@
+{
+  "slug": "powerchina",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "POWERCHINA (Power Construction Corp. of China)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://en.powerchina.cn",
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Main contractor (intergovernmental agreement): exhibition buildings, site infrastructure, 52,000-seat National Stadium. Source: en.powerchina.cn."
+  }
+}

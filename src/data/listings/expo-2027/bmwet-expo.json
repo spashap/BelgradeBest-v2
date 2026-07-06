@@ -1,0 +1,24 @@
+{
+  "slug": "bmwet-expo",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "austria",
+  "name": "BMWET — EXPO department (Austria)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://www.bmwet.gv.at/Themen/International/EXPO/Expo-2027-Belgrad.html",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "EXPO@bmwet.gv.at"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Co-financing ministry (75%). Email verified on the ministry's own Expo 2027 Belgrad page."
+  }
+}

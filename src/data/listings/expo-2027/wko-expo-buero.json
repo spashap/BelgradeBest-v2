@@ -1,0 +1,24 @@
+{
+  "slug": "wko-expo-buero",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "austria",
+  "name": "Expo Büro der WKÖ (expoaustria.at)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://expoaustria.at/de/expo-2027-belgrad/",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "office@expoaustria.at"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Operational implementer + 25% co-financier; runs Austria's Expo participations (continuing from Osaka 2025). Tel +43 5 90900 3405. Has run 'how Austrian companies profit' info events — the office email is the approach route."
+  }
+}

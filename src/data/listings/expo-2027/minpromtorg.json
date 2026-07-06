@@ -1,0 +1,24 @@
+{
+  "slug": "minpromtorg",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "russia",
+  "name": "Minpromtorg (Russia, Ministry of Industry and Trade)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://minpromtorg.gov.ru",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "person": "Min. Anton Alikhanov (org committee chair)"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "Lead ministry; ~972 m2 pavilion planned. No public program email; implementing operator not yet named."
+  }
+}

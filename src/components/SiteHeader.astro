@@ -3,11 +3,14 @@ import Container from "./Container.astro";
 import Wordmark from "./Wordmark.astro";
 import { CONFIG } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
+import { navSectionsFor } from "../lib/listings";
 
 // Wordmark + leg nav. Nav items are leg slug REFS in chrome.headerNav; titles/
 // hrefs resolve from the structure (clusterBySlug), using navLabel when set.
 // Items are { ref, visible } (admin-controlled); a bare string is tolerated as
 // shorthand for { ref, visible:true }. Hidden items drop out of the strip.
+// A leg with a live listings section (navSectionsFor) gets a second level —
+// e.g. Expo 2027 → Pavilions; future legs inherit this automatically.
 type NavItem = string | { ref: string; visible?: boolean };
 const items = (CONFIG.chrome.headerNav?.items ?? []) as NavItem[];
 const nav = items
@@ -17,9 +20,15 @@ const nav = items
     const c = clusterBySlug(it.ref);
     // Structure visibility is the master gate: a leg hidden in site-schema.json
     // (visible:false) drops from the strip regardless of its nav-item flag.
-    return c && !c.hidden ? { href: c.href, label: (c.navLabel && c.navLabel.trim()) || c.title } : null;
+    return c && !c.hidden
+      ? {
+          href: c.href,
+          label: (c.navLabel && c.navLabel.trim()) || c.title,
+          subs: navSectionsFor(it.ref),
+        }
+      : null;
   })
-  .filter((n): n is { href: string; label: string } => n !== null);
+  .filter((n): n is { href: string; label: string; subs: { title: string; href: string }[] } => n !== null);
 ---
 <header class="c-site-header">
   <Container>
@@ -39,7 +48,29 @@ const nav = items
               <span /> <span /> <span />
             </button>
             <nav id="site-nav" class="c-header__nav" aria-label="Sections">
-              {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+              {nav.map((n) =>
+                n.subs.length === 0 ? (
+                  <a href={n.href}>{n.label}</a>
+                ) : (
+                  <div class="c-header__item">
+                    <a href={n.href}>{n.label}</a>
+                    <button
+                      type="button"
+                      class="c-header__caret"
+                      aria-label={`Open ${n.label} submenu`}
+                      aria-expanded="false"
+                      data-subnav-toggle
+                    >
+                      ▾
+                    </button>
+                    <div class="c-header__sub">
+                      {n.subs.map((s) => (
+                        <a href={s.href}>{s.title}</a>
+                      ))}
+                    </div>
+                  </div>
+                ),
+              )}
             </nav>
           </Fragment>
         ) : null
@@ -49,14 +80,23 @@ const nav = items
   <script is:inline>
     (function () {
       var b = document.querySelector("[data-burger]");
-      if (!b) return;
       var nav = document.getElementById("site-nav");
-      if (!nav) return;
-      b.addEventListener("click", function () {
-        var open = b.getAttribute("aria-expanded") === "true";
-        b.setAttribute("aria-expanded", String(!open));
-        b.setAttribute("aria-label", open ? "Open menu" : "Close menu");
-        nav.classList.toggle("is-open", !open);
+      if (b && nav) {
+        b.addEventListener("click", function () {
+          var open = b.getAttribute("aria-expanded") === "true";
+          b.setAttribute("aria-expanded", String(!open));
+          b.setAttribute("aria-label", open ? "Open menu" : "Close menu");
+          nav.classList.toggle("is-open", !open);
+        });
+      }
+      // Sub-nav caret: click-to-toggle for touch devices (hover/focus already
+      // opens it on desktop; on mobile the sub renders inline, caret hidden).
+      document.querySelectorAll("[data-subnav-toggle]").forEach(function (t) {
+        t.addEventListener("click", function () {
+          var open = t.getAttribute("aria-expanded") === "true";
+          t.setAttribute("aria-expanded", String(!open));
+          t.closest(".c-header__item").classList.toggle("is-sub-open", !open);
+        });
       });
     })();
   </script>

@@ -1,0 +1,24 @@
+{
+  "slug": "expo-2027-belgrade-doo",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "serbia",
+  "name": "EXPO 2027 BELGRADE d.o.o.",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": "https://expobelgrade2027.org/en/contact",
+    "sources": []
+  },
+  "images": [],
+  "contact": {
+    "email": "info@expobelgrade2027.org"
+  },
+  "outreach": {
+    "status": "none",
+    "notes": "State-owned organizer of the whole Expo — signs country participation contracts. PARTNERSHIPS contact: komercijalizacija@expobelgrade2027.org (published at expobelgrade2027.org/en/play-with-us); country participants use ipportal.rs."
+  }
+}

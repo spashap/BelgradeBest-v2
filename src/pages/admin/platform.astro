@@ -1,0 +1,203 @@
+---
+export const prerender = false;
+// Platform module — HOME. The drill-down starts here: LEG cards → categories
+// (pavilions) → BOOTHS (the north star: individual businesses to reach,
+// email and convert to claimed pages; the category level is just their
+// container). Global funnel + traffic/search feedback live below the cards.
+// Cross-cutting screens: Queue (all outreach work) and Search (flat list).
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { validListing, listingsIndexable, SECTION } from "../../lib/listings";
+import { readListings, outreachFunnel } from "../../lib/admin/platform-store";
+import { readSchema, listDir, getFile } from "../../lib/admin/store";
+import { ga4PlatformPages, searchConsolePlatformPages } from "../../lib/admin/analytics";
+
+const [listings, schema] = await Promise.all([readListings(), readSchema()]);
+
+const sectionPrefixes = Object.entries(SECTION).map(([leg, s]) => `/${leg}/${s}`);
+const PLATFORM_PREFIXES = [...sectionPrefixes, "/expo-2027/tracker", "/expo-2027/countdown", "/for-businesses"];
+const GSC_REGEX = `${sectionPrefixes.map((p) => p.replace(/\//g, "\\/")).join("|")}|\\/expo-2027\\/(tracker|countdown)|\\/for-businesses`;
+const [traffic, gsc] = await Promise.all([
+  ga4PlatformPages(PLATFORM_PREFIXES),
+  searchConsolePlatformPages(GSC_REGEX),
+]);
+
+// Per-leg rollups. Booth = listing WITH a parent (the atom of the platform);
+// category = top-level listing (pavilion etc.).
+const CONTACTED = new Set(["sent", "replied", "claiming", "live"]);
+const legStats = (leg: string) => {
+  const ls = listings.filter((l) => l.leg === leg);
+  const booths = ls.filter((l) => l.parent);
+  return {
+    categories: ls.filter((l) => !l.parent).length,
+    booths: booths.length,
+    withEmail: booths.filter((b) => b.contact?.email).length,
+    contacted: booths.filter((b) => CONTACTED.has(b.outreach?.status ?? "none")).length,
+    claimed: ls.filter((l) => l.claimed).length,
+    published: ls.filter(validListing).length,
+  };
+};
+const legs = schema.legs
+  .slice()
+  .sort((a, b) => a.order - b.order)
+  .map((l) => ({ slug: l.slug, title: l.title, active: l.slug in SECTION, stats: legStats(l.slug) }));
+
+const booths = listings.filter((l) => l.parent);
+const claimedTotal = listings.filter((l) => l.claimed).length;
+const funnel = outreachFunnel(booths).filter((f) => f.count > 0);
+
+// Inbound leads from the /for-businesses form (lead files via the store).
+type Lead = {
+  received: string;
+  business: string;
+  category: string;
+  person: string | null;
+  email: string;
+  website: string | null;
+  message: string | null;
+  status: string;
+};
+const leadFiles = (await listDir("src/data/leads"))
+  .filter((f) => !f.dir && f.name.endsWith(".json"))
+  .sort((a, b) => b.name.localeCompare(a.name))
+  .slice(0, 15);
+const leads: Lead[] = await Promise.all(
+  leadFiles.map(async (f) => JSON.parse((await getFile(`src/data/leads/${f.name}`)).text) as Lead),
+);
+
+const totals = traffic.configured
+  ? traffic.rows.reduce((a, r) => ({ views: a.views + r.views, prev: a.prev + r.prevViews }), { views: 0, prev: 0 })
+  : null;
+const deltaTxt = (cur: number, prev: number) => {
+  const d = cur - prev;
+  return d === 0 ? "±0" : d > 0 ? `+${d}` : String(d);
+};
+---
+
+<AdminLayout title="Platform — legs">
+  <p class="row">
+    <b>Legs</b> · <a href="/admin/platform/outreach">Queue</a> ·
+    <a href="/admin/platform/listings">Search</a>
+    <span class={`badge ${listingsIndexable ? "live" : "hidden"}`}>{listingsIndexable ? "indexable" : "noindex"}</span>
+  </p>
+
+  <div class="cards">
+    {
+      legs.map((leg) => (
+        <a class={`card ${leg.active || leg.stats.categories > 0 ? "" : "ghost"}`} href={`/admin/platform/${leg.slug}`}>
+          <div class="num">{leg.stats.booths}</div>
+          <div class="lbl">businesses in <b>{leg.title}</b></div>
+          <div class="meta">
+            {leg.active || leg.stats.categories > 0 ? (
+              <>
+                <span>{leg.stats.categories} categories</span>
+                <span>{leg.stats.withEmail} w/ email</span>
+                <span>{leg.stats.contacted} contacted</span>
+                <span>{leg.stats.claimed} claimed</span>
+              </>
+            ) : (
+              <span>not started — open to set up</span>
+            )}
+          </div>
+        </a>
+      ))
+    }
+  </div>
+
+  <h2>Booth funnel (all legs) — the north-star numbers</h2>
+  <div class="panel">
+    <div class="row">
+      <span class="badge">businesses: <b>{booths.length}</b></span>
+      {funnel.length === 0 ? (
+        <span class="muted">no outreach started yet — open a leg → pavilion → add businesses</span>
+      ) : (
+        funnel.map((f) => <span class="badge">{f.status}: <b>{f.count}</b></span>)
+      )}
+      <span class="badge live">claimed (incl. categories): <b>{claimedTotal}</b></span>
+    </div>
+  </div>
+
+  <h2>Inbound leads — the /for-businesses form ({leads.length ? `latest ${leads.length}` : "none yet"})</h2>
+  <div class="panel">
+    {
+      leads.length === 0 ? (
+        <p class="muted">
+          No requests yet. Leads land here when a business submits the
+          <a href="/for-businesses" target="_blank" rel="noopener"> get-listed form</a> (each one
+          is a commit in <span class="slug">src/data/leads/</span>).
+        </p>
+      ) : (
+        <>
+          <table>
+            <tr><th>received</th><th>business</th><th>category</th><th>contact</th><th>message</th></tr>
+            {leads.map((ld) => (
+              <tr>
+                <td class="muted">{ld.received.slice(0, 10)}</td>
+                <td><b>{ld.business}</b>{ld.website ? <div class="muted slug"><a href={ld.website} target="_blank" rel="noopener">{ld.website}</a></div> : null}</td>
+                <td><span class="badge">{ld.category}</span></td>
+                <td class="slug">{ld.email}{ld.person ? <div class="muted">{ld.person}</div> : null}</td>
+                <td class="muted">{ld.message ?? "—"}</td>
+              </tr>
+            ))}
+          </table>
+          <p class="muted">
+            To process a lead: open its leg → category, "Add a business" with these details,
+            then advance the stage — the lead file can be deleted from the repo afterwards.
+          </p>
+        </>
+      )
+    }
+  </div>
+
+  <h2>Traffic — platform pages (last 28 days, Δ vs previous 28)</h2>
+  <div class="panel">
+    {
+      !traffic.configured ? (
+        <p class="muted">{traffic.reason}</p>
+      ) : traffic.rows.length === 0 ? (
+        <p class="muted">No platform-page traffic recorded yet — normal right after launch.</p>
+      ) : (
+        <table>
+          <tr><th>page</th><th>views</th><th>Δ</th><th>users</th></tr>
+          {traffic.rows.slice(0, 15).map((r) => (
+            <tr>
+              <td class="slug"><a href={r.path} target="_blank" rel="noopener">{r.path}</a></td>
+              <td>{r.views}</td>
+              <td class="muted">{deltaTxt(r.views, r.prevViews)}</td>
+              <td>{r.users}</td>
+            </tr>
+          ))}
+          <tr>
+            <td><b>total</b></td>
+            <td><b>{totals!.views}</b></td>
+            <td class="muted">{deltaTxt(totals!.views, totals!.prev)}</td>
+            <td />
+          </tr>
+        </table>
+      )
+    }
+  </div>
+
+  <h2>Search Console — indexation feedback (platform URLs, last 28 days)</h2>
+  <div class="panel">
+    {
+      !gsc.configured ? (
+        <p class="muted">{gsc.reason}</p>
+      ) : gsc.rows.length === 0 ? (
+        <p class="muted">No impressions yet — fresh pages take days to weeks to surface.</p>
+      ) : (
+        <table>
+          <tr><th>page</th><th>clicks</th><th>impressions</th><th>CTR</th><th>position</th></tr>
+          {gsc.rows.map((r) => (
+            <tr>
+              <td class="slug">{r.key.replace("https://belgradebest.com", "")}</td>
+              <td>{r.clicks}</td>
+              <td>{r.impressions}</td>
+              <td>{(r.ctr * 100).toFixed(1)}%</td>
+              <td>{r.position.toFixed(1)}</td>
+            </tr>
+          ))}
+        </table>
+      )
+    }
+  </div>
+</AdminLayout>

@@ -1,0 +1,20 @@
+---
+// Child listing route: exhibitors/organizations under a pavilion
+// (/expo-2027/pavilions/<parent>/<child>). A child builds only when both it
+// and its parent pass the thin-content guard (childrenOf enforces that).
+import ListingPage from "../../../../layouts/ListingPage.astro";
+import { listingsForLeg, childrenOf, type Listing } from "../../../../lib/listings";
+
+export function getStaticPaths() {
+  return listingsForLeg("expo-2027").flatMap((parent) =>
+    childrenOf("expo-2027", parent.slug).map((child) => ({
+      params: { slug: parent.slug, child: child.slug },
+      props: { listing: child },
+    })),
+  );
+}
+
+const { listing } = Astro.props as { listing: Listing };
+---
+
+<ListingPage listing={listing} />

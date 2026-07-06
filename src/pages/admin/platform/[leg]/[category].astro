@@ -1,0 +1,191 @@
+---
+export const prerender = false;
+// Platform module — CATEGORY (pavilion) screen: THE working surface. The
+// category is just the container; the table below is the point — every booth
+// (business) inside it: add prospects, store contacts, advance the outreach
+// stage, open/copy the email draft, flag claims. Designed to be worked
+// top-to-bottom during an outreach session.
+import AdminLayout from "../../../../layouts/AdminLayout.astro";
+import { validListing, listingHref, OUTREACH_STATUSES } from "../../../../lib/listings";
+import { readListings } from "../../../../lib/admin/platform-store";
+import { draftFor, mailtoFor } from "../../../../lib/admin/outreach-draft";
+import { env } from "../../../../lib/admin/env";
+
+const leg = String(Astro.params.leg ?? "");
+const catSlug = String(Astro.params.category ?? "");
+const listings = await readListings();
+const category = listings.find((l) => l.leg === leg && l.slug === catSlug && !l.parent);
+if (!category) return Astro.redirect(`/admin/platform/${leg}?error=unknown+category`);
+
+const url = new URL(Astro.request.url);
+const ok = url.searchParams.get("ok");
+const error = url.searchParams.get("error");
+const stageFilter = url.searchParams.get("stage") ?? "";
+
+const booths = listings.filter((l) => l.leg === leg && l.parent === catSlug);
+const shown = stageFilter ? booths.filter((b) => (b.outreach?.status ?? "none") === stageFilter) : booths;
+
+const CONTACTED = new Set(["sent", "replied", "claiming", "live"]);
+const stats = {
+  withEmail: booths.filter((b) => b.contact?.email).length,
+  contacted: booths.filter((b) => CONTACTED.has(b.outreach?.status ?? "none")).length,
+  replied: booths.filter((b) => ["replied", "claiming", "live"].includes(b.outreach?.status ?? "")).length,
+  claimed: booths.filter((b) => b.claimed).length,
+};
+
+const repo = env("GITHUB_REPO");
+const branch = env("GITHUB_BRANCH") || "main";
+const editUrl = (rel: string) => (repo ? `https://github.com/${repo}/edit/${branch}/${rel}` : null);
+const BACK = `/admin/platform/${leg}/${catSlug}${stageFilter ? `?stage=${stageFilter}` : ""}`;
+
+const NEXT: Record<string, string[]> = {
+  none: ["queued", "sent"],
+  queued: ["sent", "declined"],
+  sent: ["replied", "declined", "opt-out"],
+  replied: ["claiming", "live", "declined"],
+  claiming: ["live", "declined"],
+  live: [],
+  declined: ["queued"],
+  "opt-out": [],
+};
+const short = category.shortName ?? category.name;
+---
+
+<AdminLayout title={`Platform — ${short}`}>
+  <p class="crumbs">
+    <a href="/admin/platform">Platform</a> › <a href={`/admin/platform/${leg}`}>{leg}</a> ›
+    <b>{short}</b>
+  </p>
+
+  {ok ? <div class="ok">Done — {ok}.</div> : null}
+  {error ? <div class="err">{error}</div> : null}
+
+  <div class="panel">
+    <div class="row">
+      <span class="badge">{booths.length} businesses</span>
+      <span class="badge">{stats.withEmail} w/ email</span>
+      <span class="badge">{stats.contacted} contacted</span>
+      <span class="badge">{stats.replied} replied+</span>
+      <span class="badge live">{stats.claimed} claimed</span>
+      <span class="muted">·</span>
+      <span class="muted">
+        category page: {validListing(category) ? <a href={listingHref(category)} target="_blank" rel="noopener">live</a> : "thin (unpublished)"}
+        {category.claimed ? " · claimed" : ""}
+        {editUrl(`src/data/listings/${leg}/${catSlug}.json`) ? (
+          <> · <a href={editUrl(`src/data/listings/${leg}/${catSlug}.json`)!} target="_blank" rel="noopener">edit page JSON</a></>
+        ) : null}
+      </span>
+    </div>
+  </div>
+
+  <h2>Add a business (booth)</h2>
+  <div class="panel">
+    <form method="post" action="/api/admin/platform" class="row">
+      <input type="hidden" name="action" value="create" />
+      <input type="hidden" name="leg" value={leg} />
+      <input type="hidden" name="type" value="booth" />
+      <input type="hidden" name="parent" value={catSlug} />
+      <input type="hidden" name="back" value={BACK} />
+      <input type="text" name="name" placeholder="business name *" style="width:220px" required />
+      <input type="text" name="email" placeholder="email" style="width:190px" />
+      <input type="text" name="person" placeholder="person / role" style="width:140px" />
+      <input type="text" name="website" placeholder="website" style="width:170px" />
+      <input type="text" name="notes" placeholder="notes (source of the lead…)" style="width:200px" />
+      <button>Add business</button>
+    </form>
+    <p class="muted">
+      Creates an unpublished prospect stub (public site untouched). The email draft pitches the
+      {" "}<b>{short}</b> page and frames the business's own page as reserved — it goes live when
+      they claim it (or when we add real content).
+    </p>
+  </div>
+
+  <h2>
+    Businesses{stageFilter ? ` — stage: ${stageFilter}` : ""}
+    {stageFilter ? <a class="badge" href={`/admin/platform/${leg}/${catSlug}`} style="margin-left:8px">clear</a> : null}
+  </h2>
+  <div class="panel">
+    <p class="row muted" style="margin-top:0">
+      filter:
+      {OUTREACH_STATUSES.map((s) => (
+        <a class="badge" href={`?stage=${s}`}>{s}: {booths.filter((b) => (b.outreach?.status ?? "none") === s).length}</a>
+      ))}
+    </p>
+    {shown.length === 0 ? <p class="muted">No businesses here yet — add the first above.</p> : null}
+    <table>
+      {shown.length > 0 ? <tr><th>business</th><th>contact</th><th>stage</th><th>draft</th><th>manage</th></tr> : null}
+      {
+        shown.map((b) => {
+          const stage = b.outreach?.status ?? "none";
+          const draft = draftFor(b, listings);
+          const mailto = mailtoFor(b, draft);
+          const gh = editUrl(b.rel);
+          return (
+            <tr>
+              <td>
+                <b>{b.name}</b>
+                <div class="muted slug">
+                  {b.slug}
+                  {validListing(b) ? <a href={listingHref(b)} target="_blank" rel="noopener"> · live page</a> : " · stub"}
+                  {gh ? <a href={gh} target="_blank" rel="noopener"> · edit</a> : null}
+                </div>
+                {b.links?.website ? <div class="muted slug"><a href={b.links.website} target="_blank" rel="noopener">{b.links.website}</a></div> : null}
+              </td>
+              <td>
+                <form method="post" action="/api/admin/platform" class="row">
+                  <input type="hidden" name="leg" value={b.leg} />
+                  <input type="hidden" name="slug" value={b.slug} />
+                  <input type="hidden" name="back" value={BACK} />
+                  <input type="hidden" name="claimedPresent" value="1" />
+                  <input type="text" name="contactEmail" value={b.contact?.email ?? ""} placeholder="email" style="width:170px" />
+                  <input type="text" name="contactPerson" value={b.contact?.person ?? ""} placeholder="person" style="width:110px" />
+                  <input type="text" name="outreachNotes" value={b.outreach?.notes ?? ""} placeholder="notes" style="width:130px" />
+                  <label class="muted" style="white-space:nowrap">
+                    <input type="checkbox" name="claimed" value="1" checked={b.claimed} /> claimed
+                  </label>
+                  <button>Save</button>
+                </form>
+              </td>
+              <td>
+                <span class="badge">{stage}</span>
+                {b.outreach?.sentAt ? <div class="muted">sent {b.outreach.sentAt}</div> : null}
+                {b.outreach?.repliedAt ? <div class="muted">replied {b.outreach.repliedAt}</div> : null}
+                <div class="row" style="margin-top:4px">
+                  {(NEXT[stage] ?? []).map((next) => (
+                    <form method="post" action="/api/admin/platform" class="inline">
+                      <input type="hidden" name="leg" value={b.leg} />
+                      <input type="hidden" name="slug" value={b.slug} />
+                      <input type="hidden" name="back" value={BACK} />
+                      <input type="hidden" name="outreachStatus" value={next} />
+                      <button class="ghost">→ {next}</button>
+                    </form>
+                  ))}
+                </div>
+              </td>
+              <td>
+                {mailto ? <a href={mailto}>open</a> : <span class="muted">no email</span>}
+                {" · "}
+                <button class="ghost" type="button" data-copy-draft data-subject={draft.subject} data-body={draft.body}>copy</button>
+              </td>
+              <td class="muted">{b.updated}</td>
+            </tr>
+          );
+        })
+      }
+    </table>
+  </div>
+
+  <script is:inline>
+    document.querySelectorAll("[data-copy-draft]").forEach(function (btn) {
+      btn.addEventListener("click", async function () {
+        var text = "Subject: " + btn.dataset.subject + "\n\n" + btn.dataset.body;
+        try {
+          await navigator.clipboard.writeText(text);
+          var old = btn.textContent;
+          btn.textContent = "copied ✓";
+          setTimeout(function () { btn.textContent = old; }, 1500);
+        } catch (e) {}
+      });
+    });
+  </script>
+</AdminLayout>

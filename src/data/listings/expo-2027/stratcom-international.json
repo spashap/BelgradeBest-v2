@@ -1,0 +1,21 @@
+{
+  "slug": "stratcom-international",
+  "leg": "expo-2027",
+  "type": "supplier",
+  "parent": "partners-and-suppliers",
+  "name": "Stratcom International",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-07-05",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": []
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Belgrade agency, global-PR consortium with MC Group (RSD 69.5M framework). Source: tanjug.rs."
+  }
+}
