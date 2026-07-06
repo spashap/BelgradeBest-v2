@@ -24,18 +24,22 @@ const ACCENT = "#b5462b";
 const LINE = "#e2d8c9";
 
 const W = 1600;
-const H = 686; // 21:9 — matches ArticleHero; centred content survives the 16:9 card crop
+const H = 686; // 21:9 — matches ArticleHero (full width visible there)
+
+// CROP-SAFE: the .c-card__img crop is 16:11 (object-fit: cover), so only the
+// central ~998 px of this canvas shows on cards — size text against SAFE, not
+// the canvas (same fix as gen-area-thumbs.mjs).
+const SAFE = 940;
 
 const esc = (s) =>
   String(s).replace(/[<>&'"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" }[c]));
 
-// Fit the display term to a target width by scaling the font size down for long names.
-function termFontSize(name) {
-  const maxWidth = 1320;
-  const approxCharWidth = 0.56; // bold display, em fraction
-  const size = Math.min(132, Math.floor(maxWidth / (Math.max(name.length, 1) * approxCharWidth)));
-  return Math.max(48, size);
+// Fit a line of text into the SAFE window by shrinking its font size.
+function fitFont(text, base, charEm, min = 20) {
+  const size = Math.min(base, Math.floor(SAFE / (Math.max(String(text).length, 1) * charEm)));
+  return Math.max(min, size);
 }
+const termFontSize = (name) => fitFont(name, 132, 0.56, 48);
 
 function svgFor(term) {
   const name = term.term;
@@ -49,9 +53,9 @@ function svgFor(term) {
   <!-- faint river lines (Sava + Danube nod) -->
   <path d="M0 600 Q 400 560 800 600 T 1600 600" fill="none" stroke="${ACCENT}" stroke-width="3" opacity="0.10"/>
   <path d="M0 640 Q 400 680 800 640 T 1600 640" fill="none" stroke="${ACCENT}" stroke-width="3" opacity="0.08"/>
-  <text x="${W / 2}" y="222" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" letter-spacing="4" font-weight="600" fill="${ACCENT}">BELGRADE · GLOSSARY${cat ? ` · ${esc(cat)}` : ""}</text>
+  <text x="${W / 2}" y="222" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="${fitFont(`BELGRADE · GLOSSARY${cat ? ` · ${cat}` : ""}`, 26, 0.75)}" letter-spacing="4" font-weight="600" fill="${ACCENT}">BELGRADE · GLOSSARY${cat ? ` · ${esc(cat)}` : ""}</text>
   <text x="${W / 2}" y="${360 + fs * 0.34}" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="${fs}" font-weight="800" fill="${INK}">${esc(name)}</text>
-  ${local ? `<text x="${W / 2}" y="476" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="38" fill="${INK_SOFT}">${esc(local)}</text>` : ""}
+  ${local ? `<text x="${W / 2}" y="476" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${fitFont(local, 38, 0.5)}" fill="${INK_SOFT}">${esc(local)}</text>` : ""}
   <line x1="${W / 2 - 60}" y1="520" x2="${W / 2 + 60}" y2="520" stroke="${ACCENT}" stroke-width="3"/>
   <rect x="0" y="0" width="${W}" height="${H}" fill="none" stroke="${LINE}" stroke-width="2"/>
 </svg>

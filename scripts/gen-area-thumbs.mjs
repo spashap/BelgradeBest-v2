@@ -23,18 +23,23 @@ const ACCENT = "#b5462b";
 const LINE = "#e2d8c9";
 
 const W = 1600;
-const H = 686; // 21:9 — matches ArticleHero; centred content survives the 16:9 card crop
+const H = 686; // 21:9 — matches ArticleHero (full width visible there)
+
+// CROP-SAFE: the .c-card__img crop is 16:11 (object-fit: cover), so of this
+// 1600-wide canvas only the central ~998 px is visible on cards. ALL text must
+// fit inside that window — size against SAFE, not the canvas. (This was the
+// "Novi Beograd (New Belgrade)" trimming bug: the old budget was 1320 px.)
+const SAFE = 940;
 
 const esc = (s) =>
   String(s).replace(/[<>&'"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" }[c]));
 
-// Fit the display name to a target width by scaling the font size down for long names.
-function nameFontSize(name) {
-  const maxWidth = 1320;
-  const approxCharWidth = 0.56; // bold display, em fraction
-  const size = Math.min(120, Math.floor(maxWidth / (Math.max(name.length, 1) * approxCharWidth)));
-  return Math.max(44, size);
+// Fit a line of text into the SAFE window by shrinking its font size.
+function fitFont(text, base, charEm, min = 20) {
+  const size = Math.min(base, Math.floor(SAFE / (Math.max(String(text).length, 1) * charEm)));
+  return Math.max(min, size);
 }
+const nameFontSize = (name) => fitFont(name, 120, 0.56, 44);
 
 function svgFor(area) {
   const name = area.name;
@@ -50,9 +55,9 @@ function svgFor(area) {
   <path d="M0 640 Q 400 680 800 640 T 1600 640" fill="none" stroke="${ACCENT}" stroke-width="3" opacity="0.08"/>
   <text x="${W / 2}" y="232" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" letter-spacing="4" font-weight="600" fill="${ACCENT}">BELGRADE · NEIGHBOURHOOD GUIDE</text>
   <text x="${W / 2}" y="${360 + fs * 0.34}" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="${fs}" font-weight="800" fill="${INK}">${esc(name)}</text>
-  ${local ? `<text x="${W / 2}" y="468" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="34" fill="${INK_SOFT}">${esc(local)}</text>` : ""}
+  ${local ? `<text x="${W / 2}" y="468" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="${fitFont(local, 34, 0.5)}" fill="${INK_SOFT}">${esc(local)}</text>` : ""}
   <line x1="${W / 2 - 60}" y1="510" x2="${W / 2 + 60}" y2="510" stroke="${ACCENT}" stroke-width="3"/>
-  <text x="${W / 2}" y="556" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" fill="${INK_SOFT}">${esc(sub)}</text>
+  <text x="${W / 2}" y="556" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="${fitFont(sub, 26, 0.52)}" fill="${INK_SOFT}">${esc(sub)}</text>
   <rect x="0" y="0" width="${W}" height="${H}" fill="none" stroke="${LINE}" stroke-width="2"/>
 </svg>
 `;

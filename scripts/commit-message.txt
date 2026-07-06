@@ -61,6 +61,16 @@ Seven items in the owner's chosen order (KB plan + CLAUDE.md updated).
    pitch cycle for earning tracker citations (24h cycle, pitch template,
    hooks calendar, anti-mass-mail rules).
 
+8b) Card-thumb trimming fix (owner report: "Senjak & Dedinje", "Novi Beograd
+   (New Belgrade)" cut at the sides): the area/glossary SVG thumbs are shown
+   in .c-card__img with a 16:11 object-fit:cover crop — only the central
+   ~998px of the 1600px canvas is visible — but both generators sized titles
+   against a 1320px budget (assuming 16:9). gen-area-thumbs.mjs +
+   gen-glossary-thumbs.mjs now size EVERY text line (title, local-name,
+   subtitle, glossary eyebrow) against a 940px SAFE window via a shared
+   fitFont() helper; all 21 thumbs regenerated with --force and the two
+   offenders verified by rasterizing + cropping to the exact card window.
+
 8) OG crop-safety audit (owner report): inventoried every og:image in the
    built site. Articles/hubs use photo heroes (safe); the 18 new cards were
    already center-safe (re-verified Saudi Arabia + tracker via 630x630 center
