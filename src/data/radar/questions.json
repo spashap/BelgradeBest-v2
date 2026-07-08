@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T09:31:48.183Z",
+  "generatedAt": "2026-07-08T08:16:45.539Z",
   "items": [
     {
       "id": "1ubvfj1",
@@ -47,17 +47,17 @@
       "title": "BW waterfront issues?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uozls8/bw_waterfront_issues/",
       "sub": "r/Belgrade",
-      "comments": 49,
+      "comments": 61,
       "topics": [
         "stay",
         "apartment",
         "area",
         "see"
       ],
-      "score": 20.1,
+      "score": 19.6,
       "isQuestion": true,
       "firstSeen": "2026-07-07T09:31:48.183Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1uk24jr",
@@ -126,22 +126,6 @@
       "lastSeen": "2026-06-27T08:30:23.593Z"
     },
     {
-      "id": "1ummb9y",
-      "title": "Who can tell me about this area?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1ummb9y/who_can_tell_me_about_this_area/",
-      "sub": "r/Belgrade",
-      "comments": 11,
-      "topics": [
-        "area",
-        "bus",
-        "bar"
-      ],
-      "score": 15.7,
-      "isQuestion": true,
-      "firstSeen": "2026-07-04T08:29:35.035Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
-    },
-    {
       "id": "1u6cuw5",
       "title": "Get out of New Tekstil at night",
       "url": "https://www.reddit.com/r/Belgrade/comments/1u6cuw5/get_out_of_new_tekstil_at_night/",
@@ -158,6 +142,22 @@
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
       "lastSeen": "2026-06-21T13:51:35.987Z"
+    },
+    {
+      "id": "1ummb9y",
+      "title": "Who can tell me about this area?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ummb9y/who_can_tell_me_about_this_area/",
+      "sub": "r/Belgrade",
+      "comments": 11,
+      "topics": [
+        "area",
+        "bus",
+        "bar"
+      ],
+      "score": 15.2,
+      "isQuestion": true,
+      "firstSeen": "2026-07-04T08:29:35.035Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1ujimj9",
@@ -211,31 +211,15 @@
       "title": "This city is garbage",
       "url": "https://www.reddit.com/r/Belgrade/comments/1umray8/this_city_is_garbage/",
       "sub": "r/Belgrade",
-      "comments": 30,
+      "comments": 31,
       "topics": [
         "money",
         "days"
       ],
-      "score": 12.8,
+      "score": 12.3,
       "isQuestion": true,
       "firstSeen": "2026-07-04T08:29:35.035Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
-    },
-    {
-      "id": "1up2sij",
-      "title": "My exprience about belgrade",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1up2sij/my_exprience_about_belgrade/",
-      "sub": "r/Belgrade",
-      "comments": 4,
-      "topics": [
-        "stay",
-        "food",
-        "coffee"
-      ],
-      "score": 12.2,
-      "isQuestion": false,
-      "firstSeen": "2026-07-07T09:31:48.183Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1u6l44k",
@@ -271,18 +255,20 @@
       "lastSeen": "2026-07-06T10:06:32.603Z"
     },
     {
-      "id": "1ukiuju",
-      "title": "Any recommendations for somewhere to go with a large group (20+) on Saturday the 11th of July? We want somewhere with a good atmosphere and will accommodate a big group of people for drinks.",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1ukiuju/any_recommendations_for_somewhere_to_go_with_a/",
+      "id": "1up2sij",
+      "title": "My exprience about belgrade",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1up2sij/my_exprience_about_belgrade/",
       "sub": "r/Belgrade",
-      "comments": 2,
+      "comments": 10,
       "topics": [
-        "atm"
+        "stay",
+        "food",
+        "coffee"
       ],
-      "score": 11.5,
-      "isQuestion": true,
-      "firstSeen": "2026-07-02T08:47:54.871Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "score": 11.7,
+      "isQuestion": false,
+      "firstSeen": "2026-07-07T09:31:48.183Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1uhjxrt",
@@ -389,6 +375,20 @@
       "lastSeen": "2026-06-30T09:24:34.232Z"
     },
     {
+      "id": "1uq7djo",
+      "title": "Does anyone know where this photo was taken?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uq7djo/does_anyone_know_where_this_photo_was_taken/",
+      "sub": "r/Belgrade",
+      "comments": 8,
+      "topics": [
+        "zemun"
+      ],
+      "score": 11.3,
+      "isQuestion": true,
+      "firstSeen": "2026-07-08T08:16:45.539Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
+    },
+    {
       "id": "1uelta6",
       "title": "Pomoć oko istraživanja za master rad - kako razmišljate?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uelta6/pomoć_oko_istraživanja_za_master_rad_kako/",
@@ -401,6 +401,48 @@
       "isQuestion": true,
       "firstSeen": "2026-06-25T08:53:01.606Z",
       "lastSeen": "2026-07-01T09:36:54.494Z"
+    },
+    {
+      "id": "1upyovw",
+      "title": "Bad smell?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1upyovw/bad_smell/",
+      "sub": "r/Belgrade",
+      "comments": 46,
+      "topics": [
+        "area"
+      ],
+      "score": 11.2,
+      "isQuestion": true,
+      "firstSeen": "2026-07-08T08:16:45.539Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
+    },
+    {
+      "id": "1upyjgp",
+      "title": "Ko vežba flautu u Rentenzijama / Zemun?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1upyjgp/ko_vežba_flautu_u_rentenzijama_zemun/",
+      "sub": "r/Belgrade",
+      "comments": 11,
+      "topics": [
+        "zemun"
+      ],
+      "score": 11.2,
+      "isQuestion": true,
+      "firstSeen": "2026-07-08T08:16:45.539Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
+    },
+    {
+      "id": "1ukiuju",
+      "title": "Any recommendations for somewhere to go with a large group (20+) on Saturday the 11th of July? We want somewhere with a good atmosphere and will accommodate a big group of people for drinks.",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ukiuju/any_recommendations_for_somewhere_to_go_with_a/",
+      "sub": "r/Belgrade",
+      "comments": 2,
+      "topics": [
+        "atm"
+      ],
+      "score": 11.1,
+      "isQuestion": true,
+      "firstSeen": "2026-07-02T08:47:54.871Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1uco17i",
@@ -457,10 +499,10 @@
         "days",
         "see"
       ],
-      "score": 10.5,
+      "score": 10,
       "isQuestion": false,
       "firstSeen": "2026-07-04T08:29:35.035Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1unb1vd",
@@ -471,24 +513,10 @@
       "topics": [
         "taxi"
       ],
-      "score": 10.1,
+      "score": 9.6,
       "isQuestion": true,
       "firstSeen": "2026-07-05T08:46:01.929Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
-    },
-    {
-      "id": "1umkpmb",
-      "title": "Koji zubar u Beogradu je stvarno za preporuku?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1umkpmb/koji_zubar_u_beogradu_je_stvarno_za_preporuku/",
-      "sub": "r/Belgrade",
-      "comments": 53,
-      "topics": [
-        "bar"
-      ],
-      "score": 9.7,
-      "isQuestion": true,
-      "firstSeen": "2026-07-04T08:29:35.035Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1ue7y05",
@@ -519,6 +547,20 @@
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
       "lastSeen": "2026-06-25T08:53:01.606Z"
+    },
+    {
+      "id": "1umkpmb",
+      "title": "Koji zubar u Beogradu je stvarno za preporuku?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1umkpmb/koji_zubar_u_beogradu_je_stvarno_za_preporuku/",
+      "sub": "r/Belgrade",
+      "comments": 57,
+      "topics": [
+        "bar"
+      ],
+      "score": 9.2,
+      "isQuestion": true,
+      "firstSeen": "2026-07-04T08:29:35.035Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1u98pw0",
@@ -566,20 +608,6 @@
       "lastSeen": "2026-07-02T08:47:54.871Z"
     },
     {
-      "id": "1uno7vu",
-      "title": "Belgrade/Novi sad",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uno7vu/belgradenovi_sad/",
-      "sub": "r/Belgrade",
-      "comments": 1,
-      "topics": [
-        "stay"
-      ],
-      "score": 8.3,
-      "isQuestion": false,
-      "firstSeen": "2026-07-05T08:46:01.929Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
-    },
-    {
       "id": "1u7ua4v",
       "title": "Gde ste Basketaši iz Zemuna, Blok 8, 9, 11... Zašto su tereni prazne?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1u7ua4v/gde_ste_basketaši_iz_zemuna_blok_8_9_11_zašto_su/",
@@ -592,20 +620,6 @@
       "isQuestion": true,
       "firstSeen": "2026-06-21T13:51:35.987Z",
       "lastSeen": "2026-06-23T09:29:43.372Z"
-    },
-    {
-      "id": "1unhnfx",
-      "title": "Looking for Creatives to hang out",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1unhnfx/looking_for_creatives_to_hang_out/",
-      "sub": "r/Belgrade",
-      "comments": 3,
-      "topics": [
-        "coffee"
-      ],
-      "score": 8.2,
-      "isQuestion": false,
-      "firstSeen": "2026-07-05T08:46:01.929Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
     },
     {
       "id": "1ui4oxl",
@@ -748,19 +762,32 @@
       "lastSeen": "2026-06-26T08:56:04.377Z"
     },
     {
-      "id": "1ukogpy",
-      "title": "Canadian bike-packer looking for friends in Belgrade",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1ukogpy/canadian_bikepacker_looking_for_friends_in/",
+      "id": "1uno7vu",
+      "title": "Belgrade/Novi sad",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uno7vu/belgradenovi_sad/",
       "sub": "r/Belgrade",
-      "comments": 58,
+      "comments": 2,
       "topics": [
-        "club",
-        "bar"
+        "stay"
       ],
-      "score": 6.6,
+      "score": 7.8,
       "isQuestion": false,
-      "firstSeen": "2026-07-02T08:47:54.871Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "firstSeen": "2026-07-05T08:46:01.929Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
+    },
+    {
+      "id": "1unhnfx",
+      "title": "Looking for Creatives to hang out",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1unhnfx/looking_for_creatives_to_hang_out/",
+      "sub": "r/Belgrade",
+      "comments": 3,
+      "topics": [
+        "coffee"
+      ],
+      "score": 7.7,
+      "isQuestion": false,
+      "firstSeen": "2026-07-05T08:46:01.929Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1u9uvlw",
@@ -821,6 +848,21 @@
       "lastSeen": "2026-06-30T09:24:34.232Z"
     },
     {
+      "id": "1ukogpy",
+      "title": "Canadian bike-packer looking for friends in Belgrade",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ukogpy/canadian_bikepacker_looking_for_friends_in/",
+      "sub": "r/Belgrade",
+      "comments": 58,
+      "topics": [
+        "club",
+        "bar"
+      ],
+      "score": 6.1,
+      "isQuestion": false,
+      "firstSeen": "2026-07-02T08:47:54.871Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
+    },
+    {
       "id": "1uhw8r1",
       "title": "English Speaking Dentist for easy Wisdom Tooth extraction.",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uhw8r1/english_speaking_dentist_for_easy_wisdom_tooth/",
@@ -866,20 +908,6 @@
       "lastSeen": "2026-06-21T13:51:35.987Z"
     },
     {
-      "id": "1uotpq5",
-      "title": "Ufc belgrade aug 1",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uotpq5/ufc_belgrade_aug_1/",
-      "sub": "r/Belgrade",
-      "comments": 4,
-      "topics": [
-        "see"
-      ],
-      "score": 6,
-      "isQuestion": false,
-      "firstSeen": "2026-07-07T09:31:48.183Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
-    },
-    {
       "id": "1uapt09",
       "title": "Dresscode for UFC Belegrade",
       "url": "https://www.reddit.com/r/serbia/comments/1uapt09/dresscode_for_ufc_belegrade/",
@@ -894,18 +922,32 @@
       "lastSeen": "2026-06-21T13:51:35.987Z"
     },
     {
+      "id": "1uotpq5",
+      "title": "Ufc belgrade aug 1",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uotpq5/ufc_belgrade_aug_1/",
+      "sub": "r/Belgrade",
+      "comments": 4,
+      "topics": [
+        "see"
+      ],
+      "score": 5.6,
+      "isQuestion": false,
+      "firstSeen": "2026-07-07T09:31:48.183Z",
+      "lastSeen": "2026-07-08T08:16:45.539Z"
+    },
+    {
       "id": "1uob8q2",
       "title": "Serious complaints and warnings regarding taxis at the beach exit.",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uob8q2/serious_complaints_and_warnings_regarding_taxis/",
       "sub": "r/Belgrade",
-      "comments": 24,
+      "comments": 26,
       "topics": [
         "taxi"
       ],
-      "score": 5.7,
+      "score": 5.2,
       "isQuestion": false,
       "firstSeen": "2026-07-06T10:06:32.603Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1undov2",
@@ -916,10 +958,10 @@
       "topics": [
         "club"
       ],
-      "score": 5.1,
+      "score": 4.7,
       "isQuestion": false,
       "firstSeen": "2026-07-05T08:46:01.929Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1umd24o",
@@ -930,10 +972,10 @@
       "topics": [
         "dorcol"
       ],
-      "score": 4.6,
+      "score": 4.1,
       "isQuestion": false,
       "firstSeen": "2026-07-04T08:29:35.035Z",
-      "lastSeen": "2026-07-07T09:31:48.183Z"
+      "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
       "id": "1ukekzw",
