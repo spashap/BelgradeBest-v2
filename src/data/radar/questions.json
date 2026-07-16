@@ -1,6 +1,32 @@
 {
-  "generatedAt": "2026-07-15T07:57:42.867Z",
+  "generatedAt": "2026-07-16T08:02:48.346Z",
   "items": [
+    {
+      "id": "1uwzrpd",
+      "title": "Critique my 7-month backpacking itinerary (May–December 2027)",
+      "url": "https://www.reddit.com/r/Europetravel/comments/1uwzrpd/critique_my_7month_backpacking_itinerary/",
+      "sub": "r/Europetravel",
+      "comments": 43,
+      "topics": [
+        "stay",
+        "visa",
+        "entry",
+        "airport",
+        "transport",
+        "bus",
+        "nightlife",
+        "club",
+        "bar",
+        "food",
+        "itinerary",
+        "days",
+        "see"
+      ],
+      "score": 42,
+      "isQuestion": false,
+      "firstSeen": "2026-07-16T08:02:48.346Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
     {
       "id": "1ubvfj1",
       "title": "Hot take: A large percentage of digital nomads are terrible at finding good deals on lodging",
@@ -65,7 +91,7 @@
       "title": "Is this balkan trip itinerary realistic on a 600€ per person budget?",
       "url": "https://www.reddit.com/r/travel/comments/1uusfds/is_this_balkan_trip_itinerary_realistic_on_a_600/",
       "sub": "r/travel",
-      "comments": 7,
+      "comments": 8,
       "topics": [
         "stay",
         "apartment",
@@ -74,10 +100,10 @@
         "days",
         "see"
       ],
-      "score": 25.3,
+      "score": 24.8,
       "isQuestion": true,
       "firstSeen": "2026-07-13T08:57:58.368Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1ur7k39",
@@ -99,20 +125,21 @@
       "lastSeen": "2026-07-15T07:57:42.867Z"
     },
     {
-      "id": "1uwgi61",
-      "title": "How far in advance should I book hostels in the Balkans?",
-      "url": "https://www.reddit.com/r/solotravel/comments/1uwgi61/how_far_in_advance_should_i_book_hostels_in_the/",
-      "sub": "r/solotravel",
-      "comments": 2,
+      "id": "1uxnqcs",
+      "title": "Requesting help on places to go on my visit",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uxnqcs/requesting_help_on_places_to_go_on_my_visit/",
+      "sub": "r/Belgrade",
+      "comments": 4,
       "topics": [
         "stay",
-        "bus",
-        "days"
+        "neighborhood",
+        "area",
+        "restaurant"
       ],
-      "score": 20.2,
+      "score": 20.3,
       "isQuestion": true,
-      "firstSeen": "2026-07-15T07:57:42.867Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "firstSeen": "2026-07-16T08:02:48.346Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1uqv9as",
@@ -148,6 +175,39 @@
       "isQuestion": true,
       "firstSeen": "2026-07-09T09:33:48.039Z",
       "lastSeen": "2026-07-15T07:57:42.867Z"
+    },
+    {
+      "id": "1ux4cuc",
+      "title": "Confusion about \"Serbia is winning\" posters",
+      "url": "https://www.reddit.com/r/serbia/comments/1ux4cuc/confusion_about_serbia_is_winning_posters/",
+      "sub": "r/serbia",
+      "comments": 85,
+      "topics": [
+        "airport",
+        "bus",
+        "taxi",
+        "days"
+      ],
+      "score": 20.1,
+      "isQuestion": true,
+      "firstSeen": "2026-07-16T08:02:48.346Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
+      "id": "1uwgi61",
+      "title": "How far in advance should I book hostels in the Balkans?",
+      "url": "https://www.reddit.com/r/solotravel/comments/1uwgi61/how_far_in_advance_should_i_book_hostels_in_the/",
+      "sub": "r/solotravel",
+      "comments": 3,
+      "topics": [
+        "stay",
+        "bus",
+        "days"
+      ],
+      "score": 19.7,
+      "isQuestion": true,
+      "firstSeen": "2026-07-15T07:57:42.867Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1uqw0ba",
@@ -201,22 +261,6 @@
       "lastSeen": "2026-07-05T08:46:01.929Z"
     },
     {
-      "id": "1uwgjyy",
-      "title": "How far in advance should I book hostels in the Balkans?",
-      "url": "https://www.reddit.com/r/Europetravel/comments/1uwgjyy/how_far_in_advance_should_i_book_hostels_in_the/",
-      "sub": "r/Europetravel",
-      "comments": 4,
-      "topics": [
-        "stay",
-        "bus",
-        "days"
-      ],
-      "score": 17.2,
-      "isQuestion": true,
-      "firstSeen": "2026-07-15T07:57:42.867Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
-    },
-    {
       "id": "1uozls8",
       "title": "BW waterfront issues?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uozls8/bw_waterfront_issues/",
@@ -267,36 +311,52 @@
       "lastSeen": "2026-06-27T08:30:23.593Z"
     },
     {
+      "id": "1uwgjyy",
+      "title": "How far in advance should I book hostels in the Balkans?",
+      "url": "https://www.reddit.com/r/Europetravel/comments/1uwgjyy/how_far_in_advance_should_i_book_hostels_in_the/",
+      "sub": "r/Europetravel",
+      "comments": 4,
+      "topics": [
+        "stay",
+        "bus",
+        "days"
+      ],
+      "score": 16.7,
+      "isQuestion": true,
+      "firstSeen": "2026-07-15T07:57:42.867Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
       "id": "1uvadh3",
       "title": "Alternatives to Bar-Belgrade train for scenery?",
       "url": "https://www.reddit.com/r/travel/comments/1uvadh3/alternatives_to_barbelgrade_train_for_scenery/",
       "sub": "r/travel",
-      "comments": 15,
+      "comments": 16,
       "topics": [
         "bus",
         "bar",
         "see"
       ],
-      "score": 16.6,
+      "score": 16.1,
       "isQuestion": true,
       "firstSeen": "2026-07-14T07:53:07.505Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1uuvv71",
       "title": "I Need some Advice for my upcoming Balkan Roadtrip",
       "url": "https://www.reddit.com/r/Europetravel/comments/1uuvv71/i_need_some_advice_for_my_upcoming_balkan_roadtrip/",
       "sub": "r/Europetravel",
-      "comments": 26,
+      "comments": 28,
       "topics": [
         "stay",
         "bar",
         "see"
       ],
-      "score": 16.3,
+      "score": 15.8,
       "isQuestion": true,
       "firstSeen": "2026-07-13T08:57:58.368Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1urgefa",
@@ -437,10 +497,10 @@
       "topics": [
         "days"
       ],
-      "score": 13.7,
+      "score": 13.2,
       "isQuestion": true,
       "firstSeen": "2026-07-14T07:53:07.505Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1uuegow",
@@ -451,26 +511,10 @@
       "topics": [
         "see"
       ],
-      "score": 13.1,
+      "score": 12.6,
       "isQuestion": true,
       "firstSeen": "2026-07-13T08:57:58.368Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
-    },
-    {
-      "id": "1urkrhf",
-      "title": "Travel at Belgrade Airport to London",
-      "url": "https://www.reddit.com/r/travel/comments/1urkrhf/travel_at_belgrade_airport_to_london/",
-      "sub": "r/travel",
-      "comments": 1,
-      "topics": [
-        "visa",
-        "airport",
-        "see"
-      ],
-      "score": 12.5,
-      "isQuestion": false,
-      "firstSeen": "2026-07-09T09:33:48.039Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1u6l44k",
@@ -490,6 +534,22 @@
       "lastSeen": "2026-06-22T11:43:37.834Z"
     },
     {
+      "id": "1urkrhf",
+      "title": "Travel at Belgrade Airport to London",
+      "url": "https://www.reddit.com/r/travel/comments/1urkrhf/travel_at_belgrade_airport_to_london/",
+      "sub": "r/travel",
+      "comments": 1,
+      "topics": [
+        "visa",
+        "airport",
+        "see"
+      ],
+      "score": 12,
+      "isQuestion": false,
+      "firstSeen": "2026-07-09T09:33:48.039Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
       "id": "1uiou1x",
       "title": "Apartment for rent",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uiou1x/apartment_for_rent/",
@@ -506,19 +566,20 @@
       "lastSeen": "2026-07-06T10:06:32.603Z"
     },
     {
-      "id": "1uvg1eg",
-      "title": "Baggage locker",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uvg1eg/baggage_locker/",
+      "id": "1ux1e6t",
+      "title": "18 y/o woman clubbing alone",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ux1e6t/18_yo_woman_clubbing_alone/",
       "sub": "r/Belgrade",
-      "comments": 2,
+      "comments": 13,
       "topics": [
-        "airport",
-        "bus"
+        "safe",
+        "nightlife",
+        "club"
       ],
-      "score": 11.7,
+      "score": 12,
       "isQuestion": false,
-      "firstSeen": "2026-07-14T07:53:07.505Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "firstSeen": "2026-07-16T08:02:48.346Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1uhjxrt",
@@ -655,6 +716,21 @@
       "lastSeen": "2026-06-30T09:24:34.232Z"
     },
     {
+      "id": "1uvg1eg",
+      "title": "Baggage locker",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uvg1eg/baggage_locker/",
+      "sub": "r/Belgrade",
+      "comments": 2,
+      "topics": [
+        "airport",
+        "bus"
+      ],
+      "score": 11.2,
+      "isQuestion": false,
+      "firstSeen": "2026-07-14T07:53:07.505Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
       "id": "1uelta6",
       "title": "Pomoć oko istraživanja za master rad - kako razmišljate?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uelta6/pomoć_oko_istraživanja_za_master_rad_kako/",
@@ -713,20 +789,6 @@
       "lastSeen": "2026-06-29T10:46:43.969Z"
     },
     {
-      "id": "1uw69y0",
-      "title": "Can girls wear trainers/sneakers to night clubs?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uw69y0/can_girls_wear_trainerssneakers_to_night_clubs/",
-      "sub": "r/Belgrade",
-      "comments": 4,
-      "topics": [
-        "club"
-      ],
-      "score": 11.1,
-      "isQuestion": true,
-      "firstSeen": "2026-07-15T07:57:42.867Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
-    },
-    {
       "id": "1uipwly",
       "title": "We are a group of foreign students organizing meetups",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uipwly/we_are_a_group_of_foreign_students_organizing/",
@@ -756,6 +818,20 @@
       "lastSeen": "2026-06-27T08:30:23.593Z"
     },
     {
+      "id": "1ux0k5z",
+      "title": "How to apply for an Engineering PhD at the University of Belgrade? (Finding offers, funding, and timelines for next year)",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1ux0k5z/how_to_apply_for_an_engineering_phd_at_the/",
+      "sub": "r/Belgrade",
+      "comments": 7,
+      "topics": [
+        "see"
+      ],
+      "score": 11,
+      "isQuestion": true,
+      "firstSeen": "2026-07-16T08:02:48.346Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
       "id": "1ur89zz",
       "title": "Techno clubs",
       "url": "https://www.reddit.com/r/Belgrade/comments/1ur89zz/techno_clubs/",
@@ -771,6 +847,20 @@
       "lastSeen": "2026-07-12T08:07:50.536Z"
     },
     {
+      "id": "1uw69y0",
+      "title": "Can girls wear trainers/sneakers to night clubs?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uw69y0/can_girls_wear_trainerssneakers_to_night_clubs/",
+      "sub": "r/Belgrade",
+      "comments": 7,
+      "topics": [
+        "club"
+      ],
+      "score": 10.6,
+      "isQuestion": true,
+      "firstSeen": "2026-07-15T07:57:42.867Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
       "id": "1uvdk54",
       "title": "Buvlje Pijace sa igrackama?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uvdk54/buvlje_pijace_sa_igrackama/",
@@ -779,10 +869,10 @@
       "topics": [
         "zemun"
       ],
-      "score": 10.6,
+      "score": 10.1,
       "isQuestion": true,
       "firstSeen": "2026-07-14T07:53:07.505Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1uuo4jx",
@@ -793,10 +883,10 @@
       "topics": [
         "days"
       ],
-      "score": 10.2,
+      "score": 9.7,
       "isQuestion": true,
       "firstSeen": "2026-07-13T08:57:58.368Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1uulqvo",
@@ -807,10 +897,10 @@
       "topics": [
         "things to do"
       ],
-      "score": 10.2,
+      "score": 9.7,
       "isQuestion": true,
       "firstSeen": "2026-07-13T08:57:58.368Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1um9tum",
@@ -857,6 +947,20 @@
       "lastSeen": "2026-07-11T07:46:17.985Z"
     },
     {
+      "id": "1uxsw5i",
+      "title": "Hotel Moskva",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uxsw5i/hotel_moskva/",
+      "sub": "r/Belgrade",
+      "comments": 0,
+      "topics": [
+        "hotel"
+      ],
+      "score": 9.4,
+      "isQuestion": false,
+      "firstSeen": "2026-07-16T08:02:48.346Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
       "id": "1u9kp47",
       "title": "Travelling to Serbia",
       "url": "https://www.reddit.com/r/travel/comments/1u9kp47/travelling_to_serbia/",
@@ -889,21 +993,6 @@
       "lastSeen": "2026-07-13T08:57:58.368Z"
     },
     {
-      "id": "1uwckik",
-      "title": "Title: Looking for a job in Belgrade during August (International Student)",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uwckik/title_looking_for_a_job_in_belgrade_during_august/",
-      "sub": "r/Belgrade",
-      "comments": 4,
-      "topics": [
-        "money",
-        "medical"
-      ],
-      "score": 9.2,
-      "isQuestion": false,
-      "firstSeen": "2026-07-15T07:57:42.867Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
-    },
-    {
       "id": "1u98pw0",
       "title": "local tour guide for new Belgrade",
       "url": "https://www.reddit.com/r/Belgrade/comments/1u98pw0/local_tour_guide_for_new_belgrade/",
@@ -933,6 +1022,21 @@
       "isQuestion": false,
       "firstSeen": "2026-06-21T13:51:35.987Z",
       "lastSeen": "2026-06-21T13:51:35.987Z"
+    },
+    {
+      "id": "1uwckik",
+      "title": "Title: Looking for a job in Belgrade during August (International Student)",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uwckik/title_looking_for_a_job_in_belgrade_during_august/",
+      "sub": "r/Belgrade",
+      "comments": 4,
+      "topics": [
+        "money",
+        "medical"
+      ],
+      "score": 8.7,
+      "isQuestion": false,
+      "firstSeen": "2026-07-15T07:57:42.867Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1ug0hnq",
@@ -1173,34 +1277,6 @@
       "lastSeen": "2026-06-26T08:56:04.377Z"
     },
     {
-      "id": "1us16l0",
-      "title": "Izdavanje stana na Vracaru",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1us16l0/izdavanje_stana_na_vracaru/",
-      "sub": "r/Belgrade",
-      "comments": 1,
-      "topics": [
-        "vracar"
-      ],
-      "score": 6.7,
-      "isQuestion": false,
-      "firstSeen": "2026-07-10T09:24:59.356Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
-    },
-    {
-      "id": "1urxfnw",
-      "title": "Nightlife in Belgrade",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1urxfnw/nightlife_in_belgrade/",
-      "sub": "r/Belgrade",
-      "comments": 2,
-      "topics": [
-        "nightlife"
-      ],
-      "score": 6.7,
-      "isQuestion": false,
-      "firstSeen": "2026-07-10T09:24:59.356Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
-    },
-    {
       "id": "1u9uvlw",
       "title": "WORLD CUP LATE GAMES",
       "url": "https://www.reddit.com/r/Belgrade/comments/1u9uvlw/world_cup_late_games/",
@@ -1256,6 +1332,34 @@
       "isQuestion": false,
       "firstSeen": "2026-06-23T09:29:43.372Z",
       "lastSeen": "2026-06-29T10:46:43.969Z"
+    },
+    {
+      "id": "1us16l0",
+      "title": "Izdavanje stana na Vracaru",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1us16l0/izdavanje_stana_na_vracaru/",
+      "sub": "r/Belgrade",
+      "comments": 1,
+      "topics": [
+        "vracar"
+      ],
+      "score": 6.2,
+      "isQuestion": false,
+      "firstSeen": "2026-07-10T09:24:59.356Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
+      "id": "1urxfnw",
+      "title": "Nightlife in Belgrade",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1urxfnw/nightlife_in_belgrade/",
+      "sub": "r/Belgrade",
+      "comments": 2,
+      "topics": [
+        "nightlife"
+      ],
+      "score": 6.2,
+      "isQuestion": false,
+      "firstSeen": "2026-07-10T09:24:59.356Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1unhnfx",
@@ -1361,20 +1465,6 @@
       "lastSeen": "2026-06-21T13:51:35.987Z"
     },
     {
-      "id": "1uupl76",
-      "title": "Looking for Friends in Belgrade 👋",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1uupl76/looking_for_friends_in_belgrade/",
-      "sub": "r/Belgrade",
-      "comments": 6,
-      "topics": [
-        "coffee"
-      ],
-      "score": 5.2,
-      "isQuestion": false,
-      "firstSeen": "2026-07-13T08:57:58.368Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
-    },
-    {
       "id": "1uob8q2",
       "title": "Serious complaints and warnings regarding taxis at the beach exit.",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uob8q2/serious_complaints_and_warnings_regarding_taxis/",
@@ -1389,6 +1479,20 @@
       "lastSeen": "2026-07-08T08:16:45.539Z"
     },
     {
+      "id": "1uupl76",
+      "title": "Looking for Friends in Belgrade 👋",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1uupl76/looking_for_friends_in_belgrade/",
+      "sub": "r/Belgrade",
+      "comments": 6,
+      "topics": [
+        "coffee"
+      ],
+      "score": 4.7,
+      "isQuestion": false,
+      "firstSeen": "2026-07-13T08:57:58.368Z",
+      "lastSeen": "2026-07-16T08:02:48.346Z"
+    },
+    {
       "id": "1uueu3s",
       "title": "A sum of 499 euros requested by the Jobsserbia agency to apply for a Visa D",
       "url": "https://www.reddit.com/r/Belgrade/comments/1uueu3s/a_sum_of_499_euros_requested_by_the_jobsserbia/",
@@ -1397,10 +1501,10 @@
       "topics": [
         "visa"
       ],
-      "score": 5.1,
+      "score": 4.6,
       "isQuestion": false,
       "firstSeen": "2026-07-14T07:53:07.505Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1utx2jy",
@@ -1411,10 +1515,10 @@
       "topics": [
         "stay"
       ],
-      "score": 4.8,
+      "score": 4.3,
       "isQuestion": false,
       "firstSeen": "2026-07-12T08:07:50.536Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1utkjmv",
@@ -1425,10 +1529,10 @@
       "topics": [
         "bar"
       ],
-      "score": 4.6,
+      "score": 4.1,
       "isQuestion": false,
       "firstSeen": "2026-07-12T08:07:50.536Z",
-      "lastSeen": "2026-07-15T07:57:42.867Z"
+      "lastSeen": "2026-07-16T08:02:48.346Z"
     },
     {
       "id": "1uotpq5",
