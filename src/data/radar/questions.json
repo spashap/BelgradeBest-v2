@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T07:58:11.660Z",
+  "generatedAt": "2026-07-26T08:15:29.391Z",
   "items": [
     {
       "id": "1uwzrpd",
@@ -66,10 +66,10 @@
         "itinerary",
         "days"
       ],
-      "score": 28.6,
+      "score": 28.1,
       "isQuestion": false,
       "firstSeen": "2026-07-22T08:16:45.467Z",
-      "lastSeen": "2026-07-25T07:58:11.660Z"
+      "lastSeen": "2026-07-26T08:15:29.391Z"
     },
     {
       "id": "1uii8ok",
@@ -180,22 +180,6 @@
       ],
       "score": 21.1,
       "isQuestion": false,
-      "firstSeen": "2026-07-25T07:58:11.660Z",
-      "lastSeen": "2026-07-25T07:58:11.660Z"
-    },
-    {
-      "id": "1v5omyd",
-      "title": "Travel advice Calgary, Canada to Belgrade, Serbia",
-      "url": "https://www.reddit.com/r/travel/comments/1v5omyd/travel_advice_calgary_canada_to_belgrade_serbia/",
-      "sub": "r/travel",
-      "comments": 2,
-      "topics": [
-        "visa",
-        "airport",
-        "see"
-      ],
-      "score": 20.3,
-      "isQuestion": true,
       "firstSeen": "2026-07-25T07:58:11.660Z",
       "lastSeen": "2026-07-25T07:58:11.660Z"
     },
@@ -405,6 +389,22 @@
       "isQuestion": true,
       "firstSeen": "2026-06-21T13:51:35.987Z",
       "lastSeen": "2026-06-27T08:30:23.593Z"
+    },
+    {
+      "id": "1v5omyd",
+      "title": "Travel advice Calgary, Canada to Belgrade, Serbia",
+      "url": "https://www.reddit.com/r/travel/comments/1v5omyd/travel_advice_calgary_canada_to_belgrade_serbia/",
+      "sub": "r/travel",
+      "comments": 5,
+      "topics": [
+        "visa",
+        "airport",
+        "see"
+      ],
+      "score": 16.8,
+      "isQuestion": true,
+      "firstSeen": "2026-07-25T07:58:11.660Z",
+      "lastSeen": "2026-07-26T08:15:29.391Z"
     },
     {
       "id": "1v2resz",
@@ -1767,6 +1767,20 @@
       "lastSeen": "2026-06-21T13:51:35.987Z"
     },
     {
+      "id": "1v62q2h",
+      "title": "Western Balkan Roadtrip",
+      "url": "https://www.reddit.com/r/travel/comments/1v62q2h/western_balkan_roadtrip/",
+      "sub": "r/travel",
+      "comments": 90,
+      "topics": [
+        "atm"
+      ],
+      "score": 6,
+      "isQuestion": false,
+      "firstSeen": "2026-07-26T08:15:29.391Z",
+      "lastSeen": "2026-07-26T08:15:29.391Z"
+    },
+    {
       "id": "1uapt09",
       "title": "Dresscode for UFC Belegrade",
       "url": "https://www.reddit.com/r/serbia/comments/1uapt09/dresscode_for_ufc_belegrade/",
@@ -1803,10 +1817,10 @@
       "topics": [
         "days"
       ],
-      "score": 4.2,
+      "score": 3.7,
       "isQuestion": false,
       "firstSeen": "2026-07-21T08:15:45.461Z",
-      "lastSeen": "2026-07-25T07:58:11.660Z"
+      "lastSeen": "2026-07-26T08:15:29.391Z"
     },
     {
       "id": "1uotpq5",
@@ -1835,20 +1849,6 @@
       "isQuestion": false,
       "firstSeen": "2026-07-04T08:29:35.035Z",
       "lastSeen": "2026-07-09T09:33:48.039Z"
-    },
-    {
-      "id": "1v0ks3j",
-      "title": "Posao",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1v0ks3j/posao/",
-      "sub": "r/Belgrade",
-      "comments": 71,
-      "topics": [
-        "bar"
-      ],
-      "score": 3.5,
-      "isQuestion": false,
-      "firstSeen": "2026-07-20T08:48:05.089Z",
-      "lastSeen": "2026-07-25T07:58:11.660Z"
     }
   ]
 }
