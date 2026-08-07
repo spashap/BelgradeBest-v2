@@ -42,8 +42,14 @@ still render via LegHubLayout, verified in dist. Header expo submenu now
 also shows "Tracker" (EXTRA_NAV in lib/listings.ts). Portal lastmod includes
 the participant dataset date.
 
+Card thumbnails: three branded SVGs in the house style (paper/accent, 1600x686
+— same pattern as areas/glossary thumbs) for the pavilions / tracker /
+corporate-area cards that had no image: public/images/expo-2027/
+{pavilions,tracker,corporate-area}-thumb.svg.
+
 Build verified: 93 table rows, 4 JSON-LD blocks, filterbar hidden pre-JS,
-zero /expo-2027/participants references in dist, sitemap 145 URLs.
+zero /expo-2027/participants references in dist, zero imageless cards on the
+portal, sitemap 145 URLs.
 
 Owner browser checks: no-JS mode (all content visible, no filter bar),
 search/chips/sort, tab toggle + deep-link #for-participants while hidden,

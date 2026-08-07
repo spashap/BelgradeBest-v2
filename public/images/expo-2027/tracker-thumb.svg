@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="686" viewBox="0 0 1600 686" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Expo 2027 participant tracker">
+  <rect width="1600" height="686" fill="#f7f3ec"/>
+  <rect x="0" y="0" width="1600" height="10" fill="#b5462b"/>
+  <!-- growth-curve motif: rising steps with an accented end point -->
+  <path d="M180 590 L 420 590 L 420 560 L 660 560 L 660 520 L 900 520 L 900 470 L 1140 470 L 1140 430 L 1380 430" fill="none" stroke="#b5462b" stroke-width="4" opacity="0.25"/>
+  <circle cx="1380" cy="430" r="12" fill="#b5462b"/>
+  <text x="800" y="232" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" letter-spacing="4" font-weight="600" fill="#b5462b">EXPO 2027 · INDEPENDENT DATA</text>
+  <text x="800" y="380" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="96" font-weight="800" fill="#211b16">Participant tracker</text>
+  <line x1="740" y1="420" x2="860" y2="420" stroke="#b5462b" stroke-width="3"/>
+  <text x="800" y="462" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="34" fill="#6b5f54">who's confirmed, with sources</text>
+</svg>
