@@ -7,7 +7,7 @@
   "status": "announced",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-05",
+  "updated": "2026-08-07",
   "summary": "Russia signed its participation agreement in December 2025 and has announced its pavilion slogan — \"Play to be\" — framing play as essential to music, medicine and high technology.",
   "blocks": {
     "about": [
@@ -15,11 +15,31 @@
       "The pavilion's announced slogan is \"Play to be — I play in order to live, in order to exist\". Russia intends to show how important play is across spheres of life including music, medicine and high technologies. The country has participated in Expo exhibitions since 1981; pavilion design and budget have not been made public."
     ],
     "facts": [
-      { "label": "Slogan", "value": "\"Play to be — I play in order to live, in order to exist\"", "source": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation" },
-      { "label": "Status", "value": "Participation agreement signed 24 Dec 2025", "source": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html" },
-      { "label": "Commissioner", "value": "Alexey Gruzdev, Deputy Minister of Industry and Trade", "source": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html" },
-      { "label": "Concept", "value": "Play across music, medicine and high technologies", "source": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation" },
-      { "label": "Size / budget", "value": "Not disclosed" }
+      {
+        "label": "Slogan",
+        "value": "\"Play to be — I play in order to live, in order to exist\"",
+        "source": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation"
+      },
+      {
+        "label": "Status",
+        "value": "Participation agreement signed 24 Dec 2025",
+        "source": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html"
+      },
+      {
+        "label": "Commissioner",
+        "value": "Alexey Gruzdev, Deputy Minister of Industry and Trade",
+        "source": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html"
+      },
+      {
+        "label": "Concept",
+        "value": "Play across music, medicine and high technologies",
+        "source": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation"
+      },
+      {
+        "label": "Pavilion category",
+        "value": "'A' category — announced as one of the largest pavilions of the Expo (Deputy Minister Alexey Gruzdev, Mar 2026); operator/contractor not yet named",
+        "source": "https://fomag.ru/news-streem/rossiyskiy-pavilon-na-ekspo-2027-v-belgrade-budet-odnim-iz-samykh-bolshikh-zamministra/"
+      }
     ],
     "quotes": [
       {
@@ -46,9 +66,18 @@
   "links": {
     "website": null,
     "sources": [
-      { "url": "https://tass.com/economy/1984547", "note": "Government decree endorsing participation" },
-      { "url": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html", "note": "Agreement signing" },
-      { "url": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation", "note": "Official Expo announcement + slogan" }
+      {
+        "url": "https://tass.com/economy/1984547",
+        "note": "Government decree endorsing participation"
+      },
+      {
+        "url": "https://serbia.news-pravda.com/en/russia/2025/12/24/18591.html",
+        "note": "Agreement signing"
+      },
+      {
+        "url": "https://expobelgrade2027.org/en/news/expo-2027-participation-agreement-signed-with-the-russian-federation",
+        "note": "Official Expo announcement + slogan"
+      }
     ]
   },
   "images": []

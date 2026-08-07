@@ -11,10 +11,14 @@ Gatekeeper agencies matter because they hold the exhibitor lists. Categories
 
 Last full run: **2026-07-05** (32 prospects: 16 gatekeepers + 15 event-level
 companies + 1 container category; 9 verified public emails).
-Last external run: **2026-07-06 ×2** — owner-run Perplexity Deep Research
-(records: `research/2026-07-06-perplexity-prospects.md` and
-`research/2026-07-06-perplexity-pavilions-batch2.md`). Batch 2 took profiles
-12 → **19** (+4 gatekeepers). External research is a valid input channel:
+Last external run: **2026-08-07** — light 3-agent in-session sweep + focused
+owner-run Perplexity Deep Research (record:
+`research/2026-08-07-light-sweep-perplexity.md`). Key: Slovakia design winner
+EXPO LINE; Türkiye 648 m² A5.1 + National Day 19 May 2027; Serbia team
+corroborated (aleatek.com); CERN participant; Pošta Srbije sponsor. Prior:
+**2026-07-06 ×2** (records: `research/2026-07-06-perplexity-prospects.md`,
+`research/2026-07-06-perplexity-pavilions-batch2.md`; batch 2 took profiles
+12 → **19**, +4 gatekeepers). External research is a valid input channel:
 give the owner the runbook prompt, VERIFY spot-checks, then **fan drafting
 out to Sonnet subagents and review at full quality** — the review pass caught
 real defects (stitched quotes, escaped URLs, wrong-source dates) every time,
@@ -146,37 +150,52 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
    rewrite `scripts/commit-message.txt`, summarize actionable finds to the
    owner (especially anything with a deadline).
 
-## 6. Watch list (update every run — last updated 2026-07-06)
+## 6. Watch list (update every run — last updated 2026-08-07)
 
 - **Italy** sponsorship call closes **31 Aug 2026** (tiers Bronze €5–25k →
   Platinum €100k+; PEC amb.belgrado@cert.esteri.it) → after close, find who
-  sponsored (each sponsor = booth-grade prospect under Italy).
-- **Türkiye** proposal call closes **17 Aug 2026** → find the awarded organizer.
-- **Turkmenistan** pavilion design+construction tender closed 13 Apr 2026 →
-  winner not yet public.
-- **Slovakia** architectural competition closed 14 May 2026 → winner not
-  public (Slovakia Travel; companies can register for the program since
-  mid-May 2026 — booth-list angle).
-- **South Korea** KOTRA exhibition-service tender (₩9bn) closed 29 Apr 2026 →
-  winner not public.
-- **BiH** contract signed 2–3 Jul 2026 → pavilion details to follow;
-  **North Macedonia** commissioner still unnamed.
+  sponsored (each sponsor = booth-grade prospect under Italy). No names as of
+  07 Aug.
+- **Türkiye** proposal call closes **17 Aug 2026** → recheck for the awarded
+  organizer from ~end Aug. Now public (ticaret.gov.tr notice, applied
+  2026-08-07): 648 m² medium pavilion on parcel A5.1, ready-by 15 Apr 2027,
+  National Day 19 May 2027. The awarded organizer firm = prime prospect.
+- **Turkmenistan** tender (closed 13 Apr 2026) → winner still unpublished
+  (checked 07 Aug); SARY studio (Ashgabat) publicly a BIDDER only
+  (turkmenportal 23 Jul); state media say preparations underway.
+- **Slovakia**: design winner FOUND + applied 2026-08-07 — EXPO LINE
+  collective, 'Living Playground', €375k ex-VAT (ASB.sk 9 Jul). Still watch:
+  construction tender award + the slovakiaexpo.sk company registrations
+  (booth-list angle; SARIO cooperation announced 31 Jul).
+- **South Korea** KOTRA tender (₩9bn, closed 29 Apr) → award still not public
+  (checked 07 Aug incl. G2B — RFP only). The awarded 전시 대행사 = prime prospect.
+- **BiH** contract signed 3 Jul 2026 → pavilion size/hall/theme/budget still
+  unpublished (checked 07 Aug); **North Macedonia** commissioner still unnamed.
 - **Germany**: Messe Düsseldorf sub-procurements (communication, catering,
-  shop) on evergabe-online.de — not public yet / may need portal access.
-- **Serbia pavilion**: Architizer (C) names PowerChina Serbia as GC and ALEATEK
-  Studio as architect (~13,544 m² net, under construction) → corroborate via
-  official source, then enrich the Serbia pavilion page + upgrade prospects.
-- **Best Practice & Corporate Area**: ~45 corporate pavilions, occupants
-  unannounced (only World Expo Museum named). **PKS is the recruiting partner**
-  for this zone (institutional agreement) — the corporate-area booth gatekeeper.
-- **UAE**: Commissioner General FOUND (Amb. Ahmed Hatem Almenhali, MOFA) —
-  still watch for the implementing operator (`uaepavilion.ae` still Osaka-era).
-  **Russia**: operator unnamed. **Saudi**: no program page yet.
-- **Sponsor tiers**: only Telekom Srbija + Air Serbia (Platinum) named; the
-  partners page shows categories only — watch for names.
-- **Exhibitor lists**: none published yet anywhere. When one lands → bulk mode.
-- **National Day schedule**: unpublished; when it lands, update pavilions +
-  the participants article.
+  shop) → still no awards named (checked 07 Aug). facts and fiction (Cologne)
+  = content concept, now a prospect listing.
+- **Serbia pavilion**: PowerChina GC + ALEATEK architecture CORROBORATED on
+  aleatek.com + applied 2026-08-07 — still watch for an official organiser
+  source; then upgrade PowerChina/ALEATEK prospects.
+- **Best Practice & Corporate Area**: ~45 corporate pavilions, occupants still
+  unannounced beyond World Expo Museum + Telekom (checked 07 Aug). **PKS is
+  the recruiting partner** — the corporate-area booth gatekeeper.
+- **UAE**: Commissioner General FOUND (Amb. Ahmed Hatem Almenhali, MOFA
+  official) — implementing operator still unnamed (checked 07 Aug).
+  **Russia**: 'A' category pavilion confirmed (fomag/TASS Mar 2026); operator
+  still unnamed. **Saudi**: implementation phase + Expo 2030 Riyadh
+  cooperation framework (saudigazette); no program page yet.
+- **Sponsors**: Telekom Srbija + Air Serbia (Platinum) + **Pošta Srbije**
+  (official sponsor & logistics supplier, Tanjug 2 Aug — listing created).
+  Partners page still an open invitation, no roster — keep watching.
+- **International organisations**: CERN reported as participant (vreme
+  28 Jul — listing created). Watch for more org-level participants; they may
+  become their own container class.
+- **Exhibitor lists**: none published yet anywhere (checked 07 Aug). When one
+  lands → bulk mode.
+- **National Day schedule**: calendar still unpublished; first country-level
+  date is Türkiye's planned 19 May 2027. When the calendar lands, update
+  pavilions + the participants article.
 
 ## 7. Use cases
 

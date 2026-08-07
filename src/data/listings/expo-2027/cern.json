@@ -1,0 +1,65 @@
+{
+  "slug": "cern",
+  "leg": "expo-2027",
+  "type": "organization",
+  "name": "CERN",
+  "shortName": "CERN",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-08-07",
+  "summary": "CERN, the European Organization for Nuclear Research, has signed on as an official participant of Expo 2027 Belgrade with its own exhibition space — the first time it has joined a World or Specialised Expo in this capacity.",
+  "blocks": {
+    "about": [
+      "CERN — the European Organization for Nuclear Research — has signed an agreement to take part in Expo 2027 Belgrade as an official participant with its own exhibition space, the first time the organization has joined a World or Specialised Expo in this capacity rather than through a national pavilion. The participation was confirmed in late July 2026, with CERN's commissioner for Expo 2027 Belgrade, Ursula Basler, saying the organization is pleased to take part as an official participant for the first time.",
+      "CERN's exhibition space is intended to let the millions of visitors expected at Expo 2027 discover the world of modern science in an accessible way and understand why scientific discoveries matter for humanity's future. Organizers tie the contribution directly to the Expo's overall theme, 'Play for Humanity': science, they note, always carries an element of play, curiosity and research that leads to new discoveries and innovations — framed as a natural fit for CERN's presence."
+    ],
+    "facts": [
+      {
+        "label": "Status",
+        "value": "Signed agreement to participate as an official participant, confirmed late Jul 2026",
+        "source": "https://vreme.com/en/mozaik/ekspo-2027-cern/"
+      },
+      {
+        "label": "Participant type",
+        "value": "International organisation with its own exhibition space — CERN's first-ever appearance at an Expo in this capacity",
+        "source": "https://vreme.com/en/mozaik/ekspo-2027-cern/"
+      },
+      {
+        "label": "Commissioner",
+        "value": "Ursula Basler, CERN's Commissioner for Expo 2027 Belgrade",
+        "source": "https://vreme.com/en/mozaik/ekspo-2027-cern/"
+      },
+      {
+        "label": "Agreement signatories",
+        "value": "Minister Jagoda Lazarević, EXPO 2027 Belgrade director Danilo Jerinić, and CERN section commissioner Ursula Basler",
+        "source": "https://www.danas.rs/vesti/ekonomija/i-cern-ucestvuje-na-izlozbi-ekspo-2027-beograd/"
+      }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "Is CERN participating in Expo 2027 Belgrade?",
+      "answer": "Yes. CERN signed an agreement to take part as an official participant with its own exhibition space, confirmed in late July 2026 — the first time CERN has joined a World or Specialised Expo in this way."
+    },
+    {
+      "question": "What will CERN show at Expo 2027?",
+      "answer": "Details of the exhibits have not been published yet. Organizers describe the space as intended to let visitors discover modern science accessibly and understand its importance for humanity's future, tying it to the Expo's 'Play for Humanity' theme."
+    }
+  ],
+  "links": {
+    "website": "https://home.cern",
+    "sources": [
+      {
+        "url": "https://vreme.com/en/mozaik/ekspo-2027-cern/",
+        "note": "CERN confirms participation as an official participant of Expo 2027 Belgrade"
+      },
+      {
+        "url": "https://www.danas.rs/vesti/ekonomija/i-cern-ucestvuje-na-izlozbi-ekspo-2027-beograd/",
+        "note": "Danas: CERN also participating in Expo 2027 Belgrade"
+      }
+    ]
+  },
+  "images": []
+}

@@ -7,7 +7,7 @@
   "status": "tender",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-06",
+  "updated": "2026-08-07",
   "summary": "South Korea is tendering its Expo 2027 Belgrade pavilion through KOTRA at a budget of 9,000,000,000 KRW (roughly €5.6 million), with bids due 29 April 2026 and a contract running through 30 November 2027.",
   "blocks": {
     "about": [
@@ -39,6 +39,11 @@
         "label": "Implementing agency",
         "value": "KOTRA (Korea Trade-Investment Promotion Agency), World Expo team",
         "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+      },
+      {
+        "label": "Award status",
+        "value": "Winning exhibition agency not yet public (checked 7 Aug 2026); the G2B RFP scope spans design, exhibition content, installation, PM/supervision, operation and dismantling",
+        "source": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01400596&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
       }
     ],
     "quotes": []

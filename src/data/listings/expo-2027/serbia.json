@@ -7,7 +7,7 @@
   "status": "tender",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-05",
+  "updated": "2026-08-07",
   "summary": "The host nation's pavilion is the biggest single national project of Expo 2027: a building of up to 30,000 m² with a construction budget around €40 million, designed by Belgrade studio Artbeat Lab, plus a separate €8.5 million exhibition tender.",
   "blocks": {
     "about": [
@@ -16,12 +16,45 @@
       "A separate tender worth about RSD 1 billion (~€8.5 million) covers the organization and realization of the exhibition inside the pavilion, announced by the Office of the Commissioner of Serbia for International Exhibitions. General Commissioner Žarko Malinović invited bidders to \"contribute with creative ideas so that Serbia presents its creativity, energy and modern identity to the world\"."
     ],
     "facts": [
-      { "label": "Role", "value": "Host nation pavilion — permanent flagship of the Surčin site" },
-      { "label": "Status", "value": "Design awarded (Artbeat Lab); exhibition tender announced", "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur" },
-      { "label": "Size", "value": "Up to 30,000 m² gross; 9 floors + up to 6 underground levels", "source": "https://www.ekapija.com/en/news/4727829/national-pavilion-of-serbia-at-expo-2027-to-have-8-floors-and" },
-      { "label": "Construction budget", "value": "RSD 4.68bn (~€40M)", "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur" },
-      { "label": "Designer", "value": "Artbeat Lab, Belgrade (RSD 9.92M design contract)", "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur" },
-      { "label": "Exhibition tender", "value": "~RSD 1bn (~€8.5M) for the interior exhibition", "source": "https://vreme.com/en/drustvo/srbija-trazi-izvodjaca-za-nacionalni-paviljon-na-ekspu-posao-vredan-85-miliona-evra/" }
+      {
+        "label": "Role",
+        "value": "Host nation pavilion — permanent flagship of the Surčin site"
+      },
+      {
+        "label": "Status",
+        "value": "Design awarded (Artbeat Lab); exhibition tender announced",
+        "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur"
+      },
+      {
+        "label": "Size",
+        "value": "Up to 30,000 m² gross; 9 floors + up to 6 underground levels",
+        "source": "https://www.ekapija.com/en/news/4727829/national-pavilion-of-serbia-at-expo-2027-to-have-8-floors-and"
+      },
+      {
+        "label": "Construction budget",
+        "value": "RSD 4.68bn (~€40M)",
+        "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur"
+      },
+      {
+        "label": "Designer",
+        "value": "Artbeat Lab, Belgrade (RSD 9.92M design contract)",
+        "source": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur"
+      },
+      {
+        "label": "Exhibition tender",
+        "value": "~RSD 1bn (~€8.5M) for the interior exhibition",
+        "source": "https://vreme.com/en/drustvo/srbija-trazi-izvodjaca-za-nacionalni-paviljon-na-ekspu-posao-vredan-85-miliona-evra/"
+      },
+      {
+        "label": "General contractor",
+        "value": "PowerChina Serbia (per the architect's project page; awaiting confirmation from an official organiser source)",
+        "source": "https://aleatek.com/serbian-national-pavilion-at-expo-2027-belgrade/"
+      },
+      {
+        "label": "Architecture team",
+        "value": "ALEATEK Studio (architecture) with concept author Dr. Dušan Jovović (Artbeat) — ~13,544 m² net, 55 × 60 m footprint, under construction",
+        "source": "https://aleatek.com/serbian-national-pavilion-at-expo-2027-belgrade/"
+      }
     ],
     "quotes": [
       {
@@ -52,9 +85,18 @@
   "links": {
     "website": null,
     "sources": [
-      { "url": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur", "note": "Budget + design contract" },
-      { "url": "https://www.ekapija.com/en/news/4727829/national-pavilion-of-serbia-at-expo-2027-to-have-8-floors-and", "note": "Size and floor specifications" },
-      { "url": "https://vreme.com/en/drustvo/srbija-trazi-izvodjaca-za-nacionalni-paviljon-na-ekspu-posao-vredan-85-miliona-evra/", "note": "Exhibition tender" }
+      {
+        "url": "https://www.ekapija.com/en/news/4751657/construction-of-national-pavilion-of-serbia-at-expo-2027-to-cost-eur",
+        "note": "Budget + design contract"
+      },
+      {
+        "url": "https://www.ekapija.com/en/news/4727829/national-pavilion-of-serbia-at-expo-2027-to-have-8-floors-and",
+        "note": "Size and floor specifications"
+      },
+      {
+        "url": "https://vreme.com/en/drustvo/srbija-trazi-izvodjaca-za-nacionalni-paviljon-na-ekspu-posao-vredan-85-miliona-evra/",
+        "note": "Exhibition tender"
+      }
     ]
   },
   "images": []

@@ -7,7 +7,7 @@
   "status": "tender",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-06",
+  "updated": "2026-08-07",
   "summary": "Turkmenistan's participation in Expo 2027 Belgrade was approved by President Serdar Berdimuhamedov in March 2026, but who will design and build its pavilion is not yet public after the government's construction tender was re-announced.",
   "blocks": {
     "about": [
@@ -32,8 +32,8 @@
       },
       {
         "label": "Pavilion design, size and budget",
-        "value": "Not publicly disclosed as of this writing",
-        "source": "https://business.com.tm/info/7931/ministry-of-trade-and-foreign-economic-relations-reannounces-international-tender-for-construction-of-national-pavilion-at-expo-2027"
+        "value": "Winner unannounced as of 7 Aug 2026 — Ashgabat studio SARY publicly reported as a bidder; state media report pavilion preparations underway",
+        "source": "https://turkmenportal.com/en/news/100619-turkmen-architectural-studio-sary-is-bidding-to-design-the-expo-2027-pavilion-in-belgrade"
       }
     ],
     "quotes": []

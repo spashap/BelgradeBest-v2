@@ -7,7 +7,7 @@
   "status": "announced",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-05",
+  "updated": "2026-08-07",
   "summary": "Saudi Arabia signed its participation contract in April 2026, with a vision built around play as a pathway to opportunity — culture, sport and creative industries empowering individuals and communities.",
   "blocks": {
     "about": [
@@ -15,10 +15,30 @@
       "The Kingdom's stated vision focuses on showcasing play as a pathway to opportunity, and the role of culture, sport and creative industries in empowering individuals and building thriving communities — themes closely aligned with Vision 2030. Saudi Arabia says it will work with the Expo organizer and participating countries to deliver a pavilion and programme fostering collaboration, cultural exchange and people-to-people engagement throughout the Expo. Design and budget details have not been published."
     ],
     "facts": [
-      { "label": "Vision", "value": "Play as a pathway to opportunity; culture, sport and creative industries", "source": "https://saudigazette.com.sa/article/660692" },
-      { "label": "Status", "value": "Participation contract signed April 2026 — execution phase", "source": "https://saudigazette.com.sa/article/660692" },
-      { "label": "Commissioner General", "value": "Rakan Tarabzoni, Deputy Minister of Economy and Planning", "source": "https://saudigazette.com.sa/article/660692" },
-      { "label": "Size / budget", "value": "Not disclosed" }
+      {
+        "label": "Vision",
+        "value": "Play as a pathway to opportunity; culture, sport and creative industries",
+        "source": "https://saudigazette.com.sa/article/660692"
+      },
+      {
+        "label": "Status",
+        "value": "Participation contract signed April 2026 — execution phase",
+        "source": "https://saudigazette.com.sa/article/660692"
+      },
+      {
+        "label": "Commissioner General",
+        "value": "Rakan Tarabzoni, Deputy Minister of Economy and Planning",
+        "source": "https://saudigazette.com.sa/article/660692"
+      },
+      {
+        "label": "Size / budget",
+        "value": "Not disclosed"
+      },
+      {
+        "label": "Expo-to-Expo cooperation",
+        "value": "Cooperation framework signed between Expo 2027 Belgrade and Expo 2030 Riyadh; Saudi participation described as in full implementation phase (Jul 2026)",
+        "source": "https://saudigazette.com.sa/article/662452"
+      }
     ],
     "quotes": [
       {
@@ -45,7 +65,10 @@
   "links": {
     "website": null,
     "sources": [
-      { "url": "https://saudigazette.com.sa/article/660692", "note": "Contract signing, leadership and vision" }
+      {
+        "url": "https://saudigazette.com.sa/article/660692",
+        "note": "Contract signing, leadership and vision"
+      }
     ]
   },
   "images": []

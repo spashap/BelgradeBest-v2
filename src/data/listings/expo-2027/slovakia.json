@@ -7,8 +7,8 @@
   "status": "tender",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-06",
-  "summary": "Slovakia was the first country to sign a Participation Contract for Expo 2027, securing a 648 m² 'M Pavilion' in Hall 6 built around a 'Living Playground' concept, with the architectural competition now closed and a winner not yet announced.",
+  "updated": "2026-08-07",
+  "summary": "Slovakia was the first country to sign a Participation Contract for Expo 2027 and now has a winning pavilion design: 'Living Playground' by Bratislava collective EXPO LINE, chosen from 9 bids for the 648 m² 'M Pavilion' in Hall 6 under the concept 'Slovakia – A Playground of Opportunities'.",
   "blocks": {
     "about": [
       "Slovakia signed the first Participation Contract of the entire Expo 2027 on 12 November 2025, at the EXPO 2027 Playground. The contract was signed by Danilo Jerinić, director of organizer EXPO 2027 d.o.o., Serbia's Commissioner General Jagoda Lazarević, and Slovakia's Commissioner General Lukáš Parízek, and assigns Slovakia a medium-category 'M Pavilion' space.",
@@ -27,14 +27,14 @@
         "source": "https://www.tasr.sk/tasr-clanok/TASR:2026041100000159"
       },
       {
-        "label": "Design competition deadline",
-        "value": "Submissions due 14 May 2026 via e-procurement; competition verified by the Slovak Chamber of Architects",
-        "source": "https://www.tasr.sk/tasr-clanok/TASR:2026041100000159"
+        "label": "Design competition winner",
+        "value": "EXPO LINE collective, Bratislava (Karol Kállay, Karol Kállay Jr., Radovan Valenta, Milan Jursa, Nenad Brankovič, Asot Haas) with the design 'Living Playground' — 9 bids received, 6 non-compliant; announced 9 Jul 2026",
+        "source": "https://www.asb.sk/architektura/ako-bude-vyzerat-slovensky-pavilon-na-expo-2027-sutaz-na-jeho-podobu-pozna-vitaza"
       },
       {
-        "label": "Estimated design services budget",
-        "value": "Approx. €414,000 excluding VAT",
-        "source": "https://www.eurobrew.sk/en/aktuality_d.php?id=6520&page=0"
+        "label": "Design services contract",
+        "value": "€375,000 excluding VAT (€461,250 incl. VAT) awarded to EXPO LINE — under the ~€414,000 estimate",
+        "source": "https://www.asb.sk/architektura/ako-bude-vyzerat-slovensky-pavilon-na-expo-2027-sutaz-na-jeho-podobu-pozna-vitaza"
       },
       {
         "label": "Estimated construction budget",
@@ -45,6 +45,11 @@
         "label": "Pavilion concept",
         "value": "'Slovakia – A Playground of Opportunities,' slogan 'Where Game Turns into Opportunity'",
         "source": "https://www.tasr.sk/tasr-clanok/TASR:2026061900000084"
+      },
+      {
+        "label": "Business participation",
+        "value": "Slovak companies can register for the Expo programme via slovakiaexpo.sk (open since mid-May 2026); SARIO cooperation announced by the commissioner's office, Jul 2026",
+        "source": "https://www.linkedin.com/posts/parizeklukas_cooperation-during-expo-with-sario-another-activity-7487590923011276800-zs5-"
       }
     ],
     "quotes": [

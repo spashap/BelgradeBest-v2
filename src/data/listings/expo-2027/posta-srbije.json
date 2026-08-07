@@ -1,0 +1,63 @@
+{
+  "slug": "posta-srbije",
+  "leg": "expo-2027",
+  "type": "sponsor",
+  "name": "Pošta Srbije",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-08-07",
+  "summary": "Pošta Srbije, Serbia's national postal operator, is an official sponsor and supplier of Expo 2027 Belgrade, providing logistics and promotional support for the exhibition across the country.",
+  "blocks": {
+    "about": [
+      "Pošta Srbije was named an official sponsor and supplier of Expo 2027 Belgrade, joining the roster of Serbian companies backing the exhibition's preparations. The company's statement, issued in early August 2026, frames the partnership as reflecting its commitment to innovation, digital transformation and the promotion of Serbia internationally, positioning it alongside other domestic sponsors supporting the first Specialized Expo held in the Western Balkans, themed 'Play for Humanity: Sport and Music for All.'",
+      "In practice, the sponsorship is logistical: Pošta Srbije transports promotional furniture and stands for the exhibition using its own vehicle fleet, distributes promotional materials, and supports wider promotional activities meant to raise Expo 2027's visibility across Serbia. A clarification issued 2 August 2026 addressed public attention drawn by company vehicles used for Expo promotion in Kruševac and Kraljevo, describing the deployment as the company 'fulfilling contractual obligations' under its sponsorship agreement, and as customary practice in sponsorship partnerships generally."
+    ],
+    "facts": [
+      {
+        "label": "Status",
+        "value": "Official sponsor and supplier of Expo 2027 Belgrade, confirmed early August 2026",
+        "source": "https://connectingregion.com/news/posta-srbije-named-official-sponsor-of-expo-2027-belgrade/"
+      },
+      {
+        "label": "Role",
+        "value": "Logistics: transport of promotional stands/furniture, distribution of promotional materials, promotional support",
+        "source": "https://www.tanjug.rs/expo-2027/vesti/270574/ekspo-2027-posta-srbije-realizuje-ugovorne-obaveze-kao-zvanicni-sponzor-izlozbe/vest"
+      },
+      {
+        "label": "Vehicle deployment",
+        "value": "Company vehicles used to transport Expo 2027 promotional materials during stops in Kruševac and Kraljevo, clarified 2 Aug 2026",
+        "source": "https://www.tanjug.rs/expo-2027/vesti/270574/ekspo-2027-posta-srbije-realizuje-ugovorne-obaveze-kao-zvanicni-sponzor-izlozbe/vest"
+      }
+    ],
+    "quotes": []
+  },
+  "faqs": [
+    {
+      "question": "What is Pošta Srbije's role at Expo 2027?",
+      "answer": "Pošta Srbije is an official sponsor and supplier, providing logistics support: transporting promotional stands and furniture with its own vehicle fleet, distributing promotional materials, and supporting wider promotional activities across Serbia."
+    },
+    {
+      "question": "When was Pošta Srbije confirmed as an Expo 2027 sponsor?",
+      "answer": "Its sponsor role became public in early August 2026 — the company described itself as an official sponsor and supplier in a 2 August 2026 statement responding to public questions about its promotional vehicle use in Kruševac and Kraljevo."
+    }
+  ],
+  "links": {
+    "website": "https://www.posta.rs",
+    "sources": [
+      {
+        "url": "https://www.tanjug.rs/expo-2027/vesti/270574/ekspo-2027-posta-srbije-realizuje-ugovorne-obaveze-kao-zvanicni-sponzor-izlozbe/vest",
+        "note": "Tanjug: Pošta Srbije clarification on sponsorship obligations, 2 Aug 2026"
+      },
+      {
+        "url": "https://connectingregion.com/news/posta-srbije-named-official-sponsor-of-expo-2027-belgrade/",
+        "note": "Pošta Srbije named official sponsor of Expo 2027 Belgrade"
+      }
+    ]
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Official sponsor/supplier (logistics: vehicles, promo materials); no public press email found yet. Potential angle: cross-link from our partners-and-suppliers coverage; Pošta Srbije's own comms are reactive (responding to public criticism over vehicle use), so approach with a neutral factual framing."
+  }
+}
