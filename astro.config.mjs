@@ -56,6 +56,9 @@ LASTMOD["/for-businesses"] = iso("2026-07-06");
   // Leg hubs + home: newest article date is the honest proxy for "last changed".
   for (const leg of schema.legs) {
     const dates = leg.slugs.map((s) => LASTMOD[`/${leg.slug}/${s.slug}`]).filter(Boolean);
+    // The expo portal also renders the participant dataset, so its data date
+    // counts toward the hub's lastmod.
+    if (leg.slug === "expo-2027") dates.push(iso(expoParticipants.updated));
     const m = maxDate(dates);
     if (m) LASTMOD[`/${leg.slug}`] = m;
   }
@@ -261,6 +264,11 @@ export default defineConfig({
   output: "static",
   adapter: vercel(),
   trailingSlash: "never",
+  // The participants article was folded into the /expo-2027 portal (2026-08-07).
+  // The adapter emits this as a real HTTP 301 in the Vercel routing config.
+  redirects: {
+    "/expo-2027/participants": { status: 301, destination: "/expo-2027" },
+  },
   // The admin login/forms POST same-origin, but Astro's default checkOrigin CSRF
   // guard misfires behind Vercel's proxy (compares the Origin header to Vercel's
   // internal host) and blocks them with "Cross-site POST form submissions are

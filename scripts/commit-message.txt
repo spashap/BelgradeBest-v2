@@ -1,38 +1,53 @@
-Pavilion refresh batch 3: Slovakia winner, Turkiye procurement, CERN + Posta Srbije listings, watch-list sweep
+Expo portal: rebuild /expo-2027 as a data-rich two-persona hub; retire /participants into it (301)
 
-Monthly refresh via the token-economics pipeline: 3-agent light in-session
-sweep -> focused owner-run Perplexity Deep Research -> Fable triage +
-spot-verification -> Sonnet drafting of new listings -> Fable review pass
-(caught: an unverified "140 participants" claim contradicting our own
-tracker, and a broken 2-Aug/4-Aug chronology). Audit record:
-KB/platform/research/2026-08-07-light-sweep-perplexity.md; runbook watch
-list fully rechecked and updated.
+The generic leg hub never surfaced the section's best assets (pavilions,
+tracker, countdown, corporate area), and the participants article hand-copied
+tracker numbers that drifted stale. /expo-2027 is now a one-off portal page
+(same Warm Editorial tokens, unique structure) whose every number renders
+from the data masters at build.
 
-Enriched pavilion profiles (all sourced):
-- Slovakia — design winner public: EXPO LINE collective (Bratislava),
-  'Living Playground', EUR 375k ex-VAT contract, 9 bids/6 non-compliant
-  (ASB.sk 9 Jul); slovakiaexpo.sk company registration + SARIO cooperation.
-- Turkiye — status concept-only -> tender: official ministry notice
-  (verified by direct fetch) gives 648 m2 medium pavilion (27x24 m) on
-  parcel A5.1, ready-by 15 Apr 2027, National Day planned 19 May 2027,
-  organizer submissions due 17 Aug 2026.
-- Serbia — PowerChina GC + ALEATEK architecture (~13,544 m2 net, 55x60 m)
-  corroborated on the architect's own site.
-- Russia 'A'-category pavilion; Saudi Expo-2030-Riyadh cooperation
-  framework; Turkmenistan SARY-is-a-bidder distinction; South Korea award
-  still unpublished (G2B RFP scope documented).
+New src/pages/expo-2027/index.astro:
+- Countdown band (days-to-opening computed at build, refreshed live by JS,
+  flips to days-left during the event) + key facts + two persona CTAs.
+- Sticky anchor sub-nav; persona tabs (visitor / participant) that show-hide
+  sections with JS and degrade to plain anchors without it.
+- Visitor path: leg hero + intro, the 6 article cards, cross-leg trip rail
+  (where-to-stay, food, visit, plan), good-to-know facts, unknowns box.
+- Who's coming: live stats (139 official / 93 named / continents / profiles),
+  honest two-numbers note, latest milestones -> tracker.
+- Countries A-Z: all 93 named countries in a searchable, region-filterable,
+  sortable table (filter bar ships [hidden]; no-JS users get the full A-Z
+  table), each linked to its pavilion profile; orgs section (CERN, Posta
+  Srbije, World Expo Museum).
+- Participant path: how-participation-works explainer folded from the
+  retired article (counts interpolated, BIE/visa/three-zones), directory/
+  tracker/corporate-area cards, gold claim-your-profile note.
+- FAQ: the 7 folded FAQs, counts interpolated -> faqSchema. Schemas:
+  breadcrumb + Event + FAQPage.
+- One vanilla is:inline IIFE (~120 lines): countdown tick, directory
+  filter/sort (aria-sort), persona tabs with hashchange guard.
 
-New listings:
-- CERN (published) — first international organisation participant with its
-  own exhibition space (28 Jul 2026); signatories verified via Danas.
-- Posta Srbije (published) — official sponsor + logistics supplier.
-- facts and fiction GmbH (unpublished prospect) — German pavilion content
-  agency, operator-only contact captured.
+Design system (globals.css, token-only): new .c-subnav (generalized from
+.lp-nav), .c-hash-section, .c-tabs/.c-tab, .c-filterbar/.c-chip, sortable
+th arrows, .c-countdown band.
 
-Tracker: CERN timeline event added, updated bumped. OG cards (27) + QR
-codes (22) regenerated.
+Retirement: participants.md deleted (+ hero webps); 301 via astro.config
+redirects (verified in .vercel/output/config.json); slug removed from
+site-schema (linksTo cleaned on what-is-it + guide); every inbound link
+retargeted (tracker, pavilions hub, ListingPage footer -> /expo-2027
+#whos-coming; guide.md + what-is-it.md + glossary BIE -> /expo-2027/tracker);
+leg seoTitle/seoDescription rewritten to absorb the participants queries.
+[leg]/index.astro excludes expo-2027 (route collision guard) — other legs
+still render via LegHubLayout, verified in dist. Header expo submenu now
+also shows "Tracker" (EXTRA_NAV in lib/listings.ts). Portal lastmod includes
+the participant dataset date.
 
-Build verified: 146 sitemap URLs (was 144), both new listing pages
-prerendered, zero operator-contact leakage in public HTML.
+Build verified: 93 table rows, 4 JSON-LD blocks, filterbar hidden pre-JS,
+zero /expo-2027/participants references in dist, sitemap 145 URLs.
+
+Owner browser checks: no-JS mode (all content visible, no filter bar),
+search/chips/sort, tab toggle + deep-link #for-participants while hidden,
+mobile table scroll + sticky subnav, admin Structure page renders after the
+slug removal.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

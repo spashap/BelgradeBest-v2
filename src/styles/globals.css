@@ -968,6 +968,146 @@ a.c-gtk__link:hover {
   word-break: break-all;
 }
 
+/* --- c-subnav : sticky in-page anchor nav (pill row). Generalized from the
+   partners-landing .lp-nav for content portals (first use: /expo-2027). --- */
+.c-subnav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding: var(--s2) 0;
+}
+.c-subnav ul {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 2px;
+}
+.c-subnav a {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-eyebrow);
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+.c-subnav a:hover,
+.c-subnav a:focus-visible { color: var(--accent-ink); border-color: var(--accent); }
+
+/* Anchor landing zones: keep section headings clear of the sticky subnav. */
+.c-hash-section { scroll-margin-top: 84px; }
+
+/* --- c-tabs / c-tab : persona/view switcher. Without JS the tabs are plain
+   anchor pills (all sections visible, stacked); JS upgrades them to real
+   show/hide toggles and marks the live one with .is-active. --- */
+.c-tabs {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  margin: var(--s5) 0 var(--s4);
+}
+.c-tab {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: var(--t-small);
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: var(--s2) var(--s5);
+  cursor: pointer;
+}
+.c-tab:hover,
+.c-tab:focus-visible { border-color: var(--accent); color: var(--accent-ink); }
+.c-tab.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+/* --- c-filterbar / c-chip : search + facet controls for data tables. Shipped
+   with [hidden] in the HTML; the page script reveals them (no-JS users just
+   get the full table). Chips toggle .is-active. --- */
+.c-filterbar {
+  display: flex;
+  gap: var(--s3);
+  flex-wrap: wrap;
+  align-items: center;
+  margin: var(--s4) 0 0;
+}
+.c-filterbar__input {
+  font-family: var(--body);
+  font-size: var(--t-body);
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s2) var(--s3);
+  min-width: 220px;
+  flex: 1 1 220px;
+}
+.c-filterbar__input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.c-filterbar__count {
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.c-chip {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-eyebrow);
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+.c-chip:hover,
+.c-chip:focus-visible { color: var(--accent-ink); border-color: var(--accent); }
+.c-chip.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+/* Sortable columns: the page script sets [data-sortable] + aria-sort on <th>;
+   the arrow renders from state so tables stay clean without JS. */
+.c-data-table th[data-sortable] { cursor: pointer; user-select: none; }
+.c-data-table th[data-sortable]:hover { color: var(--accent-ink); }
+.c-data-table th[aria-sort]::after {
+  content: "▲";
+  font-size: 0.7em;
+  margin-left: var(--s1);
+  color: var(--accent);
+}
+.c-data-table th[aria-sort="descending"]::after { content: "▼"; }
+
+/* --- c-countdown : the portal's headline band — an accent-washed wrapper
+   around a .c-stats row plus CTA buttons (first use: /expo-2027). --- */
+.c-countdown {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s4) var(--s5) var(--s5);
+  margin: var(--s5) 0;
+}
+.c-countdown .c-stats { margin: 0 0 var(--s4); }
+.c-countdown__ctas { display: flex; gap: var(--s3); flex-wrap: wrap; }
+
 /* ============================================================================
    ████ PARTNERS LANDING (/for-businesses) — owner-sanctioned landing chrome ████
    The business-facing pitch page is allowed its own landing-page layout

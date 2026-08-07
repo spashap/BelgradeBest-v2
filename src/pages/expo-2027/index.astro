@@ -1,0 +1,624 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import ArticleHero from "../../components/ArticleHero.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import Grid from "../../components/Grid.astro";
+import Card from "../../components/Card.astro";
+import MarkdownInline from "../../components/MarkdownInline.astro";
+import Note from "../../components/Note.astro";
+import Faq from "../../components/Faq.astro";
+import GoodToKnow from "../../components/GoodToKnow.astro";
+import Schema from "../../components/Schema.astro";
+import { SITE, CONFIG, EXPO } from "../../lib/site";
+import { clusterBySlug } from "../../lib/clusters";
+import { heroForLeg, thumbForSlug, thumbForPath } from "../../lib/hero";
+import { getPlannedChildren } from "../../lib/content-plan";
+import { articlesForLeg } from "../../lib/articles";
+import { hubMetadata } from "../../lib/metadata";
+import { breadcrumbSchema, expoEventSchema, faqSchema } from "../../lib/schemas";
+import {
+  participants,
+  timeline,
+  byRegion,
+  namedCount,
+  officialCount,
+  updated,
+} from "../../lib/expo-participants";
+import {
+  listingsForLeg,
+  listingHref,
+  childrenOf,
+  listingsIndexable,
+} from "../../lib/listings";
+
+// The Expo 2027 PORTAL — this leg's one-off hub (the generic LegHubLayout serves
+// every other leg; [leg]/index.astro excludes expo-2027). One page, two personas:
+// a visitor planning the trip and a participant checking who else will be there.
+// All numbers render from the data masters (expo-participants.json, listings) so
+// the page can never drift stale the way the retired /participants article did.
+const LEG = "expo-2027";
+const cluster = clusterBySlug(LEG)!;
+const meta = hubMetadata(LEG);
+const legHero = heroForLeg(LEG);
+
+// Article cards — same built/planned logic as LegHubLayout.
+const planned = getPlannedChildren(LEG);
+const built = new Map((await articlesForLeg(LEG)).map((a) => [a.data.slug, a]));
+
+// Countdown, computed at build; the inline script re-derives it live from the
+// data attributes so a stale static build only affects no-JS visitors.
+const DAY = 86400000;
+const startMs = Date.parse(`${EXPO.startDate}T00:00:00+02:00`);
+const endMs = Date.parse(`${EXPO.endDate}T23:59:59+02:00`);
+const nowMs = Date.now();
+const daysToOpen = Math.max(0, Math.ceil((startMs - nowMs) / DAY));
+const countdownNum = nowMs < startMs ? daysToOpen : nowMs <= endMs ? Math.max(0, Math.ceil((endMs - nowMs) / DAY)) : 0;
+const countdownLabel =
+  nowMs < startMs ? "days until opening day" : nowMs <= endMs ? "days left — it's on now" : "the Expo has ended";
+const fmtLong = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+const fmtShort = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+
+// Country → published pavilion profile (same mapping the tracker uses).
+const published = listingsIndexable ? listingsForLeg(LEG) : [];
+const pavilionByName = new Map<string, string>();
+for (const l of published) {
+  if (l.type !== "pavilion") continue;
+  pavilionByName.set(l.name.toLowerCase(), listingHref(l));
+  if (l.shortName) pavilionByName.set(l.shortName.toLowerCase(), listingHref(l));
+}
+const pavilionCount = published.filter((l) => l.type === "pavilion").length;
+const orgs = published.filter((l) => l.type !== "pavilion");
+const wem = childrenOf(LEG, "china").find((c) => c.slug === "world-expo-museum");
+const orgEntries = [...orgs, ...(wem ? [wem] : [])];
+const firstSentence = (s: string) => {
+  const i = s.indexOf(". ");
+  return i > 40 ? s.slice(0, i + 1) : s;
+};
+
+const regions = byRegion();
+const lastMilestones = timeline.slice(-3).reverse();
+
+// Cross-leg trip cards ("make it a Belgrade trip").
+const tripLegs = ["where-to-stay", "food-and-nightlife", "visit-belgrade", "plan-your-trip"]
+  .map((slug) => clusterBySlug(slug))
+  .filter(Boolean)
+  .map((c) => ({ href: c!.href, title: c!.title, body: c!.tagline, thumb: thumbForPath(c!.href, c!.title) }));
+
+// Durable orientation facts (each links to the page that covers it).
+const gtk = [
+  { label: "Dates", text: `${fmtLong(EXPO.startDate)} – ${fmtLong(EXPO.endDate)} — 93 days`, href: `/${LEG}/guide` },
+  { label: "Where", text: `${EXPO.venue}, western Belgrade — ~5 km from the airport`, href: `/${LEG}/getting-there` },
+  { label: "Tickets", text: "Not on sale yet — beds are the bottleneck, book those first", href: `/${LEG}/tickets` },
+  { label: "Theme", text: EXPO.theme, href: `/${LEG}/what-is-it` },
+];
+
+const unknowns = [
+  "Final list of confirmed countries (rolling announcements continue)",
+  "Most pavilion locations and designs",
+  "The National Day schedule (only Türkiye's planned date — 19 May 2027 — is public)",
+  "Ticket prices and the sale date",
+];
+
+// FAQs folded from the retired /expo-2027/participants article — counts
+// interpolate from the tracker data so the answers can't go stale.
+const faqs = [
+  {
+    question: "How many countries are taking part in Expo 2027?",
+    answer: `The official Participants page counter shows ${officialCount} confirmed international participants, with a note that more are coming — already a record for a Specialised Expo (Astana 2017 hosted 115–117). Treat it as a growing snapshot rather than a final total; our participant tracker keeps the current figure and the growth timeline with sources.`,
+  },
+  {
+    question: "Is my country participating in Expo 2027?",
+    answer: `Check the country directory on this page — it lists every one of the ${namedCount} countries a source has publicly named, with regions and confirmation dates. Because the official list is published as a partial set of names rather than a complete table, absence from today's list does not always mean absence from the event.`,
+  },
+  {
+    question: "Is the full list of participating countries public?",
+    answer: `Not yet as a complete table. The official page names only a subset of the ${officialCount} confirmed participants, and the full roster including international organisations and companies is still pending. Our tracker maintains the deduped, sourced list of every publicly named country.`,
+  },
+  {
+    question: "How are the Expo 2027 pavilions organised?",
+    answer: "The 25-hectare Surčin site has three interconnecting zones: the Thematic Area (education, music, sport and innovation), the International Participant Area (the national pavilions — later the new Belgrade Fair), and the Best Practice & Corporate Area (around 45 modular timber pavilions on a 9×9-metre grid).",
+  },
+  {
+    question: "Which countries have announced pavilion plans?",
+    answer: `${pavilionCount} national pavilions have public, sourced plans in our directory — Germany's 972 m² "Play for Progress" pavilion, Japan's fully published Basic Plan, Slovakia's winning "Living Playground" design and host Serbia's ~€40 million permanent flagship among them. Each profile lists what is confirmed versus reported.`,
+  },
+  {
+    question: "Does the Expo visa help general visitors?",
+    answer: "No. The free Expo visa allows accredited Expo participants and staff to live and work in Serbia for the Expo period — it is for participants, not for general visitors, who rely on Serbia's normal visa policy.",
+  },
+  {
+    question: "Has the schedule of National Days been announced?",
+    answer: "Not yet. Every participating country gets a National Day, but the calendar has not been published — the only country-specific date public so far is Türkiye's planned 19 May 2027. We update the programme page as dates land.",
+  },
+];
+
+const anchors = [
+  { href: "#for-visitors", label: "Plan your visit" },
+  { href: "#whos-coming", label: "Who's coming" },
+  { href: "#countries", label: "Countries A–Z" },
+  { href: "#pavilions-orgs", label: "Pavilions & orgs" },
+  { href: "#for-participants", label: "For participants" },
+  { href: "#faq", label: "FAQ" },
+];
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: cluster.title, url: SITE.origin + cluster.href },
+  ]),
+  expoEventSchema(legHero ? SITE.origin + legHero.src : undefined),
+  faqSchema(faqs),
+];
+---
+<BaseLayout meta={meta}>
+  <PageIntro eyebrow={cluster.eyebrow} title={cluster.title} lede={cluster.intro} />
+
+  <Container>
+    <div class="c-countdown" data-expo-start={EXPO.startDate} data-expo-end={EXPO.endDate}>
+      <div class="c-stats">
+        <div class="c-stat">
+          <div class="c-stat__num" data-countdown-num>{countdownNum}</div>
+          <div class="c-stat__label" data-countdown-label>{countdownLabel}</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">{fmtShort(EXPO.startDate).replace(` ${new Date(EXPO.startDate).getFullYear()}`, "")} – {fmtShort(EXPO.endDate)}</div>
+          <div class="c-stat__label">93 days at {EXPO.venue}, Belgrade</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">{officialCount}</div>
+          <div class="c-stat__label">confirmed international participants</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">Play</div>
+          <div class="c-stat__label">{EXPO.theme}</div>
+        </div>
+      </div>
+      <div class="c-countdown__ctas">
+        <a class="c-btn" href="#for-visitors">I'm planning a visit</a>
+        <a class="c-btn c-btn--ghost" href="#for-participants">I'm a participant or exhibitor</a>
+      </div>
+    </div>
+  </Container>
+
+  <nav class="c-subnav" aria-label="On this page">
+    <Container>
+      <ul>
+        {anchors.map((a) => (
+          <li><a href={a.href}>{a.label}</a></li>
+        ))}
+      </ul>
+    </Container>
+  </nav>
+
+  <Container>
+    <div class="c-tabs" data-persona-tabs hidden>
+      <a class="c-tab" href="#for-visitors" data-persona-tab="visitors" aria-pressed="false">For visitors</a>
+      <a class="c-tab" href="#for-participants" data-persona-tab="participants" aria-pressed="false">For participants & business</a>
+    </div>
+  </Container>
+
+  <section id="for-visitors" class="c-hash-section" data-persona-section="visitors">
+    <Container>
+      {legHero && (
+        <ArticleHero src={legHero.src} srcset={legHero.srcset} sizes={legHero.sizes} alt={legHero.alt} caption={null} />
+      )}
+    </Container>
+
+    {cluster.body && cluster.body.trim() && (
+      <Container variant="read">
+        <article class="c-article">
+          <MarkdownInline markdown={cluster.body} />
+        </article>
+      </Container>
+    )}
+
+    <Container>
+      <div class="u-stack-md"></div>
+      <SectionHead
+        eyebrow="Plan your visit"
+        title="The visitor guides"
+        intro="Everything we know — and honestly what nobody knows yet — page by page."
+      />
+      <Grid>
+        {planned.map((p) => {
+          const a = built.get(p.slug);
+          if (!a) {
+            return (
+              <div class="c-stub" aria-label={`Planned page: ${p.title}`}>
+                <span class="c-stub__badge">{p.status || CONFIG.chrome.legHub.stubFallbackBadge}</span>
+                <span class="c-stub__title">{p.title}</span>
+              </div>
+            );
+          }
+          const label = a.data.shortTitle || a.data.title;
+          const hero = thumbForSlug(p.slug, label);
+          return (
+            <Card
+              href={`/${LEG}/${p.slug}`}
+              title={label}
+              body={a.data.description}
+              src={hero?.src}
+              imgAlt={hero?.alt ?? label}
+            />
+          );
+        })}
+      </Grid>
+
+      <div class="u-stack-md"></div>
+      <SectionHead
+        eyebrow="Beyond the Expo gates"
+        title="Make it a Belgrade trip"
+        intro="You'll sleep, eat and explore in the city — these guides carry the rest of the trip."
+      />
+      <div class="c-rail">
+        {tripLegs.map((t) => (
+          <Card href={t.href} title={t.title} body={t.body} src={t.thumb?.src} imgAlt={t.thumb?.alt ?? t.title} />
+        ))}
+      </div>
+
+      <div class="u-stack-md"></div>
+      <GoodToKnow items={gtk} />
+
+      <aside class="c-unknowns">
+        <h2>Still unknown or unconfirmed</h2>
+        <ul>{unknowns.map((u) => <li>{u}</li>)}</ul>
+      </aside>
+    </Container>
+
+    {cluster.bodyBelow && cluster.bodyBelow.trim() && (
+      <Container variant="read">
+        <article class="c-article c-article--leg-foot">
+          <MarkdownInline markdown={cluster.bodyBelow} />
+        </article>
+      </Container>
+    )}
+  </section>
+
+  <section id="whos-coming" class="c-hash-section">
+    <Container>
+      <div class="u-stack-lg"></div>
+      <SectionHead
+        eyebrow="Who's coming"
+        title="The Expo, in numbers"
+        intro={`Live from our independently sourced participant data — last updated ${fmtLong(updated)}.`}
+      />
+      <div class="c-stats">
+        <div class="c-stat">
+          <div class="c-stat__num">{officialCount}</div>
+          <div class="c-stat__label">confirmed participants (official counter)</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">{namedCount}</div>
+          <div class="c-stat__label">countries publicly named — all listed below</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">{regions.length}</div>
+          <div class="c-stat__label">continents represented</div>
+        </div>
+        <div class="c-stat">
+          <div class="c-stat__num">{published.length}</div>
+          <div class="c-stat__label">pavilion & participant profiles published</div>
+        </div>
+      </div>
+      <Note>
+        <strong>Read the two numbers honestly.</strong> The official counter claims {officialCount}{" "}
+        participants, but only {namedCount} countries have been publicly named — absence from the
+        list below doesn't mean absence from the Expo. The full methodology, growth timeline and
+        every source live on the <a href="/expo-2027/tracker">participant tracker</a>.
+      </Note>
+      <div class="c-data-table">
+        <table>
+          <thead>
+            <tr><th>Latest milestones</th><th>Count</th><th>Date</th></tr>
+          </thead>
+          <tbody>
+            {lastMilestones.map((m) => (
+              <tr>
+                <td><a href={m.source} rel="nofollow noopener">{m.event}</a></td>
+                <td>{m.count ?? "—"}</td>
+                <td>{fmtShort(m.date)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p><a class="c-link" href="/expo-2027/tracker">Full timeline & sources on the tracker →</a></p>
+    </Container>
+  </section>
+
+  <section id="countries" class="c-hash-section">
+    <Container>
+      <div class="u-stack-lg"></div>
+      <SectionHead
+        eyebrow="Countries A–Z"
+        title={`All ${namedCount} publicly named countries`}
+        intro="Search, filter by region, or sort — every country links to its pavilion profile where we have one."
+      />
+      <div class="c-filterbar" data-directory-controls hidden>
+        <input
+          class="c-filterbar__input"
+          type="search"
+          placeholder="Type a country name…"
+          aria-label="Filter countries by name"
+          data-directory-search
+        />
+        <button class="c-chip is-active" type="button" data-region-chip="">All regions</button>
+        {regions.map((r) => (
+          <button class="c-chip" type="button" data-region-chip={r.region}>{r.region} ({r.count})</button>
+        ))}
+        <span class="c-filterbar__count" data-directory-count aria-live="polite"></span>
+      </div>
+      <div class="c-data-table">
+        <table data-directory>
+          <thead>
+            <tr>
+              <th data-sortable="text" aria-sort="ascending">Country</th>
+              <th data-sortable="text">Region</th>
+              <th data-sortable="date">Confirmation reported</th>
+              <th>Profile</th>
+            </tr>
+          </thead>
+          <tbody>
+            {participants.map((p) => {
+              const href = pavilionByName.get(p.name.toLowerCase());
+              return (
+                <tr data-name={p.name.toLowerCase()} data-region={p.region}>
+                  <td>
+                    {href ? <a href={href}>{p.name}</a> : p.name}
+                    {p.host ? " (host)" : ""}
+                  </td>
+                  <td>{p.region}</td>
+                  <td data-sort={p.announced ?? ""}>{p.announced ? fmtShort(p.announced) : "—"}</td>
+                  <td>{href ? <a href={href}>Profile →</a> : "—"}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </Container>
+  </section>
+
+  <section id="pavilions-orgs" class="c-hash-section">
+    <Container>
+      <div class="u-stack-lg"></div>
+      <SectionHead
+        eyebrow="Pavilions & organisations"
+        title={`${pavilionCount} pavilion profiles, fact by sourced fact`}
+        intro="What each country is building, who won the tenders, and what is confirmed versus merely reported."
+      />
+      <p>
+        <a class="c-btn" href="/expo-2027/pavilions">Browse the pavilion directory</a>
+      </p>
+      {orgEntries.length > 0 && (
+        <>
+          <div class="u-stack-md"></div>
+          <SectionHead title="Organisations & special participants" />
+          <ul>
+            {orgEntries.map((l) => (
+              <li>
+                <a href={listingHref(l)}>{l.shortName || l.name}</a> — {firstSentence(l.summary)}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </Container>
+  </section>
+
+  <section id="for-participants" class="c-hash-section" data-persona-section="participants">
+    <Container>
+      <div class="u-stack-lg"></div>
+      <SectionHead
+        eyebrow="For participants & business"
+        title="How participation works"
+        intro="The framework behind the flags — and where your organisation fits in."
+      />
+    </Container>
+    <Container variant="read">
+      <article class="c-article">
+        <p>
+          Each of the {officialCount} confirmed participants is expected to have a designated
+          National Day and to present itself through a pavilion, exhibitions, events, innovations,
+          culture and cuisine. The legal framework is the Agreement on Privileges and Benefits,
+          signed between Serbia and the <a href="/glossary/bie">BIE</a>: customs and tax relief,
+          legal status for national commissioner offices, recognition of driving licences, and a
+          "one-stop shop" for administrative formalities. Each participating country runs a
+          legally recognised commissioner's office in Serbia during the Expo.
+        </p>
+        <p>
+          There is also an <strong>Expo visa</strong>, issued free of charge, that allows
+          accredited Expo participants and staff to live and work in Serbia for the Expo period —
+          it is for participants, not general visitors.
+        </p>
+        <p>
+          The site itself is organised into three interconnecting zones: the{" "}
+          <strong>Thematic Area</strong> (the "Play" story — see the{" "}
+          <a href="/expo-2027/programme">programme</a>), the{" "}
+          <strong>International Participant Area</strong> (the national pavilions we profile in
+          the <a href="/expo-2027/pavilions">directory</a>, later the new Belgrade Fair), and the{" "}
+          <strong>Best Practice &amp; Corporate Area</strong> — around 45 modular timber pavilions
+          for companies and institutions, covered in our{" "}
+          <a href="/expo-2027/corporate-area">corporate area guide</a>.
+        </p>
+      </article>
+    </Container>
+    <Container>
+      <Grid>
+        <Card
+          href="/expo-2027/pavilions"
+          title="Pavilion directory"
+          body="Every announced national pavilion, profiled fact by sourced fact — tenders, budgets, designs, commissioners."
+        />
+        <Card
+          href="/expo-2027/tracker"
+          title="Participant tracker"
+          body="The independent, citable dataset: official count, every publicly named country, growth timeline, sources."
+        />
+        <Card
+          href="/expo-2027/corporate-area"
+          title="Corporate & Best Practice Area"
+          body="How companies get one of the ~45 corporate pavilions, who has joined, and who recruits for the zone."
+        />
+      </Grid>
+      <Note tone="gold">
+        <strong>Representing a pavilion, exhibitor or Expo supplier?</strong>{" "}
+        <a href="/for-businesses">Claim your free profile</a> and keep your page accurate — and
+        help yourself to the free assets: the{" "}
+        <a href="/expo-2027/countdown">embeddable countdown</a> and the raw{" "}
+        <a href="/data/expo-2027-participants.json">participant data (JSON)</a>, free to cite
+        with attribution.
+      </Note>
+    </Container>
+  </section>
+
+  <section id="faq" class="c-hash-section">
+    <Container>
+      <div class="u-stack-lg"></div>
+      <SectionHead eyebrow="Common questions" title="Expo 2027 participation, answered" />
+      <Faq faqs={faqs} />
+    </Container>
+  </section>
+
+  <Schema schemas={schemas} />
+
+  <script is:inline>
+    (function () {
+      "use strict";
+
+      // ── Countdown: recompute live so the static build date never shows stale.
+      function initCountdown() {
+        var band = document.querySelector("[data-expo-start]");
+        var num = document.querySelector("[data-countdown-num]");
+        var label = document.querySelector("[data-countdown-label]");
+        if (!band || !num || !label) return;
+        var start = Date.parse(band.getAttribute("data-expo-start") + "T00:00:00+02:00");
+        var end = Date.parse(band.getAttribute("data-expo-end") + "T23:59:59+02:00");
+        function tick() {
+          var now = Date.now();
+          if (now < start) {
+            num.textContent = String(Math.max(0, Math.ceil((start - now) / 86400000)));
+            label.textContent = "days until opening day";
+          } else if (now <= end) {
+            num.textContent = String(Math.max(0, Math.ceil((end - now) / 86400000)));
+            label.textContent = "days left — it's on now";
+          } else {
+            num.textContent = "0";
+            label.textContent = "the Expo has ended";
+          }
+        }
+        tick();
+        setInterval(tick, 60000);
+      }
+
+      // ── Country directory: search + region chips + sortable columns.
+      function initDirectory() {
+        var table = document.querySelector("[data-directory]");
+        var controls = document.querySelector("[data-directory-controls]");
+        if (!table || !controls) return;
+        controls.hidden = false;
+        var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+        var search = controls.querySelector("[data-directory-search]");
+        var chips = Array.prototype.slice.call(controls.querySelectorAll("[data-region-chip]"));
+        var count = controls.querySelector("[data-directory-count]");
+        var region = "";
+
+        function apply() {
+          var q = (search.value || "").trim().toLowerCase();
+          var shown = 0;
+          rows.forEach(function (r) {
+            var ok =
+              (!q || r.getAttribute("data-name").indexOf(q) !== -1) &&
+              (!region || r.getAttribute("data-region") === region);
+            r.hidden = !ok;
+            if (ok) shown++;
+          });
+          if (count) count.textContent = shown + " of " + rows.length + " countries shown";
+        }
+        search.addEventListener("input", apply);
+        chips.forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            region = chip.getAttribute("data-region-chip") || "";
+            chips.forEach(function (c) { c.classList.toggle("is-active", c === chip); });
+            apply();
+          });
+        });
+
+        var headers = Array.prototype.slice.call(table.tHead.rows[0].cells);
+        headers.forEach(function (th, idx) {
+          if (!th.hasAttribute("data-sortable")) return;
+          th.addEventListener("click", function () {
+            var dir = th.getAttribute("aria-sort") === "ascending" ? "descending" : "ascending";
+            headers.forEach(function (h) { h.removeAttribute("aria-sort"); });
+            th.setAttribute("aria-sort", dir);
+            var mul = dir === "ascending" ? 1 : -1;
+            var sorted = rows.slice().sort(function (a, b) {
+              var av = keyOf(a.cells[idx]);
+              var bv = keyOf(b.cells[idx]);
+              if (av < bv) return -1 * mul;
+              if (av > bv) return 1 * mul;
+              return 0;
+            });
+            var frag = document.createDocumentFragment();
+            sorted.forEach(function (r) { frag.appendChild(r); });
+            table.tBodies[0].appendChild(frag);
+          });
+        });
+        function keyOf(cell) {
+          var explicit = cell.getAttribute("data-sort");
+          if (explicit !== null) return explicit || "9999-99-99";
+          return cell.textContent.trim().toLowerCase();
+        }
+        apply();
+      }
+
+      // ── Persona tabs: hide the other persona's section; click again to reset.
+      function initTabs() {
+        var bar = document.querySelector("[data-persona-tabs]");
+        if (!bar) return;
+        bar.hidden = false;
+        var tabs = Array.prototype.slice.call(bar.querySelectorAll("[data-persona-tab]"));
+        var sections = Array.prototype.slice.call(document.querySelectorAll("[data-persona-section]"));
+        var active = "";
+
+        function setPersona(name) {
+          active = name;
+          tabs.forEach(function (t) {
+            var on = t.getAttribute("data-persona-tab") === name;
+            t.classList.toggle("is-active", on);
+            t.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          sections.forEach(function (s) {
+            s.hidden = Boolean(name) && s.getAttribute("data-persona-section") !== name;
+          });
+        }
+        tabs.forEach(function (t) {
+          t.addEventListener("click", function (e) {
+            var name = t.getAttribute("data-persona-tab");
+            if (active === name) {
+              e.preventDefault();
+              setPersona("");
+            } else {
+              setPersona(name);
+            }
+          });
+        });
+        // Deep links into a hidden persona section must unhide it.
+        window.addEventListener("hashchange", function () {
+          var target = document.getElementById(location.hash.slice(1));
+          if (!target) return;
+          var owner = target.closest("[data-persona-section]");
+          if (owner && owner.hidden) setPersona("");
+        });
+      }
+
+      initCountdown();
+      initDirectory();
+      initTabs();
+    })();
+  </script>
+</BaseLayout>

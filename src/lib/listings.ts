@@ -131,12 +131,17 @@ export const listingsIndexable =
 // once the section is real (published listings + the indexable flag on). This
 // is what gives Expo 2027 its "Pavilions" second level — and gives every
 // future leg its own automatically when its SECTION entry + listings land.
+// EXTRA_NAV appends hand-curated data pages that aren't listing sections.
+const EXTRA_NAV: Record<string, { title: string; href: string }[]> = {
+  "expo-2027": [{ title: "Tracker", href: "/expo-2027/tracker" }],
+};
 export function navSectionsFor(leg: string): { title: string; href: string }[] {
+  const extra = EXTRA_NAV[leg] ?? [];
   const section = SECTION[leg];
-  if (!section || !listingsIndexable) return [];
-  if (listingsForLeg(leg).length === 0) return [];
+  if (!section || !listingsIndexable) return extra;
+  if (listingsForLeg(leg).length === 0) return extra;
   const title = SECTION_TITLE[leg] ?? section.charAt(0).toUpperCase() + section.slice(1);
-  return [{ title, href: `/${leg}/${section}` }];
+  return [{ title, href: `/${leg}/${section}` }, ...extra];
 }
 
 // Newest `updated` across a leg's published listings (hub dateModified/lastmod).

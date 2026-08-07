@@ -723,8 +723,8 @@
       "eyebrow": "Belgrade Expo 2027",
       "title": "Expo 2027",
       "navLabel": "",
-      "seoTitle": "Expo 2027 Belgrade — an honest visitor guide",
-      "seoDescription": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. Confirmed, reported, and still-unknown — tracked honestly, updated as official information lands.",
+      "seoTitle": "Expo 2027 Belgrade — dates, tickets, participating countries & visitor portal",
+      "seoDescription": "The Expo 2027 Belgrade portal: countdown, all publicly named participating countries, pavilion profiles, tickets and getting there — plus where to stay and eat in Belgrade. Tracked honestly, updated as official information lands.",
       "noindex": false,
       "tagline": "What's coming 15 May–15 Aug 2027, and how to make a Belgrade trip out of it.",
       "intro": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. We're tracking what's confirmed, what's reported, and what's still unknown — and showing you how an Expo visit can become a city visit.",
@@ -761,8 +761,7 @@
             "/visit-belgrade",
             "/visit-belgrade/is-belgrade-worth-visiting",
             "/expo-2027/guide",
-            "/expo-2027/getting-there",
-            "participants"
+            "/expo-2027/getting-there"
           ]
         },
         {
@@ -777,7 +776,6 @@
             "/visit-belgrade",
             "/where-to-stay",
             "/expo-2027/getting-there",
-            "participants",
             "where-to-stay-for-expo"
           ]
         },
@@ -807,20 +805,6 @@
             "/plan-your-trip/getting-around",
             "/expo-2027/guide",
             "/expo-2027/tickets"
-          ]
-        },
-        {
-          "slug": "participants",
-          "order": 5,
-          "visible": true,
-          "intent": "both",
-          "priority": "P2",
-          "title": "Participating countries — confirmed & expected",
-          "linksTo": [
-            "/visit-belgrade",
-            "/expo-2027/what-is-it",
-            "/expo-2027/guide",
-            "/expo-2027/getting-there"
           ]
         },
         {

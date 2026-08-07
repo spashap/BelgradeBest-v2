@@ -7,7 +7,7 @@ description: "Expo 2027 Belgrade visitor guide: how many days you need, what to 
 lede: "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. This is the visitor hub — how many days to plan, what to book first, when it's busiest, what's confirmed versus still unknown, and where to go next for tickets, getting there, and where to stay."
 heroLabel: "Expo 2027 complete guide / hero"
 heroAlt: "Expo 2027 and the Belgrade skyline at golden hour — the complete visitor guide"
-lastUpdated: "2026-07-06"
+lastUpdated: "2026-08-07"
 order: 2
 visible: true
 intent: "both"
@@ -40,7 +40,7 @@ unknowns: []
 
 **Short answer for planning:** Belgrade hosts a [Specialised Expo](/glossary/specialised-expo) from **15 May to 15 August 2027** at **Surčin**, beside [Nikola Tesla Airport](/glossary/nikola-tesla-airport). Give the Expo itself **2–3 days**, or **4–5 days** to fold in the city. **Book your accommodation first** — beds are the bottleneck, not tickets, because tickets are not on sale yet. Expect **opening week and weekends to be busiest**. Everything else below — and on the linked deep-dive pages — is the detail behind that.
 
-This page is the visitor hub. It orients you, then routes you to the focused pages: [what a Specialised Expo actually is](/expo-2027/what-is-it), [getting there](/expo-2027/getting-there), [tickets](/expo-2027/tickets), [participating countries](/expo-2027/participants) and [the programme](/expo-2027/programme) — plus the evergreen Belgrade legs for [where to stay](/where-to-stay) and the practical side of a trip in [plan your trip](/plan-your-trip).
+This page is the visitor hub. It orients you, then routes you to the focused pages: [what a Specialised Expo actually is](/expo-2027/what-is-it), [getting there](/expo-2027/getting-there), [tickets](/expo-2027/tickets), [participating countries](/expo-2027/tracker) and [the programme](/expo-2027/programme) — plus the evergreen Belgrade legs for [where to stay](/where-to-stay) and the practical side of a trip in [plan your trip](/plan-your-trip).
 
 ## What is Expo 2027 Belgrade?
 
@@ -58,7 +58,7 @@ Because the site is right beside the airport, many visitors will arrive almost o
 
 As of mid-2026, the [official Participants page](https://expobelgrade2027.org/en/participants) counts 139 international participants confirmed, with a note that more are coming. The figure has grown over time — the official site earlier said "over 120 nations," a July 2025 release reported 117, the count reached 137 by early 2026, and the United States pushed it to 139 in May 2026 — and it may keep rising, so treat it as current rather than final. That already exceeds the previous Specialised Expo, Astana 2017, which hosted 115–117 participating countries, making Serbia a record holder for a Specialised Expo by participant count. Each participating country is expected to have a National Day and to present itself through pavilions, exhibitions, events, innovations, culture and cuisine. The full public list is not yet completely published; our [participant tracker](/expo-2027/tracker) maintains the sourced list of every publicly named country.
 
-Several national pavilions now have real, sourced plans — [Germany's](/expo-2027/pavilions/germany) 972 m² pavilion under "Play for Progress" (implementation awarded to Messe Düsseldorf), [Japan's](/expo-2027/pavilions/japan) fully published Basic Plan, [Italy's](/expo-2027/pavilions/italy) "Play together" concept, and host [Serbia's](/expo-2027/pavilions/serbia) ~€40 million permanent flagship among them. We profile each announced pavilion, fact by sourced fact, in the [pavilion directory](/expo-2027/pavilions); for the running country list, see [participating countries](/expo-2027/participants).
+Several national pavilions now have real, sourced plans — [Germany's](/expo-2027/pavilions/germany) 972 m² pavilion under "Play for Progress" (implementation awarded to Messe Düsseldorf), [Japan's](/expo-2027/pavilions/japan) fully published Basic Plan, [Italy's](/expo-2027/pavilions/italy) "Play together" concept, and host [Serbia's](/expo-2027/pavilions/serbia) ~€40 million permanent flagship among them. We profile each announced pavilion, fact by sourced fact, in the [pavilion directory](/expo-2027/pavilions); for the running country list, see the [participant tracker](/expo-2027/tracker).
 
 ## Can you buy Expo 2027 tickets yet?
 

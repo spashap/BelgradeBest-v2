@@ -3,7 +3,9 @@ import LegHubLayout from "../../layouts/LegHubLayout.astro";
 import { clusters } from "../../lib/clusters";
 
 export function getStaticPaths() {
-  return clusters.map((c) => ({ params: { leg: c.slug } }));
+  // expo-2027 has its own one-off portal page (pages/expo-2027/index.astro);
+  // generating it here too would collide on the same URL.
+  return clusters.filter((c) => c.slug !== "expo-2027").map((c) => ({ params: { leg: c.slug } }));
 }
 
 const { leg } = Astro.params;
