@@ -2,19 +2,8 @@
 <svg width="1600" height="686" viewBox="0 0 1600 686" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Expo 2027 corporate and best practice area">
   <rect width="1600" height="686" fill="#f7f3ec"/>
   <rect x="0" y="0" width="1600" height="10" fill="#b5462b"/>
-  <!-- modular 9x9 grid motif along the promenade -->
-  <g stroke="#e2d8c9" stroke-width="3" fill="none">
-    <rect x="200" y="500" width="70" height="70" rx="6"/>
-    <rect x="285" y="500" width="70" height="70" rx="6"/>
-    <rect x="370" y="500" width="70" height="70" rx="6"/>
-    <rect x="455" y="500" width="70" height="70" rx="6"/>
-    <rect x="1075" y="500" width="70" height="70" rx="6"/>
-    <rect x="1160" y="500" width="70" height="70" rx="6"/>
-    <rect x="1330" y="500" width="70" height="70" rx="6"/>
-  </g>
-  <rect x="1245" y="500" width="70" height="70" rx="6" fill="none" stroke="#b5462b" stroke-width="4"/>
-  <text x="800" y="232" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" letter-spacing="4" font-weight="600" fill="#b5462b">EXPO 2027 · FOR BUSINESS</text>
-  <text x="800" y="380" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="96" font-weight="800" fill="#211b16">Corporate area</text>
-  <line x1="740" y1="420" x2="860" y2="420" stroke="#b5462b" stroke-width="3"/>
-  <text x="800" y="462" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="34" fill="#6b5f54">the modular business zone, explained</text>
+  <text x="800" y="252" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" letter-spacing="4" font-weight="600" fill="#b5462b">EXPO 2027 · FOR BUSINESS</text>
+  <text x="800" y="396" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="92" font-weight="800" fill="#211b16">Corporate area</text>
+  <line x1="740" y1="438" x2="860" y2="438" stroke="#b5462b" stroke-width="3"/>
+  <text x="800" y="484" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="34" fill="#6b5f54">the modular business zone, explained</text>
 </svg>
