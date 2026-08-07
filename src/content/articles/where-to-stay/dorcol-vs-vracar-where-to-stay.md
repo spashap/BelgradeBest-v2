@@ -7,7 +7,7 @@ description: "Dorćol vs Vračar: which central Belgrade neighbourhood to stay i
 lede: "Both are great 'live like a local, still central' bases — the difference is energy. The best fit is usually Dorćol if you want café-and-nightlife buzz and to be closer to the Danube, and Vračar if you want a calmer, residential feel for families or a longer stay. Below is the head-to-head, plus who should pick which."
 heroLabel: "Dorcol vs Vracar Belgrade / hero"
 heroAlt: "Split view of central Belgrade: a lively café street in Dorćol on one side and a calm residential plateau near Saint Sava Temple in Vračar on the other."
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 7
 visible: true
 intent: "both"
@@ -124,4 +124,4 @@ Two final practical notes. Book through a protected platform or a verifiable age
 
 ## Dorćol vs Vračar, in short
 
-Both are excellent "central but local" bases, so the decision is about the kind of trip you want. Choose **Dorćol** for café-and-nightlife energy, an eclectic feel and closeness to the Danube and the old core — and be willing to vet the exact street and listing. Choose **Vračar** for a calmer, residential base that suits families and longer stays, accepting that it is inland and can be pricier. Get the micro-location right in either, confirm the checks abo
+Both are excellent "central but local" bases, so the decision is about the kind of trip you want. Choose **Dorćol** for café-and-nightlife energy, an eclectic feel and closeness to the Danube and the old core — and be willing to vet the exact street and listing. Choose **Vračar** for a calmer, residential base that suits families and longer stays, accepting that it is inland and can be pricier. Get the micro-location right in either, confirm the checks above before you arrive, and the rest of central Belgrade is easy to enjoy on foot.

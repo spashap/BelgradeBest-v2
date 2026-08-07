@@ -7,7 +7,7 @@ description: "Belgrade Old Town vs New Belgrade: Stari Grad versus Novi Beograd 
 lede: "If your trip is mostly first-time sightseeing on foot, stay in the Old Town (Stari Grad). If it is business, a family stay, a car trip, or built around the airport and the Expo side of the city, New Belgrade is usually the better fit."
 heroLabel: "Belgrade Old Town vs New Belgrade / hero"
 heroAlt: "Split view of Belgrade's historic Old Town streets and the modern boulevards of New Belgrade across the Sava river"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 6
 visible: true
 intent: "both"
@@ -49,11 +49,11 @@ Both can work for almost anyone. The difference is what you optimise for: the Ol
 
 ## How are the two sides laid out?
 
-Belgrade sits where the **Sava** and **Danube** rivers meet. The historic core is on the right bank, east and south-east of the confluence, with **[Kalemegdan](/glossary/kalemegdan) Fortress** overlooking the meeting of the rivers and **Republic Square** and **Knez Mihailova** as the most useful central orientation points.
+Belgrade sits where the **Sava** and **Danube** rivers meet. The historic core is on the right bank, east and south-east of the confluence, with **[Kalemegdan](/glossary/kalemegdan) Fortress** overlooking the meeting of the rivers and **Republic Square** and **[Knez Mihailova](/glossary/knez-mihailova)** as the most useful central orientation points.
 
 **Stari Grad** is the central old-city district on that right bank. It covers the historic core between the river confluence and the Terazije–Slavija ridge, and it packs the main sights, museums, theatres, restaurants and nightlife into a dense, walkable grid.
 
-**New Belgrade** sits on the opposite, left bank of the Sava. It is the modern side of the city: wide boulevards, business hotels, shopping centres, arenas, offices and larger apartment blocks, with easier road access toward Zemun, Surčin and Nikola Tesla Airport. The two sides face each other across the river and are joined by bridges such as Brankov and the Gazela, so they are close in distance, but they feel like two different cities.
+**New Belgrade** sits on the opposite, left bank of the Sava. It is the modern side of the city: wide boulevards, business hotels, shopping centres, arenas, offices and larger apartment blocks, with easier road access toward Zemun, Surčin and [Nikola Tesla Airport](/glossary/nikola-tesla-airport). The two sides face each other across the river and are joined by bridges such as Brankov and the Gazela, so they are close in distance, but they feel like two different cities.
 
 ## Why stay in the Old Town (Stari Grad)?
 
@@ -146,4 +146,4 @@ Whatever you find, confirm the final rate, the small per-night city tax, and any
 - Have an early flight or want to be near the airport without staying at it.
 - Are planning a trip built around Expo 2027 on the western side of the city.
 
-If you are torn, a useful compromise is a New Belgrade block on the **Sava riverfront facing the Old Town**, or the **Ušće** area, where you get modern space and bridge access while keeping the historic side within a short hop. Either way, match the area to your reason for vis
+If you are torn, a useful compromise is a New Belgrade block on the **Sava riverfront facing the Old Town**, or the **Ušće** area, where you get modern space and bridge access while keeping the historic side within a short hop. Either way, match the area to your reason for visiting, and confirm the practical details, parking, elevator, non-smoking status and tourist registration, with the property before you commit.

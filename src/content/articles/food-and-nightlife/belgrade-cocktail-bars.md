@@ -7,7 +7,7 @@ description: "Best cocktail bars in Belgrade by district: the Cetinjska courtyar
 lede: "Belgrade's best cocktail bars cluster in three walkable pockets: Cetinjska — a former brewery courtyard near Skadarlija packed with independent bars — for energy and bar-hopping; Dorćol for polished, mixology-led cocktail rooms and a growing speakeasy scene; and the centre/Savamala for a rougher, riverside edge. Pick the district that fits the night you want, then wander."
 heroLabel: "Belgrade cocktail bars / hero"
 heroAlt: "A dimly lit Belgrade cocktail bar with a bartender mixing a drink"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 90
 visible: true
 intent: "leisure"
@@ -38,7 +38,7 @@ faqs:
 Belgrade's cocktail scene is small but mature, and it concentrates in a few walkable pockets rather than spreading across the city. The quickest way to choose a bar is to choose a district first, because each one drinks differently:
 
 - **Cetinjska** — a former brewery courtyard near [Skadarlija](/glossary/skadarlija), packed with independent bars. Best for energy, bar-hopping, and a younger, alternative crowd.
-- **Dorćol** — the old district between Knez Mihailova and the Danube. The city's most polished, mixology-led cocktail rooms and most of its speakeasies sit here, on quiet residential streets.
+- **Dorćol** — the old district between [Knez Mihailova](/glossary/knez-mihailova) and the Danube. The city's most polished, mixology-led cocktail rooms and most of its speakeasies sit here, on quiet residential streets.
 - **The centre and Savamala** — the pedestrian core for convenience, and the rougher, industrial riverside stretch for a more eclectic, late-night edge.
 
 All three areas are close together on foot, so most visitors pick a starting district and simply wander between bars. The named venues below are illustrative of each scene as of 2026 — Belgrade bars open, close and rebrand often, so use them to find the right block, not as fixed recommendations.
@@ -83,4 +83,4 @@ The **central pedestrian zone** around Knez Mihailova and Trg Republike is the c
 
 ## How to plan a cocktail night in Belgrade
 
-A simple, low-effort itinerary that u
+A simple, low-effort itinerary that uses the geography:

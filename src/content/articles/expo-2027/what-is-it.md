@@ -42,7 +42,7 @@ unknowns: []
 
 ## What is Expo 2027 Belgrade, in one paragraph?
 
-Expo 2027 Belgrade is a **Specialised Expo** — a BIE-recognised, theme-focused international exposition — running from **15 May to 15 August 2027** (93 days) in **Surčin**, western Belgrade, under the theme **"Play for Humanity: Sport and Music for All."** It is the **first Specialised Expo ever held in the Western Balkans**. The Government of Serbia is the organiser and host, working under the supervision of the Bureau International des Expositions (BIE). If you only remember one thing: it's a three-month, single-theme world's-fair-style event built around sport, music and play, hosted on a new site near Belgrade's airport.
+Expo 2027 Belgrade is a **[Specialised Expo](/glossary/specialised-expo)** — a [BIE](/glossary/bie)-recognised, theme-focused international exposition — running from **15 May to 15 August 2027** (93 days) in **Surčin**, western Belgrade, under the theme **"Play for Humanity: Sport and Music for All."** It is the **first Specialised Expo ever held in the Western Balkans**. The Government of Serbia is the organiser and host, working under the supervision of the Bureau International des Expositions (BIE). If you only remember one thing: it's a three-month, single-theme world's-fair-style event built around sport, music and play, hosted on a new site near Belgrade's airport.
 
 ## What is a Specialised Expo, and how is it different from a World Expo?
 

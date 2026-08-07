@@ -316,6 +316,588 @@
       ],
       "question": "What is BusPlus?",
       "updated": "2026-06-22"
+    },
+    {
+      "slug": "kajmak",
+      "term": "Kajmak",
+      "localTerm": "Кајмак",
+      "category": "Food & drink",
+      "pronunciation": "KAI-mak",
+      "short": "Kajmak is a rich, mildly tangy clotted-cream spread skimmed from scalded milk — the defining dairy accompaniment to Serbian grilled meat, bread and pastry, and a fixture on almost every kafana table.",
+      "body": "Kajmak is made by gently heating milk, letting it cool slowly, and skimming off the thick, fatty layer that rises to the surface — built up over several batches until it forms a soft, spreadable cream. It sits somewhere between clotted cream and a very mild, buttery cheese: rich and faintly sour, but never sharp or salty the way a hard cheese can be.\n\nIn Belgrade kitchens and kafanas, kajmak is less a single dish than a condiment that turns up everywhere. It is spooned onto warm bread as a starter alongside ajvar, stuffed inside a karađorđeva šnicla, melted over a stuffed \"gurmanska\" pljeskavica, or spread inside a lepinja flatbread alongside grilled ćevapi. Ordering it by name with any grilled meat is how locals eat, and most grill counters and kafanas simply expect you to ask for it.\n\nQuality varies noticeably. Mass-produced, shop-bought kajmak is perfectly fine but fairly plain, while homemade or farmhouse kajmak — thicker, more textured, sometimes lightly aged and salted — is what regulars request by name. If you only try one Serbian dairy product on a trip to Belgrade, kajmak is the one worth seeking out, since so much of the rest of the menu is built to go alongside it.",
+      "related": [
+        "/food-and-nightlife/serbian-food",
+        "/food-and-nightlife/belgrade-grill-and-street-food",
+        "/food-and-nightlife/belgrade-kafanas"
+      ],
+      "faqs": [
+        {
+          "question": "What does kajmak taste like?",
+          "answer": "Kajmak tastes rich, buttery and mildly tangy — closer to a soft clotted cream than to a hard, salty cheese. Homemade or farmhouse versions tend to be thicker and more savoury than the smoother, milder kajmak sold in supermarkets."
+        },
+        {
+          "question": "How do you eat kajmak?",
+          "answer": "Most simply, spread on warm bread as a starter next to ajvar. It also appears stuffed inside karađorđeva šnicla, melted over a gurmanska pljeskavica, or spooned into a ćevapi-filled lepinja — it works as a filling as much as a table condiment."
+        },
+        {
+          "question": "Is kajmak vegetarian?",
+          "answer": "Yes — it is a dairy product rather than a meat product, so it fits a vegetarian diet. It is not vegan, since it is made purely from milk fat."
+        }
+      ],
+      "question": "What is kajmak?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "ajvar",
+      "term": "Ajvar",
+      "localTerm": "Ајвар",
+      "category": "Food & drink",
+      "pronunciation": "AI-var",
+      "short": "Ajvar is a relish of roasted, peeled red peppers cooked down with garlic and oil (often with eggplant) until thick and spreadable — Serbia's other essential grilled-meat condiment, always ordered alongside kajmak.",
+      "body": "Ajvar starts with red peppers, traditionally roasted over open flame or in ovens until the skins char and blister, then peeled, deseeded and cooked down slowly with garlic, oil and sometimes roasted eggplant until the mixture reduces to a thick, glossy relish. The result is smoky, sweet and savoury rather than sharp, with a texture somewhere between a chutney and a purée.\n\nMaking a year's supply of ajvar is a genuine autumn tradition across Serbia, when pepper season peaks: families roast large batches at once and jar it for the winter, alongside other preserves collectively known as zimnica. Shop-bought ajvar is sold everywhere and ranges enormously in quality, so homemade or small-producer jars are prized.\n\nOn the table, ajvar is the standing partner to grilled meat — ćevapi, pljeskavica and karađorđeva šnicla are all served with it — and to bread as a simple starter. Most ajvar is mild, but a hotter version, ljuti ajvar, exists for those who want it; Serbian food overall leans savoury rather than spicy, so this is one of the few places heat shows up by default rather than by request.",
+      "related": [
+        "/food-and-nightlife/serbian-food",
+        "/food-and-nightlife/belgrade-grill-and-street-food"
+      ],
+      "faqs": [
+        {
+          "question": "What is ajvar made of?",
+          "answer": "Ajvar is made from roasted red peppers, peeled and cooked down with garlic and oil until thick, often with roasted eggplant added. It is traditionally made in large batches in autumn and jarred for the winter."
+        },
+        {
+          "question": "Is ajvar spicy?",
+          "answer": "Most ajvar is mild and savoury rather than hot. A spicier version, ljuti ajvar, is also sold and is one of the few genuinely hot items in a cuisine that otherwise leans mild."
+        },
+        {
+          "question": "How is ajvar served?",
+          "answer": "As a relish alongside grilled meat such as ćevapi, pljeskavica and karađorđeva šnicla, and as a simple starter spread on bread, often next to kajmak."
+        }
+      ],
+      "question": "What is ajvar?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "sarma",
+      "term": "Sarma",
+      "localTerm": "Сарма",
+      "category": "Food & drink",
+      "pronunciation": "SAR-ma",
+      "short": "Sarma is Serbia's classic stuffed cabbage roll — pickled or fermented cabbage leaves wrapped around minced meat and rice, then slow-cooked for hours, often in a smoky tomato-and-smoked-meat sauce.",
+      "body": "Sarma is built from whole cabbage leaves, softened by pickling or fermentation, each one wrapped around a filling of minced meat and rice and rolled into a tight parcel. The rolls are packed into a pot, usually layered with extra cabbage and a piece of smoked meat, and simmered for a long time — hours rather than minutes — until the cabbage turns soft and the flavours fold together into something deep and smoky.\n\nIt is widely considered one of the most-cooked dishes in Serbian homes, and the one Serbs living abroad tend to miss most. Sarma is a cold-weather dish by nature: it is heavy, warming and slow, so it tends to appear in autumn and winter rather than in the height of summer, and it is a fixture of festive family tables, particularly around Christmas and other celebrations.\n\nBecause it takes real time to make properly, sarma is less common as a quick lunch order than ćevapi or burek, and more something you find at a kafana with a proper kitchen or in someone's home. If you're travelling in the colder months, it's worth actively seeking out — it rewards patience in a way street food doesn't try to.",
+      "related": [
+        "/food-and-nightlife/serbian-food",
+        "/food-and-nightlife/belgrade-kafanas"
+      ],
+      "faqs": [
+        {
+          "question": "What is sarma made of?",
+          "answer": "Sarma is pickled or fermented cabbage leaves rolled around a filling of minced meat and rice, then slow-cooked for hours, typically with a piece of smoked meat added to the pot for depth of flavour."
+        },
+        {
+          "question": "When is sarma eaten in Serbia?",
+          "answer": "Mostly in the colder months — it's a warming, slow-cooked winter dish and a fixture of festive family gatherings such as Christmas, rather than something ordered as a quick summer lunch."
+        },
+        {
+          "question": "Where can I try sarma in Belgrade?",
+          "answer": "Look for it at a kafana with a full kitchen rather than a fast grill counter, since it takes hours to prepare properly and isn't suited to quick-service cooking."
+        }
+      ],
+      "question": "What is sarma?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "gibanica",
+      "term": "Gibanica",
+      "localTerm": "Гибаница",
+      "category": "Food & drink",
+      "pronunciation": "ghee-BAH-nee-tsa",
+      "short": "Gibanica is a layered cheese-and-egg filo pastry, softer and richer than burek — a bakery staple and a celebratory bake that turns up at Serbian family gatherings.",
+      "body": "Gibanica is built from sheets of filo pastry layered or crumpled together with a mixture of white cheese, eggs and sometimes a little yoghurt or cream, then baked until the top turns golden and the inside sets into something between a pastry and a savoury custard. It is related to burek in construction — both use the same thin filo dough — but where burek is coiled or rolled tightly, gibanica is looser and richer, with a softer, more custard-like bite.\n\nYou'll find it in most pekare (bakeries) sold by the slice, usually sitting near the burek trays, and it's a good order if you want the cheese-and-pastry combination without the denser, oilier texture of a classic burek. It also has a more domestic, celebratory side: it's the kind of bake that appears at family gatherings and get-togethers, made in large trays rather than individual portions.\n\nGibanica is meat-free, which makes it one of the easier vegetarian options in a bakery case dominated by meat fillings — though, like most Serbian pastry, it is not vegan, since both cheese and egg are central to it.",
+      "related": [
+        "/food-and-nightlife/serbian-food",
+        "/food-and-nightlife/eating-and-drinking-in-belgrade"
+      ],
+      "faqs": [
+        {
+          "question": "How is gibanica different from burek?",
+          "answer": "Both are filo pastries, but gibanica is looser and richer — layered with cheese and egg into something closer to a savoury custard — while burek is denser, tightly rolled or coiled, and more often filled with meat as well as cheese."
+        },
+        {
+          "question": "Is gibanica vegetarian?",
+          "answer": "Yes — the classic version is cheese and egg, with no meat, which makes it one of the easier vegetarian bakery choices. It is not vegan, since both cheese and egg are core ingredients."
+        },
+        {
+          "question": "Where can I buy gibanica in Belgrade?",
+          "answer": "Any neighbourhood pekara (bakery) sells it by the slice or weight, usually alongside the burek trays. It's also a common homemade bake for family gatherings."
+        }
+      ],
+      "question": "What is gibanica?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "karadjordjeva-snicla",
+      "term": "Karađorđeva šnicla",
+      "localTerm": "Карађорђева шницла",
+      "category": "Food & drink",
+      "pronunciation": "ka-ra-JOR-je-va SHNEETS-la",
+      "short": "Karađorđeva šnicla is a Serbian signature dish: a rolled, breaded and fried veal or pork escalope stuffed with kajmak, usually served with tartar sauce — the rich, restaurant-style order on any Serbian menu.",
+      "body": "Karađorđeva šnicla takes a thin escalope of veal or pork, wraps it around a filling of kajmak (occasionally with cheese added), coats the roll in breadcrumbs, and fries it until the outside is crisp and golden while the kajmak inside melts. Cut into it and the filling should run, which is the whole point of the dish — it's built for that first cut.\n\nThe name honours Karađorđe Petrović (\"Black George\"), the leader of the First Serbian Uprising against Ottoman rule and founder of the Karađorđević royal dynasty; the dish itself is a 20th-century restaurant invention, often described as Belgrade's answer to the schnitzel and cordon bleu traditions of Central Europe, reworked with local dairy instead of ham and Swiss cheese.\n\nIt's usually served with tartar sauce and a side of fries or a simple salad such as shopska salad, and it sits at the more indulgent, sit-down end of Serbian cooking compared with the grab-and-go grill dishes. It's a good order in a proper restaurant or kafana rather than a street-food counter, and a reliable choice if you want to taste Serbian cooking's richer, more composed side rather than its fast-food one.",
+      "related": [
+        "/food-and-nightlife/serbian-food",
+        "/food-and-nightlife/best-restaurants-in-belgrade",
+        "/food-and-nightlife/belgrade-kafanas"
+      ],
+      "faqs": [
+        {
+          "question": "What is karađorđeva šnicla?",
+          "answer": "It's a rolled, breaded and fried veal or pork escalope stuffed with kajmak, served with tartar sauce — a rich, restaurant-style Serbian dish rather than a street-food order."
+        },
+        {
+          "question": "Why is it called karađorđeva šnicla?",
+          "answer": "It's named after Karađorđe Petrović, leader of the First Serbian Uprising and founder of the Karađorđević dynasty. The dish itself is a later restaurant creation, often compared to cordon bleu but filled with kajmak instead of ham and cheese."
+        },
+        {
+          "question": "Where should I order karađorđeva šnicla?",
+          "answer": "At a sit-down restaurant or kafana rather than a grill counter — it's a cooked-to-order dish, not fast food, and it pairs well with fries or a shopska salad on the side."
+        }
+      ],
+      "question": "What is karađorđeva šnicla?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "sopska-salata",
+      "term": "Šopska salata",
+      "localTerm": "Шопска салата",
+      "category": "Food & drink",
+      "pronunciation": "SHOP-ska sa-LA-ta",
+      "short": "Šopska salata is chopped tomato, cucumber, pepper and onion topped with a generous layer of grated white cheese — the ubiquitous fresh salad served across the Balkans and the standard counterpoint to a grill order.",
+      "body": "Šopska salata is built from raw, diced tomato, cucumber, green or red pepper and onion, dressed simply with oil and sometimes a splash of vinegar, and finished with a heavy grating of white brined cheese (sirene-style cheese) over the top — enough that the salad often arrives looking almost snow-covered. It's meant to be mixed at the table before eating, so the cheese folds through the vegetables rather than sitting apart from them.\n\nThe name comes from the Šop ethnographic region, an area straddling parts of Serbia, Bulgaria and North Macedonia, and versions of the salad are claimed and eaten right across that wider Balkan area rather than belonging to any one country alone. In Belgrade it functions as the default fresh side to almost any meal, and especially to grilled meat, since its acidity and cheese cut through rich, fatty dishes like ćevapi or pljeskavica.\n\nIt's also a safe, reliable order for vegetarians in an otherwise meat-heavy cuisine — one of the few traditional dishes with no meat in it at all, provided the cheese suits your diet. Expect it on almost every menu, from grill counters to fine-dining restaurants, usually as a starter rather than a main.",
+      "related": [
+        "/food-and-nightlife/serbian-food",
+        "/food-and-nightlife/vegetarian-and-vegan-belgrade"
+      ],
+      "faqs": [
+        {
+          "question": "What is in a šopska salad?",
+          "answer": "Chopped tomato, cucumber, pepper and onion, dressed simply and topped with a generous grating of white brined cheese, mixed together at the table before eating."
+        },
+        {
+          "question": "Is šopska salata unique to Serbia?",
+          "answer": "Not exclusively — it's named after the Šop region spanning parts of Serbia, Bulgaria and North Macedonia, and versions of it are eaten across the wider Balkans. In Belgrade it's simply the default fresh salad on almost every menu."
+        },
+        {
+          "question": "Is šopska salata vegetarian?",
+          "answer": "Yes — it contains no meat, making it one of the most reliable vegetarian starters on a Serbian menu, as long as the cheese fits your diet."
+        }
+      ],
+      "question": "What is šopska salata?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "domaca-kafa",
+      "term": "Domaća kafa",
+      "localTerm": "Домаћа кафа",
+      "category": "Food & drink",
+      "pronunciation": "DOH-ma-cha KA-fa",
+      "short": "Domaća kafa — literally \"home coffee\" — is Serbia's traditional Turkish-style coffee: finely ground, unfiltered and simmered in a small copper pot called a džezva, then sipped slowly rather than drunk fast.",
+      "body": "Domaća kafa, also called turska kafa (Turkish coffee) or crna kafa (black coffee), is brewed by bringing water (and sugar, if used) to heat in a small long-handled pot known as a džezva, adding finely ground coffee, and letting it foam up briefly before pouring the whole thing, grounds and all, into a small cup. The grounds settle to the bottom as it sits, so you drink from the top and stop before you reach the sediment.\n\nThe pace is the point. Domaća kafa is not made for a quick caffeine hit; it's traditionally served with a glass of water and a small piece of ratluk (Turkish delight), and the whole ritual — brewing, pouring, waiting for it to settle, sipping slowly — is built around conversation rather than speed. In Belgrade, \"dođi na kafu\" (come for coffee) is understood as an invitation to spend real time together, and a single cup can anchor an hour or more at the table.\n\nThis older tradition sits comfortably alongside Belgrade's newer specialty-coffee scene of espresso and pour-over cafés, especially around Dorćol — the two are not in competition, and it's entirely normal to drink a domaća kafa in a kafana one morning and a single-origin pour-over the next.",
+      "related": [
+        "/food-and-nightlife/belgrade-coffee-culture",
+        "/food-and-nightlife/belgrade-kafanas"
+      ],
+      "faqs": [
+        {
+          "question": "What is domaća kafa?",
+          "answer": "It's traditional Serbian Turkish-style coffee: finely ground, unfiltered coffee simmered in a small copper pot called a džezva and served in a small cup, grounds and all, to be sipped slowly."
+        },
+        {
+          "question": "How do you drink domaća kafa properly?",
+          "answer": "Slowly. Let the foam settle, sip from the top of the cup rather than stirring up the grounds at the bottom, and treat it as an occasion for conversation rather than a quick caffeine fix — it's traditionally served with a glass of water and a piece of ratluk."
+        },
+        {
+          "question": "Is domaća kafa the same as Turkish coffee elsewhere?",
+          "answer": "The brewing method is essentially the same unfiltered, džezva-based style found across the Balkans and Turkey, though Serbs generally call it domaća (\"home\") or crna (\"black\") coffee rather than Turkish coffee."
+        }
+      ],
+      "question": "What is domaća kafa?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "pekara",
+      "term": "Pekara",
+      "localTerm": "Пекара",
+      "category": "Food & drink",
+      "pronunciation": "peh-KAH-ra",
+      "short": "A pekara is a Serbian bakery — a counter selling burek and other filo pastries by weight or the slice, often open around the clock, and one of the easiest, cheapest places to eat in Belgrade.",
+      "body": "A pekara is a neighbourhood bakery built around filo pastries, above all burek, sold hot from trays behind glass. You point at what you want — meat (sa mesom), cheese (sa sirom), spinach-and-cheese or another filling — and it's weighed or cut and handed over, usually with a drinking yoghurt from the fridge beside the till as the traditional accompaniment. Beyond burek, most pekare also sell gibanica, other pastries, bread and simple sandwiches.\n\nPekare are everywhere in Belgrade, on nearly every corner of every neighbourhood, and many run 24 hours a day. That makes them the backbone of the city's late-night food scene: after the clubs close, a lit pekara window with burek and yoghurt is rarely more than a few blocks away, whatever time it is.\n\nFor a visitor, a pekara is also the easiest possible transaction in the city — everything is visible behind the counter, so there's no menu to decode, and prices are cheap even by the standards of Belgrade's already-affordable food scene. It's the natural first stop for breakfast and the natural last stop after a night out.",
+      "related": [
+        "/food-and-nightlife/belgrade-grill-and-street-food",
+        "/food-and-nightlife/serbian-food"
+      ],
+      "faqs": [
+        {
+          "question": "What can you buy at a pekara?",
+          "answer": "Mainly burek in various fillings (meat, cheese, spinach-and-cheese), plus gibanica and other filo pastries, bread and simple sandwiches — all sold hot, by weight or the slice, from a counter."
+        },
+        {
+          "question": "Are pekare open late?",
+          "answer": "Many are, including some that run 24 hours, which is why bakeries are the backbone of Belgrade's late-night eating — a post-club burek and yoghurt is a genuine city institution."
+        },
+        {
+          "question": "How do you order at a pekara?",
+          "answer": "Point at what you want in the display case and say the filling — sa mesom (meat) or sa sirom (cheese) are the two you'll need most — and it's weighed or cut, then handed over hot."
+        }
+      ],
+      "question": "What is a pekara?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "slava",
+      "term": "Slava",
+      "localTerm": "Слава",
+      "category": "Culture",
+      "pronunciation": "SLAH-va",
+      "short": "A slava is a Serbian family's annual celebration of its patron saint — an inherited Orthodox Christian tradition marked with a blessed candle, a special bread and a festive meal, and one of the most distinctive customs in Serbian culture.",
+      "body": "A slava (krsna slava) is the yearly celebration of a family's patron saint, passed down the generations rather than tied to any individual's birthday or name day. Each family keeps the same saint's day their ancestors did, traditionally inherited through the male line, and the date returns every year regardless of where family members now live.\n\nThe day centres on a home ritual: a candle is lit, a priest may bless the household, and two foods appear on virtually every slava table — the slavski kolač, a round bread marked with a cross, and žito, boiled wheat sweetened with sugar and mixed with ground walnuts, both carrying religious symbolism around remembrance and continuity. Around that ritual core sits a large, often lavish meal, typically built around roasted meat (pečenje) and shared with an open guest list — a well-known Serbian hospitality norm holds that friends and even acquaintances are welcome to drop by a slava without a formal invitation.\n\nThe custom is old enough and distinctive enough that UNESCO added the family slava celebration to its Representative List of the Intangible Cultural Heritage of Humanity in 2014. For a visitor, encountering a slava is unlikely unless you know a Serbian family personally, but the word comes up often in conversation and on restaurant menus around pečenje, so it's worth knowing what it refers to.",
+      "related": [
+        "/food-and-nightlife/serbian-food",
+        "/visit-belgrade/understanding-belgrade"
+      ],
+      "faqs": [
+        {
+          "question": "What is a slava?",
+          "answer": "It's a Serbian family's annual celebration of its patron saint, inherited down the generations rather than tied to an individual's birthday. It's marked with a blessed candle, a special round bread and a festive meal, usually with roasted meat."
+        },
+        {
+          "question": "Is slava a religious or a family occasion?",
+          "answer": "Both — it's rooted in Serbian Orthodox Christian tradition, with a blessed candle, bread and wheat dish carrying religious meaning, but in practice it functions as a major family and social occasion with an open guest list."
+        },
+        {
+          "question": "Can visitors attend a slava?",
+          "answer": "Only if invited by, or connected to, a Serbian family, since it's a home celebration rather than a public event — though the open-door hospitality norm around it means guests of guests are often welcomed warmly if the occasion arises."
+        }
+      ],
+      "question": "What is slava?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "turbo-folk",
+      "term": "Turbo-folk",
+      "localTerm": "Турбо-фолк",
+      "category": "Culture",
+      "pronunciation": "TUR-boh-fohlk",
+      "short": "Turbo-folk is a Balkan popular-music genre that fuses traditional Serbian and regional folk melodies with electronic, pop and dance production — a genuinely dominant sound in Belgrade's nightlife, especially on the splavovi.",
+      "body": "Turbo-folk emerged out of Serbia and the wider former Yugoslavia, blending the melodic and vocal style of traditional folk music with synthesised beats, pop songwriting and a glossy, high-energy production sound. It grew into one of the most commercially dominant genres in the region, with its own stars, television presence and a large, devoted fanbase that spans generations.\n\nThe genre carries cultural baggage beyond the music itself — it's long been tied up in debates about identity, taste and the 1990s era it rose alongside, and opinions on it in Serbia range from genuine love to open disdain, sometimes within the same family. That tension is part of what makes it a real cultural touchstone rather than just background music.\n\nFor a visitor, turbo-folk is most likely to be encountered on a night out: it has its own dedicated clubs and live-band venues, and it's a mainstay alongside RnB, hip-hop and house on the mainstream splavovi, the floating river clubs that define Belgrade's summer nightlife. It sits apart from the older starogradska (\"old town\") songs played on tamburica and accordion in a traditional kafana — different sound, different room, both distinctly Belgrade.",
+      "related": [
+        "/food-and-nightlife/belgrade-nightlife",
+        "/food-and-nightlife/eating-and-drinking-in-belgrade"
+      ],
+      "faqs": [
+        {
+          "question": "What is turbo-folk music?",
+          "answer": "It's a Balkan pop genre that blends traditional folk melodies and vocal style with electronic, dance-pop production — a glossy, high-energy sound that became commercially dominant across Serbia and the wider region."
+        },
+        {
+          "question": "Where can you hear turbo-folk in Belgrade?",
+          "answer": "It has its own dedicated clubs and live-band venues, and it's a regular fixture on the mainstream splavovi (floating river clubs) alongside RnB, hip-hop and house music."
+        },
+        {
+          "question": "Is turbo-folk the same as the traditional music in kafanas?",
+          "answer": "No — kafanas typically play older starogradska (\"old town\") songs on tamburica and accordion, which is a different, more acoustic tradition from turbo-folk's electronic, pop-leaning sound."
+        }
+      ],
+      "question": "What is turbo-folk?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "kosava",
+      "term": "Košava",
+      "localTerm": "Кошава",
+      "category": "Practical",
+      "pronunciation": "KO-sha-va",
+      "short": "The košava is a strong, cold, gusty wind that blows across Belgrade from the south-east, most common in the autumn and winter months — a genuine local phenomenon worth knowing about if you're visiting in that season.",
+      "body": "The košava funnels down the Danube basin from the south-east and is felt most strongly in Belgrade and the surrounding Vojvodina and Danube-basin region, where the terrain gives it a clear, unobstructed run. It's known locally for arriving in sustained spells rather than single gusts — periods of persistently strong, blustery wind that can last from a day to well over a week — rather than the shorter squalls more familiar in many other climates.\n\nIt's most associated with the colder months, roughly autumn through winter, when conditions favour its formation, though it can occur at other times too. Locals treat it as a normal, expected feature of the Belgrade climate rather than a rare event, and it's frequently blamed — with a mix of seriousness and humour — for everything from bad moods to disrupted plans.\n\nFor a visitor, the practical takeaway is simply to pack a proper windproof layer if you're travelling in autumn or winter, and not to be surprised if a clear, dry day turns out to be a genuinely blustery one. It rarely disrupts a trip outright, but it's part of what shapes how Belgrade feels underfoot at that time of year.",
+      "related": [
+        "/plan-your-trip/best-time-to-visit",
+        "/visit-belgrade/understanding-belgrade"
+      ],
+      "faqs": [
+        {
+          "question": "What is the košava wind?",
+          "answer": "It's a strong, cold, gusty wind that blows into Belgrade from the south-east, most common in autumn and winter, and known for arriving in multi-day spells rather than short gusts."
+        },
+        {
+          "question": "When does the košava blow in Belgrade?",
+          "answer": "It's most associated with the colder months, roughly autumn through winter, though conditions favouring it can occur at other times of year too."
+        },
+        {
+          "question": "Should I plan around the košava as a visitor?",
+          "answer": "Not really plan around it, but pack a windproof layer if you're travelling in autumn or winter — it's a normal local weather feature rather than something that typically disrupts a trip."
+        }
+      ],
+      "question": "What is the košava?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "dinar",
+      "term": "Serbian dinar",
+      "localTerm": "Динар",
+      "category": "Practical",
+      "pronunciation": "DEE-nar",
+      "short": "The Serbian dinar (RSD) is Serbia's official currency and the only legal tender for cash — even though many Belgrade businesses list prices in euros, you pay the dinar equivalent, since the euro itself isn't legal tender here.",
+      "body": "The dinar, abbreviated RSD, is the currency you'll actually spend in Belgrade, even in situations that look euro-denominated. Hotels, apartments and some tour operators commonly quote prices in euros as a reference point, but that's a pricing convenience rather than a payment option: strictly, cash purchases are meant to be settled in dinars, and while a few tourist-facing businesses may informally accept euro notes, you're not entitled to pay that way and the informal exchange rate offered is usually poor.\n\nCards are widely accepted across the city — most restaurants, hotels, larger shops and supermarkets take them, often contactless — so a visitor can get by on a card for a large share of spending. Cash still matters at the smaller end of the scale: kiosks, green markets, many taxis, bakeries and small local bars lean cash, so it's worth carrying a modest float of dinars alongside a card. ATMs across the city dispense dinars only, and the single most useful money habit is to always choose to be charged in dinars rather than your home currency when a machine or card terminal offers the choice — accepting the conversion (Dynamic Currency Conversion) typically costs more.\n\nFor cash exchange, licensed exchange offices (menjačnice) and bank branches in the city centre generally offer noticeably better rates than airport, station or mall kiosks, which are best used only for small, get-you-into-town amounts.",
+      "related": [
+        "/plan-your-trip/money",
+        "/plan-your-trip/getting-around"
+      ],
+      "faqs": [
+        {
+          "question": "Can I pay in euros in Belgrade?",
+          "answer": "Not really for cash — the dinar is Serbia's only legal tender, so even though prices are often quoted in euros as a reference, you pay the dinar equivalent. A few tourist-facing spots may informally take euro notes, but usually at a poor rate."
+        },
+        {
+          "question": "Do I need cash or can I use a card everywhere?",
+          "answer": "Cards are widely accepted at most restaurants, hotels and shops, but cash in dinars still matters at kiosks, markets, many taxis, bakeries and small bars — carry both rather than relying on one."
+        },
+        {
+          "question": "What's the best way to get dinars in Belgrade?",
+          "answer": "Use a licensed exchange office (menjačnica) or bank branch in the city centre for the best rates, or an ATM set to charge you in dinars rather than your home currency — avoid airport, station and mall exchange kiosks except for small amounts."
+        }
+      ],
+      "question": "What is the Serbian dinar?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "cargo",
+      "term": "CarGo",
+      "category": "Practical",
+      "pronunciation": "KAR-goh",
+      "short": "CarGo is a home-grown, Uber-style ride-hailing app that operates in Belgrade — one of the two apps (alongside Yandex Go) that actually work in the city, since neither Uber nor Bolt runs there.",
+      "body": "CarGo lets you order a car from your phone, watch it arrive on a live map, and pay by card or cash, with the price shown before you confirm — functionally the same experience Uber offers elsewhere, just under a different, locally built brand. It's the ride-hailing app most visitors reach for once they realise the global apps aren't an option here.\n\nThe practical appeal for a foreign visitor is that it removes the two things that most often trip people up with Belgrade taxis: there's no fare to negotiate, since the price is quoted upfront in the app, and no address to explain across a language barrier, since you set the destination on screen rather than describing it out loud to a driver.\n\nCarGo's regulatory status has been contested at various points, but it has continued to operate in practice, and alongside Yandex Go it's treated as one of the two reliable, current ride-hailing options in the city. Classic licensed-taxi dispatch apps also exist as an alternative. As with any local platform, exactly which app is dominant can shift over time, so it's worth checking current availability shortly before you travel.",
+      "related": [
+        "/plan-your-trip/taxis-in-belgrade",
+        "/plan-your-trip/airport-to-city"
+      ],
+      "faqs": [
+        {
+          "question": "Is CarGo like Uber?",
+          "answer": "Functionally, yes — you order a car in the app, see it on a map, and pay a price shown up front. It's a home-grown, Belgrade-based equivalent, since Uber itself doesn't operate in the city."
+        },
+        {
+          "question": "Is CarGo safe and reliable to use?",
+          "answer": "It's widely used and continues to operate, though its regulatory status has been contested at times. Alongside Yandex Go, it's one of the two main app-based ride options travellers reach for in Belgrade."
+        },
+        {
+          "question": "Does CarGo work at Belgrade airport?",
+          "answer": "Yes — you can order a CarGo car from the airport, with the price agreed in the app before you ride, as an alternative to the airport's official fixed-price voucher taxi system."
+        }
+      ],
+      "question": "What is CarGo?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "bg-voz",
+      "term": "BG Voz",
+      "localTerm": "БГ воз",
+      "category": "Practical",
+      "pronunciation": "BEH-GEH vohz",
+      "short": "BG Voz is Belgrade's suburban and commuter rail network — literally \"Belgrade train\" — free to ride like the rest of the city's public transport, with a new branch under construction to connect it to the airport.",
+      "body": "BG Voz is the brand for Belgrade's suburban passenger rail service, running commuter trains along several lines that connect the city centre with outlying municipalities and towns in the wider Belgrade area. Along with the city's buses, trams and trolleybuses, BG Voz has been free to ride for every passenger since 1 January 2025, when Belgrade switched its entire regular public transport network to a fare-free model — no ticket, card or validation needed.\n\nA separate, newer piece of the BG Voz story is under construction rather than running: a dedicated electrified rail branch connecting Belgrade Airport, and the National Stadium and Expo site at Surčin, into the wider suburban network, splitting off the main Belgrade–Novi Sad corridor. New trains for the line have been ordered, and an operational launch has been reported for spring 2027 to coincide with Expo 2027, though as of this writing that date, and the eventual fare or ticketing arrangement for the airport branch specifically, remain provisional rather than confirmed.\n\nFor now, visitors are most likely to encounter existing BG Voz services connecting Beograd Centar (Prokop) station with other parts of the city and its suburbs, rather than a working rail link to the airport itself.",
+      "related": [
+        "/plan-your-trip/getting-around",
+        "/plan-your-trip/airport-to-city"
+      ],
+      "faqs": [
+        {
+          "question": "What does BG Voz mean?",
+          "answer": "It's short for \"Beogradski voz\" — Belgrade train — the brand for the city's suburban and commuter rail network, connecting central Belgrade with outlying municipalities."
+        },
+        {
+          "question": "Is BG Voz free to use?",
+          "answer": "Yes — like Belgrade's buses, trams and trolleybuses, BG Voz has been free to ride for everyone since 1 January 2025, with no ticket or card required on the regular network."
+        },
+        {
+          "question": "Can I take a BG Voz train to the airport?",
+          "answer": "Not yet. A dedicated airport rail branch is under construction, with an opening reported for spring 2027 around Expo 2027, but as of this writing it isn't running and its exact ticketing arrangement hasn't been announced."
+        }
+      ],
+      "question": "What is BG Voz?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "nikola-tesla-airport",
+      "term": "Nikola Tesla Airport",
+      "localTerm": "Аеродром Никола Тесла",
+      "category": "Practical",
+      "pronunciation": "NEE-koh-la TESS-la",
+      "short": "Belgrade Nikola Tesla Airport (BEG) is Serbia's main international gateway, about 18 km west of the city centre near Surčin — named after the Serbian-American inventor and served by free city buses, a paid minibus, taxis and ride-hail apps.",
+      "body": "Nikola Tesla Airport, using the IATA code BEG, sits roughly 18 km from central Belgrade, in the western Surčin area, with a typical road journey into town taking 20 to 40 minutes depending on traffic. It's named after Nikola Tesla, the Serbian-American inventor and engineer whose work on alternating-current electrical systems made him one of the most celebrated figures in Serbian national identity — his archive and legacy are the subject of the dedicated Nikola Tesla Museum in the city.\n\nGetting from the airport into town has four realistic options: the free city bus 72, which runs into the centre as part of Belgrade's fare-free public transport network; the paid A1 express minibus to Slavija Square, faster but not free; an official fixed-price voucher taxi, arranged at airport kiosks to avoid meter disputes; or a ride-hailing app such as CarGo or Yandex Go, since neither Uber nor Bolt operates in Serbia. A dedicated rail connection from the airport into the city's BG Voz suburban network is under construction but not yet in service.\n\nThe airport is also the gateway most Expo 2027 visitors will use, since the Expo site in Surčin sits only a few kilometres away — closer to the airport than to the historic city centre.",
+      "related": [
+        "/plan-your-trip/airport-to-city",
+        "/expo-2027/getting-there"
+      ],
+      "faqs": [
+        {
+          "question": "How far is Nikola Tesla Airport from central Belgrade?",
+          "answer": "About 18 km, with a typical road journey of 20 to 40 minutes depending on traffic. The airport sits in the western Surčin area of the city."
+        },
+        {
+          "question": "Who was Nikola Tesla, and why is the airport named after him?",
+          "answer": "Nikola Tesla was a Serbian-American inventor and engineer best known for his pioneering work on alternating-current electrical systems, and he is one of the most celebrated figures in Serbian national identity — the airport and a dedicated museum in the city both carry his name."
+        },
+        {
+          "question": "How do you get from Nikola Tesla Airport into Belgrade?",
+          "answer": "Four main options: the free city bus 72, the paid A1 express minibus to Slavija, an official fixed-price voucher taxi, or a ride-hail app such as CarGo or Yandex Go — there is no Uber or Bolt in Serbia."
+        }
+      ],
+      "question": "What is Nikola Tesla Airport?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "belgrade-waterfront",
+      "term": "Belgrade Waterfront",
+      "localTerm": "Београд на води",
+      "category": "Places",
+      "pronunciation": "BEL-grade WAW-ter-front",
+      "short": "Belgrade Waterfront (Beograd na vodi) is a large-scale riverfront redevelopment on the right bank of the Sava, next to the Savamala district, mixing modern residential towers, a mall, promenades and river-facing restaurants.",
+      "body": "Belgrade Waterfront sits on the right bank of the Sava, immediately downhill and south-west of the old-town ridge, beside the Savamala district and below the Branko bridge — the most recent addition to the layered mix of eras that makes up central Belgrade. Where the surrounding city grew organically over centuries of empires and rebuilding, Waterfront is a single, purpose-built development: new residential and commercial towers, a shopping centre, and a long river promenade, built on what was previously a rundown industrial and rail-yard stretch of riverbank.\n\nIt began with a large-scale development agreement signed in 2014 between the Serbian government and the Abu Dhabi–based developer Eagle Hills, and construction has continued in phases since, gradually reshaping this part of the riverfront from disused industrial land into one of the more modern-looking corners of the city. It sits immediately next to Savamala, the former industrial district turned nightlife and creative quarter, so the two areas blend into each other along the water — Savamala's older bars and clubs give way to Waterfront's newer buildings and promenades without a hard line between them.\n\nFor visitors, Belgrade Waterfront is best known for its riverside dining and bars along the Beton Hala strip nearby, its newer serviced apartments, and its modern, glass-and-concrete contrast with the historic Stari Grad ridge just uphill. It's also increasingly used as a base by business travellers, thanks to its newer buildings and easy bridge access across to New Belgrade.",
+      "related": [
+        "/visit-belgrade/understanding-belgrade",
+        "/where-to-stay/where-to-stay-in-belgrade",
+        "/food-and-nightlife/belgrade-nightlife"
+      ],
+      "faqs": [
+        {
+          "question": "What is Belgrade Waterfront?",
+          "answer": "A large-scale riverfront redevelopment on the Sava's right bank, next to Savamala, combining new residential towers, a shopping centre and a long river promenade on what was previously industrial riverbank land."
+        },
+        {
+          "question": "Is Belgrade Waterfront the same as Savamala?",
+          "answer": "No, but they sit right next to each other and blend together along the river — Savamala is the older former-industrial district known for nightlife and creative venues, while Belgrade Waterfront is the newer, purpose-built development beside it."
+        },
+        {
+          "question": "Is Belgrade Waterfront a good place to stay?",
+          "answer": "It works well for river-facing dining, modern serviced apartments and easy bridge access to New Belgrade, and it's increasingly popular with business travellers — though it's not the place to go for old-town historic character."
+        }
+      ],
+      "question": "What is Belgrade Waterfront?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "knez-mihailova",
+      "term": "Knez Mihailova",
+      "localTerm": "Кнез Михаилова",
+      "category": "Places",
+      "pronunciation": "kuh-NEZ mee-HYE-loh-va",
+      "short": "Knez Mihailova is Belgrade's main pedestrian promenade — a shop- and café-lined street running from Republic Square to Belgrade Fortress and Kalemegdan Park, and the natural spine of any first visit on foot.",
+      "body": "Knez Mihailova (Prince Michael Street) runs north-west from Republic Square, the historic centre of Stari Grad, toward Belgrade Fortress and Kalemegdan Park at the ridge above the Sava–Danube confluence — a walk of roughly 0.6 to 0.9 km along a fully pedestrianised route lined with 19th-century buildings, shops, cafés and street performers. It's named after Prince Mihailo Obrenović, and it has functioned as the city's main civic and commercial spine since the 19th century.\n\nBecause it links two of the city's essential stops — Republic Square, with the National Museum and National Theatre, and the fortress at Kalemegdan — Knez Mihailova is where most first-time visitors end up walking within their first hour in Belgrade, whether following a guide, a free walking tour, or just heading toward the river on their own. The street itself is entirely car-free, which makes it an easy, low-effort orientation walk regardless of how you plan the rest of your day.\n\nIt's busiest in the early evening, when locals and visitors alike use it for the Belgrade version of an evening stroll, and its cafés and benches make it a natural place to pause between the square and the fortress rather than a street you rush through.",
+      "related": [
+        "/visit-belgrade/things-to-do-in-belgrade",
+        "/visit-belgrade/understanding-belgrade"
+      ],
+      "faqs": [
+        {
+          "question": "What is Knez Mihailova?",
+          "answer": "Belgrade's main pedestrian street, running from Republic Square to Belgrade Fortress and Kalemegdan Park — a car-free promenade of shops, cafés and 19th-century buildings, and the natural walking spine of the city centre."
+        },
+        {
+          "question": "How long does it take to walk Knez Mihailova?",
+          "answer": "The street itself is roughly 0.6 to 0.9 km, an easy 10 to 15 minute walk end to end, though most visitors take longer since it's lined with shops, cafés and things worth stopping for."
+        },
+        {
+          "question": "What's at each end of Knez Mihailova?",
+          "answer": "Republic Square, with the National Museum and National Theatre, sits at the south-eastern end, while Belgrade Fortress and Kalemegdan Park, above the river confluence, sit at the north-western end."
+        }
+      ],
+      "question": "What is Knez Mihailova?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "saint-sava-temple",
+      "term": "Temple of Saint Sava",
+      "localTerm": "Храм Светог Саве",
+      "category": "Places",
+      "pronunciation": "SAYNT SAH-vah",
+      "short": "The Temple of Saint Sava is one of the largest Orthodox churches in the world, standing in the Vračar district south of central Belgrade — a monumental white-marble landmark with a richly mosaicked interior.",
+      "body": "The Temple of Saint Sava anchors Vračar, a district roughly 2 km south of Republic Square, reachable on foot in about 25 to 30 minutes or by a short ride. It's dedicated to Saint Sava, the founder of the Serbian Orthodox Church, and it was built on the site where, according to tradition, his remains were burned by Ottoman authorities in the 16th century — a history that gives the building deep symbolic weight in Serbian national and religious identity, well beyond its role as a place of worship.\n\nThe building itself is deliberately monumental: a vast white-marble exterior topped by an enormous central dome, with an interior finished in extensive gold-and-colour mosaic work that covers much of the walls and ceiling. Photographs tend to undersell it — the scale of the interior space is something that reads far better standing inside it than on a screen. Entry is generally free, with a donation box for those who wish to contribute.\n\nIt pairs naturally with a visit to the nearby Nikola Tesla Museum, also in Vračar and within easy walking distance, making the two together one of the standard second-day stops on a first visit to Belgrade.",
+      "related": [
+        "/visit-belgrade/things-to-do-in-belgrade",
+        "/visit-belgrade/understanding-belgrade"
+      ],
+      "faqs": [
+        {
+          "question": "Why is the Temple of Saint Sava significant?",
+          "answer": "It's built on the site where, by tradition, the remains of Saint Sava — founder of the Serbian Orthodox Church — were burned by Ottoman authorities, and it has become the central monument of modern Serbian Orthodox identity, one of the largest Orthodox churches in the world."
+        },
+        {
+          "question": "What does the inside of the temple look like?",
+          "answer": "The interior is extensively covered in gold-and-colour mosaic work beneath a huge central dome — a scale and richness that photographs struggle to convey, and that rewards simply standing inside the space."
+        },
+        {
+          "question": "Where is the Temple of Saint Sava located?",
+          "answer": "In Vračar, a district roughly 2 km south of Republic Square in central Belgrade, about a 25 to 30 minute walk, and close to the Nikola Tesla Museum."
+        }
+      ],
+      "question": "What is the Temple of Saint Sava?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "specialised-expo",
+      "term": "Specialised Expo",
+      "localTerm": "Специјализована изложба",
+      "category": "Expo 2027",
+      "pronunciation": "SPEH-shuh-lyzed EK-spoh",
+      "short": "A Specialised Expo is a BIE-recognised international exposition built around a single declared theme, lasting up to three months — the category Expo 2027 Belgrade belongs to, distinct from the larger, broader Universal (World) Expos.",
+      "body": "The word \"Expo\" covers two officially different categories. A Universal, or World, Expo is the larger, broader-scope event, traditionally held over roughly six months around a wide-ranging theme, and staged only every few years. A Specialised Expo is narrower and shorter: it runs for up to three months, is built around one specific, focused theme, and is held in the years between the larger World Expos, giving mid-sized host cities and themes their own dedicated stage.\n\nBoth categories are sanctioned by the Bureau International des Expositions (BIE), the Paris-based intergovernmental body that recognises and oversees official expositions, and a host country must have its Specialised Expo formally recognised by the BIE before it can proceed. Expo 2027 Belgrade holds that recognition, and it runs for 93 days, from 15 May to 15 August 2027, under the theme \"Play for Humanity: Sport and Music for All.\"\n\nWhat makes Expo 2027 notable within its category is that it's the first Specialised Expo ever held in the Western Balkans, and it has already drawn a larger number of participating countries than the previous Specialised Expo host, Astana 2017 — a genuinely significant milestone for the format, not just for Serbia.",
+      "related": [
+        "/expo-2027/what-is-it",
+        "/expo-2027/guide"
+      ],
+      "faqs": [
+        {
+          "question": "What is a Specialised Expo?",
+          "answer": "A BIE-recognised international exposition that runs for up to three months around a single declared theme — narrower in scope and shorter in duration than a Universal (World) Expo, and held in the years between them."
+        },
+        {
+          "question": "How is a Specialised Expo different from a World Expo?",
+          "answer": "A World Expo is broader in theme and traditionally runs about six months; a Specialised Expo is built around one focused theme and runs for a shorter period, up to three months, as Expo 2027 Belgrade does over its 93 days."
+        },
+        {
+          "question": "Is Expo 2027 Belgrade a Specialised Expo?",
+          "answer": "Yes — it's officially recognised by the BIE as a Specialised Expo, running 15 May to 15 August 2027 under the theme \"Play for Humanity: Sport and Music for All,\" and it's the first Specialised Expo held in the Western Balkans."
+        }
+      ],
+      "question": "What is a Specialised Expo?",
+      "updated": "2026-08-07"
+    },
+    {
+      "slug": "bie",
+      "term": "BIE",
+      "localTerm": "Међународни биро за изложбе",
+      "category": "Expo 2027",
+      "pronunciation": "bee-eye-EE",
+      "short": "The BIE (Bureau International des Expositions) is the Paris-based intergovernmental organisation that recognises and oversees official World and Specialised Expos, including Expo 2027 Belgrade.",
+      "body": "The Bureau International des Expositions, universally known by its French initials BIE, is the intergovernmental body responsible for sanctioning official international expositions — both the larger Universal (World) Expos and the shorter, single-theme Specialised Expos. Without BIE recognition, an event cannot officially call itself an \"Expo\" in the sanctioned sense, regardless of its scale.\n\nA country seeking to host has to be elected by BIE member states and have its formal Recognition Dossier approved before the event can proceed under BIE supervision. Serbia went through that process for Belgrade's bid, and Expo 2027 Belgrade carries full BIE recognition as a Specialised Expo, running 15 May to 15 August 2027 under the theme \"Play for Humanity: Sport and Music for All.\" The Government of Serbia is the host and organiser, working under BIE oversight throughout the planning and delivery of the event.\n\nFor a visitor, the practical significance of BIE recognition is mostly about legitimacy and scale: it's the reason participating countries build proper national pavilions and send official delegations rather than treating the event as a regional trade fair, and it's why Expo 2027 sits in the same lineage as expos going back well over a century.",
+      "related": [
+        "/expo-2027/what-is-it",
+        "/expo-2027/participants"
+      ],
+      "faqs": [
+        {
+          "question": "What does BIE stand for?",
+          "answer": "Bureau International des Expositions — the Paris-based intergovernmental body that recognises and oversees official World and Specialised Expos, including Expo 2027 Belgrade."
+        },
+        {
+          "question": "Why does BIE recognition matter for Expo 2027?",
+          "answer": "It's what makes Expo 2027 an officially sanctioned Specialised Expo rather than an unofficial event — recognition required Serbia to be elected as host and have its Recognition Dossier approved, and it's why participating countries commit to full national pavilions."
+        },
+        {
+          "question": "Is the BIE the same organisation that runs Expo 2027 day to day?",
+          "answer": "No — the BIE recognises and supervises the event at an intergovernmental level, while the Government of Serbia is the actual host and organiser responsible for building and running Expo 2027 on the ground."
+        }
+      ],
+      "question": "What is the BIE?",
+      "updated": "2026-08-07"
     }
   ]
 }

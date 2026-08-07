@@ -61,12 +61,12 @@ Rather than promising a forecast, it helps to think about what each season *feel
 
 Treat the temperature cues below as the broad shape of each month rather than a forecast — they move slowly and vary year to year.
 
-- **January–February.** Coldest and quietest. Short days, occasional snow, a coat-and-gloves city. Lowest prices outside the holiday peak; museums and kafanas come into their own.
+- **January–February.** Coldest and quietest. Short days, occasional snow, a coat-and-gloves city. Lowest prices outside the holiday peak; museums and [kafanas](/glossary/kafana) come into their own.
 - **March.** Still cool and changeable, but the city starts to wake up. Crowds remain light and rates low — a fine pick for budget sightseeing if you don't mind a chill.
 - **April.** Spring proper: milder days, blossom, comfortable walking weather. The start of the shoulder sweet spot, with crowds still well below summer.
 - **May.** One of the two best months. Warm, long daylight, terraces and riverfront in full swing, but not yet the peak heat or peak prices. Note that the *peak* tourist season begins in late May.
 - **June.** Warm to hot and lively, edging into peak season. Long evenings and the start of the festival run; prices and crowds climbing.
-- **July–August.** The hottest, busiest, priciest stretch. Daytime highs commonly sit in the low-to-mid 30s °C and can exceed 37–38 °C in a heatwave. This is splav (floating-bar) and festival prime time, but midday sightseeing is hard work.
+- **July–August.** The hottest, busiest, priciest stretch. Daytime highs commonly sit in the low-to-mid 30s °C and can exceed 37–38 °C in a heatwave. This is [splav](/glossary/splav) (floating-bar) and festival prime time, but midday sightseeing is hard work.
 - **September.** The other standout month. Summer warmth eases to comfortable, crowds thin, prices soften — arguably the best all-round time to visit.
 - **October.** Mild, often dry autumn, fewer visitors, lower rates. Great for walking the fortress and old town; pack a light layer for cooler evenings.
 - **November.** Cooler and greyer as the city slides into the low season; good value and quiet.
@@ -86,7 +86,7 @@ The **cheapest and least-crowded** windows are winter (November–March, excludi
 
 ## How many days do you need in Belgrade?
 
-For the core of the city — Belgrade Fortress and Kalemegdan, the old town and Knez Mihailova, Skadarlija, the riverfront and a night out — **two to three full days** is the usual sweet spot. Add a day or two if you want day trips (Novi Sad, a Danube excursion) or simply a slower pace. If you're coming for **Expo 2027**, budget extra time around the event itself on top of your city days, and book well ahead. For a wider itinerary, our [Visit Belgrade](/visit-belgrade) overview is a good next stop.
+For the core of the city — Belgrade Fortress and [Kalemegdan](/glossary/kalemegdan), the old town and [Knez Mihailova](/glossary/knez-mihailova), [Skadarlija](/glossary/skadarlija), the riverfront and a night out — **two to three full days** is the usual sweet spot. Add a day or two if you want day trips (Novi Sad, a Danube excursion) or simply a slower pace. If you're coming for **Expo 2027**, budget extra time around the event itself on top of your city days, and book well ahead. For a wider itinerary, our [Visit Belgrade](/visit-belgrade) overview is a good next stop.
 
 ## When is the best time to visit Serbia overall?
 

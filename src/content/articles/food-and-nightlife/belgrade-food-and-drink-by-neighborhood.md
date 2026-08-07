@@ -62,7 +62,7 @@ Savamala's food-and-drink identity is **nightlife-led**. The former warehouse di
 
 ## Beton Hala — the polished waterfront
 
-**Where it sits:** the converted warehouse strip on the Sava quay directly below the Kalemegdan ridge, a short downhill walk from Knez Mihailova.
+**Where it sits:** the converted warehouse strip on the Sava quay directly below the [Kalemegdan](/glossary/kalemegdan) ridge, a short downhill walk from [Knez Mihailova](/glossary/knez-mihailova).
 
 Beton Hala is the dressed-up end of riverside eating: a row of Serbian and international restaurants — Italian, seafood, steak, fusion — plus cocktail bars, all with river views toward New Belgrade. Its defining habit is blending dinner into late-night: some venues run roughly 10:00–04:00 daily (reported, as of 2026), so a table booked for dinner can carry you straight through to the small hours without moving. The crowd is dressier and slightly older than in the bar districts — if Skadarlija is the traditional special-occasion evening, this is the contemporary one.
 
@@ -74,7 +74,7 @@ Zemun's food identity leans to the river: **fish restaurants**, river specialiti
 
 ## Vračar — the everyday neighbourhood table
 
-**Where it sits:** south-east of the old-town core, the residential district around the Temple of Saint Sava.
+**Where it sits:** south-east of the old-town core, the residential district around the [Temple of Saint Sava](/glossary/saint-sava-temple).
 
 Vračar is the district for eating the way residents eat: neighbourhood restaurants, brunch spots and dessert shops clustered around the Temple of Saint Sava, with a dense café scene whose specialty rooms double as informal workspaces. Nothing here is a headline destination, and that is the point — this is where you go for a relaxed brunch, a casual dinner or a pastry stop between sights, at everyday prices rather than occasion ones.
 

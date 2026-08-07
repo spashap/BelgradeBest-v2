@@ -7,7 +7,7 @@ description: "The best things to do in Belgrade — the fortress, Temple of St S
 lede: "Belgrade's must-sees are easy to list and harder to understand. This is the canonical shortlist — fortress to St Sava to Skadarlija — with where each sits, how the city fits together on foot, and why it's worth your time."
 heroLabel: "Things to do in Belgrade / hero"
 heroAlt: "Belgrade's must-see sights gathered in one view"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 2
 visible: true
 intent: "leisure"
@@ -36,7 +36,7 @@ faqs:
 
 ## The shortlist, and why it earns its place
 
-A city's must-see list is usually a list of buildings. Belgrade's is more interesting as a list of *reasons*: each anchor stop opens a different window onto how the city works and where it has been. The essential things to do in Belgrade are a small, stable set: Belgrade Fortress ([Kalemegdan](/glossary/kalemegdan)), the Temple of St. Sava, the Nikola Tesla Museum, [Skadarlija](/glossary/skadarlija), Republic Square with Knez Mihailova, [Ada Ciganlija](/glossary/ada-ciganlija), Zemun with the Gardoš Tower, and Avala Tower just outside the city. They recur across essentially every reputable guide, so the list itself is not where the value lies. What follows is the interpretation an outsider actually needs — what each place is *for*, where it sits in the city, and whether it's worth your limited time. The good news for planning: most of the central ones are within walking distance of each other, which is why Belgrade rewards a first visit on foot.
+A city's must-see list is usually a list of buildings. Belgrade's is more interesting as a list of *reasons*: each anchor stop opens a different window onto how the city works and where it has been. The essential things to do in Belgrade are a small, stable set: Belgrade Fortress ([Kalemegdan](/glossary/kalemegdan)), the Temple of St. Sava, the Nikola Tesla Museum, [Skadarlija](/glossary/skadarlija), Republic Square with [Knez Mihailova](/glossary/knez-mihailova), [Ada Ciganlija](/glossary/ada-ciganlija), Zemun with the Gardoš Tower, and Avala Tower just outside the city. They recur across essentially every reputable guide, so the list itself is not where the value lies. What follows is the interpretation an outsider actually needs — what each place is *for*, where it sits in the city, and whether it's worth your limited time. The good news for planning: most of the central ones are within walking distance of each other, which is why Belgrade rewards a first visit on foot.
 
 ## Belgrade Fortress (Kalemegdan)
 
@@ -48,4 +48,4 @@ One of the largest Orthodox churches in the world, St. Sava anchors the **Vrača
 
 ## Nikola Tesla Museum
 
-Belgrade's canonical science stop is also in **Vračar**, near Slavija square and a short walk from St. Sava, so the two make an easy pair. It holds Tesla's personal archive — papers, instruments and his ashes in a golden orb — but what lifts it above a cabinet of documents is the live electrical demonstrations, wh
+Belgrade's canonical science stop is also in **Vračar**, near Slavija square and a short walk from St. Sava, so the two make an easy pair. It holds Tesla's personal archive — papers, instruments and his ashes in a golden orb — but what lifts it above a cabinet of documents is the live electrical demonstrations, where staff fire up working models so you feel the science rather than just read about it. As of 2026 it opens Monday 10:00–18:00 and Tuesday to Sunday 10:00–20:00, with an English guided tour at around 800 RSD; tours run roughly hourly and last about 45 minutes, and the demonstrations are the part worth timing your visit around. One practical warning worth repeating, because it catches people out: it's cash only, no cards, so bring dinars. The fuller museum detail — and how it fits a wider museum day — sits on our Belgrade museums page.

@@ -64,9 +64,9 @@ Each format has its own deep guide:
 
 ## What food is Belgrade known for?
 
-Belgrade is a grilled-meat city first. The signatures are **ćevapi** (small grilled minced-meat fingers) and **pljeskavica** (a large Serbian-style burger patty), eaten with raw onion, **kajmak** (a rich cream-cheese spread) and **lepinja** flatbread. The other thing everyone eats is **burek** — a flaky, filled pastry (meat, cheese or spinach) that is the classic breakfast and the standard food after a night out.
+Belgrade is a grilled-meat city first. The signatures are **ćevapi** (small grilled minced-meat fingers) and **pljeskavica** (a large Serbian-style burger patty), eaten with raw onion, **[kajmak](/glossary/kajmak)** (a rich cream-cheese spread) and **lepinja** flatbread. The other thing everyone eats is **burek** — a flaky, filled pastry (meat, cheese or spinach) that is the classic breakfast and the standard food after a night out.
 
-Beyond the grill, the dishes that define a proper sit-down Serbian meal include **karađorđeva šnicla** (a rolled, breaded cutlet stuffed with kajmak — Serbia's answer to cordon bleu), **sarma** (cabbage rolls stuffed with minced meat and rice, slow-cooked for hours), and shared **meze** starters. The national drink is **rakija**, a strong fruit brandy — plum **[šljivovica](/glossary/rakija)** above all — traditionally taken as a small pour before the meal with a toast of *"Živeli!"*. The sweet tooth is served by the **poslastičarnica** (pastry shop) tradition, whose most famous single item is the Moskva šnit cake at the historic Hotel Moskva.
+Beyond the grill, the dishes that define a proper sit-down Serbian meal include **[karađorđeva šnicla](/glossary/karadjordjeva-snicla)** (a rolled, breaded cutlet stuffed with kajmak — Serbia's answer to cordon bleu), **[sarma](/glossary/sarma)** (cabbage rolls stuffed with minced meat and rice, slow-cooked for hours), and shared **meze** starters. The national drink is **rakija**, a strong fruit brandy — plum **[šljivovica](/glossary/rakija)** above all — traditionally taken as a small pour before the meal with a toast of *"Živeli!"*. The sweet tooth is served by the **poslastičarnica** (pastry shop) tradition, whose most famous single item is the Moskva šnit cake at the historic Hotel Moskva.
 
 ## How much does eating and drinking cost?
 

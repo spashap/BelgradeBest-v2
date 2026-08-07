@@ -34,13 +34,13 @@ unknowns: []
 
 ## Do you actually need a car in Belgrade?
 
-Start with the honest answer, because it saves most visitors money and hassle: for Belgrade itself, a car is more liability than asset. The historic core is walkable, the city's buses, trams and trolleybuses have been **free to ride since 2025**, and taxis — or the CarGo and Yandex Go apps — are inexpensive for anything further. Against that, central parking is tightly regulated, time-limited and genuinely hard to find during working hours, and many older central apartments have no parking at all.
+Start with the honest answer, because it saves most visitors money and hassle: for Belgrade itself, a car is more liability than asset. The historic core is walkable, the city's buses, trams and trolleybuses have been **free to ride since 2025**, and taxis — or the [CarGo](/glossary/cargo) and Yandex Go apps — are inexpensive for anything further. Against that, central parking is tightly regulated, time-limited and genuinely hard to find during working hours, and many older central apartments have no parking at all.
 
 Where a rental genuinely pays off is **everything beyond the city**. Serbia and the wider Balkans open up enormously with your own wheels: the easy day trips to Novi Sad, the Fruška Gora monasteries and the wine town of Sremski Karlovci, plus longer road trips across the region. The clean rule of thumb: skip the car for your Belgrade days, and pick one up for the days you're leaving town. Our [day-trips guide](/visit-belgrade/belgrade-day-trips) covers where those drives lead.
 
 ## Where should you rent — airport or city, chain or local?
 
-You have the same two-by-two choice as anywhere: international chain versus local agency, and airport versus city branch. The big international names — **Sixt, Avis, Hertz, Europcar and Enterprise** — operate alongside local Serbian rental firms, and both are present at **Nikola Tesla Airport** and at branches around the city.
+You have the same two-by-two choice as anywhere: international chain versus local agency, and airport versus city branch. The big international names — **Sixt, Avis, Hertz, Europcar and Enterprise** — operate alongside local Serbian rental firms, and both are present at **[Nikola Tesla Airport](/glossary/nikola-tesla-airport)** and at branches around the city.
 
 Airport pickup is the most convenient if you want the car the moment you land, but airport locations often carry extra surcharges; a **city-centre branch** can work out cheaper if, following the advice above, you only need the car for the days you head out of town. The practical move is to **compare prices and terms across several providers** before committing rather than walking up to a single desk — and when you compare, read past the headline daily rate to the things that actually bite: the cross-border policy, the fuel rule, the excess/insurance terms, and any young-driver or one-way fees.
 

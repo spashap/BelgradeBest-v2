@@ -7,7 +7,7 @@ description: "Belgrade craft beer: flagship breweries Dogma and Kabinet, the tap
 lede: "Belgrade is Serbia's craft-beer capital, with a taproom-and-brewery scene clustered around Dorćol and Savamala. Here are the flagship breweries, the central beer bars, the domestic labels to look for, and how to plan a craft crawl — with the volatile bar scene flagged honestly."
 heroLabel: "Belgrade craft beer / hero"
 heroAlt: "A row of taps and craft beer glasses on a Belgrade taproom bar"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 11
 visible: true
 intent: "leisure"
@@ -46,4 +46,4 @@ It helps to treat craft beer as its own going-out mode rather than a sub-genre o
 
 The most durable anchor is **Dogma Brewery**, reported as founded in 2016 in a renovated sugar-factory building near the Sava and [Ada Ciganlija](/glossary/ada-ciganlija). Its on-site taproom and beer garden are reported to have opened in 2017. Dogma is widely cited and has several years of operation behind it, which is part of why brewery tours of the scene tend to include it. The setting — an old industrial building repurposed for brewing, with a large garden — is itself part of the appeal, and the riverside location near Ada Ciganlija makes it a natural daytime stop. Dogma is also known for releasing experimental and rotating beers (an IPA called "Hoptopod" comes up repeatedly in coverage) and for hosting events and live-music nights, so it doubles as both a brewery and a place to spend an evening.
 
-The other domestic name to know on the brewery side is **Kabinet**, frequently described as one of Serbia's biggest craft-beer brands. You'll see Kabinet beers on tap and in bottle across the central beer bars; the brewery's own taproom is reported to sit outside the city (in the countryside on the slopes of Mount Kosmaj), so in the centre you're most likely to meet the label as a tap rather than as a destination visit. Ordering a Kabinet is a straightforward way to taste a leading Serbian craft producer without tr
+The other domestic name to know on the brewery side is **Kabinet**, frequently described as one of Serbia's biggest craft-beer brands. You'll see Kabinet beers on tap and in bottle across the central beer bars; the brewery's own taproom is reported to sit outside the city (in the countryside on the slopes of Mount Kosmaj), so in the centre you're most likely to meet the label as a tap rather than as a destination visit. Ordering a Kabinet is a straightforward way to taste a leading Serbian craft producer without tracking down a specific venue.

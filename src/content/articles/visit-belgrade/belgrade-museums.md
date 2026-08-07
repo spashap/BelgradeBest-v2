@@ -7,7 +7,7 @@ description: "The best museums in Belgrade — the Tesla Museum, Museum of Yugos
 lede: "Belgrade's museums range from Tesla's archive in Vračar to Tito's mausoleum near Dedinje. Here's which are worth your time, which district each sits in and how to reach it, plus opening patterns, prices and free-admission days, indicative as of 2026."
 heroLabel: "Belgrade museums / hero"
 heroAlt: "Inside one of Belgrade's museums"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 6
 visible: true
 intent: "leisure"
@@ -49,7 +49,7 @@ The practical catch worth stating plainly: payment is **cash only in RSD** — c
 
 ## National Museum of Serbia (Republic Square)
 
-Where it is: directly on Republic Square (Trg Republike), at the eastern end of the Knez Mihailova pedestrian street in the Stari Grad old town — about as central as Belgrade gets, and a natural anchor for a walking tour. The square is a major transit hub, so it is easy to reach by bus or tram and walkable from most central accommodation.
+Where it is: directly on Republic Square (Trg Republike), at the eastern end of the [Knez Mihailova](/glossary/knez-mihailova) pedestrian street in the Stari Grad old town — about as central as Belgrade gets, and a natural anchor for a walking tour. The square is a major transit hub, so it is easy to reach by bus or tram and walkable from most central accommodation.
 
 Serbia's flagship art and archaeology collection sits on Republic Square. The reported pattern is Tuesday, Wednesday, Friday and Sunday 10:00–18:00, with Thursday and Saturday running later to 20:00, and Monday closed. Tickets are 300 RSD for the permanent exhibition, 500 RSD for temporary shows and 600 RSD combined; students get 50% off and under-sevens are free. Admission is free on Sundays.
 
@@ -73,4 +73,4 @@ Tickets are 800 RSD full; 600 RSD for Serbian residents; 200 RSD for resident st
 
 ## Military Museum (Kalemegdan)
 
-Where it is: inside Belgrade Fortress (Kalemegdan), on the ridge above the Sava–Danube confluence at the north-west edge of the old town, a 
+Where it is: inside Belgrade Fortress (Kalemegdan), on the ridge above the Sava–Danube confluence at the north-west edge of the old town, a short walk from Republic Square along Knez Mihailova. Because it sits within the fortress park, you can combine it with the walls, viewpoints and the wider park in a single visit.

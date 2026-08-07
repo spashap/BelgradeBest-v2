@@ -7,7 +7,7 @@ description: "Belgrade hotels vs apartments compared: which to book by trip type
 lede: "For a short first trip, a hotel is the safest default in Belgrade: easy check-in, your 24-hour foreigner registration handled for you, and a clear non-smoking request. For families, longer stays or anyone who wants a kitchen and more space for the money, a private or serviced apartment usually wins — but only once you have confirmed the host will register you, the payment and deposit are clear, and the listing is booked through a protected platform."
 heroLabel: "Belgrade hotels vs apartments / hero"
 heroAlt: "Split view of a Belgrade hotel reception desk beside the living room of a modern Belgrade apartment"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 9
 visible: true
 intent: "both"
@@ -78,7 +78,7 @@ A hotel is the lowest-friction way to stay in Belgrade, which is why it is the b
 
 ## Serviced apartments and aparthotels: the middle ground
 
-Serviced apartments and aparthotels sit between a hotel and a private rental: apartment space with some hotel-style management. They are common in newer buildings in New Belgrade and along the Belgrade Waterfront, and they suit families, longer stays and business travellers who want room to spread out.
+Serviced apartments and aparthotels sit between a hotel and a private rental: apartment space with some hotel-style management. They are common in newer buildings in New Belgrade and along the [Belgrade Waterfront](/glossary/belgrade-waterfront), and they suit families, longer stays and business travellers who want room to spread out.
 
 **What you gain:** more space, a kitchen and often a washing machine, and frequently a newer, better-equipped unit than the old-town average.
 
@@ -171,4 +171,3 @@ There is no single best answer — only the best fit for your trip:
 - **A novelty river night:** a **floating stay**, as an experience rather than a base.
 
 Whatever the type, the same rule holds for apartments: **confirm registration, deposit, key handover and listing safety in writing before you pay.** For choosing the right area to put yourself in, see [where to stay in Belgrade](/where-to-stay/where-to-stay-in-belgrade).
-                                                                          

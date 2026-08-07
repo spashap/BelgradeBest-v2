@@ -46,7 +46,7 @@ Neither is "the best" in the abstract. They trade off differently on walkability
 
 ## Where do these two areas sit?
 
-Belgrade sits where the **Sava** and **Danube** rivers meet, and the historic core is on the old-city side, just east and south-east of that confluence. **[Kalemegdan](/glossary/kalemegdan) Fortress** overlooks the meeting of the rivers, and **Republic Square** with the pedestrian **Knez Mihailova** street are the two orientation points everything else hangs off.
+Belgrade sits where the **Sava** and **Danube** rivers meet, and the historic core is on the old-city side, just east and south-east of that confluence. **[Kalemegdan](/glossary/kalemegdan) Fortress** overlooks the meeting of the rivers, and **Republic Square** with the pedestrian **[Knez Mihailova](/glossary/knez-mihailova)** street are the two orientation points everything else hangs off.
 
 **Stari Grad** wraps around all three. It is the most central tourist municipality — described officially as Belgrade's tourist, cultural, historical and business heart — so a base here usually puts the classic sights a short walk away.
 

@@ -7,7 +7,7 @@ description: "Where to stay in Belgrade with family: the most family-friendly ar
 lede: "For most families, the best fit is a quiet, residential base with a lift and space to spread out: central Vračar, the larger apartments of New Belgrade, or a calmer pocket of Zemun. Belgrade is a good city to visit with kids — the trick is choosing the right micro-location and confirming a handful of family details before you book."
 heroLabel: "Where to stay in Belgrade with family / hero"
 heroAlt: "A family walking a quiet residential street in central Belgrade, near a park, with apartment buildings in the background."
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 3
 visible: true
 intent: "both"
@@ -90,4 +90,4 @@ Apartments give families space, but they also vary far more than hotels, so a sh
 - **Nearest supermarket and pharmacy.** Ask how far the nearest supermarket and pharmacy are; with kids you will use both, and it shapes how much the location really works.
 - **Registration.** Foreign visitors must be registered within 24 hours, and registered accommodation providers should handle it. Hotels normally register you; for a private apartment, ask the host directly: "Will you register my stay within 24 hours?" A self-check-in lockbox does not remove that responsibility — confirm how it is handled.
 
-Two more practical notes. Book through a protected platform or a verifiable agency, and treat any pressure to leave the platform or wire money to a random private account as a red flag — though some legitimate local apartment agencies do take a clearly stated cash payment or deposit at key handover. And Belgrade adds a small per-night city tax to registered stays: as of the latest official source, children under 7 are exempt and children aged 7–15 pay half, but check whether it is included in the rate or ad
+Two more practical notes. Book through a protected platform or a verifiable agency, and treat any pressure to leave the platform or wire money to a random private account as a red flag — though some legitimate local apartment agencies do take a clearly stated cash payment or deposit at key handover. And Belgrade adds a small per-night city tax to registered stays: as of the latest official source, children under 7 are exempt and children aged 7–15 pay half, but check whether it is included in the rate or added as a separate line at check-in.

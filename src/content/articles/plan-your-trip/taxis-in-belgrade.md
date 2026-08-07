@@ -42,7 +42,7 @@ So the goal isn't to avoid taxis — they're cheap and useful — it's to use th
 
 ## Which taxi apps actually work in Belgrade?
 
-This is where most guides get it wrong, so it's worth being blunt: **as of 2026, Uber and Bolt do not operate in Belgrade.** The apps that do work are **CarGo** and **Yandex Go**.
+This is where most guides get it wrong, so it's worth being blunt: **as of 2026, Uber and Bolt do not operate in Belgrade.** The apps that do work are **[CarGo](/glossary/cargo)** and **Yandex Go**.
 
 Both function much like Uber does elsewhere — you order a car from your phone, watch it arrive on the map, and pay by card or cash, with the price shown before you confirm. **CarGo** is the home-grown, Uber-style option and is the one most visitors reach for; its regulatory status has been contested over the years, but it continues to operate. **Yandex Go** is widely used, reliable, and also lets you pay by card. Either one removes the two things that trip visitors up: there's no fare to haggle over, and no address to explain across a language barrier, because you set the destination in the app.
 
@@ -50,7 +50,7 @@ If you take one thing from this page, make it this: install CarGo or Yandex Go b
 
 ## How do you get a taxi from the airport without getting ripped off?
 
-The airport run is where overcharging is most common, and it has a simple, official fix. Belgrade Nikola Tesla Airport operates a **fixed-price taxi voucher system**: self-service e-kiosks in the baggage-reclaim area and the arrivals lounge print a voucher with a set price to your destination zone. You take that voucher to the official taxi rank, and the price is locked in before you ride — no meter games, no surprises.
+The airport run is where overcharging is most common, and it has a simple, official fix. Belgrade [Nikola Tesla Airport](/glossary/nikola-tesla-airport) operates a **fixed-price taxi voucher system**: self-service e-kiosks in the baggage-reclaim area and the arrivals lounge print a voucher with a set price to your destination zone. You take that voucher to the official taxi rank, and the price is locked in before you ride — no meter games, no surprises.
 
 The alternative is just as good: order a **CarGo or Yandex Go** car from the app and meet it at the pickup point, again with the price agreed up front. What you should *not* do is accept an offer from someone who approaches you inside the terminal or by the doors. Those touts, leading you to an unmarked car at a "special price," are exactly who the overcharging warnings are about. Use the kiosk voucher or an app and you're fine.
 

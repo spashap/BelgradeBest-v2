@@ -54,17 +54,17 @@ If you only remember a short list, make it this one. Each dish below says what i
 
 The grill — *roštilj* — is the heart of everyday Serbian eating, and these are the orders you'll see everywhere.
 
-**Ćevapi** (also called [ćevapčići](/glossary/cevapi)) — Serbia's national dish. They are small grilled minced-meat sausages — beef, pork, lamb or a mix — served with flatbread, raw onions and accompaniments like kajmak and ajvar. *Why try it:* this is the quintessential grill order and the single most Serbian thing you can eat — cheap, fast, satisfying and available almost anywhere from a street kiosk to a [kafana](/glossary/kafana).
+**Ćevapi** (also called [ćevapčići](/glossary/cevapi)) — Serbia's national dish. They are small grilled minced-meat sausages — beef, pork, lamb or a mix — served with flatbread, raw onions and accompaniments like [kajmak](/glossary/kajmak) and [ajvar](/glossary/ajvar). *Why try it:* this is the quintessential grill order and the single most Serbian thing you can eat — cheap, fast, satisfying and available almost anywhere from a street kiosk to a [kafana](/glossary/kafana).
 
 **[Pljeskavica](/glossary/pljeskavica)** — a large grilled minced-meat patty, the Serbian relative of a burger, usually eaten in or alongside flatbread. The Leskovac style (from the south) is a well-known spicy variant. *Why try it:* it's the heartier, hand-held cousin of ćevapi — order it stuffed with kajmak or topped with the spreads for the full effect.
 
-**Karađorđeva šnicla** — a Serbian signature: a rolled, breaded and fried veal or pork escalope stuffed with kajmak, often served with tartar sauce. *Why try it:* it's the indulgent, restaurant-style dish on this list — rich, crisp on the outside, oozing kajmak inside, and unmistakably Serbian. A great "special occasion" order.
+**[Karađorđeva šnicla](/glossary/karadjordjeva-snicla)** — a Serbian signature: a rolled, breaded and fried veal or pork escalope stuffed with kajmak, often served with tartar sauce. *Why try it:* it's the indulgent, restaurant-style dish on this list — rich, crisp on the outside, oozing kajmak inside, and unmistakably Serbian. A great "special occasion" order.
 
-**Pečenje** — roasted meat: whole-roasted pork, lamb or goat. *Why try it:* it's central to celebrations such as the *slava* (a family's patron-saint day) and weddings, so ordering it taps into the most festive side of the cuisine. Seek it out at a proper kafana or roast house rather than a quick grill.
+**Pečenje** — roasted meat: whole-roasted pork, lamb or goat. *Why try it:* it's central to celebrations such as the *[slava](/glossary/slava)* (a family's patron-saint day) and weddings, so ordering it taps into the most festive side of the cuisine. Seek it out at a proper kafana or roast house rather than a quick grill.
 
 ### The winter and home dishes
 
-**Sarma** — cabbage rolls: fermented or pickled cabbage leaves stuffed with minced meat and rice, then slow-cooked, often in a rich tomato-and-smoked-meat sauce. *Why try it:* it's arguably the most widely cooked dish in Serbian homes and the comfort food locals miss most when abroad. A winter and special-occasion dish, so it's best in the colder months.
+**[Sarma](/glossary/sarma)** — cabbage rolls: fermented or pickled cabbage leaves stuffed with minced meat and rice, then slow-cooked, often in a rich tomato-and-smoked-meat sauce. *Why try it:* it's arguably the most widely cooked dish in Serbian homes and the comfort food locals miss most when abroad. A winter and special-occasion dish, so it's best in the colder months.
 
 **Prebranac** — slow-baked seasoned beans, a humble staple. *Why try it:* it's the everyday counterweight to all that meat — inexpensive, deeply savoury, and one of the few traditional dishes that is accidentally plant-based, which makes it the vegetarian's friend on an otherwise carnivorous menu.
 
@@ -72,7 +72,7 @@ The grill — *roštilj* — is the heart of everyday Serbian eating, and these 
 
 **[Burek](/glossary/burek)** — a flaky filled pastry (meat, cheese or other fillings), sold by the slice in bakeries and traditionally eaten with drinking yoghurt to cut the richness. *Why try it:* it's the classic Serbian breakfast and the standard food after a late night — the how-and-where lives on the [grill and street food](/food-and-nightlife/belgrade-grill-and-street-food) page.
 
-**Gibanica** — a layered cheese-and-egg filo pastry, softer and richer than burek. *Why try it:* it's the celebratory bake — the thing that appears at family gatherings — and a very good bakery order for cheese lovers.
+**[Gibanica](/glossary/gibanica)** — a layered cheese-and-egg filo pastry, softer and richer than burek. *Why try it:* it's the celebratory bake — the thing that appears at family gatherings — and a very good bakery order for cheese lovers.
 
 **Komplet lepinja** — a western-Serbian speciality: a soft flatbread loaded with kajmak, meat-roasting gravy and egg, baked until everything soaks in. *Why try it:* it's the most indulgent bread dish in the repertoire, and a genuine curiosity if you've never met it.
 

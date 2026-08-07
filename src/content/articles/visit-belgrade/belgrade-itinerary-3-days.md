@@ -38,7 +38,7 @@ faqs:
 
 The consensus across independent itineraries and guides is that at least three days is ideal to see Belgrade's main sights plus a couple of neighbourhoods, with compressed one- and two-day options also common. Three days lets you add a few quieter corners beyond the centre rather than rushing the headline sites. If your time is shorter, the same plan compresses cleanly:
 
-- **One day** covers the central spine on foot — Republic Square → Knez Mihailova → Belgrade Fortress → [Skadarlija](/glossary/skadarlija), all within walking distance.
+- **One day** covers the central spine on foot — Republic Square → [Knez Mihailova](/glossary/knez-mihailova) → Belgrade Fortress → [Skadarlija](/glossary/skadarlija), all within walking distance.
 - **Two days** keeps that first day intact and adds a neighbourhood and a museum (Vračar for the Temple of St. Sava and the Nikola Tesla Museum).
 - **Three days** adds a half-day escape on top — Zemun, [Ada Ciganlija](/glossary/ada-ciganlija) or Avala — or a full day trip out of the city.
 

@@ -7,7 +7,7 @@ description: "Splavovi Belgrade — how the floating river clubs work: the May�
 lede: "Splavovi — the floating bars and clubs moored along Belgrade's rivers — are the city's signature night out. Here's how the scene actually works: when it runs, where on the Sava and Danube to find it, what changed after the recent quay clean-up, and how to avoid the table-minimum traps."
 heroLabel: "Belgrade splavovi / hero"
 heroAlt: "Illuminated floating river clubs on the water at night"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 1
 visible: true
 intent: "leisure"
@@ -54,4 +54,4 @@ Over 2024 and 2025 the city ran a multi-year river clean-up and regulation drive
 
 The city's stated plan is to replace the roughly 100 informal rafts that once lined the Sava promenade with a much smaller number of **regulated, licensed splavovi** — on the order of 28–30 tendered locations, spaced apart, connected to proper water, electricity and wastewater infrastructure, in standardised sizes. In other words, the river is expected to end up with substantially fewer splavovi than before — by some accounts up to two-thirds fewer — but better-regulated ones (REPORTED, city plan as of 2025–2026; figures and timeline are perishable and have been described as running behind schedule).
 
-What this means for you as a visitor in 2026: the institution is intact and the summer season still happens, but the **map is in flux**. The names, the count and the exact quay where the busiest clubs cluster are all changing. Treat any specific venue or location below as illustrative of a *zone and a
+What this means for you as a visitor in 2026: the institution is intact and the summer season still happens, but the **map is in flux**. The names, the count and the exact quay where the busiest clubs cluster are all changing. Treat any specific venue or location below as illustrative of a *zone and a type*, and confirm the current cluster locally — ask your accommodation, check a current local listings site, or look at where the lights and crowds actually are — rather than trusting a fixed list.

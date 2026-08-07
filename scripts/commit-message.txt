@@ -1,43 +1,34 @@
-Pavilions batch 2: 12 -> 19 published profiles (+4 gatekeeper prospects)
+SEO long-tail build-out: glossary 11->31 terms, tracker->pavilion links, repair 18 truncated articles
 
-Processes the owner's second Perplexity Deep Research run using the
-token-economics pipeline: Fable triage -> verification spot-checks -> 7
-PARALLEL SONNET SUBAGENTS drafted the profile JSONs -> Fable review pass.
-Audit record: KB/platform/research/2026-07-06-perplexity-pavilions-batch2.md;
-runbook updated (last-run, watch list, and the Sonnet-fan-out pattern
-documented as standard practice — the review pass caught real defects:
-a stitched-together quote, HTML-escaped URLs, a wrong-source date).
+Glossary (the format that actually ranks for us — splav pos 3, burek indexed
+while head terms sit page 5+): 20 new terms across Food & drink (kajmak, ajvar,
+sarma, gibanica, karadjordjeva-snicla, sopska-salata, domaca-kafa, pekara),
+Culture (slava, turbo-folk), Practical (kosava, dinar, cargo, bg-voz,
+nikola-tesla-airport), Places (belgrade-waterfront, knez-mihailova,
+saint-sava-temple) and Expo 2027 (specialised-expo, bie). Drafted by a Sonnet
+subagent grounded in the site's own articles, Fable review pass, thin-content
+guard validated. Branded SVG thumbs generated; gen-glossary-links.mjs --write
+added 78 first-mention links across 36 articles (diff verified append-only).
 
-Verified before drafting: KOTRA's KRW 9bn Korean-pavilion tender confirmed
-directly on kia.or.kr; Slovakia's first-participation-contract + M Pavilion
-confirmed on the organizer's official news.
+Tracker: the named-country table on /expo-2027/tracker now links each country
+to its published pavilion profile (19 links) — feeds crawl paths + internal
+link equity to the listing pages, most of which Google reports as
+"Discovered/unknown - not indexed".
 
-7 new published pavilion profiles (all sourced, FAQPage-carrying):
-- Slovakia — the batch's richest: 648 m2 in Hall 6 over two floors, first
-  Participation Contract of the whole Expo (12 Nov 2025), architectural
-  competition (EUR 414k design / EUR 3.85M build estimates), concept
-  "Slovakia - A Playground of Opportunities".
-- South Korea — KOTRA KRW 9bn exhibition-service tender, negotiated-bid,
-  contract to 30 Nov 2027.
-- Bosnia and Herzegovina — contract signed 2-3 Jul 2026 (days old),
-  Commissioner Stasa Kosarac.
-- Israel — participation agreement ~1 Feb 2026, Commissioner Yahel Vilan.
-- Azerbaijan — World Expo veteran (Milan/Astana/Beijing/Dubai), culture-led
-  showcase per the organizer's page.
-- North Macedonia — "experiential tourism" narrative, concept-only.
-- Turkmenistan — upgraded from category stub to full profile (tender
-  re-announced, closed 13 Apr 2026, winner unknown); slug migrated
-  turkmenistan-pavilion -> turkmenistan, agency child repointed, stub deleted.
+Content repair: found and fixed 18 articles still live with truncated
+paragraph endings (leftovers of the e928564 glossary-linker incident, some
+cut mid-word: "was hu", "without tr"). Tails restored verbatim from git
+history (9645a97/f359808), the understanding-belgrade Eagle Hills sentence
+recovered, a NUL-byte artifact line removed from belgrade-hotels-vs-apartments.
+lastUpdated bumped on all repaired articles to drive recrawl.
 
-4 new gatekeeper prospects (unpublished, operator-only): Slovakia Travel
-(companies REGISTER for Slovakia's Expo program since mid-May 2026 —
-booth-list angle), KOTRA World Expo Team, BiH Ministry of Foreign Trade,
-Israel Section Commissioner office. Turkmenistan ministry notes enriched
-with published phone numbers.
+Ops done outside the repo: GSC service account wired into the local SEO
+toolkit; sitemap resubmitted via GSC API; URL Inspection sweep of all 124
+URLs (75 indexed / 49 not). Owner action for the push channels: enable
+"Web Search Indexing API" in GCP project 84485651625 (both Indexing API and
+IndexNow returned 403 today; build-time IndexNow ping fires on deploy anyway).
 
-Assets regenerated: 25 OG cards, 20 QR codes.
-
-Build verified: 19 pavilion pages + WEM child prerendered, 21 pavilion URLs
-in the sitemap, 64 listing JSONs parse, zero contact leakage in public HTML.
+Build verified: 31 glossary pages + index prerendered, 144 URLs in sitemap
+(was 124), 19 pavilion links render on the tracker.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

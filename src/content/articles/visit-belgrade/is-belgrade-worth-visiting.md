@@ -7,7 +7,7 @@ description: "Is Belgrade worth visiting? An honest yes — it's safe, affordabl
 lede: "Belgrade is worth visiting precisely because it isn't conventionally pretty — its layered, crossroads history is the draw. Here's the honest case: how safe it is, what it costs, and when to go."
 heroLabel: "Is Belgrade worth visiting / hero"
 heroAlt: "A visitor enjoying Belgrade and deciding the city is worth the trip"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 1
 visible: true
 intent: "leisure"
@@ -36,7 +36,7 @@ unknowns: []
 
 Yes — Belgrade is worth visiting, and it's worth it for the opposite of the usual reason. The common doubt is fair: isn't it just grey concrete, not especially pretty? That's exactly the point. Belgrade rewards you because it is layered rather than conventionally pretty — the crossroads history, the visible succession of empires, and the Brutalist and socialist heritage are the draw, not a drawback. If you want a postcard-perfect old town, look elsewhere. If you want a city that wears its complicated past in plain sight, this is it. It's also safe with sensible caution, affordable if no longer bargain-basement, and easy to get around on foot.
 
-The compact core makes that easy to see in a few days. Most of the headline sights cluster in Stari Grad, the historic old-town district on the right bank: Republic Square (Trg Republike) is the central orientation point and the natural place to start, and from there the pedestrian spine of Knez Mihailova runs north-west to Belgrade Fortress ([Kalemegdan](/glossary/kalemegdan)), which sits on a ridge at the confluence of the Sava and Danube rivers — a roughly 10-to-15-minute walk end to end, with panoramic river views at the top. The bohemian [kafana](/glossary/kafana) quarter of [Skadarlija](/glossary/skadarlija) is a short downhill walk east of Republic Square, and the riverfront nightlife of Savamala lies just south-west, down the slope toward the Sava. The rivers themselves — [Ada Ciganlija](/glossary/ada-ciganlija) and the Danube — add a summer dimension.
+The compact core makes that easy to see in a few days. Most of the headline sights cluster in Stari Grad, the historic old-town district on the right bank: Republic Square (Trg Republike) is the central orientation point and the natural place to start, and from there the pedestrian spine of [Knez Mihailova](/glossary/knez-mihailova) runs north-west to Belgrade Fortress ([Kalemegdan](/glossary/kalemegdan)), which sits on a ridge at the confluence of the Sava and Danube rivers — a roughly 10-to-15-minute walk end to end, with panoramic river views at the top. The bohemian [kafana](/glossary/kafana) quarter of [Skadarlija](/glossary/skadarlija) is a short downhill walk east of Republic Square, and the riverfront nightlife of Savamala lies just south-west, down the slope toward the Sava. The rivers themselves — [Ada Ciganlija](/glossary/ada-ciganlija) and the Danube — add a summer dimension.
 
 It works simply as a city break, and tourism has been rising: Belgrade drew roughly 1.38 million visitors in 2023, up 17% year on year, and Serbia as a whole received 4.43 million tourists in 2024, with Belgrade accounting for about 29.3% of overnight stays. For a sense of how to fill the time, see [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) and the [three-day itinerary](/visit-belgrade/belgrade-itinerary-3-days).
 
@@ -56,4 +56,4 @@ What keeps a low-budget trip genuinely viable is how much is free. The fortress 
 
 The best months are April to June and September to October — mild weather, festivals, and fewer extremes than mid-summer, when July and August can be very hot.
 
-There is one date worth planning around. Expo 2027, a specialised exposition, runs from 15 May to 15 August 2027, projected at roughly 4–4.1 million visitors, with 130+ countries participating as of early 2026. It will intensify summer crowds and prices 
+There is one date worth planning around. Expo 2027, a specialised exposition, runs from 15 May to 15 August 2027, projected at roughly 4–4.1 million visitors, with 130+ countries participating as of early 2026. It will intensify summer crowds and prices that year. If you aren't attending Expo, the shoulder months in 2027 are likely to be the more comfortable choice.

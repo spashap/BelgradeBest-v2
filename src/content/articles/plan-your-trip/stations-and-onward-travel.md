@@ -57,7 +57,7 @@ Prokop is connected to the city by several bus lines and by suburban rail, all f
 
 - **Bus line 36** is the key one: a circular route, running roughly every 20 minutes, that links Prokop with the old-town area near the former station, Slavija and Savski Trg.
 - **Lines 34, 38A, 40, 41 and 44** also serve the station.
-- **BG Voz** suburban trains stop there too.
+- **[BG Voz](/glossary/bg-voz)** suburban trains stop there too.
 
 All of these are free — you can read more about how that works in our guide to [getting around Belgrade](/plan-your-trip/getting-around).
 

@@ -35,7 +35,7 @@ faqs:
 
 ## Where should you stay for Expo 2027?
 
-For [Expo 2027](https://www.bie-paris.org/site/en/2027-belgrade) (15 May–15 August 2027), the simplest rule is to match your base to the purpose of your trip. The Expo site sits at **Surčin**, on the western edge of Belgrade — roughly 15 km from the city centre and only about 5 km from Nikola Tesla Airport, in a brand-new district being built between **New Belgrade** and the Sava river.
+For [Expo 2027](https://www.bie-paris.org/site/en/2027-belgrade) (15 May–15 August 2027), the simplest rule is to match your base to the purpose of your trip. The Expo site sits at **Surčin**, on the western edge of Belgrade — roughly 15 km from the city centre and only about 5 km from [Nikola Tesla Airport](/glossary/nikola-tesla-airport), in a brand-new district being built between **New Belgrade** and the Sava river.
 
 That geography gives you three broad options:
 
@@ -65,7 +65,7 @@ For the exact routes from each base to the venue (and from the airport), see [ge
 
 ## Staying in the historic centre: Stari Grad and Vračar
 
-If you came for Belgrade as much as for the Expo, base in the **old town**. The historic core — **Stari Grad** around Knez Mihailova, Republic Square and [Kalemegdan](/glossary/kalemegdan), plus neighbouring **Vračar** and **Dorćol** — is the walkable, café-dense, nightlife-rich city most visitors picture. You can sightsee on foot and step out to restaurants and bars without a car.
+If you came for Belgrade as much as for the Expo, base in the **old town**. The historic core — **Stari Grad** around [Knez Mihailova](/glossary/knez-mihailova), Republic Square and [Kalemegdan](/glossary/kalemegdan), plus neighbouring **Vračar** and **Dorćol** — is the walkable, café-dense, nightlife-rich city most visitors picture. You can sightsee on foot and step out to restaurants and bars without a car.
 
 The cost is the commute. The centre sits on the right bank of the Sava, so every Expo day means a cross-river trip out to Surčin on the western edge of town. That is manageable, but it is a real daily journey rather than a short hop, and traffic during a major event is unpredictable.
 

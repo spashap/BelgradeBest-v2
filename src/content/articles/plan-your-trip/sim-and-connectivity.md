@@ -35,7 +35,7 @@ faqs:
 
 ## What's the fastest way to get mobile data in Belgrade?
 
-Install a travel eSIM before you fly, then switch it on when your plane lands. You walk out of Belgrade Nikola Tesla Airport (BEG) already online — no queue, no passport form, no hunting for a kiosk. If you would rather hold a physical card, buy a tourist prepaid SIM in the arrivals hall from one of Serbia's three operators. Either way you are connected within minutes of landing.
+Install a travel eSIM before you fly, then switch it on when your plane lands. You walk out of Belgrade [Nikola Tesla Airport](/glossary/nikola-tesla-airport) (BEG) already online — no queue, no passport form, no hunting for a kiosk. If you would rather hold a physical card, buy a tourist prepaid SIM in the arrivals hall from one of Serbia's three operators. Either way you are connected within minutes of landing.
 
 Mobile coverage is the part you do not need to worry about. All three networks deliver fast 4G across Belgrade and reliable service in the main tourist and business areas, so the decision is about price, plan length, and convenience — not signal.
 

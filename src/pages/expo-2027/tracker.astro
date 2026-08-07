@@ -19,7 +19,7 @@ import {
   officialCount,
   updated,
 } from "../../lib/expo-participants";
-import { listingsIndexable } from "../../lib/listings";
+import { listingsIndexable, listingsForLeg, listingHref } from "../../lib/listings";
 
 // The independent participant tracker — a citable data page (link magnet):
 // headline figures, growth timeline, and the full named-country table. Data
@@ -28,6 +28,17 @@ import { listingsIndexable } from "../../lib/listings";
 const PATH = "/expo-2027/tracker";
 const URL_ = `${SITE.origin}${PATH}`;
 const regions = byRegion();
+
+// Country name → published pavilion profile, so the tracker table (this site's
+// most-crawled data page) feeds crawl paths + link equity to the listing pages.
+const pavilionByName = new Map<string, string>();
+if (listingsIndexable) {
+  for (const l of listingsForLeg("expo-2027")) {
+    if (l.type !== "pavilion") continue;
+    pavilionByName.set(l.name.toLowerCase(), listingHref(l));
+    if (l.shortName) pavilionByName.set(l.shortName.toLowerCase(), listingHref(l));
+  }
+}
 
 const fmt = (d: string) =>
   new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
@@ -152,7 +163,13 @@ const schemas: object[] = [
         <tbody>
           {participants.map((p) => (
             <tr>
-              <td>{p.name}{p.host ? " (host)" : ""}</td>
+              <td>
+                {pavilionByName.has(p.name.toLowerCase()) ? (
+                  <a href={pavilionByName.get(p.name.toLowerCase())}>{p.name}</a>
+                ) : (
+                  p.name
+                )}{p.host ? " (host)" : ""}
+              </td>
               <td>{p.region}</td>
               <td>{p.announced ? fmt(p.announced) : "—"}</td>
             </tr>

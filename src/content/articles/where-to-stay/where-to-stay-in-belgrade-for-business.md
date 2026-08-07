@@ -7,7 +7,7 @@ description: "Where to stay in Belgrade for business: New Belgrade business hote
 lede: "For most business and conference trips, the best fit is New Belgrade — it has the city's cluster of business hotels, the easiest road and airport access, and the most reliable parking. Stay central in Savski Venac or a Stari Grad business hotel if your meetings are downtown and you want walkable evenings. The single decision that matters more than the district name: confirm the traffic route to where you actually need to be each morning."
 heroLabel: "Where to stay in Belgrade for business / hero"
 heroAlt: "New Belgrade business district with high-rise hotels and wide boulevards across the Sava from the old city"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 5
 visible: true
 intent: "both"
@@ -47,15 +47,15 @@ There isn't one right answer, because "best" depends on where you actually need 
 
 - **Meetings in New Belgrade or near the airport:** stay in New Belgrade.
 - **Meetings downtown, want walkable evenings:** stay in Savski Venac or a central Stari Grad hotel.
-- **Meetings near the Sava riverfront:** Belgrade Waterfront or Savamala work well.
+- **Meetings near the Sava riverfront:** [Belgrade Waterfront](/glossary/belgrade-waterfront) or Savamala work well.
 - **Early flight out:** lean toward New Belgrade or the Surčin/airport side.
 
 ## How is the city laid out for a work trip?
 
 Belgrade sits where the **Sava** and **Danube** rivers meet. Visitors quickly notice two Belgrades:
 
-- **Old Belgrade** — the historic right-bank core (Stari Grad, Dorćol, Savamala, Vračar, Savski Venac). This is the walkable, atmospheric side, with the National Theatre, Knez Mihailova, [Kalemegdan](/glossary/kalemegdan) Fortress and most classic restaurants.
-- **New Belgrade** — across the Sava, with broad boulevards, business hotels, office towers, shopping centres and larger apartments, plus the quickest road access toward Nikola Tesla Airport, Zemun and Surčin.
+- **Old Belgrade** — the historic right-bank core (Stari Grad, Dorćol, Savamala, Vračar, Savski Venac). This is the walkable, atmospheric side, with the National Theatre, [Knez Mihailova](/glossary/knez-mihailova), [Kalemegdan](/glossary/kalemegdan) Fortress and most classic restaurants.
+- **New Belgrade** — across the Sava, with broad boulevards, business hotels, office towers, shopping centres and larger apartments, plus the quickest road access toward [Nikola Tesla Airport](/glossary/nikola-tesla-airport), Zemun and Surčin.
 
 For a work trip, this geography is the whole decision. New Belgrade is stronger for logistics; the old core is stronger for atmosphere and walkability. Nikola Tesla Airport is to the **west** of the centre, which is exactly why the western, New Belgrade side is convenient for anyone flying in and out on a tight schedule.
 
@@ -131,4 +131,4 @@ Tipping is appreciated but not mandatory. A rough cheat-sheet: around **10% in r
 
 ## A simple decision, made twice
 
-Pick your district by your meeting location first: **New Belgr
+Pick your district by your meeting location first: **New Belgrade** for logistics, airport access and parking; **Savski Venac or a central Stari Grad hotel** for walkable downtown evenings; **Belgrade Waterfront/Savamala** for riverfront meetings. Then, before you pay, confirm the one thing that overrides the district name — the **morning traffic route to where you actually need to be** — along with reliable reception, parking or taxi support, and breakfast that fits your schedule. Get those right and the rest of the trip runs itself.

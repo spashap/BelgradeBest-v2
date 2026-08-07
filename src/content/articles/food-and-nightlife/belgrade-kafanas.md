@@ -7,7 +7,7 @@ description: "What a Belgrade kafana is and how to enjoy one — the traditional
 lede: "A Belgrade kafana is the heart of how Serbians eat, drink and socialise — part traditional tavern, part café, part live-music venue. Here's what one actually is, the etiquette, the best kafanas in Belgrade, and the difference between Skadarlija's showpiece restaurants and the local neighbourhood kind."
 heroLabel: "Belgrade kafanas / hero"
 heroAlt: "A traditional Belgrade kafana with a tamburica band playing"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 6
 visible: true
 intent: "leisure"
@@ -54,4 +54,4 @@ The quarter took shape in the late 19th century as a gathering place for Belgrad
 
 The honest answer is that the *named* kafanas worth seeking out are the old institutions, because those are the ones that endure — newer concept kafanas and gastropub hybrids come and go, so treat any single recommendation as illustrative rather than a ranking.
 
-The oldest name in the city's kafana lore sits a little away from Skadarska Street. The **"?" (Znak Pitanja)** kafana is widely cited as the oldest still-operating kafana in Belgrade. It is reported to occupy a building dating to 1823 on Kralja Petra Street, near the Cathedral Church, originally an Ottoman-era coffeehouse and now serving traditional Serbian dishes with *starogradska* music in a preserved, heritage-protected interior. Its famous one-character name is reported to come from a 19th-century dispute: when a 1890s owner wanted to name it after the nearby cathedral, the Orthodox Church objected, so a question mark was hu
+The oldest name in the city's kafana lore sits a little away from Skadarska Street. The **"?" (Znak Pitanja)** kafana is widely cited as the oldest still-operating kafana in Belgrade. It is reported to occupy a building dating to 1823 on Kralja Petra Street, near the Cathedral Church, originally an Ottoman-era coffeehouse and now serving traditional Serbian dishes with *starogradska* music in a preserved, heritage-protected interior. Its famous one-character name is reported to come from a 19th-century dispute: when a 1890s owner wanted to name it after the nearby cathedral, the Orthodox Church objected, so a question mark was hung on the door as a temporary fix — and it stuck. Treat the precise dates and the story as reported rather than settled, but the institution itself is durable and safe to seek out.

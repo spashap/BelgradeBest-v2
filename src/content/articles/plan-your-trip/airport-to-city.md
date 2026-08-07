@@ -39,7 +39,7 @@ unknowns: []
 
 ## What's the best way from Belgrade airport to the city centre?
 
-The short answer: if you want **free**, take **bus 72** to Zeleni Venac in the centre. If you want **fast and cheap with luggage room**, take the paid **A1 minibus** to Slavija for about 400 RSD. If you want **door to door**, use the airport's **official voucher taxi** (a fixed fare, no meter haggling) or a **ride-hail app** like Yandex Go or CarGo — there is no Uber or Bolt in Belgrade. A direct **airport–city train** is under construction but not yet running as of mid-2026.
+The short answer: if you want **free**, take **bus 72** to Zeleni Venac in the centre. If you want **fast and cheap with luggage room**, take the paid **A1 minibus** to Slavija for about 400 RSD. If you want **door to door**, use the airport's **official voucher taxi** (a fixed fare, no meter haggling) or a **ride-hail app** like Yandex Go or [CarGo](/glossary/cargo) — there is no Uber or Bolt in Belgrade. A direct **airport–city train** is under construction but not yet running as of mid-2026.
 
 Here is the at-a-glance comparison, all figures indicative and time-stamped to 2026:
 
@@ -51,7 +51,7 @@ Here is the at-a-glance comparison, all figures indicative and time-stamped to 2
 
 ## First, the basics
 
-Nikola Tesla Airport (BEG) sits about 18 km from the city centre, and a typical road journey takes 20–40 minutes depending on traffic. To put that in orientation terms, the centre is roughly 17–19 km away by road via the E75 motorway and the Gazela bridge: Republic Square and Knez Mihailova (the old-town core) are about 18 km out, Slavija Square (where the A1 minibus ends) a similar distance, and Zeleni Venac (where bus 72 ends) likewise central. The four sensible ways into town are the free city buses, the paid A1 minibus, the official voucher taxi, and an app-based ride. A future airport–city railway is under construction but not in service as of mid-2026, so for now your decision is between those four. For the wider picture of moving around the city once you arrive, see our guide to [getting around Belgrade](/plan-your-trip/getting-around).
+[Nikola Tesla Airport](/glossary/nikola-tesla-airport) (BEG) sits about 18 km from the city centre, and a typical road journey takes 20–40 minutes depending on traffic. To put that in orientation terms, the centre is roughly 17–19 km away by road via the E75 motorway and the Gazela bridge: Republic Square and [Knez Mihailova](/glossary/knez-mihailova) (the old-town core) are about 18 km out, Slavija Square (where the A1 minibus ends) a similar distance, and Zeleni Venac (where bus 72 ends) likewise central. The four sensible ways into town are the free city buses, the paid A1 minibus, the official voucher taxi, and an app-based ride. A future airport–city railway is under construction but not in service as of mid-2026, so for now your decision is between those four. For the wider picture of moving around the city once you arrive, see our guide to [getting around Belgrade](/plan-your-trip/getting-around).
 
 One note before fares: prices, timetables and app availability change. Where we give a figure below, treat it as indicative and time-stamped to 2026, and re-check closer to travel.
 
@@ -91,7 +91,7 @@ CarGo's regulatory status has been contested over the years, but it continues to
 
 ## When will the airport train to the city open?
 
-A new dual-track electrified passenger rail line of about 18.3 km is under construction, branching from the Belgrade–Novi Sad corridor at Zemun Polje and connecting the airport with the National Stadium and Expo site at Surčin. The planned BG Voz stopping pattern is reported as Prokop (Beograd Centar) → New Belgrade → Tošin Bunar → Zemun → Altina → Zemun Polje → Singidunum → Belgrade Airport → Surčin → National Stadium. The airport station will sit about 500 m from Terminal 1.
+A new dual-track electrified passenger rail line of about 18.3 km is under construction, branching from the Belgrade–Novi Sad corridor at Zemun Polje and connecting the airport with the National Stadium and Expo site at Surčin. The planned [BG Voz](/glossary/bg-voz) stopping pattern is reported as Prokop (Beograd Centar) → New Belgrade → Tošin Bunar → Zemun → Altina → Zemun Polje → Singidunum → Belgrade Airport → Surčin → National Stadium. The airport station will sit about 500 m from Terminal 1.
 
 Nine new EMU trains for the BG Voz line have been ordered from CRRC, with delivery reported to run from late 2025 into March 2027, testing of the line expected to begin around January 2027, and an operational launch reported for spring 2027 — in time for Expo — with an airport–centre journey of roughly 15–20 minutes. These dates are provisional, not settled, and should not be relied upon as an opening date.
 

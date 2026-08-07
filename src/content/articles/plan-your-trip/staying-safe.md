@@ -45,7 +45,7 @@ The more detailed picture is reassuring too. Violent crime exists mainly in orga
 
 Largely, yes. Belgrade is widely regarded as one of the safer Eastern European capitals for women travelling alone, and most solo female travellers report feeling comfortable, including walking in busy central areas after dark. Reported accounts (travel-safety sites and solo-travel communities, so treat as indicative rather than official) note that unsolicited verbal attention is less common in Belgrade than in some other Balkan capitals.
 
-The precautions are the universal big-city ones rather than anything Belgrade-specific. Keep an eye on your belongings in crowds and packed venues, use official or app-based taxis rather than unmarked cars (see the scams below), and avoid poorly lit or deserted areas late at night. Basing yourself in a central, walkable neighbourhood — Stari Grad, around Knez Mihailova and Republic Square, or [Skadarlija](/glossary/skadarlija) — keeps you close to busy streets and taxi ranks and reduces the need for long late-night walks alone.
+The precautions are the universal big-city ones rather than anything Belgrade-specific. Keep an eye on your belongings in crowds and packed venues, use official or app-based taxis rather than unmarked cars (see the scams below), and avoid poorly lit or deserted areas late at night. Basing yourself in a central, walkable neighbourhood — Stari Grad, around [Knez Mihailova](/glossary/knez-mihailova) and Republic Square, or [Skadarlija](/glossary/skadarlija) — keeps you close to busy streets and taxi ranks and reduces the need for long late-night walks alone.
 
 ## Is Belgrade safe at night?
 
@@ -65,7 +65,7 @@ Belgrade's scam list is short and stable, and all of it is avoidable with a few 
 
 ## Is Belgrade's nightlife safe?
 
-Largely yes. Crowded clubs and river barges (splavovi) can see occasional fights or pickpocketing, but such incidents are not systemic — the sensible version is watchfulness, not avoidance. Keep an eye on your belongings in packed venues, agree or confirm prices (drinks, tables, minimum spends) before committing so the bill holds no surprises, and end the night with a registered or app-based taxi rather than a long dark walk along the river.
+Largely yes. Crowded clubs and river barges ([splavovi](/glossary/splav)) can see occasional fights or pickpocketing, but such incidents are not systemic — the sensible version is watchfulness, not avoidance. Keep an eye on your belongings in packed venues, agree or confirm prices (drinks, tables, minimum spends) before committing so the bill holds no surprises, and end the night with a registered or app-based taxi rather than a long dark walk along the river.
 
 ## Emergency numbers
 

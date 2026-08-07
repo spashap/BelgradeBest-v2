@@ -107,7 +107,7 @@ The how-to for each of these lives on the dedicated pages: vetting on [choosing 
 
 ## Where in Belgrade do the clinics cluster?
 
-The private clinics serving foreign patients cluster in Belgrade, with Vračar repeatedly cited as the private-healthcare district. Novi Sad and Niš are also mentioned as smaller centres. Belgrade Nikola Tesla Airport is the main international gateway. These are reported patterns, as of 2026.
+The private clinics serving foreign patients cluster in Belgrade, with Vračar repeatedly cited as the private-healthcare district. Novi Sad and Niš are also mentioned as smaller centres. Belgrade [Nikola Tesla Airport](/glossary/nikola-tesla-airport) is the main international gateway. These are reported patterns, as of 2026.
 
 Vračar's character as a place to stay and walk around is a separate question, owned by the visitor guides — for that, see the [Belgrade neighbourhoods](/visit-belgrade/belgrade-neighborhoods) guide. Here it matters only as the area where clinics concentrate; transport, accommodation and currency sit with the planning guides, not this page.
 

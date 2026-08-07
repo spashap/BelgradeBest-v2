@@ -7,7 +7,7 @@ description: "Belgrade coffee culture: the Turkish-coffee (domaća kafa) ritual,
 lede: "Belgrade runs on coffee — long, social, lingering coffee — from thick domaća (Turkish-style) cups in a džezva to a serious specialty scene in Dorćol. Here's the city's coffee culture, where to find the best cafes, and the historic sweet shops that go with it."
 heroLabel: "Belgrade coffee culture / hero"
 heroAlt: "A Turkish coffee in a copper džezva with a slice of cake on a café table"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 9
 visible: true
 intent: "leisure"
@@ -44,9 +44,9 @@ Coffee here is less a beverage than a social institution. "Dođi na kafu" — co
 
 ## What is Serbian (domaća) coffee?
 
-Traditional Serbian coffee — domaća kafa, literally "homemade coffee," and also called turska kafa (Turkish coffee) or crna kafa (black coffee) — is the older of the city's two coffee experiences: thick, strong, brewed and served in the traditional way, and central to both home life and [kafana](/glossary/kafana) culture. It is finely-ground, unfiltered coffee simmered in a small copper pot called a džezva, then poured into a small cup, usually with sugar and a glass of water on the side.
+Traditional Serbian coffee — [domaća kafa](/glossary/domaca-kafa), literally "homemade coffee," and also called turska kafa (Turkish coffee) or crna kafa (black coffee) — is the older of the city's two coffee experiences: thick, strong, brewed and served in the traditional way, and central to both home life and [kafana](/glossary/kafana) culture. It is finely-ground, unfiltered coffee simmered in a small copper pot called a džezva, then poured into a small cup, usually with sugar and a glass of water on the side.
 
-The brewing is unhurried by design. The water (and sugar, if you take it) is brought up to heat, the ground coffee is added and briefly brought up again so a rich foam — pena, sometimes called kajmak — forms on top, and the grounds are left to settle to the bottom of the cup. You do not drink it fast: you let it settle, you sip slowly, and you let the conversation stretch out. It is traditionally served with a piece of ratluk (Turkish delight) alongside, the sweetness balancing the bitterness. It is less a quick caffeine hit than a reason to sit down.
+The brewing is unhurried by design. The water (and sugar, if you take it) is brought up to heat, the ground coffee is added and briefly brought up again so a rich foam — pena, sometimes called [kajmak](/glossary/kajmak) — forms on top, and the grounds are left to settle to the bottom of the cup. You do not drink it fast: you let it settle, you sip slowly, and you let the conversation stretch out. It is traditionally served with a piece of ratluk (Turkish delight) alongside, the sweetness balancing the bitterness. It is less a quick caffeine hit than a reason to sit down.
 
 Because this style of coffee is so bound up with the kafana — the traditional tavern where coffee and [rakija](/glossary/rakija) both live — we leave the full story of those rooms to our guide to [Belgrade kafanas](/food-and-nightlife/belgrade-kafanas). For now it is enough to know that a Turkish coffee in a kafana or an old-fashioned café is part of the everyday social fabric, not a tourist ritual.
 
@@ -54,4 +54,4 @@ Because this style of coffee is so bound up with the kafana — the traditional 
 
 For specialty coffee, head to Dorćol. The modern specialty wave is built around single-origin beans, micro-roasting and careful brewing — espresso and pour-over rather than the traditional džezva — and this scene is widely reported to cluster in Dorćol, the central district just north and north-east of Republic Square, where micro-roasters and specialty cafés are concentrated. Dorćol is one of the central districts you may already be exploring; we leave its full character to our overview of [Belgrade's neighbourhoods](/visit-belgrade/belgrade-neighborhoods) and treat it here simply as the specialty-coffee heart of the city.
 
-The roaster most often named as the anchor of this movement is **D59B**, whose original café **Pržionica** opened in 2012 and is reported to be the city's oldest specialty-coffee roaster; it 
+The roaster most often named as the anchor of this movement is **D59B**, whose original café **Pržionica** opened in 2012 and is reported to be the city's oldest specialty-coffee roaster; it roasts on-site in Dorćol's former industrial quarter and is a regular fixture in specialty-coffee coverage of the city. Treat it as an illustrative landmark rather than the only address: individual specialty cafés open, move and close faster than any guide can keep up with, so we deliberately avoid pinning the whole scene to a single name. The cluster itself — and the standard of coffee you can expect from it — is the durable fact. Walk a few blocks through Dorćol and you will find it.

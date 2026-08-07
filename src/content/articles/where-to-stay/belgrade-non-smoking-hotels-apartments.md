@@ -7,7 +7,7 @@ description: "Non-smoking hotels and apartments in Belgrade: Serbian law still a
 lede: "Belgrade can be smoky, and Serbian law lets accommodation set aside designated smoking rooms, so the safest move for smoke-sensitive travellers is to book a property described as non-smoking and then confirm the exact room or apartment is smoke-free in writing before you pay."
 heroLabel: "Belgrade non-smoking hotels and apartments / hero"
 heroAlt: "Clean, airy Belgrade hotel room with an open window and no ashtrays, suggesting a smoke-free stay"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 10
 visible: true
 intent: "both"
@@ -97,4 +97,4 @@ For families and smoke-sensitive travellers who also want a calmer base, areas l
 
 ## The bottom line
 
-Belgrade can be uncomfortable for smoke-sensitive travellers, because Serbian law permits designated smoking rooms in accommodation. That is the official baseline, not a reason to worry, as long as you act 
+Belgrade can be uncomfortable for smoke-sensitive travellers, because Serbian law permits designated smoking rooms in accommodation. That is the official baseline, not a reason to worry, as long as you act on it: **book a non-smoking property, confirm the exact room or apartment is smoke-free in writing, read recent reviews for smoke keywords, and pick a fully non-smoking place if you have asthma, allergies or young children.** Do that, and a smoke-free stay in Belgrade is straightforward to arrange.

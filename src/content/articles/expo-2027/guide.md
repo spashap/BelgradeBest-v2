@@ -38,7 +38,7 @@ faqs:
 unknowns: []
 ---
 
-**Short answer for planning:** Belgrade hosts a Specialised Expo from **15 May to 15 August 2027** at **Surčin**, beside Nikola Tesla Airport. Give the Expo itself **2–3 days**, or **4–5 days** to fold in the city. **Book your accommodation first** — beds are the bottleneck, not tickets, because tickets are not on sale yet. Expect **opening week and weekends to be busiest**. Everything else below — and on the linked deep-dive pages — is the detail behind that.
+**Short answer for planning:** Belgrade hosts a [Specialised Expo](/glossary/specialised-expo) from **15 May to 15 August 2027** at **Surčin**, beside [Nikola Tesla Airport](/glossary/nikola-tesla-airport). Give the Expo itself **2–3 days**, or **4–5 days** to fold in the city. **Book your accommodation first** — beds are the bottleneck, not tickets, because tickets are not on sale yet. Expect **opening week and weekends to be busiest**. Everything else below — and on the linked deep-dive pages — is the detail behind that.
 
 This page is the visitor hub. It orients you, then routes you to the focused pages: [what a Specialised Expo actually is](/expo-2027/what-is-it), [getting there](/expo-2027/getting-there), [tickets](/expo-2027/tickets), [participating countries](/expo-2027/participants) and [the programme](/expo-2027/programme) — plus the evergreen Belgrade legs for [where to stay](/where-to-stay) and the practical side of a trip in [plan your trip](/plan-your-trip).
 

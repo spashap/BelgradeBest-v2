@@ -37,7 +37,7 @@ unknowns: []
 
 ## What currency is used in Belgrade — and can you pay in euros?
 
-Belgrade and the rest of Serbia run on the **Serbian dinar (RSD)** — and for cash, it is the only legal currency. The euro is not legal tender here, even though many businesses quote prices in euros as a reference point: hotels, apartments and some tour operators in particular love to list a number in EUR. In practice that means you'll *see* a price in euros but *pay* the dinar equivalent, so it helps to keep a rough conversion in your head.
+Belgrade and the rest of Serbia run on the **[Serbian dinar](/glossary/dinar) (RSD)** — and for cash, it is the only legal currency. The euro is not legal tender here, even though many businesses quote prices in euros as a reference point: hotels, apartments and some tour operators in particular love to list a number in EUR. In practice that means you'll *see* a price in euros but *pay* the dinar equivalent, so it helps to keep a rough conversion in your head.
 
 So **can you pay in euros in Belgrade?** For cash, not really. Strictly, shops and restaurants are meant to take payment in dinars, and while a handful of tourist-facing places may informally accept euro notes, you are not entitled to pay in euros and the informal rate they give you is usually poor. The reliable move is to carry dinars for any cash spending. (Card transactions are a different story — see below — but the same rule applies: make sure the card is charged in dinars.)
 
@@ -63,7 +63,7 @@ These numbers genuinely move, so read the on-screen notice rather than trusting 
 
 ## Where is the best place to exchange money in Belgrade?
 
-If you prefer to exchange physical cash, the best rates come from **specialist exchange offices (*menjačnica*) and bank branches in the city centre**, which generally offer good rates with minimal commission. By contrast, exchange kiosks inside the airport, bus and train stations, and shopping malls often have poorer rates or extra commissions. These are best avoided except for small sums — enough to get you into town, say — with the bulk of your changing done at a city-centre office. The exact spreads and the best chains shift over time, but the broad pattern (**centre good, station and mall worse**) is a stable one. Bring clean, undamaged notes if exchanging euros, dollars or pounds, as torn or marked notes are sometimes refused.
+If you prefer to exchange physical cash, the best rates come from **specialist exchange offices (*[menjačnica](/glossary/menjacnica)*) and bank branches in the city centre**, which generally offer good rates with minimal commission. By contrast, exchange kiosks inside the airport, bus and train stations, and shopping malls often have poorer rates or extra commissions. These are best avoided except for small sums — enough to get you into town, say — with the bulk of your changing done at a city-centre office. The exact spreads and the best chains shift over time, but the broad pattern (**centre good, station and mall worse**) is a stable one. Bring clean, undamaged notes if exchanging euros, dollars or pounds, as torn or marked notes are sometimes refused.
 
 ## Tipping in Belgrade
 

@@ -7,7 +7,7 @@ description: "Understanding Belgrade: why the layered city at the Sava–Danube 
 lede: "Belgrade isn't a single pretty old town — it's a collage of empires, razed and rebuilt for two thousand years. Read it by its layers, and the fortress above the rivers is where all of them are visible at once."
 heroLabel: "Understanding Belgrade / hero"
 heroAlt: "Belgrade Fortress stonework where the city's historical layers meet"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-07"
 order: 4
 visible: true
 intent: "leisure"
@@ -38,7 +38,7 @@ faqs:
 
 Belgrade looks the way it does because it sits at the confluence of the Sava and Danube rivers, a strategic crossing point that has been fortified for over two millennia and conquered, razed and rebuilt many times. That single fact explains almost everything about the city. Rather than one coherent old town in a single style, you get a collage — Ottoman, Austro-Hungarian, neoclassical, socialist-modernist and contemporary fabric coexisting, often on adjacent streets.
 
-To orient yourself before reading the rest: the historic core sits on the right (eastern) bank of the Sava, in the municipality of Stari Grad. Its natural centre is Republic Square, framed by the National Museum and National Theatre, with the pedestrian spine of Knez Mihailova running north-west from it. Follow that street roughly 0.6–0.9 km and you reach the Belgrade Fortress and [Kalemegdan](/glossary/kalemegdan) Park, on the ridge above the rivers. Most of what this page describes lies within a short walk of that axis; the big exception is socialist New Belgrade, which sits across the Sava on the left bank.
+To orient yourself before reading the rest: the historic core sits on the right (eastern) bank of the Sava, in the municipality of Stari Grad. Its natural centre is Republic Square, framed by the National Museum and National Theatre, with the pedestrian spine of [Knez Mihailova](/glossary/knez-mihailova) running north-west from it. Follow that street roughly 0.6–0.9 km and you reach the Belgrade Fortress and [Kalemegdan](/glossary/kalemegdan) Park, on the ridge above the rivers. Most of what this page describes lies within a short walk of that axis; the big exception is socialist New Belgrade, which sits across the Sava on the left bank.
 
 The practical consequence is that most of the city's individual layers were partly erased by whoever came next. Understanding Belgrade therefore means reading the surviving fragments of each era rather than searching for a preserved, picture-postcard quarter that was never allowed to stand. Once you accept that the city is layered rather than pretty, the apparent disorder resolves into a legible sequence.
 
@@ -56,4 +56,4 @@ After the First World War, Belgrade became capital of the new South-Slav kingdom
 
 The signature 20th-century layer is socialist-modernist. New Belgrade (Novi Beograd) was planned and built after the Second World War as a monumental socialist city on the left (western) bank of the Sava — directly across the river from the old town, a short tram or bus ride from the centre — with the municipality formalised in 1952 and block construction running from 1948. It is the city's defining modernist and Brutalist statement, and if that is what draws you, the detailed building-by-building account lives on the [Brutalist Belgrade](/visit-belgrade/brutalist-belgrade) page.
 
-The most recent layer is Belgrade Waterfront — Beograd na vodi — on the right bank of the Sava, immediately downhill and south-west of the old-town ridge, on the riverfront beside the Savamala district below Branko bridge. It began with a 2014 agreement between the Serbian government and 
+The most recent layer is [Belgrade Waterfront](/glossary/belgrade-waterfront) — Beograd na vodi — on the right bank of the Sava, immediately downhill and south-west of the old-town ridge, on the riverfront beside the Savamala district below Branko bridge. It began with a 2014 agreement between the Serbian government and the Abu Dhabi–based developer Eagle Hills, and it adds glass-and-steel towers (including the 168-metre Kula Belgrade), a large mall and riverside promenades, in deliberate contrast to socialist New Belgrade across the water. Early towers and the mall were occupied between 2022 and 2024. It is worth knowing that the project is debated locally and framed in critical writing as investor-driven urbanism; it is the current layer visitors physically see on the Sava riverfront, and the honest framing is to describe what is there and note the debate rather than take a side.
