@@ -11,7 +11,14 @@ Gatekeeper agencies matter because they hold the exhibitor lists. Categories
 
 Last full run: **2026-07-05** (32 prospects: 16 gatekeepers + 15 event-level
 companies + 1 container category; 9 verified public emails).
-Last external run: **2026-08-07** — light 3-agent in-session sweep + focused
+Last run: **2026-08-20** — in-session sweep only (no external agents), driven
+by the overdue watch-list items. Found five previously-missed contract awards,
+including two we should have caught on 07 Aug: the collective-pavilion award
+(31 Jul) and the ceremonies award (20 Feb). Lesson recorded in §9: **Serbian
+procurement awards are the richest prospect vein and they surface in the
+business press, not on the organiser's own news page** — sweep b92/biznis/
+tanjug/forbes.n1 for "dodeljen ugovor" every run, not just the watch-list items.
+Prior external run: **2026-08-07** — light 3-agent in-session sweep + focused
 owner-run Perplexity Deep Research (record:
 `research/2026-08-07-light-sweep-perplexity.md`). Key: Slovakia design winner
 EXPO LINE; Türkiye 648 m² A5.1 + National Day 19 May 2027; Serbia team
@@ -150,25 +157,30 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
    rewrite `scripts/commit-message.txt`, summarize actionable finds to the
    owner (especially anything with a deadline).
 
-## 6. Watch list (update every run — last updated 2026-08-07)
+## 6. Watch list (update every run — last updated 2026-08-20)
 
 - **Italy** sponsorship call closes **31 Aug 2026** (tiers Bronze €5–25k →
   Platinum €100k+; PEC amb.belgrado@cert.esteri.it) → after close, find who
   sponsored (each sponsor = booth-grade prospect under Italy). No names as of
   07 Aug.
-- **Türkiye** proposal call closes **17 Aug 2026** → recheck for the awarded
-  organizer from ~end Aug. Now public (ticaret.gov.tr notice, applied
-  2026-08-07): 648 m² medium pavilion on parcel A5.1, ready-by 15 Apr 2027,
-  National Day 19 May 2027. The awarded organizer firm = prime prospect.
+- **Türkiye** proposal call closed **17 Aug 2026**; award **still not public**
+  (checked 2026-08-20, TR-language search + ticaret.gov.tr). Recheck ~1 Sep and
+  fortnightly after. Known: 648 m² medium pavilion on parcel A5.1, ready-by
+  15 Apr 2027, National Day 19 May 2027. The awarded organizer firm = prime
+  prospect.
 - **Turkmenistan** tender (closed 13 Apr 2026) → winner still unpublished
-  (checked 07 Aug); SARY studio (Ashgabat) publicly a BIDDER only
-  (turkmenportal 23 Jul); state media say preparations underway.
+  (rechecked 2026-08-20); SARY studio (Ashgabat) publicly a BIDDER only
+  (turkmenportal 23 Jul); state media say construction and installation work
+  on the pavilion is already underway, so an unannounced winner exists.
 - **Slovakia**: design winner FOUND + applied 2026-08-07 — EXPO LINE
   collective, 'Living Playground', €375k ex-VAT (ASB.sk 9 Jul). Still watch:
   construction tender award + the slovakiaexpo.sk company registrations
   (booth-list angle; SARIO cooperation announced 31 Jul).
 - **South Korea** KOTRA tender (₩9bn, closed 29 Apr) → award still not public
-  (checked 07 Aug incl. G2B — RFP only). The awarded 전시 대행사 = prime prospect.
+  (rechecked 2026-08-20, KR + EN search). The awarded 전시 대행사 = prime prospect.
+  NOTE the adjacent win: Korean exhibition builder **Sigong Tech** took the
+  Serbian organiser's collective-pavilion contract (below) — different contract,
+  same country, and a plausible warm route into the Korean pavilion programme.
 - **BiH** contract signed 3 Jul 2026 → pavilion size/hall/theme/budget still
   unpublished (checked 07 Aug); **North Macedonia** commissioner still unnamed.
 - **Germany**: Messe Düsseldorf sub-procurements (communication, catering,
@@ -188,14 +200,49 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
 - **Sponsors**: Telekom Srbija + Air Serbia (Platinum) + **Pošta Srbije**
   (official sponsor & logistics supplier, Tanjug 2 Aug — listing created).
   Partners page still an open invitation, no roster — keep watching.
+- **Organiser contract awards** (NEW class, seeded 2026-08-20 — the richest
+  vein found so far; all five were public and all five had been missed):
+  · **Balich Wonder Studio** (IT) — opening + closing ceremonies, RSD 2.32bn
+    ex-VAT (~€19.8m), 4 bidders, awarded 20 Feb 2026. Listing created.
+  · **Sigong Tech** (KR) + **BAUMEISTER d.o.o.** (RS) — collective pavilions,
+    both lots, RSD 5.28bn ex-VAT, 6 bidders, awarded 31 Jul 2026. Listings
+    created. HIGHEST-VALUE PROSPECT: the collective pavilions house every
+    country without its own building, so Sigong Tech is a gatekeeper to a large
+    share of booth-level participants.
+  · **Aurion Service** + **Delta Hospitality** (RS) — EXPO Village
+    accommodation operator, 1,500 units, RSD 234.6m ex-VAT, awarded 5 Aug 2026.
+    Listings created. Aurion Service was registered 5 May 2026, three months
+    before the award (nova.rs) — politically contested, verify before any
+    public reference.
+  · **Zavod za izradu novčanica i kovanog novca – Topčider** (RS) — ticket
+    production, RSD 38.2m ex-VAT, awarded 18 Aug 2026. Deliberately NOT seeded
+    as a prospect (state security printer, no claim/outreach value) but the
+    contract's contents were published on /expo-2027/tickets.
+  · Still unawarded or unfound: the furnishing of the Expo housing
+    (RSD 3.6bn, flagged on dtybs.ticaret.gov.tr), catering, ticketing-system
+    operator, and the online ticket sales channel. **Sweep b92.net/biz,
+    biznis.rs, tanjug.rs/expo-2027, forbes.n1info.rs and nova.rs for
+    "dodeljen ugovor" / "izabran" every run.**
 - **International organisations**: CERN reported as participant (vreme
   28 Jul — listing created). Watch for more org-level participants; they may
   become their own container class.
 - **Exhibitor lists**: none published yet anywhere (checked 07 Aug). When one
   lands → bulk mode.
-- **National Day schedule**: calendar still unpublished; first country-level
-  date is Türkiye's planned 19 May 2027. When the calendar lands, update
-  pavilions + the participants article.
+- **National Day schedule**: calendar still unpublished (rechecked
+  2026-08-20); first country-level date is Türkiye's planned 19 May 2027. When
+  the calendar lands, update pavilions + the tracker.
+- **Handover deadline 1 Dec 2026** (organiser, 5 Aug 2026): all pavilions and
+  halls to be handed to participating countries. That is the trigger date for a
+  wave of fit-out, exhibition-build and operator contracts at country level —
+  plan a heavier run for early December 2026.
+- **Ticket sales launch**: 1.2m physical tickets ordered 18 Aug 2026 (1m
+  one-day + 200k three-day) but no on-sale date, price or online channel. The
+  on-sale announcement is a large traffic event for /expo-2027/tickets — watch
+  weekly from September 2026.
+- **Official site reachability**: expobelgrade2027.org was unreachable from
+  this machine on 2026-08-20 (connection failed, not a 403). If it stays down,
+  the participant counter cannot be re-read directly — fall back to organiser
+  statements in the press and say so in the data note.
 
 ## 7. Use cases
 
@@ -246,3 +293,11 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
   NOT the World Expo pavilion; `uaepavilion.ae` still = Osaka.
 - Counting on `bie-paris.org` direct fetch (403) or `eda.admin.ch` (blocks
   bots) — use search snippets and say so in the source note.
+- **Only chasing the watch list.** The 2026-08-20 run found five public contract
+  awards that no watch-list item pointed at, two of them older than the previous
+  run. The watch list tracks what we already know is coming; it cannot surface
+  what we never knew about. Every run must ALSO do an untargeted sweep of the
+  Serbian business press for award language.
+- Assuming the organiser announces its own procurement. It largely does not —
+  expobelgrade2027.org/en/news carries launches, not awards. Awards appear in
+  b92/biznis/tanjug/nova/forbes.n1 first.

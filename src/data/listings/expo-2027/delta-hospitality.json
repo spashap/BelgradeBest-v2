@@ -1,0 +1,24 @@
+{
+  "slug": "delta-hospitality",
+  "leg": "expo-2027",
+  "type": "supplier",
+  "parent": "partners-and-suppliers",
+  "name": "Delta Hospitality d.o.o. Beograd",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-08-20",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": [
+      "https://www.tanjug.rs/expo-2027/vesti/271466/ekspo-2027-dodeljen-ugovor-za-pruzanje-usluga-operatera-smestaja-za-ekspo-selo/vest",
+      "https://biznis.rs/vesti/srbija/delta-hospitality-dobila-ugovor-za-upravljanje-smestajem-expo-village/"
+    ]
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Joint winner (with Aurion Service) of the EXPO Village accommodation-operator contract: RSD 234.6m ex-VAT, covering the 1,500-unit residential complex for official and unofficial participants — staffing, reservations, reception, guest communication. Belgrade hospitality operator; runs Crowne Plaza Belgrade; owned by Fenix Development. Directly relevant to our where-to-stay leg as well as the Expo leg. Source: tanjug.rs/expo-2027/vesti/271466 + biznis.rs (2026-08-05). Website not verified from an official source."
+  }
+}

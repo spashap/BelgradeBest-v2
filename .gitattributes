@@ -5,3 +5,7 @@
 *.webp binary
 *.jpg binary
 *.woff2 binary
+
+# IndexNow key file: exact bytes, no trailing newline (a trailing newline makes
+# IndexNow reject the key with UserForbiddedToAccessSite).
+/public/14ec77dc669e4a48947348a73e9ee9b7.txt binary

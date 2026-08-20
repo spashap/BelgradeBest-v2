@@ -1,0 +1,24 @@
+{
+  "slug": "aurion-service",
+  "leg": "expo-2027",
+  "type": "supplier",
+  "parent": "partners-and-suppliers",
+  "name": "Aurion Service d.o.o. Beograd",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-08-20",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": [
+      "https://www.tanjug.rs/expo-2027/vesti/271466/ekspo-2027-dodeljen-ugovor-za-pruzanje-usluga-operatera-smestaja-za-ekspo-selo/vest",
+      "https://nova.rs/vesti/biznis/miskovi-osnovao-firmu-pre-tri-meseca-pa-dobio-posao-na-ekspu/"
+    ]
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Joint winner (with Delta Hospitality) of the EXPO Village accommodation-operator contract, RSD 234.6m ex-VAT, awarded 2026-08-05. CAVEAT for outreach: Serbian press (nova.rs) reports the company was registered only on 2026-05-05, three months before the award, and ties it to the Miskovic family — treat as politically contested coverage and verify before any public reference. Source: tanjug.rs/expo-2027/vesti/271466. Website not verified."
+  }
+}

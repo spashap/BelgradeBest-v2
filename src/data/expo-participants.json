@@ -1,11 +1,11 @@
 {
-  "updated": "2026-08-07",
+  "updated": "2026-08-20",
   "license": "Free to cite and reuse with attribution and a link to https://belgradebest.com/expo-2027/tracker",
   "officialCount": {
-    "count": 139,
-    "label": "international participants (official counter)",
-    "source": "https://expobelgrade2027.org/en/participants",
-    "note": "The official Participants page banner claims 139 confirmed international participants but individually names only 81 countries ('More coming soon!')."
+    "count": 141,
+    "label": "international participants (organiser statement, 5 Aug 2026)",
+    "source": "https://www.b92.net/biz/srbija/vesti/256332/na-expo-2027-ucestvuje-cak-141-zemlja-prvi-stanovi-gotovo-spremni-za-useljenje/vest",
+    "note": "Expo 2027 director Danilo Jerinic said on 5 August 2026 that 141 countries are registered — which he called a historic record for a Specialised Expo. The official Participants page counter last read 139 (5 July 2026) and individually names only 81 countries ('More coming soon!'); that page was unreachable from our checks on 20 August 2026, so the 141 figure rests on the organiser's own public statement rather than the site counter."
   },
   "namedNote": "Our table is the deduped union of countries actually named by the official Participants page (81), Wikipedia's participants table, and press announcements — only countries a source names are listed.",
   "expected": {
@@ -51,6 +51,12 @@
       "source": "https://en.wikipedia.org/wiki/Expo_2027"
     },
     {
+      "date": "2026-02-20",
+      "count": null,
+      "event": "Balich Wonder Studio (Italy) wins the opening + closing ceremonies contract — RSD 2.32bn ex-VAT (~€19.8m), 4 bidders",
+      "source": "https://www.b92.net/biz/srbija/vesti/209437/izabran-organizator-ceremonije-otvaranja-i-zatvaranja-expo-2027-u-beogradu/vest"
+    },
+    {
       "date": "2026-03-10",
       "count": 137,
       "event": "137 confirmed (80 in written form)",
@@ -73,6 +79,30 @@
       "count": null,
       "event": "CERN reported as a participant — the first international organisation publicly named",
       "source": "https://vreme.com/en/mozaik/ekspo-2027-cern/"
+    },
+    {
+      "date": "2026-07-31",
+      "count": null,
+      "event": "Collective-pavilion contracts awarded to Sigong Tech (South Korea) with subcontractor BAUMEISTER d.o.o. Beograd — RSD 5.28bn ex-VAT across both lots, 6 bidders",
+      "source": "https://www.b92.net/biz/srbija/vesti/255039/dodeljeni-ugovori-za-izgradnju-kolektivnih-paviljona-za-expo-2027-beograd/vest"
+    },
+    {
+      "date": "2026-08-05",
+      "count": 141,
+      "event": "Director Danilo Jerinic: 141 countries registered, a historic record; Expo Village 95% built with first apartments due September 2026; all pavilions and halls to be handed to participants by 1 December 2026",
+      "source": "https://www.b92.net/biz/srbija/vesti/256332/na-expo-2027-ucestvuje-cak-141-zemlja-prvi-stanovi-gotovo-spremni-za-useljenje/vest"
+    },
+    {
+      "date": "2026-08-05",
+      "count": null,
+      "event": "EXPO Village accommodation-operator contract (1,500 units) awarded to Aurion Service + Delta Hospitality — RSD 234.6m ex-VAT",
+      "source": "https://www.tanjug.rs/expo-2027/vesti/271466/ekspo-2027-dodeljen-ugovor-za-pruzanje-usluga-operatera-smestaja-za-ekspo-selo/vest"
+    },
+    {
+      "date": "2026-08-18",
+      "count": null,
+      "event": "Ticket production contract awarded to Zavod za izradu novčanica i kovanog novca – Topčider: 1,000,000 one-day and 200,000 three-day physical tickets plus 800,000 blank forms, RSD 38.2m ex-VAT",
+      "source": "https://forbes.n1info.rs/vesti/dodeljen-ugovor-za-proizvodnju-i-stampu-ulaznica-za-expo-2027/"
     }
   ],
   "participants": [
@@ -639,7 +669,7 @@
   "sources": [
     {
       "url": "https://expobelgrade2027.org/en/participants",
-      "note": "Official Participants page — the 139 counter and 81 named countries"
+      "note": "Official Participants page — counter (139 at last successful read, 5 Jul 2026) and 81 named countries; unreachable from our checks on 20 Aug 2026"
     },
     {
       "url": "https://en.wikipedia.org/wiki/Expo_2027",
@@ -656,12 +686,25 @@
     {
       "url": "https://beinbelgrade.com/belgrade-expo-2027-participating-countries/",
       "note": "Non-official aggregation, cross-reference only"
+    },
+    {
+      "url": "https://www.b92.net/biz/srbija/vesti/256332/na-expo-2027-ucestvuje-cak-141-zemlja-prvi-stanovi-gotovo-spremni-za-useljenje/vest",
+      "note": "Organiser statement, 5 Aug 2026 — 141 countries, Expo Village progress, 1 Dec 2026 handover"
+    },
+    {
+      "url": "https://www.b92.net/biz/srbija/vesti/255039/dodeljeni-ugovori-za-izgradnju-kolektivnih-paviljona-za-expo-2027-beograd/vest",
+      "note": "Collective-pavilion contract award, 31 Jul 2026"
+    },
+    {
+      "url": "https://forbes.n1info.rs/vesti/dodeljen-ugovor-za-proizvodnju-i-stampu-ulaznica-za-expo-2027/",
+      "note": "Ticket production contract, 18 Aug 2026 — first hard numbers on physical ticket stock"
     }
   ],
   "caveats": [
-    "The official counter (139) counts 'international participants', not strictly countries, and the official page names only 81 of them.",
+    "The headline figure (141) is the organiser's own count of 'international participants', not strictly countries, and the official page individually names far fewer.",
     "Countries appear in our table only when a source names them; absence here does not mean absence from the Expo.",
     "Announced dates are confirmation dates as reported by Wikipedia's participants table where available.",
-    "Egypt and Canada appear in some coverage but without a firm source naming them — excluded until confirmed."
+    "Egypt and Canada appear in some coverage but without a firm source naming them — excluded until confirmed.",
+    "Late-joining countries are being offered the smaller collective formats (330, 660 or 990 m²) rather than standalone plots — the organiser says the site is close to full."
   ]
 }

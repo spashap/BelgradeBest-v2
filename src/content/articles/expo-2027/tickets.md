@@ -3,11 +3,11 @@ leg: "expo-2027"
 slug: "tickets"
 title: "Expo 2027 tickets — what we know so far"
 shortTitle: "Tickets"
-description: "Expo 2027 Belgrade tickets: prices, where to buy and the on-sale date are not yet announced as of June 2026 — we track every official update here."
-lede: "Expo 2027 Belgrade ticket prices, categories, and a sales start date are not yet officially announced. This page tracks what's confirmed, what's only reported by third parties, and what's still unknown — and is updated the moment official ticket information drops."
+description: "Expo 2027 Belgrade tickets: prices and the on-sale date are still unannounced as of August 2026, but the August 2026 printing contract confirms one-day and three-day tickets. We track every official update here."
+lede: "Expo 2027 Belgrade ticket prices and a sales start date are still not officially announced. But an August 2026 procurement contract finally puts hard numbers on the tickets themselves — one-day and three-day types, and how many are being printed. This page tracks what's confirmed, what's only reported by third parties, and what's still unknown."
 heroLabel: "Expo 2027 tickets / hero"
 heroAlt: "The entrance to Expo 2027 in Belgrade at golden hour"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-08-20"
 order: 6
 visible: true
 intent: "both"
@@ -16,73 +16,100 @@ noindex: false
 linksTo:
   - "/plan-your-trip"
 faqs:
-  - answer: "Expo 2027 ticket prices have not been announced as of June 2026. The organiser has not published any per-day, multi-day, or season pass price, so any figure quoted elsewhere is not an official Expo price. We update this page the moment official pricing appears."
+  - answer: "Expo 2027 ticket prices have not been announced as of August 2026. The organiser has not published any per-day, multi-day, or season pass price, so any figure quoted elsewhere is not an official Expo price. We update this page the moment official pricing appears."
     question: "How much do Expo 2027 tickets cost?"
-  - answer: "The official Expo 2027 website (expobelgrade2027.org) will be the primary place to buy tickets, and its programme page currently shows the status \"Tickets available soon.\" No sales channel — official site, app, authorised resellers, or on-site — has been confirmed beyond that as of June 2026."
+  - answer: "The official Expo 2027 website (expobelgrade2027.org) will be the primary place to buy tickets, and its programme page currently shows the status \"Tickets available soon.\" An August 2026 procurement contract also confirms physical tickets are being printed for sale at physical points of sale and box offices, so an on-site or counter channel is planned alongside the website. Nothing else — app, authorised resellers — has been confirmed as of August 2026."
     question: "Where will Expo 2027 tickets be sold?"
-  - answer: "No. As of June 2026, Expo 2027 tickets are not on sale yet. The official programme page still says only \"Tickets available soon\" and gives no sales start date. Some third-party guide sites mention a possible launch later in 2026, but this is not confirmed by any official source."
+  - answer: "Yes, at least two. The August 2026 ticket-printing contract covers 1,000,000 one-day tickets and 200,000 three-day tickets, which is the first hard evidence that Expo 2027 will sell both a single-day and a three-day ticket. Prices, concessions and any season pass remain unannounced."
+    question: "Will there be multi-day Expo 2027 tickets?"
+  - answer: "No. As of August 2026, Expo 2027 tickets are not on sale yet. The official programme page still says only \"Tickets available soon\" and gives no sales start date. What did happen in August 2026 is that the organiser awarded the contract to physically print the tickets, which means the ticket product exists on paper before it exists for sale."
     question: "Are Expo 2027 tickets on sale yet?"
-  - answer: "No official Expo 2027 ticket sales start date has been announced as of June 2026. The official programme page states only \"Tickets available soon.\" Third-party guides have floated a possible first sales phase later in 2026, but the organiser has not confirmed this — treat it as unverified until it appears on the official site."
+  - answer: "No official Expo 2027 ticket sales start date has been announced as of August 2026. The official programme page states only \"Tickets available soon.\" Third-party guides have floated a possible first sales phase later in 2026, but the organiser has not confirmed this — treat it as unverified until it appears on the official site."
     question: "When do Expo 2027 tickets go on sale?"
-  - answer: "No official information on reservation or entry systems — including time-slot reservations or daily capacity caps — has been published as of June 2026. Given the projected visitor numbers, some form of timed entry is plausible, but nothing has been confirmed."
+  - answer: "No official information on reservation or entry systems — including time-slot reservations or daily capacity caps — has been published as of August 2026. Given the projected visitor numbers, some form of timed entry is plausible, but nothing has been confirmed."
     question: "Will there be time-slot reservations or capacity limits?"
   - answer: "Expo 2027 runs from 15 May to 15 August 2027, a 93-day window, at the Surčin site in Belgrade (about 5 km from Nikola Tesla Airport). That window is the period any eventual ticket would cover."
     question: "What dates would an Expo 2027 ticket cover?"
 isFaqCandidate: true
 unknowns:
-  - "Final ticket prices and tier structure"
-  - "Official sales start date and sales channel"
+  - "Final ticket prices and the full tier structure"
+  - "Official sales start date and the online sales channel"
   - "Whether timed-entry reservations will be required"
   - "Discount programmes (children, students, residents of host region)"
+  - "Whether a season pass exists alongside the one-day and three-day tickets"
 ---
 
-_Last verified: 20 June 2026._
+_Last verified: 20 August 2026._
 
 ## Are Expo 2027 tickets on sale yet?
 
-No — as of June 2026, Expo 2027 Belgrade tickets are **not on sale**, and no prices or sales date have been officially announced. The only confirmed ticket information comes from the official Expo 2027 programme page, which displays the status **"Tickets available soon."** That page does not publish ticket prices, ticket categories, sales channels, or a sales start date. Everything beyond that status is, for now, genuinely unknown — and this page exists to say so honestly rather than fill the gap with guesses. We check the official source regularly and update here the moment real ticket details land.
+No — as of August 2026, Expo 2027 Belgrade tickets are **not on sale**, and no prices or sales date have been officially announced. The official Expo 2027 programme page still displays the status **"Tickets available soon,"** with no prices, no sales channel and no start date.
+
+What changed in August 2026 is that the tickets themselves stopped being hypothetical. The organiser awarded the contract to **print** them — and a printing contract has to specify what is being printed. That document is the first hard, official information about the Expo 2027 ticket product, and it is set out in the next section.
+
+## What the August 2026 printing contract tells us
+
+On **18 August 2026** the company EXPO 2027 awarded the contract for producing and printing non-personalised tickets to the **Institute for Manufacturing Banknotes and Coins – Topčider** (Zavod za izradu novčanica i kovanog novca), the Serbian state security printer, for **38.2 million dinars excluding VAT**.
+
+The quantities are the useful part:
+
+| Item | Quantity |
+| --- | --- |
+| One-day tickets | 1,000,000 |
+| Three-day tickets | 200,000 |
+| Blank forms | 800,000 |
+
+Three things follow from that, and they are worth separating from speculation:
+
+- **There is a one-day ticket and a three-day ticket.** This is the first official confirmation of any Expo 2027 ticket category. It does not rule out other types — a season pass, concessions, group tickets — but those two now exist as products.
+- **Physical tickets are planned, for physical sale.** The contract describes tickets intended for sale at physical points of sale and box offices, printed on protected paper with watermarks, holographic foil, QR codes, perforation, serial numbering and UV-visible security elements. That is banknote-grade anti-counterfeiting, and it implies counter sales, not a purely app-based entry.
+- **Most admissions will almost certainly be digital.** 1.2 million printed tickets sit against an official projection of more than 4 million visits. Unless that projection is wildly off, the printed stock is a minority channel and the bulk of entries will be sold and scanned electronically.
+
+What the contract still does **not** tell you: prices, the on-sale date, the online sales channel, concession categories, or whether a season pass exists. Those remain unannounced.
+
+Everything beyond that is, for now, genuinely unknown — and this page exists to say so honestly rather than fill the gap with guesses. We check the official sources regularly and update here the moment real ticket details land.
 
 ## How much do Expo 2027 tickets cost?
 
-Expo 2027 ticket prices are **not yet announced** as of June 2026. The organiser has not published any per-day, multi-day, or season pass pricing, so **any specific figure you see quoted elsewhere is not an official Expo price.** If a website states an Expo 2027 ticket price as fact today, treat it with caution — there isn't one yet.
+Expo 2027 ticket prices are **not yet announced** as of August 2026. The organiser has not published any per-day, multi-day, or season pass pricing, so **any specific figure you see quoted elsewhere is not an official Expo price.** If a website states an Expo 2027 ticket price as fact today, treat it with caution — there isn't one yet.
 
 For context on what to *expect* (clearly: expected, not confirmed), Specialised-Expo tickets at recent editions have typically been sold as a tiered range — single-day adult tickets, discounted child/student/senior tickets, and multi-day or season passes — usually cheaper if bought online in advance than at the gate. Belgrade's organiser has not confirmed any of this structure, but it's the normal pattern and gives you a sense of how pricing will likely be framed when it appears.
 
-The table below is a tracker, not a price list. The ticket types are the *typical* Specialised-Expo structure, not confirmed Belgrade categories — every cell stays "Not yet announced" until the organiser publishes real figures (as of June 2026), and we will fill it in the moment they do:
+The table below is a tracker, not a price list. Every price cell stays "Not yet announced" until the organiser publishes real figures (as of August 2026), and we will fill it in the moment they do. The one-day and three-day rows are now confirmed to exist as ticket types by the printing contract above; the rest are the *typical* Specialised-Expo structure rather than confirmed Belgrade categories:
 
 | Ticket type | Price | Status |
 | --- | --- | --- |
-| Single-day adult | — | Not yet announced |
+| One-day ticket | — | Type confirmed (printing contract, Aug 2026); price not yet announced |
+| Three-day ticket | — | Type confirmed (printing contract, Aug 2026); price not yet announced |
 | Child / student / senior concessions | — | Not yet announced |
-| Multi-day pass | — | Not yet announced |
 | Season pass | — | Not yet announced |
 
 ## Where will Expo 2027 tickets be sold?
 
 The **[official Expo 2027 website](https://expobelgrade2027.org/en/intro) (expobelgrade2027.org)** is the primary channel for ticket information, and its programme page is where the "Tickets available soon" status currently appears. When prices and a sales mechanism are announced, this is where they will show up first.
 
-Beyond that, no sales channel has been confirmed as of June 2026 — there is no official word on whether tickets will sell through the website only, a dedicated app, authorised resellers or travel partners, or on-site at the gate. For most major Expos, the official website and app are the main sales points, often supplemented by authorised resellers, but for Belgrade this is expected, not confirmed. **Buy only through channels the official site explicitly names** once they're published, to avoid unofficial resellers.
+Beyond that, one channel is now half-confirmed: the August 2026 printing contract describes physical tickets produced for sale at **physical points of sale and box offices**, so counter sales are clearly planned. What remains unconfirmed as of August 2026 is everything else — whether there is a dedicated app, authorised resellers or travel partners, and where those box offices will be. For most major Expos, the official website and app are the main sales points, often supplemented by authorised resellers, but for Belgrade this is expected, not confirmed. **Buy only through channels the official site explicitly names** once they're published, to avoid unofficial resellers.
 
 ## When do Expo 2027 tickets go on sale?
 
-No official sales start date has been announced as of June 2026. The official programme page states only "Tickets available soon."
+No official sales start date has been announced as of August 2026. The official programme page states only "Tickets available soon." The August 2026 printing contract does not name a date either — though commissioning 1.2 million physical tickets is not something an organiser does long before it intends to sell them.
 
 Some independent, third-party visitor-guide sites have mentioned a possible **first ticket sales phase later in 2026**, tied to programme promotion. We flag this because you may encounter it, but it is **not confirmed by any official Expo or Serbian government source** — at the time of writing, the official site still shows "Tickets available soon" with no date attached. Until a date appears on expobelgrade2027.org, treat any specific on-sale date as unverified.
 
 ## What is not yet announced
 
-Several things remain open as of June 2026:
+Several things remain open as of August 2026:
 
 - **Prices.** No official per-day, multi-day, or season pass pricing has been published.
-- **Categories and concessions.** There is no official information on ticket categories or concessions — adult, child, student, senior, disability — or on bundled tickets.
+- **Concessions and further categories.** The one-day and three-day types are confirmed, but there is no official information on concessions — child, student, senior, disability — on group or bundled tickets, or on whether a season pass exists.
 - **Reservation and entry systems.** No official information has been released on time-slot reservations, daily capacity caps, or online queueing and booking mechanisms for general visitors.
-- **Sales date and channel.** No official sales start date or sales channel — official website, app, authorised resellers, or on-site — has been announced.
+- **Sales date and online channel.** No official sales start date has been announced, and while physical box-office sales are implied by the printing contract, the online channel has not been named.
 
-If you find a price or an on-sale date stated as fact today, treat it with caution: as of June 2026, there isn't an official one.
+If you find a price or an on-sale date stated as fact today, treat it with caution: as of August 2026, there isn't an official one.
 
 ## Will there be time-slot reservations or capacity limits?
 
-No official information on reservation or entry systems — time-slot reservations, daily capacity caps, or online booking and queueing for general visitors — has been published as of June 2026.
+No official information on reservation or entry systems — time-slot reservations, daily capacity caps, or online booking and queueing for general visitors — has been published as of August 2026.
 
 It is reasonable to *expect* some form of capacity management, because the numbers are large. The official Participants FAQ projects around 4.1 million visits over the 93 days, averaging about 44,652 per day with peaks up to roughly 89,304. This is a projection, not a count, and other statements range from 2.6 to 4 million. We mention it only because numbers like these are the kind of context that often justifies time-slot or capacity-based entry systems — but no such system has been confirmed for Expo 2027.
 

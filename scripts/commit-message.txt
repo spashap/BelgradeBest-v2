@@ -1,59 +1,103 @@
-Expo portal: rebuild /expo-2027 as a data-rich two-persona hub; retire /participants into it (301)
+Expo refresh 2026-08-20: five missed contract awards, 141 participants, real ticket facts; fix the IndexNow key file
 
-The generic leg hub never surfaced the section's best assets (pavilions,
-tracker, countdown, corporate area), and the participants article hand-copied
-tracker numbers that drifted stale. /expo-2027 is now a one-off portal page
-(same Warm Editorial tokens, unique structure) whose every number renders
-from the data masters at build.
+Two change sets from the 20 Aug SEO + data review.
 
-New src/pages/expo-2027/index.astro:
-- Countdown band (days-to-opening computed at build, refreshed live by JS,
-  flips to days-left during the event) + key facts + two persona CTAs.
-- Sticky anchor sub-nav; persona tabs (visitor / participant) that show-hide
-  sections with JS and degrade to plain anchors without it.
-- Visitor path: leg hero + intro, the 6 article cards, cross-leg trip rail
-  (where-to-stay, food, visit, plan), good-to-know facts, unknowns box.
-- Who's coming: live stats (139 official / 93 named / continents / profiles),
-  honest two-numbers note, latest milestones -> tracker.
-- Countries A-Z: all 93 named countries in a searchable, region-filterable,
-  sortable table (filter bar ships [hidden]; no-JS users get the full A-Z
-  table), each linked to its pavilion profile; orgs section (CERN, Posta
-  Srbije, World Expo Museum).
-- Participant path: how-participation-works explainer folded from the
-  retired article (counts interpolated, BIE/visa/three-zones), directory/
-  tracker/corporate-area cards, gold claim-your-profile note.
-- FAQ: the 7 folded FAQs, counts interpolated -> faqSchema. Schemas:
-  breadcrumb + Event + FAQPage.
-- One vanilla is:inline IIFE (~120 lines): countdown tick, directory
-  filter/sort (aria-sort), persona tabs with hashchange guard.
+== 1. Expo data refresh (KB/platform/PROSPECT-RESEARCH-RUNBOOK.md procedure) ==
 
-Design system (globals.css, token-only): new .c-subnav (generalized from
-.lp-nav), .c-hash-section, .c-tabs/.c-tab, .c-filterbar/.c-chip, sortable
-th arrows, .c-countdown band.
+The overdue watch-list rechecks (Turkiye, Korea, Turkmenistan) all came back
+still-unpublished, but an untargeted sweep of the Serbian business press turned
+up FIVE public organiser contract awards we had never recorded — two of them
+older than the 07 Aug run. That is now the highest-yield prospect vein we have
+found, and §9 of the runbook records why the watch list alone missed it: the
+organiser announces tender launches on its own news page but not awards; awards
+surface in b92/biznis/tanjug/nova/forbes.n1.
 
-Retirement: participants.md deleted (+ hero webps); 301 via astro.config
-redirects (verified in .vercel/output/config.json); slug removed from
-site-schema (linksTo cleaned on what-is-it + guide); every inbound link
-retargeted (tracker, pavilions hub, ListingPage footer -> /expo-2027
-#whos-coming; guide.md + what-is-it.md + glossary BIE -> /expo-2027/tracker);
-leg seoTitle/seoDescription rewritten to absorb the participants queries.
-[leg]/index.astro excludes expo-2027 (route collision guard) — other legs
-still render via LegHubLayout, verified in dist. Header expo submenu now
-also shows "Tracker" (EXTRA_NAV in lib/listings.ts). Portal lastmod includes
-the participant dataset date.
+New prospect stubs (unpublished, parent = partners-and-suppliers):
+- balich-wonder-studio — opening + closing ceremonies, RSD 2.32bn ex-VAT
+  (~EUR 19.8m), 4 bidders, awarded 20 Feb 2026. Milano-Cortina 2026, Qatar
+  2022, Expo 2025 Osaka, 16 Olympic/Paralympic ceremonies.
+- sigong-tech — collective pavilions, BOTH lots: design, build, fit-out,
+  operation, maintenance, dismantling. RSD 5.28bn ex-VAT, 6 bidders, 31 Jul
+  2026. Highest-value prospect on the board: the collective pavilions house
+  every country without its own building, so this is a gatekeeper to a large
+  share of booth-level participants.
+- baumeister — named Serbian subcontractor on the same contracts.
+- delta-hospitality + aurion-service — EXPO Village accommodation operator,
+  1,500 units, RSD 234.6m ex-VAT, 5 Aug 2026. Aurion Service was registered
+  three months before the award (nova.rs); the caveat is in outreach.notes and
+  deliberately NOT in any public copy.
 
-Card thumbnails: three branded SVGs in the house style (paper/accent, 1600x686
-— same pattern as areas/glossary thumbs) for the pavilions / tracker /
-corporate-area cards that had no image: public/images/expo-2027/
-{pavilions,tracker,corporate-area}-thumb.svg.
+Every stub carries source URLs, an empty summary and no invented email or
+website, so all five stay dark until claimed. Verified: 145 sitemap URLs
+unchanged, no page emitted for any new slug, and zero outreach-note strings in
+dist/client.
 
-Build verified: 93 table rows, 4 JSON-LD blocks, filterbar hidden pre-JS,
-zero /expo-2027/participants references in dist, zero imageless cards on the
-portal, sitemap 145 URLs.
+Tracker master (src/data/expo-participants.json):
+- officialCount 139 -> 141, re-attributed. 141 is the Expo director's own
+  statement of 5 Aug 2026 ("historic record"), not the site counter — the
+  counter last read 139 on 5 Jul and expobelgrade2027.org was unreachable from
+  our checks on 20 Aug. The label, note, source and caveats now say exactly
+  that instead of implying the official page shows 141.
+- Five new timeline milestones (ceremonies award, collective-pavilion award,
+  the 141 statement, the Village operator award, the ticket print contract),
+  three new sources, and a caveat that late joiners are being offered the
+  smaller 330/660/990 m2 formats because the site is close to full.
+- expo-2027/index.astro + tracker.astro: the copy around {officialCount} said
+  "the official counter claims" — corrected to attribute the organiser
+  statement, since the number no longer comes from the counter.
 
-Owner browser checks: no-JS mode (all content visible, no filter bar),
-search/chips/sort, tab toggle + deep-link #for-participants while hidden,
-mobile table scroll + sticky subnav, admin Structure page renders after the
-slug removal.
+Content:
+- tickets.md — the real win. The page previously said "nothing is known" and
+  that is no longer true: the 18 Aug 2026 print contract (Zavod za izradu
+  novcanica i kovanog novca – Topcider, RSD 38.2m ex-VAT) specifies 1,000,000
+  one-day tickets, 200,000 three-day tickets and 800,000 blank forms on
+  banknote-grade security stock. New section sets out what genuinely follows
+  (one-day and three-day types now confirmed to exist; counter sales planned;
+  1.2m printed against a 4m+ projection means most entries will be digital) and
+  what still does not (prices, on-sale date, online channel, concessions). Price
+  tracker table, FAQs, unknowns and every "as of June 2026" updated.
+- programme.md — new section on the ceremonies producer plus a matching FAQ;
+  the "no confirmed opening or closing ceremonies" line was simply wrong after
+  February 2026. Empty unknowns[] filled in.
+- guide.md / what-is-it.md / programme.md — participant counts 137/139 -> 141
+  with honest as-of dating and the two-number attribution.
+
+Runbook: watch list rewritten for 2026-08-20. Turkiye award still not public
+(recheck ~1 Sep), Korea KOTRA still not public, Turkmenistan winner still
+unpublished though work is underway. Added the 1 Dec 2026 handover deadline as
+the trigger for a heavier December run, the ticket on-sale launch as a weekly
+watch from September, and a note that the official site may be unreachable.
+
+The admin Platform module needs no change: it reads src/data/listings at
+REQUEST time, so the five new prospects appear in /admin/platform, /listings
+and /outreach as soon as this commit lands.
+
+== 2. IndexNow key file fix ==
+
+Every IndexNow submission for belgradebest.com has been rejected with
+403 UserForbiddedToAccessSite, against both api.indexnow.org and
+www.bing.com/indexnow. The site itself is fine — verified in Bing Webmaster
+Tools and crawled daily.
+
+Cause: public/14ec77dc669e4a48947348a73e9ee9b7.txt ended with a 0x0a byte, so
+the served key file was "14ec...9b7\n" rather than the exact key. IndexNow
+compares the file body to the submitted key byte-for-byte and treats the
+mismatch as a failed verification. The file now holds the 32 hex chars and
+nothing else, and .gitattributes pins that one path as `binary` so the repo-wide
+`* text=auto eol=lf` normalization can never re-introduce a line ending.
+
+This unblocks the build-time ping in astro.config.mjs (indexNow() in
+astro:build:done), which has been silently failing on every production deploy
+since it was added.
+
+Owner checks after deploy:
+- curl https://belgradebest.com/14ec77dc669e4a48947348a73e9ee9b7.txt | xxd |
+  tail -1 should end at "7" with no trailing 0a, and a manual IndexNow POST
+  should return 200/202 instead of 403.
+- /expo-2027/tickets — new printing-contract section and the revised price
+  tracker table read correctly on mobile.
+- /expo-2027 and /expo-2027/tracker — the 141 stat and the reworded
+  "read the two numbers honestly" note.
+- /admin/platform/outreach — the five new prospects appear with status "none".
 
 Co-Authored-By: Claude <noreply@anthropic.com>

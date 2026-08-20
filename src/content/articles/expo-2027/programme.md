@@ -7,7 +7,7 @@ description: "Expo 2027 programme: pavilions, National Days, sport and music und
 lede: "Expo 2027's theme — Play for Humanity: Sport and Music for All — frames the official programme. This page is your guide to what's on: the pavilions and themed areas, the sport and music programming, the National Days, and an honest account of which dates, opening hours and headline acts are not yet published."
 heroLabel: "Expo 2027 programme / hero"
 heroAlt: "The Expo 2027 promenade in Belgrade at golden hour — sport, music and play"
-lastUpdated: "2026-07-06"
+lastUpdated: "2026-08-20"
 order: 3
 visible: true
 intent: "both"
@@ -18,11 +18,11 @@ linksTo:
   - "/food-and-nightlife"
   - "/visit-belgrade/things-to-do"
 faqs:
-  - answer: "Across three thematic pavilions — the Power of Play, Play for Progress and Play Together pavilions — plus a Forum of talks and workshops, themed strands for music (\"Music of all for all\") and sport (\"Sport of all for all\"), record-breaking \"Limitless Play\" challenges, country National Days, and city-wide \"Playgrounds\" beyond the gates. Independent guides describe daily live performances, from floating-stage concerts to live mural painting. The full dated calendar is not yet published as of June 2026."
+  - answer: "Across three thematic pavilions — the Power of Play, Play for Progress and Play Together pavilions — plus a Forum of talks and workshops, themed strands for music (\"Music of all for all\") and sport (\"Sport of all for all\"), record-breaking \"Limitless Play\" challenges, country National Days, and city-wide \"Playgrounds\" beyond the gates. Independent guides describe daily live performances, from floating-stage concerts to live mural painting. The full dated calendar is not yet published as of August 2026."
     question: "What is there to do at Expo 2027?"
-  - answer: "A National Day is a day dedicated to one participating country, when it presents its culture, innovation, cuisine and performances through its pavilion and stage events. With 137 nations committed as of 2026, there will be many across the 93-day run. The schedule mapping each country to a date has not yet been published, so you cannot yet pick a date because your country falls on it."
+  - answer: "A National Day is a day dedicated to one participating country, when it presents its culture, innovation, cuisine and performances through its pavilion and stage events. With 141 countries registered as of August 2026, there will be many across the 93-day run. The schedule mapping each country to a date has not yet been published, so you cannot yet pick a date because your country falls on it."
     question: "What are National Days?"
-  - answer: "Official opening and closing times have not been published as of June 2026. The official programme page still shows \"Tickets available soon\" and no daily time-slot or capacity policy is out yet. Check the official programme page (expobelgrade2027.org) for opening hours once they are announced; we will update this page when they appear."
+  - answer: "Official opening and closing times have not been published as of August 2026. The official programme page still shows \"Tickets available soon\" and no daily time-slot or capacity policy is out yet. Check the official programme page (expobelgrade2027.org) for opening hours once they are announced; we will update this page when they appear."
     question: "What are the opening hours of Expo 2027?"
   - answer: "The official theme is \"Play for Humanity: Sport and Music for All,\" exploring how play through sport and music builds resilience, creativity, connection and well-being."
     question: "What is the theme of Expo 2027?"
@@ -30,11 +30,16 @@ faqs:
     question: "When does Expo 2027 take place?"
   - answer: "The concept describes three thematic pavilions — the Power of Play, Play for Progress and Play Together pavilions — plus a Forum for talks, panels, workshops and networking."
     question: "What pavilions will there be?"
-  - answer: "No. As of June 2026, no full public daily calendar of concerts, sports, ceremonies, National Days or headline performers has been published, and the official programme page still shows \"Tickets available soon.\""
+  - answer: "No. As of August 2026, no full public daily calendar of concerts, sports, ceremonies, National Days or headline performers has been published, and the official programme page still shows \"Tickets available soon.\""
     question: "Is the daily programme calendar available yet?"
+  - answer: "Balich Wonder Studio, the Italian ceremony producer behind the Milano-Cortina 2026 Winter Olympics opening, the 2022 FIFA World Cup opening in Qatar and the Expo 2025 Osaka ceremony. It won the Expo 2027 contract in February 2026 in a public procurement with four bidders, for about 2.32 billion dinars excluding VAT (roughly 19.8 million euros). Ceremony dates, venue, ticketing and performers have not been announced."
+    question: "Who is producing the Expo 2027 opening and closing ceremonies?"
   - answer: "Expo 2027 has appointed Olympic sprint champion Usain Bolt as its first ambassador and film star Jackie Chan, with organisers stating that more figures will join. The official mascots are Rastko and Milica, two characters in traditional Serbian costume whose names were chosen by public vote."
     question: "Who are the Expo 2027 ambassadors and mascots?"
-unknowns: []
+unknowns:
+  - "The dated daily calendar and the National Days schedule"
+  - "Opening and closing ceremony dates, venue, ticketing and performers"
+  - "Daily opening hours and any capacity or time-slot policy"
 ---
 
 ## What is there to do at Expo 2027?
@@ -72,7 +77,7 @@ The programme also reaches out into the city. Public-space interventions called 
 
 ## What are National Days at Expo 2027?
 
-A **National Day** is a day dedicated to one participating country, when it presents its culture, innovation, cuisine and performances — through its pavilion, exhibitions, and stage events. Each of the participating nations is expected to have a designated National Day, and with **137 nations committed as of 2026**, there will be many spread across the 93-day run. Independent guidance frames National Days as among the most atmospheric days to visit — a full cultural programme with food and performances — though that "best day to go" framing is orientation from a non-official guide rather than an official Expo statement.
+A **National Day** is a day dedicated to one participating country, when it presents its culture, innovation, cuisine and performances — through its pavilion, exhibitions, and stage events. Each of the participating nations is expected to have a designated National Day, and with **141 countries registered as of August 2026**, there will be many spread across the 93-day run. Independent guidance frames National Days as among the most atmospheric days to visit — a full cultural programme with food and performances — though that "best day to go" framing is orientation from a non-official guide rather than an official Expo statement.
 
 The catch is timing. The **schedule of National Days — the country-to-date mapping — has not yet been published** as of 2026. So while the concept is confirmed by the organiser, you cannot yet pick a date *because your country happens to fall on it*. When the calendar appears, pairing your country's National Day with an evening exploring Belgrade's [food and nightlife](/food-and-nightlife) is an easy way to round out a visit. We will surface the National Days schedule here as soon as it is announced.
 
@@ -88,15 +93,23 @@ The Expo also has official mascots: **Rastko and Milica**, a pair of characters 
 
 ## How big is the programme?
 
-The Expo has been described as featuring **more than 8,000 events across its 93 days**. That figure comes from a non-official consolidation rather than an organiser statement, so it is best read as an indication of ambition rather than a confirmed count. For scale context, the event is a [Specialised Expo](https://www.bie-paris.org/site/en/2027-belgrade) — the first ever held in the Western Balkans — with **137 nations committed as of 2026** and an official projection of over 4 million visits, supported behind the scenes by a planned workforce of around 20,000 volunteers. Whatever the exact event count turns out to be, the programming is being built for a genuinely large, three-month international event rather than a short festival.
+The Expo has been described as featuring **more than 8,000 events across its 93 days**. That figure comes from a non-official consolidation rather than an organiser statement, so it is best read as an indication of ambition rather than a confirmed count. For scale context, the event is a [Specialised Expo](https://www.bie-paris.org/site/en/2027-belgrade) — the first ever held in the Western Balkans — with **141 countries registered as of August 2026** and an official projection of over 4 million visits, supported behind the scenes by a planned workforce of around 20,000 volunteers. Whatever the exact event count turns out to be, the programming is being built for a genuinely large, three-month international event rather than a short festival.
 
 ## Context worth knowing
 
 For readers who want the fuller picture: the ambassadors were engaged for unspecified fees and presented publicly by the Serbian President, and the Expo's broader marketing has drawn domestic political criticism — specifically over state-funded promotion amid anti-government protests. This is reported by Balkan Insight and is offered here as context, not as part of the programme itself. Separately, Serbia has presented a "Green Agenda for Expo 2027" (slogan "Play GREEN, Play for HUMANITY") emphasising sustainability — a framing that is likely to surface in the programming, though specific green events have not been detailed.
 
+## Who is producing the opening and closing ceremonies
+
+One piece of the programme is no longer a blank. In **February 2026** the organiser awarded the contract for designing and staging the **opening and closing ceremonies** to **Balich Wonder Studio**, the Italian ceremony producer, after a public procurement with four bidders. The contract is worth roughly **2.32 billion dinars excluding VAT — about €19.8 million**.
+
+That name tells you the register to expect. Balich Wonder Studio produced the opening ceremony of the Milano-Cortina 2026 Winter Olympics, the FIFA World Cup opening in Qatar in 2022, the Expo 2025 Osaka ceremony, and sixteen Olympic and Paralympic ceremonies including Rio 2016 and Sochi 2014. For scale, comparable Expo ceremonies have cost around €30 million at Osaka 2025 and €40–50 million at Dubai 2020, so Belgrade's budget is real but deliberately leaner than the World Expo tier.
+
+What is still not published: the ceremony dates beyond the Expo's own 15 May and 15 August bookends, whether either ceremony will be publicly ticketed or broadcast-only, the venue within the Surčin site, and any performers. The contract tells you who and roughly how much — not yet what or when.
+
 ## What's still unknown about the programme
 
-This is the honest gap, stated plainly. As of 2026, **no full public daily calendar has been published** — no dated concerts, sports competitions, conferences or ceremonies, no National Days schedule, no confirmed opening or closing ceremonies, and no headline performers named. Opening hours, ticket prices and entry categories are likewise unpublished. Only the high-level subthemes and categories described above are available.
+This is the honest gap, stated plainly. As of August 2026, **no full public daily calendar has been published** — no dated concerts, sports competitions or conferences, no National Days schedule, no ceremony dates or headline performers named. Opening hours, ticket prices and entry categories are likewise unpublished. Only the high-level subthemes and categories described above are available.
 
 The official Programme page itself, as of 2026, presents the vision and subthemes rather than a dated event schedule, and still shows "Tickets available soon." So the *concept* is solid and writable; the *timetable* simply is not out yet. The single best place to watch for the dated programme, the National Days schedule and opening hours is the official programme page at expobelgrade2027.org — and we will track each piece here as it appears.
 

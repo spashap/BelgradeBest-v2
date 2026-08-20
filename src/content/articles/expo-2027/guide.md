@@ -7,7 +7,7 @@ description: "Expo 2027 Belgrade visitor guide: how many days you need, what to 
 lede: "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. This is the visitor hub — how many days to plan, what to book first, when it's busiest, what's confirmed versus still unknown, and where to go next for tickets, getting there, and where to stay."
 heroLabel: "Expo 2027 complete guide / hero"
 heroAlt: "Expo 2027 and the Belgrade skyline at golden hour — the complete visitor guide"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-08-20"
 order: 2
 visible: true
 intent: "both"
@@ -33,7 +33,7 @@ faqs:
     question: "Do I need a visa to visit Expo 2027?"
   - answer: "A new airport–city–Expo railway is under construction, but the timing is disputed: political statements targeted completion by end of 2026, while contractor and ministry reporting describes a spring 2027 launch. No timetable, fares or confirmed opening date have been published — so plan around buses, taxis and existing transport for now."
     question: "Is the new airport railway confirmed for the Expo?"
-  - answer: "As of mid-2026 the official Participants page counts 139 confirmed international participants, up from 117 in mid-2025, and notes more are coming — so treat it as a current, rising figure rather than a final total. That already passes Astana 2017's 115–117, making this a record Specialised Expo by participant count."
+  - answer: "In August 2026 Expo 2027's director put the figure at 141 registered countries, calling it a historic record; the official Participants page counter last read 139, up from 117 in mid-2025, and notes more are coming — so treat it as a current, rising figure rather than a final total. That already passes Astana 2017's 115–117, making this a record Specialised Expo by participant count."
     question: "How many countries are taking part?"
 unknowns: []
 ---
@@ -56,7 +56,7 @@ Because the site is right beside the airport, many visitors will arrive almost o
 
 ## How many countries are taking part?
 
-As of mid-2026, the [official Participants page](https://expobelgrade2027.org/en/participants) counts 139 international participants confirmed, with a note that more are coming. The figure has grown over time — the official site earlier said "over 120 nations," a July 2025 release reported 117, the count reached 137 by early 2026, and the United States pushed it to 139 in May 2026 — and it may keep rising, so treat it as current rather than final. That already exceeds the previous Specialised Expo, Astana 2017, which hosted 115–117 participating countries, making Serbia a record holder for a Specialised Expo by participant count. Each participating country is expected to have a National Day and to present itself through pavilions, exhibitions, events, innovations, culture and cuisine. The full public list is not yet completely published; our [participant tracker](/expo-2027/tracker) maintains the sourced list of every publicly named country.
+In **August 2026** Expo 2027 director Danilo Jerinić put the total at **141 registered countries** — a historic record, in his words — while the [official Participants page](https://expobelgrade2027.org/en/participants) counter last read 139, with a note that more are coming. The figure has grown steadily: the official site earlier said "over 120 nations," a July 2025 release reported 117, the count reached 137 by early 2026, and the United States pushed it to 139 in May 2026. It may keep rising — the organiser says late joiners will be offered the smaller 330, 660 or 990 m² formats because the site is close to full — so treat it as current rather than final. That already exceeds the previous Specialised Expo, Astana 2017, which hosted 115–117 participating countries, making Serbia a record holder for a Specialised Expo by participant count. Each participating country is expected to have a National Day and to present itself through pavilions, exhibitions, events, innovations, culture and cuisine. The full public list is not yet completely published; our [participant tracker](/expo-2027/tracker) maintains the sourced list of every publicly named country.
 
 Several national pavilions now have real, sourced plans — [Germany's](/expo-2027/pavilions/germany) 972 m² pavilion under "Play for Progress" (implementation awarded to Messe Düsseldorf), [Japan's](/expo-2027/pavilions/japan) fully published Basic Plan, [Italy's](/expo-2027/pavilions/italy) "Play together" concept, and host [Serbia's](/expo-2027/pavilions/serbia) ~€40 million permanent flagship among them. We profile each announced pavilion, fact by sourced fact, in the [pavilion directory](/expo-2027/pavilions); for the running country list, see the [participant tracker](/expo-2027/tracker).
 

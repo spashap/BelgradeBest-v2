@@ -108,7 +108,7 @@ const unknowns = [
 const faqs = [
   {
     question: "How many countries are taking part in Expo 2027?",
-    answer: `The official Participants page counter shows ${officialCount} confirmed international participants, with a note that more are coming — already a record for a Specialised Expo (Astana 2017 hosted 115–117). Treat it as a growing snapshot rather than a final total; our participant tracker keeps the current figure and the growth timeline with sources.`,
+    answer: `Expo 2027's director put the figure at ${officialCount} registered countries in August 2026 and called it a historic record for a Specialised Expo (Astana 2017 hosted 115–117); the official Participants page counter last read 139. Treat it as a growing snapshot rather than a final total; our participant tracker keeps the current figure and the growth timeline with sources.`,
   },
   {
     question: "Is my country participating in Expo 2027?",
@@ -116,7 +116,7 @@ const faqs = [
   },
   {
     question: "Is the full list of participating countries public?",
-    answer: `Not yet as a complete table. The official page names only a subset of the ${officialCount} confirmed participants, and the full roster including international organisations and companies is still pending. Our tracker maintains the deduped, sourced list of every publicly named country.`,
+    answer: `Not yet as a complete table. The official page names only a subset of the ${officialCount} announced participants, and the full roster including international organisations and companies is still pending. Our tracker maintains the deduped, sourced list of every publicly named country.`,
   },
   {
     question: "How are the Expo 2027 pavilions organised?",
@@ -289,7 +289,7 @@ const schemas: object[] = [
       <div class="c-stats">
         <div class="c-stat">
           <div class="c-stat__num">{officialCount}</div>
-          <div class="c-stat__label">confirmed participants (official counter)</div>
+          <div class="c-stat__label">participants (organiser, Aug 2026)</div>
         </div>
         <div class="c-stat">
           <div class="c-stat__num">{namedCount}</div>
@@ -305,10 +305,11 @@ const schemas: object[] = [
         </div>
       </div>
       <Note>
-        <strong>Read the two numbers honestly.</strong> The official counter claims {officialCount}{" "}
-        participants, but only {namedCount} countries have been publicly named — absence from the
-        list below doesn't mean absence from the Expo. The full methodology, growth timeline and
-        every source live on the <a href="/expo-2027/tracker">participant tracker</a>.
+        <strong>Read the two numbers honestly.</strong> The organiser puts the total at{" "}
+        {officialCount} participants, but only {namedCount} countries have been publicly named —
+        absence from the list below doesn't mean absence from the Expo. The full methodology,
+        growth timeline and every source live on the{" "}
+        <a href="/expo-2027/tracker">participant tracker</a>.
       </Note>
       <div class="c-data-table">
         <table>
