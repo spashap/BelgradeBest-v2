@@ -181,17 +181,48 @@ function indexNow() {
             logger.warn("no indexable URLs to submit");
             return;
           }
-          const res = await fetch("https://api.indexnow.org/indexnow", {
-            method: "POST",
-            headers: { "Content-Type": "application/json; charset=utf-8" },
-            body: JSON.stringify({
-              host,
-              key: INDEXNOW_KEY,
-              keyLocation: `${SITE}/${INDEXNOW_KEY}.txt`,
-              urlList: urls,
-            }),
+          // IndexNow endpoints share every submission with each other, so ONE
+          // accepted POST reaches all participating engines. Microsoft's own
+          // endpoint (api.indexnow.org / bing.com) 403s
+          // "UserForbiddedToAccessSite" for this host — verified 2026-08-20
+          // with a byte-exact key file, while Yandex/Seznam/Naver accepted the
+          // identical payload AND the URL then showed up in Bing Webmaster
+          // Tools' own IndexNow report. So: try each endpoint until one takes
+          // it, keeping Microsoft first in case the block is ever lifted.
+          const ENDPOINTS = [
+            "https://api.indexnow.org/indexnow",
+            "https://yandex.com/indexnow",
+            "https://search.seznam.cz/indexnow",
+            "https://searchadvisor.naver.com/indexnow",
+          ];
+          const payload = JSON.stringify({
+            host,
+            key: INDEXNOW_KEY,
+            keyLocation: `${SITE}/${INDEXNOW_KEY}.txt`,
+            urlList: urls,
           });
-          logger.info(`submitted ${urls.length} URLs → ${res.status} ${res.statusText}`);
+          const tried = [];
+          let accepted = false;
+          for (const endpoint of ENDPOINTS) {
+            try {
+              const res = await fetch(endpoint, {
+                method: "POST",
+                headers: { "Content-Type": "application/json; charset=utf-8" },
+                body: payload,
+              });
+              tried.push(`${new URL(endpoint).host}:${res.status}`);
+              if (res.ok) {
+                accepted = true;
+                break;
+              }
+            } catch (e) {
+              tried.push(`${new URL(endpoint).host}:ERR`);
+            }
+          }
+          const outcome = accepted ? "accepted" : "REJECTED BY ALL";
+          logger[accepted ? "info" : "warn"](
+            `submitted ${urls.length} URLs — ${outcome} (${tried.join(", ")})`
+          );
         } catch (err) {
           logger.warn(`ping failed (non-fatal): ${err?.message ?? err}`);
         }
