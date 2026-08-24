@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T06:30:26.914Z",
+  "generatedAt": "2026-08-24T06:43:36.545Z",
   "items": [
     {
       "id": "1vmq5bx",
@@ -77,6 +77,24 @@
       "lastSeen": "2026-07-28T08:23:57.428Z"
     },
     {
+      "id": "1vwq064",
+      "title": "Sunday nightlife?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1vwq064/sunday_nightlife/",
+      "sub": "r/Belgrade",
+      "comments": 0,
+      "topics": [
+        "airport",
+        "nightlife",
+        "club",
+        "bar",
+        "restaurant"
+      ],
+      "score": 26.4,
+      "isQuestion": true,
+      "firstSeen": "2026-08-24T06:43:36.545Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
+    },
+    {
       "id": "1vvcfpz",
       "title": "Hi all, planning a travel to Serbia &amp; Montenegro for 2 weeks (1st half of October), need some help with whether the base places I have chosen seem fine and also the no. of nights at each place",
       "url": "https://www.reddit.com/r/travel/comments/1vvcfpz/hi_all_planning_a_travel_to_serbia_montenegro_for/",
@@ -90,10 +108,10 @@
         "nightlife",
         "see"
       ],
-      "score": 26.1,
+      "score": 25.6,
       "isQuestion": true,
       "firstSeen": "2026-08-23T06:30:26.914Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1utluvb",
@@ -251,26 +269,6 @@
       "lastSeen": "2026-08-23T06:30:26.914Z"
     },
     {
-      "id": "1vrrieh",
-      "title": "I fell in love with Belgrade ❤️",
-      "url": "https://www.reddit.com/r/travel/comments/1vrrieh/i_fell_in_love_with_belgrade/",
-      "sub": "r/travel",
-      "comments": 75,
-      "topics": [
-        "hotel",
-        "area",
-        "zemun",
-        "transport",
-        "club",
-        "bar",
-        "see"
-      ],
-      "score": 22.2,
-      "isQuestion": false,
-      "firstSeen": "2026-08-19T06:33:39.174Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
-    },
-    {
       "id": "1v6lvat",
       "title": "SCAMMED IN BELGRADE",
       "url": "https://www.reddit.com/r/Belgrade/comments/1v6lvat/scammed_in_belgrade/",
@@ -289,6 +287,26 @@
       "isQuestion": false,
       "firstSeen": "2026-07-27T09:39:19.334Z",
       "lastSeen": "2026-07-31T08:40:49.538Z"
+    },
+    {
+      "id": "1vrrieh",
+      "title": "I fell in love with Belgrade ❤️",
+      "url": "https://www.reddit.com/r/travel/comments/1vrrieh/i_fell_in_love_with_belgrade/",
+      "sub": "r/travel",
+      "comments": 75,
+      "topics": [
+        "hotel",
+        "area",
+        "zemun",
+        "transport",
+        "club",
+        "bar",
+        "see"
+      ],
+      "score": 21.7,
+      "isQuestion": false,
+      "firstSeen": "2026-08-19T06:33:39.174Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1v58kn1",
@@ -329,6 +347,22 @@
       "isQuestion": false,
       "firstSeen": "2026-07-27T09:39:19.334Z",
       "lastSeen": "2026-08-01T08:10:51.569Z"
+    },
+    {
+      "id": "1vwuneh",
+      "title": "Does the A1 Shuttle Bus to the Airport accept card payment?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1vwuneh/does_the_a1_shuttle_bus_to_the_airport_accept/",
+      "sub": "r/Belgrade",
+      "comments": 3,
+      "topics": [
+        "airport",
+        "bus",
+        "see"
+      ],
+      "score": 20.5,
+      "isQuestion": true,
+      "firstSeen": "2026-08-24T06:43:36.545Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1uqv9as",
@@ -867,10 +901,10 @@
       "topics": [
         "food"
       ],
-      "score": 13.5,
+      "score": 13,
       "isQuestion": true,
       "firstSeen": "2026-08-22T06:29:40.203Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1vtksla",
@@ -881,27 +915,10 @@
       "topics": [
         "area"
       ],
-      "score": 13.2,
+      "score": 12.7,
       "isQuestion": true,
       "firstSeen": "2026-08-21T06:35:34.546Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
-    },
-    {
-      "id": "1vqre6t",
-      "title": "Belgrade Weekday Nights",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1vqre6t/belgrade_weekday_nights/",
-      "sub": "r/Belgrade",
-      "comments": 15,
-      "topics": [
-        "bar",
-        "restaurant",
-        "days",
-        "see"
-      ],
-      "score": 12.6,
-      "isQuestion": false,
-      "firstSeen": "2026-08-18T06:32:43.174Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1vnwijr",
@@ -971,18 +988,21 @@
       "lastSeen": "2026-08-05T08:26:56.903Z"
     },
     {
-      "id": "1vrv7k5",
-      "title": "Vaterpolo - How to attend a game in Belgrade?",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1vrv7k5/vaterpolo_how_to_attend_a_game_in_belgrade/",
+      "id": "1vqre6t",
+      "title": "Belgrade Weekday Nights",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1vqre6t/belgrade_weekday_nights/",
       "sub": "r/Belgrade",
-      "comments": 1,
+      "comments": 15,
       "topics": [
-        "club"
+        "bar",
+        "restaurant",
+        "days",
+        "see"
       ],
-      "score": 12.2,
-      "isQuestion": true,
-      "firstSeen": "2026-08-19T06:33:39.174Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
+      "score": 12.1,
+      "isQuestion": false,
+      "firstSeen": "2026-08-18T06:32:43.174Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1v9tpyc",
@@ -1078,20 +1098,18 @@
       "lastSeen": "2026-07-22T08:16:45.467Z"
     },
     {
-      "id": "1vum6g4",
-      "title": "Looking for an affordable studio apartment in Belgrade",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1vum6g4/looking_for_an_affordable_studio_apartment_in/",
+      "id": "1vrv7k5",
+      "title": "Vaterpolo - How to attend a game in Belgrade?",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1vrv7k5/vaterpolo_how_to_attend_a_game_in_belgrade/",
       "sub": "r/Belgrade",
-      "comments": 12,
+      "comments": 1,
       "topics": [
-        "apartment",
-        "area",
-        "transport"
+        "club"
       ],
       "score": 11.7,
-      "isQuestion": false,
-      "firstSeen": "2026-08-22T06:29:40.203Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
+      "isQuestion": true,
+      "firstSeen": "2026-08-19T06:33:39.174Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1v82rry",
@@ -1211,6 +1229,22 @@
       "lastSeen": "2026-07-10T09:24:59.356Z"
     },
     {
+      "id": "1vum6g4",
+      "title": "Looking for an affordable studio apartment in Belgrade",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1vum6g4/looking_for_an_affordable_studio_apartment_in/",
+      "sub": "r/Belgrade",
+      "comments": 12,
+      "topics": [
+        "apartment",
+        "area",
+        "transport"
+      ],
+      "score": 11.2,
+      "isQuestion": false,
+      "firstSeen": "2026-08-22T06:29:40.203Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
+    },
+    {
       "id": "1voab0f",
       "title": "Kurs za masera ?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1voab0f/kurs_za_masera/",
@@ -1295,20 +1329,6 @@
       "isQuestion": true,
       "firstSeen": "2026-07-14T07:53:07.505Z",
       "lastSeen": "2026-07-20T08:48:05.089Z"
-    },
-    {
-      "id": "1vvf92g",
-      "title": "If you haven’t gone to Cafe Moskva in Hotel Moskva you should. The hotel is stunning and the cafe is my favorite in the city",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1vvf92g/if_you_havent_gone_to_cafe_moskva_in_hotel_moskva/",
-      "sub": "r/Belgrade",
-      "comments": 16,
-      "topics": [
-        "hotel"
-      ],
-      "score": 11.2,
-      "isQuestion": true,
-      "firstSeen": "2026-08-23T06:30:26.914Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
     },
     {
       "id": "1vna8h4",
@@ -1400,6 +1420,20 @@
       "lastSeen": "2026-07-12T08:07:50.536Z"
     },
     {
+      "id": "1vvf92g",
+      "title": "If you haven’t gone to Cafe Moskva in Hotel Moskva you should. The hotel is stunning and the cafe is my favorite in the city",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1vvf92g/if_you_havent_gone_to_cafe_moskva_in_hotel_moskva/",
+      "sub": "r/Belgrade",
+      "comments": 16,
+      "topics": [
+        "hotel"
+      ],
+      "score": 10.7,
+      "isQuestion": true,
+      "firstSeen": "2026-08-23T06:30:26.914Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
+    },
+    {
       "id": "1vty1bj",
       "title": "Drugstore or barutana?",
       "url": "https://www.reddit.com/r/Belgrade/comments/1vty1bj/drugstore_or_barutana/",
@@ -1408,10 +1442,10 @@
       "topics": [
         "bar"
       ],
-      "score": 10.3,
+      "score": 9.8,
       "isQuestion": true,
       "firstSeen": "2026-08-21T06:35:34.546Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1v498z9",
@@ -1426,36 +1460,6 @@
       "isQuestion": true,
       "firstSeen": "2026-07-24T08:15:24.339Z",
       "lastSeen": "2026-07-27T09:39:19.334Z"
-    },
-    {
-      "id": "1um9tum",
-      "title": "Good places to have breakfast early in the morning",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1um9tum/good_places_to_have_breakfast_early_in_the_morning/",
-      "sub": "r/Belgrade",
-      "comments": 5,
-      "topics": [
-        "stay",
-        "days",
-        "see"
-      ],
-      "score": 9.5,
-      "isQuestion": false,
-      "firstSeen": "2026-07-04T08:29:35.035Z",
-      "lastSeen": "2026-07-09T09:33:48.039Z"
-    },
-    {
-      "id": "1vvy2m0",
-      "title": "Da li mogu da se unose bickili u autobus",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1vvy2m0/da_li_mogu_da_se_unose_bickili_u_autobus/",
-      "sub": "r/Belgrade",
-      "comments": 1,
-      "topics": [
-        "bus"
-      ],
-      "score": 9.5,
-      "isQuestion": false,
-      "firstSeen": "2026-08-23T06:30:26.914Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
     },
     {
       "id": "1v41ket",
@@ -1514,6 +1518,20 @@
       "isQuestion": false,
       "firstSeen": "2026-08-15T06:27:25.990Z",
       "lastSeen": "2026-08-21T06:35:34.546Z"
+    },
+    {
+      "id": "1vwglx3",
+      "title": "Potreban dobar neurolog",
+      "url": "https://www.reddit.com/r/Belgrade/comments/1vwglx3/potreban_dobar_neurolog/",
+      "sub": "r/Belgrade",
+      "comments": 0,
+      "topics": [
+        "bar"
+      ],
+      "score": 9.3,
+      "isQuestion": false,
+      "firstSeen": "2026-08-24T06:43:36.545Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1voc4v9",
@@ -1657,21 +1675,6 @@
       "lastSeen": "2026-08-08T06:40:39.065Z"
     },
     {
-      "id": "1vv8bka",
-      "title": "Your worse Airbnb experiences",
-      "url": "https://www.reddit.com/r/digitalnomad/comments/1vv8bka/your_worse_airbnb_experiences/",
-      "sub": "r/digitalnomad",
-      "comments": 59,
-      "topics": [
-        "stay",
-        "apartment"
-      ],
-      "score": 9.1,
-      "isQuestion": false,
-      "firstSeen": "2026-08-23T06:30:26.914Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
-    },
-    {
       "id": "1ux1e6t",
       "title": "18 y/o woman clubbing alone",
       "url": "https://www.reddit.com/r/Belgrade/comments/1ux1e6t/18_yo_woman_clubbing_alone/",
@@ -1700,6 +1703,21 @@
       "isQuestion": false,
       "firstSeen": "2026-08-17T06:40:52.129Z",
       "lastSeen": "2026-08-18T06:32:43.174Z"
+    },
+    {
+      "id": "1vv8bka",
+      "title": "Your worse Airbnb experiences",
+      "url": "https://www.reddit.com/r/digitalnomad/comments/1vv8bka/your_worse_airbnb_experiences/",
+      "sub": "r/digitalnomad",
+      "comments": 61,
+      "topics": [
+        "stay",
+        "apartment"
+      ],
+      "score": 8.6,
+      "isQuestion": false,
+      "firstSeen": "2026-08-23T06:30:26.914Z",
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     },
     {
       "id": "1vfn0kg",
@@ -1907,24 +1925,10 @@
         "club",
         "days"
       ],
-      "score": 7.3,
+      "score": 6.8,
       "isQuestion": false,
       "firstSeen": "2026-08-19T06:33:39.174Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
-    },
-    {
-      "id": "1vrg2sz",
-      "title": "Punk and Metal Scene",
-      "url": "https://www.reddit.com/r/Belgrade/comments/1vrg2sz/punk_and_metal_scene/",
-      "sub": "r/Belgrade",
-      "comments": 2,
-      "topics": [
-        "bar"
-      ],
-      "score": 7,
-      "isQuestion": false,
-      "firstSeen": "2026-08-18T06:32:43.174Z",
-      "lastSeen": "2026-08-23T06:30:26.914Z"
+      "lastSeen": "2026-08-24T06:43:36.545Z"
     }
   ]
 }
