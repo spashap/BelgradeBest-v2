@@ -128,3 +128,52 @@ real demand behind it.
 | Google indexed (sweep) | 66 of 145 | ≥ 80 |
 | GA4 sessions / 28d (ex-bots) | ~140 | 300 |
 | Ticket-alert subscribers | 0 | ≥ 30 |
+
+---
+
+## Session ledger — 2026-09-04 (end of session)
+
+### Done and live (V01.017, deployed by Claude with owner authorisation)
+
+- **Efficiency check** with live GSC / GA4 / Bing data → `EFFICIENCY-REPORT-2026-09-04.md`
+  + raw Google index sweep `google-index-sweep-2026-09-04.json` (66/145 indexed).
+- **Expo research run** (3 Sonnet agents + Fable verification) →
+  `KB/platform/research/2026-09-04-sweep.md`; runbook watch list updated.
+  - Ticket sales **planned 15 Sep 2026** applied to /tickets (+ German twin),
+    hub, guide FAQ, pavilion visiting block — worded as planned, not confirmed.
+  - Germany motto, Austria "Join the Flow" (+ team, status announced),
+    Switzerland agency Jeff + commissioner, Italy call extended to 30 Oct.
+  - 7 prospect stubs (Intereuropa, Arhi Nova, NEO Aerodromes, laundry
+    consortium, Jeff, ZONE Media, PLANET architects). 21 published pavilion
+    pages unchanged; no contact data leaked (grep-verified on dist).
+- **German Expo cluster** — 12 pages at `/de/expo-2027/…` with hreflang both
+  ways, German chrome, sitemap lastmod, Bing + IndexNow push. Mechanics in
+  `CLAUDE.md → Language pilot`.
+- **Widgets** — countdown `data-lang="de"`, accessible card roots on all four
+  widgets; countdown page documents the options.
+- Memory + this plan updated; research record written.
+
+### Not done (carried forward)
+
+| Item | Why not | Owner action needed? |
+|---|---|---|
+| Automated first outreach email + 7-day follow-up | Blocked on `RESEND_API_KEY` + DNS for admin@belgradebest.com | **Yes** — Resend account + DNS (~30 min) |
+| Contact-list build (150–200 named Expo contacts) | Runbook says Perplexity run is the cheap path | Yes — run the runbook prompt, or say "use agents" |
+| Digital-PR pitch of the tracker (30 outlets) | Needs the list + owner sends from the real mailbox | Yes — list via Perplexity, sending by owner |
+| Ticket-alert email capture on /expo-2027/tickets | Needs Resend Audiences (same key) | Yes — same Resend key |
+| Affiliates on 3 pages | Needs a Travelpayouts (or similar) account | Yes — signup (~20 min) |
+| `brand.sameAs` (FB / LinkedIn / X pages) | Owner-created profiles | Yes |
+| Italian / Turkish Expo pages | Decision gate 05 Oct on German Bing impressions | No — Claude, after the gate |
+| Tracker participant count | No source moved it past 141 | No |
+| Russia / UAE pavilion designers | Unverified claims, kept off the site | No — recheck next run |
+| Reddit replies from the question radar | By hand, by design | Yes — 2/week |
+
+### Dated triggers
+
+- **14–16 Sep 2026** — ticket sales expected to open: update /tickets + /de twin the
+  same day, hub facts line, ListingPage visiting block; push to Bing; run the
+  tracker pitch cycle.
+- **~17 Sep** — National Days stage tender award (precursor to the calendar).
+- **~05 Oct** — SEO checkpoint vs the targets table above; German go/no-go.
+- **30 Oct** — Italy sponsor call closes → sponsor roster = prospects.
+- **1 Dec** — pavilion handover to countries → heavy prospect run.

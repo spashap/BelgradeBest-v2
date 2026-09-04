@@ -1,31 +1,11 @@
-Expo refresh 2026-09-04 + German Expo cluster (language pilot) + widget polish
+KB: session ledger 2026-09-04 — done / not done / dated triggers
 
-Pavilion refresh (research record KB/platform/research/2026-09-04-sweep.md):
-- Ticket sales start planned for 15 Sep 2026, from the printing tender's
-  delivery schedule (b92, 6 Aug) — tickets article, hub facts/unknowns,
-  guide FAQ and the pavilion visiting block now say so, marked as planned.
-- Germany: motto "Germany! Out of the Box" (CIM, 7 Aug). Austria: winning
-  concept "Join the Flow", team facts and fiction + ZONE Media + PLANET
-  architects, status announced (WKÖ, 4 Aug). Switzerland: Jeff (Zürich) won
-  the scenography pitch, commissioner Manuel Salchli, 648 m² shared hall
-  (persoenlich.com, 1 Sep). Italy: sponsor call extended to 30 Oct.
-- 7 prospect stubs: Intereuropa (logistics partner, RSD 530.9m), Arhi Nova,
-  NEO Aerodromes Engineering, EXPO Village laundry consortium, Jeff, ZONE
-  Media, PLANET architects. Runbook watch list updated.
-
-German Expo cluster — /de/expo-2027 (12 pages):
-- New `de` content collection (src/content/de) + i18n.de blocks in the DACH
-  listing JSONs; routes under src/pages/de/expo-2027; ArticleLayout and
-  ListingPage take lang="de"; header/footer switch per language.
-- hreflang en/de/x-default on both sides, <html lang>, og:locale, JSON-LD
-  inLanguage, sitemap lastmod for /de mirrors. Helper: src/lib/i18n.ts.
-  Documented in CLAUDE.md → Language pilot.
-
-Widgets: countdown gets data-lang="de" (German labels, links to /de hub)
-and an accessible card root; the data widgets' cards carry role="group" +
-aria-label. Countdown page documents the options.
-
-KB: efficiency report + next-steps (2026-09-04), Google index sweep JSON.
+Appends the end-of-session status to KB/seo/NEXT-STEPS-2026-09-04.md:
+what shipped in V01.017 (efficiency report, Expo refresh with the planned
+15 Sep ticket-sales date, German Expo cluster, widget polish), what is
+carried forward and which items need an owner action (Resend key, contact
+list, affiliates, sameAs), and the dated triggers (14-16 Sep tickets,
+05 Oct checkpoint, 30 Oct Italy, 1 Dec handover).
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JWfZdC1bcVXqctFXQNPHr1
