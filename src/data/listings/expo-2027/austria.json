@@ -4,23 +4,49 @@
   "type": "pavilion",
   "name": "Austria Pavilion",
   "shortName": "Austria",
-  "status": "tender",
+  "status": "announced",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-05",
-  "summary": "Austria signed in April 2026 and is running an EU-wide two-stage tender for its pavilion — jointly financed by the economy ministry (75%) and the Austrian Economic Chamber (25%), with an unusually explicit business agenda in Serbia.",
+  "updated": "2026-09-04",
+  "summary": "Austria signed in April 2026 and has chosen its pavilion concept: \"Join the Flow\", built around the Danube as a living axis of economy and innovation, with an Innovation Lab at its core — jointly financed by the economy ministry (75%) and the Austrian Economic Chamber (25%).",
   "blocks": {
     "about": [
       "Austria signed its Expo 2027 participation agreement on 17 April 2026 — Government Commissioner Philipp Gady, Serbia's General Commissioner Jagoda Lazarević and Expo Director Danilo Jerinić were the signatories. Participation is jointly handled and financed by the Federal Ministry for Economy, Energy and Tourism (75%) and the Austrian Economic Chamber WKÖ (25%).",
       "An EU-wide, two-stage procurement procedure is under way for the conception, design and implementation of Austria's contribution. The pavilion is planned to present Austrian innovation, creative diversity and economic strength, with a visitor experience emphasizing playfulness, creativity, openness and internationalism, complemented by an accompanying programme of business, tourism, sport and cultural events.",
-      "Austria frames its participation in openly economic terms: Serbia is one of its most important trade partners in Southeast Europe, with unused export potential the ministry puts at over €400 million through 2029. Austria is the third-largest foreign investor in Serbia, with more than 800 Austrian companies active in the country."
+      "Austria frames its participation in openly economic terms: Serbia is one of its most important trade partners in Southeast Europe, with unused export potential the ministry puts at over €400 million through 2029. Austria is the third-largest foreign investor in Serbia, with more than 800 Austrian companies active in the country.",
+      "The two-stage tender produced a winner in August 2026: \"Join the Flow\", by the team of facts and fiction (Cologne), ZONE Media and PLANET architects. The Danube is the connecting element — presented as a living axis for economy and innovation between Austria and Serbia — and the pavilion's core is an Innovation Lab showcasing Austrian companies, research institutions and solutions in green technology, digitalisation, energy, mobility and education. A companion programme, Flow2Expo, runs delegation trips, workshops, webinars and business platforms before, during and after the Expo to help Austrian firms build partnerships in Southeast Europe."
     ],
     "facts": [
-      { "label": "Concept", "value": "Innovation, creative diversity, economic strength — playful, open visitor experience", "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad" },
-      { "label": "Status", "value": "Agreement signed 17 Apr 2026; EU-wide two-stage tender running", "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad" },
-      { "label": "Commissioner", "value": "Philipp Gady, Government Commissioner", "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad" },
-      { "label": "Financing", "value": "75% Federal Ministry for Economy, Energy and Tourism / 25% WKÖ", "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad" },
-      { "label": "Economic context", "value": ">€400M unused export potential to 2029; 800+ Austrian companies in Serbia", "source": "https://www.bmwet.gv.at/Themen/International/EXPO/Expo-2027-Belgrad.html" }
+      {
+        "label": "Concept",
+        "value": "\"Join the Flow\" — the Danube as a living axis of economy and innovation; Innovation Lab at the core",
+        "source": "https://www.wko.at/oe/news/siegerprojekt-expo-27"
+      },
+      {
+        "label": "Status",
+        "value": "Agreement signed 17 Apr 2026; winning concept announced 4 Aug 2026",
+        "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad"
+      },
+      {
+        "label": "Creative team",
+        "value": "facts and fiction (Cologne), ZONE Media, PLANET architects",
+        "source": "https://www.wko.at/oe/news/siegerprojekt-expo-27"
+      },
+      {
+        "label": "Commissioner",
+        "value": "Philipp Gady, Government Commissioner",
+        "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad"
+      },
+      {
+        "label": "Financing",
+        "value": "75% Federal Ministry for Economy, Energy and Tourism / 25% WKÖ",
+        "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad"
+      },
+      {
+        "label": "Economic context",
+        "value": ">€400M unused export potential to 2029; 800+ Austrian companies in Serbia",
+        "source": "https://www.bmwet.gv.at/Themen/International/EXPO/Expo-2027-Belgrad.html"
+      }
     ],
     "quotes": []
   },
@@ -36,14 +62,91 @@
     {
       "question": "Why is Austria investing in Expo 2027 Belgrade?",
       "answer": "The economy ministry frames it economically: Serbia is one of Austria's most important trade partners in Southeast Europe, with unused export potential put at over €400 million through 2029. Austria is the third-largest foreign investor in Serbia, with more than 800 Austrian companies active there."
+    },
+    {
+      "question": "What is Austria's pavilion concept for Expo 2027?",
+      "answer": "\"Join the Flow\", announced on 4 August 2026 as the winner of Austria's two-stage tender. It uses the Danube as the connecting theme between Austria and Serbia and puts an Innovation Lab at the centre of the pavilion, showcasing Austrian companies and research in green technology, digitalisation, energy, mobility and education. The creative team is facts and fiction, ZONE Media and PLANET architects."
     }
   ],
   "links": {
     "website": null,
     "sources": [
-      { "url": "https://www.wko.at/oe/news/oesterreich-expo-belgrad", "note": "WKÖ: signing, tender, concept" },
-      { "url": "https://www.bmwet.gv.at/Themen/International/EXPO/Expo-2027-Belgrad.html", "note": "Ministry: financing and economic framing" }
+      {
+        "url": "https://www.wko.at/oe/news/oesterreich-expo-belgrad",
+        "note": "WKÖ: signing, tender, concept"
+      },
+      {
+        "url": "https://www.bmwet.gv.at/Themen/International/EXPO/Expo-2027-Belgrad.html",
+        "note": "Ministry: financing and economic framing"
+      },
+      {
+        "url": "https://www.wko.at/oe/news/siegerprojekt-expo-27",
+        "note": "WKÖ: winning concept 'Join the Flow', creative team, Flow2Expo (4 Aug 2026)"
+      }
     ]
   },
-  "images": []
+  "images": [],
+  "i18n": {
+    "de": {
+      "name": "Österreichischer Pavillon",
+      "shortName": "Österreich",
+      "summary": "Österreich hat im April 2026 unterzeichnet und sein Pavillonkonzept gewählt: „Join the Flow“, aufgebaut um die Donau als lebendige Achse von Wirtschaft und Innovation, mit einem Innovation Lab im Zentrum – gemeinsam finanziert vom Wirtschaftsministerium (75 %) und der Wirtschaftskammer Österreich (25 %).",
+      "about": [
+        "Österreich unterzeichnete am 17. April 2026 sein Teilnahmeabkommen für die Expo 2027 – Unterzeichner waren Regierungskommissar Philipp Gady, Serbiens Generalkommissarin Jagoda Lazarević und Expo-Direktor Danilo Jerinić. Die Teilnahme wird gemeinsam vom Bundesministerium für Wirtschaft, Energie und Tourismus (75 %) und der Wirtschaftskammer Österreich WKÖ (25 %) organisiert und finanziert.",
+        "Für Konzeption, Gestaltung und Umsetzung des österreichischen Beitrags läuft ein EU-weites, zweistufiges Vergabeverfahren. Der Pavillon soll österreichische Innovationskraft, kreative Vielfalt und Wirtschaftsstärke präsentieren, mit einem Besuchererlebnis, das Verspieltheit, Kreativität, Offenheit und Internationalität betont, ergänzt durch ein Begleitprogramm aus Wirtschafts-, Tourismus-, Sport- und Kulturveranstaltungen.",
+        "Österreich stellt seine Teilnahme offen in einen wirtschaftlichen Rahmen: Serbien ist einer der wichtigsten Handelspartner Österreichs in Südosteuropa, mit einem vom Ministerium bis 2029 auf über 400 Mio. € geschätzten ungenutzten Exportpotenzial. Österreich ist der drittgrößte ausländische Investor in Serbien, mit mehr als 800 österreichischen Unternehmen, die im Land aktiv sind.",
+        "Die zweistufige Ausschreibung brachte im August 2026 einen Sieger hervor: „Join the Flow“ (dt. etwa „Im Fluss mitschwimmen“), vom Team aus facts and fiction (Köln), ZONE Media und PLANET architects. Verbindendes Element ist die Donau – präsentiert als lebendige Achse für Wirtschaft und Innovation zwischen Österreich und Serbien – und im Zentrum des Pavillons steht ein Innovation Lab, das österreichische Unternehmen, Forschungseinrichtungen und Lösungen in den Bereichen Grüntechnologie, Digitalisierung, Energie, Mobilität und Bildung präsentiert. Ein Begleitprogramm namens Flow2Expo organisiert vor, während und nach der Expo Delegationsreisen, Workshops, Webinare und Businessplattformen, um österreichischen Unternehmen beim Aufbau von Partnerschaften in Südosteuropa zu helfen."
+      ],
+      "facts": [
+        {
+          "label": "Konzept",
+          "value": "„Join the Flow“ – die Donau als lebendige Achse von Wirtschaft und Innovation; Innovation Lab im Zentrum",
+          "source": "https://www.wko.at/oe/news/siegerprojekt-expo-27"
+        },
+        {
+          "label": "Status",
+          "value": "Abkommen unterzeichnet am 17. April 2026; Siegerkonzept bekanntgegeben am 4. August 2026",
+          "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad"
+        },
+        {
+          "label": "Kreativteam",
+          "value": "facts and fiction (Köln), ZONE Media, PLANET architects",
+          "source": "https://www.wko.at/oe/news/siegerprojekt-expo-27"
+        },
+        {
+          "label": "Kommissar",
+          "value": "Philipp Gady, Regierungskommissar",
+          "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad"
+        },
+        {
+          "label": "Finanzierung",
+          "value": "75 % Bundesministerium für Wirtschaft, Energie und Tourismus / 25 % WKÖ",
+          "source": "https://www.wko.at/oe/news/oesterreich-expo-belgrad"
+        },
+        {
+          "label": "Wirtschaftlicher Kontext",
+          "value": ">400 Mio. € ungenutztes Exportpotenzial bis 2029; über 800 österreichische Unternehmen in Serbien",
+          "source": "https://www.bmwet.gv.at/Themen/International/EXPO/Expo-2027-Belgrad.html"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Was wird der Österreich-Pavillon auf der Expo 2027 präsentieren?",
+          "answer": "Österreichische Innovationskraft, kreative Vielfalt und Wirtschaftsstärke, durch ein Besuchererlebnis, das Verspieltheit, Kreativität, Offenheit und Internationalität betont – ergänzt durch ein Begleitprogramm aus Wirtschafts-, Tourismus-, Sport- und Kulturveranstaltungen."
+        },
+        {
+          "question": "Wer bezahlt Österreichs Expo-2027-Pavillon?",
+          "answer": "Die Teilnahme wird gemeinsam vom Bundesministerium für Wirtschaft, Energie und Tourismus (75 %) und der Wirtschaftskammer Österreich WKÖ (25 %) finanziert. Für Konzept, Gestaltung und Umsetzung läuft ein EU-weites, zweistufiges Vergabeverfahren."
+        },
+        {
+          "question": "Warum investiert Österreich in die Expo 2027 Belgrad?",
+          "answer": "Das Wirtschaftsministerium begründet dies wirtschaftlich: Serbien ist einer der wichtigsten Handelspartner Österreichs in Südosteuropa, mit einem bis 2029 auf über 400 Mio. € geschätzten ungenutzten Exportpotenzial. Österreich ist der drittgrößte ausländische Investor in Serbien, mit mehr als 800 österreichischen Unternehmen, die dort aktiv sind."
+        },
+        {
+          "question": "Wie lautet Österreichs Pavillonkonzept für die Expo 2027?",
+          "answer": "„Join the Flow“, am 4. August 2026 als Sieger der zweistufigen österreichischen Ausschreibung bekanntgegeben. Es nutzt die Donau als verbindendes Thema zwischen Österreich und Serbien und stellt ein Innovation Lab in den Mittelpunkt des Pavillons, das österreichische Unternehmen und Forschung in den Bereichen Grüntechnologie, Digitalisierung, Energie, Mobilität und Bildung zeigt. Das Kreativteam besteht aus facts and fiction, ZONE Media und PLANET architects."
+        }
+      ]
+    }
+  }
 }

@@ -1,0 +1,101 @@
+---
+// /de/expo-2027/pavilions — German pavilion directory (language pilot). Lists
+// the profiles that carry a German block; every other published profile is
+// linked in English so nothing is hidden from German readers.
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import PageIntro from "../../../../components/PageIntro.astro";
+import Container from "../../../../components/Container.astro";
+import SectionHead from "../../../../components/SectionHead.astro";
+import Grid from "../../../../components/Grid.astro";
+import Card from "../../../../components/Card.astro";
+import Note from "../../../../components/Note.astro";
+import Schema from "../../../../components/Schema.astro";
+import { pageMetadata } from "../../../../lib/metadata";
+import { ogImage } from "../../../../lib/og";
+import { SITE, CONFIG } from "../../../../lib/site";
+import { breadcrumbSchema } from "../../../../lib/schemas";
+import { listingsForLeg, listingsWithDe, listingHref, listingsIndexable } from "../../../../lib/listings";
+import { participants } from "../../../../lib/expo-participants";
+import { alternates, dePath } from "../../../../lib/i18n";
+
+const LEG = "expo-2027";
+const EN_PATH = `/${LEG}/pavilions`;
+const PATH = dePath(EN_PATH);
+const de = listingsWithDe(LEG);
+const deSlugs = new Set(de.map((l) => l.slug));
+const englishOnly = listingsForLeg(LEG).filter((l) => !deSlugs.has(l.slug));
+
+const meta = pageMetadata({
+  title: "Expo 2027 Pavillons – Deutschland, Österreich, Schweiz",
+  description: `Die Pavillons der Expo 2027 Belgrad auf Deutsch: die DACH-Länder im Detail, alle weiteren der ${participants.length} namentlich bekannten Teilnehmerländer auf Englisch – quellengeprüft.`,
+  path: PATH,
+  noindex: !listingsIndexable,
+  image: ogImage("pavilions"),
+  lang: "de",
+  alternates: alternates(EN_PATH),
+});
+
+const crumbs = [
+  { name: CONFIG.chrome.article.breadcrumbRoot, href: "/de/expo-2027" },
+  { name: "Expo 2027", href: "/de/expo-2027" },
+  { name: "Pavillons" },
+];
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: `${SITE.origin}/de/expo-2027` },
+    { name: "Expo 2027", url: `${SITE.origin}/de/expo-2027` },
+    { name: "Pavillons", url: `${SITE.origin}${PATH}` },
+  ]),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow="Expo 2027 Belgrad · Pavillons"
+    title="Die Pavillons der Expo 2027 – auf Deutsch"
+    lede="Welche Länder haben Pläne für ihren Pavillon veröffentlicht, mit welchem Motto, welchem Team und welchem Budget? Die Profile der deutschsprachigen Länder gibt es hier auf Deutsch; alle weiteren Profile sind auf Englisch verlinkt. Jede Angabe trägt ihre Quelle."
+  />
+
+  <Container>
+    <SectionHead title="Deutschland, Österreich, Schweiz" />
+    <Grid>
+      {de.map((p) => (
+        <Card
+          href={dePath(listingHref(p))}
+          title={p.i18n?.de?.name ?? p.name}
+          body={p.i18n?.de?.summary ?? p.summary}
+          src={ogImage(`pavilion-${p.slug}`)}
+          imgAlt={`${p.i18n?.de?.name ?? p.name} – Expo 2027 Belgrad`}
+        />
+      ))}
+    </Grid>
+  </Container>
+
+  {
+    englishOnly.length > 0 ? (
+      <Container variant="read">
+        <SectionHead
+          title="Weitere Pavillon-Profile (Englisch)"
+          intro={`${englishOnly.length} weitere Länder und Organisationen mit veröffentlichten Plänen – bisher nur in der englischen Ausgabe.`}
+        />
+        <ul>
+          {englishOnly.map((p) => (
+            <li>
+              <a href={listingHref(p)} hreflang="en">{p.name}</a> (EN)
+            </li>
+          ))}
+        </ul>
+        <Note>
+          Das vollständige Verzeichnis aller {participants.length} namentlich bekannten Teilnehmerländer –
+          auch derer ohne veröffentlichte Pavillon-Pläne – steht im englischen{" "}
+          <a href={EN_PATH} hreflang="en">Pavillon-Verzeichnis (EN)</a>.
+        </Note>
+      </Container>
+    ) : null
+  }
+
+  <Schema schemas={schemas} />
+</BaseLayout>

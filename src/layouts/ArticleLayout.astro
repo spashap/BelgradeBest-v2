@@ -12,29 +12,46 @@ import Schema from "../components/Schema.astro";
 import { articleSchema, faqSchema, breadcrumbSchema } from "../lib/schemas";
 import { SITE, CONFIG, interp } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
-import { heroForPath } from "../lib/hero";
+import { heroForPath, thumbForPath } from "../lib/hero";
 import { relatedFor } from "../lib/links";
 import { pageMetadata } from "../lib/metadata";
 import type { Article } from "../lib/articles";
+import { DE, alternates, dePath, deArticleSet, fmtDate, type Lang } from "../lib/i18n";
+import { getCollection } from "astro:content";
 
 // Leg-agnostic T3 article template. Per-leg chrome (eyebrow, breadcrumb root,
 // read-next copy, Expo-only Event schema) is derived from the cluster registry.
 interface Props {
   entry: Article;
+  // Language pilot (lib/i18n.ts): "de" renders the German twin of an English
+  // article at /de/<leg>/<slug> — same layout, German chrome strings, German
+  // read-next set, hreflang both ways. Default "en" is byte-identical to before.
+  lang?: Lang;
 }
-const { entry } = Astro.props;
+const { entry, lang = "en" } = Astro.props;
+const isDe = lang === "de";
 const d = entry.data;
 const leg = d.leg;
-const href = `/${leg}/${d.slug}`;
+const enHref = `/${leg}/${d.slug}`;
+const href = isDe ? dePath(enHref) : enHref;
 const url = SITE.origin + href;
+// hreflang: German pages always have an English original; English pages only
+// when a German twin exists in the `de` collection.
+const hasTwin = isDe || (await deArticleSet()).has(enHref);
 
 const c = clusterBySlug(leg);
 const eyebrow = c?.eyebrow ?? leg;
-const crumbRoot = { name: c?.title ?? leg, href: SITE.origin + (c?.href ?? `/${leg}`) };
-const rn =
-  leg === "expo-2027" ? CONFIG.chrome.article.readNextExpo : CONFIG.chrome.article.readNextEvergreen;
+const crumbRoot = {
+  name: c?.title ?? leg,
+  href: SITE.origin + (isDe ? dePath(c?.href ?? `/${leg}`) : (c?.href ?? `/${leg}`)),
+};
+const rn = isDe
+  ? { eyebrow: DE.readNextEyebrow, title: DE.readNextTitle, intro: DE.readNextIntro }
+  : leg === "expo-2027"
+    ? CONFIG.chrome.article.readNextExpo
+    : CONFIG.chrome.article.readNextEvergreen;
 
-const resolvedHero = heroForPath(href, d.heroAlt ?? d.heroLabel);
+const resolvedHero = heroForPath(enHref, d.heroAlt ?? d.heroLabel);
 const heroAbs = resolvedHero ? SITE.origin + resolvedHero.src : undefined;
 
 const meta = pageMetadata({
@@ -44,24 +61,33 @@ const meta = pageMetadata({
   noindex: d.noindex,
   image: resolvedHero?.src,
   imageAlt: d.heroAlt ?? resolvedHero?.alt ?? d.title,
+  lang,
+  alternates: hasTwin ? alternates(enHref) : undefined,
 });
 
 const { Content, headings } = await render(entry);
-const targets = await relatedFor(leg, d.slug);
+// German read-next: the other German pages of the same leg (there is no
+// German linksTo graph; the cluster is small enough to list in full).
+const targets = isDe
+  ? (await getCollection("de"))
+      .filter((e) => e.data.leg === leg && e.data.slug !== d.slug && e.data.visible !== false)
+      .sort((a, b) => a.data.order - b.data.order)
+      .map((e) => {
+        const p = `/${e.data.leg}/${e.data.slug}`;
+        const h = thumbForPath(p, e.data.heroAlt ?? e.data.heroLabel);
+        return { href: dePath(p), title: e.data.shortTitle, body: e.data.description, heroSrc: h?.src, heroAlt: h?.alt };
+      })
+  : await relatedFor(leg, d.slug);
 
 // Human-readable freshness stamp (same source as schema dateModified).
-const updatedLabel = (() => {
-  const t = Date.parse(d.lastUpdated);
-  if (Number.isNaN(t)) return null;
-  return new Date(t).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-})();
+const updatedLabel = Number.isNaN(Date.parse(d.lastUpdated)) ? null : fmtDate(d.lastUpdated, lang);
 
 // Event JSON-LD lives on the /expo-2027 hub only (LegHubLayout) — re-declaring
 // it on every expo article duplicated the Event with inconsistent images.
 const schemas: object[] = [
-  articleSchema({ title: d.title, description: d.description, url, dateModified: d.lastUpdated, imageUrl: heroAbs }),
+  articleSchema({ title: d.title, description: d.description, url, dateModified: d.lastUpdated, imageUrl: heroAbs, inLanguage: lang }),
   breadcrumbSchema([
-    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin + (isDe ? "/de/expo-2027" : "") },
     { name: crumbRoot.name, url: crumbRoot.href },
     { name: d.shortTitle, url },
   ]),
@@ -74,7 +100,9 @@ if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
   {
     updatedLabel ? (
       <Container variant="article">
-        <p class="c-article-meta">Updated {updatedLabel} · Source-checked by the BelgradeBest editorial process</p>
+        <p class="c-article-meta">
+          {isDe ? `${DE.updated} ${updatedLabel} · ${DE.sourceChecked}` : `Updated ${updatedLabel} · Source-checked by the BelgradeBest editorial process`}
+        </p>
       </Container>
     ) : null
   }
@@ -103,7 +131,7 @@ if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
       {
         d.unknowns && d.unknowns.length > 0 ? (
           <aside class="c-unknowns">
-            <h2>Still unknown or unconfirmed</h2>
+            <h2>{isDe ? DE.unknowns : "Still unknown or unconfirmed"}</h2>
             <ul>{d.unknowns.map((u: string) => <li>{u}</li>)}</ul>
           </aside>
         ) : null

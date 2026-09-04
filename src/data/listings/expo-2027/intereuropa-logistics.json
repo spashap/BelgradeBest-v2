@@ -1,0 +1,23 @@
+{
+  "slug": "intereuropa-logistics",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "Intereuropa – logističke usluge a.d. Dobanovci",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-09-04",
+  "blocks": {},
+  "links": {
+    "website": "https://www.intereuropa.rs",
+    "sources": [
+      "https://www.b92.net/lokal/beograd/drustvo/263850/expo-2027-izabrao-logistickog-partnera-posao-vredan-5309-miliona-dinara/vest"
+    ]
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Chosen as the Expo 2027 LOGISTICS PARTNER (framework agreement, RSD 530.88m ex-VAT, 15 months Oct 2026–Dec 2027): flows of vehicles, goods, materials and equipment to/from the Surčin site, customs warehouse, delivery coordination, staff + machinery, logistics software, temperature-controlled storage. Majority-owned by Pošta Slovenije. Gatekeeper-grade: every exhibitor's freight passes through them. Source: b92 2026-09-01."
+  }
+}

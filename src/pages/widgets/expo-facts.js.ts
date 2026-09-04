@@ -35,7 +35,8 @@ export const GET: APIRoute = () => {
       row(t, "Airport", DATA.airport) +
       row(t, "City centre", DATA.centre) +
       row(t, "Getting around", DATA.transit),
-      'Full guide: ' + link(t, DATA.url, "Expo 2027 on BelgradeBest") + ''
+      'Full guide: ' + link(t, DATA.url, "Expo 2027 on BelgradeBest") + '',
+      "Expo 2027 Belgrade quick facts: " + DATA.dates + ", " + DATA.venue
     );
   }`,
   });

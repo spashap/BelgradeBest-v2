@@ -41,6 +41,7 @@ type ArticleInput = {
   datePublished?: string;
   dateModified?: string;
   imageUrl?: string;
+  inLanguage?: string; // language pilot: German pages pass "de"
 };
 
 export function articleSchema(a: ArticleInput) {
@@ -51,7 +52,7 @@ export function articleSchema(a: ArticleInput) {
     description: a.description,
     mainEntityOfPage: { "@type": "WebPage", "@id": a.url },
     url: a.url,
-    inLanguage: CONFIG.brand.locale,
+    inLanguage: a.inLanguage ?? CONFIG.brand.locale,
     isAccessibleForFree: true,
     // datePublished defaults to the last-updated date when no distinct publish
     // date is tracked, so the field is always present for rich results.

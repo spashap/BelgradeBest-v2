@@ -56,6 +56,20 @@ export type Listing = {
   links?: { website?: string | null; sources?: ListingSource[] };
   images?: string[];
   faqs?: { question: string; answer: string }[]; // rendered + FAQPage JSON-LD
+  // Language pilot (lib/i18n.ts): optional German rendering of the editorial
+  // fields. Lives in the same file so `updated`/sources stay one master; the
+  // German page publishes only when this block exists AND the English one
+  // passes the thin-content guard. Facts/quotes fall back to English rows.
+  i18n?: {
+    de?: {
+      name?: string;
+      shortName?: string;
+      summary: string;
+      about: string[];
+      facts?: ListingFact[];
+      faqs?: { question: string; answer: string }[];
+    };
+  };
   // ── operator-only (admin/outreach/manage; NEVER rendered publicly) ──
   contact?: { email?: string; person?: string; source?: string };
   outreach?: { status?: OutreachStatus; sentAt?: string; repliedAt?: string; notes?: string };
@@ -110,6 +124,11 @@ export function childrenOf(leg: string, parentSlug: string): Listing[] {
   return all
     .filter((l) => l.leg === leg && l.parent === parentSlug && validListing(l))
     .sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
+
+// Published top-level listings that carry a German block (the /de mirror).
+export function listingsWithDe(leg: string): Listing[] {
+  return listingsForLeg(leg).filter((l) => !!l.i18n?.de?.summary);
 }
 
 export function parentOf(l: Listing): Listing | null {

@@ -12,12 +12,17 @@ import Schema from "../components/Schema.astro";
 import Analytics from "../components/Analytics.astro";
 import { organizationSchema } from "../lib/schemas";
 import { CONFIG } from "../lib/site";
+import { OG_LOCALE } from "../lib/i18n";
 import type { PageMeta } from "../lib/metadata";
 
 interface Props {
   meta: PageMeta;
 }
 const { meta } = Astro.props;
+// Language pilot: German pages set meta.lang; <html lang>, og:locale and the
+// chrome follow. Pages with a twin in the other language carry hreflang.
+const lang = (meta.lang ?? CONFIG.brand.locale) as "en" | "de";
+const ogLocale = OG_LOCALE[lang] ?? CONFIG.brand.ogLocale;
 
 // CSS↔JSON layout bridge — the four layout knobs (widths + cards-per-row grid)
 // live ONLY in site-config.json; globals.css does not define them. Injected here
@@ -31,7 +36,7 @@ const layoutCss =
   `@media(min-width:${Number(L.grid.desktopBreakpoint)}px){.c-grid{grid-template-columns:repeat(${Number(L.grid.desktopCols)},1fr)}}`;
 ---
 <!doctype html>
-<html lang={CONFIG.brand.locale}>
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,13 +54,14 @@ const layoutCss =
     <meta name="description" content={meta.description} />
     <link rel="canonical" href={meta.canonical} />
     {meta.noindex ? <meta name="robots" content="noindex,follow" /> : null}
+    {(meta.alternates ?? []).map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
 
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.description} />
     <meta property="og:url" content={meta.canonical} />
     <meta property="og:site_name" content={CONFIG.brand.name} />
     <meta property="og:type" content={meta.ogType} />
-    <meta property="og:locale" content={CONFIG.brand.ogLocale} />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:image" content={meta.image} />
     <meta property="og:image:alt" content={meta.imageAlt} />
 
@@ -77,9 +83,9 @@ const layoutCss =
     <Analytics />
   </head>
   <body>
-    <SiteHeader />
+    <SiteHeader lang={lang} />
     <slot />
-    <SiteFooter />
+    <SiteFooter lang={lang} />
     <Schema schemas={[organizationSchema()]} />
   </body>
 </html>

@@ -1,0 +1,23 @@
+{
+  "slug": "neo-aerodromes-engineering",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "NEO Aerodromes Engineering d.o.o.",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-09-04",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": [
+      "https://www.b92.net/lokal/beograd/ekonomija/264435/expo-2027-menja-javni-prevoz-beograda-za-par-meseci-novi-terminus-e-vozila-i-linije-koje-ostaju-gradu/vest"
+    ]
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Contractor for the container-type bus terminal at the Expo 2027 complex (building permit reported 3 Sep 2026); same coverage says ~100 further electric buses/trolleybuses transfer to GSP Beograd after the Expo. Source: b92 2026-09-03."
+  }
+}

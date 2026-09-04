@@ -17,6 +17,7 @@ import { heroForLeg, thumbForSlug, thumbForPath } from "../../lib/hero";
 import { getPlannedChildren } from "../../lib/content-plan";
 import { articlesForLeg } from "../../lib/articles";
 import { hubMetadata } from "../../lib/metadata";
+import { alternates } from "../../lib/i18n";
 import { breadcrumbSchema, expoEventSchema, faqSchema } from "../../lib/schemas";
 import {
   participants,
@@ -40,7 +41,7 @@ import {
 // the page can never drift stale the way the retired /participants article did.
 const LEG = "expo-2027";
 const cluster = clusterBySlug(LEG)!;
-const meta = hubMetadata(LEG);
+const meta = { ...hubMetadata(LEG), alternates: alternates(`/${LEG}`) }; // hreflang ↔ /de (language pilot)
 const legHero = heroForLeg(LEG);
 
 // Article cards — same built/planned logic as LegHubLayout.
@@ -92,7 +93,7 @@ const tripLegs = ["where-to-stay", "food-and-nightlife", "visit-belgrade", "plan
 const gtk = [
   { label: "Dates", text: `${fmtLong(EXPO.startDate)} – ${fmtLong(EXPO.endDate)} — 93 days`, href: `/${LEG}/guide` },
   { label: "Where", text: `${EXPO.venue}, western Belgrade — ~5 km from the airport`, href: `/${LEG}/getting-there` },
-  { label: "Tickets", text: "Not on sale yet — beds are the bottleneck, book those first", href: `/${LEG}/tickets` },
+  { label: "Tickets", text: "Sales planned to start 15 Sep 2026 (per the printing tender); prices unannounced — beds are still the bottleneck", href: `/${LEG}/tickets` },
   { label: "Theme", text: EXPO.theme, href: `/${LEG}/what-is-it` },
 ];
 
@@ -100,7 +101,7 @@ const unknowns = [
   "Final list of confirmed countries (rolling announcements continue)",
   "Most pavilion locations and designs",
   "The National Day schedule (only Türkiye's planned date — 19 May 2027 — is public)",
-  "Ticket prices and the sale date",
+  "Ticket prices (sales are scheduled to start 15 September 2026 per the printing tender; no official on-sale announcement yet)",
 ];
 
 // FAQs folded from the retired /expo-2027/participants article — counts

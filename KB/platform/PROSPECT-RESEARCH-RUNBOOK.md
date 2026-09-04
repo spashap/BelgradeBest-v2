@@ -11,7 +11,17 @@ Gatekeeper agencies matter because they hold the exhibitor lists. Categories
 
 Last full run: **2026-07-05** (32 prospects: 16 gatekeepers + 15 event-level
 companies + 1 container category; 9 verified public emails).
-Last run: **2026-08-20** — in-session sweep only (no external agents), driven
+Last run: **2026-09-04** — 3 Sonnet background agents (blind award sweep,
+watch-list rechecks, DACH pavilion news) + Fable verification; record:
+`research/2026-09-04-sweep.md`. Headline: **ticket sales start planned for
+15 Sep 2026** (printing-tender schedule, b92 6 Aug) — applied to /tickets, the
+hub and the guide; DACH pavilions refreshed (DE motto, AT "Join the Flow",
+CH agency Jeff) and mirrored in German (`/de/expo-2027/…`, the language
+pilot); Italy sponsor call extended to 30 Oct; 7 stubs (logistics partner
+Intereuropa, Arhi Nova, NEO Aerodromes, laundry consortium, Jeff, ZONE Media,
+PLANET architects). The review rejected 4 agent claims (Korean-pavilion
+mix-up, Russia designer, UAE designer, NÜSSLI as Swiss builder) — see record.
+Prior run: **2026-08-20** — in-session sweep only (no external agents), driven
 by the overdue watch-list items. Found five previously-missed contract awards,
 including two we should have caught on 07 Aug: the collective-pavilion award
 (31 Jul) and the ceremonies award (20 Feb). Lesson recorded in §9: **Serbian
@@ -157,19 +167,19 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
    rewrite `scripts/commit-message.txt`, summarize actionable finds to the
    owner (especially anything with a deadline).
 
-## 6. Watch list (update every run — last updated 2026-08-20)
+## 6. Watch list (update every run — last updated 2026-09-04)
 
-- **Italy** sponsorship call closes **31 Aug 2026** (tiers Bronze €5–25k →
-  Platinum €100k+; PEC amb.belgrado@cert.esteri.it) → after close, find who
-  sponsored (each sponsor = booth-grade prospect under Italy). No names as of
-  07 Aug.
+- **Italy** sponsorship call **extended to 30 Oct 2026** (embassy update of
+  3 Sep 2026; logo/visual-identity proposals kept 31 Aug; PEC
+  amb.belgrado@cert.esteri.it, economico.belgrado@esteri.it) → recheck early
+  Nov for the sponsor roster (each sponsor = booth-grade prospect under Italy).
+  Designer/builder still unnamed.
 - **Türkiye** proposal call closed **17 Aug 2026**; award **still not public**
-  (checked 2026-08-20, TR-language search + ticaret.gov.tr). Recheck ~1 Sep and
-  fortnightly after. Known: 648 m² medium pavilion on parcel A5.1, ready-by
+  (rechecked 2026-09-04, TR + EN). Recheck fortnightly. Known: 648 m² medium pavilion on parcel A5.1, ready-by
   15 Apr 2027, National Day 19 May 2027. The awarded organizer firm = prime
   prospect.
 - **Turkmenistan** tender (closed 13 Apr 2026) → winner still unpublished
-  (rechecked 2026-08-20); SARY studio (Ashgabat) publicly a BIDDER only
+  (rechecked 2026-09-04); SARY studio (Ashgabat) publicly a BIDDER only
   (turkmenportal 23 Jul); state media say construction and installation work
   on the pavilion is already underway, so an unannounced winner exists.
 - **Slovakia**: design winner FOUND + applied 2026-08-07 — EXPO LINE
@@ -177,15 +187,27 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
   construction tender award + the slovakiaexpo.sk company registrations
   (booth-list angle; SARIO cooperation announced 31 Jul).
 - **South Korea** KOTRA tender (₩9bn, closed 29 Apr) → award still not public
-  (rechecked 2026-08-20, KR + EN search). The awarded 전시 대행사 = prime prospect.
+  (rechecked 2026-09-04, KR + EN). CAUTION: Korean press (dt.co.kr 24 Aug)
+  reports Sigong Tech's €54m/₩87bn "103-nation" contract signed 21 Aug 2026 —
+  that is the organiser's COLLECTIVE-pavilion award, not the Korean pavilion.
+  Bidders it beat came from US, DE, CH, ES, IT. The awarded 전시 대행사 = prime prospect.
   NOTE the adjacent win: Korean exhibition builder **Sigong Tech** took the
   Serbian organiser's collective-pavilion contract (below) — different contract,
   same country, and a plausible warm route into the Korean pavilion programme.
 - **BiH** contract signed 3 Jul 2026 → pavilion size/hall/theme/budget still
   unpublished (checked 07 Aug); **North Macedonia** commissioner still unnamed.
-- **Germany**: Messe Düsseldorf sub-procurements (communication, catering,
-  shop) → still no awards named (checked 07 Aug). facts and fiction (Cologne)
-  = content concept, now a prospect listing.
+- **Germany**: motto "Germany! Out of the Box" (CIM 7 Aug 2026, applied).
+  Messe Düsseldorf sub-procurements (communication, catering, shop) → still no
+  awards named (checked 04 Sep). facts and fiction (Cologne) holds concept +
+  design + management for BOTH the German and Austrian pavilions.
+- **Austria**: winning concept "Join the Flow" (WKÖ 4 Aug 2026, applied);
+  team facts and fiction + ZONE Media + PLANET architects (stubs created).
+  Watch: sponsor tiers (Platinum corporate pavilions, Gold, Official Supplier),
+  61 gastro units + 9 retail spaces, Flow2Expo registrations — each a booth-
+  grade prospect once named. belgrad@wko.at is a second published route.
+- **Switzerland**: Jeff (Zürich) won the scenography/identity pitch (1 Sep
+  2026, applied; stub created); commissioner Manuel Salchli; 648 m² in a shared
+  hall. Builder still unnamed (NÜSSLI claim unsourced — do not apply).
 - **Serbia pavilion**: PowerChina GC + ALEATEK architecture CORROBORATED on
   aleatek.com + applied 2026-08-07 — still watch for an official organiser
   source; then upgrade PowerChina/ALEATEK prospects.
@@ -235,10 +257,20 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
   halls to be handed to participating countries. That is the trigger date for a
   wave of fit-out, exhibition-build and operator contracts at country level —
   plan a heavier run for early December 2026.
-- **Ticket sales launch**: 1.2m physical tickets ordered 18 Aug 2026 (1m
-  one-day + 200k three-day) but no on-sale date, price or online channel. The
-  on-sale announcement is a large traffic event for /expo-2027/tickets — watch
-  weekly from September 2026.
+- **Ticket sales launch — planned 15 Sep 2026** (printing-tender schedule:
+  first 200k tickets by 14 Sep "so that sales can begin on 15 September"; b92
+  6 Aug 2026 — applied 04 Sep). No prices, no online channel, no separate
+  organiser announcement yet. **Check daily 14–16 Sep**: the day it opens,
+  update /tickets (+ the German twin), the hub facts line, ListingPage's
+  visiting block, push to Bing, and run the tracker-news pitch cycle.
+- **National Days stage tender** (fluid-form structure, 30×20 m; bids due
+  17 Sep 2026; b92 264184) → award = precursor to the National Day calendar;
+  recheck ~1 Oct.
+- **Organiser awards found 04 Sep** (stubs created): Intereuropa (logistics
+  partner, RSD 530.9m), Arhi Nova (works supervision, ~RSD 261.7m), NEO
+  Aerodromes Engineering (bus terminal), laundry consortium (RSD 401.5m). Still
+  unawarded/unfound: housing furnishing (RSD 3.6bn), catering, ticketing-system
+  operator, online ticket channel.
 - **Official site reachability**: expobelgrade2027.org was unreachable from
   this machine on 2026-08-20 (connection failed, not a 403). If it stays down,
   the participant counter cannot be re-read directly — fall back to organiser

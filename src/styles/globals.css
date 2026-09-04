@@ -692,6 +692,9 @@ a.c-gtk__link:hover {
 .c-footer__meta { display: flex; flex-wrap: wrap; gap: var(--s4); }
 .c-footer__meta a { color: var(--ink-soft); text-decoration: none; }
 .c-footer__meta a:hover { color: var(--accent-ink); text-decoration: underline; }
+/* Language pilot: one-line note on German pages (footer stays the English site map). */
+.c-footer__lang { margin-top: var(--s5); font-size: var(--fs-sm); color: var(--ink-soft); }
+.c-footer__lang a { color: var(--accent-ink); }
 
 /* --- c-placeholder : generic Warm Editorial tinted image box. Aspect ratio
    is passed via the --aspect CSS custom property so the visual contract stays

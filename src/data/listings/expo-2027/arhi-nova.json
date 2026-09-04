@@ -1,0 +1,23 @@
+{
+  "slug": "arhi-nova",
+  "leg": "expo-2027",
+  "type": "contractor",
+  "parent": "partners-and-suppliers",
+  "name": "Arhi Nova d.o.o. Beograd",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-09-04",
+  "blocks": {},
+  "links": {
+    "website": null,
+    "sources": [
+      "https://www.b92.net/lokal/beograd/ekonomija/264396/expo-2027-ulazi-u-zavrsnu-fazu-dodeljen-ugovor-za-kontrolu-radova-na-lokaciji/vest"
+    ]
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Awarded the consulting contract for construction monitoring, works supervision and quality control across the Expo 2027 zones (~RSD 261.7m ex-VAT; reported 3 Sep 2026 as the Expo 'enters its final phase'). Source: b92 2026-09-03."
+  }
+}

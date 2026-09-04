@@ -31,6 +31,25 @@ try {
 } catch {
   /* no articles dir — leave map empty */
 }
+// Language pilot (src/lib/i18n.ts): German mirror articles under
+// src/content/de/<leg>/<slug>.md render at /de/<leg>/<slug> — same lastUpdated
+// convention. Listing mirrors (/de/<leg>/<section>/<slug>) are added in the
+// listings loop below from each listing's `updated`.
+try {
+  const DE_DIR = "src/content/de";
+  for (const leg of readdirSync(DE_DIR)) {
+    const legDir = join(DE_DIR, leg);
+    if (!statSync(legDir).isDirectory()) continue;
+    for (const file of readdirSync(legDir)) {
+      if (!file.endsWith(".md")) continue;
+      const txt = readFileSync(join(legDir, file), "utf8");
+      const m = txt.match(/^lastUpdated:\s*["']?(\d{4}-\d{2}-\d{2})/m);
+      if (m) LASTMOD[`/de/${leg}/${file.replace(/\.md$/, "")}`] = new Date(m[1]).toISOString();
+    }
+  }
+} catch {
+  /* no German content — leave map as is */
+}
 
 // Real lastmod for non-article pages too (previously they re-stamped BUILD_DATE
 // on every deploy — lastmod churn teaches crawlers to ignore the field).
@@ -62,6 +81,7 @@ LASTMOD["/for-businesses"] = iso("2026-07-06");
     const m = maxDate(dates);
     if (m) LASTMOD[`/${leg.slug}`] = m;
   }
+  if (LASTMOD["/expo-2027"]) LASTMOD["/de/expo-2027"] = LASTMOD["/expo-2027"];
   const home = maxDate(Object.values(LASTMOD));
   if (home) LASTMOD[""] = home;
 }
@@ -134,11 +154,15 @@ try {
       if (j.updated) {
         LASTMOD[p] = iso(j.updated);
         dates.push(LASTMOD[p]);
+        if (j.i18n?.de?.summary && !j.parent) LASTMOD[`/de${p}`] = LASTMOD[p];
       }
       if (!LISTINGS_INDEXABLE) NOINDEX.add(p);
     }
     const m = maxDate(dates);
-    if (m) LASTMOD[hub] = m;
+    if (m) {
+      LASTMOD[hub] = m;
+      LASTMOD[`/de${hub}`] = m;
+    }
   }
 } catch {
   /* no listings yet */

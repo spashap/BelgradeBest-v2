@@ -12,6 +12,7 @@ import { SITE, EXPO, CONFIG } from "../../../lib/site";
 import { breadcrumbSchema } from "../../../lib/schemas";
 import { listingsForLeg, listingHref, listingsIndexable, newestUpdated } from "../../../lib/listings";
 import { participants } from "../../../lib/expo-participants";
+import { alternates } from "../../../lib/i18n";
 
 // Pavilion directory hub: every named participant country, linking through to
 // the pavilion profiles that have enough announced substance to publish (the
@@ -28,6 +29,7 @@ const meta = pageMetadata({
   path: PATH,
   noindex: !listingsIndexable,
   image: ogImage("pavilions"),
+  alternates: alternates(PATH), // hreflang ↔ /de/expo-2027/pavilions (language pilot)
 });
 
 const crumbs = [

@@ -33,7 +33,8 @@ export const GET: APIRoute = () => {
       row(t, "Publicly named countries", DATA.named) +
       row(t, "Continents represented", DATA.regions) +
       row(t, "Tracker updated", DATA.updated),
-      'Live data: ' + link(t, DATA.url, "Expo 2027 participant tracker") + ' · BelgradeBest'
+      'Live data: ' + link(t, DATA.url, "Expo 2027 participant tracker") + ' · BelgradeBest',
+      "Expo 2027 Belgrade: " + DATA.official + " confirmed international participants"
     );
   }`,
   });

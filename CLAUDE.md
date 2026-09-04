@@ -198,6 +198,34 @@ The multiplier is the owner-run `scripts/gen-glossary-links.mjs`, which wraps th
 first mention of each term in article bodies in a link to its spoke (append-only,
 idempotent). Run/publish steps: `KB/automation/RUNBOOK.md → Knowledge pages`.
 
+## Language pilot — German Expo cluster (`/de/expo-2027/…`, built 2026-09-04)
+
+The ONLY non-English content: a German mirror of the Expo cluster — hub
+(`src/pages/de/expo-2027/index.astro`, a compact portal, not a translation of
+the English one), the six Expo articles, the pavilions hub and the DACH
+pavilion profiles. Everything else stays English; German pages link the
+English rest of the site with " (EN)" markers. Mechanics (`src/lib/i18n.ts`):
+- **Articles:** separate content collection `de` (`src/content/de/<leg>/<slug>.md`,
+  same schema, `slug` = the English slug) → `pages/de/expo-2027/[slug].astro` →
+  `ArticleLayout lang="de"`. No existing `getCollection("articles")` caller
+  sees German files. German read-next = the other German pages of the leg.
+- **Pavilions:** `i18n.de { name, shortName, summary, about[], facts[], faqs[] }`
+  INSIDE the listing JSON (one master, shared `updated`/sources) →
+  `pages/de/expo-2027/pavilions/[slug].astro` → `ListingPage lang="de"`
+  (`listingsWithDe()`; a German page builds only if the English one passes the
+  thin guard). Children have no German pages.
+- **hreflang** both ways (`alternates()`), `x-default` = English, `<html lang>`,
+  `og:locale`, JSON-LD `inLanguage`; sitemap lastmod for `/de/…` mirrors the
+  source (`astro.config.mjs`). Header/footer switch on `lang` (compact German
+  nav + "English" link to the twin). UI strings live in `i18n.ts DE`.
+- **When an English Expo page changes, change its German twin in the same
+  commit** (facts, dates, FAQs) — a stale translation is a wrong page.
+  Translate via Sonnet subagents with the brief in
+  `KB/platform/research/2026-09-04-sweep.md` conventions (Sie, „…“, dates
+  "15. Mai 2027", keep mottos in original language), then Fable-review.
+- Decision gate: Bing impressions on the `/de/` set by ~05 Oct 2026 decide
+  whether Italian/Turkish follow (`KB/seo/NEXT-STEPS-2026-09-04.md`).
+
 ## Commands
 
 ```bash

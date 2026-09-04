@@ -16,9 +16,7 @@ export const LEGS = [
   "medical-tourism",
 ] as const;
 
-const articles = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/articles" }),
-  schema: z.object({
+const articleSchema = z.object({
     // identity / routing
     leg: z.enum(LEGS),
     slug: z.string().regex(/^[a-z0-9-]+$/),
@@ -50,7 +48,20 @@ const articles = defineCollection({
     // Stay-affiliate target keys (resolve via src/data/stay-affiliates.json).
     // Render-gated: a target only shows once its affiliate is enabled+url-set.
     stayTargets: z.array(z.string()).default([]),
-  }),
 });
 
-export const collections = { articles };
+const articles = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/articles" }),
+  schema: articleSchema,
+});
+
+// German mirror of the Expo cluster (lib/i18n.ts). A SEPARATE collection so no
+// existing getCollection("articles") caller (routes, RSS, llms.txt, links,
+// content plan) ever sees a German file. Same schema; `slug` = the English
+// slug it translates, so /de/<leg>/<slug> <-> /<leg>/<slug> is a pure mapping.
+const de = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/de" }),
+  schema: articleSchema,
+});
+
+export const collections = { articles, de };

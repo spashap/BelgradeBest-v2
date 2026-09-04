@@ -1,42 +1,31 @@
-IndexNow: fall back to a working endpoint — Microsoft 403s this host, the newline was not the cause
+Expo refresh 2026-09-04 + German Expo cluster (language pilot) + widget polish
 
-Correction to the previous commit. Stripping the trailing newline from
-public/14ec77dc669e4a48947348a73e9ee9b7.txt was NOT the fix. After that change
-deployed (V01.015), the key file serves as exactly 32 bytes with no trailing
-0x0a — and IndexNow still returned 403 UserForbiddedToAccessSite.
+Pavilion refresh (research record KB/platform/research/2026-09-04-sweep.md):
+- Ticket sales start planned for 15 Sep 2026, from the printing tender's
+  delivery schedule (b92, 6 Aug) — tickets article, hub facts/unknowns,
+  guide FAQ and the pavilion visiting block now say so, marked as planned.
+- Germany: motto "Germany! Out of the Box" (CIM, 7 Aug). Austria: winning
+  concept "Join the Flow", team facts and fiction + ZONE Media + PLANET
+  architects, status announced (WKÖ, 4 Aug). Switzerland: Jeff (Zürich) won
+  the scenography pitch, commissioner Manuel Salchli, 648 m² shared hall
+  (persoenlich.com, 1 Sep). Italy: sponsor call extended to 30 Oct.
+- 7 prospect stubs: Intereuropa (logistics partner, RSD 530.9m), Arhi Nova,
+  NEO Aerodromes Engineering, EXPO Village laundry consortium, Jeff, ZONE
+  Media, PLANET architects. Runbook watch list updated.
 
-What the post-deploy testing actually established:
+German Expo cluster — /de/expo-2027 (12 pages):
+- New `de` content collection (src/content/de) + i18n.de blocks in the DACH
+  listing JSONs; routes under src/pages/de/expo-2027; ArticleLayout and
+  ListingPage take lang="de"; header/footer switch per language.
+- hreflang en/de/x-default on both sides, <html lang>, og:locale, JSON-LD
+  inLanguage, sitemap lastmod for /de mirrors. Helper: src/lib/i18n.ts.
+  Documented in CLAUDE.md → Language pilot.
 
-- The key file and payload are spec-valid. The IDENTICAL request body was
-  accepted by yandex.com/indexnow (202/200), search.seznam.cz/indexnow (200)
-  and searchadvisor.naver.com/indexnow (200).
-- Only Microsoft's endpoints reject it — api.indexnow.org and
-  www.bing.com/indexnow, on both the POST and the single-URL GET form, with
-  and without keyLocation. So this is Microsoft-side authorisation for this
-  specific host, not a key problem. Most likely cause: belgradebest.com was
-  added to Bing Webmaster Tools by GSC import (DelegatorEmail "GSCImport")
-  rather than by direct key/DNS verification.
-- It does not matter, because IndexNow endpoints share every submission with
-  each other. After submitting through Yandex/Seznam/Naver, the URL appeared
-  in Bing Webmaster Tools' OWN IndexNow report (source "Self"). Bing receives
-  the ping; it just will not accept it from us directly.
+Widgets: countdown gets data-lang="de" (German labels, links to /de hub)
+and an accessible card root; the data widgets' cards carry role="group" +
+aria-label. Countdown page documents the options.
 
-So astro.config.mjs now walks a list of endpoints and stops at the first one
-that accepts the batch, logging every status it saw. Microsoft stays first in
-the list so the build starts working through the front door the moment the
-block is lifted, and the log line makes it obvious which endpoint carried it.
+KB: efficiency report + next-steps (2026-09-04), Google index sweep JSON.
 
-The byte-exact key file and the .gitattributes `binary` pin from the previous
-commit stay. They were wrong as a diagnosis but right as hygiene: the file now
-matches the spec exactly, and normalisation can never touch it again.
-
-Done manually alongside this commit (no code needed): all 145 sitemap URLs
-submitted via Yandex + Seznam and accepted. Bing's separate SubmitUrlBatch
-quota is exhausted for today (100 pushed earlier, 45 remain for tomorrow) but
-the IndexNow submission already covers them.
-
-Owner check after deploy: the Vercel build log should show an
-[indexnow-ping] line reading "accepted" with the endpoint statuses, e.g.
-"submitted N URLs — accepted (api.indexnow.org:403, yandex.com:200)".
-
-Co-Authored-By: Claude <noreply@anthropic.com>
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JWfZdC1bcVXqctFXQNPHr1

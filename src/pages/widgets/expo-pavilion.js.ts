@@ -45,7 +45,8 @@ export const GET: APIRoute = () => {
       '<div style="font-size:26px;font-weight:800;letter-spacing:-0.01em;line-height:1.15">' + esc(p.name) + '</div>' +
       '<div style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:' + t.accent + ';border:1px solid ' + t.accent + ';border-radius:999px;padding:2px 10px;margin:8px 0 10px">' + esc(p.status) + '</div>' +
       '<div style="font-size:14px;opacity:.85">' + esc(p.line) + '</div>',
-      'Sourced profile: ' + link(t, p.url, "read on BelgradeBest") + ' · ' + link(t, DATA.url, "all pavilions")
+      'Sourced profile: ' + link(t, p.url, "read on BelgradeBest") + ' · ' + link(t, DATA.url, "all pavilions"),
+      p.name + " at Expo 2027 Belgrade — " + p.status
     );
   }`,
   });

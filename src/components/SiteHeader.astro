@@ -4,6 +4,7 @@ import Wordmark from "./Wordmark.astro";
 import { CONFIG } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
 import { navSectionsFor } from "../lib/listings";
+import { DE, enPath } from "../lib/i18n";
 
 // Wordmark + leg nav. Nav items are leg slug REFS in chrome.headerNav; titles/
 // hrefs resolve from the structure (clusterBySlug), using navLabel when set.
@@ -11,9 +12,19 @@ import { navSectionsFor } from "../lib/listings";
 // shorthand for { ref, visible:true }. Hidden items drop out of the strip.
 // A leg with a live listings section (navSectionsFor) gets a second level —
 // e.g. Expo 2027 → Pavilions; future legs inherit this automatically.
+// Language pilot: on German pages (lang="de") the strip shows the German Expo
+// cluster only (lib/i18n.ts DE.nav) plus a link to this page's English twin —
+// the rest of the site has no German edition to navigate to.
+interface Props {
+  lang?: "en" | "de";
+}
+const { lang = "en" } = Astro.props;
+const isDe = lang === "de";
 type NavItem = string | { ref: string; visible?: boolean };
 const items = (CONFIG.chrome.headerNav?.items ?? []) as NavItem[];
-const nav = items
+const nav = isDe
+  ? DE.nav.map((n) => ({ href: n.href, label: n.label, subs: [] as { title: string; href: string }[] }))
+  : items
   .map((it) => (typeof it === "string" ? { ref: it, visible: true } : it))
   .filter((it) => it.visible !== false)
   .map((it) => {
@@ -47,7 +58,12 @@ const nav = items
             >
               <span /> <span /> <span />
             </button>
-            <nav id="site-nav" class="c-header__nav" aria-label="Sections">
+            <nav id="site-nav" class="c-header__nav" aria-label={isDe ? "Bereiche" : "Sections"}>
+              {isDe ? (
+                <a href={enPath(Astro.url.pathname)} lang="en" hreflang="en" title={DE.switchHint}>
+                  {DE.switchLabel}
+                </a>
+              ) : null}
               {nav.map((n) =>
                 n.subs.length === 0 ? (
                   <a href={n.href}>{n.label}</a>

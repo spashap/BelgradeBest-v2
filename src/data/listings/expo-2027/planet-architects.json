@@ -1,0 +1,23 @@
+{
+  "slug": "planet-architects",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "austria",
+  "name": "PLANET architects",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-09-04",
+  "blocks": {},
+  "links": {
+    "website": "https://www.planetarchitects.at",
+    "sources": [
+      "https://www.wko.at/oe/news/siegerprojekt-expo-27"
+    ]
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Architecture partner in the winning team for Austria's 'Join the Flow' pavilion concept (with facts and fiction and ZONE Media), announced by WKÖ on 4 Aug 2026. Source: wko.at."
+  }
+}

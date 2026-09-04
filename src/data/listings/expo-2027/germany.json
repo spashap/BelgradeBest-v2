@@ -7,23 +7,57 @@
   "status": "announced",
   "claimed": false,
   "verified": false,
-  "updated": "2026-07-05",
-  "summary": "Germany is implementing its Expo 2027 presence through a €7.5 million federal tender for a 972 m² \"Large\" category pavilion, contributing under the sub-theme \"Play for Progress\".",
+  "updated": "2026-09-04",
+  "summary": "Germany is implementing its Expo 2027 presence through a €7.5 million federal tender for a 972 m² \"Large\" category pavilion, run by Messe Düsseldorf with a concept by facts and fiction under the motto \"Germany! Out of the Box\".",
   "blocks": {
     "about": [
       "Germany's Federal Ministry for Economy and Energy (BMWE) published the tender for the \"technical-organisational implementation of the German participation in Expo 2027 Belgrade\" on 25 August 2025, on the federal e-procurement platform e-Vergabe. The budget is €7.5 million excluding German VAT, with a contract running from 11 May 2026 to 31 December 2027 and at least three qualifying companies competing in a negotiation procedure. A separate €450,000 consultancy contract covers planning and construction advice.",
       "The German Pavilion has a gross floor area of 972 m² in the Expo's \"Large\" category. The building shell is expected to be handed over by the Expo organizer around 15 October 2026, after which Germany fits it out independently inside and out — the tendered services span concept development, planning, interior and exterior fit-out, technical management, dismantling and transport.",
       "Germany's contribution is planned under the Expo sub-theme \"Play for Progress\", aiming to provide what the tender documents call an attractive contribution to the overall theme \"Play for Humanity: Sport and Music for All\".",
-      "The tender has since been decided: on 28 May 2026, Messe Düsseldorf GmbH was announced as the company with overall responsibility for realizing and operating the German Pavilion, with the concept and cultural programme by Cologne agency facts and fiction. Further EU-wide sub-procurements (communication, catering, shop) are expected on Germany's e-procurement platform."
+      "The tender has since been decided: on 28 May 2026, Messe Düsseldorf GmbH was announced as the company with overall responsibility for realizing and operating the German Pavilion, with the concept and cultural programme by Cologne agency facts and fiction. Further EU-wide sub-procurements (communication, catering, shop) are expected on Germany's e-procurement platform.",
+      "The pavilion's motto is \"Germany! Out of the Box\", reported by the German trade press in August 2026 alongside the news that facts and fiction — which also designed the German and Austrian pavilions at Expo 2025 Osaka — holds concept, design and overall management for both the German and the Austrian pavilion in Belgrade. The agency's framing: a Specialised Expo focuses on one theme, so the German Pavilion tells Germany's story through the lens of sport and music rather than in general terms."
     ],
     "facts": [
-      { "label": "Sub-theme", "value": "\"Play for Progress\"", "source": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" },
-      { "label": "Status", "value": "Implementation tender published 25 Aug 2025 (e-Vergabe id 793340)", "source": "https://www.evergabe-online.de/tenderdetails.html?id=793340" },
-      { "label": "Pavilion size", "value": "972 m² gross floor area — \"Large\" category", "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" },
-      { "label": "Budget", "value": "€7.5M implementation tender + €450k consultancy contract", "source": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" },
-      { "label": "Client", "value": "Federal Ministry for Economy and Energy (BMWE)", "source": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Ausschreibungen/20250825-technisch-organisatorische-umsetzung-der-deutschen-beteiligung-an-der-expo-2027-belgrade.html" },
-      { "label": "Building handover", "value": "~15 October 2026 (fit-out by Germany thereafter)", "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/" },
-      { "label": "Implementation", "value": "Messe Düsseldorf GmbH (awarded 28 May 2026); concept & cultural programme by facts and fiction, Cologne", "source": "https://www.messe-duesseldorf.de/de/News_Stories/Newsroom/Messe_D%C3%BCsseldorf_%C3%BCbernimmt_Gesamtverantwortung_f%C3%BCr_deutschen_Pavillon_auf_der_Expo_2027" }
+      {
+        "label": "Sub-theme",
+        "value": "\"Play for Progress\"",
+        "source": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/"
+      },
+      {
+        "label": "Motto",
+        "value": "\"Germany! Out of the Box\" (reported Aug 2026)",
+        "source": "https://www.cimunity.com/de/expo-2027-belgrad-facts-and-fiction-gestaltet-deutschen-und-oesterreichischen-pavillon/"
+      },
+      {
+        "label": "Status",
+        "value": "Implementation tender published 25 Aug 2025 (e-Vergabe id 793340)",
+        "source": "https://www.evergabe-online.de/tenderdetails.html?id=793340"
+      },
+      {
+        "label": "Pavilion size",
+        "value": "972 m² gross floor area — \"Large\" category",
+        "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/"
+      },
+      {
+        "label": "Budget",
+        "value": "€7.5M implementation tender + €450k consultancy contract",
+        "source": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/"
+      },
+      {
+        "label": "Client",
+        "value": "Federal Ministry for Economy and Energy (BMWE)",
+        "source": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Ausschreibungen/20250825-technisch-organisatorische-umsetzung-der-deutschen-beteiligung-an-der-expo-2027-belgrade.html"
+      },
+      {
+        "label": "Building handover",
+        "value": "~15 October 2026 (fit-out by Germany thereafter)",
+        "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/"
+      },
+      {
+        "label": "Implementation",
+        "value": "Messe Düsseldorf GmbH (awarded 28 May 2026); concept & cultural programme by facts and fiction, Cologne",
+        "source": "https://www.messe-duesseldorf.de/de/News_Stories/Newsroom/Messe_D%C3%BCsseldorf_%C3%BCbernimmt_Gesamtverantwortung_f%C3%BCr_deutschen_Pavillon_auf_der_Expo_2027"
+      }
     ],
     "quotes": []
   },
@@ -39,15 +73,106 @@
     {
       "question": "How much is Germany spending on its Expo 2027 pavilion?",
       "answer": "The federal implementation tender is budgeted at €7.5 million excluding German VAT, covering concept, fit-out, technical management and dismantling, with the contract running 11 May 2026 to 31 December 2027. A separate €450,000 consultancy contract covers planning and construction advice."
+    },
+    {
+      "question": "What is the motto of the German Pavilion at Expo 2027?",
+      "answer": "\"Germany! Out of the Box\", according to German trade-press coverage of August 2026. The concept and cultural programme are by the Cologne agency facts and fiction, with Messe Düsseldorf responsible for realising and operating the pavilion."
     }
   ],
   "links": {
     "website": null,
     "sources": [
-      { "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Ausschreibungen/20250825-technisch-organisatorische-umsetzung-der-deutschen-beteiligung-an-der-expo-2027-belgrade.html", "note": "Official BMWE tender notice" },
-      { "url": "https://www.evergabe-online.de/tenderdetails.html?id=793340", "note": "e-Vergabe tender record" },
-      { "url": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/", "note": "Tender details: budget, size, dates" }
+      {
+        "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Ausschreibungen/20250825-technisch-organisatorische-umsetzung-der-deutschen-beteiligung-an-der-expo-2027-belgrade.html",
+        "note": "Official BMWE tender notice"
+      },
+      {
+        "url": "https://www.evergabe-online.de/tenderdetails.html?id=793340",
+        "note": "e-Vergabe tender record"
+      },
+      {
+        "url": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/",
+        "note": "Tender details: budget, size, dates"
+      },
+      {
+        "url": "https://www.cimunity.com/de/expo-2027-belgrad-facts-and-fiction-gestaltet-deutschen-und-oesterreichischen-pavillon/",
+        "note": "Motto + facts and fiction's dual DE/AT mandate (CIM, 7 Aug 2026)"
+      }
     ]
   },
-  "images": []
+  "images": [],
+  "i18n": {
+    "de": {
+      "name": "Deutscher Pavillon",
+      "shortName": "Deutschland",
+      "summary": "Deutschland setzt seinen Auftritt bei der Expo 2027 über eine mit 7,5 Mio. € dotierte Bundesausschreibung für einen 972 m² großen Pavillon der Kategorie „Large“ um, dessen Gesamtverantwortung bei der Messe Düsseldorf liegt, mit einem Konzept von facts and fiction unter dem Motto „Germany! Out of the Box“.",
+      "about": [
+        "Das deutsche Bundesministerium für Wirtschaft und Energie (BMWE) veröffentlichte am 25. August 2025 auf der Vergabeplattform des Bundes e-Vergabe die Ausschreibung für die „technisch-organisatorische Umsetzung der deutschen Beteiligung an der Expo 2027 Belgrad“. Das Budget beträgt 7,5 Mio. € netto (ohne deutsche Umsatzsteuer), der Vertrag läuft vom 11. Mai 2026 bis 31. Dezember 2027, wobei mindestens drei qualifizierte Unternehmen in einem Verhandlungsverfahren konkurrieren. Ein separater Beratungsvertrag über 450.000 € deckt Planungs- und Bauberatung ab.",
+        "Der Deutsche Pavillon hat eine Bruttogeschossfläche von 972 m² in der Expo-Kategorie „Large“. Der Rohbau soll voraussichtlich um den 15. Oktober 2026 vom Expo-Veranstalter übergeben werden, danach übernimmt Deutschland den Innen- und Außenausbau eigenständig – die ausgeschriebenen Leistungen reichen von Konzeptentwicklung über Planung, Innen- und Außenausbau, technisches Management bis zu Abbau und Transport.",
+        "Der deutsche Beitrag ist unter dem Expo-Unterthema „Play for Progress“ geplant und soll laut Ausschreibungsunterlagen einen attraktiven Beitrag zum Gesamtthema „Play for Humanity: Sport and Music for All“ leisten.",
+        "Die Ausschreibung ist inzwischen entschieden: Am 28. Mai 2026 wurde die Messe Düsseldorf GmbH als Unternehmen mit der Gesamtverantwortung für Realisierung und Betrieb des Deutschen Pavillons bekanntgegeben, Konzept und Kulturprogramm stammen von der Kölner Agentur facts and fiction. Weitere EU-weite Unterausschreibungen (Kommunikation, Catering, Shop) werden auf der deutschen Vergabeplattform erwartet.",
+        "Das Motto des Pavillons lautet „Germany! Out of the Box“ (dt. etwa „Deutschland – raus aus der Schublade“), wie die deutsche Fachpresse im August 2026 berichtete – zugleich wurde bekannt, dass facts and fiction, die Agentur, die auch den deutschen und österreichischen Pavillon auf der Expo 2025 Osaka gestaltet hat, für Konzept, Gestaltung und Gesamtleitung sowohl des deutschen als auch des österreichischen Pavillons in Belgrad verantwortlich zeichnet. Die Einordnung der Agentur: Eine Spezialisierte Weltausstellung konzentriert sich auf ein einziges Thema, weshalb der Deutsche Pavillon die Geschichte Deutschlands durch die Linse von Sport und Musik erzählt statt allgemein."
+      ],
+      "facts": [
+        {
+          "label": "Unterthema",
+          "value": "„Play for Progress“",
+          "source": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/"
+        },
+        {
+          "label": "Motto",
+          "value": "„Germany! Out of the Box“ (im August 2026 vermeldet)",
+          "source": "https://www.cimunity.com/de/expo-2027-belgrad-facts-and-fiction-gestaltet-deutschen-und-oesterreichischen-pavillon/"
+        },
+        {
+          "label": "Status",
+          "value": "Umsetzungsausschreibung veröffentlicht am 25. August 2025 (e-Vergabe-ID 793340)",
+          "source": "https://www.evergabe-online.de/tenderdetails.html?id=793340"
+        },
+        {
+          "label": "Pavillongröße",
+          "value": "972 m² Bruttogeschossfläche – Kategorie „Large“",
+          "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/"
+        },
+        {
+          "label": "Budget",
+          "value": "7,5 Mio. € Umsetzungsausschreibung + 450.000 € Beratungsvertrag",
+          "source": "https://vreme.com/en/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/"
+        },
+        {
+          "label": "Auftraggeber",
+          "value": "Bundesministerium für Wirtschaft und Energie (BMWE)",
+          "source": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Ausschreibungen/20250825-technisch-organisatorische-umsetzung-der-deutschen-beteiligung-an-der-expo-2027-belgrade.html"
+        },
+        {
+          "label": "Gebäudeübergabe",
+          "value": "~15. Oktober 2026 (anschließender Innen- und Außenausbau durch Deutschland)",
+          "source": "https://vreme.com/de/drustvo/nemacka-objavila-tender-za-paviljon-na-izlozbi-ekspo-2027/"
+        },
+        {
+          "label": "Umsetzung",
+          "value": "Messe Düsseldorf GmbH (Zuschlag am 28. Mai 2026); Konzept und Kulturprogramm von facts and fiction, Köln",
+          "source": "https://www.messe-duesseldorf.de/de/News_Stories/Newsroom/Messe_D%C3%BCsseldorf_%C3%BCbernimmt_Gesamtverantwortung_f%C3%BCr_deutschen_Pavillon_auf_der_Expo_2027"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Wie groß ist der Deutsche Pavillon auf der Expo 2027?",
+          "answer": "972 m² Bruttogeschossfläche, in der Expo-Pavillonkategorie „Large“. Der Rohbau soll voraussichtlich um den 15. Oktober 2026 vom Expo-Veranstalter übergeben werden, danach übernimmt Deutschland den Innen- und Außenausbau eigenständig."
+        },
+        {
+          "question": "Was ist Deutschlands Thema auf der Expo 2027 Belgrad?",
+          "answer": "Deutschland trägt unter dem Expo-Unterthema „Play for Progress“ zum Gesamtthema „Play for Humanity: Sport and Music for All“ bei. Das eigentliche Ausstellungskonzept wird im Rahmen der Umsetzungsausschreibung entwickelt."
+        },
+        {
+          "question": "Wie viel gibt Deutschland für seinen Expo-2027-Pavillon aus?",
+          "answer": "Die Umsetzungsausschreibung des Bundes ist mit 7,5 Mio. € netto (ohne deutsche Umsatzsteuer) budgetiert und deckt Konzept, Ausbau, technisches Management und Abbau ab; der Vertrag läuft vom 11. Mai 2026 bis 31. Dezember 2027. Ein separater Beratungsvertrag über 450.000 € deckt Planungs- und Bauberatung ab."
+        },
+        {
+          "question": "Wie lautet das Motto des Deutschen Pavillons auf der Expo 2027?",
+          "answer": "„Germany! Out of the Box“, laut Berichten der deutschen Fachpresse vom August 2026. Konzept und Kulturprogramm stammen von der Kölner Agentur facts and fiction, für Realisierung und Betrieb des Pavillons ist die Messe Düsseldorf verantwortlich."
+        }
+      ]
+    }
+  }
 }

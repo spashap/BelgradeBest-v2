@@ -1,0 +1,872 @@
+{
+ "https://belgradebest.com": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-21T08:36:03Z",
+  "canon": "https://belgradebest.com"
+ },
+ "https://belgradebest.com/about": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-23T03:08:49Z",
+  "canon": "https://belgradebest.com/about"
+ },
+ "https://belgradebest.com/areas": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-18T21:27:55Z",
+  "canon": "https://belgradebest.com/areas"
+ },
+ "https://belgradebest.com/areas/cukarica-ada": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/areas/dorcol": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/areas/novi-beograd": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-11T05:28:31Z",
+  "canon": "https://belgradebest.com/areas/novi-beograd"
+ },
+ "https://belgradebest.com/areas/savamala": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/areas/senjak-dedinje": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/areas/skadarlija": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/areas/stari-grad": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-24T03:49:53Z",
+  "canon": "https://belgradebest.com/areas/stari-grad"
+ },
+ "https://belgradebest.com/areas/vozdovac": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/areas/vracar": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-08T15:29:44Z",
+  "canon": "https://belgradebest.com/areas/vracar"
+ },
+ "https://belgradebest.com/areas/zemun": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-11T04:13:31Z",
+  "canon": "https://belgradebest.com/areas/zemun"
+ },
+ "https://belgradebest.com/contact": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-22T01:20:28Z",
+  "canon": "https://belgradebest.com/contact"
+ },
+ "https://belgradebest.com/expo-2027": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-23T14:29:50Z",
+  "canon": "https://belgradebest.com/expo-2027"
+ },
+ "https://belgradebest.com/expo-2027/corporate-area": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/countdown": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/getting-there": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-11T07:56:36Z",
+  "canon": "https://belgradebest.com/expo-2027/getting-there"
+ },
+ "https://belgradebest.com/expo-2027/guide": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-07T21:05:26Z",
+  "canon": "https://belgradebest.com/expo-2027/guide"
+ },
+ "https://belgradebest.com/expo-2027/pavilions": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-22T02:35:28Z",
+  "canon": "https://belgradebest.com/expo-2027/pavilions"
+ },
+ "https://belgradebest.com/expo-2027/pavilions/austria": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/azerbaijan": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/bosnia-and-herzegovina": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/cern": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/china": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/china/world-expo-museum": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/germany": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/israel": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/italy": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/japan": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/north-macedonia": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/posta-srbije": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/russia": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/saudi-arabia": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/serbia": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/slovakia": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/south-korea": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/switzerland": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/turkiye": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/turkmenistan": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/united-arab-emirates": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/pavilions/united-states": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/programme": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/expo-2027/tickets": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-04T23:55:58Z",
+  "canon": "https://belgradebest.com/expo-2027/tickets"
+ },
+ "https://belgradebest.com/expo-2027/tracker": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-09-03T21:48:31Z",
+  "canon": "https://belgradebest.com/expo-2027/tracker"
+ },
+ "https://belgradebest.com/expo-2027/what-is-it": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-01T19:42:26Z",
+  "canon": "https://belgradebest.com/expo-2027/what-is-it"
+ },
+ "https://belgradebest.com/expo-2027/where-to-stay-for-expo": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-04T12:19:23Z",
+  "canon": "https://belgradebest.com/expo-2027/where-to-stay-for-expo"
+ },
+ "https://belgradebest.com/food-and-nightlife": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-cocktail-bars": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-02T19:05:29Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-cocktail-bars"
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-coffee-culture": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-09T06:02:01Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-coffee-culture"
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-craft-beer": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-04T09:49:23Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-craft-beer"
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-food-and-drink-by-neighborhood": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-21T17:39:24Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-food-and-drink-by-neighborhood"
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-grill-and-street-food": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-06-22T09:00:30Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-grill-and-street-food"
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-kafanas": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-03T02:48:14Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-kafanas"
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-nightlife": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-09T09:25:51Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-nightlife"
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-splavovi": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-24T15:22:37Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-splavovi"
+ },
+ "https://belgradebest.com/food-and-nightlife/belgrade-wine-bars": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-09T00:05:43Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/belgrade-wine-bars"
+ },
+ "https://belgradebest.com/food-and-nightlife/best-restaurants-in-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-02T16:35:25Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/best-restaurants-in-belgrade"
+ },
+ "https://belgradebest.com/food-and-nightlife/eating-and-drinking-in-belgrade": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/food-and-nightlife/serbian-food": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-05T02:01:58Z",
+  "canon": "https://belgradebest.com/food-and-nightlife/serbian-food"
+ },
+ "https://belgradebest.com/food-and-nightlife/vegetarian-and-vegan-belgrade": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/for-businesses": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-29T15:31:47Z",
+  "canon": "https://belgradebest.com/glossary"
+ },
+ "https://belgradebest.com/glossary/ada-ciganlija": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-05T03:15:58Z",
+  "canon": "https://belgradebest.com/glossary/ada-ciganlija"
+ },
+ "https://belgradebest.com/glossary/ajvar": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/belgrade-waterfront": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/bg-voz": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/bie": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/burek": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-23T16:53:37Z",
+  "canon": "https://belgradebest.com/glossary/burek"
+ },
+ "https://belgradebest.com/glossary/busplus": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-08T19:30:25Z",
+  "canon": "https://belgradebest.com/glossary/busplus"
+ },
+ "https://belgradebest.com/glossary/cargo": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/cevapi": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-23T16:58:19Z",
+  "canon": "https://belgradebest.com/glossary/cevapi"
+ },
+ "https://belgradebest.com/glossary/dinar": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/domaca-kafa": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/gibanica": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/kafana": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-23T17:04:11Z",
+  "canon": "https://belgradebest.com/glossary/kafana"
+ },
+ "https://belgradebest.com/glossary/kajmak": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/kalemegdan": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-08T20:45:26Z",
+  "canon": "https://belgradebest.com/glossary/kalemegdan"
+ },
+ "https://belgradebest.com/glossary/karadjordjeva-snicla": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/knez-mihailova": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/kosava": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/menjacnica": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-09T01:55:51Z",
+  "canon": "https://belgradebest.com/glossary/menjacnica"
+ },
+ "https://belgradebest.com/glossary/nikola-tesla-airport": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/pekara": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/pljeskavica": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-05T04:30:58Z",
+  "canon": "https://belgradebest.com/glossary/pljeskavica"
+ },
+ "https://belgradebest.com/glossary/rakija": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-22T14:31:00Z",
+  "canon": "https://belgradebest.com/glossary/rakija"
+ },
+ "https://belgradebest.com/glossary/saint-sava-temple": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/sarma": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/skadarlija": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/slava": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/sopska-salata": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/specialised-expo": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/glossary/splav": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-09T06:58:52Z",
+  "canon": "https://belgradebest.com/glossary/splav"
+ },
+ "https://belgradebest.com/glossary/turbo-folk": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/how-we-make-money": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-02T06:44:09Z",
+  "canon": "https://belgradebest.com/how-we-make-money"
+ },
+ "https://belgradebest.com/medical-tourism": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-11T10:29:45Z",
+  "canon": "https://belgradebest.com/medical-tourism"
+ },
+ "https://belgradebest.com/medical-tourism/choosing-a-clinic-in-belgrade": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-08-23T15:46:04Z",
+  "canon": "https://belgradebest.com/medical-tourism/choosing-a-clinic-in-belgrade"
+ },
+ "https://belgradebest.com/medical-tourism/cosmetic-surgery-belgrade": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/medical-tourism/dental-implants-explained": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-04T00:26:22Z",
+  "canon": "https://belgradebest.com/medical-tourism/dental-implants-explained"
+ },
+ "https://belgradebest.com/medical-tourism/dental-work-belgrade": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/medical-tourism/eye-surgery-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-04T06:06:24Z",
+  "canon": "https://belgradebest.com/medical-tourism/eye-surgery-belgrade"
+ },
+ "https://belgradebest.com/medical-tourism/gender-affirming-surgery-belgrade": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-04T13:35:23Z",
+  "canon": "https://belgradebest.com/medical-tourism/gender-affirming-surgery-belgrade"
+ },
+ "https://belgradebest.com/medical-tourism/hair-transplant-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-04T08:37:25Z",
+  "canon": "https://belgradebest.com/medical-tourism/hair-transplant-belgrade"
+ },
+ "https://belgradebest.com/medical-tourism/hair-transplant-explained": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-07T23:35:26Z",
+  "canon": "https://belgradebest.com/medical-tourism/hair-transplant-explained"
+ },
+ "https://belgradebest.com/medical-tourism/ivf-and-fertility-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-18T17:48:13Z",
+  "canon": "https://belgradebest.com/medical-tourism/ivf-and-fertility-belgrade"
+ },
+ "https://belgradebest.com/medical-tourism/ivf-explained": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-08T11:44:41Z",
+  "canon": "https://belgradebest.com/medical-tourism/ivf-explained"
+ },
+ "https://belgradebest.com/medical-tourism/major-surgery-in-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-09T00:40:51Z",
+  "canon": "https://belgradebest.com/medical-tourism/major-surgery-in-belgrade"
+ },
+ "https://belgradebest.com/medical-tourism/medical-tourism-belgrade": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-05T02:26:58Z",
+  "canon": "https://belgradebest.com/medical-tourism/medical-tourism-belgrade"
+ },
+ "https://belgradebest.com/medical-tourism/medical-tourism-costs-in-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-24T17:52:38Z",
+  "canon": "https://belgradebest.com/medical-tourism/medical-tourism-costs-in-belgrade"
+ },
+ "https://belgradebest.com/medical-tourism/medical-tourism-risks-and-aftercare": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-10T14:33:22Z",
+  "canon": "https://belgradebest.com/medical-tourism/medical-tourism-risks-and-aftercare"
+ },
+ "https://belgradebest.com/medical-tourism/medical-tourism-serbia-vs-turkey": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-08T22:50:42Z",
+  "canon": "https://belgradebest.com/medical-tourism/medical-tourism-serbia-vs-turkey"
+ },
+ "https://belgradebest.com/plan-your-trip": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-17T20:54:24Z",
+  "canon": "https://belgradebest.com/plan-your-trip"
+ },
+ "https://belgradebest.com/plan-your-trip/airport-to-city": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/plan-your-trip/best-time-to-visit": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-31T09:56:34Z",
+  "canon": "https://belgradebest.com/plan-your-trip/best-time-to-visit"
+ },
+ "https://belgradebest.com/plan-your-trip/car-rental-belgrade": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/plan-your-trip/getting-around": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/plan-your-trip/money": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/plan-your-trip/sim-and-connectivity": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-10T10:31:28Z",
+  "canon": "https://belgradebest.com/plan-your-trip/sim-and-connectivity"
+ },
+ "https://belgradebest.com/plan-your-trip/stations-and-onward-travel": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-29T13:14:51Z",
+  "canon": "https://belgradebest.com/plan-your-trip/stations-and-onward-travel"
+ },
+ "https://belgradebest.com/plan-your-trip/staying-safe": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-09-03T12:53:15Z",
+  "canon": "https://belgradebest.com/plan-your-trip/staying-safe"
+ },
+ "https://belgradebest.com/plan-your-trip/taxis-in-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-09T04:47:01Z",
+  "canon": "https://belgradebest.com/plan-your-trip/taxis-in-belgrade"
+ },
+ "https://belgradebest.com/plan-your-trip/visa-and-entry": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/privacy": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-21T18:04:24Z",
+  "canon": "https://belgradebest.com/privacy"
+ },
+ "https://belgradebest.com/visit-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-11T12:59:40Z",
+  "canon": "https://belgradebest.com/visit-belgrade"
+ },
+ "https://belgradebest.com/visit-belgrade/belgrade-arenas-and-stadiums": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/visit-belgrade/belgrade-day-trips": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-04T11:05:23Z",
+  "canon": "https://belgradebest.com/visit-belgrade/belgrade-day-trips"
+ },
+ "https://belgradebest.com/visit-belgrade/belgrade-itinerary-3-days": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/visit-belgrade/belgrade-museums": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-12T02:15:11Z",
+  "canon": "https://belgradebest.com/visit-belgrade/belgrade-museums"
+ },
+ "https://belgradebest.com/visit-belgrade/belgrade-neighborhoods": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-02T23:02:53Z",
+  "canon": "https://belgradebest.com/visit-belgrade/belgrade-neighborhoods"
+ },
+ "https://belgradebest.com/visit-belgrade/brutalist-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-23T16:24:37Z",
+  "canon": "https://belgradebest.com/visit-belgrade/brutalist-belgrade"
+ },
+ "https://belgradebest.com/visit-belgrade/is-belgrade-worth-visiting": {
+  "verdict": "NEUTRAL",
+  "coverage": "Crawled - currently not indexed",
+  "lastCrawl": "2026-07-02T13:01:19Z",
+  "canon": null
+ },
+ "https://belgradebest.com/visit-belgrade/things-to-do-in-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-24T20:50:29Z",
+  "canon": "https://belgradebest.com/visit-belgrade/things-to-do-in-belgrade"
+ },
+ "https://belgradebest.com/visit-belgrade/understanding-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-23T22:13:38Z",
+  "canon": "https://belgradebest.com/visit-belgrade/understanding-belgrade"
+ },
+ "https://belgradebest.com/visit-belgrade/zemun": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-22T00:42:59Z",
+  "canon": "https://belgradebest.com/visit-belgrade/zemun"
+ },
+ "https://belgradebest.com/where-to-stay": {
+  "verdict": "NEUTRAL",
+  "coverage": "URL is unknown to Google",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/where-to-stay/belgrade-hotels-vs-apartments": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-03T03:35:30Z",
+  "canon": "https://belgradebest.com/where-to-stay/belgrade-hotels-vs-apartments"
+ },
+ "https://belgradebest.com/where-to-stay/belgrade-non-smoking-hotels-apartments": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/where-to-stay/belgrade-old-town-vs-new-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-05T00:46:58Z",
+  "canon": "https://belgradebest.com/where-to-stay/belgrade-old-town-vs-new-belgrade"
+ },
+ "https://belgradebest.com/where-to-stay/dorcol-vs-vracar-where-to-stay": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-02T17:50:29Z",
+  "canon": "https://belgradebest.com/where-to-stay/dorcol-vs-vracar-where-to-stay"
+ },
+ "https://belgradebest.com/where-to-stay/stari-grad-vs-zemun-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-04T20:54:51Z",
+  "canon": "https://belgradebest.com/where-to-stay/stari-grad-vs-zemun-belgrade"
+ },
+ "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-03T05:54:56Z",
+  "canon": "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade"
+ },
+ "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade-first-time": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-04T06:41:44Z",
+  "canon": "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade-first-time"
+ },
+ "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade-for-business": {
+  "verdict": "NEUTRAL",
+  "coverage": "Discovered - currently not indexed",
+  "lastCrawl": null,
+  "canon": null
+ },
+ "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade-for-nightlife": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-08-08T05:58:51Z",
+  "canon": "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade-for-nightlife"
+ },
+ "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade-with-family": {
+  "verdict": "PASS",
+  "coverage": "Submitted and indexed",
+  "lastCrawl": "2026-07-04T04:50:24Z",
+  "canon": "https://belgradebest.com/where-to-stay/where-to-stay-in-belgrade-with-family"
+ }
+}

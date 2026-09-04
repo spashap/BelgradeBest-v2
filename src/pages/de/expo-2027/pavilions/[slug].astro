@@ -1,0 +1,17 @@
+---
+// German mirror of a pavilion profile — only listings carrying an `i18n.de`
+// block build here (lib/listings.ts listingsWithDe). Same ListingPage layout.
+import ListingPage from "../../../../layouts/ListingPage.astro";
+import { listingsWithDe, type Listing } from "../../../../lib/listings";
+
+export function getStaticPaths() {
+  return listingsWithDe("expo-2027").map((l) => ({
+    params: { slug: l.slug },
+    props: { listing: l },
+  }));
+}
+
+const { listing } = Astro.props as { listing: Listing };
+---
+
+<ListingPage listing={listing} lang="de" />

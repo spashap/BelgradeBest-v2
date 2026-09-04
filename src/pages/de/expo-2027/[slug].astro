@@ -1,0 +1,17 @@
+---
+// German mirror of an Expo article (language pilot, lib/i18n.ts): the `de`
+// content collection holds one file per translated English slug; the layout
+// is the same ArticleLayout with lang="de".
+import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const de = await getCollection("de");
+  return de
+    .filter((entry) => entry.data.leg === "expo-2027")
+    .map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+---
+<ArticleLayout entry={entry} lang="de" />

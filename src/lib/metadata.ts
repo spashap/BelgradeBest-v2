@@ -13,6 +13,11 @@ export type PageMeta = {
   ogType: string;
   image: string; // absolute URL — always set (page hero or the brand default)
   imageAlt: string;
+  // Language pilot (lib/i18n.ts): page language + hreflang set when the page
+  // exists in more than one language. Both optional — English pages without a
+  // German twin leave them unset and render exactly as before.
+  lang?: "en" | "de";
+  alternates?: { hreflang: string; href: string }[];
 };
 
 // Site-wide fallback share image (a branded card). Every page gets an og:image,
@@ -34,9 +39,11 @@ type Args = {
   noindex?: boolean;
   image?: string | null; // page hero (relative or absolute); falls back to default
   imageAlt?: string;
+  lang?: "en" | "de";
+  alternates?: { hreflang: string; href: string }[];
 };
 
-export function pageMetadata({ title, description, path, noindex, image, imageAlt }: Args): PageMeta {
+export function pageMetadata({ title, description, path, noindex, image, imageAlt, lang, alternates }: Args): PageMeta {
   const fullTitle = title.endsWith(SITE.name)
     ? title
     : `${title}${CONFIG.seo.titleSeparator}${SITE.name}`;
@@ -48,6 +55,8 @@ export function pageMetadata({ title, description, path, noindex, image, imageAl
     ogType: CONFIG.seo.ogType,
     image: absoluteImage(image),
     imageAlt: imageAlt?.trim() || title,
+    ...(lang ? { lang } : {}),
+    ...(alternates && alternates.length > 0 ? { alternates } : {}),
   };
 }
 

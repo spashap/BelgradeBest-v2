@@ -1,0 +1,194 @@
+---
+// /de/expo-2027 — German hub of the Expo cluster (language pilot, lib/i18n.ts).
+// A compact portal rather than a translation of the 600-line English portal:
+// the facts a German-speaking visitor asks for first (dates, tickets, arrival,
+// pavilions), the six German articles, the German pavilion profiles, and
+// honest pointers to the English-only data pages (tracker, all pavilions).
+// Numbers interpolate from the same masters as the English hub so nothing
+// here can drift from the English figures.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import PageIntro from "../../../components/PageIntro.astro";
+import Container from "../../../components/Container.astro";
+import SectionHead from "../../../components/SectionHead.astro";
+import Grid from "../../../components/Grid.astro";
+import Card from "../../../components/Card.astro";
+import Note from "../../../components/Note.astro";
+import Faq from "../../../components/Faq.astro";
+import ArticleHero from "../../../components/ArticleHero.astro";
+import Schema from "../../../components/Schema.astro";
+import { pageMetadata } from "../../../lib/metadata";
+import { SITE, EXPO, CONFIG } from "../../../lib/site";
+import { breadcrumbSchema, faqSchema, expoEventSchema } from "../../../lib/schemas";
+import { heroForLeg, thumbForPath } from "../../../lib/hero";
+import { officialCount, namedCount, updated as trackerUpdated } from "../../../lib/expo-participants";
+import { listingsWithDe, listingHref, listingsIndexable } from "../../../lib/listings";
+import { alternates, dePath, fmtDate } from "../../../lib/i18n";
+import { ogImage } from "../../../lib/og";
+
+const LEG = "expo-2027";
+const EN_PATH = `/${LEG}`;
+const PATH = dePath(EN_PATH);
+
+const articles = (await getCollection("de"))
+  .filter((e) => e.data.leg === LEG && e.data.visible !== false)
+  .sort((a, b) => a.data.order - b.data.order);
+const bySlug = (s: string) => articles.find((e) => e.data.slug === s);
+const cards = articles.map((e) => {
+  const p = `/${LEG}/${e.data.slug}`;
+  const t = thumbForPath(p, e.data.heroAlt ?? e.data.heroLabel);
+  return { href: dePath(p), title: e.data.shortTitle, body: e.data.description, src: t?.src, alt: t?.alt };
+});
+
+const pavilions = listingsIndexable ? listingsWithDe(LEG) : [];
+const hero = heroForLeg(LEG, "Expo 2027 Belgrad");
+const dates = `${fmtDate(EXPO.startDate, "de")} – ${fmtDate(EXPO.endDate, "de")}`;
+
+const title = "Expo 2027 Belgrad – der deutschsprachige Guide";
+const description = `Expo 2027 in Belgrad (${dates}): Tickets, Anreise, Programm, Übernachten und die Pavillons von Deutschland, Österreich und der Schweiz – quellengeprüft, auf Deutsch.`;
+
+const meta = pageMetadata({
+  title,
+  description,
+  path: PATH,
+  image: hero?.src ?? ogImage("expo-2027"),
+  imageAlt: "Expo 2027 Belgrad – deutschsprachiger Guide auf BelgradeBest",
+  lang: "de",
+  alternates: alternates(EN_PATH),
+});
+
+const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { name: "Expo 2027 (Deutsch)" }];
+
+const facts = [
+  { label: "Termine", text: `${dates} – 93 Tage`, href: dePath(`/${LEG}/guide`) },
+  { label: "Ort", text: `${EXPO.venue}, im Westen Belgrads – rund 5 km vom Flughafen Nikola Tesla`, href: dePath(`/${LEG}/getting-there`) },
+  { label: "Tickets", text: "Verkaufsstart laut Druck-Ausschreibung für den 15. September 2026 geplant; Preise noch nicht veröffentlicht", href: dePath(`/${LEG}/tickets`) },
+  { label: "Thema", text: `${EXPO.theme} – Spiel, Sport und Musik als verbindende Sprache`, href: dePath(`/${LEG}/what-is-it`) },
+  { label: "Teilnehmer", text: `${officialCount} registrierte Länder laut Veranstalter (Stand August 2026); ${namedCount} davon namentlich bekannt`, href: `/${LEG}/tracker` },
+];
+
+const faqs = [
+  {
+    question: "Wann und wo findet die Expo 2027 statt?",
+    answer: `Vom ${dates} in Surčin am westlichen Stadtrand von Belgrad, rund 5 km vom Flughafen Nikola Tesla und etwa 13,5 km vom Zentrum. Es ist eine Spezialisierte Expo (Specialised Expo) des BIE – kürzer und thematisch enger als eine Weltausstellung – unter dem Motto „${EXPO.theme}“.`,
+  },
+  {
+    question: "Gibt es schon Tickets für die Expo 2027?",
+    answer: "Noch nicht, Stand Anfang September 2026. Die Ausschreibung des Veranstalters für den Ticketdruck sieht den Verkaufsstart für den 15. September 2026 vor; Ein-Tages- und Drei-Tages-Tickets sind damit bestätigt, Preise und der Online-Verkaufskanal aber noch nicht veröffentlicht. Unsere Ticket-Seite verfolgt den offiziellen Stand.",
+  },
+  {
+    question: "Wie viele Länder nehmen an der Expo 2027 teil?",
+    answer: `Der Expo-Direktor nannte im August 2026 ${officialCount} registrierte Länder – ein Rekord für eine Spezialisierte Expo. Namentlich veröffentlicht sind bisher ${namedCount}; unser englischsprachiger Teilnehmer-Tracker führt die belegte Liste mit Quellen und Datum.`,
+  },
+  {
+    question: "Welche deutschsprachigen Länder haben einen eigenen Pavillon?",
+    answer: "Deutschland (972 m², „Germany! Out of the Box“, umgesetzt von der Messe Düsseldorf), Österreich („Join the Flow“, gemeinsam finanziert von BMWET und WKÖ) und die Schweiz (648 m² in einer gemeinsam genutzten Halle, Szenografie von der Zürcher Agentur Jeff). Jedes Profil listet, was bestätigt und was nur berichtet ist.",
+  },
+  {
+    question: "Gibt es die ganze Website auf Deutsch?",
+    answer: "Nein – die deutsche Ausgabe umfasst bisher nur den Expo-2027-Bereich: diesen Hub, sechs Artikel und die Pavillon-Profile der DACH-Länder. Alle weiteren Belgrad-Guides (Stadtviertel, Restaurants, Anreise vom Flughafen, Visa) sind auf Englisch verfügbar und aus jeder deutschen Seite verlinkt.",
+  },
+];
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: "Expo 2027 (Deutsch)", url: `${SITE.origin}${PATH}` },
+  ]),
+  expoEventSchema(hero ? `${SITE.origin}${hero.src}` : undefined),
+  faqSchema(faqs),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow="Expo 2027 Belgrad · Deutsche Ausgabe"
+    title={title}
+    lede={`Belgrad ist vom ${dates} Gastgeber einer Spezialisierten Expo in Surčin. Hier steht auf Deutsch, was für die Reiseplanung zählt – Termine, Tickets, Anreise, Programm, Übernachten – und was die Pavillons aus Deutschland, Österreich und der Schweiz zeigen. Bestätigtes und Berichtetes halten wir auseinander.`}
+  />
+
+  {
+    hero ? (
+      <Container>
+        <ArticleHero src={hero.src} srcset={hero.srcset} sizes={hero.sizes} alt={hero.alt ?? "Expo 2027 Belgrad"} />
+      </Container>
+    ) : null
+  }
+
+  <Container variant="read">
+    <SectionHead title="Auf einen Blick" />
+    <div class="c-data-table">
+      <table>
+        <tbody>
+          {facts.map((f) => (
+            <tr>
+              <th scope="row">{f.label}</th>
+              <td>
+                <a href={f.href}>{f.text}</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </Container>
+
+  <Container>
+    <SectionHead
+      eyebrow="Auf Deutsch"
+      title="Die Expo-2027-Artikel"
+      intro="Sechs Seiten, dieselben Fakten und Quellen wie die englischen Originale – jede verlinkt ihre englische Fassung."
+    />
+    <Grid>
+      {cards.map((c) => (
+        <Card href={c.href} title={c.title} body={c.body} src={c.src} imgAlt={c.alt} />
+      ))}
+    </Grid>
+  </Container>
+
+  {
+    pavilions.length > 0 ? (
+      <Container>
+        <SectionHead
+          eyebrow="Pavillons"
+          title="Deutschland, Österreich, Schweiz"
+          intro="Quellengeprüfte Profile der DACH-Pavillons: Motto, Team, Budget, Größe – und was noch offen ist."
+        />
+        <Grid>
+          {pavilions.map((p) => (
+            <Card
+              href={dePath(listingHref(p))}
+              title={p.i18n?.de?.name ?? p.name}
+              body={p.i18n?.de?.summary ?? p.summary}
+              src={ogImage(`pavilion-${p.slug}`)}
+              imgAlt={`${p.i18n?.de?.name ?? p.name} – Expo 2027 Belgrad`}
+            />
+          ))}
+        </Grid>
+        <p class="u-stack-md">
+          Alle übrigen Pavillon-Profile gibt es auf Englisch:{" "}
+          <a href={`/${LEG}/pavilions`} hreflang="en">alle Pavillons (EN)</a>.
+        </p>
+      </Container>
+    ) : null
+  }
+
+  <Container variant="read">
+    <Note>
+      <strong>Was es nur auf Englisch gibt.</strong> Den{" "}
+      <a href={`/${LEG}/tracker`} hreflang="en">Teilnehmer-Tracker</a> (alle {namedCount} namentlich
+      bekannten Länder mit Quellen, zuletzt aktualisiert am {fmtDate(trackerUpdated, "de")}), den{" "}
+      <a href={`/${LEG}/corporate-area`} hreflang="en">Erklärer zur Corporate Area</a>, den
+      kostenlosen <a href={`/${LEG}/countdown`} hreflang="en">Countdown zum Einbetten</a> und den
+      gesamten übrigen Belgrad-Guide. Die englische Fassung dieser Seite:{" "}
+      <a href={EN_PATH} hreflang="en">Expo 2027 guide (EN)</a>.
+    </Note>
+
+    <SectionHead title="Kurze Antworten" />
+    <Faq faqs={faqs} />
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

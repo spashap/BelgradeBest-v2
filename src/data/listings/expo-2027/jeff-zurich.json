@@ -1,0 +1,23 @@
+{
+  "slug": "jeff-zurich",
+  "leg": "expo-2027",
+  "type": "agency",
+  "parent": "switzerland",
+  "name": "Jeff (Zürich)",
+  "summary": "",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-09-04",
+  "blocks": {},
+  "links": {
+    "website": "https://www.jeff.ch",
+    "sources": [
+      "https://www.persoenlich.com/marketing/schweizer-pavillion-als-spielplatz"
+    ]
+  },
+  "images": [],
+  "outreach": {
+    "status": "none",
+    "notes": "Won Presence Switzerland's pitch (announced 1 Sep 2026) for the Swiss Pavilion's scenography, visitor experience and visual identity — concept 'playground of dialogue'. Named team: Stefan Huggenberger, Cécile Kühn, Gian Andri Bezzola, David Bär, Philip Eggenberger, Mischa Müller. Creative gatekeeper for the Swiss presence; no public email on the article. Source: persoenlich.com 2026-09-01."
+  }
+}

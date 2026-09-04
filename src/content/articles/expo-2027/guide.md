@@ -27,7 +27,7 @@ faqs:
     question: "When is the busiest time to visit Expo 2027?"
   - answer: "Expo 2027 runs from 15 May to 15 August 2027, a 93-day Specialised Expo in the municipality of Surčin, southwest of central Belgrade — about 5 km from Nikola Tesla Airport and roughly 13.5 km from downtown."
     question: "When and where is Expo 2027 Belgrade?"
-  - answer: "No. As of June 2026 the official Programme page says only that tickets will be \"available soon,\" and no prices, categories, sales channels or release date have been published. If a third-party site claims to sell Expo 2027 tickets today, treat it with caution."
+  - answer: "Not yet, as of early September 2026 — but the organiser's ticket-printing tender schedules the sales start for 15 September 2026, with one-day and three-day tickets confirmed. No prices have been published. If a third-party site claims to sell Expo 2027 tickets today, treat it with caution; our tickets page tracks the official status."
     question: "Can I buy tickets yet?"
   - answer: "There is no Expo-specific visa for ordinary visitors. Serbia is reported to have a visa-free policy for roughly 90 countries, and most EU, US and UK visitors do not need one — but verify your own status with the Serbian Ministry of Foreign Affairs before booking. Visa and money detail lives on our plan-your-trip pages."
     question: "Do I need a visa to visit Expo 2027?"
