@@ -271,6 +271,7 @@ const exploreTiles = isDe
     {about.length > 0 && (
       <section id="announced" class="c-hash-section">
         <SectionHead title={H.announced} />
+        <div class="c-article">
         {about.map((p) => <p>{p}</p>)}
         {quotes.map((q) => (
           <blockquote>
@@ -285,6 +286,7 @@ const exploreTiles = isDe
             ) : null}
           </blockquote>
         ))}
+        </div>
       </section>
     )}
 
@@ -333,9 +335,9 @@ const exploreTiles = isDe
         intro={isDe ? L.whereHead(short, listing.type === "pavilion") : `Where to find the ${short} ${listing.type === "pavilion" ? "pavilion" : "presence"}, and the guides that cover the trip.`}
       />
       {isDe ? (
-        <p>{L.whereText}</p>
+        <p class="c-article">{L.whereText}</p>
       ) : (
-        <p>
+        <p class="c-article">
           National pavilions sit in the <strong>International Participant Area</strong> of the
           25-hectare Expo site at {EXPO.venue}, in the western part of Belgrade — the zone that
           becomes the city's new Belgrade Fair after the event. The site is about

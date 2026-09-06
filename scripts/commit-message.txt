@@ -1,40 +1,16 @@
-Expo data pages: mobile-first redesign + link tiles; linksTo reaches data pages
+Pavilion profile paragraph spacing; regenerate stale pavilion share cards
 
-The pavilion profiles, pavilion directory, Expo hub and tracker leaned on
-inline "a · b · c" link rows, bullet lists of links and one-column tables,
-which read as text-heavy and were awkward on phones. This pass keeps the
-Warm Editorial tokens and rebuilds the page structure around a few new
-globals.css library patterns:
+Follow-up to the Expo data-page redesign, from checking the live pages:
 
-- c-status: state chip (announced / tender / construction / concept-only /
-  claimed) used in page-intro meta rows and card meta rows.
-- c-page-intro__meta: chip + fact row under a page lede (PageIntro slot).
-- c-facts: key/value grid, the mobile replacement for the At-a-glance table.
-- c-linkgrid / c-linkcard: compact kicker + title + one-line tiles — the one
-  way to offer "more" links; --static for info tiles.
-- c-chiplist: countries grouped by region; a linked chip = profile exists.
-- c-sources: collapsed source list.
-- Card gains badge/badgeTone; STATUS_LABEL moves to lib/listings.ts.
-
-Pavilion profile (ListingPage, EN + DE): status/updated/claimed chips in the
-intro, a sticky "on this page" chip row, facts grid, exhibitors as tiles with
-an ItemList, visiting section with a dates tile + three guide tiles, sources
-collapsed, "More on Expo 2027" tiles instead of a link row; stable section
-ids. Pavilion directory (EN + DE): image cards with status chip + client-side
-status filter, organisations as tiles, every named country as region chips
-instead of a 140-row table. Expo hub: persona tabs removed, the six most
-recently updated pavilions as cards, organisations as tiles, the redundant
-Profile column dropped from the country table. Tracker: sources collapsed,
-exit links as tiles.
-
-Internal links: lib/links.ts can now resolve the Expo data pages (DATA_PAGES)
-and published listing profiles (listingByHref), so site-schema linksTo may
-target them; what-is-it, guide, programme and tickets now link the pavilion
-directory / tracker in their Read-next cards. A link-graph pass over the
-built site found two dead targets and fixes them: /visit-belgrade/things-to-do
-(programme article EN + DE body and linksTo → …/things-to-do-in-belgrade) and
-/de/visit-belgrade (German what-is-it → the English hub with an EN marker).
-CLAUDE.md documents the patterns and the resolver.
+- The "What's been announced" and "Visiting" paragraphs rendered inside the
+  read container without the c-article typography, so consecutive
+  paragraphs ran together (seen on /expo-2027/pavilions/germany). They now
+  carry the c-article body class and get the standard paragraph rhythm.
+- The pavilion share cards (public/images/og/pavilion-*.png) were last
+  generated on 6 July and bake the status text into the image, so the new
+  directory cards showed e.g. Austria's image saying "Tender under way"
+  under a "Plans announced" chip. Re-ran scripts/gen-listing-og.mjs so the
+  images match the listing masters again.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01PnoBgSeUqk1fGPRnNGfFoy
