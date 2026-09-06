@@ -1,0 +1,260 @@
+{
+  "_readme": "Backlink + traffic plan for BelgradeBest, rendered at /admin/growth. Edit tasks here (commit); tick-off state lives in growth-plan-state.json (written by the admin). Owner = human action, claude = Claude Code builds it, both = Claude drafts / owner sends. impact 1–3.",
+  "updated": "2026-09-06",
+  "goal": "Turn the Expo 2027 data (tracker, pavilion atlas, contract awards) — the only thing nobody else compiles in English — into the site's first backlinks, and ride Bing (already ranking) while Google waits for authority.",
+  "diagnosis": "0 referring domains → Google average position ~40 and it refuses to crawl the pavilion profiles at all ('URL unknown to Google' since July). Bing indexes everything (132 pages) and impressions jumped to 544/day on 05 Sep. Links are the bottleneck; indexing tricks are not.",
+  "metrics": [
+    { "name": "Referring domains (Bing InLinks)", "baseline": "0 (04 Sep)", "target1": "≥ 5 by 05 Oct", "target2": "≥ 20 by 01 Dec" },
+    { "name": "Claimed listings", "baseline": "0", "target1": "≥ 2", "target2": "≥ 10" },
+    { "name": "Outreach sent / replied", "baseline": "0 / 0", "target1": "150 / ≥ 8", "target2": "400 / ≥ 25" },
+    { "name": "Bing clicks per day", "baseline": "~2", "target1": "≥ 5", "target2": "≥ 15" },
+    { "name": "Google impressions per day", "baseline": "2–4", "target1": "≥ 10", "target2": "≥ 40" },
+    { "name": "Google indexed URLs", "baseline": "66 of 145 (sweep 04 Sep)", "target1": "≥ 80", "target2": "≥ 120" },
+    { "name": "GA4 sessions / 28 days (ex-bots)", "baseline": "~140", "target1": "300", "target2": "800" },
+    { "name": "Ticket-alert subscribers", "baseline": "0", "target1": "≥ 30", "target2": "≥ 200" }
+  ],
+  "phases": [
+    { "id": "p0", "title": "Foundations", "when": "This week", "summary": "Unblock sending, fix the Bing plumbing, set the measurement baseline. ~2 owner hours total." },
+    { "id": "p1", "title": "Link-worthy assets", "when": "Weeks 1–2", "summary": "Give journalists, embassies and pavilion teams something worth linking to, and make embedding it a one-click act." },
+    { "id": "p2", "title": "Claims = first backlinks", "when": "Weeks 1–4", "summary": "Every claimed profile is a business with a reason to link back. 79 listings, 12 with emails — build the list, send 20 a day." },
+    { "id": "p3", "title": "Digital PR around the data", "when": "Weeks 2–8", "summary": "Pitch the tracker as a citable source on every news hook. Ticket sales on 15 Sep is the biggest hook of the year." },
+    { "id": "p4", "title": "Institutional & partner links", "when": "Weeks 3–10", "summary": "Chambers, embassies, tourism bodies, architecture press — the durable .org/.gov style links that move Google." },
+    { "id": "p5", "title": "Traffic channels", "when": "Ongoing", "summary": "Bing first, Facebook daily, capture ticket intent, add two evergreen referral channels." },
+    { "id": "p6", "title": "Measure", "when": "Monthly", "summary": "Numbers, not vibes. Dated checkpoints." }
+  ],
+  "tasks": [
+    {
+      "id": "g01", "phase": "p0", "owner": "owner", "effort": "30 min", "impact": 3,
+      "title": "Create a Resend account and verify a sending subdomain",
+      "why": "Unblocks the automated claim outreach (Phase 2), the 7-day follow-ups and the ticket-alert list (Phase 5). Everything email-shaped waits on this.",
+      "steps": [
+        "Sign up at resend.com with admin@belgradebest.com.",
+        "Add domain send.belgradebest.com (a SUBDOMAIN, so Resend's DKIM/return-path records never collide with the Zoho records on the root).",
+        "Copy the three DNS records Resend shows into Namecheap Advanced DNS; wait for 'Verified'.",
+        "Create an API key; in Vercel → Settings → Environment Variables set RESEND_API_KEY, EMAIL_FROM=outreach@send.belgradebest.com, OWNER_NOTIFY_EMAIL=admin@belgradebest.com; redeploy.",
+        "Tell Claude — the notify path switches on by itself; the outreach sender is then a half-day build."
+      ],
+      "links": [{ "label": "Resend", "href": "https://resend.com" }, { "label": "Platform plan §email", "href": "/admin/platform" }]
+    },
+    {
+      "id": "g02", "phase": "p0", "owner": "owner", "effort": "15 min", "impact": 2,
+      "title": "Verify belgradebest.com directly in Bing Webmaster Tools",
+      "why": "The site got into Bing via GSC import, and Microsoft's IndexNow endpoint rejects our host with 403 because of it. Direct verification makes IndexNow work on Bing itself and unlocks the full Bing toolset.",
+      "steps": [
+        "bing.com/webmasters → Add site → https://belgradebest.com → choose the DNS CNAME method.",
+        "Add the CNAME in Namecheap Advanced DNS; click Verify.",
+        "Tell Claude to re-test the IndexNow POST to bing.com/indexnow."
+      ],
+      "links": [{ "label": "Bing Webmaster Tools", "href": "https://www.bing.com/webmasters" }]
+    },
+    {
+      "id": "g03", "phase": "p0", "owner": "claude", "effort": "1 h", "impact": 2,
+      "title": "Automate the Bing URL push on every production deploy",
+      "why": "Bing is the live channel; today the 'push URLs the day they ship' rule is done by hand. A build-time SubmitUrlBatch of changed URLs (diff against the previous sitemap) removes the human step.",
+      "steps": [
+        "Owner: add BING_WMT_API_KEY to the Vercel build env (same key as ~/.config/claude-seo).",
+        "Claude: extend the indexNow() integration in astro.config.mjs with a Bing SubmitUrlBatch of URLs whose lastmod changed, max 100/day, production only, never fails the build."
+      ],
+      "links": []
+    },
+    {
+      "id": "g04", "phase": "p0", "owner": "claude", "effort": "30 min", "impact": 1,
+      "title": "Write the baseline into KB/seo/LINKS-LOG.md",
+      "why": "You cannot see a backlink campaign work without a dated baseline: referring domains (Bing GetLinkCounts), GSC links report, Bing/Google impressions, indexed count. One table, appended monthly (task g60).",
+      "steps": ["Claude runs the four API calls and writes the first row, dated 06 Sep 2026."],
+      "links": []
+    },
+    {
+      "id": "g10", "phase": "p1", "owner": "claude", "effort": "half day", "impact": 3,
+      "title": "Build /expo-2027/press — the Expo 2027 fact sheet & press kit",
+      "why": "Journalists link to what saves them time: one page with the record participant count and its date, every public contract award with amounts, the ticket facts, the site zones, quotable one-liners, a CC BY attribution line and downloadable CSV/JSON. It is the landing page for every pitch in Phase 3.",
+      "steps": [
+        "Sections: Key numbers (live from the masters) · Timeline · Contract awards table · Tickets status · Embeddable charts (countdown, participant counter) · How to cite · Downloads · Contact.",
+        "Dataset + Article JSON-LD, noindex OFF, add to the Expo hub nav and the tracker's link tiles.",
+        "Bump sitemap, push to Bing."
+      ],
+      "links": [{ "label": "Tracker", "href": "/expo-2027/tracker" }]
+    },
+    {
+      "id": "g11", "phase": "p1", "owner": "claude", "effort": "2 h", "impact": 3,
+      "title": "Put an 'Embed this' box on the tracker, the atlas and every pavilion profile",
+      "why": "The widgets (countdown, participant counter, pavilion spotlight, 'featured on' badge) already exist but live only on /for-businesses. Each embed is a followed link from another domain. A pavilion team embedding its own spotlight is the easiest link on the internet.",
+      "steps": [
+        "Profile pages: 'Add the {country} pavilion spotlight to your site' snippet with the c-snippet copy button, pre-filled slug.",
+        "Tracker + atlas: countdown and counter snippets.",
+        "Claimed listings: show the 'Featured on BelgradeBest' badge snippet in /manage after save."
+      ],
+      "links": [{ "label": "Widget showroom", "href": "/for-businesses" }]
+    },
+    {
+      "id": "g12", "phase": "p1", "owner": "claude", "effort": "1 h", "impact": 2,
+      "title": "Add CSV download + a dated changelog to the tracker",
+      "why": "Freshness is the product. A visible 'last 10 changes' list with dates and sources is what makes an editor trust and cite the page, and a CSV is what a data journalist actually opens.",
+      "steps": ["Generate /data/expo-2027-participants.csv at build from the JSON master.", "Render timeline entries as a changelog block on /expo-2027/tracker#changelog."],
+      "links": [{ "label": "Tracker", "href": "/expo-2027/tracker" }]
+    },
+    {
+      "id": "g20", "phase": "p2", "owner": "both", "effort": "2 h", "impact": 3,
+      "title": "Build the contact list: 150–200 named Expo contacts",
+      "why": "12 of 79 listings have an email. Claims need people: national commissioners' offices, the agencies and contractors already profiled (44 booth-level listings), sponsors. Follow KB/platform/PROSPECT-RESEARCH-RUNBOOK.md — Perplexity gathers, Sonnet fills the listing JSON contact fields, Fable reviews.",
+      "steps": [
+        "Owner: run the runbook's Perplexity prompt (or say 'use agents').",
+        "Claude: seed contact.email/contact.person into the listing masters; set outreach.status=queued.",
+        "Check the Platform → Outreach queue count."
+      ],
+      "links": [{ "label": "Outreach queue", "href": "/admin/platform/outreach" }]
+    },
+    {
+      "id": "g21", "phase": "p2", "owner": "both", "effort": "20 min/day", "impact": 3,
+      "title": "Send 20 personalised claim emails a day",
+      "why": "The claim is the offer (free page, they control it); the badge and the 'your profile on BelgradeBest' link are the backlink. Expected from 200 sends: 10–20 replies, 3–8 claims, the first 3–8 links the site has ever had.",
+      "steps": [
+        "Until Resend (g01): open Platform → category → Draft, copy into Zoho, personalise the first line, send from admin@belgradebest.com, set status=sent.",
+        "After Resend: Claude ships /api/admin/outreach-run; you press Send for the day's batch.",
+        "Never mass-mail; one country/agency per email; mention a fact from their own profile."
+      ],
+      "links": [{ "label": "Platform", "href": "/admin/platform" }]
+    },
+    {
+      "id": "g22", "phase": "p2", "owner": "both", "effort": "10 min/day", "impact": 2,
+      "title": "7-day follow-up and status logging",
+      "why": "Half of all replies come from the follow-up. Statuses (sent → replied → claiming → live) are what the Outreach page measures against the 05 Oct targets.",
+      "steps": ["Day 7 without reply: one short follow-up, new angle (the German page for DACH, the language pilot for others).", "Mark replied/declined/opt-out honestly — opt-out is forever."],
+      "links": [{ "label": "Outreach queue", "href": "/admin/platform/outreach" }]
+    },
+    {
+      "id": "g23", "phase": "p2", "owner": "both", "effort": "15 min each", "impact": 3,
+      "title": "Ask every claimed business for a link back",
+      "why": "A claim without a link is half the value. Ask, in the confirmation email, for the badge on their site or a link from their newsroom/partners page to their BelgradeBest profile. Most say yes when the page is already live and looks good.",
+      "steps": ["Claude adds a 'claimed → ask for link' template to outreach-templates.json.", "Owner sends it the day the claim goes live; log the resulting URL in the listing's outreach.notes."],
+      "links": []
+    },
+    {
+      "id": "g30", "phase": "p3", "owner": "both", "effort": "2 h", "impact": 3,
+      "title": "Build the 30-outlet press list with editor emails",
+      "why": "Digital PR without a list is a wish. Targets: exhibition trade press (Exhibition World, m+a report, TSNN), Serbian English-language outlets (Serbian Monitor, N1 English, eKapija English, Balkan Insight, Tanjug English), DACH trade press already covering Expo 2027 (cimunity, EVENT PARTNER), Balkan travel bloggers, expo-history blogs (ExpoMuseum, Expo Museum Shanghai newsletter).",
+      "steps": ["Owner: Perplexity prompt from KB/platform/TRACKER-NEWS-PLAYBOOK.md for the list + newsroom emails.", "Claude: store it as src/data/press-outlets.json and surface it in Outreach as type=press."],
+      "links": [{ "label": "Tracker news playbook", "href": "https://github.com/spashap/BelgradeBest-v2/blob/main/KB/platform/TRACKER-NEWS-PLAYBOOK.md" }]
+    },
+    {
+      "id": "g31", "phase": "p3", "owner": "both", "effort": "2 h on the day", "impact": 3,
+      "title": "15 Sep ticket-sales day: update, push, pitch",
+      "why": "Ticket intent is the one query already ranking in three languages. The on-sale day is the biggest news hook of the year and every outlet will write it. Be the source they cite for the facts (prices, tiers, channel) within hours.",
+      "steps": [
+        "Claude: pre-draft the update for /expo-2027/tickets + the German twin and the 5 pitch emails NOW (task marks ready).",
+        "On the day: confirm facts from the official channel, publish, push to Bing, send the 5 pitches from Zoho, post on Facebook.",
+        "Check 14–16 Sep in case the date moves."
+      ],
+      "links": [{ "label": "Tickets page", "href": "/expo-2027/tickets" }]
+    },
+    {
+      "id": "g32", "phase": "p3", "owner": "owner", "effort": "45 min", "impact": 2,
+      "title": "Get the tracker cited on the Expo 2027 Wikipedia articles",
+      "why": "Wikipedia links are nofollow, but they drive crawlers and AI citation, and editors of other sites copy Wikipedia's references. The article's participant count is stale; the tracker is a dated, sourced replacement.",
+      "steps": [
+        "Read the English, German and Serbian 'Expo 2027' articles; find the participant-count sentence.",
+        "Do NOT edit the article directly (conflict of interest). Post on the Talk page: the sentence, the newer figure, the official source AND the tracker as the compiled source; disclose the affiliation.",
+        "If an editor updates it with the tracker as a reference, log the URL."
+      ],
+      "links": [{ "label": "Wikipedia: Expo 2027", "href": "https://en.wikipedia.org/wiki/Expo_2027" }]
+    },
+    {
+      "id": "g33", "phase": "p3", "owner": "owner", "effort": "30 min/week", "impact": 2,
+      "title": "Answer journalist requests: Qwoted, Featured, Help a B2B Writer",
+      "why": "Journalists post requests for sources on Serbia, the Balkans, Expo, travel costs. A quoted answer nearly always comes with a link. Two answers a week is enough.",
+      "steps": ["Create free source profiles with admin@belgradebest.com (role: editor, BelgradeBest).", "Set alerts for Serbia, Belgrade, Expo, Balkans, digital nomad Europe.", "Answer with a data point from the tracker and a link to the page it lives on."],
+      "links": [{ "label": "Qwoted", "href": "https://www.qwoted.com" }, { "label": "Featured", "href": "https://featured.com" }]
+    },
+    {
+      "id": "g40", "phase": "p4", "owner": "owner", "effort": "1 h", "impact": 3,
+      "title": "Chambers and trade offices: AHK Serbien, WKO Belgrade, ICE Belgrado, Swiss embassy",
+      "why": "They publish 'Expo 2027 resources' for their member companies and they already answer emails about the Expo (addresses are in the KB). The German pavilion profile in German is a gift to AHK and WKO; the Italian profile to ICE. Institutional links are the strongest signal Google has left to give us.",
+      "steps": ["Claude drafts 4 emails (one fact each from the profile, offer: link the profile + free countdown widget, ask: a link from their Expo page).", "Owner sends from admin@belgradebest.com; log in Outreach as type=institution."],
+      "links": [{ "label": "Germany profile (DE)", "href": "/de/expo-2027/pavilions/germany" }]
+    },
+    {
+      "id": "g41", "phase": "p4", "owner": "owner", "effort": "1 h", "impact": 2,
+      "title": "Embassies of participating countries in Belgrade",
+      "why": "Embassy sites list Expo participation news and rarely have a good link for 'what our pavilion is'. Offer the profile in their language where it exists (DE now; IT/TR after the gate).",
+      "steps": ["Start with Germany, Austria, Switzerland (German pages exist), then Japan, Italy, Türkiye, USA.", "Same email pattern as g40; press/cultural attaché addresses are public."],
+      "links": [{ "label": "Pavilion atlas", "href": "/expo-2027/pavilions" }]
+    },
+    {
+      "id": "g42", "phase": "p4", "owner": "owner", "effort": "1 h", "impact": 2,
+      "title": "Tourism bodies and travel trade: TOB, TOS, Belgrade Airport, hotel associations",
+      "why": "Tourism Organization of Belgrade / Serbia and Nikola Tesla Airport publish Expo visitor information. The free countdown widget and the 'where to stay for Expo' guide are the give; a resources link is the ask.",
+      "steps": ["Claude drafts; owner sends. Mention the German edition to TOS's DACH desk."],
+      "links": [{ "label": "Where to stay for Expo", "href": "/expo-2027/where-to-stay-for-expo" }]
+    },
+    {
+      "id": "g43", "phase": "p4", "owner": "both", "effort": "1 h per reveal", "impact": 2,
+      "title": "Architecture and design press when pavilion designs are revealed",
+      "why": "Dezeen, ArchDaily, Designboom, Gradnja.rs and the DACH architecture press cover Expo pavilions when renders drop. The atlas profile with the sourced budget, size and studio is the fact box they need — pitch it the same day (TRACKER-NEWS-PLAYBOOK cycle).",
+      "steps": ["Watch list already exists in the research runbook; on a reveal, update the profile first, then 3–5 pitches."],
+      "links": []
+    },
+    {
+      "id": "g44", "phase": "p4", "owner": "owner", "effort": "20 min", "impact": 1,
+      "title": "Serbian and Balkan travel bloggers: five personal emails",
+      "why": "Small sites link easily and Google counts a real editorial link from a small travel blog. Ask for a mention of the tracker or the Expo guide, offer a data quote in return.",
+      "steps": ["Pick five from the press list with a Belgrade post in the last year; personal first line; one link ask."],
+      "links": []
+    },
+    {
+      "id": "g50", "phase": "p5", "owner": "claude", "effort": "per ship", "impact": 2,
+      "title": "Push every changed URL to Bing the day it ships (until g03 automates it)",
+      "why": "Bing crawls daily and ranks the site on page one for several Expo queries. Submitted URLs get fetched within a day.",
+      "steps": ["After each deploy: SubmitUrlBatch of changed URLs (100/day quota)."],
+      "links": []
+    },
+    {
+      "id": "g51", "phase": "p5", "owner": "owner", "effort": "10 min/day", "impact": 2,
+      "title": "Facebook: one post a day, every pavilion profile once",
+      "why": "Facebook already sends sessions and Google discovers URLs from it. 21 profiles = three weeks of posts with the atlas cards as visuals; UTM as agreed.",
+      "steps": ["Rotate: profile → guide → data fact → profile. Link the atlas on Fridays."],
+      "links": [{ "label": "Facebook Page", "href": "https://www.facebook.com/profile.php?id=61594002307722" }]
+    },
+    {
+      "id": "g52", "phase": "p5", "owner": "claude", "effort": "half day", "impact": 3,
+      "title": "Ticket-alert email capture on /expo-2027/tickets and /countdown",
+      "why": "'Tell me when Expo 2027 tickets go on sale' is real demand already ranking. A list of a few hundred people means owning the on-sale moment with one email, and a reason for people to return.",
+      "steps": ["Needs Resend Audiences (g01).", "Form → /api/listing-request style endpoint → Resend Audience; double opt-in; privacy line."],
+      "links": [{ "label": "Tickets page", "href": "/expo-2027/tickets" }]
+    },
+    {
+      "id": "g53", "phase": "p5", "owner": "owner", "effort": "1 h setup, 15 min/week", "impact": 1,
+      "title": "Pinterest business account with a board per leg",
+      "why": "Pinterest is a search engine for travel planning with a long tail; pins link directly and keep sending traffic for years. Cheap, evergreen, no community rules to trip over.",
+      "steps": ["Create with admin@belgradebest.com; claim the website (Claude adds the meta tag).", "Claude generates 2:3 pin images from the hero images + titles; pin 5 a week."],
+      "links": []
+    },
+    {
+      "id": "g54", "phase": "p5", "owner": "owner", "effort": "30 min/week", "impact": 1,
+      "title": "Travel StackExchange and Quora: answer Belgrade/Expo questions",
+      "why": "The question radar already finds the questions. Travel StackExchange allows sourced links; Quora answers rank on Bing. Two answers a week, answer first, one link, no launch posts — the Reddit rules apply.",
+      "steps": ["Use the radar feed for topics; answer on SE/Quora instead of Reddit."],
+      "links": [{ "label": "Question radar", "href": "/admin/radar" }]
+    },
+    {
+      "id": "g60", "phase": "p6", "owner": "claude", "effort": "30 min", "impact": 2,
+      "title": "Monthly link and index audit → KB/seo/LINKS-LOG.md",
+      "why": "Bing GetLinkCounts / GetUrlLinks, GSC links report, indexed count, impressions per engine. Appended monthly so the trend is visible.",
+      "steps": ["First Monday of the month; note which task produced each new referring domain."],
+      "links": []
+    },
+    {
+      "id": "g61", "phase": "p6", "owner": "both", "effort": "30 min", "impact": 2,
+      "title": "05 Oct checkpoint: metrics vs targets, language gate, kill/keep decisions",
+      "why": "Decide from numbers: Italian/Turkish go-ahead (German Bing impressions), which outreach angle replied, whether the press list produced links.",
+      "steps": ["Claude fills the metrics table on this page; owner decides."],
+      "links": []
+    },
+    {
+      "id": "g62", "phase": "p6", "owner": "claude", "effort": "20 min", "impact": 1,
+      "title": "Monthly Google index sweep (URL Inspection of every sitemap URL)",
+      "why": "Shows whether new authority is making Google crawl the profiles it currently ignores.",
+      "steps": ["Re-run the sweep script; diff against KB/seo/google-index-sweep-2026-09-04.json."],
+      "links": []
+    }
+  ]
+}

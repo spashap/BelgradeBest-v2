@@ -441,6 +441,76 @@ export async function setRadarActioned(id: string, actioned: boolean): Promise<v
   );
 }
 
+// ---- growth plan (data/growth-plan.json + data/growth-plan-state.json) -------
+// The backlink/traffic plan rendered at /admin/growth. The plan is edited in
+// the repo; the admin writes only the tick-off/note state (separate file, so
+// plan edits and operator ticks never fight over one JSON).
+const REL_GROWTH_PLAN = "src/data/growth-plan.json";
+const REL_GROWTH_STATE = "src/data/growth-plan-state.json";
+
+export type GrowthTask = {
+  id: string;
+  phase: string;
+  owner: "owner" | "claude" | "both" | string;
+  effort: string;
+  impact: number;
+  title: string;
+  why: string;
+  steps: string[];
+  links: { label: string; href: string }[];
+};
+export type GrowthPlan = {
+  updated: string;
+  goal: string;
+  diagnosis: string;
+  metrics: { name: string; baseline: string; target1: string; target2: string }[];
+  phases: { id: string; title: string; when: string; summary: string }[];
+  tasks: GrowthTask[];
+};
+export type GrowthStateEntry = { done?: boolean; note?: string; updatedAt: string };
+export type GrowthState = Record<string, GrowthStateEntry>;
+
+export async function readGrowthPlan(): Promise<GrowthPlan> {
+  return JSON.parse((await getFile(REL_GROWTH_PLAN)).text) as GrowthPlan;
+}
+export async function readGrowthState(): Promise<GrowthState> {
+  const { text } = await getFileOrEmpty(REL_GROWTH_STATE);
+  if (!text) return {};
+  try {
+    return JSON.parse(text) as GrowthState;
+  } catch {
+    return {};
+  }
+}
+export async function setGrowthTask(id: string, patch: { done?: boolean; note?: string }): Promise<void> {
+  const clean = String(id).trim();
+  if (!/^[a-z0-9-]+$/.test(clean)) throw new Error("bad task id");
+  let text = "";
+  let sha: string | null = null;
+  try {
+    ({ text, sha } = await getFileForWrite(REL_GROWTH_STATE));
+  } catch (e) {
+    const msg = (e as Error).message;
+    if (!/failed: 404|ENOENT/.test(msg)) throw e;
+  }
+  let state: GrowthState = {};
+  if (text) {
+    try {
+      state = JSON.parse(text);
+    } catch {
+      state = {};
+    }
+  }
+  const prev = state[clean] ?? { updatedAt: "" };
+  state[clean] = {
+    done: patch.done ?? prev.done ?? false,
+    note: patch.note !== undefined ? patch.note.trim().slice(0, 300) : prev.note,
+    updatedAt: new Date().toISOString(),
+  };
+  const what = patch.done !== undefined ? (patch.done ? "done" : "reopened") : "note";
+  await putFile(REL_GROWTH_STATE, JSON.stringify(state, null, 2) + "\n", `admin: growth ${clean} ${what}`, sha);
+}
+
 // Manually kick off the question-radar GitHub Actions workflow (workflow_dispatch)
 // so the operator can refresh the feed on demand from /admin/radar. Needs the
 // admin GITHUB_TOKEN to allow Actions (classic PAT `repo` scope, or a fine-grained

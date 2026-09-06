@@ -1,10 +1,22 @@
-Remove the Reddit account from the site (footer + sameAs)
+Admin: Growth plan page — backlinks & traffic as a tick-off task list
 
-Reddit banned the brand account, so the site must not point at it: the
-Reddit URL is dropped from brand.sameAs (Organization JSON-LD) and the
-footer social entry is set to visible:false (kept in site-config so it can
-be re-enabled from the admin Navigation screen if the account comes back
-or a new one is created). Facebook stays.
+New /admin/growth renders a practical plan to earn the site's first
+backlinks and grow traffic, grounded in the 06 Sep index check (Bing
+indexes everything and spiked to 544 impressions/day; Google refuses to
+crawl the pavilion profiles because the site has zero referring domains).
+
+Plan master: src/data/growth-plan.json — goal, diagnosis, eight metrics
+with 05 Oct and 01 Dec targets, seven phases (Foundations, Link-worthy
+assets, Claims = first backlinks, Digital PR around the data,
+Institutional & partner links, Traffic channels, Measure) and 28 tasks,
+each with owner (you / Claude / Claude drafts · you send), effort, impact,
+why, numbered steps and links. Tick-off + note state is a separate file
+(growth-plan-state.json) written through the admin store like the radar
+state (lib/admin/store.ts readGrowthPlan/readGrowthState/setGrowthTask;
+api/admin/growth.ts). The page shows live pipeline counters from the
+listing masters (contacts with email, outreach sent/replied, claimed),
+filters by open/done and by who, and expands each task to its steps.
+Nav entry added; CLAUDE.md documents the module.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01PnoBgSeUqk1fGPRnNGfFoy

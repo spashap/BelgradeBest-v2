@@ -181,7 +181,12 @@ Both load in **production only** (`components/Analytics.astro` gates on `import.
 
 `/admin` is part of the site (server-rendered routes, deployed on Vercel), NOT a
 separate tool. Sections: **Dashboard**, **Links** (per-article `linksTo`),
-**Structure** (visibility / reorder), **Analytics** (GA4 + Vercel link). "Live" =
+**Structure** (visibility / reorder), **Analytics** (GA4 + Vercel link),
+**Growth** (`/admin/growth`, added 2026-09-06: the backlink + traffic plan as a
+tick-off task list — plan master `src/data/growth-plan.json`, ticks/notes in
+`growth-plan-state.json` via `/api/admin/growth`; live pipeline counters from the
+listing masters; the plan's method notes live in `KB/seo/NEXT-STEPS-2026-09-04.md`
+and `KB/platform/TRACKER-NEWS-PLAYBOOK.md`). "Live" =
 the slug is in the `articles` content collection.
 
 - **Reads never touch GitHub (since 2026-09-06).** Admin pages render from a

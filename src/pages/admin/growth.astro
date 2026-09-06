@@ -1,0 +1,163 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { readGrowthPlan, readGrowthState } from "../../lib/admin/store";
+import { allListings } from "../../lib/listings";
+import { participants, officialCount } from "../../lib/expo-participants";
+
+// The backlink + traffic plan as a working task list. Plan = src/data/
+// growth-plan.json (edit + commit); tick-off state = growth-plan-state.json
+// (written here via /api/admin/growth). Live counters come from the listing
+// masters so the page shows where the outreach pipeline actually stands.
+const plan = await readGrowthPlan();
+const state = await readGrowthState();
+
+const sp = Astro.url.searchParams;
+const err = sp.get("error");
+const ok = sp.get("ok");
+const show = sp.get("show") || "open"; // open | done | all
+const who = sp.get("who") || ""; // owner | claude | both | ""
+const back = `/admin/growth?show=${encodeURIComponent(show)}&who=${encodeURIComponent(who)}`;
+
+const tasks = plan.tasks.map((t) => ({ ...t, done: state[t.id]?.done === true, note: state[t.id]?.note ?? "" }));
+const doneCount = tasks.filter((t) => t.done).length;
+const visible = tasks.filter((t) => (show === "all" || (show === "done") === t.done) && (!who || t.owner === who));
+
+// Live pipeline counters (read-only here; the Platform module edits them).
+const expo = allListings.filter((l) => l.leg === "expo-2027");
+const withEmail = expo.filter((l) => l.contact?.email).length;
+const sent = expo.filter((l) => ["sent", "replied", "claiming", "live"].includes(l.outreach?.status ?? "")).length;
+const replied = expo.filter((l) => ["replied", "claiming", "live"].includes(l.outreach?.status ?? "")).length;
+const claimed = expo.filter((l) => l.claimed).length;
+
+const OWNER: Record<string, string> = { owner: "you", claude: "Claude", both: "Claude drafts · you send" };
+const dots = (n: number) => "●".repeat(n) + "○".repeat(Math.max(0, 3 - n));
+---
+<AdminLayout title="Growth plan — backlinks & traffic">
+  {err ? <div class="err">{err}</div> : null}
+  {ok ? <div class="ok">Saved.</div> : null}
+
+  <div class="panel">
+    <div class="row" style="justify-content:space-between;align-items:flex-start;gap:18px">
+      <div style="max-width:720px">
+        <p style="margin:0 0 8px"><b>Goal.</b> {plan.goal}</p>
+        <p class="muted" style="margin:0"><b>Diagnosis.</b> {plan.diagnosis}</p>
+      </div>
+      <div style="text-align:right;min-width:160px">
+        <div style="font-size:28px;font-weight:700">{doneCount}<span class="muted" style="font-size:14px"> / {tasks.length} done</span></div>
+        <div class="muted" style="font-size:12px">plan updated {plan.updated}</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Live pipeline (from the listing masters)</h2>
+  <div class="panel">
+    <div class="row" style="gap:28px">
+      <div><b>{expo.length}</b> <span class="muted">Expo listings</span></div>
+      <div><b>{withEmail}</b> <span class="muted">with a contact email</span></div>
+      <div><b>{sent}</b> <span class="muted">outreach sent</span></div>
+      <div><b>{replied}</b> <span class="muted">replied</span></div>
+      <div><b>{claimed}</b> <span class="muted">claimed</span></div>
+      <div><b>{participants.length}</b> <span class="muted">countries named of {officialCount}</span></div>
+    </div>
+  </div>
+
+  <h2>Targets</h2>
+  <div class="panel">
+    <table>
+      <tr><th>metric</th><th>baseline</th><th>05 Oct 2026</th><th>01 Dec 2026</th></tr>
+      {plan.metrics.map((m) => (
+        <tr><td>{m.name}</td><td class="muted">{m.baseline}</td><td>{m.target1}</td><td>{m.target2}</td></tr>
+      ))}
+    </table>
+  </div>
+
+  <form method="get" class="panel">
+    <div class="row">
+      <label>Show
+        <select name="show">
+          <option value="open" selected={show === "open"}>Open</option>
+          <option value="done" selected={show === "done"}>Done</option>
+          <option value="all" selected={show === "all"}>All</option>
+        </select>
+      </label>
+      <label>Who
+        <select name="who">
+          <option value="" selected={who === ""}>Everyone</option>
+          <option value="owner" selected={who === "owner"}>You</option>
+          <option value="claude" selected={who === "claude"}>Claude</option>
+          <option value="both" selected={who === "both"}>Claude drafts · you send</option>
+        </select>
+      </label>
+      <button type="submit">Apply</button>
+      <a href="/admin/growth" class="muted" style="margin-left:6px">reset</a>
+    </div>
+  </form>
+
+  {plan.phases.map((ph) => {
+    const rows = visible.filter((t) => t.phase === ph.id);
+    const all = tasks.filter((t) => t.phase === ph.id);
+    const phDone = all.filter((t) => t.done).length;
+    if (rows.length === 0 && show !== "all") return null;
+    return (
+      <section>
+        <h2>
+          {ph.title} <span class="badge">{ph.when}</span> <span class="badge">{phDone}/{all.length} done</span>
+        </h2>
+        <p class="muted" style="margin:-4px 0 10px">{ph.summary}</p>
+        <div class="panel">
+          <table>
+            <tr><th style="width:36px"></th><th>task</th><th>who</th><th>effort</th><th>impact</th><th></th></tr>
+            {rows.map((t) => (
+              <tr id={t.id} style={t.done ? "opacity:.55" : ""}>
+                <td>
+                  <form class="inline" method="post" action="/api/admin/growth">
+                    <input type="hidden" name="id" value={t.id} />
+                    <input type="hidden" name="done" value={t.done ? "0" : "1"} />
+                    <input type="hidden" name="back" value={back} />
+                    <button class="ghost" type="submit" title={t.done ? "Reopen" : "Mark done"} style="width:30px;padding:4px 0">{t.done ? "✓" : ""}</button>
+                  </form>
+                </td>
+                <td>
+                  <details>
+                    <summary style="cursor:pointer"><b>{t.title}</b></summary>
+                    <p class="muted" style="margin:8px 0">{t.why}</p>
+                    <ol style="margin:0 0 8px 18px;padding:0">
+                      {t.steps.map((s) => <li style="margin:2px 0">{s}</li>)}
+                    </ol>
+                    {t.links.length > 0 ? (
+                      <p style="margin:0 0 8px" class="muted">
+                        {t.links.map((l) => (
+                          <a href={l.href} target={l.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" style="margin-right:12px">{l.label} ↗</a>
+                        ))}
+                      </p>
+                    ) : null}
+                    <form class="inline row" method="post" action="/api/admin/growth" style="gap:6px">
+                      <input type="hidden" name="id" value={t.id} />
+                      <input type="hidden" name="back" value={back} />
+                      <input type="text" name="note" value={t.note} placeholder="note (who replied, which URL linked, blocker…)" style="width:360px" />
+                      <button class="ghost" type="submit">Save note</button>
+                    </form>
+                  </details>
+                  {t.note ? <div class="muted" style="font-size:12px;margin-top:4px">📝 {t.note}</div> : null}
+                </td>
+                <td class="muted" style="white-space:nowrap">{OWNER[t.owner] ?? t.owner}</td>
+                <td class="muted" style="white-space:nowrap">{t.effort}</td>
+                <td title={`impact ${t.impact}/3`} style="letter-spacing:2px">{dots(t.impact)}</td>
+                <td class="slug muted">{t.id}</td>
+              </tr>
+            ))}
+            {rows.length === 0 ? <tr><td colspan="6" class="muted">Nothing in this filter.</td></tr> : null}
+          </table>
+        </div>
+      </section>
+    );
+  })}
+
+  <p class="muted">
+    Edit the plan itself in <code>src/data/growth-plan.json</code> (tasks, phases, targets) and push;
+    ticks and notes save to <code>src/data/growth-plan-state.json</code> through the store (GitHub commit in
+    production). Method notes live in <code>KB/seo/NEXT-STEPS-2026-09-04.md</code> and
+    <code>KB/platform/TRACKER-NEWS-PLAYBOOK.md</code>.
+  </p>
+</AdminLayout>
