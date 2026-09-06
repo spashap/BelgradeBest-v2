@@ -1,8 +1,10 @@
-Pavilion atlas: let the command bar wrap on desktop
+Organization schema: link the Facebook Page and Reddit profile (sameAs)
 
-On wide screens the sticky selector bar scrolled horizontally like on a
-phone, so the sort segment and the live count sat off-screen. From 900px
-the row now wraps instead of scrolling; phones keep the swipeable row.
+The brand's first social accounts are live, so brand.sameAs in
+site-config.json now carries the Facebook Page and the Reddit profile
+(u/Big_PeaBegrade). lib/schemas.ts already emits them as Organization.sameAs
+on every page, which is the signal that tells Google and Bing the profiles
+and the site are one entity. X is added once that account exists.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01PnoBgSeUqk1fGPRnNGfFoy
