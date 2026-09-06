@@ -1,5 +1,6 @@
 ---
 import Container from "./Container.astro";
+import SocialIcon from "./SocialIcon.astro";
 import { CONFIG, interp } from "../lib/site";
 import { clusterBySlug, utilityPages } from "../lib/clusters";
 import { areaSection } from "../lib/areas";
@@ -65,7 +66,7 @@ const f = CONFIG.chrome.footer as
       showBrand?: boolean;
       columns?: { heading?: string; kind: string; items?: RefItem[] }[];
       legal?: RefItem[];
-      social?: { url: string; label: string; visible?: boolean }[];
+      social?: { url: string; label: string; icon?: string; visible?: boolean }[];
     }
   | undefined;
 
@@ -80,7 +81,7 @@ const columns = ((f?.columns ?? []) as { heading?: string; kind: string; items?:
 const legal = visibleRefs(f?.legal ?? [])
   .map((s) => resolveRef("pages", s))
   .filter((x): x is ResolvedLink => x !== null);
-const social = ((f?.social ?? []) as { url: string; label: string; visible?: boolean }[]).filter(
+const social = ((f?.social ?? []) as { url: string; label: string; icon?: string; visible?: boolean }[]).filter(
   (s) => s && s.url && s.label && s.visible !== false,
 );
 ---
@@ -129,11 +130,16 @@ const social = ((f?.social ?? []) as { url: string; label: string; visible?: boo
           {legal.length > 0 || social.length > 0 ? (
             <span class="c-footer__meta">
               {legal.map((it) => <a href={it.href}>{it.title}</a>)}
-              {social.map((s) => (
-                <a href={s.url} target="_blank" rel="noopener noreferrer">
-                  {s.label}
-                </a>
-              ))}
+              {social.length > 0 ? (
+                <span class="c-footer__social">
+                  {social.map((s) => (
+                    <a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label} title={s.label}>
+                      {s.icon ? <SocialIcon name={s.icon} /> : null}
+                      <span class={s.icon ? "u-visually-hidden" : undefined}>{s.label}</span>
+                    </a>
+                  ))}
+                </span>
+              ) : null}
             </span>
           ) : null}
         </div>

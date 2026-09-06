@@ -254,7 +254,7 @@ export async function moveSlug(legSlug: string, slugId: string, dir: "up" | "dow
 // are { url, label, visible }). Order = array order; visible toggles per item.
 
 export type NavRefItem = { ref: string; visible?: boolean };
-export type SocialItem = { url: string; label: string; visible?: boolean };
+export type SocialItem = { url: string; label: string; icon?: string; visible?: boolean };
 
 export type SiteConfig = {
   chrome: {

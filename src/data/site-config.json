@@ -151,7 +151,20 @@
           "visible": true
         }
       ],
-      "social": []
+      "social": [
+        {
+          "url": "https://www.facebook.com/profile.php?id=61594002307722",
+          "label": "BelgradeBest on Facebook",
+          "icon": "facebook",
+          "visible": true
+        },
+        {
+          "url": "https://www.reddit.com/user/Big_PeaBegrade/",
+          "label": "BelgradeBest on Reddit",
+          "icon": "reddit",
+          "visible": true
+        }
+      ]
     },
     "legHub": {
       "noteLive": [

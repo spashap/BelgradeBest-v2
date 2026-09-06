@@ -1,10 +1,15 @@
-Organization schema: link the Facebook Page and Reddit profile (sameAs)
+Footer: social icon links (Facebook, Reddit) with standard brand glyphs
 
-The brand's first social accounts are live, so brand.sameAs in
-site-config.json now carries the Facebook Page and the Reddit profile
-(u/Big_PeaBegrade). lib/schemas.ts already emits them as Organization.sameAs
-on every page, which is the signal that tells Google and Bing the profiles
-and the site are one entity. X is added once that account exists.
+The footer's social list was empty. It now carries the two live brand
+accounts as round icon buttons at the end of the bottom bar: new
+components/SocialIcon.astro holds the standard 24×24 brand glyphs
+(Facebook, Reddit, X, Instagram, LinkedIn — currentColor, so tokens colour
+them), SiteFooter renders an icon per entry with the label kept for screen
+readers and as the tooltip, and globals.css adds c-footer__social plus a
+u-visually-hidden helper. Entries live in site-config.json
+chrome.footer.social with a new `icon` key (admin Navigation still toggles
+and reorders them); the admin store type knows the field. X is added the
+day that account exists.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01PnoBgSeUqk1fGPRnNGfFoy

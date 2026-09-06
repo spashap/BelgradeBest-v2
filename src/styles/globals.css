@@ -99,6 +99,9 @@ a {
 .u-stack-lg { margin-top: var(--s8); }
 .u-stack-md { margin-top: var(--s6); }
 
+/* --- u-visually-hidden : screen-reader-only text (icon links) --- */
+.u-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
 /* --- c-eyebrow : the small label above titles --- */
 .c-eyebrow {
   font-family: var(--body);
@@ -714,6 +717,19 @@ a.c-gtk__link:hover {
 .c-footer__meta { display: flex; flex-wrap: wrap; gap: var(--s4); }
 .c-footer__meta a { color: var(--ink-soft); text-decoration: none; }
 .c-footer__meta a:hover { color: var(--accent-ink); text-decoration: underline; }
+/* Social icon buttons at the end of the bottom bar: standard brand glyphs
+   (components/SocialIcon.astro) in round token-bordered buttons. The label is
+   kept for screen readers (u-visually-hidden) and as the title tooltip. */
+.c-footer__social { display: inline-flex; gap: var(--s2); align-items: center; }
+.c-footer__social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--line); background: var(--paper-2); color: var(--ink-soft);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.c-footer__social a:hover,
+.c-footer__social a:focus-visible { color: var(--accent-ink); border-color: var(--accent); background: var(--accent-soft); text-decoration: none; outline: none; }
+.c-footer__social svg { display: block; }
 /* Language pilot: one-line note on German pages (footer stays the English site map). */
 .c-footer__lang { margin-top: var(--s5); font-size: var(--fs-sm); color: var(--ink-soft); }
 .c-footer__lang a { color: var(--accent-ink); }
