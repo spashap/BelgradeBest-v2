@@ -1,28 +1,8 @@
-Pavilion atlas: tech "control deck" design for the pavilion directory + profiles
+Pavilion atlas: let the command bar wrap on desktop
 
-Owner brief: the pavilion pages should look technological and different
-from the rest of the site, keeping only the brand palette. New
-owner-sanctioned chrome block in globals.css (EXPO ATLAS, xp-*), same
-tokens inverted: an ink deck with paper text and brick signals.
-
-Pavilion directory (EN + DE): deck header with a blinking eyebrow, grid
-mask and accent glow, four live readouts (days to opening — live tick —,
-profiles, countries named of the official count, regions). Sticky command
-bar of selectors: search, stage (construction / tender / announced /
-concept), region, A–Z / latest sort, with a live "n / total profiles ·
-slots" count. Every profiled pavilion is a panel: region code (EU·03),
-LED status dot with pulse, a 4-segment progress track from concept to
-construction, clamped summary, and a readout footer (updated · facts ·
-FAQ); hover lifts with an accent rail and a light sweep. Organisations
-get ORG·nn panels. Every named country without a profile is a dashed
-"slot" (host highlighted in gold) that the same search/region selectors
-filter. Staggered rise-in on load; all motion off under reduced-motion.
-Everything stays in the DOM for crawlers; the script only filters/sorts.
-
-Pavilion profile (EN + DE): the intro becomes a deck with four readouts
-(status LED, region, updated, sourced facts + FAQ count) and the labelled
-progress track. lib/expo-participants.ts gains regionOf/regionCode/STAGE;
-i18n.ts gains the German readout and stage labels.
+On wide screens the sticky selector bar scrolled horizontally like on a
+phone, so the sort segment and the live count sat off-screen. From 900px
+the row now wraps instead of scrolling; phones keep the swipeable row.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01PnoBgSeUqk1fGPRnNGfFoy

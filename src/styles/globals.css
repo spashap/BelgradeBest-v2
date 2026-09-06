@@ -1382,6 +1382,7 @@ a.c-linkcard .c-linkcard__title::after { content: " →"; color: var(--accent-in
 }
 .xp-bar__row { display: flex; gap: var(--s2); align-items: center; overflow-x: auto; padding: var(--s2) 0; scrollbar-width: none; }
 .xp-bar__row::-webkit-scrollbar { display: none; }
+@media (min-width: 900px) { .xp-bar__row { flex-wrap: wrap; overflow: visible; } }
 .xp-search {
   flex: 0 0 auto; min-width: 190px;
   font-family: var(--display); font-size: 14px; color: var(--paper);
