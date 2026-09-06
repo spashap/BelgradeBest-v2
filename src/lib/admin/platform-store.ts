@@ -1,10 +1,9 @@
-// Admin-side store for the claimable-listings platform. Unlike the public
-// pages (which bundle listings at BUILD time via lib/listings.ts), the admin
-// module reads the listing JSON files at REQUEST time through the shared
-// GitHub/local store — so outreach-status and claim edits show up immediately
-// after a save, without waiting for the Vercel rebuild.
+// Admin-side store for the claimable-listings platform. Reads go through the
+// shared store (dev: disk; prod: the build-time snapshot — see store.ts), so
+// the admin never depends on GitHub to RENDER. Writes are commits; a saved
+// change shows up in the admin after the rebuild (~1 min), same as the site.
 
-import { getFile, putFile, listDir, usingGitHub } from "./store";
+import { getFile, getFileForWrite, putFile, listDir, usingGitHub } from "./store";
 import { allListings, OUTREACH_STATUSES, type Listing, type OutreachStatus } from "../listings";
 
 const DIR = "src/data/listings";
@@ -15,8 +14,8 @@ export async function readListings(): Promise<AdminListing[]> {
   const legs = await listDir(DIR);
   const legDirs = legs.filter((e) => e.dir).map((e) => e.name);
   if (legDirs.length === 0) {
-    // Vercel serverless without GitHub creds: no dir on disk — fall back to the
-    // bundled build-time snapshot so the module still renders (read-only).
+    // Nothing on disk and nothing in the snapshot — fall back to the typed
+    // build-time list so the module still renders.
     return allListings.map((l) => ({ ...l, rel: `${DIR}/${l.leg}/${l.slug}.json` }));
   }
   const reads: Promise<AdminListing>[] = [];
@@ -46,7 +45,7 @@ export type ListingPatch = {
 export async function updateListingAdmin(leg: string, slug: string, patch: ListingPatch): Promise<void> {
   if (!/^[a-z0-9-]+$/.test(leg) || !/^[a-z0-9-]+$/.test(slug)) throw new Error("bad leg/slug");
   const rel = `${DIR}/${leg}/${slug}.json`;
-  const { text, sha } = await getFile(rel);
+  const { text, sha } = await getFileForWrite(rel);
   const l = JSON.parse(text) as Listing;
 
   if (patch.contactEmail !== undefined || patch.contactPerson !== undefined) {
@@ -112,12 +111,15 @@ export async function createListing(input: NewListing): Promise<string> {
   if (!slug) throw new Error("name produces an empty slug");
   if (!/^[a-z0-9-]+$/.test(input.leg)) throw new Error("bad leg");
   const rel = `${DIR}/${input.leg}/${slug}.json`;
-  // Refuse to overwrite an existing listing.
+  // Refuse to overwrite an existing listing — checked against the persisted
+  // store (GitHub / disk), not the snapshot, so a booth created a minute ago
+  // is seen. A read-only deploy surfaces its message here instead of a 404.
   try {
-    await getFile(rel);
+    await getFileForWrite(rel);
     throw new Error(`listing '${slug}' already exists in ${input.leg}`);
   } catch (e) {
-    if ((e as Error).message.includes("already exists")) throw e;
+    const msg = (e as Error).message;
+    if (msg.includes("already exists") || !/failed: 404|ENOENT/.test(msg)) throw e;
     /* not found → good */
   }
   const today = new Date().toISOString().slice(0, 10);
@@ -185,7 +187,7 @@ export async function restoreListingVersion(leg: string, slug: string, ref: stri
   const rel = `${DIR}/${leg}/${slug}.json`;
   const at = (await gh(`contents/${rel}?ref=${ref}`)) as { content: string };
   const oldText = Buffer.from(at.content, "base64").toString("utf8");
-  const { sha } = await getFile(rel);
+  const { sha } = await getFileForWrite(rel);
   await putFile(rel, oldText, `admin(platform): restore ${leg}/${slug} to ${ref.slice(0, 7)}`, sha);
 }
 
@@ -199,7 +201,7 @@ const hash = (t: string) => createHash("sha256").update(t).digest("hex");
 export async function issueManageToken(leg: string, slug: string): Promise<string> {
   if (!/^[a-z0-9-]+$/.test(leg) || !/^[a-z0-9-]+$/.test(slug)) throw new Error("bad leg/slug");
   const rel = `${DIR}/${leg}/${slug}.json`;
-  const { text, sha } = await getFile(rel);
+  const { text, sha } = await getFileForWrite(rel);
   const l = JSON.parse(text) as Listing;
   const token = randomBytes(32).toString("hex");
   l.manage = { tokenHash: hash(token), issued: new Date().toISOString().slice(0, 10) };
@@ -209,7 +211,7 @@ export async function issueManageToken(leg: string, slug: string): Promise<strin
 
 export async function revokeManageToken(leg: string, slug: string): Promise<void> {
   const rel = `${DIR}/${leg}/${slug}.json`;
-  const { text, sha } = await getFile(rel);
+  const { text, sha } = await getFileForWrite(rel);
   const l = JSON.parse(text) as Listing;
   delete l.manage;
   await putFile(rel, JSON.stringify(l, null, 2) + "\n", `admin(platform): revoke manage token ${leg}/${slug}`, sha);
@@ -246,7 +248,7 @@ const sanitize = (s: string, max: number) =>
 
 export async function saveManaged(leg: string, slug: string, token: string, patch: ManagePatch): Promise<void> {
   const rel = `${DIR}/${leg}/${slug}.json`;
-  const { text, sha } = await getFile(rel);
+  const { text, sha } = await getFileForWrite(rel);
   const l = JSON.parse(text) as Listing;
   if (!tokenMatches(l, token)) throw new Error("invalid token");
   l.summary = sanitize(patch.summary, 400);

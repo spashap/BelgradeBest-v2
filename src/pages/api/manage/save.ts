@@ -1,7 +1,7 @@
 export const prerender = false;
 import type { APIRoute } from "astro";
 import { findByToken, saveManaged } from "../../../lib/admin/platform-store";
-import { getFile, putBinary } from "../../../lib/admin/store";
+import { getFileForWrite, putBinary } from "../../../lib/admin/store";
 import { notifyOwner } from "../../../lib/admin/notify";
 import { listingHref } from "../../../lib/listings";
 import { SITE } from "../../../lib/site";
@@ -39,7 +39,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       // Overwrites need the current blob sha in GitHub mode.
       let sha: string | null = null;
       try {
-        sha = (await getFile(rel)).sha;
+        sha = (await getFileForWrite(rel)).sha;
       } catch {
         /* new file */
       }

@@ -2,7 +2,7 @@
 export const prerender = false;
 import AdminLayout from "../../layouts/AdminLayout.astro";
 import { getCollection } from "astro:content";
-import { readSchema, usingGitHub } from "../../lib/admin/store";
+import { readSchema, saveMode } from "../../lib/admin/store";
 import { VERSION } from "../../lib/version";
 
 const schema = await readSchema();
@@ -13,7 +13,9 @@ for (const leg of schema.legs)
   for (const s of leg.slugs) (built.has(`${leg.slug}/${s.slug}`) ? builtCount++ : plannedCount++);
 
 const legs = [...schema.legs].sort((a, b) => a.order - b.order);
-const persistence = usingGitHub() ? "GitHub commit → auto-redeploy" : "local file (dev)";
+const mode = saveMode();
+const persistence =
+  mode === "github" ? "saves commit to GitHub → rebuild (~1 min)" : mode === "local" ? "saves write the local file (dev)" : "READ-ONLY — no GITHUB_TOKEN in Vercel";
 ---
 <AdminLayout title="Dashboard">
   <div class="panel">
@@ -47,6 +49,10 @@ const persistence = usingGitHub() ? "GitHub commit → auto-redeploy" : "local f
   <p class="muted">
     Edit related links in <a href="/admin/links">Links</a>; reorder / show-hide in
     <a href="/admin/structure">Structure</a>. Saves write <code>src/data/site-schema.json</code>
-    {usingGitHub() ? " via a GitHub commit, which triggers a Vercel rebuild (~1 min) to go live." : " to the local file (dev)."}
+    {mode === "github"
+      ? " via a GitHub commit, which triggers a Vercel rebuild (~1 min); the admin shows the new state after that rebuild."
+      : mode === "local"
+        ? " to the local file (dev)."
+        : ". Saving is OFF on this deploy (no GITHUB_TOKEN); pages still render from the build snapshot."}
   </p>
 </AdminLayout>

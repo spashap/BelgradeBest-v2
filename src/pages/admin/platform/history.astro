@@ -16,7 +16,15 @@ const error = url.searchParams.get("error");
 if (!/^[a-z0-9-]+$/.test(leg) || !/^[a-z0-9-]+$/.test(slug)) return Astro.redirect("/admin/platform");
 
 const gh = platformUsingGitHub();
-const history = gh ? await listingHistory(leg, slug) : [];
+let history: Awaited<ReturnType<typeof listingHistory>> = [];
+let ghError: string | null = null;
+if (gh) {
+  try {
+    history = await listingHistory(leg, slug);
+  } catch (e) {
+    ghError = (e as Error).message;
+  }
+}
 const repo = env("GITHUB_REPO");
 const BACK = `/admin/platform/history?leg=${leg}&slug=${slug}`;
 ---
@@ -29,6 +37,7 @@ const BACK = `/admin/platform/history?leg=${leg}&slug=${slug}`;
 
   {ok ? <div class="ok">Restored — a new commit was created; the rebuild goes live in ~1 min.</div> : null}
   {error ? <div class="err">{error}</div> : null}
+  {ghError ? <div class="err">GitHub history unavailable: {ghError}</div> : null}
 
   <div class="panel">
     {

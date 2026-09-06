@@ -158,10 +158,17 @@ separate tool. Sections: **Dashboard**, **Links** (per-article `linksTo`),
 **Structure** (visibility / reorder), **Analytics** (GA4 + Vercel link). "Live" =
 the slug is in the `articles` content collection.
 
-- **Persistence = GitHub commit → rebuild.** A save edits `src/data/site-schema.json`
-  via the GitHub Contents API (`GITHUB_TOKEN` + `GITHUB_REPO` + `GITHUB_BRANCH`),
-  which auto-triggers a Vercel rebuild so the static site goes live (~1 min). NO DB.
-  In dev (no token) it writes the local file directly (instant). Code: `src/lib/admin/store.ts`.
+- **Reads never touch GitHub (since 2026-09-06).** Admin pages render from a
+  build-time snapshot of `src/data/**/*.json` inlined into the server bundle
+  (`import.meta.glob` in `src/lib/admin/store.ts`); in `astro dev` they read disk.
+  A dead/missing `GITHUB_TOKEN` can no longer blank the admin — it only breaks Save,
+  with the GitHub error shown on the page. The dashboard badge shows the save mode.
+- **Persistence = GitHub commit → rebuild.** A save re-reads the file from GitHub
+  (`getFileForWrite`, current text + sha) and PUTs it via the Contents API
+  (`GITHUB_TOKEN` + `GITHUB_REPO` + `GITHUB_BRANCH`), which auto-triggers a Vercel
+  rebuild so the site AND the admin snapshot go live (~1 min). NO DB. In dev (no
+  token) it writes the local file (instant). On Vercel without a token, Save is
+  refused with a clear message; reading keeps working.
 - **Auth (`src/middleware.ts`)**: `ADMIN_PASSWORD` is SET in production — `/admin`
   302s to `/admin/login` (verified live 2026-07-02). Unsetting the env var would
   leave it open; the cookie is a hash of the password. Nothing else changes.

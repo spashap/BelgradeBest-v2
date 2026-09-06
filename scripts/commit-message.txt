@@ -1,11 +1,26 @@
-KB: session ledger 2026-09-04 — done / not done / dated triggers
+Admin: render from the build snapshot, GitHub only on Save
 
-Appends the end-of-session status to KB/seo/NEXT-STEPS-2026-09-04.md:
-what shipped in V01.017 (efficiency report, Expo refresh with the planned
-15 Sep ticket-sales date, German Expo cluster, widget polish), what is
-carried forward and which items need an owner action (Resend key, contact
-list, affiliates, sameAs), and the dated triggers (14-16 Sep tickets,
-05 Oct checkpoint, 30 Oct Italy, 1 Dec handover).
+The deployed /admin returned a blank 500 on every page that reads site
+data (Dashboard, Links, Structure, Navigation, Platform) because each
+request read src/data/*.json through the GitHub Contents API and the
+admin GITHUB_TOKEN on Vercel is dead (revoked/expired around the GitHub
+account restore). Login itself was fine.
+
+Reads no longer leave the process. lib/admin/store.ts inlines a
+build-time snapshot of every src/data/**/*.json (import.meta.glob, raw,
+~0.7 MB) and serves getFile/listDir from it in production; astro dev
+still reads disk so edits show instantly. Writes are the only GitHub
+calls: a new getFileForWrite() fetches the live text + blob sha right
+before putFile, so an update always mutates the newest commit, never
+the snapshot. On Vercel without a token, Save is refused with a clear
+message instead of an EROFS crash; the dashboard badge shows the save
+mode (github / local / read-only).
+
+platform-store, manage/save and the radar state writer switch their
+read-mutate-write paths to getFileForWrite; createListing checks
+existence against the persisted store; history.astro catches a failing
+GitHub call instead of 500ing; the Listings "saved" note now says the
+new state shows after the rebuild. CLAUDE.md admin section updated.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01JWfZdC1bcVXqctFXQNPHr1
+Claude-Session: https://claude.ai/code/session_01PnoBgSeUqk1fGPRnNGfFoy
