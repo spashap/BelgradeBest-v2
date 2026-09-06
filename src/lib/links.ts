@@ -4,6 +4,32 @@ import { thumbForPath } from "./hero";
 import { articlesByHref } from "./articles";
 import { validAreas, areaSection } from "./areas";
 import { termsByHref, glossarySection } from "./glossary";
+import { listingByHref, listingsIndexable, STATUS_LABEL } from "./listings";
+import { ogImage } from "./og";
+
+// Hand-built data pages that linksTo may target (they are not articles, so
+// they have no frontmatter to derive a card from). Title/teaser live here as
+// the one place; the thumbs are the same ones the Expo hub uses.
+const DATA_PAGES: Record<string, { title: string; body: string; heroSrc: string; heroAlt: string }> = {
+  "/expo-2027/pavilions": {
+    title: "Expo 2027 pavilion directory",
+    body: "Every national pavilion with announced plans, profiled fact by sourced fact — tenders, budgets, designs.",
+    heroSrc: "/images/expo-2027/pavilions-thumb.svg",
+    heroAlt: "Expo 2027 pavilion directory",
+  },
+  "/expo-2027/tracker": {
+    title: "Expo 2027 participant tracker",
+    body: "The independent, citable dataset: official count, every publicly named country, growth timeline, sources.",
+    heroSrc: "/images/expo-2027/tracker-thumb.svg",
+    heroAlt: "Expo 2027 participant tracker",
+  },
+  "/expo-2027/corporate-area": {
+    title: "Corporate & Best Practice Area",
+    body: "How companies get one of the ~45 corporate pavilions, who has joined, and who recruits for the zone.",
+    heroSrc: "/images/expo-2027/corporate-area-thumb.svg",
+    heroAlt: "Expo 2027 corporate and best practice area",
+  },
+};
 
 // Internal-link model. The SINGLE editable master for related links is
 // data/site-schema.json (slug.linksTo) — the local admin writes it; the site
@@ -35,6 +61,22 @@ function normalize(link: string, leg: string): string {
 // Resolve a programmatic-spoke href (/areas/<slug>, /glossary/<slug>) to a card,
 // so linksTo entries can point at those pages too — same reference-not-copy rule.
 function spokeForHref(href: string): RelatedLink | null {
+  const data = DATA_PAGES[href];
+  if (data) return { href, ...data };
+  if (listingsIndexable) {
+    const l = listingByHref(href);
+    if (l) {
+      const status = l.status ? STATUS_LABEL[l.status] ?? l.status : null;
+      const og = ogImage(`pavilion-${l.slug}`);
+      return {
+        href,
+        title: `${l.name} at Expo 2027`,
+        body: status ? `${status} — ${l.summary.split(". ")[0]}.` : l.summary,
+        heroSrc: og,
+        heroAlt: `${l.name} — Expo 2027 Belgrade profile`,
+      };
+    }
+  }
   const [section, spokeSlug] = href.replace(/^\//, "").split("/");
   if (section === areaSection.slug) {
     const a = validAreas().find((x) => x.slug === spokeSlug);

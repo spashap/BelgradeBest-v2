@@ -12,5 +12,10 @@ const { eyebrow, title, lede } = Astro.props;
     {eyebrow ? <span class="c-eyebrow">{eyebrow}</span> : null}
     <h1>{title}</h1>
     {lede ? <p class="c-lede">{lede}</p> : null}
+    {Astro.slots.has("default") ? (
+      <div class="c-page-intro__meta">
+        <slot />
+      </div>
+    ) : null}
   </Container>
 </section>

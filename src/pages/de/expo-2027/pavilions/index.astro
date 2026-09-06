@@ -17,7 +17,7 @@ import { SITE, CONFIG } from "../../../../lib/site";
 import { breadcrumbSchema } from "../../../../lib/schemas";
 import { listingsForLeg, listingsWithDe, listingHref, listingsIndexable } from "../../../../lib/listings";
 import { participants } from "../../../../lib/expo-participants";
-import { alternates, dePath } from "../../../../lib/i18n";
+import { alternates, dePath, DE, fmtDate } from "../../../../lib/i18n";
 
 const LEG = "expo-2027";
 const EN_PATH = `/${LEG}/pavilions`;
@@ -67,6 +67,10 @@ const schemas: object[] = [
           href={dePath(listingHref(p))}
           title={p.i18n?.de?.name ?? p.name}
           body={p.i18n?.de?.summary ?? p.summary}
+          badge={p.status ? DE.listing.status[p.status] ?? p.status : undefined}
+          badgeTone={p.status}
+          meta={`${DE.updated} ${fmtDate(p.updated, "de")}`}
+          shape="wide"
           src={ogImage(`pavilion-${p.slug}`)}
           imgAlt={`${p.i18n?.de?.name ?? p.name} – Expo 2027 Belgrad`}
         />
@@ -81,13 +85,14 @@ const schemas: object[] = [
           title="Weitere Pavillon-Profile (Englisch)"
           intro={`${englishOnly.length} weitere Länder und Organisationen mit veröffentlichten Plänen – bisher nur in der englischen Ausgabe.`}
         />
-        <ul>
+        <div class="c-linkgrid">
           {englishOnly.map((p) => (
-            <li>
-              <a href={listingHref(p)} hreflang="en">{p.name}</a> (EN)
-            </li>
+            <a class="c-linkcard" href={listingHref(p)} hreflang="en">
+              <span class="c-linkcard__kicker">{p.status ? DE.listing.status[p.status] ?? p.status : "Profil"} · EN</span>
+              <span class="c-linkcard__title">{p.name}</span>
+            </a>
           ))}
-        </ul>
+        </div>
         <Note>
           Das vollständige Verzeichnis aller {participants.length} namentlich bekannten Teilnehmerländer –
           auch derer ohne veröffentlichte Pavillon-Pläne – steht im englischen{" "}

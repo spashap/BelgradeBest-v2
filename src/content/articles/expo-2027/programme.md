@@ -16,7 +16,7 @@ noindex: false
 isFaqCandidate: true
 linksTo:
   - "/food-and-nightlife"
-  - "/visit-belgrade/things-to-do"
+  - "/visit-belgrade/things-to-do-in-belgrade"
 faqs:
   - answer: "Across three thematic pavilions — the Power of Play, Play for Progress and Play Together pavilions — plus a Forum of talks and workshops, themed strands for music (\"Music of all for all\") and sport (\"Sport of all for all\"), record-breaking \"Limitless Play\" challenges, country National Days, and city-wide \"Playgrounds\" beyond the gates. Independent guides describe daily live performances, from floating-stage concerts to live mural painting. The full dated calendar is not yet published as of August 2026."
     question: "What is there to do at Expo 2027?"
@@ -73,7 +73,7 @@ These strands are where most of the concerts and sporting events will live once 
 
 ## Beyond the gates: the city-wide Playgrounds
 
-The programme also reaches out into the city. Public-space interventions called "Playgrounds" are planned beyond the main site: **"Playing in Between"** offers relaxation and spontaneous play zones, **"Generational playgrounds"** create intergenerational play areas, and **"Playground Earth"** brings global, sustainability-themed installations and collaboration. If you are already planning [things to do in Belgrade](/visit-belgrade/things-to-do), these are designed to fold the Expo's spirit into the wider city rather than keep it locked behind a fence — so you may encounter Expo programming without ever buying a gate ticket.
+The programme also reaches out into the city. Public-space interventions called "Playgrounds" are planned beyond the main site: **"Playing in Between"** offers relaxation and spontaneous play zones, **"Generational playgrounds"** create intergenerational play areas, and **"Playground Earth"** brings global, sustainability-themed installations and collaboration. If you are already planning [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade), these are designed to fold the Expo's spirit into the wider city rather than keep it locked behind a fence — so you may encounter Expo programming without ever buying a gate ticket.
 
 ## What are National Days at Expo 2027?
 

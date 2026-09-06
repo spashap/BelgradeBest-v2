@@ -16,6 +16,28 @@ import { SITE } from "./site";
 export type Lang = "en" | "de";
 export const LANGS: Lang[] = ["en", "de"];
 export const OG_LOCALE: Record<Lang, string> = { en: "en_US", de: "de_DE" };
+// Header switcher labels: the chip text and the full name (title / aria).
+// Adding a language = one row here + its hreflang in alternates().
+export const LANG_LABEL: Record<Lang, { short: string; name: string }> = {
+  en: { short: "EN", name: "English" },
+  de: { short: "DE", name: "Deutsch" },
+};
+
+// The header language switcher for a page: one entry per language the page
+// exists in (from its hreflang set), in LANGS order, current one flagged.
+// Empty when the page has no twin — the switcher then does not render.
+export type LangSwitch = { lang: Lang; short: string; name: string; href: string; current: boolean };
+export function langSwitcher(alts: Alternate[] | undefined, current: Lang): LangSwitch[] {
+  if (!alts || alts.length === 0) return [];
+  const byLang = new Map(alts.filter((a) => a.hreflang !== "x-default").map((a) => [a.hreflang as Lang, a.href]));
+  const out = LANGS.filter((l) => byLang.has(l)).map((l) => ({
+    lang: l,
+    ...LANG_LABEL[l],
+    href: byLang.get(l)!.replace(SITE.origin, "") || "/",
+    current: l === current,
+  }));
+  return out.length > 1 ? out : [];
+}
 
 // Path of the German mirror for an English path, and back.
 export function dePath(enPathname: string): string {
@@ -131,5 +153,20 @@ export const DE = {
     allPavilions: "alle Pavillon-Profile",
     fullGuide: "der komplette Expo-2027-Guide",
     englishVersion: "Dieses Profil auf Englisch",
+    // 2026-09-06 profile redesign: quick nav, visit tiles, explore tiles, sources toggle.
+    quickNav: "Auf dieser Seite",
+    exploreHead: "Weiter zur Expo 2027",
+    sourcesToggle: (n: number) => `${n} Quellen anzeigen`,
+    childKind: (t: string) =>
+      ({ exhibitor: "Aussteller", contractor: "Auftragnehmer", supplier: "Lieferant", agency: "Agentur", sponsor: "Sponsor", chamber: "Kammer", organization: "Organisation" })[t] ?? "Teilnehmer",
+    tiles: {
+      dates: { kicker: "Termine", title: "" , body: "" },
+      gettingThere: { kicker: "Anreise", title: "Anreise zur Expo 2027", body: "Kostenloser Nahverkehr, Taxi-Apps und eine Bahn im Bau – der ehrliche Stand jeder Route." },
+      tickets: { kicker: "Tickets", title: "Ticket-Guide zur Expo 2027", body: "Verkaufsstart laut Ausschreibung für den 15. September 2026 geplant, Preise offen – was tatsächlich bekannt ist." },
+      stay: { kicker: "Übernachten", title: "Übernachten für die Expo 2027", body: "Flughafennähe oder Innenstadt? Die Abwägung." },
+      directory: { kicker: "Verzeichnis", title: "Alle Pavillon-Profile", body: "Jedes Land mit veröffentlichten Plänen – quellengeprüft, auf Deutsch und Englisch." },
+      tracker: { kicker: "Daten (EN)", title: "Teilnehmer-Tracker", body: "Alle namentlich bekannten Länder mit Quellen und Datum." },
+      guide: { kicker: "Guide", title: "Der komplette Expo-2027-Guide", body: "Termine, Programm, Tickets, Anreise – auf Deutsch." },
+    },
   },
 } as const;

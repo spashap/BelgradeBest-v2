@@ -1,26 +1,40 @@
-Admin: render from the build snapshot, GitHub only on Save
+Expo data pages: mobile-first redesign + link tiles; linksTo reaches data pages
 
-The deployed /admin returned a blank 500 on every page that reads site
-data (Dashboard, Links, Structure, Navigation, Platform) because each
-request read src/data/*.json through the GitHub Contents API and the
-admin GITHUB_TOKEN on Vercel is dead (revoked/expired around the GitHub
-account restore). Login itself was fine.
+The pavilion profiles, pavilion directory, Expo hub and tracker leaned on
+inline "a · b · c" link rows, bullet lists of links and one-column tables,
+which read as text-heavy and were awkward on phones. This pass keeps the
+Warm Editorial tokens and rebuilds the page structure around a few new
+globals.css library patterns:
 
-Reads no longer leave the process. lib/admin/store.ts inlines a
-build-time snapshot of every src/data/**/*.json (import.meta.glob, raw,
-~0.7 MB) and serves getFile/listDir from it in production; astro dev
-still reads disk so edits show instantly. Writes are the only GitHub
-calls: a new getFileForWrite() fetches the live text + blob sha right
-before putFile, so an update always mutates the newest commit, never
-the snapshot. On Vercel without a token, Save is refused with a clear
-message instead of an EROFS crash; the dashboard badge shows the save
-mode (github / local / read-only).
+- c-status: state chip (announced / tender / construction / concept-only /
+  claimed) used in page-intro meta rows and card meta rows.
+- c-page-intro__meta: chip + fact row under a page lede (PageIntro slot).
+- c-facts: key/value grid, the mobile replacement for the At-a-glance table.
+- c-linkgrid / c-linkcard: compact kicker + title + one-line tiles — the one
+  way to offer "more" links; --static for info tiles.
+- c-chiplist: countries grouped by region; a linked chip = profile exists.
+- c-sources: collapsed source list.
+- Card gains badge/badgeTone; STATUS_LABEL moves to lib/listings.ts.
 
-platform-store, manage/save and the radar state writer switch their
-read-mutate-write paths to getFileForWrite; createListing checks
-existence against the persisted store; history.astro catches a failing
-GitHub call instead of 500ing; the Listings "saved" note now says the
-new state shows after the rebuild. CLAUDE.md admin section updated.
+Pavilion profile (ListingPage, EN + DE): status/updated/claimed chips in the
+intro, a sticky "on this page" chip row, facts grid, exhibitors as tiles with
+an ItemList, visiting section with a dates tile + three guide tiles, sources
+collapsed, "More on Expo 2027" tiles instead of a link row; stable section
+ids. Pavilion directory (EN + DE): image cards with status chip + client-side
+status filter, organisations as tiles, every named country as region chips
+instead of a 140-row table. Expo hub: persona tabs removed, the six most
+recently updated pavilions as cards, organisations as tiles, the redundant
+Profile column dropped from the country table. Tracker: sources collapsed,
+exit links as tiles.
+
+Internal links: lib/links.ts can now resolve the Expo data pages (DATA_PAGES)
+and published listing profiles (listingByHref), so site-schema linksTo may
+target them; what-is-it, guide, programme and tickets now link the pavilion
+directory / tracker in their Read-next cards. A link-graph pass over the
+built site found two dead targets and fixes them: /visit-belgrade/things-to-do
+(programme article EN + DE body and linksTo → …/things-to-do-in-belgrade) and
+/de/visit-belgrade (German what-is-it → the English hub with an EN marker).
+CLAUDE.md documents the patterns and the resolver.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01PnoBgSeUqk1fGPRnNGfFoy

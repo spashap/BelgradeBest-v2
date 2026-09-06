@@ -177,6 +177,10 @@ a {
 }
 /* small metadata line under a card title (e.g. last-published date) */
 .c-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2) var(--s3);
   font-family: var(--display);
   font-size: var(--t-eyebrow);
   color: var(--ink-soft);
@@ -589,6 +593,24 @@ a.c-gtk__link:hover {
   .c-header__item:focus-within .c-header__sub,
   .c-header__item.is-sub-open .c-header__sub { display: flex; }
   .c-header__sub a { padding: var(--s1) 0; color: var(--ink); }
+}
+
+/* --- c-lang : header language switcher. Rendered only on pages that exist
+   in more than one language (driven by the page's hreflang set). The current
+   language is a filled chip; the others link to the twin page. Mobile: sits
+   right, beside the burger; desktop: after the nav. --- */
+.c-lang {
+  display: inline-flex; align-items: stretch; margin-left: auto; flex-shrink: 0;
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  font-family: var(--display); font-size: var(--t-eyebrow); font-weight: 600; letter-spacing: 0.08em; line-height: 1;
+}
+.c-lang a, .c-lang span { display: inline-flex; align-items: center; min-height: 36px; padding: 0 var(--s3); color: var(--ink-soft); text-decoration: none; }
+.c-lang a + a, .c-lang a + span, .c-lang span + a { border-left: 1px solid var(--line); }
+.c-lang a:hover { color: var(--accent-ink); background: var(--accent-soft); text-decoration: none; }
+.c-lang [aria-current] { color: var(--paper-2); background: var(--ink); }
+@media (min-width: 760px) {
+  .c-header__nav { margin-left: auto; }
+  .c-lang { margin-left: 0; }
 }
 
 /* --- c-article-meta : the small dated byline under the page intro ("Updated
@@ -1110,6 +1132,101 @@ a.c-gtk__link:hover {
 }
 .c-countdown .c-stats { margin: 0 0 var(--s4); }
 .c-countdown__ctas { display: flex; gap: var(--s3); flex-wrap: wrap; }
+
+/* --- c-status : state chip (listing status: announced / tender / construction
+   / concept-only; claimed). Tone via modifier; the dot is currentColor. Used
+   in page-intro meta rows and card meta rows. --- */
+.c-status {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--display); font-weight: 600; font-size: var(--t-eyebrow); letter-spacing: 0.04em; line-height: 1;
+  padding: 5px 10px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--paper-2); color: var(--ink-soft);
+  white-space: nowrap;
+}
+.c-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+.c-status--announced { color: var(--ok); border-color: var(--ok); }
+.c-status--tender { color: var(--warn); border-color: var(--warn); }
+.c-status--construction { color: var(--accent-ink); border-color: var(--accent); }
+.c-status--concept-only { color: var(--ink-soft); }
+.c-status--claimed { color: var(--gold); border-color: var(--gold); }
+
+/* --- c-page-intro__meta : chip + fact row under a page lede (status, updated,
+   kind). Composes c-status chips and plain spans. --- */
+.c-page-intro__meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3);
+  margin-top: var(--s4);
+  font-family: var(--display); font-size: var(--t-eyebrow); letter-spacing: 0.02em; color: var(--ink-soft);
+}
+
+/* --- c-facts : key/value fact grid — the mobile-first replacement for a
+   one-column data table on profile pages. Stacked label-over-value on
+   phones; a two-column grid from 560px. Source links stay quiet. --- */
+.c-facts {
+  display: grid; margin: 0 0 var(--s5);
+  background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.c-facts > div { display: grid; gap: var(--s1); padding: var(--s3) var(--s4); border-bottom: 1px solid var(--line); }
+.c-facts > div:last-child { border-bottom: 0; }
+.c-facts dt {
+  font-family: var(--display); font-weight: 600; font-size: var(--t-eyebrow);
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft);
+}
+.c-facts dd { margin: 0; font-size: var(--t-small); line-height: 1.5; }
+.c-facts dd a { font-size: var(--t-eyebrow); color: var(--ink-soft); white-space: nowrap; }
+@media (min-width: 560px) {
+  .c-facts > div { grid-template-columns: 170px 1fr; column-gap: var(--s4); align-items: baseline; }
+}
+
+/* --- c-linkgrid / c-linkcard : compact text link tiles (kicker + title + one
+   line). The replacement for "a · b · c" link rows and bullet lists of links:
+   one tap target per destination, scannable on a phone. 1 → 2 → 3 columns;
+   --2 caps at two. --static is an info tile (no link, no arrow). --- */
+.c-linkgrid { display: grid; gap: var(--s3); margin: var(--s4) 0 var(--s5); }
+.c-linkcard {
+  display: flex; flex-direction: column; gap: var(--s1);
+  padding: var(--s4); background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);
+  text-decoration: none; color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+a.c-linkcard:hover,
+a.c-linkcard:focus-visible { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 10px 24px rgba(33, 27, 22, 0.1); outline: none; }
+.c-linkcard__kicker { font-family: var(--display); font-weight: 600; font-size: var(--t-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.c-linkcard__title { font-family: var(--display); font-weight: 600; font-size: var(--t-small); line-height: 1.3; }
+a.c-linkcard .c-linkcard__title::after { content: " →"; color: var(--accent-ink); }
+.c-linkcard p { font-size: var(--t-small); color: var(--ink-soft); line-height: 1.45; }
+.c-linkcard--static .c-linkcard__title { font-weight: 500; }
+@media (min-width: 560px) { .c-linkgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) {
+  .c-linkgrid { grid-template-columns: repeat(3, 1fr); }
+  .c-linkgrid--2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- c-chiplist : dense chip list (countries by region). Linked chips (a)
+   carry a profile and read as tappable; plain chips (span) are names only.
+   __group is the small heading above each cluster. --- */
+.c-chiplist { list-style: none; margin: 0 0 var(--s4); padding: 0; display: flex; flex-wrap: wrap; gap: var(--s2); }
+.c-chiplist li { display: inline-flex; }
+.c-chiplist a,
+.c-chiplist span {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--display); font-weight: 500; font-size: var(--t-eyebrow); letter-spacing: 0.02em; line-height: 1;
+  padding: 9px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper-2);
+  color: var(--ink-soft); text-decoration: none;
+}
+.c-chiplist a { color: var(--ink); border-color: var(--accent); font-weight: 600; }
+.c-chiplist a::after { content: "→"; color: var(--accent); }
+.c-chiplist a:hover,
+.c-chiplist a:focus-visible { background: var(--accent-soft); outline: none; }
+.c-chiplist__group { font-family: var(--display); font-weight: 600; font-size: var(--t-small); margin: var(--s4) 0 var(--s2); }
+.c-chiplist__group small { font-weight: 500; color: var(--ink-soft); }
+
+/* --- c-sources : collapsed source list (native details). Long URL lists stay
+   available for readers and crawlers without dominating the page. --- */
+.c-sources { border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper-2); margin: var(--s4) 0 var(--s5); font-size: var(--t-small); }
+.c-sources summary { cursor: pointer; padding: var(--s3) var(--s4); font-family: var(--display); font-weight: 600; color: var(--ink); }
+.c-sources summary:hover { color: var(--accent-ink); }
+.c-sources ul { margin: 0; padding: 0 var(--s4) var(--s4) var(--s6); color: var(--ink-soft); word-break: break-word; }
+.c-sources li { margin: 0 0 var(--s2); }
 
 /* ============================================================================
    ████ PARTNERS LANDING (/for-businesses) — owner-sanctioned landing chrome ████

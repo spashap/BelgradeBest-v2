@@ -54,6 +54,20 @@ public/images/                       # heroes — FLAT: images/expo-2027/<slug>-
 scripts/port-content.mjs             # one-time porter (NOT deployed; .vercelignore)
 ```
 
+## Expo data pages — mobile-first patterns (redesign 2026-09-06)
+
+The pavilion profile (`ListingPage.astro`), pavilion directory, Expo hub and
+tracker compose from these `globals.css` patterns instead of inline text-link
+rows and bullet lists of links: `c-status` (state chip, tone = listing status),
+`c-page-intro__meta` (chip row under a lede; `PageIntro` default slot),
+`c-facts` (key/value grid, replaces one-column tables), `c-linkgrid`/`c-linkcard`
+(kicker + title + one line tiles — THE way to offer "more" links; `--static` for
+info tiles), `c-chiplist` (countries by region; linked chip = profile exists),
+`c-sources` (collapsed source list). `Card` takes `badge`/`badgeTone`.
+Profile sections carry stable ids (`at-a-glance`, `announced`, `photos`,
+`exhibitors`, `visiting`, `faq`, `sources`) and a sticky `c-subnav` chip row.
+`STATUS_LABEL` lives in `lib/listings.ts` (German twin: `i18n.ts DE.listing.status`).
+
 ## The Design Law (enforce on every page)
 
 Compose from `src/styles/globals.css` (the ported L3 library) and its `:root`
@@ -76,7 +90,10 @@ does not define them.
 - **Related "Read next" links** → `linksTo` on the slug in `site-schema.json` (the
   editable MASTER). Entries are internal hrefs (`/visit-belgrade/zemun`) or bare
   same-leg slugs. `lib/links.ts relatedFor()` resolves each target's title/teaser/
-  hero — links are references, never copied titles.
+  hero — links are references, never copied titles. Resolvable targets: articles,
+  leg hubs, `/areas/*`, `/glossary/*`, the Expo data pages (`DATA_PAGES` table in
+  links.ts: pavilions hub, tracker, corporate-area) and published listing profiles
+  (`/expo-2027/pavilions/<slug>`, via `listingByHref`) — added 2026-09-06.
 - **Structure / nav / chrome / layout / homepage** → the three `src/data/*.json`
   masters. **Single-source law: store references (slugs/hrefs); derive titles/labels
   at render** (`clusters.ts`, `content-plan.ts`, `links.ts`).
@@ -224,7 +241,12 @@ English rest of the site with " (EN)" markers. Mechanics (`src/lib/i18n.ts`):
 - **hreflang** both ways (`alternates()`), `x-default` = English, `<html lang>`,
   `og:locale`, JSON-LD `inLanguage`; sitemap lastmod for `/de/…` mirrors the
   source (`astro.config.mjs`). Header/footer switch on `lang` (compact German
-  nav + "English" link to the twin). UI strings live in `i18n.ts DE`.
+  nav). UI strings live in `i18n.ts DE`.
+- **Language switcher (header `c-lang`, added 2026-09-06):** renders on every
+  page whose `meta.alternates` lists more than one language (`BaseLayout` →
+  `SiteHeader` → `i18n.ts langSwitcher()`), both directions EN↔DE; pages
+  without a twin show nothing. New language = a row in `LANG_LABEL` + its
+  hreflang in `alternates()` — the chip appears by itself.
 - **When an English Expo page changes, change its German twin in the same
   commit** (facts, dates, FAQs) — a stale translation is a wrong page.
   Translate via Sonnet subagents with the brief in

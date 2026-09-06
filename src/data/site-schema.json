@@ -761,7 +761,9 @@
             "/visit-belgrade",
             "/visit-belgrade/is-belgrade-worth-visiting",
             "/expo-2027/guide",
-            "/expo-2027/getting-there"
+            "/expo-2027/getting-there",
+            "/expo-2027/pavilions",
+            "/expo-2027/tracker"
           ]
         },
         {
@@ -776,7 +778,8 @@
             "/visit-belgrade",
             "/where-to-stay",
             "/expo-2027/getting-there",
-            "where-to-stay-for-expo"
+            "where-to-stay-for-expo",
+            "/expo-2027/pavilions"
           ]
         },
         {
@@ -788,9 +791,10 @@
           "title": "Expo 2027 programme — pavilions, days, sport, music",
           "linksTo": [
             "/food-and-nightlife",
-            "/visit-belgrade/things-to-do",
+            "/visit-belgrade/things-to-do-in-belgrade",
             "/expo-2027/guide",
-            "/expo-2027/getting-there"
+            "/expo-2027/getting-there",
+            "/expo-2027/pavilions"
           ]
         },
         {
@@ -819,7 +823,8 @@
             "/expo-2027/guide",
             "/expo-2027/getting-there",
             "/expo-2027/programme",
-            "where-to-stay-for-expo"
+            "where-to-stay-for-expo",
+            "/expo-2027/tracker"
           ]
         },
         {

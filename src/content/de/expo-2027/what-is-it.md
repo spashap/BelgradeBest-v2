@@ -103,7 +103,7 @@ Dies ist die Lücke, die die meisten Besucher am meisten interessieren dürfte. 
 
 **Zur Sicherheit:** Ein staatliches Sicherheitskonzept ist vorhanden, mit Aussagen, die die Sicherheit als „auf höchstmöglichem Niveau“ beschreiben, einem Einsatzzentrum vor Ort und dem Einsatz von rund 20.000 Freiwilligen. Die Participants-FAQ beschreibt eine 24/7-Überwachung, Notfallteams und Sicherheitsübungen. Getrennt davon stellte Serbien bei der COP29 eine „Green Agenda for Expo 2027 Belgrade“ vor („Play GREEN, Play for HUMANITY“), die Nachhaltigkeit und die Zusammenarbeit im Bereich grüner Technologien hervorhebt — dies ist eine Angabe des Veranstalters, kein unabhängig bestätigtes Ergebnis.
 
-**Zur Planung der Reise selbst:** Da sich die Nachfrage auf einen Sommer konzentrieren wird, lohnt es sich, früh über Zeitpunkt und Unterkunft nachzudenken. Unsere Übersicht [Belgrad besuchen](/de/visit-belgrade) ist der richtige Ausgangspunkt für die Stadt selbst, und der umfassendere [Expo-2027-Besucherleitfaden](/de/expo-2027/guide) fasst die praktischen Aspekte zusammen.
+**Zur Planung der Reise selbst:** Da sich die Nachfrage auf einen Sommer konzentrieren wird, lohnt es sich, früh über Zeitpunkt und Unterkunft nachzudenken. Unsere Übersicht [Belgrad besuchen (EN)](/visit-belgrade) ist der richtige Ausgangspunkt für die Stadt selbst, und der umfassendere [Expo-2027-Besucherleitfaden](/de/expo-2027/guide) fasst die praktischen Aspekte zusammen.
 
 ## Also — lohnt sich ein Besuch?
 

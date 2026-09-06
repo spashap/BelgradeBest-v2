@@ -4,6 +4,8 @@ interface Props {
   title: string;
   body?: string;
   meta?: string; // small metadata line under the title (e.g. last-published date)
+  badge?: string; // optional c-status chip in the meta row (e.g. listing status)
+  badgeTone?: string; // c-status modifier: announced | tender | construction | concept-only | claimed
   shape?: "default" | "sq" | "wide";
   src?: string; // real image URL; center-cropped to the card ratio
   imgAlt?: string;
@@ -14,6 +16,8 @@ const {
   title,
   body,
   meta,
+  badge,
+  badgeTone,
   shape = "default",
   src,
   imgAlt = "",
@@ -41,6 +45,13 @@ const mod = shapeClass[shape];
     }
   </div>
   <h3>{title}</h3>
-  {meta ? <div class="c-card__meta">{meta}</div> : null}
+  {
+    badge || meta ? (
+      <div class="c-card__meta">
+        {badge ? <span class={`c-status${badgeTone ? ` c-status--${badgeTone}` : ""}`}>{badge}</span> : null}
+        {meta ? <span>{meta}</span> : null}
+      </div>
+    ) : null
+  }
   {body ? <p>{body}</p> : null}
 </a>

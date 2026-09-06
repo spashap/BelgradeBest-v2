@@ -2,6 +2,11 @@
 // T4: one layout for every listing profile — top-level (pavilion, restaurant…)
 // and child (exhibitor/booth under a parent). Renders ONLY editorial fields;
 // the operator-only `contact`/`outreach` fields must never appear here.
+//
+// 2026-09-06 redesign (mobile-first): status + updated as chips in the intro,
+// a sticky "on this page" chip row, facts as a key/value grid instead of a
+// table, exhibitors + visiting guides + "explore" as link tiles instead of
+// inline text-link rows, sources collapsed. Section ids are stable anchors.
 import BaseLayout from "./BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import PageIntro from "../components/PageIntro.astro";
@@ -22,6 +27,7 @@ import {
   childrenOf,
   parentOf,
   SECTION,
+  STATUS_LABEL,
   type Listing,
 } from "../lib/listings";
 
@@ -29,8 +35,7 @@ interface Props {
   listing: Listing;
   // Language pilot (lib/i18n.ts): "de" renders the listing's `i18n.de` block at
   // /de/<leg>/<section>/<slug> with German chrome. Only top-level listings that
-  // carry the block build in German (pages/de/…/[slug].astro). Default "en" is
-  // byte-identical to before.
+  // carry the block build in German (pages/de/…/[slug].astro).
   lang?: Lang;
 }
 const { listing, lang = "en" } = Astro.props;
@@ -50,18 +55,14 @@ const short = de?.shortName ?? listing.shortName ?? listing.name;
 const summary = de?.summary ?? listing.summary;
 const L = DE.listing;
 
-const STATUS_LABEL: Record<string, string> = {
-  announced: "Plans announced",
-  tender: "Tender under way",
-  construction: "Under construction",
-  "concept-only": "Concept reported",
-};
 const statusLabel = listing.status
   ? ((isDe ? L.status[listing.status] : STATUS_LABEL[listing.status]) ?? listing.status)
   : null;
 const kind = isDe
   ? listing.type === "pavilion" ? L.kindPavilion : listing.type === "exhibitor" ? L.kindExhibitor : L.kindParticipant
   : listing.type === "pavilion" ? "National pavilion" : listing.type === "exhibitor" ? "Exhibitor" : "Participant";
+const childKind = (t: string) =>
+  isDe ? L.childKind(t) : t.charAt(0).toUpperCase() + t.slice(1);
 
 const meta = pageMetadata({
   title: isDe ? `${name} ${L.titleSuffix}` : `${listing.name} at Expo 2027 Belgrade — theme & plans`,
@@ -102,18 +103,129 @@ const facts = de?.facts ?? listing.blocks.facts ?? [];
 const about = de?.about ?? listing.blocks.about ?? [];
 const quotes = listing.blocks.quotes ?? [];
 const sources = listing.links?.sources ?? [];
+const images = listing.images ?? [];
 const faqs = de?.faqs ?? listing.faqs ?? [];
 if (faqs.length > 0) schemas.push(faqSchema(faqs));
+if (children.length > 0) {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: isDe ? L.childrenHead : `Exhibitors & related participants — ${listing.name}`,
+    itemListElement: children.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      url: `${SITE.origin}${listingHref(c)}`,
+    })),
+  });
+}
 const SRC = isDe ? L.source : "[source]";
+const firstSentence = (s: string) => {
+  const i = s.indexOf(". ");
+  return i > 40 ? s.slice(0, i + 1) : s;
+};
+
+// Section headings (also the sticky chip row). Only sections with content.
+const H = {
+  glance: isDe ? L.atAGlance : "At a glance",
+  announced: isDe ? (listing.claimed ? L.aboutHead(short) : L.announcedHead) : listing.claimed ? `About ${short}` : "What's been announced",
+  photos: isDe ? L.photos : "Photos",
+  children: isDe ? L.childrenHead : "Exhibitors & related participants",
+  visiting: isDe ? L.visitingHead : "Visiting — the practical context",
+  faq: isDe ? L.faqHead(short) : `${short} at Expo 2027 — quick answers`,
+  sources: isDe ? L.sources : "Sources",
+};
+const quickNav = [
+  facts.length > 0 && { href: "#at-a-glance", label: H.glance },
+  about.length > 0 && { href: "#announced", label: isDe ? "Pläne" : listing.claimed ? "About" : "Announced" },
+  images.length > 0 && { href: "#photos", label: H.photos },
+  children.length > 0 && { href: "#exhibitors", label: isDe ? "Aussteller" : "Exhibitors" },
+  { href: "#visiting", label: isDe ? "Besuch" : "Visiting" },
+  faqs.length > 0 && { href: "#faq", label: "FAQ" },
+  sources.length > 0 && { href: "#sources", label: H.sources },
+].filter(Boolean) as { href: string; label: string }[];
+
+// Visiting tiles: one tap target per practical guide (no inline link rows).
+const T = L.tiles;
+const visitTiles = isDe
+  ? [
+      { href: "/de/expo-2027/getting-there", ...T.gettingThere },
+      { href: "/de/expo-2027/tickets", ...T.tickets },
+      { href: "/de/expo-2027/where-to-stay-for-expo", ...T.stay },
+    ]
+  : [
+      {
+        href: "/expo-2027/getting-there",
+        kicker: "Getting there",
+        title: "Getting to Expo 2027",
+        body: "Free city transport, taxi apps, and an airport railway still under construction — the honest status of every route.",
+      },
+      {
+        href: "/expo-2027/tickets",
+        kicker: "Tickets",
+        title: "Expo 2027 tickets guide",
+        body: "Sales scheduled from 15 September 2026, prices unannounced — what is actually known.",
+      },
+      {
+        href: "/expo-2027/where-to-stay-for-expo",
+        kicker: "Where to stay",
+        title: "Where to stay for Expo 2027",
+        body: "Airport side or city centre? The trade-off, weighed.",
+      },
+    ];
+const exploreTiles = isDe
+  ? [
+      { href: hubPath, ...T.directory },
+      { href: "/expo-2027/tracker", ...T.tracker },
+      { href: "/de/expo-2027", ...T.guide },
+    ]
+  : [
+      {
+        href: hubPath,
+        kicker: "Directory",
+        title: "All pavilion profiles",
+        body: "Every country with announced plans — themes, teams, budgets, sourced.",
+      },
+      {
+        href: "/expo-2027/tracker",
+        kicker: "Data",
+        title: "Participant tracker",
+        body: "Every publicly named country, confirmation dates and the growth timeline.",
+      },
+      {
+        href: "/expo-2027",
+        kicker: "Guide",
+        title: "The full Expo 2027 guide",
+        body: "Dates, programme, tickets, getting there — and the rest of Belgrade.",
+      },
+    ];
 ---
 
 <BaseLayout meta={meta}>
   <Breadcrumbs crumbs={crumbTrail} />
-  <PageIntro
-    eyebrow={`Expo 2027 · ${kind}${statusLabel ? ` · ${statusLabel}` : ""}`}
-    title={name}
-    lede={summary}
-  />
+  <PageIntro eyebrow={`Expo 2027 · ${kind}`} title={name} lede={summary}>
+    {statusLabel ? <span class={`c-status c-status--${listing.status}`}>{statusLabel}</span> : null}
+    {listing.claimed ? <span class="c-status c-status--claimed">{isDe ? L.managedBy(short) : `Managed by the ${short} team`}</span> : null}
+    <span>{isDe ? L.updated : "Updated"} {fmtDate(listing.updated, lang)}</span>
+    {parent ? (
+      <span>
+        {isDe ? L.partOf(parent.name) : `Part of the ${parent.name} presence`}{" "}
+        <a href={listingHref(parent)}>→</a>
+      </span>
+    ) : null}
+  </PageIntro>
+
+  {quickNav.length >= 3 ? (
+    <nav class="c-subnav" aria-label={isDe ? L.quickNav : "On this page"}>
+      <Container>
+        <ul>
+          {quickNav.map((a) => (
+            <li><a href={a.href}>{a.label}</a></li>
+          ))}
+        </ul>
+      </Container>
+    </nav>
+  ) : null}
 
   <Container variant="read">
     {listing.claimed && (
@@ -133,45 +245,54 @@ const SRC = isDe ? L.source : "[source]";
     )}
 
     {facts.length > 0 && (
-      <>
-        <SectionHead title={isDe ? L.atAGlance : "At a glance"} />
-        <div class="c-data-table">
-          <table>
-            <tbody>
-              {facts.map((f) => (
-                <tr>
-                  <th scope="row">{f.label}</th>
-                  <td>
-                    {f.value}
-                    {f.source ? (
-                      <>
-                        {" "}
-                        <a href={f.source} rel="nofollow noopener">
-                          {SRC}
-                        </a>
-                      </>
-                    ) : null}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </>
+      <section id="at-a-glance" class="c-hash-section">
+        <SectionHead title={H.glance} />
+        <dl class="c-facts">
+          {facts.map((f) => (
+            <div>
+              <dt>{f.label}</dt>
+              <dd>
+                {f.value}
+                {f.source ? (
+                  <>
+                    {" "}
+                    <a href={f.source} rel="nofollow noopener">
+                      {SRC}
+                    </a>
+                  </>
+                ) : null}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
     )}
 
     {about.length > 0 && (
-      <>
-        <SectionHead title={isDe ? (listing.claimed ? L.aboutHead(short) : L.announcedHead) : listing.claimed ? `About ${short}` : "What's been announced"} />
+      <section id="announced" class="c-hash-section">
+        <SectionHead title={H.announced} />
         {about.map((p) => <p>{p}</p>)}
-      </>
+        {quotes.map((q) => (
+          <blockquote>
+            “{q.quote}” — {q.who}
+            {q.source ? (
+              <>
+                {" "}
+                <a href={q.source} rel="nofollow noopener">
+                  {SRC}
+                </a>
+              </>
+            ) : null}
+          </blockquote>
+        ))}
+      </section>
     )}
 
-    {(listing.images ?? []).length > 0 && (
-      <>
-        <SectionHead title={isDe ? L.photos : "Photos"} />
+    {images.length > 0 && (
+      <section id="photos" class="c-hash-section">
+        <SectionHead title={H.photos} />
         <div class="c-grid">
-          {(listing.images ?? []).map((src, i) => (
+          {images.map((src, i) => (
             <figure>
               <img
                 src={src}
@@ -185,112 +306,66 @@ const SRC = isDe ? L.source : "[source]";
             </figure>
           ))}
         </div>
-      </>
+      </section>
     )}
-
-    {quotes.map((q) => (
-      <blockquote>
-        “{q.quote}” — {q.who}
-        {q.source ? (
-          <>
-            {" "}
-            <a href={q.source} rel="nofollow noopener">
-              {SRC}
-            </a>
-          </>
-        ) : null}
-      </blockquote>
-    ))}
 
     {children.length > 0 && (
-      <>
+      <section id="exhibitors" class="c-hash-section">
         <SectionHead
-          title={isDe ? L.childrenHead : `Exhibitors & related participants`}
+          title={H.children}
           intro={isDe ? L.childrenIntro(short) : `Organizations presenting under or alongside the ${short} presence — each with its own profile.`}
         />
-        <ul>
+        <div class="c-linkgrid c-linkgrid--2">
           {children.map((c) => (
-            <li>
-              <a href={listingHref(c)}>{c.name}</a> — {c.summary.split(". ")[0]}.
-            </li>
+            <a class="c-linkcard" href={listingHref(c)}>
+              <span class="c-linkcard__kicker">{childKind(c.type)}</span>
+              <span class="c-linkcard__title">{c.name}</span>
+              <p>{firstSentence(c.summary)}</p>
+            </a>
           ))}
-        </ul>
-      </>
+        </div>
+      </section>
     )}
 
-    {parent && (
-      <p>
-        {isDe ? (
-          <>{L.partOf(parent.name)} <a href={listingHref(parent)}>{parent.name}</a></>
-        ) : (
-          <>Part of the <a href={listingHref(parent)}>{parent.name}</a> presence at {EXPO.shortName}.</>
-        )}
-      </p>
-    )}
-
-    <SectionHead title={isDe ? L.whereHead(short, listing.type === "pavilion") : `Where to find the ${short} ${listing.type === "pavilion" ? "pavilion" : "presence"}`} />
-    {isDe ? (
-      <p>{L.whereText}</p>
-    ) : (
-    <p>
-      National pavilions sit in the <strong>International Participant Area</strong> of the
-      25-hectare Expo site at {EXPO.venue}, in the western part of Belgrade — the zone that
-      becomes the city's new Belgrade Fair after the event. The site is about
-      <strong> 5 km from Nikola Tesla Airport</strong> and roughly
-      <strong> 13.5 km southwest of central Belgrade</strong> (official planning figures), so
-      if you fly in, you land closer to the Expo grounds than to town. Exact positions within
-      the zones haven't been published yet; we'll add the location when the site plan lands.
-    </p>
-    )}
-
-    <SectionHead title={isDe ? L.visitingHead : "Visiting — the practical context"} />
-    {isDe ? (
-      <ul>
-        <li>
-          <strong>{L.dates}</strong> {L.datesText(expoDates, EXPO.classification)}
-        </li>
-        <li>
-          <strong>{L.gettingThere}</strong> {L.gettingThereText}{" "}
-          <a href="/de/expo-2027/getting-there">{L.gettingThereLink}</a>.
-        </li>
-        <li>
-          <strong>{L.tickets}</strong> {L.ticketsText}{" "}
-          <a href="/de/expo-2027/tickets">{L.ticketsLink}</a>.
-        </li>
-        <li>
-          <strong>{L.stay}</strong> {L.stayText}{" "}
-          <a href="/de/expo-2027/where-to-stay-for-expo">{L.stayLink}</a>.
-        </li>
-      </ul>
-    ) : (
-      <ul>
-        <li>
-          <strong>Dates:</strong> {expoDates} ({EXPO.classification}, 93 days). Each participating
-          country also gets a National Day — that schedule isn't published yet.
-        </li>
-        <li>
-          <strong>Getting there:</strong> Belgrade's regular city public transport is currently
-          free to ride; a taxi or ride-hail app (CarGo, Yandex Go) covers the ~13.5 km from the
-          centre. A new airport–Surčin railway is under construction but not yet running — the
-          honest status of every route is in <a href="/expo-2027/getting-there">getting to Expo 2027</a>.
-        </li>
-        <li>
-          <strong>Tickets:</strong> sales are scheduled to start on 15 September 2026 (per the
-          printing tender), prices unannounced — what's actually known is tracked in the{" "}
-          <a href="/expo-2027/tickets">Expo 2027 tickets guide</a>.
-        </li>
-        <li>
-          <strong>Where to stay:</strong> the airport-side vs city-centre trade-off is weighed in{" "}
-          <a href="/expo-2027/where-to-stay-for-expo">where to stay for Expo 2027</a>.
-        </li>
-      </ul>
-    )}
+    <section id="visiting" class="c-hash-section">
+      <SectionHead
+        title={H.visiting}
+        intro={isDe ? L.whereHead(short, listing.type === "pavilion") : `Where to find the ${short} ${listing.type === "pavilion" ? "pavilion" : "presence"}, and the guides that cover the trip.`}
+      />
+      {isDe ? (
+        <p>{L.whereText}</p>
+      ) : (
+        <p>
+          National pavilions sit in the <strong>International Participant Area</strong> of the
+          25-hectare Expo site at {EXPO.venue}, in the western part of Belgrade — the zone that
+          becomes the city's new Belgrade Fair after the event. The site is about
+          <strong> 5 km from Nikola Tesla Airport</strong> and roughly
+          <strong> 13.5 km southwest of central Belgrade</strong> (official planning figures), so
+          if you fly in, you land closer to the Expo grounds than to town. Exact positions within
+          the zones haven't been published yet; we'll add the location when the site plan lands.
+        </p>
+      )}
+      <div class="c-linkgrid c-linkgrid--2">
+        <div class="c-linkcard c-linkcard--static">
+          <span class="c-linkcard__kicker">{isDe ? T.dates.kicker : "Dates"}</span>
+          <span class="c-linkcard__title">{expoDates}</span>
+          <p>{isDe ? L.datesText(expoDates, EXPO.classification).replace(`${expoDates} `, "") : `${EXPO.classification}, 93 days. Every participating country also gets a National Day — that calendar isn't published yet.`}</p>
+        </div>
+        {visitTiles.map((t) => (
+          <a class="c-linkcard" href={t.href}>
+            <span class="c-linkcard__kicker">{t.kicker}</span>
+            <span class="c-linkcard__title">{t.title}</span>
+            <p>{t.body}</p>
+          </a>
+        ))}
+      </div>
+    </section>
 
     {faqs.length > 0 && (
-      <>
-        <SectionHead title={isDe ? L.faqHead(short) : `${short} at Expo 2027 — quick answers`} />
+      <section id="faq" class="c-hash-section">
+        <SectionHead title={H.faq} />
         <Faq faqs={faqs} />
-      </>
+      </section>
     )}
 
     <Note>
@@ -310,41 +385,33 @@ const SRC = isDe ? L.source : "[source]";
     </Note>
 
     {sources.length > 0 && (
-      <>
-        <SectionHead title={isDe ? L.sources : "Sources"} />
-        <ul>
-          {sources.map((s) => (
-            <li>
-              <a href={s.url} rel="nofollow noopener">
-                {s.url}
-              </a>
-              {s.note ? ` — ${s.note}` : ""}
-            </li>
-          ))}
-        </ul>
-      </>
+      <section id="sources" class="c-hash-section">
+        <details class="c-sources">
+          <summary>{isDe ? L.sourcesToggle(sources.length) : `Sources (${sources.length})`}</summary>
+          <ul>
+            {sources.map((s) => (
+              <li>
+                <a href={s.url} rel="nofollow noopener">
+                  {s.url}
+                </a>
+                {s.note ? ` — ${s.note}` : ""}
+              </li>
+            ))}
+          </ul>
+        </details>
+      </section>
     )}
 
-    {isDe ? (
-      <p>
-        {L.moreOn} <a href="/expo-2027/tracker">{L.tracker}</a> ·{" "}
-        <a href={hubPath}>{L.allPavilions}</a> ·{" "}
-        <a href="/de/expo-2027">{L.fullGuide}</a> ·{" "}
-        <a href={enPathname} hreflang="en">{L.englishVersion}</a>
-      </p>
-    ) : (
-      <p>
-        More on the Expo: <a href="/expo-2027/tracker">participant tracker</a> ·{" "}
-        <a href={hubPath}>all pavilion profiles</a> ·{" "}
-        <a href="/expo-2027#whos-coming">who's coming to Expo 2027</a> ·{" "}
-        <a href="/expo-2027">the full Expo 2027 guide</a>
-        {hasDe ? (
-          <>
-            {" "}· <a href={dePath(enPathname)} hreflang="de" lang="de">Dieses Profil auf Deutsch</a>
-          </>
-        ) : null}
-      </p>
-    )}
+    <SectionHead title={isDe ? L.exploreHead : "More on Expo 2027"} />
+    <div class="c-linkgrid">
+      {exploreTiles.map((t) => (
+        <a class="c-linkcard" href={t.href}>
+          <span class="c-linkcard__kicker">{t.kicker}</span>
+          <span class="c-linkcard__title">{t.title}</span>
+          <p>{t.body}</p>
+        </a>
+      ))}
+    </div>
   </Container>
 
   <Schema schemas={schemas} />

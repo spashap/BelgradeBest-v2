@@ -16,7 +16,7 @@ noindex: false
 isFaqCandidate: true
 linksTo:
   - "/food-and-nightlife"
-  - "/visit-belgrade/things-to-do"
+  - "/visit-belgrade/things-to-do-in-belgrade"
 faqs:
   - answer: "In drei thematischen Pavillons — den Pavillons Power of Play, Play for Progress und Play Together — sowie einem Forum für Vorträge und Workshops, thematischen Programmsträngen für Musik („Music of all for all“) und Sport („Sport of all for all“), rekordverdächtigen „Limitless Play“-Herausforderungen, Nationaltagen der teilnehmenden Länder und stadtweiten „Playgrounds“ außerhalb des Geländes. Unabhängige Reiseführer beschreiben tägliche Live-Auftritte, von Konzerten auf schwimmenden Bühnen bis zu live gemalten Wandbildern. Der vollständige, datierte Kalender ist Stand August 2026 noch nicht veröffentlicht."
     question: "Was gibt es bei der Expo 2027 zu erleben?"
@@ -73,7 +73,7 @@ In diesen Programmsträngen werden die meisten Konzerte und Sportveranstaltungen
 
 ## Über das Gelände hinaus: die stadtweiten Playgrounds
 
-Das Programm reicht auch in die Stadt hinein. Über das Hauptgelände hinaus sind Interventionen im öffentlichen Raum namens „Playgrounds“ geplant: **„Playing in Between“** bietet Entspannungs- und spontane Spielzonen, **„Generational playgrounds“** schaffen generationenübergreifende Spielbereiche, und **„Playground Earth“** bringt globale, an Nachhaltigkeit orientierte Installationen und Zusammenarbeit. Wer bereits [Aktivitäten in Belgrad (EN)](/visit-belgrade/things-to-do) plant, für den sind diese Angebote gedacht, den Geist der Expo in die ganze Stadt zu tragen, statt ihn hinter einem Zaun einzuschließen — Sie können also auf Expo-Programm stoßen, ohne je ein Eintrittsticket zu kaufen.
+Das Programm reicht auch in die Stadt hinein. Über das Hauptgelände hinaus sind Interventionen im öffentlichen Raum namens „Playgrounds“ geplant: **„Playing in Between“** bietet Entspannungs- und spontane Spielzonen, **„Generational playgrounds“** schaffen generationenübergreifende Spielbereiche, und **„Playground Earth“** bringt globale, an Nachhaltigkeit orientierte Installationen und Zusammenarbeit. Wer bereits [Aktivitäten in Belgrad (EN)](/visit-belgrade/things-to-do-in-belgrade) plant, für den sind diese Angebote gedacht, den Geist der Expo in die ganze Stadt zu tragen, statt ihn hinter einem Zaun einzuschließen — Sie können also auf Expo-Programm stoßen, ohne je ein Eintrittsticket zu kaufen.
 
 ## Was sind Nationaltage bei der Expo 2027?
 

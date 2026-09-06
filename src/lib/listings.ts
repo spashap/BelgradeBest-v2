@@ -76,6 +76,15 @@ export type Listing = {
   manage?: { tokenHash?: string; issued?: string }; // /manage magic-link auth
 };
 
+// Public status labels (one source for hub cards + profile chips). The key is
+// also the c-status tone modifier.
+export const STATUS_LABEL: Record<string, string> = {
+  announced: "Plans announced",
+  tender: "Tender under way",
+  construction: "Under construction",
+  "concept-only": "Concept reported",
+};
+
 // URL section segment per leg (e.g. /expo-2027/pavilions/<slug>). New legs add
 // their segment here + a matching pages/<leg>/<section>/ route pair.
 export const SECTION: Record<string, string> = {
@@ -129,6 +138,18 @@ export function childrenOf(leg: string, parentSlug: string): Listing[] {
 // Published top-level listings that carry a German block (the /de mirror).
 export function listingsWithDe(leg: string): Listing[] {
   return listingsForLeg(leg).filter((l) => !!l.i18n?.de?.summary);
+}
+
+// Published listing (top-level or child) for a site path — lets the related-
+// links master (site-schema linksTo) point at profile pages.
+export function listingByHref(href: string): Listing | null {
+  const l = all.find((x) => listingHref(x) === href);
+  if (!l || !validListing(l)) return null;
+  if (l.parent) {
+    const p = parentOf(l);
+    if (!p || !validListing(p)) return null;
+  }
+  return l;
 }
 
 export function parentOf(l: Listing): Listing | null {

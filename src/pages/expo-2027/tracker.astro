@@ -186,11 +186,14 @@ const schemas: object[] = [
     </ul>
 
     <SectionHead title="Sources & method" />
-    <ul>
-      {TRACKER.sources.map((s) => (
-        <li><a href={s.url} rel="nofollow noopener">{s.url}</a> — {s.note}</li>
-      ))}
-    </ul>
+    <details class="c-sources">
+      <summary>Sources ({TRACKER.sources.length})</summary>
+      <ul>
+        {TRACKER.sources.map((s) => (
+          <li><a href={s.url} rel="nofollow noopener">{s.url}</a> — {s.note}</li>
+        ))}
+      </ul>
+    </details>
     <p>Caveats we track so you don't have to:</p>
     <ul>
       {TRACKER.caveats.map((c) => <li>{c}</li>)}
@@ -203,16 +206,26 @@ const schemas: object[] = [
       <a href="/expo-2027/countdown">embeddable Expo 2027 countdown</a> for your own site.
     </Note>
 
-    <p>
-      Planning around the event? Start with the <a href="/expo-2027">Expo 2027 guide</a> — tickets,
-      getting there, and <a href="/expo-2027/where-to-stay-for-expo">where to stay for the Expo</a>.
+    <SectionHead title="More on Expo 2027" />
+    <div class="c-linkgrid">
       {listingsIndexable && (
-        <>
-          {" "}For country-by-country plans, see the{" "}
-          <a href="/expo-2027/pavilions">pavilion profiles</a>.
-        </>
+        <a class="c-linkcard" href="/expo-2027/pavilions">
+          <span class="c-linkcard__kicker">Directory</span>
+          <span class="c-linkcard__title">Pavilion profiles by country</span>
+          <p>What each named country is building — themes, teams, budgets, sourced.</p>
+        </a>
       )}
-    </p>
+      <a class="c-linkcard" href="/expo-2027">
+        <span class="c-linkcard__kicker">Guide</span>
+        <span class="c-linkcard__title">The full Expo 2027 guide</span>
+        <p>Dates, programme, tickets, getting there — and the rest of Belgrade.</p>
+      </a>
+      <a class="c-linkcard" href="/expo-2027/where-to-stay-for-expo">
+        <span class="c-linkcard__kicker">Where to stay</span>
+        <span class="c-linkcard__title">Where to stay for Expo 2027</span>
+        <p>Airport side or city centre? The trade-off, weighed.</p>
+      </a>
+    </div>
   </Container>
 
   <Schema schemas={schemas} />

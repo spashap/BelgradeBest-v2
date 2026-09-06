@@ -32,7 +32,9 @@ import {
   listingHref,
   childrenOf,
   listingsIndexable,
+  STATUS_LABEL,
 } from "../../lib/listings";
+import { ogImage } from "../../lib/og";
 
 // The Expo 2027 PORTAL — this leg's one-off hub (the generic LegHubLayout serves
 // every other leg; [leg]/index.astro excludes expo-2027). One page, two personas:
@@ -72,6 +74,15 @@ for (const l of published) {
   if (l.shortName) pavilionByName.set(l.shortName.toLowerCase(), listingHref(l));
 }
 const pavilionCount = published.filter((l) => l.type === "pavilion").length;
+// Six most recently updated pavilion profiles — the hub's card rail into the
+// directory (2026-09-06: replaces a button + a bullet list of text links).
+const featuredPavilions = published
+  .filter((l) => l.type === "pavilion")
+  .slice()
+  .sort((a, b) => b.updated.localeCompare(a.updated) || a.name.localeCompare(b.name, "en"))
+  .slice(0, 6);
+const fmtUpdated = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
 const orgs = published.filter((l) => l.type !== "pavilion");
 const wem = childrenOf(LEG, "china").find((c) => c.slug === "world-expo-museum");
 const orgEntries = [...orgs, ...(wem ? [wem] : [])];
@@ -195,14 +206,7 @@ const schemas: object[] = [
     </Container>
   </nav>
 
-  <Container>
-    <div class="c-tabs" data-persona-tabs hidden>
-      <a class="c-tab" href="#for-visitors" data-persona-tab="visitors" aria-pressed="false">For visitors</a>
-      <a class="c-tab" href="#for-participants" data-persona-tab="participants" aria-pressed="false">For participants & business</a>
-    </div>
-  </Container>
-
-  <section id="for-visitors" class="c-hash-section" data-persona-section="visitors">
+  <section id="for-visitors" class="c-hash-section">
     <Container>
       {legHero && (
         <ArticleHero src={legHero.src} srcset={legHero.srcset} sizes={legHero.sizes} alt={legHero.alt} caption={null} />
@@ -338,7 +342,7 @@ const schemas: object[] = [
       <SectionHead
         eyebrow="Countries A–Z"
         title={`All ${namedCount} publicly named countries`}
-        intro="Search, filter by region, or sort — every country links to its pavilion profile where we have one."
+        intro="Search, filter by region, or sort — a linked country name opens its pavilion profile."
       />
       <div class="c-filterbar" data-directory-controls hidden>
         <input
@@ -361,7 +365,6 @@ const schemas: object[] = [
               <th data-sortable="text" aria-sort="ascending">Country</th>
               <th data-sortable="text">Region</th>
               <th data-sortable="date">Confirmation reported</th>
-              <th>Profile</th>
             </tr>
           </thead>
           <tbody>
@@ -375,7 +378,6 @@ const schemas: object[] = [
                   </td>
                   <td>{p.region}</td>
                   <td data-sort={p.announced ?? ""}>{p.announced ? fmtShort(p.announced) : "—"}</td>
-                  <td>{href ? <a href={href}>Profile →</a> : "—"}</td>
                 </tr>
               );
             })}
@@ -393,26 +395,44 @@ const schemas: object[] = [
         title={`${pavilionCount} pavilion profiles, fact by sourced fact`}
         intro="What each country is building, who won the tenders, and what is confirmed versus merely reported."
       />
-      <p>
-        <a class="c-btn" href="/expo-2027/pavilions">Browse the pavilion directory</a>
+      <Grid>
+        {featuredPavilions.map((l) => (
+          <Card
+            href={listingHref(l)}
+            title={l.name}
+            body={firstSentence(l.summary)}
+            badge={l.status ? STATUS_LABEL[l.status] ?? l.status : undefined}
+            badgeTone={l.status}
+            meta={`Updated ${fmtUpdated(l.updated)}`}
+            shape="wide"
+            src={ogImage(`pavilion-${l.slug}`)}
+            imgAlt={`${l.name} — Expo 2027 Belgrade`}
+            imgPlaceholder={l.shortName ?? l.name}
+          />
+        ))}
+      </Grid>
+      <p class="u-stack-md">
+        <a class="c-btn" href="/expo-2027/pavilions">All {pavilionCount} pavilion profiles</a>
       </p>
       {orgEntries.length > 0 && (
         <>
           <div class="u-stack-md"></div>
           <SectionHead title="Organisations & special participants" />
-          <ul>
+          <div class="c-linkgrid">
             {orgEntries.map((l) => (
-              <li>
-                <a href={listingHref(l)}>{l.shortName || l.name}</a> — {firstSentence(l.summary)}
-              </li>
+              <a class="c-linkcard" href={listingHref(l)}>
+                <span class="c-linkcard__kicker">{l.type}</span>
+                <span class="c-linkcard__title">{l.shortName || l.name}</span>
+                <p>{firstSentence(l.summary)}</p>
+              </a>
             ))}
-          </ul>
+          </div>
         </>
       )}
     </Container>
   </section>
 
-  <section id="for-participants" class="c-hash-section" data-persona-section="participants">
+  <section id="for-participants" class="c-hash-section">
     <Container>
       <div class="u-stack-lg"></div>
       <SectionHead
@@ -584,49 +604,8 @@ const schemas: object[] = [
         apply();
       }
 
-      // ── Persona tabs: hide the other persona's section; click again to reset.
-      function initTabs() {
-        var bar = document.querySelector("[data-persona-tabs]");
-        if (!bar) return;
-        bar.hidden = false;
-        var tabs = Array.prototype.slice.call(bar.querySelectorAll("[data-persona-tab]"));
-        var sections = Array.prototype.slice.call(document.querySelectorAll("[data-persona-section]"));
-        var active = "";
-
-        function setPersona(name) {
-          active = name;
-          tabs.forEach(function (t) {
-            var on = t.getAttribute("data-persona-tab") === name;
-            t.classList.toggle("is-active", on);
-            t.setAttribute("aria-pressed", on ? "true" : "false");
-          });
-          sections.forEach(function (s) {
-            s.hidden = Boolean(name) && s.getAttribute("data-persona-section") !== name;
-          });
-        }
-        tabs.forEach(function (t) {
-          t.addEventListener("click", function (e) {
-            var name = t.getAttribute("data-persona-tab");
-            if (active === name) {
-              e.preventDefault();
-              setPersona("");
-            } else {
-              setPersona(name);
-            }
-          });
-        });
-        // Deep links into a hidden persona section must unhide it.
-        window.addEventListener("hashchange", function () {
-          var target = document.getElementById(location.hash.slice(1));
-          if (!target) return;
-          var owner = target.closest("[data-persona-section]");
-          if (owner && owner.hidden) setPersona("");
-        });
-      }
-
       initCountdown();
       initDirectory();
-      initTabs();
     })();
   </script>
 </BaseLayout>

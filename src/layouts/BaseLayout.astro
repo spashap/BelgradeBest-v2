@@ -83,7 +83,7 @@ const layoutCss =
     <Analytics />
   </head>
   <body>
-    <SiteHeader lang={lang} />
+    <SiteHeader lang={lang} alternates={meta.alternates} />
     <slot />
     <SiteFooter lang={lang} />
     <Schema schemas={[organizationSchema()]} />
