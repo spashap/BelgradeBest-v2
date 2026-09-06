@@ -8,8 +8,7 @@
     "ogLocale": "en_US",
     "logoPath": "/apple-icon.png",
     "sameAs": [
-      "https://www.facebook.com/profile.php?id=61594002307722",
-      "https://www.reddit.com/user/Big_PeaBegrade/"
+      "https://www.facebook.com/profile.php?id=61594002307722"
     ]
   },
   "seo": {
@@ -162,7 +161,7 @@
           "url": "https://www.reddit.com/user/Big_PeaBegrade/",
           "label": "BelgradeBest on Reddit",
           "icon": "reddit",
-          "visible": true
+          "visible": false
         }
       ]
     },

@@ -1,15 +1,10 @@
-Footer: social icon links (Facebook, Reddit) with standard brand glyphs
+Remove the Reddit account from the site (footer + sameAs)
 
-The footer's social list was empty. It now carries the two live brand
-accounts as round icon buttons at the end of the bottom bar: new
-components/SocialIcon.astro holds the standard 24×24 brand glyphs
-(Facebook, Reddit, X, Instagram, LinkedIn — currentColor, so tokens colour
-them), SiteFooter renders an icon per entry with the label kept for screen
-readers and as the tooltip, and globals.css adds c-footer__social plus a
-u-visually-hidden helper. Entries live in site-config.json
-chrome.footer.social with a new `icon` key (admin Navigation still toggles
-and reorders them); the admin store type knows the field. X is added the
-day that account exists.
+Reddit banned the brand account, so the site must not point at it: the
+Reddit URL is dropped from brand.sameAs (Organization JSON-LD) and the
+footer social entry is set to visible:false (kept in site-config so it can
+be re-enabled from the admin Navigation screen if the account comes back
+or a new one is created). Facebook stays.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01PnoBgSeUqk1fGPRnNGfFoy
