@@ -36,6 +36,20 @@ export function byRegion(): Array<{ region: string; count: number }> {
     .sort((a, b) => b.count - a.count);
 }
 
+// Region of a named country (by name or a listing's shortName), else null.
+const regionIndex = new Map(participants.map((p) => [p.name.toLowerCase(), p.region]));
+export function regionOf(name: string | undefined): string | null {
+  if (!name) return null;
+  return regionIndex.get(name.toLowerCase()) ?? null;
+}
+// Short codes for the deck readouts / panel codes. Unknown regions → 2 letters.
+export const REGION_CODE: Record<string, string> = {
+  Europe: "EU", Asia: "AS", Africa: "AF", Americas: "AM", Oceania: "OC", "Middle East": "ME", "North America": "NA", "South America": "SA",
+};
+export const regionCode = (r: string | null) => (r ? (REGION_CODE[r] ?? r.slice(0, 2).toUpperCase()) : "—");
+// Pipeline stage of a listing status for the 4-segment progress track.
+export const STAGE: Record<string, number> = { "concept-only": 1, announced: 2, tender: 3, construction: 4 };
+
 export const namedCount = participants.length;
 export const officialCount = data.officialCount.count;
 export const updated = data.updated;

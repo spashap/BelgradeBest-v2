@@ -68,6 +68,15 @@ Profile sections carry stable ids (`at-a-glance`, `announced`, `photos`,
 `exhibitors`, `visiting`, `faq`, `sources`) and a sticky `c-subnav` chip row.
 `STATUS_LABEL` lives in `lib/listings.ts` (German twin: `i18n.ts DE.listing.status`).
 
+**EXPO ATLAS chrome (owner-sanctioned, 2026-09-06)** — the pavilion directory
+(EN + DE) and pavilion profiles use the `xp-*` block in `globals.css`: same
+tokens INVERTED (ink deck, paper text, brick signals) — `xp-deck` + `xp-readouts`
+(profile intro and directory header), `xp-bar` (sticky selectors: search / stage /
+region / sort), `xp-panel` (LED `xp-led--<status>` + 4-stage `xp-track`, region
+code from `expo-participants.ts regionCode()`), `xp-slot` (named country without a
+profile). This is the ONE place the site departs from the editorial look; do not
+spread `xp-*` to other legs without the owner's say.
+
 ## The Design Law (enforce on every page)
 
 Compose from `src/styles/globals.css` (the ported L3 library) and its `:root`

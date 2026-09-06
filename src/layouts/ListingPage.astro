@@ -21,6 +21,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from "../lib/schemas";
 import { metaTrim } from "../lib/text";
 import { ogImage } from "../lib/og";
 import { DE, alternates, dePath, fmtDate, type Lang } from "../lib/i18n";
+import { regionOf, STAGE } from "../lib/expo-participants";
 import {
   listingHref,
   listingsIndexable,
@@ -120,6 +121,10 @@ if (children.length > 0) {
   });
 }
 const SRC = isDe ? L.source : "[source]";
+// Deck readouts (EXPO ATLAS chrome): region from the participant master, stage
+// for the 4-segment track.
+const region = regionOf(listing.shortName) ?? regionOf(listing.name);
+const stage = listing.status ? (STAGE[listing.status] ?? 0) : 0;
 const firstSentence = (s: string) => {
   const i = s.indexOf(". ");
   return i > 40 ? s.slice(0, i + 1) : s;
@@ -203,17 +208,57 @@ const exploreTiles = isDe
 
 <BaseLayout meta={meta}>
   <Breadcrumbs crumbs={crumbTrail} />
-  <PageIntro eyebrow={`Expo 2027 · ${kind}`} title={name} lede={summary}>
-    {statusLabel ? <span class={`c-status c-status--${listing.status}`}>{statusLabel}</span> : null}
-    {listing.claimed ? <span class="c-status c-status--claimed">{isDe ? L.managedBy(short) : `Managed by the ${short} team`}</span> : null}
-    <span>{isDe ? L.updated : "Updated"} {fmtDate(listing.updated, lang)}</span>
-    {parent ? (
-      <span>
-        {isDe ? L.partOf(parent.name) : `Part of the ${parent.name} presence`}{" "}
-        <a href={listingHref(parent)}>→</a>
-      </span>
-    ) : null}
-  </PageIntro>
+  <section class="xp-deck xp-deck--profile">
+    <Container>
+      <span class="xp-deck__eyebrow">Expo 2027 · {kind}</span>
+      <h1>{name}</h1>
+      <p class="xp-deck__lede">
+        {summary}
+        {parent ? (
+          <>
+            {" "}
+            <a href={listingHref(parent)}>{isDe ? L.partOf(parent.name) : `Part of the ${parent.name} presence →`}</a>
+          </>
+        ) : null}
+      </p>
+      <div class="xp-readouts">
+        <div class="xp-readout">
+          <div class="xp-readout__k">{isDe ? L.readouts.status : "Status"}</div>
+          <div class="xp-readout__v">
+            {statusLabel ? (
+              <span class={`xp-led xp-led--${listing.status}`}><i></i>{statusLabel}</span>
+            ) : listing.claimed ? (
+              <span class="xp-led xp-led--announced"><i></i>{isDe ? L.managedBy(short) : "Managed by the team"}</span>
+            ) : (
+              "—"
+            )}
+          </div>
+        </div>
+        <div class="xp-readout">
+          <div class="xp-readout__k">{isDe ? L.readouts.region : "Region"}</div>
+          <div class="xp-readout__v">{region ?? (listing.type === "pavilion" ? "—" : childKind(listing.type))}</div>
+        </div>
+        <div class="xp-readout">
+          <div class="xp-readout__k">{isDe ? L.readouts.updated : "Updated"}</div>
+          <div class="xp-readout__v">{fmtDate(listing.updated, lang)}</div>
+        </div>
+        <div class="xp-readout">
+          <div class="xp-readout__k">{isDe ? L.readouts.facts : "Sourced facts"}</div>
+          <div class="xp-readout__v">{facts.length}<small>{faqs.length} {isDe ? L.readouts.faqs : "FAQ"}</small></div>
+        </div>
+      </div>
+      {stage > 0 ? (
+        <>
+          <div class="xp-track" data-stage={stage} aria-label={`Stage ${stage} of 4`}>
+            <i></i><i></i><i></i><i></i>
+          </div>
+          <div class="xp-track__labels">
+            {(isDe ? L.stages : ["Concept", "Announced", "Tender", "Construction"]).map((t) => <span>{t}</span>)}
+          </div>
+        </>
+      ) : null}
+    </Container>
+  </section>
 
   {quickNav.length >= 3 ? (
     <nav class="c-subnav" aria-label={isDe ? L.quickNav : "On this page"}>

@@ -155,6 +155,8 @@ export const DE = {
     englishVersion: "Dieses Profil auf Englisch",
     // 2026-09-06 profile redesign: quick nav, visit tiles, explore tiles, sources toggle.
     quickNav: "Auf dieser Seite",
+    readouts: { status: "Status", region: "Region", updated: "Aktualisiert", facts: "Belegte Fakten", faqs: "Fragen" },
+    stages: ["Konzept", "Angekündigt", "Ausschreibung", "Im Bau"],
     exploreHead: "Weiter zur Expo 2027",
     sourcesToggle: (n: number) => `${n} Quellen anzeigen`,
     childKind: (t: string) =>

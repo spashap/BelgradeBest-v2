@@ -1,11 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
-import PageIntro from "../../../components/PageIntro.astro";
 import Container from "../../../components/Container.astro";
-import SectionHead from "../../../components/SectionHead.astro";
-import Grid from "../../../components/Grid.astro";
-import Card from "../../../components/Card.astro";
 import Note from "../../../components/Note.astro";
 import Schema from "../../../components/Schema.astro";
 import { pageMetadata } from "../../../lib/metadata";
@@ -19,20 +15,27 @@ import {
   newestUpdated,
   STATUS_LABEL,
 } from "../../../lib/listings";
-import { participants, byRegion } from "../../../lib/expo-participants";
+import {
+  participants,
+  byRegion,
+  regionOf,
+  regionCode,
+  STAGE,
+  officialCount,
+} from "../../../lib/expo-participants";
 import { alternates } from "../../../lib/i18n";
 
-// Pavilion directory hub. 2026-09-06 redesign (mobile-first): profiled
-// pavilions as image cards with a status chip and a status filter, other
-// organisations as link tiles, and every named country as a chip grouped by
-// region (a linked chip = a profile exists) instead of a 140-row table.
-// Built-vs-pending mirrors the leg-hub pattern; noindex behind
-// programmatic.listingsIndexable.
+// Pavilion ATLAS — the owner-sanctioned "tech" page of the site (globals.css
+// EXPO ATLAS block, xp-*). Inverted ink deck with live readouts, a sticky
+// command bar (search · status · region · sort), LED-status panels with a
+// 4-stage progress track for every profiled pavilion, and dashed "slots" for
+// every named country without a profile yet. Everything is in the DOM for
+// crawlers; the script only filters/sorts. noindex behind listingsIndexable.
 const PATH = "/expo-2027/pavilions";
 const published = listingsForLeg("expo-2027");
 const pavilions = published.filter((l) => l.type === "pavilion");
 const orgs = published.filter((l) => l.type !== "pavilion");
-const bySlugName = new Map(published.map((l) => [(l.shortName ?? l.name).toLowerCase(), l]));
+const profiledNames = new Set(published.map((l) => (l.shortName ?? l.name).toLowerCase()));
 const updated = newestUpdated("expo-2027");
 const fmt = (d: string) =>
   new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
@@ -41,21 +44,39 @@ const firstSentence = (s: string) => {
   return i > 40 ? s.slice(0, i + 1) : s;
 };
 
-// Status facets, in pipeline order, only those present.
+// Countdown (build-time; the script re-derives it live).
+const DAY = 86400000;
+const startMs = Date.parse(`${EXPO.startDate}T00:00:00+02:00`);
+const daysToOpen = Math.max(0, Math.ceil((startMs - Date.now()) / DAY));
+
+// Facets.
 const STATUS_ORDER = ["construction", "tender", "announced", "concept-only"];
 const statusCounts = STATUS_ORDER.map((k) => ({
   key: k,
   label: STATUS_LABEL[k],
   count: pavilions.filter((p) => p.status === k).length,
 })).filter((s) => s.count > 0);
+const regions = byRegion();
 
-// Countries by region (largest region first), each chip linked when profiled.
-const regions = byRegion().map((r) => ({
-  ...r,
-  countries: participants
-    .filter((p) => p.region === r.region)
-    .map((p) => ({ name: p.name, host: p.host === true, listing: bySlugName.get(p.name.toLowerCase()) ?? null })),
-}));
+// Panel model: region + a running code per region (EU·03), stage, counts.
+const perRegion = new Map<string, number>();
+const panels = pavilions.map((l) => {
+  const region = regionOf(l.shortName) ?? regionOf(l.name) ?? null;
+  const key = region ?? "—";
+  const n = (perRegion.get(key) ?? 0) + 1;
+  perRegion.set(key, n);
+  return {
+    l,
+    region,
+    code: `${regionCode(region)}·${String(n).padStart(2, "0")}`,
+    stage: l.status ? (STAGE[l.status] ?? 0) : 0,
+    facts: l.blocks.facts?.length ?? 0,
+    faqs: l.faqs?.length ?? 0,
+  };
+});
+const slots = participants
+  .filter((p) => !profiledNames.has(p.name.toLowerCase()))
+  .map((p) => ({ name: p.name, region: p.region, host: p.host === true }));
 
 const meta = pageMetadata({
   title: "Expo 2027 pavilions — announced plans by country",
@@ -90,132 +111,165 @@ const schemas: object[] = [
     })),
   },
 ];
-
-const anchors = [
-  { href: "#profiles", label: "Profiled pavilions" },
-  ...(orgs.length > 0 ? [{ href: "#organisations", label: "Organisations" }] : []),
-  { href: "#countries", label: "All countries" },
-];
 ---
 
 <BaseLayout meta={meta}>
   <Breadcrumbs crumbs={crumbs} />
-  <PageIntro
-    eyebrow="Expo 2027 · Pavilion directory"
-    title="Expo 2027 national pavilions"
-    lede={`Pavilion plans for ${EXPO.name} are announced country by country. We profile each one as soon as there's real, sourced substance — theme, design, budget, dates — and keep a place reserved for every named participant.`}
-  >
-    {updated ? <span>Updated {fmt(updated)}</span> : null}
-    <span>{pavilions.length} profiles · {participants.length} named countries</span>
-  </PageIntro>
 
-  <nav class="c-subnav" aria-label="On this page">
+  <section class="xp-deck" data-expo-start={EXPO.startDate}>
     <Container>
-      <ul>
-        {anchors.map((a) => (
-          <li><a href={a.href}>{a.label}</a></li>
-        ))}
-      </ul>
+      <span class="xp-deck__eyebrow">Expo 2027 · Pavilion atlas</span>
+      <h1>Expo 2027 <em>national pavilions</em></h1>
+      <p class="xp-deck__lede">
+        Every country's pavilion plan, tracked as it lands — theme, design, budget, tender, with a
+        source on each fact. Live status for {pavilions.length} profiled pavilions; a reserved slot for each
+        of the {participants.length} publicly named participants. Search, filter by stage or region, sort.
+      </p>
+      <div class="xp-readouts">
+        <div class="xp-readout">
+          <div class="xp-readout__k">Opening day</div>
+          <div class="xp-readout__v"><span data-countdown>{daysToOpen}</span><small>days</small></div>
+        </div>
+        <div class="xp-readout">
+          <div class="xp-readout__k">Pavilion profiles</div>
+          <div class="xp-readout__v">{pavilions.length}<small>sourced</small></div>
+        </div>
+        <div class="xp-readout">
+          <div class="xp-readout__k">Countries named</div>
+          <div class="xp-readout__v">{participants.length}<small>of {officialCount}</small></div>
+        </div>
+        <div class="xp-readout">
+          <div class="xp-readout__k">Regions</div>
+          <div class="xp-readout__v">{regions.length}<small>continents</small></div>
+        </div>
+      </div>
     </Container>
-  </nav>
+  </section>
+
+  <div class="xp-bar" data-atlas>
+    <Container>
+      <div class="xp-bar__row">
+        <input
+          class="xp-search"
+          type="search"
+          placeholder="Search a country…"
+          aria-label="Search countries"
+          data-atlas-search
+        />
+        <div class="xp-seg" role="group" aria-label="Filter by stage">
+          <button type="button" class="is-on" data-atlas-status="">All</button>
+          {statusCounts.map((s) => (
+            <button type="button" data-atlas-status={s.key}>{s.label} · {s.count}</button>
+          ))}
+        </div>
+        <div class="xp-seg" role="group" aria-label="Filter by region">
+          <button type="button" class="is-on" data-atlas-region="">All regions</button>
+          {regions.map((r) => (
+            <button type="button" data-atlas-region={r.region}>{r.region} · {r.count}</button>
+          ))}
+        </div>
+        <div class="xp-seg" role="group" aria-label="Sort profiles">
+          <button type="button" class="is-on" data-atlas-sort="name">A–Z</button>
+          <button type="button" data-atlas-sort="updated">Latest</button>
+        </div>
+        <span class="xp-bar__count" data-atlas-count aria-live="polite"></span>
+      </div>
+    </Container>
+  </div>
 
   <Container>
-    <div class="c-stats">
-      <div class="c-stat">
-        <div class="c-stat__num">{pavilions.length}</div>
-        <div class="c-stat__label">pavilion profiles with sourced plans</div>
-      </div>
-      {statusCounts.slice(0, 2).map((s) => (
-        <div class="c-stat">
-          <div class="c-stat__num">{s.count}</div>
-          <div class="c-stat__label">{s.label.toLowerCase()}</div>
-        </div>
-      ))}
-      <div class="c-stat">
-        <div class="c-stat__num">{participants.length}</div>
-        <div class="c-stat__label">countries publicly named — <a href="/expo-2027/tracker">tracker</a></div>
-      </div>
-    </div>
-
-    <section id="profiles" class="c-hash-section">
-      <SectionHead
-        eyebrow="Profiled pavilions"
-        title="Countries with announced pavilion plans"
-        intro="Each profile lists what is confirmed versus merely reported, with a source on every fact. Filter by where the plan stands."
-      />
-      <div class="c-filterbar" data-status-controls hidden>
-        <button class="c-chip is-active" type="button" data-status-chip="">All ({pavilions.length})</button>
-        {statusCounts.map((s) => (
-          <button class="c-chip" type="button" data-status-chip={s.key}>{s.label} ({s.count})</button>
-        ))}
-        <span class="c-filterbar__count" data-status-count aria-live="polite"></span>
-      </div>
-      <div class="u-stack-md"></div>
-      <div class="c-grid" data-pavilion-grid>
-        {pavilions.map((l) => (
-          <div data-status={l.status ?? ""}>
-            <Card
-              href={listingHref(l)}
-              title={l.name}
-              body={firstSentence(l.summary)}
-              badge={l.status ? STATUS_LABEL[l.status] ?? l.status : undefined}
-              badgeTone={l.status}
-              meta={`Updated ${fmt(l.updated)}`}
-              shape="wide"
-              src={ogImage(`pavilion-${l.slug}`)}
-              imgAlt={`${l.name} — Expo 2027 Belgrade`}
-              imgPlaceholder={l.shortName ?? l.name}
-            />
-          </div>
+    <section id="profiles" class="xp-section">
+      <h2 class="xp-h2">Profiled pavilions <small>{pavilions.length} live</small></h2>
+      <p class="xp-sub">
+        Each panel is a sourced profile: what is confirmed, what is only reported, and where the
+        plan stands on the track from concept to construction.
+      </p>
+      <div class="xp-grid" data-atlas-grid>
+        {panels.map((p, i) => (
+          <a
+            class="xp-panel"
+            href={listingHref(p.l)}
+            style={`--i:${i}`}
+            data-name={p.l.name.toLowerCase()}
+            data-region={p.region ?? ""}
+            data-status={p.l.status ?? ""}
+            data-updated={p.l.updated}
+          >
+            <div class="xp-panel__top">
+              <span class="xp-panel__code">{p.code}</span>
+              <span>{p.region ?? "Pavilion"}</span>
+            </div>
+            <h3>{p.l.name}</h3>
+            {p.l.status ? (
+              <span class={`xp-led xp-led--${p.l.status}`}>
+                <i></i>
+                {STATUS_LABEL[p.l.status] ?? p.l.status}
+              </span>
+            ) : null}
+            <div class="xp-track" data-stage={p.stage} aria-label={`Stage ${p.stage} of 4`}>
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <p>{firstSentence(p.l.summary)}</p>
+            <div class="xp-panel__foot">
+              <span>Updated <b>{fmt(p.l.updated)}</b></span>
+              <span><b>{p.facts}</b> facts · <b>{p.faqs}</b> FAQ</span>
+            </div>
+          </a>
         ))}
       </div>
+      <div class="xp-empty" data-atlas-empty>No pavilion matches these selectors — clear one.</div>
     </section>
 
     {orgs.length > 0 && (
-      <section id="organisations" class="c-hash-section">
-        <div class="u-stack-lg"></div>
-        <SectionHead
-          eyebrow="Beyond the flags"
-          title="Organisations, sponsors & special participants"
-          intro="Non-country participants with a public, sourced presence at the Expo."
-        />
-        <div class="c-linkgrid">
-          {orgs.map((l) => (
-            <a class="c-linkcard" href={listingHref(l)}>
-              <span class="c-linkcard__kicker">{l.type}</span>
-              <span class="c-linkcard__title">{l.name}</span>
+      <section id="organisations" class="xp-section">
+        <h2 class="xp-h2">Organisations &amp; sponsors <small>{orgs.length} profiled</small></h2>
+        <p class="xp-sub">Non-country participants with a public, sourced presence at the Expo.</p>
+        <div class="xp-grid">
+          {orgs.map((l, i) => (
+            <a class="xp-panel" href={listingHref(l)} style={`--i:${i}`}>
+              <div class="xp-panel__top">
+                <span class="xp-panel__code">ORG·{String(i + 1).padStart(2, "0")}</span>
+                <span>{l.type}</span>
+              </div>
+              <h3>{l.name}</h3>
+              {l.status ? (
+                <span class={`xp-led xp-led--${l.status}`}>
+                  <i></i>
+                  {STATUS_LABEL[l.status] ?? l.status}
+                </span>
+              ) : null}
               <p>{firstSentence(l.summary)}</p>
+              <div class="xp-panel__foot">
+                <span>Updated <b>{fmt(l.updated)}</b></span>
+                <span><b>{l.blocks.facts?.length ?? 0}</b> facts</span>
+              </div>
             </a>
           ))}
         </div>
       </section>
     )}
 
-    <section id="countries" class="c-hash-section">
-      <div class="u-stack-lg"></div>
-      <SectionHead
-        eyebrow="All named countries"
-        title={`Every publicly named participant, by region`}
-        intro="A highlighted country has a pavilion profile. A plain one has been named as a participant, but no substantive pavilion announcement has been sourced yet — chips light up as plans land."
-      />
-      {regions.map((r) => (
-        <>
-          <h3 class="c-chiplist__group">
-            {r.region} <small>({r.count})</small>
-          </h3>
-          <ul class="c-chiplist">
-            {r.countries.map((c) => (
-              <li>
-                {c.listing ? (
-                  <a href={listingHref(c.listing)}>{c.name}{c.host ? " · host" : ""}</a>
-                ) : (
-                  <span>{c.name}{c.host ? " · host" : ""}</span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </>
-      ))}
+    <section id="countries" class="xp-section">
+      <h2 class="xp-h2">Named, not yet profiled <small>{slots.length} slots</small></h2>
+      <p class="xp-sub">
+        Countries a source has publicly named as participants, without a substantive pavilion
+        announcement yet. Each slot becomes a panel the day sourced plans land. The search and
+        region selectors above filter these too.
+      </p>
+      <div class="xp-slots" data-atlas-slots>
+        {slots.map((c, i) => (
+          <div
+            class={`xp-slot${c.host ? " xp-slot--host" : ""}`}
+            style={`--i:${i}`}
+            data-name={c.name.toLowerCase()}
+            data-region={c.region}
+          >
+            <b>{c.name}</b>
+            <small>{c.host ? "Host country" : `${c.region} · named`}</small>
+          </div>
+        ))}
+      </div>
+      <div class="xp-empty" data-atlas-empty-slots>No named country matches.</div>
     </section>
 
     <Note tone="gold">
@@ -225,7 +279,7 @@ const anchors = [
       then.
     </Note>
 
-    <SectionHead title="More on Expo 2027" />
+    <h2 class="xp-h2">More on Expo 2027</h2>
     <div class="c-linkgrid">
       <a class="c-linkcard" href="/expo-2027/tracker">
         <span class="c-linkcard__kicker">Data</span>
@@ -248,29 +302,72 @@ const anchors = [
   <Schema schemas={schemas} />
 
   <script is:inline>
-    // Status filter for the pavilion cards. Controls ship hidden; no-JS users
-    // see every card. Same chip pattern as the country directory on /expo-2027.
+    // Atlas command bar: search + stage + region filters over the panels and
+    // the slots, A–Z / latest sort for the panels, live count, live countdown.
+    // Without JS every panel and slot is simply visible.
     (function () {
-      var controls = document.querySelector("[data-status-controls]");
-      var grid = document.querySelector("[data-pavilion-grid]");
-      if (!controls || !grid) return;
-      controls.hidden = false;
-      var items = Array.prototype.slice.call(grid.children);
-      var chips = Array.prototype.slice.call(controls.querySelectorAll("[data-status-chip]"));
-      var count = controls.querySelector("[data-status-count]");
-      chips.forEach(function (chip) {
-        chip.addEventListener("click", function () {
-          var want = chip.getAttribute("data-status-chip") || "";
-          chips.forEach(function (c) { c.classList.toggle("is-active", c === chip); });
-          var shown = 0;
-          items.forEach(function (el) {
-            var ok = !want || el.getAttribute("data-status") === want;
-            el.hidden = !ok;
-            if (ok) shown++;
+      "use strict";
+      var root = document.querySelector("[data-atlas]");
+      var grid = document.querySelector("[data-atlas-grid]");
+      var slots = document.querySelector("[data-atlas-slots]");
+      if (!root || !grid) return;
+      var panels = Array.prototype.slice.call(grid.children);
+      var slotEls = slots ? Array.prototype.slice.call(slots.children) : [];
+      var search = root.querySelector("[data-atlas-search]");
+      var count = root.querySelector("[data-atlas-count]");
+      var emptyP = document.querySelector("[data-atlas-empty]");
+      var emptyS = document.querySelector("[data-atlas-empty-slots]");
+      var state = { q: "", status: "", region: "", sort: "name" };
+
+      function seg(attr, key) {
+        var btns = Array.prototype.slice.call(root.querySelectorAll("[" + attr + "]"));
+        btns.forEach(function (b) {
+          b.addEventListener("click", function () {
+            state[key] = b.getAttribute(attr) || "";
+            btns.forEach(function (x) { x.classList.toggle("is-on", x === b); });
+            apply();
           });
-          if (count) count.textContent = want ? shown + " of " + items.length + " shown" : "";
         });
-      });
+      }
+      seg("data-atlas-status", "status");
+      seg("data-atlas-region", "region");
+      seg("data-atlas-sort", "sort");
+      if (search) search.addEventListener("input", function () { state.q = search.value.trim().toLowerCase(); apply(); });
+
+      function match(el, withStatus) {
+        var okQ = !state.q || (el.getAttribute("data-name") || "").indexOf(state.q) !== -1;
+        var okR = !state.region || el.getAttribute("data-region") === state.region;
+        var okS = !withStatus || !state.status || el.getAttribute("data-status") === state.status;
+        return okQ && okR && okS;
+      }
+      function apply() {
+        var shownP = 0, shownS = 0;
+        panels.forEach(function (el) { var ok = match(el, true); el.hidden = !ok; if (ok) shownP++; });
+        slotEls.forEach(function (el) { var ok = !state.status && match(el, false); el.hidden = !ok; if (ok) shownS++; });
+        var sorted = panels.slice().sort(function (a, b) {
+          if (state.sort === "updated") {
+            var d = (b.getAttribute("data-updated") || "").localeCompare(a.getAttribute("data-updated") || "");
+            if (d) return d;
+          }
+          return (a.getAttribute("data-name") || "").localeCompare(b.getAttribute("data-name") || "");
+        });
+        var frag = document.createDocumentFragment();
+        sorted.forEach(function (el, i) { el.style.setProperty("--i", String(i)); frag.appendChild(el); });
+        grid.appendChild(frag);
+        if (count) count.textContent = shownP + " / " + panels.length + " profiles · " + shownS + " slots";
+        if (emptyP) emptyP.classList.toggle("is-on", shownP === 0);
+        if (emptyS) emptyS.classList.toggle("is-on", shownS === 0 && !state.status);
+      }
+      apply();
+
+      var deck = document.querySelector("[data-expo-start]");
+      var num = document.querySelector("[data-countdown]");
+      if (deck && num) {
+        var start = Date.parse(deck.getAttribute("data-expo-start") + "T00:00:00+02:00");
+        var tick = function () { num.textContent = String(Math.max(0, Math.ceil((start - Date.now()) / 86400000))); };
+        tick();
+        setInterval(tick, 60000);
+      }
     })();
   </script>
 </BaseLayout>
