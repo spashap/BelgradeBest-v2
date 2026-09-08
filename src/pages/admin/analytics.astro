@@ -8,14 +8,18 @@ import {
   searchConsoleTopPages,
 } from "../../lib/admin/analytics";
 
+// Range: 1 = Today (hourly, vs yesterday); 7/28/90 = trailing days (daily).
+const RANGES = [1, 7, 28, 90] as const;
+const rangeLabel = (d: number) => (d === 1 ? "Today" : `${d}d`);
 const sp = Astro.url.searchParams;
-const days = [7, 28, 90].includes(Number(sp.get("days"))) ? Number(sp.get("days")) : 28;
+const days = (RANGES as readonly number[]).includes(Number(sp.get("days"))) ? Number(sp.get("days")) : 28;
+const isToday = days === 1;
 
 const [ov, rt, gscQ, gscP] = await Promise.all([
   ga4Overview(days),
   ga4Realtime(),
-  searchConsoleTopQueries(),
-  searchConsoleTopPages(),
+  searchConsoleTopQueries(days),
+  searchConsoleTopPages(days),
 ]);
 
 const fetchedAt = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC";
@@ -34,21 +38,7 @@ const fmtDelta = (d: number | null): Delta => {
   if (Math.abs(d) < 0.001) return { txt: "0%", dir: "flat" };
   return { txt: `${d > 0 ? "+" : ""}${(d * 100).toFixed(0)}%`, dir: d > 0 ? "up" : "down" };
 };
-
-// inline-SVG sparkline → polyline points + area path
-const W = 520, H = 46, PAD = 3;
-function points(vals: number[]) {
-  if (!vals.length) return "";
-  const max = Math.max(...vals, 1);
-  const step = vals.length > 1 ? W / (vals.length - 1) : 0;
-  return vals
-    .map((v, i) => `${(i * step).toFixed(1)},${(H - PAD - (v / max) * (H - PAD * 2)).toFixed(1)}`)
-    .join(" ");
-}
-const areaPath = (vals: number[]) => {
-  const pts = points(vals);
-  return pts ? `M0,${H} L${pts.replace(/ /g, " L")} L${W},${H} Z` : "";
-};
+const prevLabel = isToday ? "vs yesterday" : `vs prev ${days}d`;
 
 const kpis = ov.configured
   ? [
@@ -61,8 +51,47 @@ const kpis = ov.configured
     ]
   : [];
 
-const usersSeries = ov.configured ? ov.timeseries.map((t) => t.users) : [];
-const viewsSeries = ov.configured ? ov.timeseries.map((t) => t.views) : [];
+// ── Trend chart (three rows sharing one x-axis): visitors, pageviews, change ──
+// Daily bars (or hourly for Today, with yesterday's same-hour bar behind as a
+// pale reference). Change row = diverging bars: visitors vs the previous day
+// (Today: vs the same hour yesterday). Hover any column for the exact numbers.
+const ts = ov.configured ? ov.timeseries : [];
+const hourly = ov.configured && ov.granularity === "hour";
+const n = ts.length;
+const CW = 720; // viewBox width; scales to the panel
+const RH = 64; // row height
+const GAP = 2; // surface gap between adjacent bars
+const slot = n ? CW / n : 0;
+const bw = Math.max(1, slot - GAP);
+const bx = (i: number) => i * slot + GAP / 2;
+const maxOf = (vals: number[]) => Math.max(1, ...vals);
+const maxU = maxOf(ts.flatMap((t) => (hourly ? [t.users, t.prevUsers] : [t.users])));
+const maxV = maxOf(ts.flatMap((t) => (hourly ? [t.views, t.prevViews] : [t.views])));
+const barH = (v: number, max: number) => (v > 0 ? Math.max(2, (v / max) * (RH - 4)) : 0);
+const change = (cur: number, prev: number): number | null =>
+  prev > 0 ? (cur - prev) / prev : cur > 0 ? null : 0; // null = no baseline
+const changes = ts.map((t) => change(t.users, t.prevUsers));
+const CAP = 2; // clamp the change axis at ±200% so one spike does not flatten the rest
+const maxC = Math.min(CAP, Math.max(0.25, ...changes.map((c) => Math.abs(c ?? 0))));
+const chgH = (c: number) => (Math.min(Math.abs(c), maxC) / maxC) * (RH / 2 - 3);
+const fmtChange = (c: number | null) => (c === null ? "new" : `${c > 0 ? "+" : ""}${(c * 100).toFixed(0)}%`);
+// x-axis: about 8 labels, evenly thinned
+const every = Math.max(1, Math.ceil(n / 8));
+const axisLabels = ts.map((t, i) => (i % every === 0 || i === n - 1 ? t.label : ""));
+const prevWord = hourly ? "same hour yesterday" : "previous day";
+// per-column hover payload (shared by all three rows)
+const hitData = (i: number) => {
+  const t = ts[i];
+  return {
+    "data-l": t.label,
+    "data-u": fmtNum(t.users),
+    "data-v": fmtNum(t.views),
+    "data-pu": fmtNum(t.prevUsers),
+    "data-pv": fmtNum(t.prevViews),
+    "data-cu": fmtChange(changes[i]),
+    "data-cv": fmtChange(change(t.views, t.prevViews)),
+  };
+};
 
 // bar-list helper data
 const barMax = (rows: { v: number }[]) => Math.max(1, ...rows.map((r) => r.v));
@@ -70,6 +99,13 @@ const channels = ov.configured ? ov.channels.map((c) => ({ name: c.name, v: c.se
 const devices = ov.configured ? ov.devices.map((d) => ({ name: d.name, v: d.users })) : [];
 const countries = ov.configured ? ov.countries.map((c) => ({ name: c.name, v: c.users })) : [];
 const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.users })) : [];
+
+const gscHint = (r: typeof gscQ) =>
+  r.configured
+    ? r.range.days === 1
+      ? `latest day with data · ${r.range.end}`
+      : `${r.range.days} days · ${r.range.start} → ${r.range.end}`
+    : "";
 ---
 <AdminLayout title="Analytics">
   <style is:inline>
@@ -97,13 +133,32 @@ const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.
     .blist .b-top .b-name{color:var(--ink)} .blist .b-top .b-val{color:var(--soft);font-family:ui-monospace,monospace}
     .blist .b-track{height:7px;background:#15110d;border-radius:99px;overflow:hidden}
     .blist .b-fill{height:100%;background:linear-gradient(90deg,var(--accent),#e8a16a);border-radius:99px}
-    .spark-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .spark h4{margin:0 0 6px;font-size:12px;color:var(--soft);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
-    .spark .s-now{font-family:ui-monospace,monospace;font-size:18px;color:var(--ink)}
-    @media(max-width:640px){.spark-wrap{grid-template-columns:1fr}}
+    /* trend chart */
+    .tc{position:relative}
+    .tc-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+    .tc-head h4{margin:0;font-size:12px;color:var(--soft);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+    .tc-legend{display:flex;gap:14px;font-size:12px;color:var(--soft);font-family:ui-monospace,monospace;flex-wrap:wrap}
+    .tc-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:5px}
+    .tc-row{display:grid;grid-template-columns:96px 1fr;align-items:end;gap:10px;margin-bottom:6px}
+    .tc-row .r-lbl{font-size:11px;color:var(--soft);letter-spacing:.04em;text-transform:uppercase;padding-bottom:4px;line-height:1.3}
+    .tc-row .r-lbl b{display:block;font-family:ui-monospace,monospace;font-size:13px;color:var(--ink);letter-spacing:0;text-transform:none}
+    .tc-row svg{display:block;width:100%;height:64px}
+    .tc-axis{display:grid;grid-template-columns:96px 1fr;gap:10px;margin-top:2px}
+    .tc-axis svg{display:block;width:100%;height:16px}
+    .tc-axis text{fill:var(--soft);font-size:11px;font-family:ui-monospace,monospace}
+    .tc .hit{fill:transparent;cursor:crosshair}
+    .tc .hit:hover{fill:rgba(236,228,216,.06)}
+    .tc-tip{position:absolute;pointer-events:none;z-index:5;background:#120f0c;border:1px solid var(--line);border-radius:7px;
+      padding:8px 10px;font-size:12px;line-height:1.5;color:var(--ink);white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,.45);transform:translate(-50%,0)}
+    .tc-tip b{font-family:ui-monospace,monospace}
+    .tc-tip .up{color:var(--ok)} .tc-tip .down{color:#e0816a} .tc-tip .flat,.tc-tip .new{color:var(--soft)}
+    .tc-tip[hidden]{display:none}
     td.num,th.num{text-align:right;font-family:ui-monospace,monospace}
-    .section-head{display:flex;align-items:baseline;gap:10px}
+    .section-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
     .section-head .hint{font-size:12px;color:var(--soft)}
+    details.tc-table summary{cursor:pointer;font-size:12px;color:var(--soft);margin-top:10px}
+    details.tc-table table{margin-top:8px;font-size:13px}
+    @media(max-width:640px){.tc-row,.tc-axis{grid-template-columns:72px 1fr}}
   </style>
 
   <!-- Control bar -->
@@ -111,8 +166,8 @@ const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.
     <div class="ax-controls">
       <span class="stamp">Range</span>
       <div class="seg">
-        {[7, 28, 90].map((d) => (
-          <a href={`/admin/analytics?days=${d}`} class={d === days ? "on" : ""}>{d}d</a>
+        {RANGES.map((d) => (
+          <a href={`/admin/analytics?days=${d}`} class={d === days ? "on" : ""}>{rangeLabel(d)}</a>
         ))}
       </div>
       <a href={`/admin/analytics?days=${days}&r=${Date.now()}`} class="seg" style="padding:6px 12px;text-decoration:none;color:var(--ink)">↻ Refresh</a>
@@ -136,32 +191,108 @@ const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.
               <div class="k-val">{k.value}</div>
               <div class={`k-delta ${k.d.dir}`}>
                 {k.d.dir === "up" ? "▲ " : k.d.dir === "down" ? "▼ " : ""}{k.d.txt}
-                {k.d.dir !== "new" ? <span class="muted"> vs prev {days}d</span> : <span class="muted"> (no prior data)</span>}
+                {k.d.dir !== "new" ? <span class="muted"> {prevLabel}</span> : <span class="muted"> (no prior data)</span>}
               </div>
             </div>
           ))}
         </div>
 
-        <!-- Trend sparklines -->
-        <div class="panel">
-          <div class="spark-wrap">
-            <div class="spark">
-              <h4>Visitors · {days}d</h4>
-              <div class="s-now">{fmtNum(ov.kpis.users.value)}</div>
-              <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} preserveAspectRatio="none" style="margin-top:6px;display:block">
-                <path d={areaPath(usersSeries)} fill="rgba(210,105,63,.16)" />
-                <polyline points={points(usersSeries)} fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" />
-              </svg>
-            </div>
-            <div class="spark">
-              <h4>Pageviews · {days}d</h4>
-              <div class="s-now">{fmtNum(ov.kpis.views.value)}</div>
-              <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} preserveAspectRatio="none" style="margin-top:6px;display:block">
-                <path d={areaPath(viewsSeries)} fill="rgba(111,174,132,.16)" />
-                <polyline points={points(viewsSeries)} fill="none" stroke="var(--ok)" stroke-width="2" vector-effect="non-scaling-stroke" />
-              </svg>
+        <!-- Trend: day-by-day (or hour-by-hour for Today) -->
+        <div class="panel tc" id="trend">
+          <div class="tc-head">
+            <h4>{hourly ? "Today by hour" : `Day by day · ${days}d`}</h4>
+            <div class="tc-legend">
+              {hourly ? (
+                <>
+                  <span><i style="background:var(--accent)"></i>today</span>
+                  <span><i style="background:rgba(210,105,63,.28)"></i>yesterday</span>
+                </>
+              ) : null}
+              <span><i style="background:var(--ok)"></i>up vs {prevWord}</span>
+              <span><i style="background:#e0816a"></i>down</span>
             </div>
           </div>
+
+          {n ? (
+            <>
+              <div class="tc-row">
+                <div class="r-lbl">Visitors<b>{fmtNum(ov.kpis.users.value)}</b></div>
+                <svg viewBox={`0 0 ${CW} ${RH}`} preserveAspectRatio="none" aria-label="Visitors per period">
+                  {ts.map((t, i) => (
+                    <>
+                      {hourly ? <rect x={bx(i)} y={RH - barH(t.prevUsers, maxU)} width={bw} height={barH(t.prevUsers, maxU)} fill="rgba(210,105,63,.28)" rx="2" /> : null}
+                      <rect x={bx(i)} y={RH - barH(t.users, maxU)} width={bw} height={barH(t.users, maxU)} fill="var(--accent)" rx="2" />
+                    </>
+                  ))}
+                  {ts.map((_, i) => (
+                    <rect class="hit" x={i * slot} y="0" width={slot} height={RH} {...hitData(i)} />
+                  ))}
+                </svg>
+              </div>
+              <div class="tc-row">
+                <div class="r-lbl">Pageviews<b>{fmtNum(ov.kpis.views.value)}</b></div>
+                <svg viewBox={`0 0 ${CW} ${RH}`} preserveAspectRatio="none" aria-label="Pageviews per period">
+                  {ts.map((t, i) => (
+                    <>
+                      {hourly ? <rect x={bx(i)} y={RH - barH(t.prevViews, maxV)} width={bw} height={barH(t.prevViews, maxV)} fill="rgba(111,174,132,.28)" rx="2" /> : null}
+                      <rect x={bx(i)} y={RH - barH(t.views, maxV)} width={bw} height={barH(t.views, maxV)} fill="var(--ok)" rx="2" />
+                    </>
+                  ))}
+                  {ts.map((_, i) => (
+                    <rect class="hit" x={i * slot} y="0" width={slot} height={RH} {...hitData(i)} />
+                  ))}
+                </svg>
+              </div>
+              <div class="tc-row">
+                <div class="r-lbl">Change<b>±{(maxC * 100).toFixed(0)}%{maxC >= CAP ? "+" : ""}</b></div>
+                <svg viewBox={`0 0 ${CW} ${RH}`} preserveAspectRatio="none" aria-label={`Visitors change vs ${prevWord}`}>
+                  <line x1="0" x2={CW} y1={RH / 2} y2={RH / 2} stroke="var(--line)" stroke-width="1" />
+                  {changes.map((c, i) =>
+                    c === null || c === 0 ? null : (
+                      <rect x={bx(i)} y={c > 0 ? RH / 2 - chgH(c) : RH / 2} width={bw} height={Math.max(2, chgH(c))}
+                        fill={c > 0 ? "var(--ok)" : "#e0816a"} rx="2" />
+                    ),
+                  )}
+                  {ts.map((_, i) => (
+                    <rect class="hit" x={i * slot} y="0" width={slot} height={RH} {...hitData(i)} />
+                  ))}
+                </svg>
+              </div>
+              <div class="tc-axis">
+                <div></div>
+                <svg viewBox={`0 0 ${CW} 16`} preserveAspectRatio="none">
+                  {axisLabels.map((l, i) =>
+                    l ? (
+                      <text x={i * slot + slot / 2} y="12" text-anchor={i === n - 1 ? "end" : i === 0 ? "start" : "middle"}>{l}</text>
+                    ) : null,
+                  )}
+                </svg>
+              </div>
+              <div class="tc-tip" id="tc-tip" hidden></div>
+
+              <details class="tc-table">
+                <summary>Show as table</summary>
+                <table>
+                  <tr><th>{hourly ? "hour" : "day"}</th><th class="num">visitors</th><th class="num">Δ vs {prevWord}</th><th class="num">pageviews</th><th class="num">Δ</th></tr>
+                  {ts.map((t, i) => {
+                    const cu = changes[i];
+                    const cv = change(t.views, t.prevViews);
+                    return (
+                      <tr>
+                        <td>{t.label}</td>
+                        <td class="num">{fmtNum(t.users)}</td>
+                        <td class={`num k-delta ${fmtDelta(cu).dir}`}>{fmtChange(cu)}</td>
+                        <td class="num">{fmtNum(t.views)}</td>
+                        <td class={`num k-delta ${fmtDelta(cv).dir}`}>{fmtChange(cv)}</td>
+                      </tr>
+                    );
+                  })}
+                </table>
+              </details>
+            </>
+          ) : (
+            <p class="muted">No traffic data in this range yet.</p>
+          )}
         </div>
 
         <!-- Traffic sources / devices / geo -->
@@ -256,8 +387,8 @@ const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.
     )
   }
 
-  <!-- Search Console -->
-  <div class="section-head"><h2>Search Console — top queries</h2><span class="hint">28 days</span></div>
+  <!-- Search Console (follows the range; data lags ~2 days, so windows end at the latest day with data) -->
+  <div class="section-head"><h2>Search Console — top queries</h2><span class="hint">{gscHint(gscQ)}</span></div>
   <div class="panel">
     {
       gscQ.configured ? (
@@ -269,7 +400,7 @@ const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.
             ))}
           </table>
         ) : (
-          <p class="muted">Connected — no query data yet (new sites take days/weeks to gather search data).</p>
+          <p class="muted">Connected — no query data in this window (Search Console reports lag about two days; new sites take days/weeks to gather search data).</p>
         )
       ) : (
         <p class="muted">Search Console not configured. {gscQ.reason}</p>
@@ -277,7 +408,7 @@ const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.
     }
   </div>
 
-  <div class="section-head"><h2>Search Console — top pages</h2><span class="hint">28 days</span></div>
+  <div class="section-head"><h2>Search Console — top pages</h2><span class="hint">{gscHint(gscP)}</span></div>
   <div class="panel">
     {
       gscP.configured ? (
@@ -289,11 +420,43 @@ const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.
             ))}
           </table>
         ) : (
-          <p class="muted">Connected — no page data yet.</p>
+          <p class="muted">Connected — no page data in this window.</p>
         )
       ) : (
         <p class="muted">Search Console not configured. {gscP.reason}</p>
       )
     }
   </div>
+
+  <script is:inline define:vars={{ prevWord }}>
+    // Hover layer for the trend chart: one tooltip, fed by the hit columns.
+    (function () {
+      var panel = document.getElementById("trend");
+      var tip = document.getElementById("tc-tip");
+      if (!panel || !tip) return;
+      var dirClass = function (txt) {
+        return txt === "new" ? "new" : txt.charAt(0) === "+" ? "up" : txt === "0%" ? "flat" : "down";
+      };
+      var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+      panel.addEventListener("mouseover", function (e) {
+        var hit = e.target.closest && e.target.closest(".hit");
+        if (!hit) return;
+        var d = hit.dataset;
+        tip.innerHTML =
+          "<div><b>" + esc(d.l) + "</b></div>" +
+          "<div>visitors <b>" + esc(d.u) + "</b> <span class=\"" + dirClass(d.cu) + "\">" + esc(d.cu) + "</span> <span class=\"muted\">(" + esc(prevWord) + ": " + esc(d.pu) + ")</span></div>" +
+          "<div>pageviews <b>" + esc(d.v) + "</b> <span class=\"" + dirClass(d.cv) + "\">" + esc(d.cv) + "</span> <span class=\"muted\">(" + esc(d.pv) + ")</span></div>";
+        tip.hidden = false;
+        var pr = panel.getBoundingClientRect();
+        var hr = hit.getBoundingClientRect();
+        var x = hr.left + hr.width / 2 - pr.left;
+        var tw = tip.offsetWidth;
+        x = Math.max(tw / 2 + 4, Math.min(pr.width - tw / 2 - 4, x));
+        tip.style.left = x + "px";
+        var above = hr.top - pr.top - tip.offsetHeight - 8;
+        tip.style.top = (above < 0 ? hr.bottom - pr.top + 8 : above) + "px";
+      });
+      panel.addEventListener("mouseleave", function () { tip.hidden = true; });
+    })();
+  </script>
 </AdminLayout>
