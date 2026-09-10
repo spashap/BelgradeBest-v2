@@ -43,6 +43,81 @@ export async function ga4TopPages(): Promise<Ga4Result> {
   }
 }
 
+// ── Shared clients (admin pages + the Growth API, src/lib/growth/) ──────────
+// ONE place that turns the env into an authenticated GA4 client / a Search
+// Console request. Both degrade to a `reason` string instead of throwing so
+// callers can report "unavailable" rather than 500.
+
+export type Ga4ClientResult =
+  | { ok: true; client: import("@google-analytics/data").BetaAnalyticsDataClient; property: string }
+  | { ok: false; reason: string };
+
+export async function ga4Client(): Promise<Ga4ClientResult> {
+  const propertyId = env("GA_PROPERTY_ID");
+  if (!propertyId) {
+    return { ok: false, reason: "Set GA_PROPERTY_ID (+ GA_CREDENTIALS_JSON) in the environment." };
+  }
+  let mod: typeof import("@google-analytics/data");
+  try {
+    mod = await import("@google-analytics/data");
+  } catch {
+    return { ok: false, reason: "@google-analytics/data is not installed." };
+  }
+  try {
+    const { BetaAnalyticsDataClient } = mod;
+    const credsJson = env("GA_CREDENTIALS_JSON");
+    const client = credsJson
+      ? new BetaAnalyticsDataClient({ credentials: JSON.parse(credsJson) })
+      : new BetaAnalyticsDataClient();
+    return { ok: true, client, property: `properties/${propertyId}` };
+  } catch (e) {
+    return { ok: false, reason: `GA4 client error: ${(e as Error).message}` };
+  }
+}
+
+// Raw Search Analytics query. `body` is the API request body (startDate,
+// endDate, dimensions, rowLimit, dimensionFilterGroups…); rows come back as
+// the API returns them. Reuses the service account (GA_CREDENTIALS_JSON) with
+// the read-only webmasters scope; site = GSC_SITE_URL or the domain property.
+export type GscApiRow = { keys?: string[]; clicks: number; impressions: number; ctr: number; position: number };
+export type GscRequestResult = { ok: true; rows: GscApiRow[] } | { ok: false; reason: string };
+
+export async function gscRequest(body: Record<string, unknown>): Promise<GscRequestResult> {
+  const credsJson = env("GA_CREDENTIALS_JSON");
+  if (!credsJson) {
+    return { ok: false, reason: "Set GA_CREDENTIALS_JSON (the service-account key) in the environment." };
+  }
+  const site = env("GSC_SITE_URL") || "sc-domain:belgradebest.com";
+  let GoogleAuth: typeof import("google-auth-library").GoogleAuth;
+  try {
+    ({ GoogleAuth } = await import("google-auth-library"));
+  } catch {
+    return { ok: false, reason: "google-auth-library is not installed." };
+  }
+  try {
+    const auth = new GoogleAuth({
+      credentials: JSON.parse(credsJson),
+      scopes: ["https://www.googleapis.com/auth/webmasters.readonly"],
+    });
+    const token = await auth.getAccessToken();
+    const res = await fetch(
+      `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/searchAnalytics/query`,
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      },
+    );
+    if (!res.ok) {
+      return { ok: false, reason: `Search Console error: ${res.status} ${(await res.text()).slice(0, 200)}` };
+    }
+    const json = (await res.json()) as { rows?: GscApiRow[] };
+    return { ok: true, rows: json.rows ?? [] };
+  } catch (e) {
+    return { ok: false, reason: `Search Console error: ${(e as Error).message}` };
+  }
+}
+
 // Google Search Console via the Search Analytics API. Reuses the same service
 // account (GA_CREDENTIALS_JSON). Site defaults to the domain property; override
 // with GSC_SITE_URL (e.g. "sc-domain:belgradebest.com"). Degrades gracefully.
@@ -68,59 +143,29 @@ export function gscWindow(days: number) {
 }
 
 async function gscQuery(dimension: "query" | "page", pageRegex?: string, days = 28): Promise<GscResult> {
-  const credsJson = env("GA_CREDENTIALS_JSON");
-  if (!credsJson) {
-    return { configured: false, reason: "Set GA_CREDENTIALS_JSON (the service-account key) in the environment." };
-  }
-  const site = env("GSC_SITE_URL") || "sc-domain:belgradebest.com";
-  let GoogleAuth: typeof import("google-auth-library").GoogleAuth;
-  try {
-    ({ GoogleAuth } = await import("google-auth-library"));
-  } catch {
-    return { configured: false, reason: "google-auth-library is not installed." };
-  }
-  try {
-    const auth = new GoogleAuth({
-      credentials: JSON.parse(credsJson),
-      scopes: ["https://www.googleapis.com/auth/webmasters.readonly"],
-    });
-    const token = await auth.getAccessToken();
-    const range = gscWindow(days);
-    const res = await fetch(
-      `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/searchAnalytics/query`,
-      {
-        method: "POST",
-        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          startDate: range.start,
-          endDate: range.end,
-          dimensions: [dimension],
-          rowLimit: pageRegex ? 50 : 25,
-          ...(pageRegex
-            ? {
-                dimensionFilterGroups: [
-                  { filters: [{ dimension: "page", operator: "includingRegex", expression: pageRegex }] },
-                ],
-              }
-            : {}),
-        }),
-      },
-    );
-    if (!res.ok) {
-      return { configured: false, reason: `Search Console error: ${res.status} ${(await res.text()).slice(0, 200)}` };
-    }
-    const json = (await res.json()) as { rows?: { keys: string[]; clicks: number; impressions: number; ctr: number; position: number }[] };
-    const rows = (json.rows ?? []).map((r) => ({
-      key: r.keys?.[0] ?? "",
-      clicks: r.clicks ?? 0,
-      impressions: r.impressions ?? 0,
-      ctr: r.ctr ?? 0,
-      position: r.position ?? 0,
-    }));
-    return { configured: true, rows, range };
-  } catch (e) {
-    return { configured: false, reason: `Search Console error: ${(e as Error).message}` };
-  }
+  const range = gscWindow(days);
+  const res = await gscRequest({
+    startDate: range.start,
+    endDate: range.end,
+    dimensions: [dimension],
+    rowLimit: pageRegex ? 50 : 25,
+    ...(pageRegex
+      ? {
+          dimensionFilterGroups: [
+            { filters: [{ dimension: "page", operator: "includingRegex", expression: pageRegex }] },
+          ],
+        }
+      : {}),
+  });
+  if (!res.ok) return { configured: false, reason: res.reason };
+  const rows = res.rows.map((r) => ({
+    key: r.keys?.[0] ?? "",
+    clicks: r.clicks ?? 0,
+    impressions: r.impressions ?? 0,
+    ctr: r.ctr ?? 0,
+    position: r.position ?? 0,
+  }));
+  return { configured: true, rows, range };
 }
 
 export const searchConsoleTopQueries = (days = 28) => gscQuery("query", undefined, days);

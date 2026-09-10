@@ -286,7 +286,7 @@ function slimServerlessFunction() {
         const JUNK = [
           ".git", ".github", ".astro", ".claude", ".vercel",
           ".env", ".env.example", ".gitattributes", ".gitignore", ".vercelignore",
-          "public", "dist/client", "KB", "scripts",
+          "public", "dist/client", "KB", "scripts", "tests",
           "package-lock.json", "CLAUDE.md", "automated-marketing-plan.md",
         ];
         let removed = 0;

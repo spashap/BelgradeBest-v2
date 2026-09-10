@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "port": "node --experimental-strip-types scripts/port-content.mjs"
+    "port": "node --experimental-strip-types scripts/port-content.mjs",
+    "test": "node --test \"tests/growth/*.test.ts\""
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.3.0",

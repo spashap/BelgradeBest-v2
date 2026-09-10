@@ -177,6 +177,51 @@ citation). SmartyPants is OFF (`astro.config.mjs`) so quotes/dashes are not rewr
 Both load in **production only** (`components/Analytics.astro` gates on `import.meta.env.PROD`)
 — never in `astro dev`.
 
+## Growth API + growth change log (added 2026-09-10 — see `growth/BELGRADEBEST_GROWTH_API.md`)
+
+Three **read-only, bearer-token** serverless endpoints that expose aggregate
+growth data to an external Growth connector (no DB — they reuse the SAME GA4
+Data API + Search Console integration the admin uses, via the shared
+`ga4Client()` / `gscRequest()` helpers in `lib/admin/analytics.ts`):
+
+- `GET /api/growth/summary?from=&to=` — traffic KPIs, new-vs-returning, devices,
+  countries, channels, **source/medium + platform buckets**, landing pages,
+  Google clicks/impressions/CTR/position + top queries/pages, and the Expo
+  cluster (GA4 + GSC + published/claimed listing COUNTS + lead COUNT).
+- `GET /api/growth/content?from=&to=&limit=` — per-page GA4 × GSC joined on the
+  normalised path, classified by the site's own routes (`lib/growth/classify.ts`
+  reads `site-schema.json`, `listing-sections.ts`, `site-pages.json`).
+- `GET /api/growth/changes?since=` — the growth change log (below).
+
+Auth is `Authorization: Bearer $GROWTH_AGENT_TOKEN` ONLY — never the admin
+cookie. Token unset → 503 "not configured"; bad token → 401. Every response uses
+the common envelope (`schema_version/project/generated_at/period/data_quality/
+data`); one upstream failing degrades to `data_quality.status: "partial"` with a
+warning instead of failing the whole response. Caching is an opportunistic
+warm-instance TTL map (GA4 30 min, GSC 6 h) — never credentials.
+**Never expose** listing `contact`/`outreach`/`manage` fields, lead contents, or
+service-account credentials; counts only. Tests: `npm test` (mocked Google).
+
+### The change-log rule (MANDATORY)
+
+**Every change that can materially affect traffic acquisition, SEO, indexing,
+SERP appearance, social/referral attribution, content discovery, business leads,
+widgets/distribution, affiliate performance, landing-page behavior or conversion
+behavior MUST append an entry to `growth/growth_changes.jsonl`.**
+
+Append-only, one JSON object per line, sequential ids `BB-CHG-NNNN`, fields:
+`id, timestamp (ISO-8601 UTC), category, title, reason, affected_area[],
+expected_metrics[], experiment_id, author, notes`.
+
+SHOULD be logged: title/meta/schema changes · sitemap/robots/indexing changes ·
+major internal-linking changes · new content architecture · Expo platform
+changes · widget/distribution changes · tracking changes · CTA changes ·
+lead-form changes · affiliate system changes · social attribution changes ·
+important page-template changes.
+
+Do NOT log harmless refactors, formatting or typo corrections unless they can
+affect growth behavior. **If uncertain, log it.**
+
 ## Admin (`/admin`, in the app — analytics + front-end settings control)
 
 `/admin` is part of the site (server-rendered routes, deployed on Vercel), NOT a
@@ -275,6 +320,7 @@ English rest of the site with " (EN)" markers. Mechanics (`src/lib/i18n.ts`):
 npm install && npm run dev        # http://localhost:5000  (no analytics tags in dev)
 npm run build                     # → dist/ (sitemap-index.xml + robots.txt)
 npm run preview                   # serve dist/ on :5000
+npm test                          # Growth API unit tests (Node runner, Google mocked)
 node --experimental-strip-types scripts/port-content.mjs   # re-port from ../BelgradeBest (rare)
 ```
 
@@ -288,6 +334,12 @@ build scripts once (`npm approve-scripts esbuild`, `sharp`; `protobufjs` in admi
   self-verify** (verify non-visible things by static inspection of `dist/`).
 - Commit/push only when asked. The remote is `spashap/BelgradeBest-v2` (set it up if
   absent). End commit messages with the Co-Authored-By trailer.
+- **Every documentation/report `.md` written for the owner is named
+  `BELGRADEBEST_<TOPIC>.md`**, in whatever folder it lives (e.g.
+  `growth/BELGRADEBEST_GROWTH_API.md`). The owner reads and shares these outside
+  the repo, where a generic name loses its origin. Name them that way from the
+  start; if you rename one, grep the repo and fix every reference. `CLAUDE.md`,
+  `README.md` and the existing `KB/` tree are exempt.
 - **ALWAYS update `scripts/commit-message.txt` as the final step of any change set the
   owner will push.** When run with no argument, `push-to-git.bat` commits this file
   VERBATIM via `git commit -F` (first line = subject, rest = body), so write it as a
@@ -315,8 +367,12 @@ build scripts once (`npm approve-scripts esbuild`, `sharp`; `protobufjs` in admi
 - Do not move the production domain to V2 without the owner's explicit go (old
   project is the rollback).
 - Do not make PUBLIC pages server-rendered — only `/admin` + `/api/admin/*`,
-  the business portal `/manage` + `/api/manage/*`, and `/api/listing-request`
-  may set `prerender = false`. Keep the public site static.
+  the business portal `/manage` + `/api/manage/*`, `/api/listing-request` and
+  the read-only `/api/growth/*` endpoints may set `prerender = false`. Keep the
+  public site static.
+- Do not ship a growth-affecting change without its `growth/growth_changes.jsonl`
+  entry (see the change-log rule above), and never expose operator/private
+  fields through `/api/growth/*`.
 - Do not deploy `scripts/` (`.vercelignore`'d). Do not leave `/admin` write-enabled
   AND password-less for long — set `ADMIN_PASSWORD` once the token is wired.
 ```

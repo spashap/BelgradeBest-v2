@@ -85,15 +85,13 @@ export const STATUS_LABEL: Record<string, string> = {
   "concept-only": "Concept reported",
 };
 
-// URL section segment per leg (e.g. /expo-2027/pavilions/<slug>). New legs add
-// their segment here + a matching pages/<leg>/<section>/ route pair.
-export const SECTION: Record<string, string> = {
-  "expo-2027": "pavilions",
-};
-// Human label for the section (header sub-nav etc.). One entry per SECTION key.
-export const SECTION_TITLE: Record<string, string> = {
-  "expo-2027": "Pavilions",
-};
+// URL section segment per leg (e.g. /expo-2027/pavilions/<slug>) + its label.
+// The maps live in listing-sections.ts (a plain module with no Astro/Vite
+// globals) so the Growth API's path classifier and its Node tests can share
+// them; imported here for local use AND re-exported so existing importers of
+// `SECTION`/`SECTION_TITLE` from this module are unchanged.
+import { SECTION, SECTION_TITLE } from "./listing-sections";
+export { SECTION, SECTION_TITLE };
 
 const files = import.meta.glob<{ default: Listing }>("../data/listings/**/*.json", {
   eager: true,
