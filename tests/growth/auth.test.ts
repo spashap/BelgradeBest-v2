@@ -45,6 +45,20 @@ test("valid bearer → 200; case-insensitive scheme; no-store", async () => {
   assert.equal(res.headers.get("cache-control"), "private, no-store");
 });
 
+test("every reply carries no-store + noindex, refusals included", async () => {
+  const cases = [
+    await handleSummary(new Request(URL_S), deps()), // 401
+    await handleSummary(authed(URL_S), deps({ token: undefined })), // 503
+    await handleSummary(authed(`${URL_S}?from=bad`), deps()), // 400
+    await handleSummary(authed(URL_S), deps()), // 200
+    await handleChanges(authed("https://x/api/growth/changes"), deps()), // 200
+  ];
+  for (const res of cases) {
+    assert.equal(res.headers.get("cache-control"), "private, no-store", `status ${res.status}`);
+    assert.equal(res.headers.get("x-robots-tag"), "noindex, nofollow", `status ${res.status}`);
+  }
+});
+
 test("read-only: POST refused", async () => {
   const req = new Request(URL_S, { method: "POST", headers: { Authorization: `Bearer ${TOKEN}` } });
   const res = await handleSummary(req, deps());

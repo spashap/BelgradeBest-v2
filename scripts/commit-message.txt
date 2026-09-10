@@ -1,54 +1,23 @@
-Growth Data API + growth change log
+Growth API: noindex headers on refusals; track the Facebook cover
 
-Three read-only, bearer-token serverless endpoints that expose aggregate
-growth data to an external Growth connector, with no database: they reuse the
-GA4 Data API + Search Console integration the admin already uses.
+Every /api/growth/* reply now carries the same Cache-Control: private, no-store
+AND X-Robots-Tag: noindex, nofollow. Previously only successful responses set
+X-Robots-Tag; the 401/503 refusals from authErrorResponse() omitted it, so the
+API's own documentation ("every response carries…") was not quite true. This is
+defence-in-depth only — /api/ is already disallowed in robots.txt and error
+responses are not indexed — but the surface is now consistent whether a reply is
+data or a refusal. A new test asserts both headers across 401, 503, 400 and two
+200 responses.
 
-  GET /api/growth/summary?from=&to=   traffic KPIs, new vs returning, devices,
-      countries, channels, source/medium with platform buckets, landing pages,
-      Google clicks/impressions/CTR/position + top queries and pages, and the
-      Expo cluster (GA4 + GSC + listing counts + lead count)
-  GET /api/growth/content?from=&to=&limit=   per-page GA4 joined with Search
-      Console on the normalised path, classified by the site's own routes
-  GET /api/growth/changes?since=   the growth change log, oldest to newest
+public/FB-COVER.png (the Facebook Page cover, added 2026-09-06) is committed so
+the social asset is version-controlled with the rest of the brand files. It is
+served at /FB-COVER.png, is not linked from any page and is not in the sitemap.
 
-Auth is Authorization: Bearer $GROWTH_AGENT_TOKEN only, never the admin cookie
-(constant-time compare). Token unset gives 503 "not configured"; a bad token
-401; non-GET 405. Every response uses the common envelope
-(schema_version/project/generated_at/period/data_quality/data) and one upstream
-failing degrades to data_quality.status "partial" with a warning rather than
-failing the whole response. Aggregate only: listing and lead COUNTS, never
-contact/outreach/manage fields, lead contents or credentials (asserted by
-tests). Caching is an opportunistic warm-instance TTL map (GA4 30 min, GSC 6 h)
-holding report data only.
+growth/growth_changes.jsonl gains BB-CHG-0002 for both changes, per the
+change-log rule in CLAUDE.md.
 
-lib/admin/analytics.ts gains shared ga4Client() + gscRequest(); the admin's
-gscQuery() now sits on gscRequest() with no behaviour change. New GA4 capability
-for this API: sessionSource x sessionMedium (so Facebook, Reddit, Bing, Google,
-AI assistants and widget embeds are distinguishable), newUsers, landingPage x
-channel, and BEGINS_WITH filters for the Expo cluster. Search Console URL
-variants (http/www/trailing slash) now fold onto one path — clicks and
-impressions summed, CTR recomputed, best position kept.
-
-lib/growth/classify.ts derives content_type/section from site-schema.json,
-listing-sections.ts and site-pages.json rather than a duplicate taxonomy;
-SECTION moved to the new lib/listing-sections.ts (re-exported from listings.ts,
-so every existing importer is unchanged) because listings.ts uses
-import.meta.glob and cannot load in the Node test runner.
-
-growth/growth_changes.jsonl is the append-only change log (BB-CHG-0001 records
-this work); CLAUDE.md gains the mandatory rule that any change which can affect
-traffic acquisition, SEO, indexing, SERP appearance, attribution, content
-discovery, leads, widgets, affiliates, landing-page or conversion behaviour must
-append an entry — if uncertain, log it.
-
-Docs: growth/BELGRADEBEST_GROWTH_API.md and
-BELGRADEBEST_GROWTH_API_IMPLEMENTATION_REPORT.md (every doc file carries the
-BelgradeBest prefix by convention).
-Tests: npm test, 35 cases, Google fully mocked, no API quota used. Build is
-green; the public site is untouched — output stays static, the sitemap still has
-156 URLs with no /api/growth entries, and no page became server-rendered.
-Set GROWTH_AGENT_TOKEN in the Vercel env to switch the API on.
+Tests 36 passing (Google mocked, no API quota). Build green. No public page,
+template, content or tracking change; the sitemap is unchanged at 156 URLs.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_016GNmaZAPQgs98DiSbBvM7A

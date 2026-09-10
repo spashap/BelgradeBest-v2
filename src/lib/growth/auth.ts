@@ -34,11 +34,15 @@ export function checkAuth(request: Request, configuredToken: string | undefined)
   return { ok: true };
 }
 
-// Error body for a refused request — deliberately terse.
+// Error body for a refused request — deliberately terse. Carries the same
+// no-store + noindex headers as a successful response (envelope.ts
+// jsonResponse), so every /api/growth/* reply is consistent whether it is
+// data or a refusal.
 export function authErrorResponse(a: Exclude<AuthResult, { ok: true }>): Response {
   const headers: Record<string, string> = {
     "Content-Type": "application/json; charset=utf-8",
     "Cache-Control": "private, no-store",
+    "X-Robots-Tag": "noindex, nofollow",
   };
   if (a.status === 401) headers["WWW-Authenticate"] = 'Bearer realm="belgradebest-growth"';
   return new Response(JSON.stringify({ error: a.error, message: a.message }), { status: a.status, headers });
