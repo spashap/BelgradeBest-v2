@@ -7,7 +7,7 @@ description: "Expo 2027 programme: pavilions, National Days, sport and music und
 lede: "Expo 2027's theme — Play for Humanity: Sport and Music for All — frames the official programme. This page is your guide to what's on: the pavilions and themed areas, the sport and music programming, the National Days, and an honest account of which dates, opening hours and headline acts are not yet published."
 heroLabel: "Expo 2027 programme / hero"
 heroAlt: "The Expo 2027 promenade in Belgrade at golden hour — sport, music and play"
-lastUpdated: "2026-08-20"
+lastUpdated: "2026-09-13"
 order: 3
 visible: true
 intent: "both"
@@ -83,7 +83,7 @@ The catch is timing. The **schedule of National Days — the country-to-date map
 
 ## What are the opening hours of Expo 2027?
 
-Honestly: **not announced yet.** As of 2026 there is no official statement on daily opening and closing times, peak-day time-slot reservations, or capacity-management rules for visitors. The official programme page still shows **"Tickets available soon"** and does not publish hours, ticket prices or entry categories. For planning, the only firm anchor is the overall run — **15 May to 15 August 2027** — and the official projection of roughly 4.1 million visits across the period, averaging about 44,652 visitors a day with peak days projected up to around 89,304, which hints that a time-slot or capacity system for busy days is plausible but is not yet confirmed. Check the [official Expo 2027 website](https://expobelgrade2027.org/en/intro) (expobelgrade2027.org) for opening hours once they go live; we will update this page when they do.
+Honestly: **not announced yet.** As of 2026 there is no official statement on daily opening and closing times, peak-day time-slot reservations, or capacity-management rules for visitors. The official programme page still shows **"Tickets available soon"** and does not publish hours, ticket prices or entry categories. For planning, the only firm anchor is the overall run — **15 May to 15 August 2027**. The crowd projections have kept rising: the Participants FAQ models roughly 4.1 million visits (about 44,652 a day, peaking near 89,304), while the BIE now states more than 6 million, which on the same 93 days would average closer to 64,500 a day. Numbers at that scale make a time-slot or capacity system plausible, but none is confirmed. Check the [official Expo 2027 website](https://expobelgrade2027.org/en/intro) (expobelgrade2027.org) for opening hours once they go live; we will update this page when they do.
 
 ## Who are the Expo 2027 ambassadors and mascots?
 
@@ -93,7 +93,7 @@ The Expo also has official mascots: **Rastko and Milica**, a pair of characters 
 
 ## How big is the programme?
 
-The Expo has been described as featuring **more than 8,000 events across its 93 days**. That figure comes from a non-official consolidation rather than an organiser statement, so it is best read as an indication of ambition rather than a confirmed count. For scale context, the event is a [Specialised Expo](https://www.bie-paris.org/site/en/2027-belgrade) — the first ever held in the Western Balkans — with **141 countries registered as of August 2026** and an official projection of over 4 million visits, supported behind the scenes by a planned workforce of around 20,000 volunteers. Whatever the exact event count turns out to be, the programming is being built for a genuinely large, three-month international event rather than a short festival.
+The Expo is described as featuring **more than 8,000 events across its 93 days** — a figure the BIE itself publishes, though no dated programme backs it up yet, so read it as planned scale rather than a confirmed count. For scale context, the event is a [Specialised Expo](https://www.bie-paris.org/site/en/2027-belgrade) — the first ever held in the Western Balkans — with **141 countries registered as of August 2026** and visitor projections that have climbed from 4 million to the BIE's current more than 6 million, supported behind the scenes by a planned workforce of around 20,000 volunteers. Whatever the exact event count turns out to be, the programming is being built for a genuinely large, three-month international event rather than a short festival.
 
 ## Context worth knowing
 

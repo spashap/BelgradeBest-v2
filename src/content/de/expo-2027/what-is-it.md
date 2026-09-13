@@ -7,7 +7,7 @@ description: "Was ist die Expo 2027 Belgrad? Keine Weltausstellung, sondern die 
 lede: "Die Expo 2027 Belgrad ist die erste Spezialisierte Expo (Specialised Expo), die je auf dem Westbalkan stattfindet — eine vom BIE anerkannte, themenfokussierte internationale Ausstellung, die vom 15. Mai bis 15. August 2027 in Surčin unter dem Motto „Play for Humanity: Sport and Music for All“ läuft. Hier erfahren Sie, was das bedeutet — und ob sich ein Besuch lohnt."
 heroLabel: "Was ist eine Spezialisierte Expo / Hero"
 heroAlt: "Belgrads Flüsse und Skyline zur goldenen Stunde — die Gastgeberstadt der Expo 2027"
-lastUpdated: "2026-08-20"
+lastUpdated: "2026-09-13"
 order: 1
 visible: true
 intent: "both"
@@ -28,7 +28,7 @@ faqs:
     question: "Wann und wo findet die Expo 2027 Belgrad statt?"
   - answer: "Die Expo 2027 hat zwei Maskottchen, Rastko und Milica, gekleidet in traditioneller serbischer Volkstracht. Ihre Namen wurden per öffentlicher Online-Abstimmung gewählt (berichtet mit nahezu 100.000 Teilnehmenden) und verweisen auf Persönlichkeiten der serbischen Geschichte — Rastko Nemanjić (der heilige Sava) und Prinzessin Milica. Sie fungieren als die „Superhelden des Spiels“ der Veranstaltung."
     question: "Was sind die Maskottchen der Expo 2027?"
-  - answer: "Im August 2026 bezifferte der Veranstalter die Zahl auf 141 registrierte Länder, gegenüber den zuletzt vom Zähler der offiziellen Participants-Seite angezeigten 139 — eine Zahl, die stetig gewachsen ist (eine Mitteilung vom Juli 2025 nannte 117) und sich noch ändern kann. Die offizielle Participants-FAQ prognostiziert rund 4,1 Millionen Besuche über die 93 Tage, aber dies ist eine Prognose, keine Zählung."
+  - answer: "Im August 2026 bezifferte der Veranstalter die Zahl auf 141 registrierte Länder, gegenüber den zuletzt vom Zähler der offiziellen Participants-Seite angezeigten 139 — eine Zahl, die stetig gewachsen ist (eine Mitteilung vom Juli 2025 nannte 117) und sich noch ändern kann. Auch die Besucherprognosen sind so gestiegen: Die Participants-FAQ modelliert rund 4,1 Millionen Besuche über die 93 Tage, während das BIE inzwischen mehr als 6 Millionen nennt. Beides sind Prognosen, keine Zählungen."
     question: "Wie viele Länder und Besucher werden erwartet?"
   - answer: "Noch nicht. Die offizielle Programmseite vermerkt „Tickets available soon“ (Tickets bald erhältlich), hat aber Stand Mitte 2026 weder Ticketpreise noch Kategorien, Verkaufskanäle oder einen Verkaufsstart veröffentlicht."
     question: "Kann ich schon Tickets für die Expo 2027 kaufen?"
@@ -79,7 +79,9 @@ Eine ehrliche Einschränkung: Stand Juni 2026 wurde **kein vollständiger öffen
 
 Die Größenordnung spielt eine Rolle, wenn Sie entscheiden, ob sich die Reise lohnt. Im **August 2026** bezifferte der Direktor der Expo 2027 die Gesamtzahl auf **141 registrierte Länder** und bezeichnete dies als historischen Rekord; der Zähler der [offiziellen Participants-Seite](https://expobelgrade2027.org/en/participants) zeigte zuletzt **139**, an anderer Stelle spricht die offizielle Website von „über 120 Nationen“, und eine Mitteilung vom Juli 2025 nannte **117 bestätigte**. Die Zahl ist stetig gewachsen und kann sich weiter ändern — die Expo 2027 hat den vorherigen Gastgeber einer Spezialisierten Expo, Astana, bereits übertroffen — daher liest man sie am besten als „141, Stand August 2026“ und nicht als endgültige Zahl. (Die laufende Liste finden Sie im [Teilnehmer-Tracker (EN)](/expo-2027/tracker).)
 
-Für Besucher prognostiziert die offizielle Participants-FAQ **rund 4,1 Millionen Besuche über die 93 Tage** — im Schnitt etwa 44.652 pro Tag, mit Spitzenwerten von bis zu rund 89.304. Dies ist als Prognose zu verstehen, nicht als Zählung. Andere Aussagen nannten Zahlen von 2,6–3 Millionen bis „über vier Millionen“, sodass die Schätzungen stark variieren und als vorläufig zu betrachten sind.
+Für Besucher gilt: Die Prognose ist **im Lauf der Zeit gestiegen, und die meistzitierten Zahlen sind die ältesten**. Die offizielle Participants-FAQ modelliert **rund 4,1 Millionen Besuche über die 93 Tage** — im Schnitt etwa 44.652 pro Tag, mit Spitzenwerten von bis zu rund 89.304. Seither hat der Veranstalter öffentlich argumentiert, **6 Millionen seien realistisch**, und das BIE nennt inzwischen **mehr als 6 Millionen**. Frühere Aussagen nannten Zahlen von nur 2,6–3 Millionen.
+
+Daraus folgt zweierlei. All das sind Prognosen, keine Zählungen. Und die oben genannten Tages- und Spitzenwerte stammen aus dem älteren, niedrigeren Modell — bei sechs Millionen läge der Tagesschnitt rund die Hälfte höher, bei etwa 64.500. Ein aktualisiertes Tagesmodell zur Sechs-Millionen-Zahl ist uns nicht bekannt.
 
 ## Was geschieht nach 2027 mit dem Expo-Gelände? (das Erbe)
 
@@ -122,6 +124,6 @@ Die ehrliche Antwort hängt davon ab, wonach Sie suchen.
 - ein bestätigtes Tagesprogramm brauchen, bevor Sie sich festlegen, da der vollständige Kalender noch nicht angekündigt ist;
 - Ihr Budget genau planen möchten, da Ticketpreise und Verkaufskanäle noch nicht veröffentlicht sind;
 - speziell wegen eines namentlich genannten Auftritts oder Spiels reisen, das noch nicht bestätigt ist;
-- die verkehrsreichsten Tage lieber meiden möchten, angesichts prognostizierter Spitzenwerte von rund 89.304 Besuchen.
+- die verkehrsreichsten Tage lieber meiden möchten — das ältere offizielle Modell nannte Spitzenwerte von rund 89.304 Besuchen, die neuere Sechs-Millionen-Prognose ließe mehr erwarten.
 
 Nichts davon ist ein Urteil dafür oder dagegen. Es handelt sich um eine Spezialisierte Expo mit klarem Thema, festgelegtem Gelände und Terminen, den wiedererkennbaren Maskottchen Rastko und Milica sowie einem stark beworbenen Nachnutzungsplan — wobei mehrere praktische Details noch ausstehen.

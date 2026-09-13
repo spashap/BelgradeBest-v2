@@ -4,10 +4,10 @@ slug: "where-to-stay-for-expo"
 title: "Wo übernachten für die Expo 2027: Die besten Viertel Belgrads"
 shortTitle: "Wo übernachten"
 description: "Wo Sie zur Expo 2027 übernachten: Novi Beograd und die Flughafenseite Surčin vs. die Altstadt, wie früh Sie buchen sollten und was Preise angeht."
-lede: "Für die Expo 2027 liegen die nächstgelegenen Unterkünfte in Novi Beograd und auf der Surčin-/Flughafenseite, wenige Kilometer vom Gelände entfernt; die Altstadt (Stari Grad, Vračar) bietet Ihnen die Stadt, die Sie eigentlich sehen wollten – auf Kosten eines längeren Wegs über den Fluss. Bei rund 4 Millionen erwarteten Besuchern über drei Monate und nur wenigen Tausend neuen Hotelzimmern ist die eigentliche Entscheidung das frühe Buchen – nicht die Wahl des perfekten Viertels."
+lede: "Für die Expo 2027 liegen die nächstgelegenen Unterkünfte in Novi Beograd und auf der Surčin-/Flughafenseite, wenige Kilometer vom Gelände entfernt; die Altstadt (Stari Grad, Vračar) bietet Ihnen die Stadt, die Sie eigentlich sehen wollten – auf Kosten eines längeren Wegs über den Fluss. Bei Besuchsprognosen von 4 Millionen bis zu den derzeit vom BIE genannten mehr als 6 Millionen über drei Monate und nur wenigen Tausend neuen Hotelzimmern ist die eigentliche Entscheidung das frühe Buchen – nicht die Wahl des perfekten Viertels."
 heroLabel: "Wo übernachten für Expo 2027 / Hero"
 heroAlt: "Kartenartige Ansicht von Belgrad mit dem Expo-Gelände in Surčin, Novi Beograd und der Altstadt jenseits der Sava"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-09-13"
 order: 90
 visible: true
 intent: "both"
@@ -26,7 +26,7 @@ faqs:
   - question: "Ist es besser, in der Nähe des Expo-Geländes oder im Stadtzentrum zu übernachten?"
     answer: "Das hängt von Ihren Prioritäten ab. Wenn der Fokus vor allem auf der Expo liegt, empfiehlt sich eine Unterkunft in der Nähe des Geländes in Novi Beograd oder Surčin für einen kürzeren Weg. Wenn Sie jedoch Belgrad erkunden und das Nachtleben genießen möchten, ist das Stadtzentrum die bessere Wahl, auch wenn der Weg zur Expo dann länger ist."
   - question: "Wann sollte ich eine Unterkunft für die Expo 2027 buchen?"
-    answer: "Sie sollten so früh wie möglich buchen, sobald Ihre Reisedaten feststehen, da eine hohe Nachfrage zu erwarten ist. Bei erwarteten 4 Millionen Besuchern und begrenzter Hotelkapazität, insbesondere in der Nähe des Expo-Geländes, ist frühes Buchen entscheidend, um eine gute Lage und angemessene Preise zu sichern."
+    answer: "Sie sollten so früh wie möglich buchen, sobald Ihre Reisedaten feststehen, da eine hohe Nachfrage zu erwarten ist. Bei offiziellen Besuchsprognosen zwischen 4 Millionen und mehr als 6 Millionen und begrenzter Hotelkapazität in der Nähe des Expo-Geländes ist frühes Buchen der Weg zu einer guten Lage und einem angemessenen Preis."
   - question: "Welche Arten von Unterkünften gibt es in der Nähe des Expo-Geländes?"
     answer: "In der Nähe des Expo-Geländes finden Sie moderne Hotels und Serviced Apartments in Novi Beograd und im Bereich Surčin. Das Gebiet um Surčin ist allerdings weniger städtisch geprägt und dient in erster Linie als logistische Basis, während Novi Beograd mehr Annehmlichkeiten und eine ruhigere Atmosphäre bietet."
   - question: "Was sollte ich bei der Wahl der Unterkunft für die Expo 2027 bedenken?"
@@ -87,7 +87,9 @@ Es gibt hier keine falsche Antwort – nur einen Kompromiss zwischen Weg und Cha
 
 Buchen Sie so früh, wie es Ihre Reisedaten erlauben. Der Grund dafür ist die Kapazitätslage.
 
-Stand 2026 verfügte Belgrad über rund **120 Hotels mit etwa 8.000 Zimmern**; weitere rund **20 Hotels (~2.000 Zimmer)** sollen Berichten zufolge vor der Expo eröffnen – ein Großteil davon in Novi Beograd und in Flughafennähe. Demgegenüber werden für die Expo 2027 **mehr als 4 Millionen Besucher über ihre drei Monate** erwartet. Selbst mit den Neueröffnungen dürfte die Nachfrage das Angebot in den stärksten Phasen übersteigen, insbesondere bei Zimmern in Geländenähe.
+Stand 2026 verfügte Belgrad über rund **120 Hotels mit etwa 8.000 Zimmern**; weitere rund **20 Hotels (~2.000 Zimmer)** sollen Berichten zufolge vor der Expo eröffnen – ein Großteil davon in Novi Beograd und in Flughafennähe. Demgegenüber stehen für die Expo 2027 Prognosen von **4 Millionen Besuchen – nach der aktuellen BIE-Angabe sogar mehr als 6 Millionen**.
+
+Widerstehen Sie der Versuchung, das eine durch das andere zu teilen. Es handelt sich um *Besuche*, nicht um Übernachtungsgäste: Darin enthalten sind Belgrader Einwohner, Tagesgäste aus der Region und dieselbe Person, die mit einem Drei-Tage-Ticket wiederkommt. Wie viele Expo-Besucher tatsächlich ein Bett brauchen, für wie viele Nächte und wie viele außerhalb der Stadt übernachten, hat niemand veröffentlicht. Was der Vergleich zeigt, ist die Richtung: ein festes, überschaubares Zimmerangebot trifft auf eine große und weiter steigende Besucherprognose. Das ist Grund genug, früh und flexibel zu buchen – aber keine Grundlage, um eine konkrete Knappheit vorherzusagen.
 
 Daraus ergeben sich zwei Konsequenzen:
 
@@ -102,4 +104,4 @@ Wir nennen hier bewusst keine konkreten Preise oder Echtzeit-Verfügbarkeiten �
 - **Nächstgelegene Basis:** Novi Beograd / Surčin (Flughafenseite) – kürzester Weg, neueste Hotels, ruhigere Umgebung.
 - **Stadtbasis:** Stari Grad / Vračar – historisches, zu Fuß erkundbares Belgrad, längerer Weg über den Fluss.
 - **Beste Allround-Wahl:** Novi Beograd – liegt zwischen beiden.
-- **Buchung:** rund 8.000 Hotelzimmer im Jahr 2026 plus ca. 2.000 geplante, gegenüber mehr als 4 Millionen erwarteten Besuchern – früh und flexibel buchen.
+- **Buchung:** rund 8.000 Hotelzimmer im Jahr 2026 plus ca. 2.000 geplante, gegenüber Prognosen von 4–6 Millionen *Besuchen* (nicht Übernachtungsgästen) – früh und flexibel buchen.

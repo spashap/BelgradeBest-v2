@@ -1,28 +1,51 @@
-submit-to-bing: retry Bing's transient UnknownError, not just throttles
+Reconcile the Expo visitor forecast across EN + DE; drop two over-inferences
 
-Running --all --fresh over the full 156-URL sitemap exposed a hole in the
-submitter. Bing answers HTTP 400 with an ErrorCode envelope rather than a real
-status, and the script only retried ErrorCode 5 (ThrottleHost). ErrorCode 2
-("UnknownError") is also transient — the same URL that failed with it during the
-sweep had resolved cleanly minutes earlier — but it fell through to the hard-error
-path, was reported UNKNOWN, and was therefore skipped by --fresh. Since --fresh
-deliberately errs toward skipping rather than re-submitting, a flaky sweep
-silently under-submits. Both codes are now retried with backoff.
+Our own participants tracker has recorded since 20 August that the BIE now
+states "more than 6 million" visits and that the six-million figure is the more
+recent. Every visitor-facing Expo article, meanwhile, still presented the
+Participants FAQ's 4.1 million model as settled — roughly twenty statements
+across five English articles and their five German twins. The site was
+contradicting itself on its single most-quoted number.
 
-The runbook gains the practical rule that follows: use --all --fresh to DISCOVER
-the gap, then submit the named URLs with --prefix, which performs no per-URL
-status lookup and so cannot be thinned by Bing's error rate.
+Forecasts are now presented chronologically wherever they appear: earlier
+official statements of 2.6–3 million, the Participants FAQ's ~4.1 million, the
+organiser's own later argument that 6 million is realistic, and the BIE's
+current "more than 6 million" — all labelled projections rather than counts, and
+all noting that most sources count visits, not unique visitors, so a three-day
+ticket is three visits.
 
-That is how the 10 remaining never-crawled URLs were submitted on 2026-09-13 —
-/areas/novi-beograd, /areas/skadarlija and eight /glossary/ terms including
-/glossary/bie (Bureau International des Expositions), Expo vocabulary that was
-invisible on the channel delivering effectively all of the site's organic clicks.
-Accepted; quota 89 -> 79 daily, 1789 -> 1779 monthly, 21 URLs submitted in total
-today across this and the German set.
+The per-day numbers needed the same treatment. The much-repeated 44,652 daily
+average and 89,304 peak are derived from the 4.1-million model, not the
+six-million one; on the same 93 days six million averages nearer 64,500 a day,
+and no updated per-day model has been published alongside the higher figure.
+Every page that quotes those figures now says so.
 
-growth/growth_changes.jsonl gains BB-CHG-0005.
+Two over-inferences went with it:
 
-No site code, template, content or tracking change — script and docs only.
+- **Tickets.** "Most admissions will almost certainly be digital" was doing more
+  work than the evidence allows. 200,000 of the 1.2 million printed tickets are
+  three-day tickets, so the printed stock covers more admissions than it has
+  pieces, and nothing stops the organiser printing more. The page now says a
+  substantial digital channel is reasonable to expect, and that a digital
+  majority is not established.
+- **Accommodation.** Dividing Expo visits by hotel rooms is not a shortage
+  calculation: visits include Belgrade residents, regional day-trippers and the
+  same person returning on a three-day ticket. Nobody has published how many
+  visitors need a bed, for how many nights. The page now states the direction of
+  travel — a fixed room stock against a large and rising projection — as the
+  reason to book early, and explicitly declines to predict a specific shortfall.
+  The related "three times Belgrade's annual tourist volume" comparison keeps its
+  attribution but gains the caveat that visits and tourist arrivals are not the
+  same unit.
+
+Also corrected: the 8,000-events figure is published by the BIE itself, so
+describing it as "a non-official consolidation" was wrong. It is now attributed,
+and still flagged as planned scale rather than a confirmed count since no dated
+programme backs it up.
+
+lastUpdated bumped to 2026-09-13 on all ten articles, so dateModified and
+sitemap lastmod follow. Sitemap unchanged at 156 URLs. No title, URL, template or
+tracking change. growth/growth_changes.jsonl gains BB-CHG-0006. Build green.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015oWBfm7TVeUF27YN1nqBdX

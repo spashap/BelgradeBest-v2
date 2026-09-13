@@ -7,7 +7,7 @@ description: "Expo 2027 Belgrade tickets: the printing tender targets a sales st
 lede: "Expo 2027 Belgrade ticket prices are still not officially announced — but a date now exists. The organiser's ticket-printing tender required the first batch to be delivered by 14 September 2026 so that sales can begin on 15 September 2026, and it confirms one-day and three-day tickets. This page tracks what's confirmed, what's only planned, and what's still unknown."
 heroLabel: "Expo 2027 tickets / hero"
 heroAlt: "The entrance to Expo 2027 in Belgrade at golden hour"
-lastUpdated: "2026-09-04"
+lastUpdated: "2026-09-13"
 order: 6
 visible: true
 intent: "both"
@@ -63,7 +63,7 @@ Three things follow from that, and they are worth separating from speculation:
 
 - **There is a one-day ticket and a three-day ticket.** This is the first official confirmation of any Expo 2027 ticket category. It does not rule out other types — a season pass, concessions, group tickets — but those two now exist as products.
 - **Physical tickets are planned, for physical sale.** The contract describes tickets intended for sale at physical points of sale and box offices, printed on protected paper with watermarks, holographic foil, QR codes, perforation, serial numbering and UV-visible security elements. That is banknote-grade anti-counterfeiting, and it implies counter sales, not a purely app-based entry.
-- **Most admissions will almost certainly be digital.** 1.2 million printed tickets sit against an official projection of more than 4 million visits. Unless that projection is wildly off, the printed stock is a minority channel and the bulk of entries will be sold and scanned electronically.
+- **Printed stock looks like a minority channel — but that is an inference, not a fact.** The 1.2 million printed tickets sit against official projections of 4 million visits and, more recently, more than 6 million. Be careful with the arithmetic, though: 200,000 of those are three-day tickets, so the printed stock covers more admissions than it has pieces, and nothing stops the organiser printing more. It is reasonable to expect a substantial digital channel; it is not established that most admissions will be digital.
 
 What the contract still does **not** tell you: prices, the online sales channel, concession categories, or whether a season pass exists. Those remain unannounced. The 15 September 2026 sales-start date comes from the tender's delivery schedule (above), not from the award itself.
 
@@ -111,7 +111,7 @@ If you find a price stated as fact today, treat it with caution: as of early Sep
 
 No official information on reservation or entry systems — time-slot reservations, daily capacity caps, or online booking and queueing for general visitors — has been published as of August 2026.
 
-It is reasonable to *expect* some form of capacity management, because the numbers are large. The official Participants FAQ projects around 4.1 million visits over the 93 days, averaging about 44,652 per day with peaks up to roughly 89,304. This is a projection, not a count, and other statements range from 2.6 to 4 million. We mention it only because numbers like these are the kind of context that often justifies time-slot or capacity-based entry systems — but no such system has been confirmed for Expo 2027.
+It is reasonable to *expect* some form of capacity management, because the numbers are large and getting larger. The official Participants FAQ models around 4.1 million visits over the 93 days, averaging about 44,652 per day with peaks up to roughly 89,304. The BIE now states more than 6 million, which on the same 93 days would average closer to 64,500 a day. These are projections, not counts, and earlier statements ranged from 2.6 million up. We mention them only because numbers like these are the kind of context that often justifies time-slot or capacity-based entry systems — but no such system has been confirmed for Expo 2027.
 
 ## Grounded context while you wait
 

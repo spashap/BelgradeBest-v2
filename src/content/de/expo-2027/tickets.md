@@ -7,7 +7,7 @@ description: "Expo-2027-Tickets Belgrad: Verkaufsstart laut Druckausschreibung f
 lede: "Die Ticketpreise für Expo 2027 Belgrad sind noch nicht offiziell bekannt gegeben worden – aber inzwischen gibt es ein Datum. Die Ausschreibung des Veranstalters für den Ticketdruck verlangte, dass die erste Charge bis zum 14. September 2026 geliefert wird, damit der Verkauf am 15. September 2026 beginnen kann, und sie bestätigt Ein-Tages- und Drei-Tage-Tickets. Diese Seite verfolgt, was bestätigt ist, was nur geplant ist und was noch unbekannt ist."
 heroLabel: "Expo-2027-Tickets / Hero"
 heroAlt: "Der Eingang zur Expo 2027 in Belgrad zur goldenen Stunde"
-lastUpdated: "2026-09-04"
+lastUpdated: "2026-09-13"
 order: 6
 visible: true
 intent: "both"
@@ -63,7 +63,7 @@ Daraus ergeben sich drei Dinge, die es sich lohnt, von Spekulation zu trennen:
 
 - **Es gibt ein Ein-Tages- und ein Drei-Tage-Ticket.** Das ist die erste offizielle Bestätigung überhaupt einer Expo-2027-Ticketkategorie. Das schließt andere Typen nicht aus – Saisonkarte, Ermäßigungen, Gruppentickets –, aber diese beiden existieren nun als Produkte.
 - **Physische Tickets sind für den physischen Verkauf geplant.** Der Vertrag beschreibt Tickets, die für den Verkauf an physischen Verkaufsstellen und Kassen bestimmt sind, gedruckt auf geschütztem Papier mit Wasserzeichen, holografischer Folie, QR-Codes, Perforation, fortlaufender Nummerierung und UV-sichtbaren Sicherheitsmerkmalen. Das ist ein Fälschungsschutz auf Banknotenniveau und deutet auf Schalterverkauf hin, nicht auf einen rein App-basierten Einlass.
-- **Die meisten Einlässe werden mit ziemlicher Sicherheit digital erfolgen.** 1,2 Millionen gedruckten Tickets steht eine offizielle Prognose von mehr als 4 Millionen Besuchen gegenüber. Sofern diese Prognose nicht völlig daneben liegt, ist der gedruckte Bestand ein Minderheitskanal, und der Großteil der Einlässe wird elektronisch verkauft und gescannt.
+- **Der gedruckte Bestand wirkt wie ein Nebenkanal — das ist aber eine Schlussfolgerung, keine Tatsache.** Den 1,2 Millionen gedruckten Tickets stehen offizielle Prognosen von 4 Millionen und zuletzt mehr als 6 Millionen Besuchen gegenüber. Vorsicht bei der Rechnung: 200.000 davon sind Drei-Tage-Tickets, der gedruckte Bestand deckt also mehr Einlässe ab, als er Stück hat — und nichts hindert den Veranstalter daran, nachzudrucken. Ein erheblicher digitaler Kanal ist zu erwarten; dass die *meisten* Einlässe digital erfolgen, ist damit nicht belegt.
 
 Was der Vertrag weiterhin **nicht** verrät: Preise, den Online-Verkaufskanal, Ermäßigungskategorien oder ob es eine Saisonkarte gibt. Das bleibt unangekündigt. Das Verkaufsstart-Datum 15. September 2026 stammt aus dem Lieferplan der Ausschreibung (siehe oben), nicht aus der Auftragsvergabe selbst.
 
@@ -111,7 +111,7 @@ Wenn Sie heute einen Preis als Tatsache angegeben finden, behandeln Sie ihn mit 
 
 Stand August 2026 wurden keine offiziellen Informationen zu Reservierungs- oder Einlasssystemen veröffentlicht – Zeitfenster-Reservierungen, tägliche Kapazitätsobergrenzen oder Online-Buchung und -Warteschlangen für allgemeine Besucher.
 
-Es ist naheliegend, eine Form von Kapazitätsmanagement zu *erwarten*, weil die Zahlen groß sind. Die offizielle Participants-FAQ prognostiziert rund 4,1 Millionen Besuche über die 93 Tage, im Schnitt etwa 44.652 pro Tag mit Spitzen von bis zu rund 89.304. Das ist eine Prognose, keine Zählung, und andere Angaben reichen von 2,6 bis 4 Millionen. Wir erwähnen das nur, weil solche Zahlen der Kontext sind, der Zeitfenster- oder kapazitätsbasierte Einlasssysteme oft rechtfertigt – aber ein solches System ist für die Expo 2027 nicht bestätigt.
+Es ist naheliegend, eine Form von Kapazitätsmanagement zu *erwarten*, weil die Zahlen groß sind — und größer werden. Die offizielle Participants-FAQ modelliert rund 4,1 Millionen Besuche über die 93 Tage, im Schnitt etwa 44.652 pro Tag mit Spitzen von bis zu rund 89.304. Das BIE nennt inzwischen mehr als 6 Millionen, was bei gleichen 93 Tagen einem Schnitt von eher 64.500 pro Tag entspräche. Das sind Prognosen, keine Zählungen; frühere Angaben begannen bei 2,6 Millionen. Wir erwähnen das nur, weil solche Zahlen der Kontext sind, der Zeitfenster- oder kapazitätsbasierte Einlasssysteme oft rechtfertigt – aber ein solches System ist für die Expo 2027 nicht bestätigt.
 
 ## Gesicherte Fakten für die Wartezeit
 

@@ -7,7 +7,7 @@ description: "Programm und Themen der Expo 2027 Belgrad: Pavillons, Nationaltage
 lede: "Das Motto der Expo 2027 — Play for Humanity: Sport and Music for All (Spiel für die Menschheit: Sport und Musik für alle) — gibt den Rahmen für das offizielle Programm vor. Diese Seite ist Ihr Leitfaden zu allem, was geboten wird: die Pavillons und thematischen Bereiche, das Sport- und Musikprogramm, die Nationaltage sowie eine ehrliche Bestandsaufnahme dessen, welche Termine, Öffnungszeiten und Top-Acts noch nicht veröffentlicht sind."
 heroLabel: "Expo-2027-Programm / Hero"
 heroAlt: "Die Promenade der Expo 2027 in Belgrad zur goldenen Stunde — Sport, Musik und Spiel"
-lastUpdated: "2026-08-20"
+lastUpdated: "2026-09-13"
 order: 3
 visible: true
 intent: "both"
@@ -83,7 +83,7 @@ Der Haken ist das Timing. Der **Zeitplan der Nationaltage — die Zuordnung von 
 
 ## Wie sind die Öffnungszeiten der Expo 2027?
 
-Ehrlich gesagt: **noch nicht bekannt gegeben.** Stand 2026 gibt es keine offizielle Aussage zu täglichen Öffnungs- und Schließzeiten, zu Zeitfenster-Reservierungen an Spitzentagen oder zu Regelungen des Besuchermanagements. Die offizielle Programmseite zeigt weiterhin **„Tickets available soon“** an und veröffentlicht weder Uhrzeiten noch Ticketpreise noch Eintrittskategorien. Für die Planung ist der einzige feste Anhaltspunkt der Gesamtzeitraum — **15. Mai bis 15. August 2027** — sowie die offizielle Prognose von rund 4,1 Millionen Besuchen im gesamten Zeitraum, im Schnitt etwa 44.652 Besucher pro Tag, mit Spitzentagen von bis zu rund 89.304 Besuchern — ein Hinweis darauf, dass ein Zeitfenster- oder Kapazitätssystem für stark frequentierte Tage plausibel, aber noch nicht bestätigt ist. Prüfen Sie die [offizielle Website der Expo 2027](https://expobelgrade2027.org/en/intro) (expobelgrade2027.org) auf Öffnungszeiten, sobald diese online gehen; wir aktualisieren diese Seite, sobald es so weit ist.
+Ehrlich gesagt: **noch nicht bekannt gegeben.** Stand 2026 gibt es keine offizielle Aussage zu täglichen Öffnungs- und Schließzeiten, zu Zeitfenster-Reservierungen an Spitzentagen oder zu Regelungen des Besuchermanagements. Die offizielle Programmseite zeigt weiterhin **„Tickets available soon“** an und veröffentlicht weder Uhrzeiten noch Ticketpreise noch Eintrittskategorien. Für die Planung ist der einzige feste Anhaltspunkt der Gesamtzeitraum — **15. Mai bis 15. August 2027**. Die Besucherprognosen sind immer weiter gestiegen: Die Participants-FAQ modelliert rund 4,1 Millionen Besuche (etwa 44.652 pro Tag, Spitzen um 89.304), während das BIE inzwischen mehr als 6 Millionen nennt — bei gleichen 93 Tagen wären das eher 64.500 pro Tag. Zahlen dieser Größenordnung machen ein Zeitfenster- oder Kapazitätssystem plausibel, bestätigt ist keines. Prüfen Sie die [offizielle Website der Expo 2027](https://expobelgrade2027.org/en/intro) (expobelgrade2027.org) auf Öffnungszeiten, sobald diese online gehen; wir aktualisieren diese Seite, sobald es so weit ist.
 
 ## Wer sind die Botschafter und Maskottchen der Expo 2027?
 
@@ -93,7 +93,7 @@ Die Expo hat außerdem offizielle Maskottchen: **Rastko und Milica**, ein Figure
 
 ## Wie groß ist das Programm?
 
-Die Expo wurde als Veranstaltung mit **mehr als 8.000 Events über ihre 93 Tage** beschrieben. Diese Zahl stammt aus einer nicht-offiziellen Zusammenstellung und nicht von einer Aussage des Veranstalters, weshalb sie eher als Hinweis auf den Anspruch denn als bestätigte Zahl zu verstehen ist. Zur Einordnung der Größenordnung: Die Veranstaltung ist eine [Spezialisierte Expo](https://www.bie-paris.org/site/en/2027-belgrade) — die erste überhaupt auf dem Westbalkan — mit **141 registrierten Ländern (Stand August 2026)** und einer offiziellen Prognose von über 4 Millionen Besuchen, unterstützt im Hintergrund von einer geplanten Belegschaft von rund 20.000 Freiwilligen. Wie auch immer die genaue Anzahl an Veranstaltungen am Ende ausfällt — das Programm wird für ein wirklich großes, dreimonatiges internationales Event konzipiert und nicht für ein kurzes Festival.
+Die Expo wurde als Veranstaltung mit **mehr als 8.000 Events über ihre 93 Tage** beschrieben. Diese Zahl veröffentlicht das BIE selbst, ein datiertes Programm belegt sie aber noch nicht — sie ist daher als geplante Größenordnung zu lesen, nicht als bestätigte Zahl. Zur Einordnung der Größenordnung: Die Veranstaltung ist eine [Spezialisierte Expo](https://www.bie-paris.org/site/en/2027-belgrade) — die erste überhaupt auf dem Westbalkan — mit **141 registrierten Ländern (Stand August 2026)** und Besucherprognosen, die von 4 Millionen auf die derzeit vom BIE genannten mehr als 6 Millionen geklettert sind, unterstützt im Hintergrund von einer geplanten Belegschaft von rund 20.000 Freiwilligen. Wie auch immer die genaue Anzahl an Veranstaltungen am Ende ausfällt — das Programm wird für ein wirklich großes, dreimonatiges internationales Event konzipiert und nicht für ein kurzes Festival.
 
 ## Kontext, den man kennen sollte
 
