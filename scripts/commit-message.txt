@@ -1,67 +1,83 @@
-Structural pass: main landmark, un-paginate the TOC, answer-first practical pages
+Homepage down to 270 words; no vote widget; close three integrity-gate bypasses
 
-Completes items 5–9 of the content-audit workplan
-(BELGRADEBEST_CONTENT_AUDIT.md §7). Everything here came out of the same
-measurement: the short answer arrived first, but the section that actually does
-the work sat behind a decorative image and a contents list that hid its own
-later entries.
+Two owner questions — is the homepage any good from a modern UI standpoint, and
+should every article carry a thumbs up/down with results hidden. Answered over two
+external review rounds, which also caught a defect I had shipped hours earlier.
 
-**A main landmark, at last.** Articles had none — `<header>`, four `<nav>`s,
-`<article>`, `<footer>`, and no `<main>` anywhere. A keyboard or screen-reader
-user had to tab the whole header on every page, and content extractors had no
-main-content signal, which matters now that AI assistants are a live channel.
-BaseLayout renders one `<main id="main">` for every public page plus a localised
-skip link ("Zum Inhalt springen" on German pages); index.astro drops the
-duplicate it was supplying itself. Footer navigations get `aria-labelledby`
-pointing at their own visible headings, so assistive tech can tell "Explore"
-from "The project" instead of announcing three unlabelled navigations. The new
-`.c-skiplink` pattern went into globals.css before it was used, per the Design
-Law.
+## The defect first
 
-**The table of contents stops hiding sections.** It paginated into horizontal
-slides of ten behind prev/next arrows — so on an 18-section article, eight
-sections were invisible in the very list whose job is to reveal them. Eleven
-articles were affected, and restoring the lost content last commit made it
-worse. All items now render in one two-column list; the inline slider script is
-gone.
+The two quick-answer cards added this morning used a `body` field.
+`GoodToKnow.astro` renders `text`. **Both shipped as a label with no answer** — in
+a section whose intro promised "a straight answer to each." Exactly the class of
+problem the whole audit was about: a page not honouring its own claim. Fixed.
 
-**Practical pages lead with the answer.** On /plan-your-trip the reader has a
-job — get in from the airport, pay for something, check a visa — and a decorative
-hero sat between the short answer and the detail. Measured before: lede, image at
-~4.4KB, TOC at ~5.0KB, first section at ~6.2KB. After: **first section at 1.8KB.**
-The hero is still generated and still used as the OG/social card through
-`meta.image`; it just no longer delays the answer. Leisure legs keep theirs,
-where browsing is part of the point.
+## Homepage: shortened, not redesigned
 
-**Links where the decision is made, not only at the bottom.** Three contextual
-links, each giving a reason rather than a destination name: how to get dinars,
-beside the A1 fare that must be paid in cash; connectivity, beside the ride-hail
-option that silently requires data on arrival; airport transfer costs, beside the
-warning about airport exchange rates. This copies a pattern the taxi article
-already used well.
+The advice was to edit, not rebrand — at 46 landings per 60 days a visual refresh
+would cost design, implementation and regression time that could not be
+distinguished from normal variation.
 
-**The homepage answers before it advertises.** New order: identity → "Start here
-— the questions everyone asks first" (seven task routes, each a one-line answer
-and a link to the real guide) → browse all guides → a compact Expo feature →
-credibility. Expo was previously the first thing every visitor met, for an event
-eight months out, on a page whose arrivals are overwhelmingly not searching for
-it. The separate FAQ section is cut: it duplicated the task block above it, and
-cutting it also removes its JSON-LD, since that is now gated on the same flag.
+- Six quick answers, not seven. "Where to stay" is cut: it has a nav entry and a
+  category card immediately below it. Six also tiles cleanly; seven left one card
+  orphaned on its own row.
+- The eyebrow "Start here" appeared on two consecutive sections. Now
+  **"Plan your first visit"** and **"Explore Belgrade"**.
+- Both filler intros deleted — the cards demonstrate the promise without a
+  sentence claiming it.
+- **The standalone Expo feature is hidden.** Moving it down the page earlier had
+  changed its order, not its weight: it was still a full-width 21:9 hero. Expo
+  keeps its category card, nav entry and identity mention.
+- The credibility block drops from a paragraph re-listing the site's own
+  categories to one sentence and a link. Claiming to be honest is weaker than
+  pointing at the evidence.
 
-**Two reviewed articles lose their FAQ frontmatter.** All 15 questions on
-airport-to-city and money were already answered in their bodies — which is the
-evidence for the earlier finding that literal heading mismatch badly overstated
-how much of the hidden FAQ backlog was novel. Deleting them also takes the
-contradictory airport-rail date with it, so the two copies can no longer
-disagree.
+**515 → 270 words.** Deliberately kept: the narrow-intro / full-width-grid
+convention (that is the `--readw` reading measure doing its job, not a stray
+width), and the two card treatments — answer cards and browse cards are different
+jobs and share one type system.
 
-Verified in dist: exactly one `<main>` and a skip link on every page type, zero
-TOC pagination anywhere, practical first-section at byte 1758, the decision-point
-links present, homepage order as above, no FAQPage markup on the homepage.
-Sitemap unchanged at 141. Build green with the content integrity gate active.
+## The vote widget is not built, and that is the recommendation
 
-growth/growth_changes.jsonl gains BB-CHG-0012. Item 11 (a monthly 20-minute
-review) is a habit, not a commit; everything else on the audit workplan is done.
+At ~114 real sessions per 60 days, a 5% response rate is about **six
+self-selected answers site-wide**. That can occasionally flag something worth a
+look; it cannot rank articles, establish a usefulness rate, or show that a change
+helped. Copying the listing-request storage pattern would also mean a GitHub
+commit per vote, a rebuild trigger, no rate limiting and no deduplication — a lot
+of machinery for an anonymous thumb.
+
+The owner's instinct to hide results was right, and for a stronger reason than
+he gave: "1 of 2 readers found this useful" is worse than silence.
+
+What ships instead is the honest form of the same idea — a plain invitation on
+three arrival-decision pages (airport-to-city, getting-around, 3-day itinerary):
+
+> Something wrong, out of date, or missing from this guide? Tell us what you needed.
+
+No endpoint, no scores, nothing public. One specific "you never said X" is
+actionable on its own, which six votes are not.
+
+**Reopen condition**, recorded so this is a deferral rather than a refusal: a
+named article, a specific unresolved question, someone who will read the
+responses, and plausible exposure for ~50 responses in 60 days.
+
+## Three gate bypasses closed
+
+Reviewing my own About wording turned up that the gate does less than I claimed
+for it. A **missing baseline** made the shrinkage check silently vacuous — it
+passed while checking nothing. An **emptied body** was skipped by a falsy guard.
+An article **deleted from disk** was invisible. All three now fail the build,
+each proven by reintroducing it.
+
+The About sentence claiming the check "refuses to publish a page that has lost
+content" was false and is narrowed to what it does: warn on damaged text and on
+substantial drops in length, while not proving completeness. Writing an
+over-claim into the sentence describing the fix for over-claiming is its own
+small lesson.
+
+Verified in dist: six cards all rendering answers, homepage at 270 words with no
+duplicate eyebrow, invitation present on exactly three articles and absent
+elsewhere, About corrected. Build green. growth/growth_changes.jsonl gains
+BB-CHG-0013.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015oWBfm7TVeUF27YN1nqBdX

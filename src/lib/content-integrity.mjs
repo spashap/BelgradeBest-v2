@@ -91,13 +91,21 @@ function damageOf(body) {
 /** Run both checks. Returns [] when the corpus is healthy. */
 export function checkContentIntegrity({ baselinePath = BASELINE } = {}) {
   const failures = [];
-  const baseline = fs.existsSync(baselinePath)
-    ? JSON.parse(fs.readFileSync(baselinePath, "utf8")).articles ?? {}
-    : {};
+  // A missing baseline used to make this check silently vacuous — the guard
+  // would pass while checking nothing. Absence is now a failure: the file is
+  // committed, so if it is gone something is wrong.
+  if (!fs.existsSync(baselinePath)) {
+    return [{ file: baselinePath, kind: "baseline", detail: "baseline missing — run `node scripts/update-content-baseline.mjs` and commit it" }];
+  }
+  const baseline = JSON.parse(fs.readFileSync(baselinePath, "utf8")).articles ?? {};
 
   for (const file of articleFiles()) {
     const body = bodyOf(fs.readFileSync(file, "utf8"));
-    if (!body) continue;
+    // An emptied body is the most complete loss there is; it must not be skipped.
+    if (!body) {
+      failures.push({ file, kind: "damage", detail: "article body is empty" });
+      continue;
+    }
 
     for (const p of damageOf(body)) failures.push({ file, kind: "damage", detail: p });
 
@@ -112,6 +120,15 @@ export function checkContentIntegrity({ baselinePath = BASELINE } = {}) {
           detail: `${words} words, expected at least ${floor} (baseline ${expected}, −${Math.round((1 - words / expected) * 100)}%)`,
         });
       }
+    }
+  }
+
+  // A file in the baseline that no longer exists is either a deliberate removal
+  // (re-baseline and commit it) or a deletion nobody noticed.
+  const present = new Set(articleFiles());
+  for (const file of Object.keys(baseline)) {
+    if (!present.has(file)) {
+      failures.push({ file, kind: "missing", detail: "in the baseline but not on disk — re-baseline if the removal was intended" });
     }
   }
   return failures;

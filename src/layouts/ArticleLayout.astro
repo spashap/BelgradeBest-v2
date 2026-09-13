@@ -53,6 +53,14 @@ const rn = isDe
     : CONFIG.chrome.article.readNextEvergreen;
 
 // Legs where the reader arrives with a task rather than to browse.
+// Pages carrying the "tell us what was missing" invitation. Deliberately a
+// short list: a prompt on all 55 articles is a survey nobody answers, whereas a
+// prompt on the pages with real arrival decisions can surface one concrete gap.
+const INVITE_FEEDBACK = new Set([
+  "plan-your-trip/airport-to-city",
+  "plan-your-trip/getting-around",
+  "visit-belgrade/belgrade-itinerary-3-days",
+]);
 const PRACTICAL_LEGS = new Set(["plan-your-trip"]);
 const isPractical = PRACTICAL_LEGS.has(leg);
 const resolvedHero = heroForPath(enHref, d.heroAlt ?? d.heroLabel);
@@ -164,6 +172,22 @@ const schemas: object[] = [
             <h2>{isDe ? DE.unknowns : "Still unknown or unconfirmed"}</h2>
             <ul>{d.unknowns.map((u: string) => <li>{u}</li>)}</ul>
           </aside>
+        ) : null
+      }
+      {
+        /* A reader who hits a gap can report it. This is the surviving form of
+           the "was this useful?" idea: at ~114 real sessions per 60 days a vote
+           widget could never reach a decidable sample, but ONE specific
+           "you never said X" is actionable on its own. No endpoint, no scores. */
+        INVITE_FEEDBACK.has(`${leg}/${d.slug}`) ? (
+          <p class="c-article-meta">
+            {isDe
+              ? "Etwas falsch, veraltet oder fehlt in diesem Leitfaden? "
+              : "Something wrong, out of date, or missing from this guide? "}
+            <a href={isDe ? "/contact" : "/contact"}>
+              {isDe ? "Schreiben Sie uns, was Sie gesucht haben" : "Tell us what you needed"}
+            </a>.
+          </p>
         ) : null
       }
       <StayLinks targets={d.stayTargets} />

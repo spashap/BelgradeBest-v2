@@ -231,11 +231,11 @@
     "intro": {
       "eyebrow": "For visitors, newcomers & the curious",
       "title": "The honest English guide to Belgrade",
-      "lede": "Plain-English guides to visiting Belgrade — the things actually worth doing, where to stay, what to eat and drink, how to get around, and how to make a trip out of Expo 2027 (15 May–15 August). Honest, current, and written for people who don't live here."
+      "lede": "Plain-English guides to visiting Belgrade — the things actually worth doing, where to stay, what to eat and drink, how to get around, and how to make a trip out of Expo 2027 (15 May–15 August)."
     },
     "featured": {
       "order": 4,
-      "visible": true,
+      "visible": false,
       "sectionEyebrow": "What's coming",
       "sectionTitle": "Belgrade Expo 2027",
       "sectionIntro": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. We track what's confirmed, what's reported, and what's still unknown — and show you how an Expo visit becomes a Belgrade visit.",
@@ -250,16 +250,16 @@
     "clustersSection": {
       "order": 3,
       "visible": true,
-      "eyebrow": "Start here",
-      "title": "Every way into Belgrade",
-      "intro": "However you got here — visiting, planning, moving, or just curious — there's a door for it. Pick yours."
+      "eyebrow": "",
+      "title": "Explore Belgrade",
+      "intro": ""
     },
     "goodToKnow": {
       "order": 2,
       "visible": true,
       "eyebrow": "Before you go",
-      "title": "Start here — the questions everyone asks first",
-      "intro": "A straight answer to each, and a link to the guide that goes deeper.",
+      "title": "Plan your first visit",
+      "intro": "",
       "items": [
         {
           "label": "Money",
@@ -289,12 +289,7 @@
         {
           "label": "How many days?",
           "href": "/visit-belgrade/belgrade-itinerary-3-days",
-          "body": "Three days covers the city comfortably; two works if you keep to the centre. Add days for Expo or day trips."
-        },
-        {
-          "label": "Where to stay",
-          "href": "/where-to-stay/where-to-stay-in-belgrade",
-          "body": "Stari Grad and Vračar for walkable old Belgrade, Novi Beograd for space and transport. The area decides the trip more than the hotel does."
+          "text": "Three days covers the city comfortably; two works if you keep to the centre. Add days for Expo or day trips."
         }
       ]
     },
@@ -334,10 +329,10 @@
     "ethosSection": {
       "order": 5,
       "visible": true,
-      "eyebrow": "Why trust BelgradeBest",
-      "title": "An honest, independent guide to Belgrade",
+      "eyebrow": "",
+      "title": "How we work",
       "intro": "Independent, source-checked, and built to stay useful — not a content farm chasing clicks.",
-      "body": "BelgradeBest is a comprehensive English-language guide to Belgrade, written for foreign visitors, newcomers, and anyone trying to understand the city from the outside. It covers [things to do and what to see](/visit-belgrade), the practical side of [planning a trip](/plan-your-trip) — airport transfers, money, getting around and staying safe — the city's [food and nightlife](/food-and-nightlife), and everything happening with [Expo 2027](/expo-2027).\n\nEvery page is built on a curated, source-checked knowledge base and written to stay useful rather than chase the news. We leave the perishable details — live prices and exact opening hours — to the official and booking sites that keep them current, and we tell you plainly when something is confirmed, only reported, or still unknown. We stay independent: when we point you toward something to book, it's because it's the genuinely useful answer, not because someone paid for the spot."
+      "body": "We check sources, flag uncertainty, and correct mistakes. [How we research and correct our guides](/about)."
     }
   },
   "layout": {
