@@ -148,11 +148,26 @@ working correctly, not staleness.
 
 ### The standard worth keeping
 
-For each uncertain claim, say **what varies, what evidence supports it, and what
-the reader should do differently because of it.** If you cannot, investigate,
-narrow it, or delete it. The median article still runs 1.2 verifiable facts per
-1,000 words against 3.15 hedge words — that gap is the next editorial project,
-not a structural one.
+Not a metric — a test:
+
+> For each uncertain claim, say **what varies, what evidence supports it, and what
+> the reader should do differently because of it.** If you cannot: investigate,
+> narrow the claim, or delete it.
+
+*"Prices vary, check before travelling"* fails it — nothing changes for the reader.
+*"The A1 is about 400 RSD, cash only on board, checked June 2026 — here is where to
+get dinars"* passes, **and it contains a hedge.** The problem is never hedging; it
+is uncertainty that does not change an action. Apply it while editing a page, not
+as a project.
+
+**Withdrawn from this audit:** an earlier draft reported a median of 1.2 verifiable
+facts per 1,000 words against 3.15 hedge words and called closing that gap the next
+project. That does not hold. The "facts" regex counted only numeric expressions, so
+*"bus 72 goes to Zeleni Venac"* scored zero; it rewarded repetition (the
+airport article scored high partly by restating one fare three times); and hedges
+are frequently the correct word. The clearest disproof came from this audit itself —
+the hedgiest passages on the site, the restored price sections, were exactly right.
+Two unrelated counts establish no correct ratio between them.
 
 **Not doing:** rebrand, URL migration, site search, A/B testing at this volume,
 recommendation engine, or auditing all 422 FAQ answers as a project.
