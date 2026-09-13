@@ -28,6 +28,52 @@ IndexNow notes: the key is public by design. It only fires when `VERCEL_ENV=prod
 build. One-time nicety: also add the site to **Bing Webmaster Tools** so you can
 see crawl results.
 
+### ⚠️ The IndexNow gap — and `scripts/submit-to-bing.mjs`
+
+**IndexNow does not reach Bing for this host.** Microsoft's endpoint 403s
+`UserForbiddedToAccessSite` (verified 2026-08-20, documented in `astro.config.mjs`),
+so build-time pings only ever land at Yandex/Seznam/Naver. Anything Bing does not
+find by ordinary crawling is therefore **never submitted to Bing at all**.
+
+That matters more here than it would elsewhere: **Bing is this site's live search
+channel.** Over the 28 days to 2026-09-11 it served ~1,340 impressions and 46
+clicks against Google's ~300 impressions and 2 clicks over 60 days, and 84 of 92
+GA4 organic sessions came from the Bing index (bing + duckduckgo + ecosia +
+yahoo). A URL Bing has not crawled is a URL that does not exist.
+
+This was caught on 2026-09-13, when all 11 German `/de/` URLs turned out never to
+have been crawled by Bing — nine days after launch, while Bing was crawling 100+
+English pages a day. Zero impressions in either engine, which would have made the
+05 Oct German decision gate measure Bing's crawl scheduling rather than German
+demand.
+
+`scripts/submit-to-bing.mjs` is the manual channel that fills the gap. It reads
+the **live sitemap**, so it always submits what is actually published. Free quota:
+100/day, 1800/month.
+
+```bash
+# ALWAYS from PowerShell (Git Bash rewrites "/de/" into a Windows path;
+# the script detects this and refuses rather than matching nothing)
+node scripts/submit-to-bing.mjs --prefix=/de/ --verify    # crawl status, no writes
+node scripts/submit-to-bing.mjs --prefix=/de/ --dry-run   # show the batch
+node scripts/submit-to-bing.mjs --prefix=/de/             # submit
+node scripts/submit-to-bing.mjs --all --fresh             # whole site, skip crawled
+```
+
+Credentials: `BING_API_KEY`, else `bing_api_key` in
+`~/.config/claude-seo/backlinks-api.json` (this machine's SEO toolkit config).
+Never committed.
+
+**Run it whenever you ship a new URL set** — a new leg, a language mirror, a batch
+of listing profiles. Bing usually crawls submitted URLs within 24–48h; confirm
+with `--verify`. Submitting a URL again is harmless, so re-running is safe.
+
+Notes: `--verify` and `--fresh` cost one API call per URL and Bing throttles per
+host (HTTP 400 + `ErrorCode: 5`, not 429) — the script paces itself and retries
+with backoff, and a URL whose lookup fails is reported `UNKNOWN` and **never**
+treated as never-crawled, so `--fresh` errs toward skipping rather than
+re-submitting.
+
 ---
 
 ## Owner-run scripts (content automation)
@@ -271,3 +317,10 @@ Third batch (knowledge pages / glossary — added 2026-06-22, **not yet pushed**
 - Changed: `src/lib/schemas.ts` (`definedTermSchema`), `astro.config.mjs`
   (glossary import + noindex gating), `src/data/site-config.json`
   (`programmatic.glossaryIndexable: false`).
+
+Fourth batch (Bing crawl submission — added 2026-09-13):
+- Added: `scripts/submit-to-bing.mjs` (owner-run, not deployed).
+- Changed: this runbook (**The IndexNow gap** section above), `CLAUDE.md`
+  (automation section), `growth/growth_changes.jsonl` (`BB-CHG-0003`).
+- No site code, template, content or tracking change — the script only pushes
+  already-published sitemap URLs into Bing's crawl queue.

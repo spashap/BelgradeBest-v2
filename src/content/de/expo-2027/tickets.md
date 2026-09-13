@@ -1,7 +1,7 @@
 ---
 leg: "expo-2027"
 slug: "tickets"
-title: "Expo-2027-Tickets – was wir bisher wissen"
+title: "Expo 2027 Belgrad Tickets: Verkaufsstart, Preise, Stand heute"
 shortTitle: "Tickets"
 description: "Expo-2027-Tickets Belgrad: Verkaufsstart laut Druckausschreibung für 15. September 2026 geplant, Ein-Tages- und Drei-Tage-Tickets bestätigt. Preise offen."
 lede: "Die Ticketpreise für Expo 2027 Belgrad sind noch nicht offiziell bekannt gegeben worden – aber inzwischen gibt es ein Datum. Die Ausschreibung des Veranstalters für den Ticketdruck verlangte, dass die erste Charge bis zum 14. September 2026 geliefert wird, damit der Verkauf am 15. September 2026 beginnen kann, und sie bestätigt Ein-Tages- und Drei-Tage-Tickets. Diese Seite verfolgt, was bestätigt ist, was nur geplant ist und was noch unbekannt ist."

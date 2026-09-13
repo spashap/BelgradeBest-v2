@@ -1,0 +1,45 @@
+---
+// The language cross-link with real words (globals.css .c-langnote).
+//
+// The header switcher (c-lang) is a two-letter chip — easy to miss, and worth
+// nothing as anchor text. This is the in-content version, and it is written in
+// the language it points AT: a German reader who lands on an English page reads
+// a German sentence, and the link to /de/... carries German anchor text instead
+// of "DE". That is also the only real internal-link signal the German set gets
+// from the English site, which is why it matters for discovery.
+//
+// `to` is the language being pointed at, NOT the language of the host page.
+import type { Lang } from "../lib/i18n";
+
+interface Props {
+  to: Lang;
+  href: string;
+  /** Override the sentence where a page needs its own wording. */
+  text?: string;
+  /** Override the link text. */
+  linkText?: string;
+}
+const { to, href, text, linkText } = Astro.props;
+
+const COPY: Record<Lang, { flag: string; text: string; link: string }> = {
+  de: {
+    flag: "Auf Deutsch",
+    text: "Diese Seite gibt es auch auf Deutsch – mit denselben Quellen und demselben Stand.",
+    link: "Zur deutschen Ausgabe",
+  },
+  en: {
+    flag: "In English",
+    text: "This page is also available in English, from the same sources and the same revision.",
+    link: "Read the English edition",
+  },
+};
+const copy = COPY[to];
+---
+
+<aside class="c-langnote" lang={to}>
+  <span class="c-langnote__flag">{copy.flag}</span>
+  <p>
+    {text ?? copy.text}{" "}
+    <a href={href} hreflang={to} lang={to}>{linkText ?? copy.link} →</a>
+  </p>
+</aside>

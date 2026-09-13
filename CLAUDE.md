@@ -265,7 +265,17 @@ IndexNow ping on production builds only (`indexNow()` integration in
 NOT deployed): `gen-internal-links.mjs` (append-only `linksTo` filler),
 `gen-faqs.mjs` (AEO FAQ generation → frontmatter `faqs` → FAQPage JSON-LD),
 `gen-og-default.mjs`, and `syndicate.mjs` (social posting — INERT until X/LinkedIn/
-Facebook tokens are set; add profile URLs to `brand.sameAs`). New config keys:
+Facebook tokens are set; add profile URLs to `brand.sameAs`).
+
+**IndexNow does NOT reach Bing for this host** (Microsoft 403s
+`UserForbiddedToAccessSite`; build pings only land at Yandex/Seznam/Naver) — and
+**Bing is the site's live search channel** (~6× Google's impressions, effectively
+all organic clicks). So a new URL set is invisible until it is pushed manually:
+**after shipping any new URL set (a leg, a language mirror, a batch of listing
+profiles), run `node scripts/submit-to-bing.mjs --prefix=<path>` from PowerShell**
+(free 100/day quota; `--verify` to check crawl status, `--dry-run` to preview).
+The German `/de/` set went nine days uncrawled by Bing for exactly this reason —
+see `KB/automation/RUNBOOK.md → The IndexNow gap`. New config keys:
 `brand.logoPath`, `brand.sameAs`, `seo.defaultOgImage`, `seo.twitterSite`.
 
 ## Knowledge pages — `/glossary` (hub-and-spoke SEO, built 2026-06-22)

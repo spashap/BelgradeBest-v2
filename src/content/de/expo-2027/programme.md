@@ -1,9 +1,9 @@
 ---
 leg: "expo-2027"
 slug: "programme"
-title: "Expo-2027-Programm — Pavillons, Sport, Musik, Nationaltage"
+title: "Expo 2027 Belgrad: Programm, Themen, Pavillons und Nationaltage"
 shortTitle: "Programm"
-description: "Das Expo-2027-Programm: Pavillons, Nationaltage, Sport und Musik unter dem Motto Play for Humanity — was feststeht und was noch offen ist."
+description: "Programm und Themen der Expo 2027 Belgrad: Pavillons, Nationaltage, Sport und Musik unter dem Motto Play for Humanity — was feststeht und was noch offen ist."
 lede: "Das Motto der Expo 2027 — Play for Humanity: Sport and Music for All (Spiel für die Menschheit: Sport und Musik für alle) — gibt den Rahmen für das offizielle Programm vor. Diese Seite ist Ihr Leitfaden zu allem, was geboten wird: die Pavillons und thematischen Bereiche, das Sport- und Musikprogramm, die Nationaltage sowie eine ehrliche Bestandsaufnahme dessen, welche Termine, Öffnungszeiten und Top-Acts noch nicht veröffentlicht sind."
 heroLabel: "Expo-2027-Programm / Hero"
 heroAlt: "Die Promenade der Expo 2027 in Belgrad zur goldenen Stunde — Sport, Musik und Spiel"

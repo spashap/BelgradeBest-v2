@@ -45,7 +45,12 @@ const pavilions = listingsIndexable ? listingsWithDe(LEG) : [];
 const hero = heroForLeg(LEG, "Expo 2027 Belgrad");
 const dates = `${fmtDate(EXPO.startDate, "de")} – ${fmtDate(EXPO.endDate, "de")}`;
 
-const title = "Expo 2027 Belgrad – der deutschsprachige Guide";
+// The <title> carries the terms German readers actually search ("Expo 2027
+// Belgrad" + Termine/Tickets/Pavillons); the H1 keeps the editorial line. The
+// page is already hreflang="de", so announcing German-ness in the SERP title
+// bought nothing — see KB/seo/NEXT-STEPS-2026-09-04.md.
+const title = "Expo 2027 Belgrad: Termine, Tickets, Pavillons und Anreise";
+const heading = "Expo 2027 Belgrad – der deutschsprachige Guide";
 const description = `Expo 2027 in Belgrad (${dates}): Tickets, Anreise, Programm, Übernachten und die Pavillons von Deutschland, Österreich und der Schweiz – quellengeprüft, auf Deutsch.`;
 
 const meta = pageMetadata({
@@ -105,7 +110,7 @@ const schemas: object[] = [
   <Breadcrumbs crumbs={crumbs} />
   <PageIntro
     eyebrow="Expo 2027 Belgrad · Deutsche Ausgabe"
-    title={title}
+    title={heading}
     lede={`Belgrad ist vom ${dates} Gastgeber einer Spezialisierten Expo in Surčin. Hier steht auf Deutsch, was für die Reiseplanung zählt – Termine, Tickets, Anreise, Programm, Übernachten – und was die Pavillons aus Deutschland, Österreich und der Schweiz zeigen. Bestätigtes und Berichtetes halten wir auseinander.`}
   />
 

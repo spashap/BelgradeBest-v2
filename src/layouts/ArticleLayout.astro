@@ -2,6 +2,7 @@
 import { render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import PageIntro from "../components/PageIntro.astro";
+import LangNote from "../components/LangNote.astro";
 import Container from "../components/Container.astro";
 import Placeholder from "../components/Placeholder.astro";
 import ArticleHero from "../components/ArticleHero.astro";
@@ -103,6 +104,17 @@ if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
         <p class="c-article-meta">
           {isDe ? `${DE.updated} ${updatedLabel} · ${DE.sourceChecked}` : `Updated ${updatedLabel} · Source-checked by the BelgradeBest editorial process`}
         </p>
+      </Container>
+    ) : null
+  }
+
+  {
+    /* The twin-language invitation, in the language it points at. High on the
+       page so a German reader sees German before scrolling, and so the German
+       set gets a real anchor-text link from the English article. */
+    hasTwin ? (
+      <Container variant="article">
+        <LangNote to={isDe ? "en" : "de"} href={isDe ? enHref : dePath(enHref)} />
       </Container>
     ) : null
   }

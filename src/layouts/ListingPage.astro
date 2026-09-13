@@ -19,6 +19,7 @@ import { pageMetadata } from "../lib/metadata";
 import { SITE, EXPO, CONFIG } from "../lib/site";
 import { articleSchema, breadcrumbSchema, faqSchema } from "../lib/schemas";
 import { metaTrim } from "../lib/text";
+import LangNote from "../components/LangNote.astro";
 import { ogImage } from "../lib/og";
 import { DE, alternates, dePath, fmtDate, type Lang } from "../lib/i18n";
 import { regionOf, STAGE } from "../lib/expo-participants";
@@ -221,6 +222,28 @@ const exploreTiles = isDe
           </>
         ) : null}
       </p>
+      {
+        /* Twin-language invitation, in the language it points at. The DACH
+           profiles are the site's strongest German-intent magnet, so the German
+           edition gets named here rather than hiding behind the "DE" chip. */
+        hasDe ? (
+          isDe ? (
+            <LangNote
+              to="en"
+              href={enPathname}
+              text="This pavilion profile is also available in English, from the same sources and the same revision."
+              linkText="Read the English profile"
+            />
+          ) : (
+            <LangNote
+              to="de"
+              href={dePath(enPathname)}
+              text={`${listing.i18n?.de?.name ?? name}: dieses Profil gibt es auch auf Deutsch – mit denselben Quellen und demselben Stand.`}
+              linkText="Zur deutschen Fassung"
+            />
+          )
+        ) : null
+      }
       <div class="xp-readouts">
         <div class="xp-readout">
           <div class="xp-readout__k">{isDe ? L.readouts.status : "Status"}</div>

@@ -17,7 +17,8 @@ import { heroForLeg, thumbForSlug, thumbForPath } from "../../lib/hero";
 import { getPlannedChildren } from "../../lib/content-plan";
 import { articlesForLeg } from "../../lib/articles";
 import { hubMetadata } from "../../lib/metadata";
-import { alternates } from "../../lib/i18n";
+import { alternates, dePath } from "../../lib/i18n";
+import LangNote from "../../components/LangNote.astro";
 import { breadcrumbSchema, expoEventSchema, faqSchema } from "../../lib/schemas";
 import {
   participants,
@@ -168,6 +169,18 @@ const schemas: object[] = [
 ---
 <BaseLayout meta={meta}>
   <PageIntro eyebrow={cluster.eyebrow} title={cluster.title} lede={cluster.intro} />
+
+  {/* The German Expo cluster's main inbound link from the English site. Before
+      this it had only the two-letter header chip, and Google reported
+      /de/expo-2027 as "URL is unknown to Google". */}
+  <Container variant="article">
+    <LangNote
+      to="de"
+      href={dePath(`/${LEG}`)}
+      text="Die Expo 2027 Belgrad auf Deutsch: Termine, Tickets, Anreise, Programm und die Pavillons aus Deutschland, Österreich und der Schweiz."
+      linkText="Zur deutschen Ausgabe"
+    />
+  </Container>
 
   <Container>
     <div class="c-countdown" data-expo-start={EXPO.startDate} data-expo-end={EXPO.endDate}>

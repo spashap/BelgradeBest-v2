@@ -1,7 +1,7 @@
 ---
 leg: "expo-2027"
 slug: "getting-there"
-title: "Anreise zur Expo 2027: Surčin, der Flughafen und der Verkehr"
+title: "Anreise zur Expo 2027 Belgrad: Flughafen, Busse und Bahn"
 shortTitle: "Anreise"
 description: "So kommen Sie zur Expo 2027 Belgrad: Surčin liegt rund 5 km vom Flughafen Nikola Tesla, rund 13,5 km vom Zentrum — Routen, Busse und die neue Bahn."
 lede: "So kommen Sie zur Expo 2027 Belgrad: Das Gelände liegt in Surčin, rund 5 km vom Flughafen Nikola Tesla und etwa 13,5 km vom Stadtzentrum entfernt (laut der offiziellen Participants FAQ). Diese Seite verzeichnet jede uns bekannte Route – vom Flughafen, vom Stadtzentrum über das kostenlose Nahverkehrsnetz und über die geplante neue Eisenbahn – und macht klar, was bereits bestätigt ist und was noch ein Versprechen bleibt."

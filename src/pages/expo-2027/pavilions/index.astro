@@ -23,7 +23,8 @@ import {
   STAGE,
   officialCount,
 } from "../../../lib/expo-participants";
-import { alternates } from "../../../lib/i18n";
+import { alternates, dePath } from "../../../lib/i18n";
+import LangNote from "../../../components/LangNote.astro";
 
 // Pavilion ATLAS — the owner-sanctioned "tech" page of the site (globals.css
 // EXPO ATLAS block, xp-*). Inverted ink deck with live readouts, a sticky
@@ -125,6 +126,15 @@ const schemas: object[] = [
         source on each fact. Live status for {pavilions.length} profiled pavilions; a reserved slot for each
         of the {participants.length} publicly named participants. Search, filter by stage or region, sort.
       </p>
+      {/* German readers are the biggest non-English slice of pavilion demand
+          ("deutscher pavillon expo 2027"), so the German atlas is offered here
+          in German rather than behind the two-letter DE chip. */}
+      <LangNote
+        to="de"
+        href={dePath(PATH)}
+        text="Den Pavillon-Atlas gibt es auch auf Deutsch – die Profile aus Deutschland, Österreich und der Schweiz vollständig übersetzt."
+        linkText="Zum deutschen Pavillon-Atlas"
+      />
       <div class="xp-readouts">
         <div class="xp-readout">
           <div class="xp-readout__k">Opening day</div>

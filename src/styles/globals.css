@@ -616,6 +616,36 @@ a.c-gtk__link:hover {
   .c-lang { margin-left: 0; }
 }
 
+/* --- c-langnote : the language cross-link with real words. c-lang above is a
+   two-letter chip in the header; this is the in-content version, WRITTEN IN THE
+   LANGUAGE IT POINTS AT — so a German reader who lands on an English page reads
+   a German sentence, and the link carries German anchor text for crawlers
+   instead of "DE". Renders on any page that has a twin. --- */
+.c-langnote {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--s2) var(--s3);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  padding: var(--s3) var(--s4);
+  margin: 0 0 var(--s4);
+  font-size: var(--t-small);
+}
+.c-langnote__flag {
+  font-family: var(--display); font-weight: 600; font-size: var(--t-eyebrow);
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+  flex-shrink: 0;
+}
+.c-langnote p { margin: 0; color: var(--ink-soft); }
+.c-langnote a { font-weight: 600; }
+/* On the inverted EXPO ATLAS deck (xp-*) the paper-on-ink palette flips. */
+.xp-deck .c-langnote {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+}
+.xp-deck .c-langnote p { color: var(--paper-2); }
+.xp-deck .c-langnote a { color: var(--paper); }
+
 /* --- c-article-meta : the small dated byline under the page intro ("Updated
    20 June 2026 · BelgradeBest editorial"). Freshness shown to readers, not
    just to crawlers via dateModified. --- */
