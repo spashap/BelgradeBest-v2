@@ -132,4 +132,6 @@ Whichever you pick, run the same final checks with the property before you pay. 
 - **Noise.** Stari Grad's bar streets and Zemun's quay restaurants can both run late. Ask whether the room faces the street or a courtyard, and check recent reviews for noise.
 - **Building access.** Both areas have older buildings. Confirm whether there is an elevator, which floor the unit is on, and whether there are entrance steps — Zemun's Gardoš streets are also steep and narrow.
 - **Tourist tax.** Belgrade charges a small per-night residence tax (160 RSD per day for adults as of the latest official source, with reductions for children and exemptions for long stays), collected by the property. Hotels often build it into the rate; apartments may add it as a separate line, so check the house rules.
-- **City 
+- **City tax and payment terms.** For apartments especially, confirm whether the city tax is included, how you get the keys, and whether a deposit or advance payment applies — and keep payment inside a protected booking platform or a verifiable agency.
+
+If you want the full picture of every Belgrade neighbourhood and how they compare, the [where to stay in Belgrade](/where-to-stay/where-to-stay-in-belgrade) overview lays them all out. And if Zemun's atmosphere is pulling at you, the [Zemun](/visit-belgrade/zemun) guide covers what there is to see and do once you are there.

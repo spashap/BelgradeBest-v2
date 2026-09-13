@@ -62,6 +62,58 @@ Belgrade's nightlife spans several distinct formats rather than one. Knowing whi
 - **[Kafanas](/food-and-nightlife/belgrade-kafanas)** — the traditional taverns, where the night is a long sit-down dinner with live tamburica music, [rakija](/glossary/rakija) and, by the small hours, singing. A completely different kind of night from a club, and for many visitors the more memorable one.
 - **The specialist drinks scene** — rakija bars, [Serbian wine bars](/food-and-nightlife/belgrade-wine-bars) and [craft-beer taprooms](/food-and-nightlife/belgrade-craft-beer). Smaller rooms, earlier hours, and the right choice if your ideal night is a good glass rather than a dance floor.
 
+## What music will you hear — turbo-folk, techno, house?
+
+Belgrade's nightlife is musically eclectic, and the genre you want partly dictates the venue you choose. The broad picture (reported, as of 2026):
+
+- **RnB, hip-hop and house** dominate the mainstream splavovi and big summer clubs — the crowd-pleasing, dress-up river-club sound.
+- **Turbo-folk** — the distinctive Balkan folk-pop blended with electronic and dance elements — is a defining strand of the local scene and features heavily at certain clubs and on some splavovi. It's the sound many visitors come specifically to experience; if you want the unmistakably Serbian club night, this is it. Live folk and starogradska (old-town) music, by contrast, belong to the kafana world.
+- **Techno and underground electronic** cluster less on the mainstream splavovi and more in riverside warehouses and smaller boats — the dedicated techno venues that draw enthusiasts for immersive, late electronic nights. Belgrade's club scene grew partly out of a 1990s wartime rave underground, and that techno lineage is still a serious draw.
+
+In summer the riverbank effectively offers all of it at once — a continuous strip of floating clubs pumping everything from techno to turbo-folk. The named venues for each genre belong to the deep-dive pages.
+
+## A district map by character (where each kind of night lives)
+
+Each district carries a distinct nightlife personality, and knowing which is which saves a lot of wandering. These are sketches of nightlife character only — the wider identity of what these neighbourhoods *are* is a separate subject, owned by the Visit Belgrade guide.
+
+### Savamala and the riverfront
+
+The **Savamala** area and the riverfront are the splav and electronic-music heartland — the centre of gravity for the summer river-club scene and the place to head when the season is in full swing. Geographically, Savamala sits on the right bank of the Sava just south-west of the old-town ridge, roughly 0.8–1.0 km from Republic Square, a short walk downhill from central Stari Grad and the Branko bridge. It's a former industrial and warehousing waterfront that became known for creative spaces, nightlife and big river clubs — some with capacity for well over 2,000 people — now intersecting with the large-scale Belgrade Waterfront redevelopment. Parties here peak around 02:00–04:00 (reported, as of 2026).
+
+### Cetinjska and Dorćol
+
+**Cetinjska and Dorćol** hold the bar, cocktail and craft-beer cluster. This is the warm-up-and-stay-out territory, denser in venues than in spectacle, and well suited to an evening built around good drinks. Cetinjska is a former-brewery courtyard complex of bars just off the centre; Dorćol is the central inner-city neighbourhood immediately north and north-east of Republic Square (a 10–15 minute walk), sloping toward the Danube — known for small cafés, speciality coffee, wine bars and several of the city's key craft-beer pubs. It's the everyday, local-feeling end of the going-out scene.
+
+### Skadarlija
+
+**Skadarlija** is the kafana quarter — the cobbled, bohemian heart of the traditional tavern night, with live tamburica music and a slower pace. It sits about 0.3 km east of Republic Square, a 5–8 minute downhill walk, built around Skadarska Street. The showpiece kafanas here are authentic in food and music but touristed and priced for it; treat a Skadarlija night as a special experience rather than everyday dining.
+
+### Beton Hala
+
+**Beton Hala** is the polished waterfront dining-and-drinks strip — a converted industrial warehouse on the Sava waterfront, the more refined, see-and-be-seen end of the spectrum, where dinner and drinks blur together. Many of its venues function as both restaurants and late-night spots, with some showing hours from late morning right through to 04:00.
+
+These are nightlife sketches, not directions on where to sleep or what each neighbourhood is in the round, and the named venues within each belong to the deep-dive pages rather than this overview.
+
+## The practical shape of a night
+
+A few durable practicalities are worth knowing up front.
+
+**Reservations** are effectively required for large-capacity clubs and splavovi, especially at weekends — venues with capacities of several hundred or more treat booking as a "must have," and turning up cold to a prime venue on a Saturday is a gamble. VIP/bottle-service tables are often the main way groups experience the bigger venues. Fine-dining restaurants also strongly recommend booking for prime weekend seating.
+
+**Dress code** at upscale venues, clubs and splavovi is smart-casual as a minimum; see the FAQ above for the door-policy detail (sandals and sportswear refused at the strict end). The **legal drinking age is 18** — the law targets sales to minors, and nightclubs may ask for ID at the door, with younger-looking guests more likely to be carded.
+
+On **money**, the postures are worth understanding even if specifics shift. Cards are accepted across most of the scene, but cash still matters at smaller and older venues, and tips are usually given in cash even when the bill is paid by card (indicative, as of 2026). Entry is often free, but seated tables carry minimum spends — so "free entry" is not the same as a cheap night once you take a prime table. As a rough, time-sensitive benchmark, club and splav drinks run around beer 2–4 EUR and cocktails 5–7 EUR, with bottle service climbing steeply from there (indicative, as of 2026). Budget accordingly: the door may cost nothing while the table costs plenty.
+
+The full mechanics of paying, tipping, opening hours, ID and dress have their own dedicated home in the eating-and-drinking guide, and it is worth reading those before a big night out. Likewise, **getting home late** — moving between the river, the bar districts and wherever you're staying — is its own topic, handled by the planning side of this guide rather than here. (River-club clusters spread along stretches of quay that aren't pleasant to walk between late at night, which is why that planning matters.)
+
+## How to use this overview
+
+Think of this page as the map rather than the itinerary. The shape is stable: the seasonal split between river and indoors, the every-night rhythm, the district characters, the genre spread, and the reservations-and-minimum-spend mechanics. The specifics — which splav is good this summer, which kafana has the music you want, which taproom is pouring — change, and they live on the deep-dive pages that this overview links out to.
+
+If you're still deciding how a night out fits into the rest of a trip, it sits naturally alongside the broader list of [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) — the nightlife is one of the city's genuine reasons to visit, not an afterthought to the daytime sights.
+
+Start with the season, pick the kind of night you want, choose the district that holds it, and then follow the relevant deep-dive for the names. That sequence will serve you better than any single list of venues, precisely because the scene moves with the calendar.
+
 ## Which district holds which night?
 
 Each nightlife district has a distinct personality, and knowing the map saves you a mismatched evening:

@@ -55,3 +55,37 @@ The quarter took shape in the late 19th century as a gathering place for Belgrad
 The honest answer is that the *named* kafanas worth seeking out are the old institutions, because those are the ones that endure — newer concept kafanas and gastropub hybrids come and go, so treat any single recommendation as illustrative rather than a ranking.
 
 The oldest name in the city's kafana lore sits a little away from Skadarska Street. The **"?" (Znak Pitanja)** kafana is widely cited as the oldest still-operating kafana in Belgrade. It is reported to occupy a building dating to 1823 on Kralja Petra Street, near the Cathedral Church, originally an Ottoman-era coffeehouse and now serving traditional Serbian dishes with *starogradska* music in a preserved, heritage-protected interior. Its famous one-character name is reported to come from a 19th-century dispute: when a 1890s owner wanted to name it after the nearby cathedral, the Orthodox Church objected, so a question mark was hung on the door as a temporary fix — and it stuck. Treat the precise dates and the story as reported rather than settled, but the institution itself is durable and safe to seek out.
+
+## Do kafanas have live music every night?
+
+Live music is one of the defining features of a kafana, but whether it plays *every* night depends on which kind you are in. The showpiece kafanas in Skadarlija are reported to have live music nightly — it is a core part of what they sell, and you can expect a *tamburica* or accordion band already playing when you arrive. Neighbourhood kafanas are more variable: some have a band only on weekends or specific evenings, and some have none at all.
+
+The music itself is *starogradska muzika* — old-town songs — performed by small ensembles called *tamburaši*, playing string instruments such as the *tamburica*, alongside accordion and guitar, for a nostalgic and often melancholic mood. As a rule, if live music is the reason you are going, head to Skadarlija or call ahead to a neighbourhood kafana to confirm when its band plays. Band schedules are perishable and change, so this is indicative as of 2026.
+
+## What is the etiquette and what is the experience like?
+
+The single most useful thing to know is that a kafana is a place to linger. Meals last hours, with rounds of food, drink and music rather than a quick plate and a bill. Sharing platters of *meze* and starters from the centre of the table is common rather than individual plating, so order to the middle and reach in — that is the expected behaviour, not a faux pas. Large mixed grills are served the same way, for everyone to take from.
+
+Music is part of the experience and part of the etiquette. Live bands are reported to circulate between tables taking song requests, and guests are expected to tip the musicians directly, usually in cash. Dancing late in the night — sometimes even on chairs or tables — is reported as not unusual once the evening is in full swing. Rakija is central to the evening: meals are often started or punctuated with rounds of plum or other fruit brandy and toasts, and in moments of high emotion glasses are occasionally smashed. Do not be surprised if a small glass of rakija arrives before you have decided on anything else.
+
+One practical warning for visitors from smoke-free countries: smoking indoors is reported to still be permitted in many kafanas despite evolving regulations, and this can be a genuine surprise. This is an indicative posture as of 2026, and it varies from place to place — if it matters to you, ask for a table away from the heaviest smoke, or sit outside where there is a terrace.
+
+## Showpiece versus neighbourhood kafanas — which should you choose?
+
+A useful mental split for a first-time visitor is between the showpiece kafanas and the neighbourhood ones. Skadarlija's kafanas are reported to be authentic in their food and music but geared towards visitors and occasions. The neighbourhood kafanas — found across **Dorćol**, **Vračar** and outlying districts — are reported to be more local in orientation: simpler interiors, lower prices, less English on offer, and a deeper everyday culture. Names sometimes cited in this local category — places such as Kafana Pavle Korčagin, Stara Hercegovina, Savčić or Morava — change over time, so treat any specific venue as illustrative rather than a fixed recommendation.
+
+Neither is more "real" than the other; they serve different moods. A showpiece kafana is the easier introduction, with English-capable staff and a band already playing. A neighbourhood kafana is where you go once you know the rhythm and want the everyday version. The historic Skadarlija kafanas and Znak Pitanja are highly durable institutions; the newer concept kafanas are the perishable ones, so weight your trust accordingly.
+
+A note on Zemun, which has its own riverside fish-and-kafana dining scene with Danube views and a calmer, dinner-rather-than-clubs mood: those specifics live with our by-neighbourhood coverage rather than here, but it is worth knowing the city's kafana culture is not confined to Skadarlija.
+
+## What does a kafana cost, and how does tipping work?
+
+Prices are the most perishable thing on this page, so take the following as indicative only and check current menus. A full kafana meal for two — shared starters, grilled meat, sides, dessert and drinks — at a mid-range central or Skadarlija kafana has commonly been reported around 4,000–8,000 RSD. That figure is triangulated from menus and diner reports as of 2024–2025, not a fixed tariff. Rakija shots are typically priced like other bar spirits.
+
+A practical note on payment: carry cash for kafanas. Cards are increasingly accepted across Belgrade, but smaller and older kafanas can still be cash-only, and — crucially — tips are usually given in cash even when you pay the bill by card. For service, tipping around 5–10% for good service is reported as customary, often simply by rounding up. Remember that the musicians are tipped separately and directly — that is not covered by the service tip, and it is an indicative norm as of 2026. At the touristed kafanas, some visitors are surprised by music charges or higher prices on live-music nights; the fair way to think about these is as the cost of a special experience rather than everyday dining.
+
+## Practical notes for foreigners
+
+Language divides roughly along the same showpiece-versus-neighbourhood line. Showpiece kafanas in Skadarlija and the touristed centre have multilingual menus and English-capable staff, while neighbourhood kafanas may be Serbian-only with limited English. If you want the easier evening, start in Skadarlija; if you want the local one, be ready to point, smile and trust the kitchen — learning a few food keywords or using a translation app helps a great deal.
+
+A few more things that smooth a first kafana night: go hungry and unhurried, since this is not a quick meal; expect the evening to be built around shared dishes and rounds rather than a fixed sequence; and let the band find you rather than the other way round. A kafana evening is one of the most rewarding ways to spend a night in the city, and it pairs naturally with the rest of what there is to do — see our guide to [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade) for how it fits into a wider stay. Go hungry, go unhurried, and let the meal find its own length.

@@ -10,7 +10,7 @@ import ArticleToc from "../components/ArticleToc.astro";
 import StayLinks from "../components/StayLinks.astro";
 import InternalLinkBlock from "../components/InternalLinkBlock.astro";
 import Schema from "../components/Schema.astro";
-import { articleSchema, faqSchema, breadcrumbSchema } from "../lib/schemas";
+import { articleSchema, breadcrumbSchema } from "../lib/schemas";
 import { SITE, CONFIG, interp } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
 import { heroForPath, thumbForPath } from "../lib/hero";
@@ -93,7 +93,13 @@ const schemas: object[] = [
     { name: d.shortTitle, url },
   ]),
 ];
-if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
+// NO FAQ markup here on purpose. The `faqs` frontmatter is never rendered by
+// this layout, so emitting FAQPage described content the reader could not see —
+// and the two copies had already drifted apart (the airport article's FAQ gave a
+// rail date its own body contradicted). Google retired FAQ rich results on
+// 2026-05-07, so the markup bought nothing either. The frontmatter is kept as
+// editorial source material: fold useful answers into the body when editing a
+// page, then delete them. See BELGRADEBEST_CONTENT_AUDIT.md.
 ---
 <BaseLayout meta={meta}>
   <PageIntro eyebrow={eyebrow} title={d.title} lede={d.lede} />
@@ -102,7 +108,7 @@ if (d.faqs && d.faqs.length > 0) schemas.push(faqSchema(d.faqs));
     updatedLabel ? (
       <Container variant="article">
         <p class="c-article-meta">
-          {isDe ? `${DE.updated} ${updatedLabel} · ${DE.sourceChecked}` : `Updated ${updatedLabel} · Source-checked by the BelgradeBest editorial process`}
+          {isDe ? `${DE.updated} ${updatedLabel}` : `Updated ${updatedLabel}`}
         </p>
       </Container>
     ) : null

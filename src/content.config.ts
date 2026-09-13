@@ -13,7 +13,6 @@ export const LEGS = [
   "food-and-nightlife",
   "expo-2027",
   "invest-and-relocate",
-  "medical-tourism",
 ] as const;
 
 const articleSchema = z.object({

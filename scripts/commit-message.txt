@@ -1,55 +1,94 @@
-Add /expo-2027/national-days — the National Day record, one master, no drift
+Restore 84 lost article sections, gate the build, withdraw medical tourism
 
-Step two of BELGRADEBEST_EXPO_CONTENT_PLAN.md, and the first new asset.
+A content audit asking "does the visitor get what they came for" found that the
+answer had been no for three months, and nobody knew.
 
-A National Day date is the only fact on a pavilion profile that changes *which
-day* a visitor travels. The organiser has not published the country-to-date
-schedule — the calendar linked from its programme page is Playground Events —
-but individual countries announce through their own ministries. That is the gap
-this fills, and why it can exist before the organiser publishes.
+## 17 articles were incomplete since 22 June
 
-It ships with **one dated entry**. That is deliberate, and the page says so in
-its own voice: "we have recorded one dated announcement" is a statement about
-this list, not about the world. Absence from it means not recorded by us, never
-not announced. The same discipline runs through the entry itself — Türkiye's
-19 May 2027 is labelled **planned**, because the Ministry of Trade notice says
-planned, and each dated entry carries both what the announcement establishes and
-what it does not. For Türkiye that second field is the honest bulk of it: times,
-venue, performers, public access and reservations are all unestablished.
+Commit e928564 ("Build /glossary knowledge-pages spoke set") silently dropped
+whole `##` sections from 17 articles. Repair passes on 2 July and 7 August fixed
+only the ones that ended mid-sentence. **The rest ended on a clean full stop and
+passed every scan.**
 
-Two pieces of context earn their place:
+/visit-belgrade/things-to-do-in-belgrade was serving 4 of its 10 attractions —
+no Skadarlija, no Zemun, no Ada Ciganlija, no Avala Tower. best-restaurants had
+lost 55% of its body, splavovi 51%, kafanas 49%, craft-beer 48%.
 
-- **An Expo National Day is not that country's national holiday**, and one
-  cannot be derived from the other. Türkiye's 19 May happens to be both — it is
-  Commemoration of Atatürk, Youth and Sports Day, which for a Sport-and-Music
-  Expo is a striking fit — but Osaka disproves the rule: the Netherlands took
-  21 May (King's Day is 27 April) and Sweden 14 May (National Day is 6 June).
-- **How the dates are likely to arrive.** Osaka released them in batches; a June
-  2024 release added 31 countries to an April batch, reaching 131 of 161 roughly
-  ten months before opening. Labelled precedent, not prediction — it cannot
-  establish when Belgrade or any single country will announce.
+scripts/restore-lost-sections.mjs re-inserts the missing sections from revision
+9645a97 in their original positions, leaving every section that still existed
+untouched — so the July and August edits survive intact. **84 sections, roughly
+15,000 words, across 16 articles**, plus two truncated tails and one leftover
+heading stub repaired directly.
 
-The architecture matters more than the page. `src/data/national-days.json` is the
-**single master**. `ListingPage` now GENERATES the National Day row on a profile
-from it, and the duplicated fact row has been deleted from `turkiye.json`. A date
-held in two places drifts apart — that is precisely the failure that produced the
-four contradicting profiles repaired in the previous commit, and it is designed
-out here rather than promised against. Profiles with a documented date also get a
-tile back to the record; profiles without one get nothing, which is verified in
-the build (Germany renders no such link).
+Eleven restored sections carry June-2026 prices or opening hours and are
+UNVERIFIED. The script lists them; they need checking before they are trusted.
 
-The page reaches ~1,500 words without padding. That was not a target — it is
-what saying the true thing carefully costs, once you explain what a National Day
-is, why its date is not derivable, what the announcement does not establish, and
-how the list is maintained.
+## The guard that would have caught it
 
-Article + Dataset + BreadcrumbList JSON-LD. Sitemap 156 → 157, lastmod driven by
-the data master via astro.config. Linked from the programme page in English and
-German. growth/growth_changes.jsonl gains BB-CHG-0008. Build green.
+src/lib/content-integrity.mjs runs at `astro:build:start` and **fails the build**.
+Two independent checks:
 
-No German twin for the page itself yet — the German Expo cluster covers six
-articles and the DACH pavilions, and adding a seventh surface is a maintenance
-commitment worth taking deliberately rather than by reflex.
+1. **Damage** — ends without terminal punctuation, ends on a heading with no
+   content, ends on a dangling function word, unclosed link.
+2. **Shrinkage** — body more than 10% smaller than the size recorded in
+   src/data/content-integrity.json.
+
+The second check is the point. A punctuation check *cannot* prove completeness —
+a section can vanish and leave a perfectly well-formed page, which is exactly why
+three separate repair passes missed these. Verified against all three failure
+modes, including silent section loss that ends cleanly.
+
+Deliberate cuts stay easy, they just have to be stated:
+`node scripts/update-content-baseline.mjs`, committed alongside the edit. That
+turns shortening an article into a reviewable act instead of an accident.
+
+It lives in src/lib rather than scripts/ on purpose — scripts/ is
+.vercelignore'd, so a guard there would not run on deploys.
+
+## Medical tourism withdrawn (15 articles + hub)
+
+Two independent reasons. The owner's own research concluded Serbia is not
+competitive against Hungary, Turkey or Moldova, so the commercial premise does
+not hold. Separately, the content made treatment-relevant claims it could not
+support: a 20–60% saving called "realistic" with no citation; surgical capacity
+inferred from domestic waiting-list length; "ISO" listed as an accreditation when
+ISO develops standards and does not issue certificates; an unevidenced ranking of
+risks. A "not medical advice" line does not repair an unsupported claim that
+influences a treatment decision.
+
+Removed from public delivery rather than noindexed — a quarantined page still
+serves the same guidance to anyone holding the link. The 15 articles are preserved
+at KB/withdrawn/medical-tourism/ with a README recording the reasoning and what a
+defensible minimum would look like. Leg removed from site-schema, header nav, the
+LEGS enum, homepage ethos copy and the About disclaimer; the one cross-link from a
+retained article cut; 60 orphaned hero images deleted. Zero dangling
+/medical-tourism links remain in the build. Sitemap 157 → 141.
+
+## Two claims the site could not back
+
+ArticleLayout emitted FAQPage JSON-LD for 422 questions — roughly 27,000 words
+across 64 English and 6 German articles — that the layout never renders. The
+markup described content no reader could see, and the two copies had already
+drifted: the airport article's FAQ gave a rail delivery date its own body
+contradicted. Google retired FAQ rich results on 7 May 2026, so it bought nothing
+either. Removed; the homepage had the same defect and its schema is now gated on
+the same flag as its visible section. The frontmatter stays as editorial source
+material to fold into bodies during page edits, not as a second maintained copy.
+
+Every article also carried "Updated <date> · Source-checked by the BelgradeBest
+editorial process" — attached automatically to any page with a date, with no
+evidence of a review and no visible sources. Reduced to the date. The About page's
+"every page is manually reviewed… nothing goes live unread" is replaced with an
+accurate account, including this incident and the new guard, because a site that
+publishes its own corrections is the kind of source we are trying to be.
+
+## Notes
+
+BELGRADEBEST_CONTENT_AUDIT.md records the full audit, the channel analysis behind
+it (site-wide metrics were dominated by 92 bot sessions averaging 0.07s), and what
+remains open. growth/growth_changes.jsonl gains BB-CHG-0009, 0010 and 0011.
+
+Build green with the gate active. Sitemap 141 URLs.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015oWBfm7TVeUF27YN1nqBdX

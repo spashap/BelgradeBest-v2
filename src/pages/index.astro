@@ -134,7 +134,9 @@ const mainSections = [
   <Schema
     schemas={[
       websiteSchema(),
-      ...(H.faqSection?.faqs?.length ? [faqSchema(H.faqSection.faqs)] : []),
+      // Gate the markup on the SAME flag as the visible section — emitting it for a
+      // hidden FAQ is the defect we just removed from ArticleLayout.
+      ...(H.faqSection?.visible !== false && H.faqSection?.faqs?.length ? [faqSchema(H.faqSection.faqs)] : []),
     ]}
   />
 </BaseLayout>

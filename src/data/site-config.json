@@ -72,10 +72,6 @@
         {
           "ref": "invest-and-relocate",
           "visible": false
-        },
-        {
-          "ref": "medical-tourism",
-          "visible": true
         }
       ]
     },
@@ -336,7 +332,7 @@
       "eyebrow": "Why trust BelgradeBest",
       "title": "An honest, independent guide to Belgrade",
       "intro": "Independent, source-checked, and built to stay useful — not a content farm chasing clicks.",
-      "body": "BelgradeBest is a comprehensive English-language guide to Belgrade, written for foreign visitors, newcomers, and anyone trying to understand the city from the outside. It covers [things to do and what to see](/visit-belgrade), the practical side of [planning a trip](/plan-your-trip) — airport transfers, money, getting around and staying safe — the city's [food and nightlife](/food-and-nightlife), [medical tourism in Belgrade](/medical-tourism), and everything happening with [Expo 2027](/expo-2027).\n\nEvery page is built on a curated, source-checked knowledge base and written to stay useful rather than chase the news. We leave the perishable details — live prices and exact opening hours — to the official and booking sites that keep them current, and we tell you plainly when something is confirmed, only reported, or still unknown. We stay independent: when we point you toward something to book, it's because it's the genuinely useful answer, not because someone paid for the spot."
+      "body": "BelgradeBest is a comprehensive English-language guide to Belgrade, written for foreign visitors, newcomers, and anyone trying to understand the city from the outside. It covers [things to do and what to see](/visit-belgrade), the practical side of [planning a trip](/plan-your-trip) — airport transfers, money, getting around and staying safe — the city's [food and nightlife](/food-and-nightlife), and everything happening with [Expo 2027](/expo-2027).\n\nEvery page is built on a curated, source-checked knowledge base and written to stay useful rather than chase the news. We leave the perishable details — live prices and exact opening hours — to the official and booking sites that keep them current, and we tell you plainly when something is confirmed, only reported, or still unknown. We stay independent: when we point you toward something to book, it's because it's the genuinely useful answer, not because someone paid for the spot."
     }
   },
   "layout": {

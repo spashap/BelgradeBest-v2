@@ -57,3 +57,11 @@ What keeps a low-budget trip genuinely viable is how much is free. The fortress 
 The best months are April to June and September to October — mild weather, festivals, and fewer extremes than mid-summer, when July and August can be very hot.
 
 There is one date worth planning around. Expo 2027, a specialised exposition, runs from 15 May to 15 August 2027, projected at roughly 4–4.1 million visitors, with 130+ countries participating as of early 2026. It will intensify summer crowds and prices that year. If you aren't attending Expo, the shoulder months in 2027 are likely to be the more comfortable choice.
+
+## Getting around, money and language
+
+Public transport — buses, trams and trolleybuses — has been free for all passengers since 1 January 2025. For taxis, use apps (Bolt-equivalents such as CarGo or Yandex) or official ranks, and confirm the meter, since taxi overcharging is the most frequently cited scam. Airport-to-city arrival logistics aren't covered here; for that, head to [plan your trip](/plan-your-trip).
+
+The currency is the Serbian dinar (RSD) only — euros aren't accepted in shops, though cards are widely accepted and ATMs are common. English proficiency is high (Serbia ranks around 25th on the EF English Proficiency Index, in the "high proficiency" band), so visitors generally manage in English alone.
+
+The short version: Belgrade rewards travellers who come for substance over polish. It's safe with sensible caution, affordable if not bargain-basement, and most enjoyable outside the height of summer — especially in 2027.

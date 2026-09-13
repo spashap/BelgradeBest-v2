@@ -48,6 +48,30 @@ Skadarlija is the most single-minded district on this map. Its food-and-drink id
 
 A few things to set expectations. The historic Skadarlija kafanas are heavily touristed, with multilingual menus and live music nightly, and they are priced above neighbourhood averages — treat an evening here as a special experience rather than everyday dining. Some visitors are surprised by music charges or higher prices on live-music nights, so it's worth checking. A full kafana meal for two (shared starters, grilled meat, sides, dessert and drinks) at a mid-range venue here is reported around 4,000–8,000 RSD (indicative, triangulated from menus and diner reports as of 2024–2026).
 
+## Dorćol — coffee and craft
+
+**Where it sits:** Dorćol lies immediately north and north-east of Republic Square, sloping down toward the Danube — a 10–15 minute walk from the centre. Upper Dorćol is the area closer to the core (around Dobračina and Visokog Stevana); Lower Dorćol runs down toward the riverfront.
+
+Dorćol is the city's **coffee-and-craft cluster**. Its character centres on small cafés and specialty coffee, wine bars and craft-beer bars, alongside modern bistros and street-food spots. This is the district for a slow morning over a carefully made coffee, an afternoon tasting your way through local wines, or an unhurried bistro dinner — a more contemporary, lower-key rhythm than the traditional dinners a few streets away in Skadarlija.
+
+Two threads run particularly strong here. Dorćol is at the heart of what makes Belgrade widely described as Serbia's **craft-beer capital**: microbreweries, taprooms and specialist pubs cluster here (and in Savamala and the central neighbourhoods). And its specialty cafés double as informal co-working and meeting spaces for digital workers and long-stay visitors — useful if you want somewhere to settle in with a laptop. It rewards wandering rather than booking, and suits visitors who like to drink well without committing to a big night out.
+
+For the named coffee houses, see [Belgrade coffee culture](/food-and-nightlife/belgrade-coffee-culture); for wine bars and the craft-beer scene, see [Belgrade wine bars](/food-and-nightlife/belgrade-wine-bars) and [Belgrade craft beer](/food-and-nightlife/belgrade-craft-beer). As a place to explore beyond the cafés, Dorćol is covered in the [neighbourhoods guide](/visit-belgrade/belgrade-neighborhoods).
+
+## Cetinjska — the courtyard scene
+
+**Where it sits:** Cetinjska is a street and former brewery complex tucked between Skadarlija and the Republic Square fringe, on the edge of Stari Grad — within easy walking distance of both.
+
+Cetinjska is small in footprint but distinct in character: a former brewery courtyard repurposed into a gated cluster of **independent bars, gig venues and art spaces**, many with outdoor seating. Where Skadarlija next door is traditional and tourist-facing, Cetinjska is the younger, alternative going-out hub — energetic, bar-led and one of the places locals actually drink. Belgrade's cocktail bars concentrate here and at Beton Hala. Come for drinks, live music and atmosphere rather than a sit-down meal; food is incidental to the night. For named bars and the wider going-out scene, see [Belgrade nightlife](/food-and-nightlife/belgrade-nightlife).
+
+## Savamala and the riverfront — nightlife first
+
+**Where it sits:** Savamala is on the right bank of the Sava, just south-west of the old-town ridge — roughly 0.8–1.0 km from Republic Square, stretching between the Branko bridge and the old Sava port, and now intersecting the Belgrade Waterfront redevelopment. The splav clusters extend along the Brodarska / Savski kej quays.
+
+Savamala's personality is **nightlife-led**. A former industrial and warehousing waterfront, it became Belgrade's creative-spaces and riverfront-club district, and it remains the **splav** (floating-club) and electronic-music heartland — the venues that give Belgrade much of its going-out reputation. The big river clubs here run to real scale: nightlife guides describe capacities of over 2,000, bottle service, views across to New Belgrade and parties that peak between 02:00 and 04:00. It draws a younger, alternative crowd mixed with international visitors.
+
+Food here is firmly secondary to the scene: expect casual grills, street food and some riverfront restaurants rather than destination dining. A couple of practical notes carried over from the nightlife guides: "free entry" doesn't mean a cheap night if you're seated at a prime table with a minimum spend, and taxi overcharging near the river clubs at night is a recurring complaint — use a reputable ride-hailing app. Come to Savamala for the night itself — the music and the floating clubs — and treat eating as fuel for it. For the clubs themselves and how the splav scene works, see [Belgrade nightlife and splavovi](/food-and-nightlife/belgrade-splavovi).
+
 ## Dorćol — the coffee-and-craft cluster
 
 **Where it sits:** immediately north and north-east of Republic Square, sloping toward the Danube — a 10–15 minute walk from the square for the upper part, longer for the riverward lower streets.
@@ -65,6 +89,45 @@ Savamala's food-and-drink identity is **nightlife-led**. The former warehouse di
 **Where it sits:** the converted warehouse strip on the Sava quay directly below the [Kalemegdan](/glossary/kalemegdan) ridge, a short downhill walk from [Knez Mihailova](/glossary/knez-mihailova).
 
 Beton Hala is the dressed-up end of riverside eating: a row of Serbian and international restaurants — Italian, seafood, steak, fusion — plus cocktail bars, all with river views toward New Belgrade. Its defining habit is blending dinner into late-night: some venues run roughly 10:00–04:00 daily (reported, as of 2026), so a table booked for dinner can carry you straight through to the small hours without moving. The crowd is dressier and slightly older than in the bar districts — if Skadarlija is the traditional special-occasion evening, this is the contemporary one.
+
+## Zemun — the river table
+
+**Where it sits:** Zemun is a separate historical town now part of Belgrade, downriver on the Danube, north-west of the centre. It has its own riverfront promenade, its own old core and its own green market.
+
+Zemun has its own, gentler character. Its food-and-drink identity leans to **riverside fish restaurants**, grilled fish and river specialities, and relaxed, kafana-style dining along the Danube. The nightlife here is calmer than the central splavovi — this is a place for long dinners rather than clubs, and the floating venues along this stretch tend to be grill-and-seafood restaurants with ambient music, more family-friendly than party-driven. Zemun also has its own green market, which fits its slower, neighbourhood feel.
+
+Come here when you want river fish and an unhurried evening rather than volume and crowds. Zemun is also a destination in its own right, with plenty to see beyond the waterfront tables; for that side of it — its history, the Gardoš tower, the promenade and how to get there — see the dedicated guide to [Zemun](/visit-belgrade/zemun).
+
+## Vračar — the neighbourhood table
+
+**Where it sits:** Vračar is the residential district on the ridge south-east of Stari Grad, built around the Temple of Saint Sava, away from the rivers.
+
+Vračar is residential and café-dense. Its food-and-drink life is built around **neighbourhood restaurants, brunch spots and dessert shops**, clustered in the streets around the Temple of Saint Sava — pizzerias and international bistros, pancake and dessert places among them. This is the district for everyday eating done well — a relaxed brunch, a casual local dinner, coffee and cake in the afternoon — rather than spectacle. Like Dorćol, its specialty cafés double as work-and-meeting spaces for digital workers, and the district also supplies some of the polished tables used for business dinners. It suits visitors who want to eat the way residents do, away from the riverfront and the tourist-facing strips. For named restaurants, see [best restaurants in Belgrade](/food-and-nightlife/best-restaurants-in-belgrade); for cafés, [Belgrade coffee culture](/food-and-nightlife/belgrade-coffee-culture).
+
+## New Belgrade — hotels and skyline
+
+**Where it sits:** New Belgrade (Novi Beograd) is across the Sava from the old town — the modern, planned half of the city, with the business hotels, malls and high-rises, and the river quays opposite Savamala.
+
+Across the river, New Belgrade reads quite differently again. Its food-and-drink identity is **hotel and business dining**: large business-hotel restaurants and rooftop lounges with international menus and river or skyline views, rather than traditional kafana culture. This is where Belgrade's hotel-based fine dining concentrates — the polished lounges and grills that double as the city's deal-making tables for business dinners.
+
+If your evening calls for a polished international meal, a rooftop drink, or somewhere that works for business as much as pleasure, this is the district that delivers it — just don't come expecting old-town atmosphere. For named restaurants, see [best restaurants in Belgrade](/food-and-nightlife/best-restaurants-in-belgrade).
+
+## Choosing your evening — and a seasonal note
+
+Lined up together, the districts sort themselves by mood:
+
+- **Traditional dinners with music** — Skadarlija.
+- **Coffee, wine and craft beer at a gentle pace** — Dorćol.
+- **Cocktails and a younger, dressier crowd** — the Cetinjska courtyard.
+- **Late nights on the river in the big floating clubs** — Savamala and the riverfront.
+- **Polished waterfront dining that drifts into the small hours** — Beton Hala.
+- **River fish and a calmer evening** — Zemun.
+- **Everyday neighbourhood eating** — Vračar.
+- **International menus and skyline views (and business dinners)** — New Belgrade.
+
+Season shifts the balance. Summer (roughly May–September) belongs to the splavovi, open-air bars and riverfront dining; winter pushes the scene indoors to clubs, kafanas and cosy bistros. Coffee and dessert culture runs year-round, with ice-cream and gelato peaking in the warm months.
+
+This page is the by-district map; the specifics live elsewhere. Named venues, prices and opening hours change, so this guide deliberately describes each district's durable character rather than cataloguing addresses. When you've settled on a district, follow the relevant format guide — [kafanas](/food-and-nightlife/belgrade-kafanas), [nightlife and river clubs](/food-and-nightlife/belgrade-nightlife), [coffee](/food-and-nightlife/belgrade-coffee-culture), [wine](/food-and-nightlife/belgrade-wine-bars), [craft beer](/food-and-nightlife/belgrade-craft-beer) or [restaurants](/food-and-nightlife/best-restaurants-in-belgrade) — for the named places worth your time. Those details are perishable by nature; the personality of each district, by contrast, has stayed remarkably stable.
 
 ## Zemun — fish restaurants on the Danube
 

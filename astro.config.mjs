@@ -179,6 +179,34 @@ const pathOf = (url) => new URL(url).pathname.replace(/\/$/, "");
 // `astro build`), so no npm-lifecycle/.vercelignore concerns. The key is public
 // by design (hosted at /<key>.txt). Never fails the build; no-ops off-prod.
 const INDEXNOW_KEY = "14ec77dc669e4a48947348a73e9ee9b7";
+// Content integrity gate — refuses to build damaged or silently-shrunken
+// articles. Added 2026-09-13 after the June content loss shipped for three
+// months: 17 articles lost whole sections, and the ones that ended on a clean
+// full stop survived three separate repair passes unnoticed.
+// Deliberate deletions are fine — re-record the baseline and commit it:
+//   node scripts/update-content-baseline.mjs
+function contentIntegrity() {
+  return {
+    name: "content-integrity",
+    hooks: {
+      "astro:build:start": async ({ logger }) => {
+        const { checkContentIntegrity } = await import("./src/lib/content-integrity.mjs");
+        const failures = checkContentIntegrity();
+        if (failures.length === 0) {
+          logger.info("content integrity OK");
+          return;
+        }
+        for (const f of failures) logger.error(`${f.file} — ${f.kind}: ${f.detail}`);
+        throw new Error(
+          `Content integrity check failed (${failures.length} problem(s)). ` +
+            "Damaged content must be repaired; an intentional cut needs " +
+            "`node scripts/update-content-baseline.mjs` committed alongside it.",
+        );
+      },
+    },
+  };
+}
+
 function indexNow() {
   return {
     name: "indexnow-ping",
@@ -368,6 +396,7 @@ export default defineConfig({
         return item;
       },
     }),
+    contentIntegrity(),
     indexNow(),
     slimServerlessFunction(),
   ],

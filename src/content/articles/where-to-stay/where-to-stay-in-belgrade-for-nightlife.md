@@ -145,4 +145,8 @@ Short-stay nightlife trips often mean apartments, which run different mechanics 
 ## Quick reference
 
 - **Best fit for nightlife:** Savamala / Beton Hala (clubs and river splavovi), Dorćol / Strahinjića Bana / Cetinjska (bars and neighbourhood feel), Stari Grad / Skadarlija (kafanas and old-town walkability).
-- **The one rule:** the perfect nightlife spot is usually a b
+- **The one rule:** the perfect nightlife spot is usually a bad sleep spot — stay 5–10 minutes from the loud street, not on it. Prefer courtyard-facing rooms.
+- **Splavovi:** Sava-side rafts are closest from Savamala / Waterfront; warm-season only; moorings shift — confirm before planning around one. Details in the [splavovi guide](/food-and-nightlife/belgrade-splavovi).
+- **Getting home:** official taxi or app, meter on, RSD cash ready; ask reception to call one.
+- **Check before booking:** non-smoking confirmed in writing, late check-in possible, deposit/payment terms clear, host registers your stay, city tax included or separate.
+- **For venues, not beds:** see the [Belgrade nightlife guide](/food-and-nightlife/belgrade-nightlife) and the broader [where to stay in Belgrade](/where-to-stay/where-to-stay-in-belgrade) overview.
