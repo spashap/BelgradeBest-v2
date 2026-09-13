@@ -124,28 +124,35 @@ reversible.
 - **The National Days record** — authority, source, checked date, what the evidence
   establishes *and what it does not* — is the pattern the rest of the site should copy.
 
-## 7. What is still open
+## 7. Workplan status
 
-Ranked. Nothing here is urgent; items 1–4 of the original plan are done.
+Everything on the workplan is done as of 13 September 2026, in this session.
 
-1. **Verify 11 restored sections** containing June-2026 prices and opening hours.
-   Listed by `node scripts/restore-lost-sections.mjs --dry-run`.
-2. **Shorten arrival → answer.** The lede answers, but a hero image (byte 4377) and
-   the TOC (5023) sit between it and the first section (6155). Cut decorative heroes
-   on practical pages; drop the TOC's horizontal pagination.
-3. **Add a `<main>` landmark and skip link.** No article has one — `<header>`,
-   4×`<nav>`, `<article>`, `<footer>`, no `<main>`. Accessibility, and it degrades
-   extraction for the AI engines that are now a live channel.
-4. **Contextual next steps at the decision boundary.** The money link belongs beside
-   "the A1 requires cash", not in a gallery at the bottom. The taxi article already
-   does this well — copy it.
-5. **Homepage**: identity → four task routes → practical basics → one compact Expo
-   feature → credibility line. Capped effort; 46 landings in 60 days.
-6. **The editorial standard**, from Codex and worth adopting: for each uncertain
-   claim, say *what varies, what evidence supports it, and what the reader should do
-   differently because of it*. If you cannot, investigate, narrow it, or delete it.
-   Median article currently runs 1.2 verifiable facts per 1,000 words against 3.15
-   hedge words.
+| | Item | Outcome |
+|---|---|---|
+| ✅ 1 | Restore lost content + build gate | 84 sections restored; gate blocks damage **and** silent shrinkage |
+| ✅ 2 | Withdraw medical tourism | Leg removed entirely; premise did not hold |
+| ✅ 3 | Remove hidden FAQ markup | Article + homepage schema gone |
+| ✅ 4 | Correct editorial promises | "Source-checked" byline and About claim fixed |
+| ✅ 5 | Shorten arrival → answer | Practical first-section byte 6155 → **1758**; TOC pagination removed |
+| ✅ 6 | `<main>` + skip link + footer labels | Every page type; skip link localised |
+| ✅ 7 | Homepage re-ordered around tasks | Identity → 7 task routes → browse → compact Expo → credibility |
+| ✅ 8 | Decision-point links | Dinars beside the cash-only fare; connectivity beside the data requirement; transfer costs beside the exchange warning |
+| ✅ 9 | FAQ salvage on edited pages | All 15 already covered in body; duplicates deleted with the contradictory rail date |
+| ↻ 11 | Monthly 20-minute review | A habit, not a commit |
+
+**Checked and needing no change:** the 11 restored sections carrying prices. On
+inspection every one already dated and bounded its own claim — *"indicative as of
+2025–2026"*, *"an indicative example from 2024"*. That is the standard in §6
+working correctly, not staleness.
+
+### The standard worth keeping
+
+For each uncertain claim, say **what varies, what evidence supports it, and what
+the reader should do differently because of it.** If you cannot, investigate,
+narrow it, or delete it. The median article still runs 1.2 verifiable facts per
+1,000 words against 3.15 hedge words — that gap is the next editorial project,
+not a structural one.
 
 **Not doing:** rebrand, URL migration, site search, A/B testing at this volume,
 recommendation engine, or auditing all 422 FAQ answers as a project.
