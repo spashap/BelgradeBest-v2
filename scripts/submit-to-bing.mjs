@@ -104,9 +104,12 @@ const KEY = apiKey();
 // ── Bing Webmaster API ──────────────────────────────────────────────────────
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// Bing throttles per host and answers with HTTP 400 + ErrorCode 5 rather than
-// 429, so a plain res.ok check reads a throttle as a hard failure. Back off and
-// retry those; let every other error through.
+// Bing answers HTTP 400 with an ErrorCode envelope instead of a proper status,
+// so a plain res.ok check reads a retryable hiccup as a hard failure:
+//   5 = ThrottleHost  — the per-host rate limit
+//   2 = UnknownError  — transient; the same URL answers fine seconds later
+// Both are retried with backoff. Everything else is a real error and throws.
+const RETRYABLE = new Set([5, 2]);
 async function get(method, params = {}, attempt = 0) {
   const qs = new URLSearchParams({ apikey: KEY, siteUrl: SITE, ...params });
   const res = await fetch(`${API}/${method}?${qs}`);
@@ -118,7 +121,7 @@ async function get(method, params = {}, attempt = 0) {
     } catch {
       /* not a Bing error envelope */
     }
-    if (code === 5 && attempt < 4) {
+    if (RETRYABLE.has(code) && attempt < 4) {
       await sleep(2000 * (attempt + 1));
       return get(method, params, attempt + 1);
     }

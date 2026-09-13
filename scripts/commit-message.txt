@@ -1,82 +1,28 @@
-Get the German Expo cluster crawled, found and searchable
+submit-to-bing: retry Bing's transient UnknownError, not just throttles
 
-Three connected fixes to the German pilot, which nine days after launch had
-zero impressions in both engines.
+Running --all --fresh over the full 156-URL sitemap exposed a hole in the
+submitter. Bing answers HTTP 400 with an ErrorCode envelope rather than a real
+status, and the script only retried ErrorCode 5 (ThrottleHost). ErrorCode 2
+("UnknownError") is also transient — the same URL that failed with it during the
+sweep had resolved cleanly minutes earlier — but it fell through to the hard-error
+path, was reported UNKNOWN, and was therefore skipped by --fresh. Since --fresh
+deliberately errs toward skipping rather than re-submitting, a flaky sweep
+silently under-submits. Both codes are now retried with backoff.
 
-1. CRAWLING — scripts/submit-to-bing.mjs (new, owner-run, not deployed)
+The runbook gains the practical rule that follows: use --all --fresh to DISCOVER
+the gap, then submit the named URLs with --prefix, which performs no per-URL
+status lookup and so cannot be thinned by Bing's error rate.
 
-Bing had never crawled a single one of the 11 German URLs. GetUrlInfo returned
-the never-crawled sentinel (year 3939) for all of them while Bing was crawling
-100+ English pages a day and holding 136 of 156 sitemap URLs. Google had indexed
-1 of 11 and reported the hub as "URL is unknown to Google".
+That is how the 10 remaining never-crawled URLs were submitted on 2026-09-13 —
+/areas/novi-beograd, /areas/skadarlija and eight /glossary/ terms including
+/glossary/bie (Bureau International des Expositions), Expo vocabulary that was
+invisible on the channel delivering effectively all of the site's organic clicks.
+Accepted; quota 89 -> 79 daily, 1789 -> 1779 monthly, 21 URLs submitted in total
+today across this and the German set.
 
-The cause was a gap we had documented but not closed: IndexNow cannot reach
-Microsoft for this host — their endpoint 403s "UserForbiddedToAccessSite" (see
-the comment in astro.config.mjs) — so build-time pings only ever land at
-Yandex/Seznam/Naver and nothing has ever pushed a URL to Bing. That matters more
-here than on most sites: Bing is this site's live search channel. Over the 28
-days to 2026-09-11 it served ~1,340 impressions and 46 clicks against Google's
-~300 impressions and 2 clicks over 60 days, and 84 of 92 GA4 organic sessions
-came from the Bing index (bing + duckduckgo + ecosia + yahoo).
+growth/growth_changes.jsonl gains BB-CHG-0005.
 
-The script reads the LIVE sitemap, filters by --prefix, and submits through Bing
-Webmaster's URL Submission API (free, 100/day). --verify reports per-URL crawl
-status, --dry-run previews, --fresh skips already-crawled URLs. It paces itself
-and retries with backoff around Bing's per-host throttle, which answers HTTP 400
-+ ErrorCode 5 rather than 429; a URL whose lookup fails is reported UNKNOWN and
-never treated as never-crawled, so --fresh errs toward skipping. Git Bash
-rewrites a bare "/de/" into a Windows path, so the script detects that and
-refuses rather than silently matching nothing — run it from PowerShell.
-
-All 11 German URLs were submitted and accepted on 2026-09-13 (quota 100 -> 89).
-A --all --fresh survey then showed the same gap beyond the German set: 2 /areas/
-and 8 /glossary/ pages had never been crawled either, including /glossary/bie —
-Expo vocabulary sitting uncrawled on the channel that actually ranks us. Those
-were submitted in a follow-up run.
-
-2. TARGETING — German titles and descriptions
-
-The translation itself is strong (native Sie-form, localised dates, question-form
-H2s, German FAQPage JSON-LD, 1,000-2,400 words a page), but three of six article
-titles omitted "Belgrad" — including tickets, whose German query "expo belgrad
-tickets" is the strongest German-intent term in our Bing data (9 impressions,
-position 6.3). Every title now leads with "Expo 2027 Belgrad". "Weltausstellung"
-and "Serbien" appeared in no German title or description at all; what-is-it now
-names Weltausstellung as the contrast it genuinely is (this is a Specialised
-Expo, not a World Expo) and guide names Serbien. The German hub's <title> drops
-"der deutschsprachige Guide" — the page is already hreflang="de", so announcing
-German-ness in the SERP bought nothing; the H1 keeps the editorial line.
-
-All three DACH pavilion descriptions were truncating mid-sentence ("...der
-Kategorie…"). Their i18n.de.summary fields are restructured into two sentences so
-metaTrim yields a complete first sentence; listing `updated` bumped accordingly.
-
-3. CROSS-LINKS — the new c-langnote pattern
-
-The only English-to-German internal link was the two-letter "DE" header chip:
-easy to miss, and worthless as anchor text. c-langnote (added to globals.css
-first, per the Design Law, then used) is the in-content version, written in the
-language it points AT — a German reader on an English page now reads a German
-sentence, and the link carries German anchor text. It renders from the page's own
-hreflang set, so it appears exactly where a twin exists and nowhere else.
-
-All 11 German URLs now have a descriptive anchor-text link from their English
-twin. The pavilion profiles name the German edition explicitly ("Deutscher
-Pavillon: dieses Profil gibt es auch auf Deutsch"), since the DACH profiles are
-the site's strongest German-intent magnet — /expo-2027/pavilions/germany already
-pulls 11 Bing impressions and 4 clicks. The German pavilion atlas was left alone:
-it already carries a German-language pointer to the English atlas at the bottom.
-
-Verified in dist/: 11 c-langnote blocks pointing at German, zero on pages without
-a twin, all six German titles carrying "Expo 2027 Belgrad", no truncated DACH
-descriptions, hreflang/canonical/x-default untouched, sitemap unchanged at 156.
-Build green.
-
-growth/growth_changes.jsonl gains BB-CHG-0003 (crawl submission, with the
-pre-submission baseline recorded) and BB-CHG-0004 (titles, descriptions,
-cross-links) per the change-log rule. KB/automation/RUNBOOK.md gains "The
-IndexNow gap" with the standing rule — run the submitter whenever a new URL set
-ships — and CLAUDE.md carries the short form.
+No site code, template, content or tracking change — script and docs only.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015oWBfm7TVeUF27YN1nqBdX

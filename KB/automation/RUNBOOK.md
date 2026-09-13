@@ -68,11 +68,23 @@ Never committed.
 of listing profiles. Bing usually crawls submitted URLs within 24–48h; confirm
 with `--verify`. Submitting a URL again is harmless, so re-running is safe.
 
-Notes: `--verify` and `--fresh` cost one API call per URL and Bing throttles per
-host (HTTP 400 + `ErrorCode: 5`, not 429) — the script paces itself and retries
-with backoff, and a URL whose lookup fails is reported `UNKNOWN` and **never**
-treated as never-crawled, so `--fresh` errs toward skipping rather than
-re-submitting.
+Notes: `--verify` and `--fresh` cost one API call per URL, and Bing answers HTTP
+400 with an error envelope instead of a real status — `ErrorCode: 5`
+(ThrottleHost, the per-host rate limit) and `ErrorCode: 2` (UnknownError,
+transient). The script paces itself and retries both with backoff. A URL whose
+lookup still fails is reported `UNKNOWN` and **never** treated as never-crawled,
+so `--fresh` errs toward skipping rather than re-submitting.
+
+**When you already know the URLs, prefer `--prefix` over `--fresh`.** A `--prefix`
+run submits exactly what matches, with no per-URL status lookup — so it cannot be
+thinned by Bing's error rate. `--fresh` over a large set (156 URLs) makes 156
+lookups and, even with retries, some may exhaust their attempts and be skipped.
+Use `--all --fresh` to *discover* the gap, then submit the named URLs by prefix:
+
+```powershell
+node scripts/submit-to-bing.mjs --all --fresh --dry-run          # find the gap
+node scripts/submit-to-bing.mjs --prefix=/glossary/bie --prefix=/areas/skadarlija
+```
 
 ---
 
