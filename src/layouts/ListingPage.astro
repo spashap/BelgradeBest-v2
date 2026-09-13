@@ -20,6 +20,7 @@ import { SITE, EXPO, CONFIG } from "../lib/site";
 import { articleSchema, breadcrumbSchema, faqSchema } from "../lib/schemas";
 import { metaTrim } from "../lib/text";
 import LangNote from "../components/LangNote.astro";
+import { nationalDayFor } from "../lib/national-days";
 import { ogImage } from "../lib/og";
 import { DE, alternates, dePath, fmtDate, type Lang } from "../lib/i18n";
 import { regionOf, STAGE } from "../lib/expo-participants";
@@ -101,7 +102,21 @@ const schemas: object[] = [
 // Expo dates from the config master (one source for the fact).
 const expoDates = `${fmtDate(EXPO.startDate, lang)} – ${fmtDate(EXPO.endDate, lang)}`;
 
-const facts = de?.facts ?? listing.blocks.facts ?? [];
+// National Day dates live in ONE place (src/data/national-days.json). A date
+// held both here and on /expo-2027/national-days would drift apart — which is
+// exactly how four profiles ended up contradicting themselves in Sep 2026.
+// So the row is generated, never stored on the listing.
+const nd = nationalDayFor(listing.slug);
+const ndFact = nd
+  ? {
+      label: isDe ? "Nationaltag" : "National Day",
+      value: isDe
+        ? `${fmtDate(nd.date, "de")} — ${nd.status === "confirmed" ? "bestätigt" : "geplant"} (${nd.authority})`
+        : `${fmtDate(nd.date, "en")} — ${nd.status === "confirmed" ? "confirmed" : "planned"} (${nd.authority})`,
+      source: nd.source,
+    }
+  : null;
+const facts = [...(de?.facts ?? listing.blocks.facts ?? []), ...(ndFact ? [ndFact] : [])];
 const about = de?.about ?? listing.blocks.about ?? [];
 const quotes = listing.blocks.quotes ?? [];
 const sources = listing.links?.sources ?? [];
@@ -153,13 +168,34 @@ const quickNav = [
 
 // Visiting tiles: one tap target per practical guide (no inline link rows).
 const T = L.tiles;
+// A profile with a documented National Day links back to the record that
+// generated its date row, so the evidence is one click away in both directions.
+const ndTile = nd
+  ? [
+      isDe
+        ? {
+            href: "/expo-2027/national-days",
+            kicker: "Nationaltag",
+            title: "Nationaltage der Expo 2027 (EN)",
+            body: "Jeder belegte Termin mit Quelle, Status und Prüfdatum.",
+          }
+        : {
+            href: "/expo-2027/national-days",
+            kicker: "National Day",
+            title: "Expo 2027 National Days",
+            body: "Every date we can document, with its source, status and check date.",
+          },
+    ]
+  : [];
 const visitTiles = isDe
   ? [
+      ...ndTile,
       { href: "/de/expo-2027/getting-there", ...T.gettingThere },
       { href: "/de/expo-2027/tickets", ...T.tickets },
       { href: "/de/expo-2027/where-to-stay-for-expo", ...T.stay },
     ]
   : [
+      ...ndTile,
       {
         href: "/expo-2027/getting-there",
         kicker: "Getting there",

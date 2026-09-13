@@ -1,60 +1,55 @@
-Trust repair: four factual defects on pavilion profiles, and the National Day claim
+Add /expo-2027/national-days — the National Day record, one master, no drift
 
-Step one of the Expo content plan, and its precondition. An external review pass
-found that several pavilion profiles contradict themselves: `facts` rows were
-updated when news landed, while the hand-written prose and FAQs on the same page
-were not. One profile also carried a wrong attribution. Publishing new visitor
-content on top of a record that disagrees with itself would only multiply the
-correction surface, so this lands first.
+Step two of BELGRADEBEST_EXPO_CONTENT_PLAN.md, and the first new asset.
 
-- **Slovakia.** Its prose and FAQ said the winning design "isn't public yet,"
-  while its own facts already named EXPO LINE's "Living Playground", announced
-  9 July 2026 with a €375,000 design-services contract. Prose and FAQ now name it.
+A National Day date is the only fact on a pavilion profile that changes *which
+day* a visitor travels. The organiser has not published the country-to-date
+schedule — the calendar linked from its programme page is Playground Events —
+but individual countries announce through their own ministries. That is the gap
+this fills, and why it can exist before the organiser publishes.
 
-- **Türkiye.** Its prose and FAQ said size had not been announced, while its own
-  summary and facts gave the 648 m² plot (27 × 24 m) on parcel A5.1, due ready
-  for operation by 15 April 2027. Both now state what is known and confine the
-  "not announced" to design and budget, where it is still true.
+It ships with **one dated entry**. That is deliberate, and the page says so in
+its own voice: "we have recorded one dated announcement" is a statement about
+this list, not about the world. Absence from it means not recorded by us, never
+not announced. The same discipline runs through the entry itself — Türkiye's
+19 May 2027 is labelled **planned**, because the Ministry of Trade notice says
+planned, and each dated entry carries both what the announcement establishes and
+what it does not. For Türkiye that second field is the honest bulk of it: times,
+venue, performers, public access and reservations are all unestablished.
 
-- **Austria.** Its prose and one FAQ said the EU-wide two-stage tender "is under
-  way" while another FAQ named "Join the Flow" as its 4 August 2026 winner — the
-  same page asserting both. In **both languages**. Fixed in all four places.
+Two pieces of context earn their place:
 
-- **Switzerland.** The profile described the pavilion as a walk-through mountain
-  panorama "engineered by Werner Sobek AG with Danilo Dangubic Architects and
-  VOGT". Checking the cited source showed those firms are engaged on the **wider
-  Expo site** — the Best Practice Zone timber pavilions, the shading structure
-  and the landscape — not on the Swiss national pavilion. This was a wrong
-  attribution, not merely a stale one. It is removed, the Design fact is
-  rewritten to what the persoenlich.com source actually supports (648 m² inside
-  a shared hall, scenography by Jeff), and the page carries a dated public
-  correction note rather than quietly dropping the claim.
+- **An Expo National Day is not that country's national holiday**, and one
+  cannot be derived from the other. Türkiye's 19 May happens to be both — it is
+  Commemoration of Atatürk, Youth and Sports Day, which for a Sport-and-Music
+  Expo is a striking fit — but Osaka disproves the rule: the Netherlands took
+  21 May (King's Day is 27 April) and Sweden 14 May (National Day is 6 June).
+- **How the dates are likely to arrive.** Osaka released them in batches; a June
+  2024 release added 31 countries to an April batch, reaching 131 of 161 roughly
+  ten months before opening. Labelled precedent, not prediction — it cannot
+  establish when Belgrade or any single country will announce.
 
-Separately, `/expo-2027/programme` told readers that "you cannot yet pick a date
-because your country falls on it." That is no longer true: Türkiye's Ministry of
-Trade names **19 May 2027** as its planned Expo National Day. Corrected in EN and
-DE, in both the body and the FAQ, along with two pieces of context worth having:
-19 May is also a Turkish public holiday (Commemoration of Atatürk, Youth and
-Sports Day), though nothing published explains whether that drove the choice; and
-at Expo 2025 Osaka the organiser released National Day dates in batches, with 131
-of 161 participants published roughly ten months before opening. Readers are now
-told their own country's Expo office is often ahead of the organiser.
+The architecture matters more than the page. `src/data/national-days.json` is the
+**single master**. `ListingPage` now GENERATES the National Day row on a profile
+from it, and the duplicated fact row has been deleted from `turkiye.json`. A date
+held in two places drifts apart — that is precisely the failure that produced the
+four contradicting profiles repaired in the previous commit, and it is designed
+out here rather than promised against. Profiles with a documented date also get a
+tile back to the record; profiles without one get nothing, which is verified in
+the build (Germany renders no such link).
 
-The date is labelled **planned**, not confirmed — the ministry notice says so.
+The page reaches ~1,500 words without padding. That was not a target — it is
+what saying the true thing carefully costs, once you explain what a National Day
+is, why its date is not derivable, what the announcement does not establish, and
+how the list is maintained.
 
-`updated` / `lastUpdated` bumped on every touched record so dateModified and
-sitemap lastmod follow. Sitemap unchanged at 156 URLs. No template, URL or
-tracking change. growth/growth_changes.jsonl gains BB-CHG-0007. Build green, and
-a scripted sweep of the built pages confirms none of the four contradictions
-survives in either language.
+Article + Dataset + BreadcrumbList JSON-LD. Sitemap 156 → 157, lastmod driven by
+the data master via astro.config. Linked from the programme page in English and
+German. growth/growth_changes.jsonl gains BB-CHG-0008. Build green.
 
-BELGRADEBEST_EXPO_CONTENT_PLAN.md is added alongside: the full plan this repair
-is step one of, running to the 15 May 2027 opening. It records the review
-corrections that shaped it — including the ones that overturned our own
-assumptions (we had 19 pavilions, not 100+; all of them already had FAQs; the
-blocker was missing knowledge, not a missing field) — plus the National Days
-asset spec, the visitor-profile template and threshold, the acquisition pilot,
-a review cadence we can actually sustain, and an explicit cut list.
+No German twin for the page itself yet — the German Expo cluster covers six
+articles and the DACH pavilions, and adding a seventh surface is a maintenance
+commitment worth taking deliberately rather than by reflex.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015oWBfm7TVeUF27YN1nqBdX

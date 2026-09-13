@@ -1,0 +1,244 @@
+---
+// /expo-2027/national-days — the National Day date record.
+//
+// Deliberately narrow: it answers "when is my country's day, and how reliable
+// is that?" and nothing else. It is NOT a pavilion comparison matrix — a
+// complete table of missing information is an audit product, not a visitor one
+// (BELGRADEBEST_EXPO_CONTENT_PLAN.md §3).
+//
+// Data master: src/data/national-days.json via lib/national-days.ts. The same
+// record feeds the pavilion profiles, so a date is never held twice.
+//
+// The page must stay honest about its own coverage: "we have recorded one date"
+// is never allowed to read as "only one has been announced".
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import Note from "../../components/Note.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { ogImage } from "../../lib/og";
+import { SITE, EXPO, CONFIG } from "../../lib/site";
+import { articleSchema, breadcrumbSchema, datasetSchema } from "../../lib/schemas";
+import {
+  NATIONAL_DAYS,
+  datedEntries,
+  undatedAnnouncements,
+  updated,
+} from "../../lib/national-days";
+import { listingsIndexable, listingsForLeg, listingHref } from "../../lib/listings";
+
+const PATH = "/expo-2027/national-days";
+const URL_ = `${SITE.origin}${PATH}`;
+const dated = datedEntries();
+const undated = undatedAnnouncements();
+
+const fmt = (d: string) =>
+  new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+
+// Link an entry to its pavilion profile only when that profile actually
+// publishes (listingsForLeg already applies the thin-content guard).
+const published = listingsForLeg("expo-2027");
+const profileHref = (slug?: string) => {
+  if (!slug || !listingsIndexable) return null;
+  const l = published.find((x) => x.slug === slug);
+  return l ? listingHref(l) : null;
+};
+
+const meta = pageMetadata({
+  title: "Expo 2027 National Days: dates announced so far",
+  description:
+    "Which countries have announced their Expo 2027 National Day, and how firm each date is. Independently recorded from national sources, with what each announcement does and does not establish.",
+  path: PATH,
+  image: ogImage("tracker"),
+});
+
+const crumbs = [
+  { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+  { name: EXPO.shortName, href: "/expo-2027" },
+  { name: "National Days" },
+];
+
+const schemas: object[] = [
+  articleSchema({
+    title: "Expo 2027 National Days: dates announced so far",
+    description: meta.description,
+    url: URL_,
+    dateModified: updated,
+  }),
+  datasetSchema({
+    name: "Expo 2027 Belgrade National Day dates",
+    description:
+      "Announced National Day dates for Expo 2027 Belgrade, recorded from national authorities with source, status and check date.",
+    url: URL_,
+    dateModified: updated,
+    jsonUrl: URL_,
+    keywords: ["Expo 2027", "Belgrade", "National Day", "Specialised Expo", "Serbia"],
+  }),
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: EXPO.shortName, url: `${SITE.origin}/expo-2027` },
+    { name: "National Days", url: URL_ },
+  ]),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow={`Sources checked ${fmt(NATIONAL_DAYS.checked)}`}
+    title="Expo 2027 National Days: dates announced so far"
+    lede={`Every participating country at ${EXPO.name} can hold a National Day — its own day on the site, with its culture, food and performances. The organiser has not published the schedule saying which country falls on which date. Some countries have announced their own. This is what we have been able to document.`}
+  />
+
+  <Container variant="read">
+    <Note>
+      <strong>We have recorded {dated.length} dated {dated.length === 1 ? "announcement" : "announcements"}.</strong>{" "}
+      That is a statement about this list, not about the world: it means we found
+      {dated.length === 1 ? " one" : ` ${dated.length}`}, not that no others exist. The organiser has
+      published no country-to-date schedule, and countries announce on their own
+      timetables, often through a ministry rather than the Expo. If your country has
+      announced and it is missing here, <a href="/contact">send us the source</a> — no account needed.
+    </Note>
+
+    <SectionHead
+      title="Announced dates"
+      intro="Chronological. Each entry records who announced it, what the announcement actually establishes, and when we last checked."
+    />
+
+    {dated.map((e) => {
+      const href = profileHref(e.listingSlug);
+      return (
+        <div class="c-facts">
+          <h3>
+            {e.country} — {fmt(e.date)}{" "}
+            <span class={`c-status c-status--${e.status === "confirmed" ? "construction" : "announced"}`}>
+              {e.status === "confirmed" ? "Confirmed" : "Planned"}
+            </span>
+          </h3>
+          <dl>
+            <dt>Announced by</dt>
+            <dd>{e.authority} <small>({e.authorityKind})</small></dd>
+            <dt>What this establishes</dt>
+            <dd>{e.establishes}</dd>
+            <dt>What it does not establish</dt>
+            <dd>{e.doesNotEstablish}</dd>
+            <dt>Source</dt>
+            <dd>
+              <a href={e.source} rel="nofollow noopener">{e.sourceNote ?? e.source}</a>
+            </dd>
+            <dt>Last checked</dt>
+            <dd>{fmt(e.checked)}</dd>
+          </dl>
+          {e.context ? <p>{e.context}</p> : null}
+          {href ? <p><a href={href}>{e.country}'s pavilion profile →</a></p> : null}
+        </div>
+      );
+    })}
+
+    {undated.length > 0 ? (
+      <>
+        <SectionHead
+          title="Announced, but without a date"
+          intro="Countries that have described a National Day without publishing when it falls. These are not dated entries and should not be counted as such."
+        />
+        <ul>
+          {undated.map((u) => {
+            const href = profileHref(u.listingSlug);
+            return (
+              <li>
+                <strong>{u.country}</strong> — {u.note}{" "}
+                <a href={u.source} rel="nofollow noopener">Source</a>. Checked {fmt(u.checked)}.
+                {href ? <> <a href={href}>Pavilion profile →</a></> : null}
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    ) : null}
+
+    <SectionHead
+      title="What a National Day actually is"
+      intro="Worth understanding before you plan a trip around one."
+    />
+    <p>
+      A National Day is a day given over to one participating country, which uses its
+      pavilion and the Expo's stages to present its culture, cuisine, music and
+      innovation. Independent guides describe them as among the most atmospheric days to
+      visit. The Participants FAQ describes countries selecting a day, so the dates come
+      from the countries as much as from the organiser.
+    </p>
+    <p>
+      Two things follow that matter for planning. First, a National Day is a
+      <em>container</em> for a programme: knowing the date tells you nothing by itself
+      about times, venues, whether events are open to all Expo visitors, or whether
+      anything needs a separate booking. Second — and this catches people out —{" "}
+      <strong>an Expo National Day is not the same thing as that country's national
+      holiday</strong>, and you cannot work one out from the other. At Expo 2025 Osaka the
+      Netherlands took 21 May (Dutch King's Day is 27 April) and Sweden took 14 May
+      (Sweden's National Day is 6 June).
+    </p>
+
+    <SectionHead
+      title="When to expect the rest"
+      intro="Based on how the last Expo did it — which is context, not a forecast."
+    />
+    <p>{NATIONAL_DAYS.precedent.note}</p>
+    <Note>
+      <strong>Read that as precedent, not prediction.</strong> {NATIONAL_DAYS.precedent.caution}{" "}
+      In the meantime, your own country's Expo office or the relevant ministry is often
+      ahead of the organiser — that is where the one date below came from.{" "}
+      <a href={NATIONAL_DAYS.precedent.source} rel="nofollow noopener">Osaka's announcement</a>.
+    </Note>
+
+    <SectionHead title="How we keep this" intro="So you can judge how much to trust it." />
+    <ul>
+      {NATIONAL_DAYS.caveats.map((c) => <li>{c}</li>)}
+    </ul>
+    <p>{NATIONAL_DAYS.coverage}</p>
+
+    <details class="c-sources">
+      <summary>Sources checked ({NATIONAL_DAYS.sources.length})</summary>
+      <ul>
+        {NATIONAL_DAYS.sources.map((s) => (
+          <li><a href={s.url} rel="nofollow noopener">{s.note ?? s.url}</a></li>
+        ))}
+      </ul>
+    </details>
+
+    <details class="c-sources">
+      <summary>Change history</summary>
+      <ul>
+        {NATIONAL_DAYS.history.map((h) => <li>{fmt(h.date)} — {h.change}</li>)}
+      </ul>
+    </details>
+
+    <SectionHead title="Planning around a National Day" intro="Where to go next." />
+    <div class="c-linkgrid">
+      <a class="c-linkcard" href="/expo-2027/programme">
+        <span class="c-linkcard__kicker">Programme</span>
+        <span class="c-linkcard__title">What's on at Expo 2027</span>
+        <p>Pavilions, themed strands, ceremonies — and what is still unannounced.</p>
+      </a>
+      <a class="c-linkcard" href="/expo-2027/tickets">
+        <span class="c-linkcard__kicker">Tickets</span>
+        <span class="c-linkcard__title">Admission and what it secures</span>
+        <p>Sale status, ticket types, and whether timed entry is expected.</p>
+      </a>
+      <a class="c-linkcard" href="/expo-2027/pavilions">
+        <span class="c-linkcard__kicker">Pavilions</span>
+        <span class="c-linkcard__title">The pavilion atlas</span>
+        <p>Every country's published plan, tracked with a source on each fact.</p>
+      </a>
+      <a class="c-linkcard" href="/food-and-nightlife">
+        <span class="c-linkcard__kicker">The city</span>
+        <span class="c-linkcard__title">Eating and drinking in Belgrade</span>
+        <p>Pair a National Day on site with an evening in the city that outlasts the Expo.</p>
+      </a>
+    </div>
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>
