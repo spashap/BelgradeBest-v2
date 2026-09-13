@@ -234,7 +234,7 @@
       "lede": "Plain-English guides to visiting Belgrade — the things actually worth doing, where to stay, what to eat and drink, how to get around, and how to make a trip out of Expo 2027 (15 May–15 August). Honest, current, and written for people who don't live here."
     },
     "featured": {
-      "order": 1,
+      "order": 4,
       "visible": true,
       "sectionEyebrow": "What's coming",
       "sectionTitle": "Belgrade Expo 2027",
@@ -248,18 +248,18 @@
       "imageLabel": "Belgrade Expo 2027"
     },
     "clustersSection": {
-      "order": 2,
+      "order": 3,
       "visible": true,
       "eyebrow": "Start here",
       "title": "Every way into Belgrade",
       "intro": "However you got here — visiting, planning, moving, or just curious — there's a door for it. Pick yours."
     },
     "goodToKnow": {
-      "order": 3,
+      "order": 2,
       "visible": true,
       "eyebrow": "Before you go",
-      "title": "Good to know about Belgrade",
-      "intro": "The handful of facts that make a first visit easier — each links to the full guide.",
+      "title": "Start here — the questions everyone asks first",
+      "intro": "A straight answer to each, and a link to the guide that goes deeper.",
       "items": [
         {
           "label": "Money",
@@ -287,15 +287,20 @@
           "href": "/plan-your-trip/best-time-to-visit"
         },
         {
-          "label": "Expo 2027",
-          "text": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin.",
-          "href": "/expo-2027"
+          "label": "How many days?",
+          "href": "/visit-belgrade/belgrade-itinerary-3-days",
+          "body": "Three days covers the city comfortably; two works if you keep to the centre. Add days for Expo or day trips."
+        },
+        {
+          "label": "Where to stay",
+          "href": "/where-to-stay/where-to-stay-in-belgrade",
+          "body": "Stari Grad and Vračar for walkable old Belgrade, Novi Beograd for space and transport. The area decides the trip more than the hotel does."
         }
       ]
     },
     "faqSection": {
       "order": 4,
-      "visible": true,
+      "visible": false,
       "eyebrow": "Questions",
       "title": "Belgrade, frequently asked",
       "intro": "Quick, honest answers to what visitors ask most — each explored in depth across the guides.",

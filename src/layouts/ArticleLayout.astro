@@ -52,6 +52,9 @@ const rn = isDe
     ? CONFIG.chrome.article.readNextExpo
     : CONFIG.chrome.article.readNextEvergreen;
 
+// Legs where the reader arrives with a task rather than to browse.
+const PRACTICAL_LEGS = new Set(["plan-your-trip"]);
+const isPractical = PRACTICAL_LEGS.has(leg);
 const resolvedHero = heroForPath(enHref, d.heroAlt ?? d.heroLabel);
 const heroAbs = resolvedHero ? SITE.origin + resolvedHero.src : undefined;
 
@@ -125,24 +128,33 @@ const schemas: object[] = [
     ) : null
   }
 
-  <Container>
-    {
-      resolvedHero ? (
-        <ArticleHero
-          src={resolvedHero.src}
-          srcset={resolvedHero.srcset}
-          sizes={resolvedHero.sizes}
-          alt={d.heroAlt ?? resolvedHero.alt}
-        />
-      ) : (
-        <Placeholder ratio="21/9" label={d.heroLabel} />
-      )
-    }
-  </Container>
+  {
+    /* Practical pages skip the hero. On /plan-your-trip the reader has a job —
+       get from the airport, pay for something, check a visa — and the image sat
+       between the short answer and the section that actually does the work
+       (measured: lede, then image at ~4.4KB, TOC at ~5.0KB, first section at
+       ~6.2KB). The hero is still generated and still used as the OG/social card
+       via `meta.image`; it just no longer delays the answer. Leisure legs keep
+       it, where browsing is part of the point. */
+    isPractical ? null : (
+      <Container>
+        {resolvedHero ? (
+          <ArticleHero
+            src={resolvedHero.src}
+            srcset={resolvedHero.srcset}
+            sizes={resolvedHero.sizes}
+            alt={d.heroAlt ?? resolvedHero.alt}
+          />
+        ) : (
+          <Placeholder ratio="21/9" label={d.heroLabel} />
+        )}
+      </Container>
+    )
+  }
 
   <Container variant="article">
     <div class="u-stack-lg">
-      <ArticleToc headings={headings} />
+      <ArticleToc headings={headings} lang={lang} />
       <article class="c-article">
         <Content />
       </article>

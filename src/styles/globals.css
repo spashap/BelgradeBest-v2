@@ -294,7 +294,9 @@ a {
   margin-bottom: var(--s4);
 }
 /* On-page topic index ("On this page") — between hero and article body.
-   Two columns (desktop) / one (mobile); paginates into slides of 10 with arrows. */
+   Two columns on desktop, one on mobile. NO pagination: it used to slide in
+   groups of 10 behind arrows, which hid sections 11+ from the very list whose
+   job is to reveal them (removed 2026-09-13). */
 .c-toc {
   background: var(--paper-2);
   border: 1px solid var(--line);
@@ -303,10 +305,6 @@ a {
   padding: var(--s4) var(--s5);
 }
 .c-toc__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--s3);
   margin: 0 0 var(--s3);
 }
 .c-toc__title {
@@ -318,66 +316,34 @@ a {
   color: var(--ink-soft);
   margin: 0;
 }
-.c-toc__arrows {
-  display: flex;
-  gap: var(--s2);
-}
-.c-toc__arrows button {
-  width: 26px;
-  height: 26px;
-  display: grid;
-  place-items: center;
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--accent-ink);
-  font-size: var(--t-small);
-  line-height: 1;
-  cursor: pointer;
-}
-.c-toc__arrows button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.c-toc__viewport {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-.c-toc__viewport::-webkit-scrollbar {
-  display: none;
-}
-.c-toc__slide {
-  flex: 0 0 100%;
-  min-width: 100%;
-  scroll-snap-align: start;
+.c-toc__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--s1) var(--s5);
   list-style: none;
   margin: 0;
   padding: 0;
+  counter-reset: toc;
 }
-.c-toc__slide li {
+.c-toc__list li {
   counter-increment: toc;
 }
-.c-toc__slide a {
+.c-toc__list a {
   font-family: var(--display);
   font-size: 13px;
   line-height: 1.45;
   color: var(--accent-ink);
   text-decoration: none;
 }
-.c-toc__slide a::before {
+.c-toc__list a::before {
   content: counter(toc) ". ";
   color: var(--ink-soft);
 }
-.c-toc__slide a:hover {
+.c-toc__list a:hover {
   text-decoration: underline;
 }
 @media (min-width: 700px) {
-  .c-toc__slide {
+  .c-toc__list {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -615,6 +581,19 @@ a.c-gtk__link:hover {
   .c-header__nav { margin-left: auto; }
   .c-lang { margin-left: 0; }
 }
+
+/* --- c-skiplink : the first thing in the tab order. Off-screen until focused,
+   then pinned top-left. Public pages had no <main> landmark at all before
+   2026-09-13, so a keyboard user had to tab through the whole header on every
+   page; this plus <main id="main"> in BaseLayout fixes that. --- */
+.c-skiplink {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  padding: var(--s3) var(--s4);
+  background: var(--ink); color: var(--paper);
+  font-family: var(--display); font-weight: 600; font-size: var(--t-small);
+  border-radius: 0 0 var(--radius) 0; text-decoration: none;
+}
+.c-skiplink:focus { left: 0; }
 
 /* --- c-langnote : the language cross-link with real words. c-lang above is a
    two-letter chip in the header; this is the in-content version, WRITTEN IN THE

@@ -1,94 +1,67 @@
-Restore 84 lost article sections, gate the build, withdraw medical tourism
+Structural pass: main landmark, un-paginate the TOC, answer-first practical pages
 
-A content audit asking "does the visitor get what they came for" found that the
-answer had been no for three months, and nobody knew.
+Completes items 5–9 of the content-audit workplan
+(BELGRADEBEST_CONTENT_AUDIT.md §7). Everything here came out of the same
+measurement: the short answer arrived first, but the section that actually does
+the work sat behind a decorative image and a contents list that hid its own
+later entries.
 
-## 17 articles were incomplete since 22 June
+**A main landmark, at last.** Articles had none — `<header>`, four `<nav>`s,
+`<article>`, `<footer>`, and no `<main>` anywhere. A keyboard or screen-reader
+user had to tab the whole header on every page, and content extractors had no
+main-content signal, which matters now that AI assistants are a live channel.
+BaseLayout renders one `<main id="main">` for every public page plus a localised
+skip link ("Zum Inhalt springen" on German pages); index.astro drops the
+duplicate it was supplying itself. Footer navigations get `aria-labelledby`
+pointing at their own visible headings, so assistive tech can tell "Explore"
+from "The project" instead of announcing three unlabelled navigations. The new
+`.c-skiplink` pattern went into globals.css before it was used, per the Design
+Law.
 
-Commit e928564 ("Build /glossary knowledge-pages spoke set") silently dropped
-whole `##` sections from 17 articles. Repair passes on 2 July and 7 August fixed
-only the ones that ended mid-sentence. **The rest ended on a clean full stop and
-passed every scan.**
+**The table of contents stops hiding sections.** It paginated into horizontal
+slides of ten behind prev/next arrows — so on an 18-section article, eight
+sections were invisible in the very list whose job is to reveal them. Eleven
+articles were affected, and restoring the lost content last commit made it
+worse. All items now render in one two-column list; the inline slider script is
+gone.
 
-/visit-belgrade/things-to-do-in-belgrade was serving 4 of its 10 attractions —
-no Skadarlija, no Zemun, no Ada Ciganlija, no Avala Tower. best-restaurants had
-lost 55% of its body, splavovi 51%, kafanas 49%, craft-beer 48%.
+**Practical pages lead with the answer.** On /plan-your-trip the reader has a
+job — get in from the airport, pay for something, check a visa — and a decorative
+hero sat between the short answer and the detail. Measured before: lede, image at
+~4.4KB, TOC at ~5.0KB, first section at ~6.2KB. After: **first section at 1.8KB.**
+The hero is still generated and still used as the OG/social card through
+`meta.image`; it just no longer delays the answer. Leisure legs keep theirs,
+where browsing is part of the point.
 
-scripts/restore-lost-sections.mjs re-inserts the missing sections from revision
-9645a97 in their original positions, leaving every section that still existed
-untouched — so the July and August edits survive intact. **84 sections, roughly
-15,000 words, across 16 articles**, plus two truncated tails and one leftover
-heading stub repaired directly.
+**Links where the decision is made, not only at the bottom.** Three contextual
+links, each giving a reason rather than a destination name: how to get dinars,
+beside the A1 fare that must be paid in cash; connectivity, beside the ride-hail
+option that silently requires data on arrival; airport transfer costs, beside the
+warning about airport exchange rates. This copies a pattern the taxi article
+already used well.
 
-Eleven restored sections carry June-2026 prices or opening hours and are
-UNVERIFIED. The script lists them; they need checking before they are trusted.
+**The homepage answers before it advertises.** New order: identity → "Start here
+— the questions everyone asks first" (seven task routes, each a one-line answer
+and a link to the real guide) → browse all guides → a compact Expo feature →
+credibility. Expo was previously the first thing every visitor met, for an event
+eight months out, on a page whose arrivals are overwhelmingly not searching for
+it. The separate FAQ section is cut: it duplicated the task block above it, and
+cutting it also removes its JSON-LD, since that is now gated on the same flag.
 
-## The guard that would have caught it
+**Two reviewed articles lose their FAQ frontmatter.** All 15 questions on
+airport-to-city and money were already answered in their bodies — which is the
+evidence for the earlier finding that literal heading mismatch badly overstated
+how much of the hidden FAQ backlog was novel. Deleting them also takes the
+contradictory airport-rail date with it, so the two copies can no longer
+disagree.
 
-src/lib/content-integrity.mjs runs at `astro:build:start` and **fails the build**.
-Two independent checks:
+Verified in dist: exactly one `<main>` and a skip link on every page type, zero
+TOC pagination anywhere, practical first-section at byte 1758, the decision-point
+links present, homepage order as above, no FAQPage markup on the homepage.
+Sitemap unchanged at 141. Build green with the content integrity gate active.
 
-1. **Damage** — ends without terminal punctuation, ends on a heading with no
-   content, ends on a dangling function word, unclosed link.
-2. **Shrinkage** — body more than 10% smaller than the size recorded in
-   src/data/content-integrity.json.
-
-The second check is the point. A punctuation check *cannot* prove completeness —
-a section can vanish and leave a perfectly well-formed page, which is exactly why
-three separate repair passes missed these. Verified against all three failure
-modes, including silent section loss that ends cleanly.
-
-Deliberate cuts stay easy, they just have to be stated:
-`node scripts/update-content-baseline.mjs`, committed alongside the edit. That
-turns shortening an article into a reviewable act instead of an accident.
-
-It lives in src/lib rather than scripts/ on purpose — scripts/ is
-.vercelignore'd, so a guard there would not run on deploys.
-
-## Medical tourism withdrawn (15 articles + hub)
-
-Two independent reasons. The owner's own research concluded Serbia is not
-competitive against Hungary, Turkey or Moldova, so the commercial premise does
-not hold. Separately, the content made treatment-relevant claims it could not
-support: a 20–60% saving called "realistic" with no citation; surgical capacity
-inferred from domestic waiting-list length; "ISO" listed as an accreditation when
-ISO develops standards and does not issue certificates; an unevidenced ranking of
-risks. A "not medical advice" line does not repair an unsupported claim that
-influences a treatment decision.
-
-Removed from public delivery rather than noindexed — a quarantined page still
-serves the same guidance to anyone holding the link. The 15 articles are preserved
-at KB/withdrawn/medical-tourism/ with a README recording the reasoning and what a
-defensible minimum would look like. Leg removed from site-schema, header nav, the
-LEGS enum, homepage ethos copy and the About disclaimer; the one cross-link from a
-retained article cut; 60 orphaned hero images deleted. Zero dangling
-/medical-tourism links remain in the build. Sitemap 157 → 141.
-
-## Two claims the site could not back
-
-ArticleLayout emitted FAQPage JSON-LD for 422 questions — roughly 27,000 words
-across 64 English and 6 German articles — that the layout never renders. The
-markup described content no reader could see, and the two copies had already
-drifted: the airport article's FAQ gave a rail delivery date its own body
-contradicted. Google retired FAQ rich results on 7 May 2026, so it bought nothing
-either. Removed; the homepage had the same defect and its schema is now gated on
-the same flag as its visible section. The frontmatter stays as editorial source
-material to fold into bodies during page edits, not as a second maintained copy.
-
-Every article also carried "Updated <date> · Source-checked by the BelgradeBest
-editorial process" — attached automatically to any page with a date, with no
-evidence of a review and no visible sources. Reduced to the date. The About page's
-"every page is manually reviewed… nothing goes live unread" is replaced with an
-accurate account, including this incident and the new guard, because a site that
-publishes its own corrections is the kind of source we are trying to be.
-
-## Notes
-
-BELGRADEBEST_CONTENT_AUDIT.md records the full audit, the channel analysis behind
-it (site-wide metrics were dominated by 92 bot sessions averaging 0.07s), and what
-remains open. growth/growth_changes.jsonl gains BB-CHG-0009, 0010 and 0011.
-
-Build green with the gate active. Sitemap 141 URLs.
+growth/growth_changes.jsonl gains BB-CHG-0012. Item 11 (a monthly 20-minute
+review) is a habit, not a commit; everything else on the audit workplan is done.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015oWBfm7TVeUF27YN1nqBdX

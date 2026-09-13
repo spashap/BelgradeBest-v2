@@ -16,23 +16,6 @@ noindex: false
 linksTo:
   - "/plan-your-trip/getting-around"
   - "/expo-2027/getting-there"
-faqs:
-  - answer: "Use the official voucher system rather than guessing the meter. To the central zone, the fixed voucher fare is most commonly reported around 2,200–3,500 RSD (roughly 19–30 EUR at recent rates), with other destination zones running higher. You collect the voucher from the airport e-kiosks or TAXI INFO counter, and the driver charges only that amount. This is indicative and time-stamped to 2026 — re-check the posted zone table on arrival, as fares change."
-    question: "How much is a taxi from Belgrade airport to the centre?"
-  - answer: "The free city buses (72, 600 or 607) are the cheapest option — all regular Belgrade transport has been free with no ticket since January 2025. If you want something faster with luggage space for a few euros, the A1 minibus to Slavija is the cheapest paid option, commonly around 400 RSD (a little under 4 EUR), paid in cash on board. Both figures are current as of 2026 and can change."
-    question: "What's the cheapest way from Belgrade airport into town?"
-  - answer: "Nikola Tesla Airport (BEG) is about 18 km from the city centre, and a typical road journey takes 20–40 minutes depending on traffic. The free bus 72 takes roughly 35–50 minutes, the A1 minibus about 30–40 minutes, and a taxi or ride-hail car 20–40 minutes."
-    question: "How far is Belgrade airport from the city centre?"
-  - answer: "Yes. Since 1 January 2025 all regular Belgrade city transport, including airport buses 72, 600 and 607, is free with no tickets or validation. This is current as of 2026, but a fare policy can change, so re-check before you travel."
-    question: "Are the buses from Belgrade Airport really free?"
-  - answer: "Bus 72 runs to Zeleni Venac, a central terminus just below Knez Mihailova and Republic Square, in about 35–50 minutes. Bus 600 instead serves Beograd Centar (Prokop) station, which is best if you're connecting to trains."
-    question: "Which airport bus goes to the city centre?"
-  - answer: "You get a fixed-price voucher from the airport e-kiosks or the TAXI INFO counter, then take the first taxi in the marked queue, and the driver charges only the voucher amount. Avoid unsolicited offers from touts in the arrivals hall."
-    question: "How does the official airport taxi work?"
-  - answer: "No. Belgrade has no Uber or Bolt; the main app options are Yandex Go (Yango) and the local platform CarGo, alongside classic dispatch apps such as Pink Taxi and Belgrade Taxi."
-    question: "Is there Uber in Belgrade?"
-  - answer: "An electrified rail line connecting the airport is under construction but not in service as of mid-2026. A launch is reported as spring 2027 with trains targeted for delivery by 31 December 2026, but those dates are provisional, and the fare regime has not yet been announced."
-    question: "When will the airport train open?"
 isFaqCandidate: true
 unknowns: []
 ---
@@ -73,7 +56,7 @@ You may still see older guides and videos quoting small cash bus fares (for exam
 
 The A1 shuttle minibus runs Airport → Fontana (New Belgrade) → the main bus and rail area → Slavija Square, with limited stops, which makes it faster into the centre than bus 72. Slavija is a transport hub within walking distance of Vračar, the St. Sava Temple area and many hotels. A1 is a separate paid service — the exception to the free regular transport.
 
-The fare is commonly quoted at about 400 RSD (a little under 4 EUR), paid in **cash, in dinars (RSD), on board** — so have local cash ready, as cards are not the norm. The journey is around 30–40 minutes. Some earlier sources quote lower fares (200 RSD), which suggests a gradual increase, so treat it as low single-digit euros in cash and check the current price rather than assuming a fixed figure. The A1 timetable runs across the day; departures are roughly hourly but vary, so check the posted schedule at the airport stop. As of 2026 this remains the cheapest paid option and the quickest budget route into the centre.
+The fare is commonly quoted at about 400 RSD (a little under 4 EUR), paid in **cash, in dinars (RSD), on board** — so have local cash ready, as cards are not the norm. If you are landing without dinars, that is the one thing to sort before you leave the terminal: [where to get dinars, and the airport exchange trap](/plan-your-trip/money). The journey is around 30–40 minutes. Some earlier sources quote lower fares (200 RSD), which suggests a gradual increase, so treat it as low single-digit euros in cash and check the current price rather than assuming a fixed figure. The A1 timetable runs across the day; departures are roughly hourly but vary, so check the posted schedule at the airport stop. As of 2026 this remains the cheapest paid option and the quickest budget route into the centre.
 
 ## How much is a taxi from Belgrade airport, and how does the voucher work?
 
@@ -85,7 +68,7 @@ One stable warning: aggressive unlicensed taxi touts operate in the arrivals hal
 
 ## Is there Uber in Belgrade, or which ride-hail apps work?
 
-Belgrade has no Uber or Bolt. The main app-based options are Yandex Go (Yango), which operates in Serbia with upfront fare estimates and card or cash payment, and CarGo, a local Uber-like platform. Classic licensed-taxi dispatch apps such as Pink Taxi and Belgrade Taxi also exist. These can be cheaper than the voucher taxi and let you pay by card, but you'll need a working data connection on arrival to order one.
+Belgrade has no Uber or Bolt. The main app-based options are Yandex Go (Yango), which operates in Serbia with upfront fare estimates and card or cash payment, and CarGo, a local Uber-like platform. Classic licensed-taxi dispatch apps such as Pink Taxi and Belgrade Taxi also exist. These can be cheaper than the voucher taxi and let you pay by card, but you'll need a working data connection on arrival to order one. If you are not sure you will have data the moment you land, settle that first — [eSIMs, local SIMs and airport wifi](/plan-your-trip/sim-and-connectivity) — because without it this option disappears exactly when you need it.
 
 CarGo's regulatory status has been contested over the years, but it continues to operate in practice and is popular for car quality and transparent pricing. Exactly which apps run and under what legal framework can change; the broad pattern — no Uber or Bolt, with Yandex Go and a local app present — is stable in the short term.
 

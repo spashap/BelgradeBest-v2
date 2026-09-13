@@ -105,9 +105,9 @@ const social = ((f?.social ?? []) as { url: string; label: string; icon?: string
             </div>
           ) : null}
           <div class="c-footer__cols">
-            {columns.map((col) => (
-              <nav class="c-footer__col">
-                <h2 class="c-footer__heading">{col.heading}</h2>
+            {columns.map((col, i) => (
+              <nav class="c-footer__col" aria-labelledby={`footer-col-${i}`}>
+                <h2 class="c-footer__heading" id={`footer-col-${i}`}>{col.heading}</h2>
                 <ul>
                   {col.items.map((it) => (
                     <li>

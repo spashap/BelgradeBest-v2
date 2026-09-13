@@ -83,8 +83,15 @@ const layoutCss =
     <Analytics />
   </head>
   <body>
+    <a class="c-skiplink" href="#main">{lang === "de" ? "Zum Inhalt springen" : "Skip to content"}</a>
     <SiteHeader lang={lang} alternates={meta.alternates} />
-    <slot />
+    {/* One <main> landmark for every public page. Articles had none at all —
+        only <header>, four <nav>s, <article> and <footer> — so keyboard and
+        screen-reader users had no way to jump past the navigation, and content
+        extractors had no main-content signal. */}
+    <main id="main">
+      <slot />
+    </main>
     <SiteFooter lang={lang} />
     <Schema schemas={[organizationSchema()]} />
   </body>

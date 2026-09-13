@@ -16,21 +16,6 @@ noindex: false
 linksTo:
   - "/plan-your-trip/staying-safe"
   - "/plan-your-trip/getting-around"
-faqs:
-  - answer: "For cash, no — the Serbian dinar (RSD) is the only legal tender in Serbia, even though many businesses quote prices in euros as a reference. A few tourist-facing places may informally accept euro notes, but you're not entitled to pay in euros and you'll often get a poor informal rate, so carry dinars for cash. Card payments are converted automatically; just make sure the card is charged in dinars, not euros."
-    question: "Can I pay in euros in Belgrade?"
-  - answer: "Both. Credit and debit cards are widely accepted in Belgrade — restaurants, hotels, larger shops and tourist businesses almost all take them, often contactless. But cash (in dinars) is still preferred at kiosks, green markets, many taxis, small shops and bakeries, so carry some dinars alongside your card rather than relying on plastic everywhere."
-    question: "Is Belgrade cash or card?"
-  - answer: "Exchange physical cash at specialist exchange offices (menjačnica) and bank branches in the city centre, which generally offer good rates with minimal commission. For card withdrawals, Belgrade has dense ATM coverage; whether at an ATM or a card terminal, always choose to be charged in dinars (RSD) and decline Dynamic Currency Conversion. Airport, station and mall kiosks usually have poorer rates and are best used only for small amounts to get into town."
-    question: "Where should I exchange money or use ATMs in Belgrade?"
-  - answer: "No — choose dinars (RSD) and decline Dynamic Currency Conversion (DCC). DCC typically carries a markup, and card networks advise you can decline it and let your own bank handle the conversion, which is almost always cheaper."
-    question: "Should I let the ATM or card terminal charge me in my home currency?"
-  - answer: "ATMs in Serbia dispense only Serbian dinars and have a per-transaction cap (commonly around RSD 100,000 as of 2026). Many machines charge a foreign-card access fee, often in the region of RSD 400–600 per withdrawal, while a few banks charge nothing; these figures move, so check the on-screen notice. To minimise per-transaction fees, withdraw a larger amount in one go rather than several small ones."
-    question: "What are the ATM withdrawal limits and fees in Belgrade?"
-  - answer: "Tipping is appreciated but not mandatory — around 10–15% in restaurants and cafés, or rounding up where service is good. No tip is expected at fast food, bakeries or coffee-to-go counters."
-    question: "How much should I tip in Belgrade?"
-  - answer: "Belgrade is relatively affordable compared with Western Europe, helped by free public transport and reasonably priced food. However, accommodation and dining prices are reported to be rising ahead of Expo-related demand, so budget with some headroom."
-    question: "Is Belgrade expensive?"
 isFaqCandidate: true
 unknowns: []
 ---
@@ -63,7 +48,7 @@ These numbers genuinely move, so read the on-screen notice rather than trusting 
 
 ## Where is the best place to exchange money in Belgrade?
 
-If you prefer to exchange physical cash, the best rates come from **specialist exchange offices (*[menjačnica](/glossary/menjacnica)*) and bank branches in the city centre**, which generally offer good rates with minimal commission. By contrast, exchange kiosks inside the airport, bus and train stations, and shopping malls often have poorer rates or extra commissions. These are best avoided except for small sums — enough to get you into town, say — with the bulk of your changing done at a city-centre office. The exact spreads and the best chains shift over time, but the broad pattern (**centre good, station and mall worse**) is a stable one. Bring clean, undamaged notes if exchanging euros, dollars or pounds, as torn or marked notes are sometimes refused.
+If you prefer to exchange physical cash, the best rates come from **specialist exchange offices (*[menjačnica](/glossary/menjacnica)*) and bank branches in the city centre**, which generally offer good rates with minimal commission. By contrast, exchange kiosks inside the airport, bus and train stations, and shopping malls often have poorer rates or extra commissions. That matters most on arrival, when you may need cash immediately for the bus or minibus into town — [what each airport transfer costs and how it is paid](/plan-your-trip/airport-to-city). These are best avoided except for small sums — enough to get you into town, say — with the bulk of your changing done at a city-centre office. The exact spreads and the best chains shift over time, but the broad pattern (**centre good, station and mall worse**) is a stable one. Bring clean, undamaged notes if exchanging euros, dollars or pounds, as torn or marked notes are sometimes refused.
 
 ## Tipping in Belgrade
 

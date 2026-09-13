@@ -44,7 +44,6 @@ const mainSections = [
 <BaseLayout meta={meta}>
   <PageIntro eyebrow={H.intro.eyebrow} title={H.intro.title} lede={H.intro.lede} />
 
-  <main>
     {
       mainSections.map((s, i) => (
         <Container>
@@ -129,7 +128,6 @@ const mainSections = [
         </Container>
       ))
     }
-  </main>
 
   <Schema
     schemas={[
