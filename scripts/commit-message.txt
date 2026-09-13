@@ -1,51 +1,60 @@
-Reconcile the Expo visitor forecast across EN + DE; drop two over-inferences
+Trust repair: four factual defects on pavilion profiles, and the National Day claim
 
-Our own participants tracker has recorded since 20 August that the BIE now
-states "more than 6 million" visits and that the six-million figure is the more
-recent. Every visitor-facing Expo article, meanwhile, still presented the
-Participants FAQ's 4.1 million model as settled — roughly twenty statements
-across five English articles and their five German twins. The site was
-contradicting itself on its single most-quoted number.
+Step one of the Expo content plan, and its precondition. An external review pass
+found that several pavilion profiles contradict themselves: `facts` rows were
+updated when news landed, while the hand-written prose and FAQs on the same page
+were not. One profile also carried a wrong attribution. Publishing new visitor
+content on top of a record that disagrees with itself would only multiply the
+correction surface, so this lands first.
 
-Forecasts are now presented chronologically wherever they appear: earlier
-official statements of 2.6–3 million, the Participants FAQ's ~4.1 million, the
-organiser's own later argument that 6 million is realistic, and the BIE's
-current "more than 6 million" — all labelled projections rather than counts, and
-all noting that most sources count visits, not unique visitors, so a three-day
-ticket is three visits.
+- **Slovakia.** Its prose and FAQ said the winning design "isn't public yet,"
+  while its own facts already named EXPO LINE's "Living Playground", announced
+  9 July 2026 with a €375,000 design-services contract. Prose and FAQ now name it.
 
-The per-day numbers needed the same treatment. The much-repeated 44,652 daily
-average and 89,304 peak are derived from the 4.1-million model, not the
-six-million one; on the same 93 days six million averages nearer 64,500 a day,
-and no updated per-day model has been published alongside the higher figure.
-Every page that quotes those figures now says so.
+- **Türkiye.** Its prose and FAQ said size had not been announced, while its own
+  summary and facts gave the 648 m² plot (27 × 24 m) on parcel A5.1, due ready
+  for operation by 15 April 2027. Both now state what is known and confine the
+  "not announced" to design and budget, where it is still true.
 
-Two over-inferences went with it:
+- **Austria.** Its prose and one FAQ said the EU-wide two-stage tender "is under
+  way" while another FAQ named "Join the Flow" as its 4 August 2026 winner — the
+  same page asserting both. In **both languages**. Fixed in all four places.
 
-- **Tickets.** "Most admissions will almost certainly be digital" was doing more
-  work than the evidence allows. 200,000 of the 1.2 million printed tickets are
-  three-day tickets, so the printed stock covers more admissions than it has
-  pieces, and nothing stops the organiser printing more. The page now says a
-  substantial digital channel is reasonable to expect, and that a digital
-  majority is not established.
-- **Accommodation.** Dividing Expo visits by hotel rooms is not a shortage
-  calculation: visits include Belgrade residents, regional day-trippers and the
-  same person returning on a three-day ticket. Nobody has published how many
-  visitors need a bed, for how many nights. The page now states the direction of
-  travel — a fixed room stock against a large and rising projection — as the
-  reason to book early, and explicitly declines to predict a specific shortfall.
-  The related "three times Belgrade's annual tourist volume" comparison keeps its
-  attribution but gains the caveat that visits and tourist arrivals are not the
-  same unit.
+- **Switzerland.** The profile described the pavilion as a walk-through mountain
+  panorama "engineered by Werner Sobek AG with Danilo Dangubic Architects and
+  VOGT". Checking the cited source showed those firms are engaged on the **wider
+  Expo site** — the Best Practice Zone timber pavilions, the shading structure
+  and the landscape — not on the Swiss national pavilion. This was a wrong
+  attribution, not merely a stale one. It is removed, the Design fact is
+  rewritten to what the persoenlich.com source actually supports (648 m² inside
+  a shared hall, scenography by Jeff), and the page carries a dated public
+  correction note rather than quietly dropping the claim.
 
-Also corrected: the 8,000-events figure is published by the BIE itself, so
-describing it as "a non-official consolidation" was wrong. It is now attributed,
-and still flagged as planned scale rather than a confirmed count since no dated
-programme backs it up.
+Separately, `/expo-2027/programme` told readers that "you cannot yet pick a date
+because your country falls on it." That is no longer true: Türkiye's Ministry of
+Trade names **19 May 2027** as its planned Expo National Day. Corrected in EN and
+DE, in both the body and the FAQ, along with two pieces of context worth having:
+19 May is also a Turkish public holiday (Commemoration of Atatürk, Youth and
+Sports Day), though nothing published explains whether that drove the choice; and
+at Expo 2025 Osaka the organiser released National Day dates in batches, with 131
+of 161 participants published roughly ten months before opening. Readers are now
+told their own country's Expo office is often ahead of the organiser.
 
-lastUpdated bumped to 2026-09-13 on all ten articles, so dateModified and
-sitemap lastmod follow. Sitemap unchanged at 156 URLs. No title, URL, template or
-tracking change. growth/growth_changes.jsonl gains BB-CHG-0006. Build green.
+The date is labelled **planned**, not confirmed — the ministry notice says so.
+
+`updated` / `lastUpdated` bumped on every touched record so dateModified and
+sitemap lastmod follow. Sitemap unchanged at 156 URLs. No template, URL or
+tracking change. growth/growth_changes.jsonl gains BB-CHG-0007. Build green, and
+a scripted sweep of the built pages confirms none of the four contradictions
+survives in either language.
+
+BELGRADEBEST_EXPO_CONTENT_PLAN.md is added alongside: the full plan this repair
+is step one of, running to the 15 May 2027 opening. It records the review
+corrections that shaped it — including the ones that overturned our own
+assumptions (we had 19 pavilions, not 100+; all of them already had FAQs; the
+blocker was missing knowledge, not a missing field) — plus the National Days
+asset spec, the visitor-profile template and threshold, the acquisition pilot,
+a review cadence we can actually sustain, and an explicit cut list.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015oWBfm7TVeUF27YN1nqBdX
