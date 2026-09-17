@@ -7,7 +7,7 @@ description: "Besucherguide zur Expo 2027 in Belgrad, Serbien: wie viele Tage Si
 lede: "Belgrad ist vom 15. Mai bis 15. August 2027 Gastgeber einer Specialised Expo in Surčin. Dies ist der Besucher-Hub – wie viele Tage Sie einplanen sollten, was Sie zuerst buchen sollten, wann es am vollsten ist, was schon feststeht und was noch offen ist, und wohin es als Nächstes für Tickets, Anreise und Unterkunft geht."
 heroLabel: "Expo 2027 Komplettguide / Hero"
 heroAlt: "Die Expo 2027 und die Skyline von Belgrad im Abendlicht – der komplette Besucherguide"
-lastUpdated: "2026-09-13"
+lastUpdated: "2026-09-17"
 order: 2
 visible: true
 intent: "both"
@@ -27,7 +27,7 @@ faqs:
     question: "Wann ist der Besuch der Expo 2027 am vollsten?"
   - answer: "Die Expo 2027 läuft vom 15. Mai bis 15. August 2027, eine 93-tägige Specialised Expo in der Gemeinde Surčin, südwestlich der Belgrader Innenstadt – etwa 5 km vom Flughafen Nikola Tesla und rund 13,5 km vom Stadtzentrum entfernt."
     question: "Wann und wo findet die Expo 2027 Belgrad statt?"
-  - answer: "Noch nicht, Stand: Anfang September 2026 – aber die Ausschreibung des Veranstalters für den Ticketdruck sieht den Verkaufsstart für den 15. September 2026 vor; Ein-Tages- und Drei-Tages-Tickets sind bestätigt. Preise wurden nicht veröffentlicht. Wenn eine Drittseite behauptet, heute Expo-2027-Tickets zu verkaufen, ist Vorsicht geboten; unsere Ticket-Seite verfolgt den offiziellen Stand."
+  - answer: "Nein, Stand 17. September 2026. Zwei geplante Starttermine sind inzwischen ohne Verkaufsbeginn verstrichen – die Zusage eines Ministers für den 15. Mai 2026 und der 15. September 2026 aus der Ticketdruck-Ausschreibung –, ein Ersatzdatum wurde nicht genannt. Ein-Tages- und Drei-Tages-Tickets sind als Produkte bestätigt; Preise wurden nicht veröffentlicht. Wenn eine Drittseite behauptet, heute Expo-2027-Tickets zu verkaufen, ist Vorsicht geboten; unsere Ticket-Seite verfolgt den offiziellen Stand."
     question: "Kann ich schon Tickets kaufen?"
   - answer: "Es gibt kein spezielles Expo-Visum für gewöhnliche Besucher. Serbien soll für rund 90 Länder eine visafreie Regelung haben, und die meisten Besucher aus der EU, den USA und dem Vereinigten Königreich benötigen kein Visum – prüfen Sie Ihren eigenen Status jedoch vor der Buchung beim serbischen Außenministerium. Details zu Visum und Geld finden Sie auf unseren Seiten zur Reiseplanung."
     question: "Brauche ich ein Visum für die Expo 2027?"
@@ -62,7 +62,7 @@ Für mehrere nationale Pavillons gibt es inzwischen konkrete, belegte Pläne –
 
 ## Kann man schon Tickets für die Expo 2027 kaufen?
 
-Noch nicht – und das sollte man klar sagen. Stand Juni 2026 heißt es auf der offiziellen Programmseite lediglich, Tickets seien „demnächst verfügbar“. Es wurden weder Ticketpreise, Kategorien, Verkaufskanäle noch ein Verkaufsstart veröffentlicht. Tages-, Mehrtages- und Saisonpass-Strukturen sowie Ermäßigungskategorien wie Erwachsene, Kinder, Studierende, Senioren und Menschen mit Behinderung sind noch nicht bekannt gegeben. Auch ein etwaiges Reservierungs-, Zeitfenster- oder Tageskapazitäts-System für normale Besucher ist noch nicht angekündigt. Sollte eine Drittanbieter-Website behaupten, schon heute Expo-2027-Tickets zu verkaufen, ist Vorsicht geboten – der offizielle Kanal hatte zum Zeitpunkt dieses Textes noch keinen Verkauf eröffnet.
+Noch nicht – und das sollte man klar sagen. Stand 17. September 2026 heißt es auf der offiziellen Programmseite lediglich, Tickets seien „demnächst verfügbar“, und zwei geplante Verkaufsstarts sind ohne Verkaufsbeginn verstrichen: der 15. Mai 2026, im Januar vom Finanzminister zugesagt, und der 15. September 2026 aus der Ticketdruck-Ausschreibung des Veranstalters. Es wurden weder Ticketpreise, Kategorien, Verkaufskanäle noch ein neuer Verkaufsstart veröffentlicht. Tages-, Mehrtages- und Saisonpass-Strukturen sowie Ermäßigungskategorien wie Erwachsene, Kinder, Studierende, Senioren und Menschen mit Behinderung sind noch nicht bekannt gegeben. Auch ein etwaiges Reservierungs-, Zeitfenster- oder Tageskapazitäts-System für normale Besucher ist noch nicht angekündigt. Sollte eine Drittanbieter-Website behaupten, schon heute Expo-2027-Tickets zu verkaufen, ist Vorsicht geboten – der offizielle Kanal hatte zum Zeitpunkt dieses Textes noch keinen Verkauf eröffnet.
 
 Das bedeutet: **Auf der Ticketseite gibt es derzeit nichts zu buchen**, was die Reihenfolge Ihrer Planung verändert: Unterkunft und Flüge kommen zuerst, Tickets folgen, sobald der Verkauf startet. Wir verfolgen die Ticketfrage auf einer eigenen Seite und aktualisieren sie, sobald offizielle Preise vorliegen – siehe [Expo 2027 Tickets: der aktuelle Stand](/de/expo-2027/tickets).
 

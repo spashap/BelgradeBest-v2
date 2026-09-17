@@ -7,7 +7,7 @@ description: "Expo 2027 Belgrade visitor guide: how many days you need, what to 
 lede: "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. This is the visitor hub — how many days to plan, what to book first, when it's busiest, what's confirmed versus still unknown, and where to go next for tickets, getting there, and where to stay."
 heroLabel: "Expo 2027 complete guide / hero"
 heroAlt: "Expo 2027 and the Belgrade skyline at golden hour — the complete visitor guide"
-lastUpdated: "2026-09-13"
+lastUpdated: "2026-09-17"
 order: 2
 visible: true
 intent: "both"
@@ -27,7 +27,7 @@ faqs:
     question: "When is the busiest time to visit Expo 2027?"
   - answer: "Expo 2027 runs from 15 May to 15 August 2027, a 93-day Specialised Expo in the municipality of Surčin, southwest of central Belgrade — about 5 km from Nikola Tesla Airport and roughly 13.5 km from downtown."
     question: "When and where is Expo 2027 Belgrade?"
-  - answer: "Not yet, as of early September 2026 — but the organiser's ticket-printing tender schedules the sales start for 15 September 2026, with one-day and three-day tickets confirmed. No prices have been published. If a third-party site claims to sell Expo 2027 tickets today, treat it with caution; our tickets page tracks the official status."
+  - answer: "No, as of 17 September 2026. Two planned start dates have now passed without a launch — a ministerial promise of 15 May 2026 and the ticket-printing tender's 15 September 2026 — and no replacement date has been given. One-day and three-day tickets are confirmed to exist as products; no prices have been published. If a third-party site claims to sell Expo 2027 tickets today, treat it with caution; our tickets page tracks the official status."
     question: "Can I buy tickets yet?"
   - answer: "There is no Expo-specific visa for ordinary visitors. Serbia is reported to have a visa-free policy for roughly 90 countries, and most EU, US and UK visitors do not need one — but verify your own status with the Serbian Ministry of Foreign Affairs before booking. Visa and money detail lives on our plan-your-trip pages."
     question: "Do I need a visa to visit Expo 2027?"
@@ -62,7 +62,7 @@ Several national pavilions now have real, sourced plans — [Germany's](/expo-20
 
 ## Can you buy Expo 2027 tickets yet?
 
-Not yet — and it is worth being plain about it. As of June 2026, the official Programme page says only that tickets will be "available soon." No ticket prices, categories, sales channels or release date have been published. Day, multi-day and season-pass structures, and concession categories such as adult, child, student, senior and disability, are not yet announced. Any reservation, time-slot or daily-capacity system for general visitors is also not yet announced. If a third-party site claims to sell Expo 2027 tickets today, treat that with caution — the official channel had not opened sales as of this writing.
+Not yet — and it is worth being plain about it. As of 17 September 2026, the official Programme page says only that tickets will be "available soon," and two planned sales-start dates have passed without a launch: 15 May 2026, promised by the finance minister in January, and 15 September 2026, scheduled in the organiser's ticket-printing tender. No ticket prices, categories, sales channels or new release date have been published. Day, multi-day and season-pass structures, and concession categories such as adult, child, student, senior and disability, are not yet announced. Any reservation, time-slot or daily-capacity system for general visitors is also not yet announced. If a third-party site claims to sell Expo 2027 tickets today, treat that with caution — the official channel had not opened sales as of this writing.
 
 That means **there is nothing to book on the ticket side right now**, which changes how you sequence planning: accommodation and flights come first, tickets follow when sales open. We track the ticket question on its own page and update it the moment official pricing lands — see [Expo 2027 tickets, what we know so far](/expo-2027/tickets).
 

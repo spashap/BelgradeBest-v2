@@ -164,7 +164,7 @@ export const DE = {
     tiles: {
       dates: { kicker: "Termine", title: "" , body: "" },
       gettingThere: { kicker: "Anreise", title: "Anreise zur Expo 2027", body: "Kostenloser Nahverkehr, Taxi-Apps und eine Bahn im Bau – der ehrliche Stand jeder Route." },
-      tickets: { kicker: "Tickets", title: "Ticket-Guide zur Expo 2027", body: "Verkaufsstart laut Ausschreibung für den 15. September 2026 geplant, Preise offen – was tatsächlich bekannt ist." },
+      tickets: { kicker: "Tickets", title: "Ticket-Guide zur Expo 2027", body: "Weiterhin nicht im Verkauf – zwei geplante Starttermine verstrichen, Preise offen. Was tatsächlich bekannt ist." },
       stay: { kicker: "Übernachten", title: "Übernachten für die Expo 2027", body: "Flughafennähe oder Innenstadt? Die Abwägung." },
       directory: { kicker: "Verzeichnis", title: "Alle Pavillon-Profile", body: "Jedes Land mit veröffentlichten Plänen – quellengeprüft, auf Deutsch und Englisch." },
       tracker: { kicker: "Daten (EN)", title: "Teilnehmer-Tracker", body: "Alle namentlich bekannten Länder mit Quellen und Datum." },

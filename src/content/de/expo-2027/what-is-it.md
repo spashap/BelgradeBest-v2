@@ -7,7 +7,7 @@ description: "Was ist die Expo 2027 Belgrad? Keine Weltausstellung, sondern die 
 lede: "Die Expo 2027 Belgrad ist die erste Spezialisierte Expo (Specialised Expo), die je auf dem Westbalkan stattfindet — eine vom BIE anerkannte, themenfokussierte internationale Ausstellung, die vom 15. Mai bis 15. August 2027 in Surčin unter dem Motto „Play for Humanity: Sport and Music for All“ läuft. Hier erfahren Sie, was das bedeutet — und ob sich ein Besuch lohnt."
 heroLabel: "Was ist eine Spezialisierte Expo / Hero"
 heroAlt: "Belgrads Flüsse und Skyline zur goldenen Stunde — die Gastgeberstadt der Expo 2027"
-lastUpdated: "2026-09-13"
+lastUpdated: "2026-09-17"
 order: 1
 visible: true
 intent: "both"
@@ -30,7 +30,7 @@ faqs:
     question: "Was sind die Maskottchen der Expo 2027?"
   - answer: "Im August 2026 bezifferte der Veranstalter die Zahl auf 141 registrierte Länder, gegenüber den zuletzt vom Zähler der offiziellen Participants-Seite angezeigten 139 — eine Zahl, die stetig gewachsen ist (eine Mitteilung vom Juli 2025 nannte 117) und sich noch ändern kann. Auch die Besucherprognosen sind so gestiegen: Die Participants-FAQ modelliert rund 4,1 Millionen Besuche über die 93 Tage, während das BIE inzwischen mehr als 6 Millionen nennt. Beides sind Prognosen, keine Zählungen."
     question: "Wie viele Länder und Besucher werden erwartet?"
-  - answer: "Noch nicht. Die offizielle Programmseite vermerkt „Tickets available soon“ (Tickets bald erhältlich), hat aber Stand Mitte 2026 weder Ticketpreise noch Kategorien, Verkaufskanäle oder einen Verkaufsstart veröffentlicht."
+  - answer: "Noch nicht. Die offizielle Programmseite vermerkt weiterhin „Tickets available soon“ (Tickets bald erhältlich) und hat Stand 17. September 2026 weder Ticketpreise noch Kategorien, Verkaufskanäle oder einen Verkaufsstart veröffentlicht – zwei geplante Starttermine sind bereits ohne Verkaufsbeginn verstrichen."
     question: "Kann ich schon Tickets für die Expo 2027 kaufen?"
   - answer: "Stand Juni 2026 ist kein spezielles Expo-Visum oder automatischer Visumverzicht für gewöhnliche Besucher angekündigt — sie sind auf Serbiens allgemeine Visumpolitik angewiesen. Das kostenlose „Expo-Visum“ gilt nur für Teilnehmende und Personal."
     question: "Brauche ich ein spezielles Visum für den Besuch der Expo 2027?"
@@ -97,7 +97,7 @@ All dies ist **berichtet bzw. geplant, kein verbindlicher Zeitplan**: Stand Juni
 
 ## Kann ich schon Tickets für die Expo 2027 kaufen?
 
-Dies ist die Lücke, die die meisten Besucher am meisten interessieren dürfte. Die offizielle Programmseite vermerkt **„Tickets available soon“** — hat aber Stand Mitte 2026 **noch nicht** Ticketpreise, Kategorien, Verkaufskanäle oder einen Verkaufsstart veröffentlicht. Es gibt bislang auch keine offiziellen Informationen zu Ermäßigungen, Zeitfenster-Reservierungen, täglichen Kapazitätsobergrenzen oder Buchungssystemen für Normalbesucher. Kurz gesagt: Der Ticketverkauf ist noch nicht angekündigt, und wir spekulieren nicht über Preise oder den Ablauf des Verkaufs, bis der Veranstalter sie veröffentlicht. (Wir verfolgen dies auf der Seite [Expo-2027-Tickets](/de/expo-2027/tickets).)
+Dies ist die Lücke, die die meisten Besucher am meisten interessieren dürfte. Die offizielle Programmseite vermerkt **„Tickets available soon“** — hat aber Stand 17. September 2026 **noch nicht** Ticketpreise, Kategorien, Verkaufskanäle oder einen Verkaufsstart veröffentlicht, und zwei geplante Starttermine (15. Mai und 15. September 2026) sind ohne Verkaufsbeginn verstrichen. Es gibt bislang auch keine offiziellen Informationen zu Ermäßigungen, Zeitfenster-Reservierungen, täglichen Kapazitätsobergrenzen oder Buchungssystemen für Normalbesucher. Kurz gesagt: Der Ticketverkauf ist noch nicht angekündigt, und wir spekulieren nicht über Preise oder den Ablauf des Verkaufs, bis der Veranstalter sie veröffentlicht. (Wir verfolgen dies auf der Seite [Expo-2027-Tickets](/de/expo-2027/tickets).)
 
 ## Praktische Hinweise für ausländische Besucher
 
