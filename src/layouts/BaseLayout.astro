@@ -80,7 +80,7 @@ const layoutCss =
     <link rel="manifest" href="/manifest.webmanifest" />
 
     <style is:inline id="site-layout" set:html={layoutCss}></style>
-    <Analytics />
+    {!meta.noAnalytics && <Analytics />}
   </head>
   <body>
     <a class="c-skiplink" href="#main">{lang === "de" ? "Zum Inhalt springen" : "Skip to content"}</a>

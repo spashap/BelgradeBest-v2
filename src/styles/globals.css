@@ -787,6 +787,18 @@ a.c-gtk__link:hover {
   margin-top: var(--s2);
 }
 
+/* --- c-fineprint : secondary line that qualifies the thing above it — a
+   caveat under a figure, a source/verification note under a claim, a
+   subcontractor under a contract winner. Data pages need this constantly and
+   were reaching for inline styles or admin-only classes; this is the one
+   sanctioned form. Inside a table cell it sits under the cell's main value. --- */
+.c-fineprint {
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+  margin-top: var(--s1);
+}
+.c-data-table td .c-fineprint { margin-top: 2px; }
+
 /* --- c-featured : large featured tile for the homepage (T1). Composes from
    tokens; not a clone of c-card — different layout proportions and weight. --- */
 .c-featured {

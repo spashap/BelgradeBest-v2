@@ -1,0 +1,159 @@
+{
+  "_readme": "Expo 2027 contract award ledger — the data master for /expo-2027/contracts and /data/expo-2027-contracts.json. SCOPE: procurement run by the ORGANISER, EXPO 2027 Belgrade d.o.o. National-pavilion spending (each country's own budget) and Serbian state construction contracts awarded by ministries are deliberately OUT of scope — different awarding bodies, different money — and must not be mixed in. RULES, applied on every edit: (1) a consortium award is ONE row, listing every named member; (2) never add a subcontractor's share to a prime contract's value; (3) `kind` must say whether a figure is a firm award or a framework ceiling (an estimated maximum, not spending); (4) never sum the rows into a total and never call any sum 'the cost of Expo' — the ledger is deliberately incomplete; (5) every row carries at least one source URL and a `verified` date; nothing enters without one. Bump `updated` on every edit — it drives dateModified and sitemap lastmod.",
+  "updated": "2026-09-17",
+  "scopeNote": "Every award below was made by EXPO 2027 Belgrade d.o.o., the state-owned company organising the exhibition. Values are as reported by Serbian media from the procurement record, excluding VAT unless stated. This is not a complete register of Expo spending: it covers the packages we have been able to source and verify, and it excludes national pavilions, which each country funds itself.",
+  "contracts": [
+    {
+      "id": "collective-pavilions",
+      "package": "Collective pavilions — design, construction, operation and dismantling",
+      "awardedTo": ["Sigong Tech Co., Ltd. (South Korea)"],
+      "subcontractors": ["BAUMEISTER d.o.o. Beograd"],
+      "value": 5280000000,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "lots": "Two lots: zone A (~RSD 2.34bn) and zone B plus the small individual pavilions in zone A (~RSD 2.9bn). The lot figures are rounded as reported and do not add exactly to the reported total.",
+      "bidders": 6,
+      "awarded": "2026-07-31",
+      "scope": "Project documentation, exhibition design, construction, operational management, maintenance and dismantling of the collective pavilions — the buildings that house every participating country without its own structure.",
+      "verified": "2026-09-17",
+      "sources": [
+        "https://www.tanjug.rs/expo-2027/vesti/270219/dodeljeni-ugovori-za-izgradnju-kolektivnih-paviljona-za-ekspo-2027-beograd/vest",
+        "https://www.b92.net/biz/srbija/vesti/255039/dodeljeni-ugovori-za-izgradnju-kolektivnih-paviljona-za-expo-2027-beograd/vest"
+      ]
+    },
+    {
+      "id": "ceremonies",
+      "package": "Opening and closing ceremonies",
+      "awardedTo": ["Balich Wonder Studio (Italy)"],
+      "subcontractors": [],
+      "value": 2323514160,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "eurApprox": 19775000,
+      "bidders": 4,
+      "awarded": "2026-02-20",
+      "scope": "Organisation and production of the opening and closing ceremonies. The same studio produced the Milano-Cortina 2026 Winter Olympics opening ceremony and the 2022 FIFA World Cup opening in Doha.",
+      "verified": "2026-09-17",
+      "sources": [
+        "https://www.tanjug.rs/ekonomija/srbija/231659/balich-wonder-studio-iz-ita-organizator-ceremonije-otvaranja-i-zatvaranja-ekspo-2027/vest",
+        "https://forbes.n1info.rs/vesti/italijanska-firma-organizovace-ceremoniju-otvaranja-i-zatvaranja-izlozbe-ekspo-2027-za-20-miliona-evra/",
+        "https://seenews.com/news/serbia-picks-italys-balich-wonder-studio-to-open-close-expo-2027-1290172"
+      ]
+    },
+    {
+      "id": "logistics",
+      "package": "Logistics partner (framework agreement)",
+      "awardedTo": ["Intereuropa — logističke usluge a.d. Dobanovci"],
+      "subcontractors": [],
+      "value": 530882000,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "framework",
+      "awarded": "2026-09-01",
+      "term": "15 months, October 2026 – December 2027",
+      "scope": "Management of vehicle, goods, material and equipment flows to, from and within the Surčin site: delivery coordination, warehousing, customs warehouse management and customs services, plus staff, machinery, vehicles and the software to run it.",
+      "frameworkNote": "The organiser describes this figure as the estimated maximum value of the services; actual payments follow demand. It is a ceiling, not spending.",
+      "verified": "2026-09-17",
+      "sources": [
+        "https://www.tanjug.rs/ekonomija/srbija/277792/ekspo-angazuje-intereuropa-logisticke-usluge-iz-dobanovaca-za-vise-od-530-miliona-dinara/vest",
+        "https://www.b92.net/lokal/beograd/drustvo/263850/expo-2027-izabrao-logistickog-partnera-posao-vredan-5309-miliona-dinara/vest"
+      ]
+    },
+    {
+      "id": "village-laundry",
+      "package": "Laundry and dry-cleaning, EXPO Village",
+      "awardedTo": [
+        "Marera Cleaning d.o.o.",
+        "TRUD NNR d.o.o. Beograd",
+        "BAHA d.o.o. Beograd",
+        "Lična d.o.o.",
+        "ABM Washing d.o.o."
+      ],
+      "subcontractors": [],
+      "value": 401523628,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "awarded": "2026-08-31",
+      "scope": "Daily collection, washing or dry-cleaning, drying, ironing and return of linen from the EXPO Village residential buildings in Surčin throughout the period they are in use.",
+      "consortiumNote": "One award to a group of five bidders — counted once here, not five times.",
+      "verified": "2026-09-17",
+      "sources": [
+        "https://www.danas.rs/vesti/ekonomija/pet-firmi-dobilo-ugovor-za-pranje-vesa-i-hemijsko-ciscenje-u-ekspo-selu/",
+        "https://www.021.rs/info/srbija/453908/ekspo-2027-dodelio-ugovore-za-pranje-vesa-evo-ko-je-dobio-posao"
+      ]
+    },
+    {
+      "id": "supervision",
+      "package": "Construction supervision and quality control (three zones)",
+      "awardedTo": ["Arhi Nova d.o.o. Beograd"],
+      "subcontractors": [],
+      "value": 261700000,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "awarded": "2026-09-03",
+      "scope": "Technical control of project documentation, site supervision and quality verification across the Best Practice zone, the international participants zone and the thematic zone: materials, equipment and completed works, deadlines, contractual obligations, coordination and risk management on the investor's behalf.",
+      "verified": "2026-09-17",
+      "sources": [
+        "https://forbes.n1info.rs/vesti/ekspo-2027-dodelio-ugovor-za-konsultantske-usluge-u-vrednosti-od-2617-miliona-dinara/",
+        "https://www.danas.rs/vesti/ekonomija/ekspo-dodelio-ugovor-za-konsultantske-usluge-pracenja-realizacije-i-kvaliteta-radova/"
+      ]
+    },
+    {
+      "id": "village-operator",
+      "package": "EXPO Village accommodation operator",
+      "awardedTo": ["Aurion Service d.o.o. Beograd", "Delta Hospitality d.o.o. Beograd"],
+      "subcontractors": [],
+      "value": 234645045,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "awarded": "2026-08-05",
+      "scope": "Running the 1,500-unit EXPO Village residential complex for participants: reservations, reception, check-in and check-out, guest communication, additional services and the financial-administrative side, with staff, equipment, software and licences.",
+      "consortiumNote": "One award to a group of two bidders — counted once here, not twice.",
+      "verified": "2026-09-17",
+      "sources": [
+        "https://forbes.n1info.rs/vesti/dodeljen-ugovor-za-pruzanje-usluga-operatera-smestaja-za-expo-village-u-vrednosti-od-234-645-045-dinara/",
+        "https://biznis.rs/vesti/srbija/delta-hospitality-dobila-ugovor-za-upravljanje-smestajem-expo-village/"
+      ]
+    },
+    {
+      "id": "ticket-printing",
+      "package": "Production and printing of non-personalised tickets",
+      "awardedTo": ["Institute for Manufacturing Banknotes and Coins – Topčider (Zavod za izradu novčanica i kovanog novca)"],
+      "subcontractors": [],
+      "value": 38200000,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "awarded": "2026-08-18",
+      "scope": "1,000,000 one-day tickets, 200,000 three-day tickets and 800,000 blank forms, printed on protected paper with watermarks, holographic foil, QR codes, perforation, serial numbering and UV security elements, for sale at physical points of sale and box offices.",
+      "note": "The same tender's delivery schedule produced the 15 September 2026 sales-start date, which passed without a launch.",
+      "verified": "2026-09-17",
+      "sources": [
+        "https://n1info.rs/biznis/ulaznice-za-expo-2027-stampa-ugovor/",
+        "https://www.b92.net/biz/srbija/vesti/260043/zavod-za-izradu-novcanica-topcider-stampa-ulaznice-za-expo-2027/vest"
+      ]
+    }
+  ],
+  "watching": [
+    {
+      "package": "Global PR and communications framework",
+      "reported": "MC Group (Berlin) with Stratcom International, reported at RSD 69.5m as a framework agreement",
+      "why": "Reported but not yet verified against a procurement source we can cite — held out of the ledger until it is."
+    },
+    {
+      "package": "Korean Pavilion exhibition services",
+      "reported": "KOTRA tender, KRW 9bn, bids closed 29 April 2026",
+      "why": "A national-pavilion contract, so out of scope for this ledger; the winner is also still unpublished."
+    },
+    {
+      "package": "Turkmenistan pavilion design and construction",
+      "reported": "International tender re-announced, applications closed 13 April 2026",
+      "why": "National-pavilion procurement, run in Ashgabat — out of scope, winner unpublished."
+    }
+  ]
+}

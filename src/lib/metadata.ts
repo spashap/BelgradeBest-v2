@@ -10,6 +10,11 @@ export type PageMeta = {
   description: string;
   canonical: string; // absolute URL
   noindex: boolean;
+  // Credential-bearing surfaces (the /manage magic link carries its token in
+  // the query string) must not load GA4: gtag's default `page_location` is the
+  // FULL url, so the token would be sent to Google. BaseLayout skips Analytics
+  // when this is set. Public pages leave it unset and are unaffected.
+  noAnalytics?: boolean;
   ogType: string;
   image: string; // absolute URL — always set (page hero or the brand default)
   imageAlt: string;
@@ -37,13 +42,14 @@ type Args = {
   description: string;
   path: string; // pathname only, e.g. "/expo-2027/getting-there"
   noindex?: boolean;
+  noAnalytics?: boolean; // see PageMeta.noAnalytics
   image?: string | null; // page hero (relative or absolute); falls back to default
   imageAlt?: string;
   lang?: "en" | "de";
   alternates?: { hreflang: string; href: string }[];
 };
 
-export function pageMetadata({ title, description, path, noindex, image, imageAlt, lang, alternates }: Args): PageMeta {
+export function pageMetadata({ title, description, path, noindex, noAnalytics, image, imageAlt, lang, alternates }: Args): PageMeta {
   const fullTitle = title.endsWith(SITE.name)
     ? title
     : `${title}${CONFIG.seo.titleSeparator}${SITE.name}`;
@@ -52,6 +58,7 @@ export function pageMetadata({ title, description, path, noindex, image, imageAl
     description,
     canonical: `${SITE.origin}${path}`,
     noindex: !!noindex,
+    ...(noAnalytics ? { noAnalytics: true } : {}),
     ogType: CONFIG.seo.ogType,
     image: absoluteImage(image),
     imageAlt: imageAlt?.trim() || title,

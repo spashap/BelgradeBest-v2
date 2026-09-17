@@ -17,6 +17,12 @@ const DATA_PAGES: Record<string, { title: string; body: string; heroSrc: string;
     heroSrc: "/images/expo-2027/pavilions-thumb.svg",
     heroAlt: "Expo 2027 pavilion directory",
   },
+  "/expo-2027/contracts": {
+    title: "Expo 2027 contract award ledger",
+    body: "Who is being paid to build and run the Expo: packages, winners, values, bidder counts and sources — reconciled into one table.",
+    heroSrc: "/images/expo-2027/tracker-thumb.svg",
+    heroAlt: "Expo 2027 contract award ledger",
+  },
   "/expo-2027/tracker": {
     title: "Expo 2027 participant tracker",
     body: "The independent, citable dataset: official count, every publicly named country, growth timeline, sources.",

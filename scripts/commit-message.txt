@@ -1,33 +1,67 @@
-Expo tickets: the 15 Sep on-sale date passed — pages rewritten to say so
+Drop the link-for-page trade; publish the Expo contract award ledger
 
-Verified on 17 September 2026 against the official programme page (EN
-"Tickets available soon", SR "Ulaznice uskoro dostupne") and the Serbian
-press: ticket sales did NOT open on 15 September. No launch, no prices, no
-announcement of a delay, and no replacement date. Every page that promised
-that date was therefore wrong as of two days ago.
+Outcome of a two-round external strategy review of the proposed "email
+companies, give them a free page, ask for a backlink" engine. The engine is
+not being built, and the trade behind it is withdrawn from the site.
 
-What the rewrite adds, all verified:
+Why: the exchange is link spam under both Google's spam policies (services
+for links, widget links) and Bing's guidelines — and we were advertising it
+openly, with /for-businesses saying the widget's attribution link "is the
+license". Separately, 11 of our 12 contact emails sit in prior-consent
+jurisdictions (DE, AT, CH, IT, JP, RS); the 12th is the US State Department.
+There is no lawful list to run a campaign against.
 
-- It is the SECOND slipped date. On 25 January 2026 Finance Minister Siniša
-  Mali told a government session "on 15 May we start selling tickets in
-  Serbia and around the world." That date passed too. Both are now in a
-  dated table with their sources and outcomes.
-- A new forward date exists, announced today: at the "Visit Serbia" business
-  meeting in Bratislava, Slovak tourism representatives said Slovak travel
-  agencies will sell packages including an Expo ticket from 1 November 2026
-  (Tanjug and B92; Igor Kovačević of Expo 2027 d.o.o. took part). It is the
-  first named third-party sales channel — and the strongest signal yet that
-  real ticket inventory and prices exist by then, which the page labels as
-  an inference, not a statement.
-- Whether the tender's first print batch (160,000 + 40,000 by 14 September)
-  was actually delivered has not been reported, so the cause of the slip is
-  unknown and the page says so.
+WITHDRAWN AND FIXED (BB-CHG-0015)
 
-Changed in lockstep, so nothing on the site still claims a future 15
-September start: both tickets articles (EN + DE twin), the guide and
-what-is-it FAQs and bodies in both languages, both Expo hub fact rows and
-unknowns lists, the ListingPage tickets tile, the German i18n tile.
-lastUpdated bumped to 2026-09-17 on all six articles, which drives
-dateModified and sitemap lastmod. Change log: BB-CHG-0014.
+- Widget links are now rel="nofollow noopener". Embedding is unconditional
+  and the credit link is removable. Zero embeds exist, so nothing was lost.
+- The outreach templates are editorial correction notices now: no offer, no
+  claim pitch, no link request. Deleted the line "Many delegations use pages
+  like this" — zero listings have ever been claimed, so it was false in the
+  first sentence of a cold email. Deleted the fallback that called
+  contractors and agencies "exhibitors"; there are no exhibitor listings.
+- Opt-out finally suppresses. The admin was still rendering a ready-to-send
+  draft and a mailto for people who had asked us to stop.
+- The privacy notice claimed "we do not collect names, accounts, or payment
+  details" while listing masters hold named business contacts and /manage
+  grants access. Rewritten to describe what actually happens, plus the right
+  to correction, deletion and no-contact.
+- Removed the "you start from ours" authority claim; the page now states the
+  real scale.
+- Growth plan: invented forecast deleted, Resend reframed as owner
+  notifications only, day-7 follow-up removed, "ask for a link back" turned
+  into a standing rule never to do it.
+
+SECURITY
+
+- /manage?token=<64-hex> loaded GA4, whose page_location is the full URL —
+  the magic-link token would have gone to Google. BaseLayout now honours
+  meta.noAnalytics; /manage sets it and Referrer-Policy: no-referrer. No
+  tokens have ever been issued, so nothing leaked.
+- Manage saves committed photos on a token checked only against the
+  build-time snapshot. assertTokenFresh() now validates against the live
+  file before any write.
+
+NEW: THE CONTRACT LEDGER (BB-CHG-0016)
+
+/expo-2027/contracts — who is being paid to build and run Expo 2027, in one
+comparable table, plus /data/expo-2027-contracts.json. Seven packages, each
+verified against Serbian press today: collective pavilions (Sigong Tech, RSD
+5.28bn, 6 bidders), ceremonies (Balich Wonder Studio, RSD 2.32bn), logistics
+(Intereuropa), Village laundry, site supervision (Arhi Nova), Village
+accommodation operator (Aurion + Delta), ticket printing (Zavod Topčider).
+
+The discipline is the product: consortium awards counted once with every
+member named, subcontractor value never added to the prime, framework
+ceilings labelled as ceilings, sources and a verification date on every row,
+and deliberately no total — an incomplete ledger cannot produce one honestly.
+Scope is the organiser's procurement; national pavilions are excluded and
+said to be.
+
+Also corrected: the participant tracker dated Slovakia's first participation
+contract to 15 Nov 2025 sourced to Wikipedia. The organiser's own
+announcement says 12 Nov 2025, now the source.
+
+New globals.css pattern c-fineprint added before use, per the Design Law.
 
 Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>

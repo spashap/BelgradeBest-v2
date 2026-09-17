@@ -15,13 +15,13 @@ type Tpl = { subject: string; body: string };
 const T = templates as unknown as Record<string, Tpl | string>;
 
 export function draftFor(l: Listing, all: Listing[]): Draft {
-  // Children without a type-specific template fall back to the leg's booth
-  // template (the "your page is reserved under {parentUrl}" pitch) before the
-  // generic leg template — sponsors/contractors/suppliers are booth-shaped.
-  const tpl = (T[`${l.leg}:${l.type}`] ??
-    (l.parent ? T[`${l.leg}:booth`] : undefined) ??
-    T[l.leg] ??
-    T.default) as Tpl;
+  // Most specific first: '<leg>:<type>' → '<leg>' → 'default'. There is NO
+  // parent-based fallback any more: it used to funnel every child into the
+  // "booth" pitch, which called contractors, agencies and suppliers exhibitors —
+  // a factual error in the first line of an email. (There are no exhibitor
+  // listings at all: the 79 masters are contractors, agencies, pavilions,
+  // suppliers, sponsors, a chamber and organisations.)
+  const tpl = (T[`${l.leg}:${l.type}`] ?? T[l.leg] ?? T.default) as Tpl;
   const parent = l.parent ? all.find((p) => p.leg === l.leg && p.slug === l.parent) : undefined;
   const fill = (s: string) =>
     s

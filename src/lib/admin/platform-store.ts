@@ -233,6 +233,16 @@ export async function findByToken(token: string): Promise<AdminListing | null> {
   return all.find((l) => tokenMatches(l, token)) ?? null;
 }
 
+// findByToken reads the BUILD-TIME snapshot, so a token revoked since the last
+// deploy still passes it until the rebuild lands. Any route that MUTATES on a
+// token's authority must re-check against the live file first — otherwise the
+// writes it performs before saveManaged's own check (photo commits) go through
+// on a dead token. Throws exactly like saveManaged so callers handle one shape.
+export async function assertTokenFresh(leg: string, slug: string, token: string): Promise<void> {
+  const { text } = await getFileForWrite(`${DIR}/${leg}/${slug}.json`);
+  if (!tokenMatches(JSON.parse(text) as Listing, token)) throw new Error("invalid token");
+}
+
 // The self-serve save: business-provided text + images. Escapes angle brackets
 // (no HTML enters the masters), caps lengths, marks the listing claimed, bumps
 // `updated`. Image paths are provided by the caller AFTER the binary commits.

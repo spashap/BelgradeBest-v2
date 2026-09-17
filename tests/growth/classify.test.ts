@@ -16,11 +16,15 @@ test("classifyPath follows the real route architecture", () => {
   assert.equal(c("/visit-belgrade").content_type, "leg_hub");
   assert.equal(c("/visit-belgrade/zemun").content_type, "article");
   assert.equal(c("/visit-belgrade/zemun").section, "visit-belgrade");
-  assert.equal(c("/medical-tourism/dental-work-belgrade").section, "medical-tourism");
+  // medical-tourism was withdrawn from site-schema.json on 2026-09-13, so its
+  // old URLs no longer match a leg and fall through to "other" — which is the
+  // correct behaviour for a retired section and what this asserts.
+  assert.equal(c("/medical-tourism/dental-work-belgrade").section, "other");
   assert.equal(c("/expo-2027").content_type, "expo_hub");
   assert.equal(c("/expo-2027/tickets").content_type, "article");
   assert.equal(c("/expo-2027/tickets").expo, true);
   assert.equal(c("/expo-2027/tracker").content_type, "expo_data");
+  assert.equal(c("/expo-2027/contracts").content_type, "expo_data");
   assert.equal(c("/expo-2027/countdown").content_type, "expo_data");
   assert.equal(c("/expo-2027/pavilions").content_type, "listing_directory");
   assert.equal(c("/expo-2027/pavilions/germany").content_type, "listing");
@@ -33,6 +37,7 @@ test("classifyPath follows the real route architecture", () => {
   assert.equal(c("/for-businesses").content_type, "partner_landing");
   assert.equal(c("/rss.xml").content_type, "feed");
   assert.equal(c("/data/expo-2027-participants.json").content_type, "feed");
+  assert.equal(c("/data/expo-2027-contracts.json").content_type, "feed");
   assert.equal(c("/widgets/expo-stats.js").content_type, "widget");
   assert.equal(c("/invest-and-relocate/real-estate").content_type, "article");
   assert.equal(c("/something/else").content_type, "other");

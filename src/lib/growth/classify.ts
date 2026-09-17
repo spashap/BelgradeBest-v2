@@ -45,7 +45,7 @@ export type Classification = {
 const LEGS = new Set<string>(schema.legs.map((l) => l.slug));
 const UTILITY = new Set<string>(pagesData.pages.map((p) => p.slug));
 const EXPO_LEG = "expo-2027";
-const EXPO_DATA_PAGES = new Set(["tracker", "countdown", "corporate-area"]);
+const EXPO_DATA_PAGES = new Set(["tracker", "countdown", "corporate-area", "contracts"]);
 
 // GA4 pagePath and GSC page URLs both arrive here; strip origin, query and
 // trailing slash so the two sides merge on one key.

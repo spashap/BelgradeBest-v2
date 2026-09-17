@@ -1,0 +1,271 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import Container from "../../components/Container.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import Note from "../../components/Note.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { ogImage } from "../../lib/og";
+import { SITE, EXPO, CONFIG } from "../../lib/site";
+import { articleSchema, breadcrumbSchema, datasetSchema } from "../../lib/schemas";
+import {
+  contracts,
+  watching,
+  scopeNote,
+  updated,
+  contractCount,
+  companyCount,
+  awardCount,
+  money,
+  kindLabel,
+  fmtDate,
+} from "../../lib/expo-contracts";
+import { listingsIndexable, listingsForLeg, listingHref } from "../../lib/listings";
+
+// The contract award ledger — who is being paid to build and run Expo 2027,
+// reconciled from the Serbian procurement record into one comparable table.
+// Data master: src/data/expo-contracts.json (bump `updated` on every edit; it
+// drives dateModified here and sitemap lastmod in astro.config.mjs).
+//
+// The editorial discipline is the product: consortium awards counted once,
+// subcontractors never added to the prime, framework ceilings labelled as
+// ceilings, and NO grand total — see the master's `_readme`.
+const PATH = "/expo-2027/contracts";
+const URL_ = `${SITE.origin}${PATH}`;
+
+// Company name → published listing profile, so the ledger feeds crawl paths to
+// the company pages (and readers get the background we already hold).
+const profileByName = new Map<string, string>();
+if (listingsIndexable) {
+  for (const l of listingsForLeg("expo-2027")) {
+    profileByName.set(l.name.toLowerCase(), listingHref(l));
+    if (l.shortName) profileByName.set(l.shortName.toLowerCase(), listingHref(l));
+  }
+}
+// Match on the company name we print, ignoring a trailing "(Country)" note.
+const profileFor = (name: string) =>
+  profileByName.get(name.replace(/\s*\([^)]*\)\s*$/, "").trim().toLowerCase());
+
+const meta = pageMetadata({
+  title: "Who won the Expo 2027 contracts — the award ledger",
+  description: `Every Expo 2027 Belgrade contract we can source, in one table: ${contractCount} packages awarded by the organiser to ${companyCount} companies, with values, dates, bidder counts and the original sources. Independently compiled.`,
+  path: PATH,
+  image: ogImage("contracts"),
+});
+
+const crumbs = [
+  { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+  { name: EXPO.shortName, href: "/expo-2027" },
+  { name: "Contract ledger" },
+];
+
+const schemas: object[] = [
+  articleSchema({
+    title: `Who won the Expo 2027 contracts — ${contractCount} packages, ${companyCount} companies`,
+    description: meta.description,
+    url: URL_,
+    dateModified: updated,
+  }),
+  datasetSchema({
+    name: "Expo 2027 Belgrade contract award ledger",
+    description:
+      "Contracts awarded by EXPO 2027 Belgrade d.o.o. for the delivery of the Specialised Expo: package, winner, named subcontractors, value, whether the figure is an award or a framework ceiling, award date, bidder count and sources.",
+    url: URL_,
+    dateModified: updated,
+    jsonUrl: `${SITE.origin}/data/expo-2027-contracts.json`,
+    keywords: ["Expo 2027", "Belgrade", "public procurement", "contract award", "Serbia", "tender"],
+  }),
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: EXPO.shortName, url: `${SITE.origin}/expo-2027` },
+    { name: "Contract ledger", url: URL_ },
+  ]),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow={`Updated ${fmtDate(updated)}`}
+    title="Who won the Expo 2027 contracts"
+    lede="Belgrade is buying an Expo in public, one tender at a time. This is the award record we have been able to verify — who was paid, for what, how much, and against how many rival bids — reconciled from scattered announcements into one comparable table."
+  />
+
+  <Container variant="read">
+    <div class="c-stats">
+      <div class="c-stat">
+        <div class="c-stat__num">{contractCount}</div>
+        <div class="c-stat__label">packages in the ledger</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat__num">{companyCount}</div>
+        <div class="c-stat__label">companies named as winner or subcontractor</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat__num">{awardCount}</div>
+        <div class="c-stat__label">are firm awards — the rest are framework ceilings</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat__num">2</div>
+        <div class="c-stat__label">awards went to a group of bidders, counted once each</div>
+      </div>
+    </div>
+
+    <Note>
+      <strong>There is no total on this page, deliberately.</strong> Adding these rows together
+      would produce a number that looks like "the cost of Expo 2027" and is not: the ledger is
+      incomplete, one row is a spending ceiling rather than spending, and national pavilions —
+      funded by each country itself — are excluded entirely. {scopeNote}
+    </Note>
+
+    <SectionHead
+      title="The award ledger"
+      intro="Largest first. Every value is as reported from the procurement record, excluding VAT. Follow a company name for the profile we hold on it; follow the sources column for the original report."
+    />
+    <div class="c-data-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Package</th>
+            <th>Awarded to</th>
+            <th>Value</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Bids</th>
+            <th>Sources</th>
+          </tr>
+        </thead>
+        <tbody>
+          {contracts.map((c) => (
+            <tr>
+              <td>{c.package}</td>
+              <td>
+                {c.awardedTo.map((name, i) => (
+                  <>
+                    {i > 0 ? <br /> : null}
+                    {profileFor(name) ? <a href={profileFor(name)}>{name}</a> : name}
+                  </>
+                ))}
+                {c.subcontractors.length > 0 ? (
+                  <div class="c-fineprint">
+                    subcontractor:{" "}
+                    {c.subcontractors.map((s, i) => (
+                      <>
+                        {i > 0 ? ", " : ""}
+                        {profileFor(s) ? <a href={profileFor(s)}>{s}</a> : s}
+                      </>
+                    ))}
+                  </div>
+                ) : null}
+              </td>
+              <td>
+                {money(c)}
+                {c.eurApprox ? <div class="c-fineprint">≈ €{(c.eurApprox / 1_000_000).toFixed(2)}M</div> : null}
+              </td>
+              <td>{kindLabel(c)}</td>
+              <td>{fmtDate(c.awarded)}</td>
+              <td>{c.bidders ?? "—"}</td>
+              <td>
+                {c.sources.map((s, i) => (
+                  <>
+                    {i > 0 ? " " : ""}
+                    <a href={s} rel="nofollow noopener">[{i + 1}]</a>
+                  </>
+                ))}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <SectionHead
+      title="What each contract actually covers"
+      intro="The table gives the number; this gives the job. Where a figure needs a caveat, the caveat is here rather than in a footnote nobody reads."
+    />
+    {contracts.map((c) => (
+      <>
+        <h3 id={c.id}>{c.package}</h3>
+        <p>{c.scope}</p>
+        <p>
+          <strong>{kindLabel(c)}:</strong> {money(c)} excluding VAT
+          {c.eurApprox ? ` (approximately €${(c.eurApprox / 1_000_000).toFixed(2)} million)` : ""},
+          {" "}to {c.awardedTo.join(" and ")}, {fmtDate(c.awarded)}
+          {c.bidders ? `, from ${c.bidders} bids` : ""}.
+          {c.term ? ` Term: ${c.term}.` : ""}
+        </p>
+        {c.lots ? <p>{c.lots}</p> : null}
+        {c.frameworkNote ? <Note><strong>This is a ceiling, not spending.</strong> {c.frameworkNote}</Note> : null}
+        {c.consortiumNote ? <p class="c-fineprint">{c.consortiumNote}</p> : null}
+        {c.subcontractors.length > 0 ? (
+          <p class="c-fineprint">
+            Named subcontractor: {c.subcontractors.join(", ")}. A subcontractor's share is not
+            published and is not added to the figure above.
+          </p>
+        ) : null}
+        {c.note ? <p>{c.note}</p> : null}
+        <p class="c-fineprint">
+          Verified {fmtDate(c.verified)} against{" "}
+          {c.sources.map((s, i) => (
+            <>
+              {i > 0 ? ", " : ""}
+              <a href={s} rel="nofollow noopener">source {i + 1}</a>
+            </>
+          ))}.
+        </p>
+      </>
+    ))}
+
+    <SectionHead
+      title="What is not in here yet"
+      intro="Packages we know exist but have not verified to the standard above, and the ones that fall outside this ledger's scope."
+    />
+    <div class="c-data-table">
+      <table>
+        <thead>
+          <tr><th>Package</th><th>What has been reported</th><th>Why it is not in the ledger</th></tr>
+        </thead>
+        <tbody>
+          {watching.map((w) => (
+            <tr><td>{w.package}</td><td>{w.reported}</td><td>{w.why}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <SectionHead title="How this ledger is kept" />
+    <p>
+      Five rules, applied to every row. A consortium award is counted <strong>once</strong>, with
+      every member named — two of the awards here went to groups of bidders, and counting the
+      companies instead of the contracts would inflate the record. A subcontractor's work is
+      <strong>never added</strong> to the prime contract's value. A framework agreement is labelled
+      a <strong>ceiling</strong>, because that is what the organiser says it is. Nothing enters
+      without a source we have read and a date we checked it. And there is <strong>no total</strong>,
+      because an incomplete ledger cannot produce one honestly.
+    </p>
+    <p>
+      The scope is the organiser's own procurement — contracts awarded by EXPO 2027 Belgrade
+      d.o.o. National pavilions are each funded by the participating country and are tracked
+      separately, on the <a href="/expo-2027/pavilions">pavilion profiles</a>; Serbian state
+      construction contracts awarded by ministries, including the host country's own pavilion,
+      are a different pot of money and are not mixed in here.
+    </p>
+    <p>
+      Corrections are welcome and acted on: if you are one of the companies above and a detail is
+      wrong, <a href="/contact">tell us</a> and we will fix it. The raw data is published as{" "}
+      <a href="/data/expo-2027-contracts.json">JSON</a> and is free to reuse with attribution.
+    </p>
+
+    <SectionHead title="Related" />
+    <ul>
+      <li><a href="/expo-2027/tracker">Participant tracker</a> — every country publicly named, with confirmation dates.</li>
+      <li><a href="/expo-2027/pavilions">Pavilion profiles</a> — what each country is building.</li>
+      <li><a href="/expo-2027/tickets">Tickets</a> — including the printing contract in the table above, and the sale date that slipped twice.</li>
+      <li><a href="/expo-2027/guide">The complete visitor guide</a> — if you are here to plan a trip rather than read procurement.</li>
+    </ul>
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

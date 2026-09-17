@@ -23,12 +23,19 @@ const listings = await readListings();
 const legs = [...new Set(listings.map((l) => l.leg))];
 const funnel = outreachFunnel(listings);
 
+// Suppression is enforced HERE, not just recorded. A listing marked opt-out or
+// declined gets no draft, no mailto and no copy button — previously the status
+// was cosmetic and the page still rendered a ready-to-send email for someone who
+// had asked us to stop. The row still renders so the record stays visible.
+const SUPPRESSED: string[] = ["opt-out", "declined"];
 const rows = listings
   .filter((l) => (!legFilter || l.leg === legFilter))
   .filter((l) => (!stageFilter || (l.outreach?.status ?? "none") === stageFilter))
   .map((l) => {
+    const suppressed = SUPPRESSED.includes(l.outreach?.status ?? "none");
+    if (suppressed) return { l, subject: "", body: "", mailto: null, suppressed: true };
     const d = draftFor(l, listings);
-    return { l, subject: d.subject, body: d.body, mailto: mailtoFor(l, d) };
+    return { l, subject: d.subject, body: d.body, mailto: mailtoFor(l, d), suppressed: false };
   });
 
 const emailConfigured = !!(env("RESEND_API_KEY") || env("BREVO_API_KEY"));
@@ -70,11 +77,18 @@ const NEXT: Record<string, string[]> = {
       {stageFilter ? <a class="badge live" href="?">clear filter</a> : null}
     </div>
     <p class="muted">
+      <b>These drafts are editorial correction notices, sent by hand — one at a time.</b>{" "}
+      They are not marketing, and they must not offer a page, solicit a claim or ask for a link:
+      unsolicited marketing email requires prior consent in Germany, Austria, Switzerland, Italy,
+      Japan and Serbia, where most of our contacts sit. Check the recipient's jurisdiction before
+      sending. If someone asks for edit access, that reply is the invitation — issue the manage
+      link then.
       {emailConfigured
-        ? "Email API key detected — automated sending arrives with Phase 3; drafts below remain the manual path."
-        : "No email API key set (RESEND_API_KEY placeholder) — drafts below open your own mail app (mailto) or copy to clipboard; mark rows as sent by hand. Sending automation switches on when the key lands, same pipeline."}
+        ? " An email API key is set: it powers owner notifications only. Do not wire bulk sending to it — Resend, SendGrid and Zoho all prohibit cold outreach in their terms."
+        : " No email API key is set, and none is needed here: drafts open your own mail app (mailto) or copy to the clipboard, and you mark rows sent by hand."}
       {" "}Templates: {tplEdit ? <a href={tplEdit} target="_blank" rel="noopener">edit outreach-templates.json</a> : <span class="slug">src/data/outreach-templates.json</span>}
-      {" "}(placeholders: <span class="slug">{"{name} {short} {pageUrl}"}</span>). Keep volume ≤20–30/day, always honor opt-outs.
+      {" "}(placeholders: <span class="slug">{"{name} {short} {pageUrl}"}</span>). Opt-out and
+      declined rows are suppressed automatically and permanently.
     </p>
   </div>
 
@@ -97,7 +111,7 @@ const NEXT: Record<string, string[]> = {
     <table>
       <tr><th>listing</th><th>contact</th><th>stage</th><th>draft</th><th>notes</th></tr>
       {
-        rows.map(({ l, subject, body, mailto }) => {
+        rows.map(({ l, subject, body, mailto, suppressed }) => {
           const stage = l.outreach?.status ?? "none";
           return (
             <tr>
@@ -133,9 +147,15 @@ const NEXT: Record<string, string[]> = {
                 </div>
               </td>
               <td>
-                {mailto ? <a href={mailto}>open draft</a> : <span class="muted">draft ready</span>}
-                {" · "}
-                <button class="ghost" type="button" data-copy-draft data-subject={subject} data-body={body}>copy</button>
+                {suppressed ? (
+                  <span class="muted">suppressed — do not contact</span>
+                ) : (
+                  <>
+                    {mailto ? <a href={mailto}>open draft</a> : <span class="muted">draft ready</span>}
+                    {" · "}
+                    <button class="ghost" type="button" data-copy-draft data-subject={subject} data-body={body}>copy</button>
+                  </>
+                )}
               </td>
               <td>
                 <form method="post" action="/api/admin/platform" class="row">

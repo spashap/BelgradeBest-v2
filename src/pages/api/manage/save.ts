@@ -1,6 +1,6 @@
 export const prerender = false;
 import type { APIRoute } from "astro";
-import { findByToken, saveManaged } from "../../../lib/admin/platform-store";
+import { assertTokenFresh, findByToken, saveManaged } from "../../../lib/admin/platform-store";
 import { getFileForWrite, putBinary } from "../../../lib/admin/store";
 import { notifyOwner } from "../../../lib/admin/notify";
 import { listingHref } from "../../../lib/listings";
@@ -20,6 +20,10 @@ export const POST: APIRoute = async ({ request, redirect }) => {
   try {
     const listing = await findByToken(token);
     if (!listing) return redirect("/manage"); // invalid link → generic screen
+    // findByToken matched the build-time snapshot. Re-check against the LIVE
+    // file before writing anything: a token revoked since the last deploy would
+    // otherwise get its photos committed and only then fail the text save.
+    await assertTokenFresh(listing.leg, listing.slug, token);
 
     // Images: validate + commit binaries first, collect site-relative paths.
     const existing = listing.images ?? [];
