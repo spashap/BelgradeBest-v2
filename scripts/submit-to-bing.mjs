@@ -28,8 +28,14 @@
  *   node scripts/submit-to-bing.mjs --prefix=/de/ --verify    # crawl status only
  *   node scripts/submit-to-bing.mjs --all --fresh             # whole sitemap,
  *                                                             # skipping crawled
+ *   node scripts/submit-to-bing.mjs --urls=queue.txt          # an exact list
  * FLAGS
  *   --prefix=<path>   only URLs whose path starts with this (repeatable)
+ *   --urls=<file>     an exact list, one URL per line, in that order. Use this
+ *                     when --prefix cannot express the set: a prefix matches
+ *                     everything beneath it, so "/expo-2027" cannot mean the
+ *                     hub alone. Entries absent from the sitemap are dropped
+ *                     (never submit a URL the site does not publish).
  *   --all             no prefix filter (the entire sitemap)
  *   --fresh           drop URLs Bing has already crawled (1 API call per URL)
  *   --limit=<n>       cap the batch (default: the remaining daily quota)
@@ -70,18 +76,31 @@ const normalisePrefix = (raw) => {
 const prefixes = argv
   .filter((a) => a.startsWith("--prefix="))
   .map((a) => normalisePrefix(a.slice(9)));
+const urlsFile = value("urls");
 const opts = {
   all: flag("all"),
+  urls: urlsFile,
   fresh: flag("fresh"),
   dryRun: flag("dry-run"),
   verify: flag("verify"),
   limit: value("limit") ? Number(value("limit")) : null,
 };
 
-if (!opts.all && prefixes.length === 0) {
-  console.error("Refusing to run without a target: pass --prefix=/de/ (repeatable) or --all.");
+if (!opts.all && !opts.urls && prefixes.length === 0) {
+  console.error(
+    "Refusing to run without a target: pass --prefix=/de/ (repeatable), --urls=<file> or --all.",
+  );
   process.exit(1);
 }
+
+// An explicit list, one URL per line; blank lines and # comments ignored.
+const listed = opts.urls
+  ? fs
+      .readFileSync(opts.urls, "utf8")
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .filter((l) => l && !l.startsWith("#"))
+  : null;
 
 // ── credentials ─────────────────────────────────────────────────────────────
 function apiKey() {
@@ -170,12 +189,25 @@ async function sitemapUrls() {
 
 // ── main ────────────────────────────────────────────────────────────────────
 const all = await sitemapUrls();
-const targeted = opts.all
-  ? all
-  : all.filter((u) => prefixes.some((p) => new URL(u).pathname.startsWith(p)));
+// A listed URL is kept only if the sitemap publishes it, and the file's order
+// is preserved so a capped batch takes the caller's priorities, not the
+// sitemap's alphabetical accident.
+const inSitemap = new Set(all.map((u) => u.replace(/\/$/, "")));
+const targeted = listed
+  ? listed.filter((u) => inSitemap.has(u.replace(/\/$/, "")))
+  : opts.all
+    ? all
+    : all.filter((u) => prefixes.some((p) => new URL(u).pathname.startsWith(p)));
 
+if (listed && targeted.length !== listed.length) {
+  const dropped = listed.filter((u) => !inSitemap.has(u.replace(/\/$/, "")));
+  console.log(`--urls: dropped ${dropped.length} not in the sitemap:`);
+  for (const u of dropped) console.log(`  - ${u}`);
+}
 console.log(
-  `Sitemap: ${all.length} URLs — ${targeted.length} match ${opts.all ? "--all" : prefixes.join(", ")}`,
+  `Sitemap: ${all.length} URLs — ${targeted.length} match ${
+    listed ? `--urls=${opts.urls}` : opts.all ? "--all" : prefixes.join(", ")
+  }`,
 );
 if (targeted.length === 0) {
   console.log("Nothing to do.");
