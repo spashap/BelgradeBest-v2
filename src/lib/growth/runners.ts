@@ -1,6 +1,7 @@
 // Real upstream adapters for the Growth API, on top of the shared clients in
 // lib/admin/analytics.ts. Server-only (import only from prerender=false routes).
 import { ga4Client, gscRequest } from "../admin/analytics";
+import { withoutBots } from "../bot-traffic.ts";
 import type { Ga4Runner, Ga4Request, Ga4Report, GscRunner } from "./types.ts";
 
 const BATCH = 5; // batchRunReports hard limit
@@ -12,17 +13,18 @@ function toApiRequest(r: Ga4Request) {
     metrics: r.metrics.map((name) => ({ name })),
     ...(r.limit ? { limit: r.limit } : {}),
     ...(r.orderByMetricDesc ? { orderBys: [{ metric: { metricName: r.orderByMetricDesc }, desc: true }] } : {}),
-    ...(r.filter
-      ? {
-          dimensionFilter: {
+    // Known bots are stripped from every report (lib/bot-traffic.ts).
+    dimensionFilter: withoutBots(
+      r.filter
+        ? {
             orGroup: {
               expressions: r.filter.values.map((value) => ({
                 filter: { fieldName: r.filter!.field, stringFilter: { matchType: r.filter!.matchType, value } },
               })),
             },
-          },
-        }
-      : {}),
+          }
+        : undefined,
+    ),
   };
 }
 

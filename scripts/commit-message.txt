@@ -1,87 +1,16 @@
-Push 100 URLs to Bing; add --urls to the submit script; log the 18 Sep read
+Strip known bots from analytics: no GA4 tag for headless browsers, filtered from every report
 
-No site content changed. This commit carries one tool change, the growth
-change-log entries for the day's Bing submissions, and what the traffic data
-now says.
+Singapore topped the admin analytics. It is a bot: 139 sessions / 139 users
+in 28 days, all Direct, exactly 1 page, 0 s engagement, at screen sizes no
+real device reports (1280x1200, 1366x1366). GA4's built-in bot filter misses
+it. It inflated users by ~47% and pulled engagement rate from 49% to 36%.
 
-SUBMITTED: THE TWO NEW DATA PAGES (BB-CHG-0017)
+- src/lib/bot-traffic.ts: the one list of bot signatures + the GA4 filter.
+- Analytics.astro: the tag is not loaded when navigator.webdriver is set or
+  the screen size is on the list, so new bot hits never reach GA4.
+- lib/admin/analytics.ts + lib/growth/runners.ts: every GA4 report excludes
+  those screen sizes, so the history is clean too (28d: 440 -> 300 users).
+- growth_changes.jsonl: BB-CHG-0020. Expect a step down in raw GA4 users;
+  it is not a traffic loss.
 
-/expo-2027/contracts and /expo-2027/national-days. Both shipped after the
-last submission run and neither engine had found them - Google URL
-inspection returns "URL is unknown to Google" for both, and IndexNow still
-cannot reach Microsoft for this host, so nothing had ever pushed them to
-Bing.
-
-SUBMITTED: THE 18 RESTORED ARTICLES (BB-CHG-0018)
-
-The 13 Sep restoration (98da368) put ~15,000 words back into 18 live
-articles, but nothing told Bing the pages had changed - so several of them
-have been earning Bing impressions while Bing served a truncated copy from
-its index. One --prefix per article: 9 food-and-nightlife, 6 visit-belgrade,
-2 where-to-stay, 1 plan-your-trip. The 15 medical-tourism files in that same
-commit were withdrawn from the site and are excluded.
-
-SUBMITTED: EVERYTHING ELSE THAT NEEDED IT (BB-CHG-0019)
-
-Two sets: the 28 URLs with a lastmod of 4 Sep or later, which Bing holds in a
-superseded form (the ticket rewrite, the structural pass, the German
-cluster), and every URL the site publishes that returns no rows at all in
-Bing's GetPageStats, meaning Bing has never served it.
-
-100 URLs went out today in total and the free daily quota is now 0/day,
-1200/month. The candidate set was 94 and the cap took 80, so the batch was
-ordered by value: changed Expo pages, other changed pages, the German set,
-the rest of the Expo cluster, the English article legs, utility pages,
-/areas, /glossary. The 14 that did not fit are all glossary terms.
-
-TOMORROW: node scripts\submit-to-bing.mjs --prefix=/glossary
-(32 URLs, fits the quota; resubmitting an already-sent URL is harmless.)
-
-TOOL CHANGE: submit-to-bing.mjs --urls=<file>
-
-One URL per line, order preserved, entries absent from the sitemap dropped
-with a notice. --prefix could not express this set: a prefix matches
-everything beneath it, so "/expo-2027" cannot mean the hub alone, and --all
-would have spent the cap on glossary terms in alphabetical order.
-
-The crawl-status check that would normally choose the set (GetUrlInfo per
-URL) was unusable - Bing answered 400 ThrottleHost for every call, and the
-script's four retries turn that into ~20s per URL. GetPageStats, which is
-site-level and not throttled, stood in for it. That over-includes pages Bing
-crawled but never showed, which costs quota, not accuracy.
-
-WHAT THE DATA SAYS (28d to 17 Sep, GSC + GA4 + Bing Webmaster APIs)
-
-- Bing: 65 clicks / 2,309 impressions. Weekly clicks ran 13, 11, 13, 12 and
-  then 19 in the first three days of the week of 14 Sep. Click pages are the
-  pavilion profiles and the practical plan-your-trip set (visa-and-entry,
-  money, airport-to-city, sim) - the two clusters the site was built for.
-- Three organic channels exist that did not exist in the prior 28 days:
-  yahoo 7 sessions, ecosia 7, yandex 1. Yahoo and Ecosia are Bing-fed, so
-  this is the 13 Sep submission work propagating to Bing's syndication.
-- AI assistants became a channel: 12 sessions vs 1 (chatgpt 5, copilot 5,
-  perplexity 3), with the longest dwell on the site. Plus 4 referrals from a
-  Microsoft Teams link unfurl, all engaged, ~30 min average.
-- Engaged organic-search sessions 64 vs 14. All of it with zero backlinks.
-- The 13 Sep integrity ship looks like it helped: organic-search engaged
-  sessions 18 / 4,880s over 14-17 Sep vs 9 / 1,107s over the four days
-  before. Four days is thin - recheck around 25 Sep.
-- Google is still asleep and its rise is a mirage: 0 clicks, no google
-  organic sessions in GA4, and 303 impressions that are site:-style
-  multi-result SERPs (property total 251 for 1-15 Sep but 1,407 grouped by
-  page, only 4 distinct queries). Only /, /expo-2027 and /expo-2027/pavilions
-  are indexed; visa-and-entry, Bing's best click page, is "Discovered -
-  currently not indexed".
-- Facebook's 115 sessions are mostly not people (the 6 Sep burst of 71 was
-  almost all 0-second landings), and Singapore's 63 "direct" sessions are
-  bots. Read the engaged cohort only.
-
-OPERATIONAL NOTE
-
-Bing GetUrlInfo throttles under parallel calls and answers 400 ThrottleHost,
-which silently turns a concurrent crawl-coverage sweep into false "never
-crawled" results. Use the script's 1/sec pacing, one prefix at a time, and
-run it from PowerShell - or with MSYS_NO_PATHCONV=1 under Git Bash, which
-otherwise rewrites --prefix=/de into a Windows path.
-
-Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

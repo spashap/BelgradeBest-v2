@@ -1,4 +1,5 @@
 import { env } from "./env";
+import { GA4_BOT_EXCLUSION, withoutBots } from "../bot-traffic";
 
 // GA4 via the Data API. Credentials: GA_CREDENTIALS_JSON (inline service-account
 // JSON — the Vercel-friendly form) or GOOGLE_APPLICATION_CREDENTIALS (a file path,
@@ -30,6 +31,7 @@ export async function ga4TopPages(): Promise<Ga4Result> {
       dimensions: [{ name: "pagePath" }],
       metrics: [{ name: "screenPageViews" }, { name: "activeUsers" }],
       orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
+      dimensionFilter: GA4_BOT_EXCLUSION,
       limit: 25,
     });
     const rows = (resp.rows ?? []).map((r) => ({
@@ -208,13 +210,13 @@ export async function ga4PlatformPages(prefixes: string[], days = 28): Promise<P
       ],
       dimensions: [{ name: "pagePath" }],
       metrics: [{ name: "screenPageViews" }, { name: "totalUsers" }],
-      dimensionFilter: {
+      dimensionFilter: withoutBots({
         orGroup: {
           expressions: prefixes.map((p) => ({
             filter: { fieldName: "pagePath", stringFilter: { matchType: "BEGINS_WITH", value: p } },
           })),
         },
-      },
+      }),
       limit: 200,
     });
     // With two dateRanges the API appends an implicit dateRange dimension value
@@ -280,6 +282,8 @@ export type Ga4Overview =
   | { configured: false; reason: string };
 
 const num = (v: unknown) => Number(v ?? 0) || 0;
+// Every overview report runs with known bots stripped (lib/bot-traffic.ts).
+const noBots = <R extends object>(reqs: R[]) => reqs.map((r) => ({ ...r, dimensionFilter: GA4_BOT_EXCLUSION }));
 const delta = (cur: number, prev: number): number | null =>
   prev > 0 ? (cur - prev) / prev : cur > 0 ? null : 0; // null = "new" (no prior baseline)
 
@@ -323,7 +327,7 @@ export async function ga4Overview(days = 28): Promise<Ga4Overview> {
     const [[batch]] = await Promise.all([
       client.batchRunReports({
         property,
-        requests: [
+        requests: noBots([
           // 0 — KPIs across current + previous period (two date ranges → two rows)
           { dateRanges: [cur, prev], metrics: kpiMetrics },
           // 1 — trend. Today: per hour, today + yesterday (two ranges → the API
@@ -365,13 +369,13 @@ export async function ga4Overview(days = 28): Promise<Ga4Overview> {
             dimensions: [{ name: "newVsReturning" }],
             metrics: [{ name: "totalUsers" }],
           },
-        ],
+        ]),
       }),
     ]);
 
     const [batch2] = await client.batchRunReports({
       property,
-      requests: [
+      requests: noBots([
         // 0 — top countries
         {
           dateRanges: [cur],
@@ -396,7 +400,7 @@ export async function ga4Overview(days = 28): Promise<Ga4Overview> {
           orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
           limit: 15,
         },
-      ],
+      ]),
     });
 
     const reports = batch.reports ?? [];

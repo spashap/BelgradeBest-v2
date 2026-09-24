@@ -2,17 +2,15 @@
 // Public analytics — free Google Analytics 4 only (Vercel Web Analytics removed
 // to avoid its cost). Emitted in PRODUCTION ONLY, so `astro dev` ships no tags.
 // Set PUBLIC_GA4_ID in the Vercel build env to switch it on.
+//
+// Known bots never load the tag: automated browsers (navigator.webdriver) and the
+// headless screen sizes GA4's own bot filter misses (lib/bot-traffic.ts — the same
+// list the admin reports strip from history).
+import { BOT_SCREEN_RESOLUTIONS } from "../lib/bot-traffic";
 const GA4 = import.meta.env.PUBLIC_GA4_ID;
 const isProd = import.meta.env.PROD;
+const loader = `(function(){var r=screen.width+'x'+screen.height;if(navigator.webdriver||${JSON.stringify(
+  BOT_SCREEN_RESOLUTIONS,
+)}.indexOf(r)>-1)return;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${GA4}';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA4}');})();`;
 ---
-{
-  isProd && GA4 ? (
-    <Fragment>
-      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4}`} />
-      <script
-        is:inline
-        set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4}');`}
-      />
-    </Fragment>
-  ) : null
-}
+{isProd && GA4 ? <script is:inline set:html={loader} /> : null}
