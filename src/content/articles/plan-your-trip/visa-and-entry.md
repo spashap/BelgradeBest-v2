@@ -1,9 +1,9 @@
 ---
 leg: "plan-your-trip"
 slug: "visa-and-entry"
-title: "Entry rules and registration for Serbia"
+title: "Do you need a visa for Serbia? Entry rules and registration"
 shortTitle: "Visas & entry"
-description: "Do you need a visa for Serbia? Most nationalities visit visa-free for 90 days — but the 24-hour police registration is the rule that trips people up."
+description: "Do you need a visa for Serbia? US, UK, EU, Canadian and Australian citizens enter visa-free for 90 days in 180 — plus the 24-hour police registration rule that trips visitors up."
 lede: "Do you need a visa for Serbia? For most major nationalities the answer is no — EU, UK, US, Canadian and Australian citizens can visit visa-free for up to 90 days. But everyone meets one rule that catches visitors out: you must be registered with the police within 24 hours of arrival. Here's how entry and registration actually work, and where to confirm the rules for your own passport."
 heroLabel: "Serbia entry & registration / hero"
 heroAlt: "Entry rules and registration for visiting Serbia"

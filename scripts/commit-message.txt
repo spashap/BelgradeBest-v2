@@ -1,7 +1,12 @@
-Log the Bing submission of the 8 pages changed in the October refresh
+Search snippets: Expo hub leads with tickets, visa page asks the visa question
 
-BB-CHG-0023: south-korea, contracts, tracker, stations-and-onward-travel,
-visa-and-entry, getting-around, belgrade-museums, belgrade-splavovi pushed
-via submit-to-bing.mjs after the deploy went live. Quota 92/day left.
+The two pages with the most Bing impressions click poorly (BB-CHG-0024):
+- /expo-2027: 620 impressions, 3% click rate, and ticket searches are the
+  top demand. New title "Expo 2027 Belgrade: tickets, dates and the 141
+  countries taking part"; the description states the ticket status up front.
+- /plan-your-trip/visa-and-entry: 239 impressions, 2% click rate, against
+  "do I need a visa for Serbia" searches. Title (and H1) now asks that
+  question; the description names the visa-free nationalities.
+Baseline recorded for a re-read around 29 Oct.
 
 Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
