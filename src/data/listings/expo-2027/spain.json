@@ -1,0 +1,83 @@
+{
+  "slug": "spain",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Spain Pavilion",
+  "shortName": "Spain",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-10-01",
+  "summary": "Spain's pavilion at Expo 2027 Belgrade will be \"Plaza España\", a design by Javier Jiménez Iniesta of Studio Animal that turns the pavilion into a Spanish town square, chosen through an international competition run by Acción Cultural Española.",
+  "blocks": {
+    "about": [
+      "Spain's participation is being delivered by Acción Cultural Española (AC/E), the state-owned company that has produced Spain's pavilions at previous World Expos. In early 2026 AC/E, together with the Spanish network of design associations, opened an international competition for the integral design, exhibition concept and production direction of the Pabellón de España. The brief asked for a living, emotional space where architecture and design shape the visitor experience, with play understood as a means of inclusion — Spain's reading of the Expo theme \"Play for Humanity: Sport and Music for All\".",
+      "The competition ran in two phases: up to eight firms were shortlisted from the first round, each paid €15,000 plus VAT to develop a proposal, with applications due on 19 February 2026. The tender's estimated value was €505,000 excluding VAT, covering design, exhibition content, production, assembly and dismantling. In July 2026 the winner was reported as Javier Jiménez Iniesta and Studio Animal with \"Plaza España\", which asks whether a pavilion can be a Plaza Mayor — the main square of a Spanish town, with its open-air dances, carnivals, games and fountain. The pavilion's size, builder, commissioner and National Day have not been published yet."
+    ],
+    "facts": [
+      {
+        "label": "Implementing body",
+        "value": "Acción Cultural Española (AC/E), Spain's state-owned cultural-action company",
+        "source": "https://cipesa.com/diseno-y-montaje-pabellon-de-espana-en-la-expo-2027-en-belgrado/"
+      },
+      {
+        "label": "Design",
+        "value": "\"Plaza España\" by Javier Jiménez Iniesta, Studio Animal (winner reported July 2026)",
+        "source": "https://www.coacmab.com/javier-jimenez-iniesta-disenara-el-pabellon-de-espana-de-la-expo-2027/"
+      },
+      {
+        "label": "Competition",
+        "value": "International, two phases; up to 8 shortlisted firms paid €15,000 + VAT each; applications closed 19 February 2026",
+        "source": "https://www.coasevilla.org/Noticia.aspx?id=24623"
+      },
+      {
+        "label": "Tender estimate",
+        "value": "€505,000 excluding VAT for design, exhibition, production, assembly and dismantling (file 220126/01 CONC) — an estimate, not the final budget",
+        "source": "https://cipesa.com/diseno-y-montaje-pabellon-de-espana-en-la-expo-2027-en-belgrado/"
+      },
+      {
+        "label": "Size / builder",
+        "value": "Not published"
+      }
+    ],
+    "quotes": [
+      {
+        "quote": "¿Puede un pabellón ser una Plaza Mayor?",
+        "who": "Studio Animal, presenting the winning \"Plaza España\" concept (\"Can a pavilion be a Plaza Mayor?\")",
+        "source": "https://www.coacmab.com/javier-jimenez-iniesta-disenara-el-pabellon-de-espana-de-la-expo-2027/"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What will the Spain Pavilion at Expo 2027 Belgrade look like?",
+      "answer": "The winning design, \"Plaza España\" by Javier Jiménez Iniesta and Studio Animal, treats the pavilion as a Spanish Plaza Mayor — a town square with its festivities, carnivals, games and a fountain. Detailed drawings and the pavilion size have not been published."
+    },
+    {
+      "question": "Who is organising Spain's participation in Expo 2027?",
+      "answer": "Acción Cultural Española (AC/E), the state-owned company that runs Spain's World Expo pavilions. It held the international design competition in early 2026, together with the Spanish network of design associations."
+    },
+    {
+      "question": "How much is Spain spending on its Expo 2027 pavilion?",
+      "answer": "The only published figure is the design-and-production tender's estimated value of €505,000 excluding VAT. The final contract value and the full pavilion budget have not been published."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      {
+        "url": "https://www.coacmab.com/javier-jimenez-iniesta-disenara-el-pabellon-de-espana-de-la-expo-2027/",
+        "note": "COAC Madrid (architects' association), 17 Jul 2026 — Javier Jiménez Iniesta / Studio Animal to design the Spain Pavilion, concept \"Plaza España\" — verified 2026-10-01"
+      },
+      {
+        "url": "https://www.coasevilla.org/Noticia.aspx?id=24623",
+        "note": "COA Sevilla, 4 Feb 2026 — AC/E competition notice: two phases, up to 8 firms, €15,000 + VAT each, deadline 19 Feb 2026, design brief — verified 2026-10-01"
+      },
+      {
+        "url": "https://cipesa.com/diseno-y-montaje-pabellon-de-espana-en-la-expo-2027-en-belgrado/",
+        "note": "Tender listing mirroring the Spanish public procurement platform: file 220126/01 CONC, estimated value €505,000 excl. VAT — verified 2026-10-01"
+      }
+    ]
+  },
+  "images": []
+}

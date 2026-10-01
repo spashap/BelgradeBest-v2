@@ -1,12 +1,16 @@
-Search snippets: Expo hub leads with tickets, visa page asks the visa question
+Three new pavilion profiles from Bing demand: Slovenia, Czechia, Spain
 
-The two pages with the most Bing impressions click poorly (BB-CHG-0024):
-- /expo-2027: 620 impressions, 3% click rate, and ticket searches are the
-  top demand. New title "Expo 2027 Belgrade: tickets, dates and the 141
-  countries taking part"; the description states the ticket status up front.
-- /plan-your-trip/visa-and-entry: 239 impressions, 2% click rate, against
-  "do I need a visa for Serbia" searches. Title (and H1) now asks that
-  question; the description names the visa-free nationalities.
-Baseline recorded for a re-read around 29 Oct.
+People searched Bing for these pavilions and landed on generic pages
+because no profile existed (BB-CHG-0025):
+- Slovenia: 342 m² small pavilion, €3.3m, run by SPIRIT Slovenia;
+  government decision 9 Jul, contract signed 4 Sep 2026.
+- Czechia: contract signed June 2026, Commissioner General Kryštof Šafer,
+  theme space and cosmonautics, CZK 120m reported.
+- Spain: Acción Cultural Española competition won by "Plaza España"
+  (Javier Jiménez Iniesta / Studio Animal); €505k tender estimate.
+Czechia and Spain added to the tracker's participant table. Share cards
+and QR codes generated; South Korea card regenerated for its new summary.
+UK and Bulgaria researched and rejected: no confirmed participation.
+Also logs the Bing push of the retitled hub and visa page (BB-CHG-0026).
 
 Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

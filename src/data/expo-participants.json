@@ -69,6 +69,12 @@
       "source": "https://washington.mfa.gov.rs/en/press-service/announcements-and-notifications/united-states-confirms-participation-specialized-exhibition-expo-2027-belgrade"
     },
     {
+      "date": "2026-06-12",
+      "count": null,
+      "event": "Czechia signs its participation contract in Belgrade (Commissioner General Kryštof Šafer); main theme: space",
+      "source": "https://mzv.gov.cz/belgrade/cz/obchod_a_ekonomika/ceska_ucast_na_expo.html"
+    },
+    {
       "date": "2026-06-23",
       "count": null,
       "event": "South Korea contracts its pavilion: KOTRA signs Sigong Tech for the Korea Pavilion, KRW 8,836,190,000, term to 30 November 2027",
@@ -79,6 +85,18 @@
       "count": 139,
       "event": "Official counter shows 139 international participants",
       "source": "https://expobelgrade2027.org/en/participants"
+    },
+    {
+      "date": "2026-07-09",
+      "count": null,
+      "event": "Slovenian government confirms participation: small pavilion of 342 m², estimated cost €3.3 million, run by SPIRIT Slovenia",
+      "source": "https://www.rtvslo.si/gospodarstvo/vlada-potrdila-sodelovanje-slovenije-na-expu-2027-v-beogradu/787687"
+    },
+    {
+      "date": "2026-07-17",
+      "count": null,
+      "event": "Spain Pavilion design chosen: \"Plaza España\" by Javier Jiménez Iniesta / Studio Animal, after an Acción Cultural Española competition",
+      "source": "https://www.coacmab.com/javier-jimenez-iniesta-disenara-el-pabellon-de-espana-de-la-expo-2027/"
     },
     {
       "date": "2026-07-28",
@@ -255,6 +273,12 @@
       "region": "Europe",
       "announced": null,
       "source": "https://expobelgrade2027.org/en/participants"
+    },
+    {
+      "name": "Czechia",
+      "region": "Europe",
+      "announced": "2026-06-12",
+      "source": "https://mzv.gov.cz/belgrade/cz/obchod_a_ekonomika/ceska_ucast_na_expo.html"
     },
     {
       "name": "Djibouti",
@@ -592,6 +616,12 @@
       "region": "Africa",
       "announced": null,
       "source": "https://expobelgrade2027.org/en/participants"
+    },
+    {
+      "name": "Spain",
+      "region": "Europe",
+      "announced": null,
+      "source": "https://www.coacmab.com/javier-jimenez-iniesta-disenara-el-pabellon-de-espana-de-la-expo-2027/"
     },
     {
       "name": "Sudan",

@@ -187,6 +187,7 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
 - **Slovenia** signed participation 4 Sep (was missing from the tracker).
   Monaco hired Beyond Limits for scenography (Montecarlonews 24 Jun, snippet
   only — verify). PKS launched a business-matching platform 16 Sep.
+- **Demand-led profiles (same day):** Slovenia, Czechia (CZK 120m, space theme, commissioner Kryštof Šafer) and Spain (AC/E; Plaza España by Studio Animal; watch the award of file 220126/01 CONC for the builder) published from Bing queries. **UK and Bulgaria: no evidence of participation** - do not profile until a government decision appears. Gatekeepers: SPIRIT Slovenija, Czech MPO/CzechTrade, AC/E.
 - Still nothing: Türkiye, Turkmenistan winners; ticket sales/prices; National
   Day calendar; participant count (still 141 as of 5 Aug).
 

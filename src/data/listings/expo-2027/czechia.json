@@ -1,0 +1,83 @@
+{
+  "slug": "czechia",
+  "leg": "expo-2027",
+  "type": "pavilion",
+  "name": "Czech Republic Pavilion",
+  "shortName": "Czechia",
+  "status": "announced",
+  "claimed": false,
+  "verified": false,
+  "updated": "2026-10-01",
+  "summary": "Czechia signed its Expo 2027 Belgrade participation contract in June 2026 and is building its presentation around space and cosmonautics, under Commissioner General Kryštof Šafer, with a reported budget of CZK 120 million.",
+  "blocks": {
+    "about": [
+      "Czechia confirmed its participation in Expo 2027 Belgrade in the second week of June 2026, when the newly appointed Czech commissioner, Kryštof Šafer, toured the Expo site, met the organiser's construction, design and programme teams, and signed the participation contract with Serbia's Expo commissioner Jagoda Lazarević and Expo 2027 director Danilo Jerinić. Šafer, a former film producer and marketer, is the Commissioner General; Hospodářské noviny reported the Czech budget for Belgrade at CZK 120 million.",
+      "The main theme of the Czech participation is space. The Czech embassy in Belgrade names space as the core subject, and Industry and Trade Minister Karel Havlíček said cosmonautics linked to new technologies should be one of the key topics. Šafer has said he wants to design the Czech stand so that visitors who work hard, like Czech astronaut Aleš Svoboda, can get very close to the stars. Pavilion size, designer and builder have not been published."
+    ],
+    "facts": [
+      {
+        "label": "Contract signed",
+        "value": "Second week of June 2026, in Belgrade",
+        "source": "https://mzv.gov.cz/belgrade/cz/obchod_a_ekonomika/ceska_ucast_na_expo.html"
+      },
+      {
+        "label": "Commissioner General",
+        "value": "Kryštof Šafer, former film producer and marketer",
+        "source": "https://domaci.hn.cz/c1-67896760-bdquo-cesko-miri-ke-hvezdam-ldquo-komisarem-pro-expo-v-belehrade-bude-byvaly-producent-krystof-safer-zamerit-se-chce-na-vesmir-a-kosmonautiku"
+      },
+      {
+        "label": "Theme",
+        "value": "Space and cosmonautics",
+        "source": "https://mzv.gov.cz/belgrade/cz/obchod_a_ekonomika/ceska_ucast_na_expo.html"
+      },
+      {
+        "label": "Budget",
+        "value": "CZK 120 million (as reported by Hospodářské noviny, June 2026)",
+        "source": "https://domaci.hn.cz/c1-67896760-bdquo-cesko-miri-ke-hvezdam-ldquo-komisarem-pro-expo-v-belehrade-bude-byvaly-producent-krystof-safer-zamerit-se-chce-na-vesmir-a-kosmonautiku"
+      },
+      {
+        "label": "Size / designer / builder",
+        "value": "Not published"
+      }
+    ],
+    "quotes": [
+      {
+        "quote": "Chtěl bych koncipovat český stánek tak, že když se budete snažit a budete pilní jako Aleš Svoboda, tak se můžete dostat velmi blízko hvězdám.",
+        "who": "Kryštof Šafer, Czech Commissioner General (Hospodářské noviny, 25 June 2026): \"I would like to design the Czech stand so that if you try hard and are diligent like Aleš Svoboda, you can get very close to the stars.\"",
+        "source": "https://domaci.hn.cz/c1-67896760-bdquo-cesko-miri-ke-hvezdam-ldquo-komisarem-pro-expo-v-belehrade-bude-byvaly-producent-krystof-safer-zamerit-se-chce-na-vesmir-a-kosmonautiku"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the theme of the Czech pavilion at Expo 2027 Belgrade?",
+      "answer": "Space and cosmonautics. The Czech embassy in Belgrade names space as the main theme, and the commissioner wants visitors to feel they can get close to the stars."
+    },
+    {
+      "question": "Who is the Czech commissioner for Expo 2027?",
+      "answer": "Kryštof Šafer, a former film producer and marketer, who signed Czechia's participation contract in Belgrade in June 2026."
+    },
+    {
+      "question": "How much is Czechia spending on Expo 2027?",
+      "answer": "Hospodářské noviny reported a budget of CZK 120 million in June 2026. Pavilion size and the design team have not been published."
+    }
+  ],
+  "links": {
+    "website": null,
+    "sources": [
+      {
+        "url": "https://mzv.gov.cz/belgrade/cz/obchod_a_ekonomika/ceska_ucast_na_expo.html",
+        "note": "Czech Embassy in Belgrade (MFA) — commissioner visit, contract signed in the second week of June 2026, space as main theme — verified 2026-10-01"
+      },
+      {
+        "url": "https://domaci.hn.cz/c1-67896760-bdquo-cesko-miri-ke-hvezdam-ldquo-komisarem-pro-expo-v-belehrade-bude-byvaly-producent-krystof-safer-zamerit-se-chce-na-vesmir-a-kosmonautiku",
+        "note": "Hospodářské noviny, 25 Jun 2026 — Kryštof Šafer named Commissioner General; CZK 120m budget; Havlíček and Šafer quotes — verified 2026-10-01"
+      },
+      {
+        "url": "https://www.czechtradeoffices.com/rs/novosti/czech-republic-confirms-its-participation-in-expo-2027-with-official-agreement",
+        "note": "CzechTrade Offices, 12 Jun 2026 — Czech Republic confirms participation with official agreement"
+      }
+    ]
+  },
+  "images": []
+}
