@@ -1,16 +1,27 @@
-Strip known bots from analytics: no GA4 tag for headless browsers, filtered from every report
+October refresh: Korea pavilion contracted, 3 new Expo awards, Slovenia, 5 article fact fixes
 
-Singapore topped the admin analytics. It is a bot: 139 sessions / 139 users
-in 28 days, all Direct, exactly 1 page, 0 s engagement, at screen sizes no
-real device reports (1280x1200, 1366x1366). GA4's built-in bot filter misses
-it. It inflated users by ~47% and pulled engagement rate from 49% to 36%.
+Expo data (BB-CHG-0021)
+- South Korea pavilion: was still "tendering"; Sigong Tech signed the Korea
+  Pavilion contract with KOTRA on 23 Jun 2026 (KRW 8,836,190,000, to
+  30 Nov 2027). Status -> announced; summary, facts, FAQs, sources rewritten.
+  KOTRA + Sigong Tech operator notes updated.
+- Contract ledger +3: SKY SOLUTIONS (technical production, RSD 2.12bn),
+  Airclad Ltd + Production Pool (National Days stage, RSD 91.45m, one
+  consortium row), PLAN1ST (pavilion-handover framework, RSD 75m ceiling).
+  Korean pavilion moved out of "watching" as resolved.
+- Tracker: Slovenia added (signed 4 Sep, had been missing); six timeline
+  events incl. key handover starting mid-October 2026.
 
-- src/lib/bot-traffic.ts: the one list of bot signatures + the GA4 filter.
-- Analytics.astro: the tag is not loaded when navigator.webdriver is set or
-  the screen size is on the list, so new bot hits never reach GA4.
-- lib/admin/analytics.ts + lib/growth/runners.ts: every GA4 report excludes
-  those screen sizes, so the history is clean too (28d: 440 -> 300 users).
-- growth_changes.jsonl: BB-CHG-0020. Expect a step down in raw GA4 users;
-  it is not a traffic loss.
+Articles (BB-CHG-0022)
+- stations-and-onward-travel: no Belgrade-Budapest passenger train yet
+  (the page said it opened Feb 2026).
+- visa-and-entry: EU Entry/Exit System note for onward Schengen travel.
+- belgrade-museums: National Museum Thu/Sat 12:00-20:00; free Sunday is the
+  permanent exhibition only.
+- belgrade-splavovi: off-season (Oct-Apr) note. getting-around: re-dated.
+
+Tooling
+- check-freshness.mjs: CRLF files no longer read as missing lastUpdated.
+- Prospect runbook watch list updated (2026-10-01 sweep).
 
 Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

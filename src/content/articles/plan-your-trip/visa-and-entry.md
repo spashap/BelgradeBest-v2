@@ -7,7 +7,7 @@ description: "Do you need a visa for Serbia? Most nationalities visit visa-free 
 lede: "Do you need a visa for Serbia? For most major nationalities the answer is no — EU, UK, US, Canadian and Australian citizens can visit visa-free for up to 90 days. But everyone meets one rule that catches visitors out: you must be registered with the police within 24 hours of arrival. Here's how entry and registration actually work, and where to confirm the rules for your own passport."
 heroLabel: "Serbia entry & registration / hero"
 heroAlt: "Entry rules and registration for visiting Serbia"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-10-01"
 order: 6
 visible: true
 intent: "both"
@@ -59,6 +59,8 @@ This exemption is a stable legal structure, but conditions and suspensions can a
 ## ETIAS, ETA and e-Visa — what does not apply
 
 Serbia is not in the Schengen Area. That means the EU's ETIAS scheme does not apply to entering Serbia, and the UK ETA does not apply either. For most short-stay tourists there is no Serbia-specific online pre-registration as of 2026; those who do need a visa generally apply through embassies or consulates.
+
+One EU system *does* matter if your trip continues into the Schengen Area — to Hungary, Croatia or Romania, say, or home via an EU airport. The EU's **Entry/Exit System (EES)** has been fully operational since 10 April 2026: when you cross from Serbia into Schengen as a non-EU visitor, your passport is scanned and your fingerprints and face photo are recorded at the border instead of a passport stamp. It adds a few minutes at the first crossing, particularly on busy road borders, and it changes nothing about entering Serbia itself.
 
 Serbia has moved some functions onto an online portal for foreigners — since 2025 it issues Digital Travel Authorisations (visas in electronic form) for those who do need a visa, applied for through the "Welcome to Serbia" portal. But mainstream short-stay tourists from visa-free countries still simply turn up at the border with a valid passport; there is no pre-arrival authorisation to buy. Any move to a full e-Visa or pre-registration system covering visa-free tourists would be widely reported, so treat the current picture as the working one rather than a fixed forever rule.
 

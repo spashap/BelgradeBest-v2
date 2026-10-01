@@ -43,6 +43,7 @@ const MARKERS = [
 ];
 
 function splitFrontmatter(raw) {
+  raw = raw.replace(/\r\n/g, "\n"); // CRLF files otherwise lose their frontmatter (lastUpdated read as missing)
   const m = raw.match(/^---\n([\s\S]*?)\n---\n?/);
   if (!m) return { fm: "", body: raw };
   return { fm: m[1], body: raw.slice(m[0].length) };

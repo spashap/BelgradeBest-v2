@@ -4,31 +4,31 @@
   "type": "pavilion",
   "name": "South Korea Pavilion",
   "shortName": "South Korea",
-  "status": "tender",
+  "status": "announced",
   "claimed": false,
   "verified": false,
-  "updated": "2026-08-07",
-  "summary": "South Korea is tendering its Expo 2027 Belgrade pavilion through KOTRA at a budget of 9,000,000,000 KRW (roughly €5.6 million), with bids due 29 April 2026 and a contract running through 30 November 2027.",
+  "updated": "2026-10-01",
+  "summary": "South Korea has contracted its Expo 2027 Belgrade pavilion: KOTRA signed the Korea Pavilion contract with exhibition builder Sigong Tech on 23 June 2026, worth 8,836,190,000 KRW (roughly €5.5 million) and running to 30 November 2027. The theme and design are not yet public.",
   "blocks": {
     "about": [
-      "South Korea is preparing its presence at Expo 2027 Belgrade through a tender run by KOTRA (Korea Trade-Investment Promotion Agency), the state trade body whose World Expo team put out a call for the \"2027 Belgrade Expo Korean Pavilion Exhibition Service,\" per the Korean Architects Association (KIA) notice. The tendered budget is 9,000,000,000 KRW (roughly €5.6 million at current rates), covering a comprehensive exhibition-service scope: architectural design, interior construction, video production and industrial design are all within the bid's remit, and eligible bidders include registered architectural offices, interior construction firms, video production companies and industrial design firms.",
-      "Bids were due 29 April 2026 at 12:00, submitted through Korea's Nara Market e-procurement portal, with the winning bidder to be chosen by negotiated bid rather than lowest price — a selection method Korean public tenders use when design and technical quality are weighted alongside cost. The resulting contract is structured as a phased, long-term agreement running from commencement through 30 November 2027, spanning the exposition's operating period. As of this writing, the pavilion's theme, design and the winning bidder have not been made public."
+      "South Korea's presence at Expo 2027 Belgrade is run by KOTRA (Korea Trade-Investment Promotion Agency), the state trade body whose World Expo team tendered the \"2027 Belgrade Expo Korean Pavilion Exhibition Service\" in spring 2026, per the Korean Architects Association (KIA) notice. The tendered budget was 9,000,000,000 KRW, covering a comprehensive exhibition-service scope: architectural design, interior construction, video production and industrial design. Bids were due 29 April 2026 through Korea's Nara Market e-procurement portal, and the winner was chosen by negotiated bid rather than lowest price.",
+      "The contract went to Sigong Tech, the Seongnam-based exhibition and museum builder. In a stock-exchange disclosure reported on 24 June 2026, Sigong Tech said it had signed the \"2027 Belgrade Expo Korea Pavilion\" supply contract with KOTRA for 8,836,190,000 KRW — about 5.2% of its recent annual revenue — with a term from 23 June 2026 to 30 November 2027. The same company separately holds the organiser's contract for the Expo's collective pavilions, the buildings that house every participating country without its own structure (awarded 31 July 2026), so one Korean firm is building both the Korea Pavilion and the shared halls around it. The pavilion's theme and design have not been made public yet."
     ],
     "facts": [
       {
-        "label": "Tendered budget",
-        "value": "9,000,000,000 KRW (roughly €5.6 million)",
-        "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+        "label": "Contractor",
+        "value": "Sigong Tech Co., Ltd. (Seongnam) — contract signed with KOTRA, disclosed 24 June 2026",
+        "source": "https://m.news.nate.com/view/20260624n25643"
       },
       {
-        "label": "Bid deadline",
-        "value": "29 April 2026, 12:00, via Korea's Nara Market e-procurement portal",
-        "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+        "label": "Contract value",
+        "value": "8,836,190,000 KRW (roughly €5.5 million), against a tendered budget of 9,000,000,000 KRW",
+        "source": "https://m.news.nate.com/view/20260624n25643"
       },
       {
         "label": "Contract term",
-        "value": "From commencement through 30 November 2027",
-        "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
+        "value": "23 June 2026 – 30 November 2027",
+        "source": "https://m.news.nate.com/view/20260624n25643"
       },
       {
         "label": "Selection method",
@@ -39,32 +39,31 @@
         "label": "Implementing agency",
         "value": "KOTRA (Korea Trade-Investment Promotion Agency), World Expo team",
         "source": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8"
-      },
-      {
-        "label": "Award status",
-        "value": "Winning exhibition agency not yet public (checked 7 Aug 2026); the G2B RFP scope spans design, exhibition content, installation, PM/supervision, operation and dismantling",
-        "source": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01400596&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
       }
     ],
     "quotes": []
   },
   "faqs": [
     {
-      "question": "Who is organizing South Korea's pavilion at Expo 2027 Belgrade?",
-      "answer": "KOTRA (Korea Trade-Investment Promotion Agency), through its World Expo team, put out the tender for the \"2027 Belgrade Expo Korean Pavilion Exhibition Service,\" per the Korean Architects Association's published notice."
+      "question": "Who is building South Korea's pavilion at Expo 2027 Belgrade?",
+      "answer": "Sigong Tech, a Korean exhibition and museum builder. It signed the Korea Pavilion contract with KOTRA (Korea Trade-Investment Promotion Agency), which runs Korea's participation, in June 2026."
     },
     {
       "question": "What is the budget for South Korea's Expo 2027 pavilion?",
-      "answer": "The tendered budget is 9,000,000,000 KRW, roughly €5.6 million at current exchange rates, per the Korean Architects Association's tender notice."
+      "answer": "The contract is worth 8,836,190,000 KRW, roughly €5.5 million, against a tendered budget of 9,000,000,000 KRW. It runs from 23 June 2026 to 30 November 2027."
     },
     {
       "question": "What will South Korea's pavilion look like or be themed around?",
-      "answer": "Not yet public. The tender covers exhibition-service scope (architecture, interior construction, video production, industrial design), but the theme, design and the winning bidder have not been announced as of this writing."
+      "answer": "Not yet public. The contract covers design, exhibition content, installation, operation and dismantling, but neither KOTRA nor Sigong Tech has published the theme or design."
     }
   ],
   "links": {
     "website": null,
     "sources": [
+      {
+        "url": "https://m.news.nate.com/view/20260624n25643",
+        "note": "eDaily via Nate News, 24 Jun 2026 — Sigong Tech disclosure of the KRW 8,836,190,000 Korea Pavilion contract with KOTRA, term 23 Jun 2026 – 30 Nov 2027 — verified 2026-10-01"
+      },
       {
         "url": "https://www.kia.or.kr/news/notice.php?ptype=view&idx=19682&category=8",
         "note": "Korean Architects Association (KIA) tender notice for the 2027 Belgrade Expo Korean Pavilion Exhibition Service — verified 2026-07-06"

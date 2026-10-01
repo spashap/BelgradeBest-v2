@@ -7,7 +7,7 @@ description: "Splavovi Belgrade — how the floating river clubs work: the May�
 lede: "Splavovi — the floating bars and clubs moored along Belgrade's rivers — are the city's signature night out. Here's how the scene actually works: when it runs, where on the Sava and Danube to find it, what changed after the recent quay clean-up, and how to avoid the table-minimum traps."
 heroLabel: "Belgrade splavovi / hero"
 heroAlt: "Illuminated floating river clubs on the water at night"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-10-01"
 order: 1
 visible: true
 intent: "leisure"
@@ -42,7 +42,7 @@ The scene itself is the durable institution here; individual clubs come and go, 
 
 ## When is splav season — and why does timing matter so much?
 
-Plan around **May through September**, with **June** the month when full programming is typically in place. Belgrade nightlife is explicitly seasonal. At the end of spring, the major indoor clubs close or scale back, and the high-energy crowds move to the riverbank splavovi. In winter the same crowds — and often the same operators — move back indoors.
+Plan around **May through September**, with **June** the month when full programming is typically in place. Belgrade nightlife is explicitly seasonal. At the end of spring, the major indoor clubs close or scale back, and the high-energy crowds move to the riverbank splavovi. In winter the same crowds — and often the same operators — move back indoors. If you are visiting between October and April, expect many of the party rafts to be closed or on reduced nights and plan on the indoor clubs instead; the riverside restaurant rafts, such as those on the Zemun quay, are the part of the scene most likely to stay open through the colder months.
 
 This matters enormously for timing. If you arrive in January expecting a riverside club night, you will find the scene has migrated inside. The floating clubs are a warm-weather institution; a visitor planning around them should aim for late spring through early autumn. If your trip falls outside that window, treat the splavovi as a thing to file away for next time and look instead at the broader range of [things to do in Belgrade](/visit-belgrade/things-to-do-in-belgrade).
 

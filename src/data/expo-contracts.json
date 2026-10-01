@@ -1,13 +1,17 @@
 {
   "_readme": "Expo 2027 contract award ledger — the data master for /expo-2027/contracts and /data/expo-2027-contracts.json. SCOPE: procurement run by the ORGANISER, EXPO 2027 Belgrade d.o.o. National-pavilion spending (each country's own budget) and Serbian state construction contracts awarded by ministries are deliberately OUT of scope — different awarding bodies, different money — and must not be mixed in. RULES, applied on every edit: (1) a consortium award is ONE row, listing every named member; (2) never add a subcontractor's share to a prime contract's value; (3) `kind` must say whether a figure is a firm award or a framework ceiling (an estimated maximum, not spending); (4) never sum the rows into a total and never call any sum 'the cost of Expo' — the ledger is deliberately incomplete; (5) every row carries at least one source URL and a `verified` date; nothing enters without one. Bump `updated` on every edit — it drives dateModified and sitemap lastmod.",
-  "updated": "2026-09-17",
+  "updated": "2026-10-01",
   "scopeNote": "Every award below was made by EXPO 2027 Belgrade d.o.o., the state-owned company organising the exhibition. Values are as reported by Serbian media from the procurement record, excluding VAT unless stated. This is not a complete register of Expo spending: it covers the packages we have been able to source and verify, and it excludes national pavilions, which each country funds itself.",
   "contracts": [
     {
       "id": "collective-pavilions",
       "package": "Collective pavilions — design, construction, operation and dismantling",
-      "awardedTo": ["Sigong Tech Co., Ltd. (South Korea)"],
-      "subcontractors": ["BAUMEISTER d.o.o. Beograd"],
+      "awardedTo": [
+        "Sigong Tech Co., Ltd. (South Korea)"
+      ],
+      "subcontractors": [
+        "BAUMEISTER d.o.o. Beograd"
+      ],
       "value": 5280000000,
       "currency": "RSD",
       "vat": "excl",
@@ -25,7 +29,9 @@
     {
       "id": "ceremonies",
       "package": "Opening and closing ceremonies",
-      "awardedTo": ["Balich Wonder Studio (Italy)"],
+      "awardedTo": [
+        "Balich Wonder Studio (Italy)"
+      ],
       "subcontractors": [],
       "value": 2323514160,
       "currency": "RSD",
@@ -45,7 +51,9 @@
     {
       "id": "logistics",
       "package": "Logistics partner (framework agreement)",
-      "awardedTo": ["Intereuropa — logističke usluge a.d. Dobanovci"],
+      "awardedTo": [
+        "Intereuropa — logističke usluge a.d. Dobanovci"
+      ],
       "subcontractors": [],
       "value": 530882000,
       "currency": "RSD",
@@ -88,7 +96,9 @@
     {
       "id": "supervision",
       "package": "Construction supervision and quality control (three zones)",
-      "awardedTo": ["Arhi Nova d.o.o. Beograd"],
+      "awardedTo": [
+        "Arhi Nova d.o.o. Beograd"
+      ],
       "subcontractors": [],
       "value": 261700000,
       "currency": "RSD",
@@ -105,7 +115,10 @@
     {
       "id": "village-operator",
       "package": "EXPO Village accommodation operator",
-      "awardedTo": ["Aurion Service d.o.o. Beograd", "Delta Hospitality d.o.o. Beograd"],
+      "awardedTo": [
+        "Aurion Service d.o.o. Beograd",
+        "Delta Hospitality d.o.o. Beograd"
+      ],
       "subcontractors": [],
       "value": 234645045,
       "currency": "RSD",
@@ -123,7 +136,9 @@
     {
       "id": "ticket-printing",
       "package": "Production and printing of non-personalised tickets",
-      "awardedTo": ["Institute for Manufacturing Banknotes and Coins – Topčider (Zavod za izradu novčanica i kovanog novca)"],
+      "awardedTo": [
+        "Institute for Manufacturing Banknotes and Coins – Topčider (Zavod za izradu novčanica i kovanog novca)"
+      ],
       "subcontractors": [],
       "value": 38200000,
       "currency": "RSD",
@@ -137,6 +152,67 @@
         "https://n1info.rs/biznis/ulaznice-za-expo-2027-stampa-ugovor/",
         "https://www.b92.net/biz/srbija/vesti/260043/zavod-za-izradu-novcanica-topcider-stampa-ulaznice-za-expo-2027/vest"
       ]
+    },
+    {
+      "id": "technical-production",
+      "package": "Technical production of the programme",
+      "awardedTo": [
+        "SKY SOLUTIONS d.o.o. Beograd"
+      ],
+      "subcontractors": [],
+      "value": 2119810882,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "awarded": "2026-09-18",
+      "term": "The 93 days of the exhibition, 15 May – 15 August 2027, plus installation and removal",
+      "scope": "Complete technical production of programme content: rental and transport of stage equipment (audio, video, lighting), installation, testing, maintenance, technical support and staff, and final removal, across the Auditorium (about 3,000 seats), the World Stage, the Symphony Stage, the National Day Stage, seven pop-up stages, Sports for All and the sports fields. The organiser expects about 8,000 events.",
+      "verified": "2026-10-01",
+      "sources": [
+        "https://www.b92.net/biz/svet/vesti/268588/expo-2027-izabrao-kompaniju-za-tehnicku-produkciju-ugovor-vredan-21-milijardu-dinara/vest"
+      ],
+      "note": "The date shown is when the award was publicly reported; the decision date was not published."
+    },
+    {
+      "id": "national-days-stage",
+      "package": "National Days stage — design, build, maintenance and dismantling",
+      "awardedTo": [
+        "Airclad Ltd (United Kingdom)",
+        "Production Pool (Ruma, Serbia)"
+      ],
+      "subcontractors": [],
+      "value": 91450000,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "awarded": "2026-09-30",
+      "scope": "Concept and realisation of the temporary architectural-scenic structure for the National Days stage, where each participating country presents its culture on its National Day: design, fabrication, assembly, maintenance and dismantling, plus production and service areas for performers and crews.",
+      "verified": "2026-10-01",
+      "sources": [
+        "https://n1info.rs/biznis/kompanija-expo-2027-izabrala-ponudjaca-za-binu-vrednost-posla-91-milion-dinara-bez-pdv-a"
+      ],
+      "note": "The date shown is when the award was publicly reported; the decision date was not published.",
+      "consortiumNote": "One award to a group of two bidders — counted once here, not twice."
+    },
+    {
+      "id": "pavilion-handover",
+      "package": "Pavilion handover management (framework agreement)",
+      "awardedTo": [
+        "PLAN1ST d.o.o. Beograd"
+      ],
+      "subcontractors": [],
+      "value": 75000000,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "framework",
+      "awarded": "2026-09-28",
+      "scope": "Coordination and management of the handover and onward transfer of pavilions, public and service spaces — international and partner pavilions, Zone E, the residential zone and other Zone A spaces — including defect checks and final acceptance.",
+      "frameworkNote": "Reported as the estimated maximum value of the services, paid as needed. It is a ceiling, not spending.",
+      "verified": "2026-10-01",
+      "sources": [
+        "https://www.b92.net/biz/srbija/vesti/271382/expo-2027-izabrao-partnera-za-primopredaju-paviljona-sporazum-vredan-75-miliona-dinara/vest"
+      ],
+      "note": "The date shown is when the award was publicly reported; the decision date was not published."
     }
   ],
   "watching": [
@@ -147,8 +223,8 @@
     },
     {
       "package": "Korean Pavilion exhibition services",
-      "reported": "KOTRA tender, KRW 9bn, bids closed 29 April 2026",
-      "why": "A national-pavilion contract, so out of scope for this ledger; the winner is also still unpublished."
+      "reported": "Won by Sigong Tech: KRW 8,836,190,000 contract with KOTRA, signed 23 June 2026, term to 30 November 2027",
+      "why": "A national-pavilion contract, so out of scope for this ledger — it is on the South Korea pavilion profile instead."
     },
     {
       "package": "Turkmenistan pavilion design and construction",

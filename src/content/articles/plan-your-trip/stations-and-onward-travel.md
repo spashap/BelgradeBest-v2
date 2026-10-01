@@ -7,7 +7,7 @@ description: "The Belgrade train station moved — rail now runs from Beograd Ce
 lede: "If an old guide sends you to a grand station by the river, you'll find it closed. Belgrade's main train station is now Beograd Centar (\"Prokop\"), and intercity buses leave from a new station in Block 42, New Belgrade. Here's where each station actually sits, how to reach it on the free city network, and how to travel onward across Serbia — including the Soko high-speed train to Novi Sad."
 heroLabel: "Belgrade stations / hero"
 heroAlt: "Belgrade's main stations and onward travel across Serbia"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-10-01"
 order: 3
 visible: true
 intent: "both"
@@ -19,7 +19,7 @@ linksTo:
 faqs:
   - answer: "Beograd Centar, colloquially \"Prokop,\" is the main train station in Belgrade — all trains now use it, and its new main hall opened in October 2023. The grand historic station by the river (Belgrade Glavna, near the old town) closed on 30 June 2018 and no longer serves passengers, so older guides that name it are out of date."
     question: "Which is the main train station in Belgrade?"
-  - answer: "Take the Soko (Falcon) high-speed train from Beograd Centar (Prokop). As of 2026 it covers the roughly 75 km in about 36 minutes, with around a dozen departures a day, and the same line continues to Subotica and on to Budapest. Buy tickets at the station or through Serbian Railways (Srbija Voz); intercity buses are the slower alternative from the Block 42 bus station. Timetables and fares change, so confirm close to your travel date."
+  - answer: "Take the Soko (Falcon) high-speed train from Beograd Centar (Prokop). As of 2026 it covers the roughly 75 km in about 36 minutes, with frequent departures through the day, and the same line continues north to Subotica. Through passenger trains to Budapest had not started as of October 2026. Buy tickets at the station or through Serbian Railways (Srbija Voz); intercity buses are the slower alternative from the Block 42 bus station. Timetables and fares change, so confirm close to your travel date."
     question: "How do I get from Belgrade to Novi Sad?"
   - answer: "The main intercity bus station is in Block 42 in New Belgrade, on Antifašističke borbe street next to the New Belgrade railway station, on the site of the former flea market. It opened in late September 2024 when the old central bus station (BAS) at Železnička 4 near the river closed after more than 50 years. The new building is still being finished, so a temporary terminal currently handles ticketing and departures."
     question: "Where is the bus station in Belgrade?"
@@ -73,7 +73,7 @@ One note for readers of older guides: a small platform-access fee, paid in cash,
 
 ## How do I get from Belgrade to Novi Sad?
 
-The fast way is the **Soko ("Falcon") high-speed train** from Beograd Centar (Prokop). As of 2026 it covers the roughly 75 km to Novi Sad in about **36 minutes**, with around a dozen departures a day — far quicker than the bus or driving. The same high-speed line has since been extended north to **Subotica** (regular high-speed service launched in October 2025, Belgrade–Subotica in roughly 72 minutes) and on to **Budapest**, with the cross-border high-speed service opening in February 2026. Buy tickets at the station windows or through Serbian Railways (Srbija Voz). *(Journey times, frequencies and fares are indicative and perishable — confirm close to your travel date.)*
+The fast way is the **Soko ("Falcon") high-speed train** from Beograd Centar (Prokop). As of 2026 it covers the roughly 75 km to Novi Sad in about **36 minutes**, with frequent departures through the day — far quicker than the bus or driving. The same high-speed line has since been extended north to **Subotica** (regular high-speed service launched in October 2025, Belgrade–Subotica in roughly 72 minutes). The Hungarian section to **Budapest** carries freight trains, but passenger service has not started: launch dates in February and spring 2026 passed, and as of October 2026 final full-load tests on the Hungarian side were scheduled for 3–4 October, with officials saying passenger trains could follow within weeks. Until it opens, the dependable way to Budapest is the intercity bus. Buy tickets at the station windows or through Serbian Railways (Srbija Voz). *(Journey times, frequencies and fares are indicative and perishable — confirm close to your travel date.)*
 
 The slower alternative is the **intercity bus** from the Block 42 station, which is useful if the train timetable doesn't suit you.
 
@@ -87,4 +87,4 @@ More generally, from Prokop (rail) and Block 42 (bus) you can reach cities acros
 
 Several things here are deliberately left open because they are not settled. Parts of Prokop remain unfinished, and the Block 42 bus station building was still being completed at the time of research, with a temporary terminal in use — both may look and work differently by the time you arrive. Timetables, fares, station opening hours and any platform fees are perishable and should be verified locally. The Belgrade–Niš high-speed line and other corridor upgrades are progressing but not yet operational, so treat them as future, not current, options. Any dedicated event or Expo shuttle arrangements are not yet announced in our sources, so don't plan around them until they are confirmed.
 
-The stable, dependable facts are simple: rail from Beograd Centar (Prokop), intercity buses from Block 42 in New Belgrade, both reachable on the free city network, the fast Soko train to Novi Sad and on toward Budapest — and the old riverfront stations firmly behind us.
+The stable, dependable facts are simple: rail from Beograd Centar (Prokop), intercity buses from Block 42 in New Belgrade, both reachable on the free city network, the fast Soko train to Novi Sad and Subotica, with Budapest still waiting on its passenger launch — and the old riverfront stations firmly behind us.

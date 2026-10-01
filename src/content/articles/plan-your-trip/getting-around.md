@@ -7,7 +7,7 @@ description: "Belgrade public transport is free to ride — no ticket, no card �
 lede: "Belgrade is walkable at its core and easy to cross by public transport — which, since 2025, is free to ride for everyone, with no ticket and no card. This is how to get around day to day in 2026: buses, trams and trolleybuses, the Tram 2 sightseeing loop, night buses, when to take a taxi or an app, and where your own two feet are fastest."
 heroLabel: "Getting around Belgrade / hero"
 heroAlt: "Getting around Belgrade by tram, bus and on foot"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-10-01"
 order: 5
 visible: true
 intent: "both"
@@ -45,7 +45,7 @@ That makes this page a freshness check on most older travel advice. A practical 
 
 There are a small number of paid exceptions to the free network, and they matter mainly at the edges of a trip. As of 2026 the **A1 airport express minibus** (Slavija ↔ [Nikola Tesla Airport](/glossary/nikola-tesla-airport)) and the lettered **"E" express minibuses** (lines such as E1, E2, E6 and E9) are paid services where you buy a ticket on board — reported at around 400 RSD for the A1 and around 200 RSD for the E lines, indicative figures that may shift. Everything else — ordinary buses, all trams, all trolleybuses and BG Voz — is free. (If you're heading to or from the airport, the cheaper move is a regular free city bus rather than the paid A1; our [airport-to-city guide](/plan-your-trip/airport-to-city) compares the options.)
 
-One honest caveat on the policy itself: it is funded from the city budget and higher local taxes rather than fares, and it has drawn some domestic criticism. It was still in force in mid-2026, and is likely stable for visitors through 2026 and probably 2027, but a future administration could change it. Treat it as the reality for your trip, not a permanent guarantee.
+One honest caveat on the policy itself: it is funded from the city budget and higher local taxes rather than fares, and it has drawn some domestic criticism. It was still in force in October 2026, and is likely stable for visitors through 2026 and probably 2027, but a future administration could change it. Treat it as the reality for your trip, not a permanent guarantee.
 
 ## Does Belgrade have a metro?
 

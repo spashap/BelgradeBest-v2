@@ -7,7 +7,7 @@ description: "The best museums in Belgrade — the Tesla Museum, Museum of Yugos
 lede: "Belgrade's museums range from Tesla's archive in Vračar to Tito's mausoleum near Dedinje. Here's which are worth your time, which district each sits in and how to reach it, plus opening patterns, prices and free-admission days, indicative as of 2026."
 heroLabel: "Belgrade museums / hero"
 heroAlt: "Inside one of Belgrade's museums"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-10-01"
 order: 6
 visible: true
 intent: "leisure"
@@ -51,7 +51,7 @@ The practical catch worth stating plainly: payment is **cash only in RSD** — c
 
 Where it is: directly on Republic Square (Trg Republike), at the eastern end of the [Knez Mihailova](/glossary/knez-mihailova) pedestrian street in the Stari Grad old town — about as central as Belgrade gets, and a natural anchor for a walking tour. The square is a major transit hub, so it is easy to reach by bus or tram and walkable from most central accommodation.
 
-Serbia's flagship art and archaeology collection sits on Republic Square. The reported pattern is Tuesday, Wednesday, Friday and Sunday 10:00–18:00, with Thursday and Saturday running later to 20:00, and Monday closed. Tickets are 300 RSD for the permanent exhibition, 500 RSD for temporary shows and 600 RSD combined; students get 50% off and under-sevens are free. Admission is free on Sundays.
+Serbia's flagship art and archaeology collection sits on Republic Square. The museum's own visitor page gives Tuesday, Wednesday, Friday and Sunday 10:00–18:00 and Thursday and Saturday 12:00–20:00 (a later start as well as a later finish), with Monday closed. Tickets are 300 RSD for the permanent exhibition, 500 RSD for temporary shows and 600 RSD combined; students get 50% off and under-sevens are free. Admission to the permanent exhibition is free on Sundays; temporary shows are still ticketed.
 
 One aggregator lists this museum as open Monday to Saturday and closed on Sunday — that contradicts the well-established closed-Monday, free-Sunday pattern and is most likely wrong. Trust the closed-Monday version and confirm at narodnimuzej.rs.
 

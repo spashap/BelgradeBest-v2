@@ -167,7 +167,29 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
    rewrite `scripts/commit-message.txt`, summarize actionable finds to the
    owner (especially anything with a deadline).
 
-## 6. Watch list (update every run — last updated 2026-09-04)
+## 6. Watch list (update every run — last updated 2026-10-01)
+
+**2026-10-01 light sweep (Sonnet agents + Fable verification) — what changed:**
+- **South Korea SOLVED, and we had missed it for 3 months:** Sigong Tech signed
+  the Korea Pavilion contract with KOTRA on 23 Jun 2026 (KRW 8,836,190,000, to
+  30 Nov 2027; eDaily/Nate 24 Jun, a KRX disclosure). Sigong Tech therefore
+  holds BOTH the Korea Pavilion and the organiser's collective pavilions.
+  Lesson: search the contractor's own stock-exchange disclosures (공시), not
+  only the tender body.
+- **New organiser awards (in the ledger):** SKY SOLUTIONS (technical production,
+  RSD 2.12bn, 18 Sep), Airclad Ltd + Production Pool (National Days stage,
+  RSD 91.45m, 30 Sep), PLAN1ST (handover-management framework, RSD 75m, 28 Sep).
+  Unconfirmed, held out: Vatrex Rescue safety equipment (date unclear),
+  Građevinska direkcija Srbije RSD 5m temporary accommodation.
+- **Handover now starts mid-October 2026** (Kovačević, Tanjug 30 Sep), for
+  countries with approvals/permits in place; 1 Dec still the all-handed date.
+  250+ technical-delegation members on site 1–3 Oct.
+- **Slovenia** signed participation 4 Sep (was missing from the tracker).
+  Monaco hired Beyond Limits for scenography (Montecarlonews 24 Jun, snippet
+  only — verify). PKS launched a business-matching platform 16 Sep.
+- Still nothing: Türkiye, Turkmenistan winners; ticket sales/prices; National
+  Day calendar; participant count (still 141 as of 5 Aug).
+
 
 - **Italy** sponsorship call **extended to 30 Oct 2026** (embassy update of
   3 Sep 2026; logo/visual-identity proposals kept 31 Aug; PEC
@@ -186,7 +208,7 @@ on-site presence + `expo@nussli.com`; same for SVORA's landing page).
   collective, 'Living Playground', €375k ex-VAT (ASB.sk 9 Jul). Still watch:
   construction tender award + the slovakiaexpo.sk company registrations
   (booth-list angle; SARIO cooperation announced 31 Jul).
-- **South Korea** KOTRA tender (₩9bn, closed 29 Apr) → award still not public
+- **South Korea** — SOLVED 2026-10-01 (Sigong Tech, see above). Historic note: KOTRA tender (₩9bn, closed 29 Apr) → award had looked unpublished
   (rechecked 2026-09-04, KR + EN). CAUTION: Korean press (dt.co.kr 24 Aug)
   reports Sigong Tech's €54m/₩87bn "103-nation" contract signed 21 Aug 2026 —
   that is the organiser's COLLECTIVE-pavilion award, not the Korean pavilion.
