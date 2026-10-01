@@ -1,27 +1,7 @@
-October refresh: Korea pavilion contracted, 3 new Expo awards, Slovenia, 5 article fact fixes
+Log the Bing submission of the 8 pages changed in the October refresh
 
-Expo data (BB-CHG-0021)
-- South Korea pavilion: was still "tendering"; Sigong Tech signed the Korea
-  Pavilion contract with KOTRA on 23 Jun 2026 (KRW 8,836,190,000, to
-  30 Nov 2027). Status -> announced; summary, facts, FAQs, sources rewritten.
-  KOTRA + Sigong Tech operator notes updated.
-- Contract ledger +3: SKY SOLUTIONS (technical production, RSD 2.12bn),
-  Airclad Ltd + Production Pool (National Days stage, RSD 91.45m, one
-  consortium row), PLAN1ST (pavilion-handover framework, RSD 75m ceiling).
-  Korean pavilion moved out of "watching" as resolved.
-- Tracker: Slovenia added (signed 4 Sep, had been missing); six timeline
-  events incl. key handover starting mid-October 2026.
-
-Articles (BB-CHG-0022)
-- stations-and-onward-travel: no Belgrade-Budapest passenger train yet
-  (the page said it opened Feb 2026).
-- visa-and-entry: EU Entry/Exit System note for onward Schengen travel.
-- belgrade-museums: National Museum Thu/Sat 12:00-20:00; free Sunday is the
-  permanent exhibition only.
-- belgrade-splavovi: off-season (Oct-Apr) note. getting-around: re-dated.
-
-Tooling
-- check-freshness.mjs: CRLF files no longer read as missing lastUpdated.
-- Prospect runbook watch list updated (2026-10-01 sweep).
+BB-CHG-0023: south-korea, contracts, tracker, stations-and-onward-travel,
+visa-and-entry, getting-around, belgrade-museums, belgrade-splavovi pushed
+via submit-to-bing.mjs after the deploy went live. Quota 92/day left.
 
 Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
