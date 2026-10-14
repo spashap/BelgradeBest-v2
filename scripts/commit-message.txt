@@ -1,25 +1,20 @@
-Snippet fixes from the October traffic read, German resubmit, and the Belgrade quiz
+Stage redesign previews (homepage + Visit Belgrade hub) and quiz polish
 
-Fixes (BB-CHG-0027): the Expo hub's Bing CTR fell from 11/392 to 1/361 in the
-first full week after the 10-01 ticket-first description, which answered the
-question on the results page ("Tickets are not on sale yet"). The description
-now promises the page instead. The airport, currency and things-to-do titles
-now match the queries Bing actually shows them for ("belgrade airport to city
-center", "belgrade currency", "must see belgrade").
+Two noindex design previews, unlinked and kept out of the sitemap, so the
+owner can compare them with the live pages on a real phone before anything
+is promoted (BB-CHG-0030):
+- /preview/home: full-bleed photo stage ("Belgrade, honestly."), numbered
+  quick-answer tiles, an Expo band with a live countdown (days to go,
+  countries, 93 days), a photo bento of the five sections, and a quiz band.
+- /preview/visit-belgrade: a stage hub with a bento of all 10 guides (the
+  grid closes with no gaps for any guide count) and the quiz band.
+New globals.css patterns: c-stage, c-steps, c-bento, c-band, u-section and
+u-reveal (scroll-driven, progressive, reduced-motion safe). The stage copy
+lives in site-config.json under homepage.stage. Article pages are untouched.
 
-Bing (BB-CHG-0028): resubmitted the two German pages Bing still had not
-crawled (/de/expo-2027 and /de/expo-2027/pavilions/germany); 9 of 11 are now
-crawled.
-
-New page (BB-CHG-0029): /visit-belgrade/belgrade-quiz, an interactive
-10-question quiz on an ink stage, with a progress track, score pop, streaks,
-right/wrong reveal, an animated score ring with count-up, rank titles,
-confetti for high scores, share (native share sheet or clipboard), and a
-reading list of the guides behind missed questions. Every fact comes from a
-live page, and the link titles are derived at build (links.ts linkFor). The
-static answer list keeps it crawlable and usable without JS. New c-quiz
-pattern in globals.css (reduced-motion safe), master in src/data/quiz.json,
-ink share card in gen-listing-og.mjs, GA4 events quiz_start, quiz_complete,
-quiz_link and quiz_share. Linked from two Visit Belgrade articles.
+Quiz: a wrong answer now reads "Not quite. The right answer is in green."
+instead of repeating the option text. Checked headlessly: a full play-through
+scores and ranks correctly, the reading list appears, and there is no
+horizontal scroll at 390px.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

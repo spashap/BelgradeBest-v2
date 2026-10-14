@@ -235,7 +235,7 @@ const schemas: object[] = [
         }
         $("streak").textContent = state.streak >= 3 ? state.streak + " in a row" : "";
         var v = $("verdict");
-        v.textContent = right ? "Correct!" : "Not quite. It's " + q.options[q.answer] + ".";
+        v.textContent = right ? "Correct!" : "Not quite. The right answer is in green.";
         v.className = "c-quiz__verdict " + (right ? "is-right" : "is-wrong");
         $("fact").textContent = q.fact;
         var more = $("more");

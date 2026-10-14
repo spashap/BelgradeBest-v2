@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Container from "../../components/Container.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import MarkdownInline from "../../components/MarkdownInline.astro";
+import { clusterBySlug } from "../../lib/clusters";
+import { heroForLeg, heroForSlug, thumbForSlug } from "../../lib/hero";
+import { getPlannedChildren } from "../../lib/content-plan";
+import { articlesForLeg } from "../../lib/articles";
+import { pageMetadata } from "../../lib/metadata";
+import { CONFIG } from "../../lib/site";
+
+// PREVIEW (2026-10-14): the "stage" leg hub, shown for one leg next to the live
+// LegHubLayout so the owner decides from something seen. noindex + out of the
+// sitemap. Same data as LegHubLayout; promote = move this body into the layout.
+const LEG = "visit-belgrade";
+const cluster = clusterBySlug(LEG)!;
+const H = CONFIG.homepage.stage;
+const meta = pageMetadata({ title: `${cluster.title} — hub preview`, description: cluster.intro, path: `/preview/${LEG}`, noindex: true });
+const legHero = heroForLeg(LEG);
+const built = new Map((await articlesForLeg(LEG)).map((a) => [a.data.slug, a]));
+const items = getPlannedChildren(LEG)
+  .map((p) => built.get(p.slug))
+  .filter((a) => a && a.data.visible !== false)
+  .map((a) => a!);
+
+// Bento: tile 0 is the 2×2 hero tile; widen tiles from the end until the
+// 4-column grid closes with no hole (cells = 4 + (n-1) + wides).
+const wides = (4 - ((4 + items.length - 1) % 4)) % 4;
+const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { name: cluster.title }];
+---
+<BaseLayout meta={meta}>
+  <section class="c-stage c-stage--hub">
+    {legHero ? <img class="c-stage__bg" src={legHero.src} srcset={legHero.srcset} sizes="100vw" alt="" fetchpriority="high" /> : null}
+    <div class="u-container c-stage__inner">
+      <p class="c-stage__eyebrow">{cluster.eyebrow}</p>
+      <h1>{cluster.title}</h1>
+      <p class="c-stage__lede">{cluster.intro}</p>
+      <div class="c-stage__ctas">
+        <a class="c-btn" href="#guides">{`See all ${items.length} guides`}</a>
+        <a class="c-btn c-btn--ghost" href={H.quizBand.href}>{H.quizBand.cta}</a>
+      </div>
+    </div>
+  </section>
+  <Breadcrumbs crumbs={crumbs} />
+
+  <section class="u-section" id="guides">
+    <Container>
+      <SectionHead
+        eyebrow={CONFIG.chrome.legHub.cardsEyebrow}
+        title={`${items.length} guides to ${cluster.title.replace(/^Visit /, "")}`}
+      />
+      <div class="c-bento">
+        {items.map((a, i) => {
+          const label = a.data.shortTitle || a.data.title;
+          const img = i === 0 ? heroForSlug(a.data.slug, label) : thumbForSlug(a.data.slug, label);
+          const wide = i > 0 && i >= items.length - wides;
+          const cls = `c-bento__tile u-reveal${i === 0 ? " c-bento__tile--lg" : wide ? " c-bento__tile--wide" : ""}`;
+          return (
+            <a class={cls} href={`/${LEG}/${a.data.slug}`}>
+              {img ? <img src={img.src} srcset={i === 0 ? img.srcset : undefined} sizes={i === 0 ? "(max-width: 980px) 100vw, 50vw" : undefined} alt="" loading={i < 3 ? "eager" : "lazy"} /> : null}
+              <span class="c-bento__go" aria-hidden="true">→</span>
+              <span class="c-bento__kicker">{i === 0 ? "Start here" : cluster.title}</span>
+              <span class="c-bento__title">{i === 0 ? a.data.title : label}</span>
+              <span class="c-bento__text">{a.data.description}</span>
+            </a>
+          );
+        })}
+      </div>
+    </Container>
+  </section>
+
+  {cluster.body && cluster.body.trim() ? (
+    <section class="u-section u-section--tight">
+      <Container variant="read">
+        <article class="c-article"><MarkdownInline markdown={cluster.body} /></article>
+      </Container>
+    </section>
+  ) : null}
+
+  <section class="c-band c-band--split u-stack-lg">
+    <Container>
+      <div class="c-band__grid">
+        <div>
+          <p class="c-band__eyebrow">{H.quizBand.eyebrow}</p>
+          <h2>{H.quizBand.titleBefore} <em>{H.quizBand.titleAccent}</em></h2>
+          <p>{H.quizBand.text}</p>
+          <a class="c-btn" href={H.quizBand.href}>{H.quizBand.cta}</a>
+        </div>
+        <div class="c-band__quizcard" aria-hidden="true">
+          <span><b>A</b>About 1 euro</span>
+          <span class="is-right"><b>B</b>Nothing, it's free ✓</span>
+          <span><b>C</b>300 dinars</span>
+          <span><b>D</b>An app ticket</span>
+        </div>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>
