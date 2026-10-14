@@ -8,7 +8,7 @@
 |---|---|---|
 | Whole site in Russian | **No. Run a scoped pilot instead.** | The audience is real and large. But the channel is wrong for us today, the expensive part is keeping every page correct, and residents need content we don't have. |
 | Russian pilot (Expo + practical pack, ~6 pages) | **Yes, after the 1 Nov read.** | Russian ranks with Turkish as the strongest language case we have, and it is cheap to test properly. |
-| Serbian for locals (consumer guide) | **No.** | The ad market is tiny, it runs on Google (where we get 0 clicks), established national media dominate it, and locals want what's-on news, not a visitor guide. |
+| Serbian for locals (consumer guide) | **No.** | No ads are planned, and locals don't buy what our affiliates sell: they don't book Belgrade hotels, flights into Belgrade or airport transfers. Serbian searches also run on Google, where we get 0 clicks. |
 | Serbian for businesses (1–3 B2B pages) | **Yes, when outreach restarts.** | This is where the local money actually is. Serbian businesses pay to reach *foreign* visitors, and the pitch to them should be in Serbian. |
 
 ## 1. Russian
@@ -42,7 +42,7 @@
 3. **Residents don't need a tourist guide.** They need residence permits, banks, rentals and schools, which is our hidden Invest & Relocate section with no content.
    - RSLive.ru already covers the official procedures in Russian.
    - Residents get most of their news on Telegram. The largest channels have about 37k, 28k and 13k subscribers.
-4. **Making money from Russian tourists is hard.** Booking.com left Russia, and Russian-issued cards don't work abroad. Affiliate links we might add later would earn little from this audience.
+4. **Affiliate income from Russian tourists needs a different route.** Booking.com left Russia, and Russian-issued cards don't work abroad, so Booking links earn little from visitors coming from Russia. Residents with Serbian cards are a different case. See section 3 for the Russian-market networks to check.
 5. **Politics.** The audience is split between pro-Kremlin tourists and anti-war relocants, and Serbia has refused or revoked residence for some anti-war Russians. Everything would need neutral, practical framing. No law restricts Russian-language web content.
 
 ### What the whole site in Russian would cost
@@ -62,29 +62,50 @@
 
 ## 2. Serbian
 
-### The local ad market is small
+*Revised 14 Oct 2026 after the owner clarified the revenue model: **no display ads, ever; revenue comes only from affiliate links for hotels, flights and premium/luxury transport.** The ad-market figures below no longer matter for the decision. They stay here for the record.*
 
-- **Digital ad spend in Serbia:** €168.9M in 2025, about **€20 per head** against a European average of about €154 [IAB Serbia AdEx].
-- **Ad prices are very low:** the only proxy found is YouTube Serbia, earning about $1.24 per 1,000 views.
-- **Arithmetic:** even 10,000 local page views a month would earn about **€10–20 a month** from display ads.
-- **Competition:** the market is dominated by the national portal groups (Blic, Kurir, Telegraf, Nova at about 600k daily users), which also run the lifestyle sections.
+### The affiliate test: who buys what we'd link to?
 
-### It's the wrong product and the wrong channel
+| Product | Who buys it for a Belgrade trip | Do they read Serbian? |
+|---|---|---|
+| Belgrade hotels | Foreign visitors (Expo peak May–Aug 2027), business travellers, some domestic visitors from other Serbian cities | Mostly no |
+| Flights into Belgrade | Foreign visitors, plus the Serbian diaspora flying home | Diaspora yes, but they also read German and English, and mostly stay with family |
+| Airport and premium transfers | Foreign visitors, business delegations, Expo exhibitors | No |
 
-- Locals don't need a visitor guide. They want what's on this week, new openings and events. That's a daily newsroom, which contradicts what this project is: a simple static site edited by hand.
-- Serbian searches run on Google (96.5%), where we currently get nothing.
+A Belgrade resident buys *outbound* flights and *foreign* hotels. Our site doesn't cover those, and covering them would be a different site that competes with Booking and Skyscanner themselves. Domestic visitors from Novi Sad or Niš exist, but they're a short-stay, low-value group searching on Google in Serbian, where we're invisible.
+
+**So under an affiliate-only model a Serbian consumer edition is a weaker case than under ads, not a stronger one.** Ads at least paid a little for any local reader. Affiliate links only pay when the reader books, and locals don't book these products.
+
+### Where Serbian still earns: the supply side
+
+- **Direct deals with local transport and hotels.** Premium transfer firms, chauffeur services and boutique hotels in Belgrade are Serbian businesses. A direct referral deal with them can pay better than a network commission. Those conversations, and the pages that pitch them, go better in Serbian.
+- **Listings and the pavilion platform.** Unchanged from before: Serbian businesses pay to reach our *foreign* readers.
+
+### For the record: the ad market (no longer decisive)
+
+- Digital ad spend in Serbia was €168.9M in 2025, about €20 per head against a European average of about €154 [IAB Serbia AdEx]. National portal groups dominate it (Blic, Kurir, Telegraf, Nova).
+- Locals want a what's-on newsroom, not a visitor guide. That contradicts what this project is: a simple static site edited by hand.
 
 ### Where Serbian *does* make money: business to business
 
 The commercial opportunity in Serbia is selling **our foreign audience** to **Serbian businesses**: hotels, restaurants, tour operators, Expo contractors, and Russian-run services too. The pavilion and listing platform is built for this. The *readers* stay foreign (English, German, Slovak, perhaps Russian). The *sales pitch* to businesses should be in Serbian.
 
-Recommendation: 1–3 Serbian B2B pages (a Serbian version of `/for-businesses` and of the listing claim flow), shipped when outreach restarts. That's a tiny upkeep cost, and it's linked directly to revenue.
+Recommendation: 1–3 Serbian B2B pages (a Serbian version of `/for-businesses`, the listing claim flow, and a "partner with us" page for transfer firms and hotels), shipped when outreach restarts or when we start signing direct transport/hotel deals. That's a tiny upkeep cost, and it's linked directly to revenue.
 
-## 3. Decisions for you
+## 3. What the affiliate model changes for the other languages
+
+- **The money is in the languages of people who travel *to* Belgrade:** English, German, Slovak, Turkish, Russian. That supports the language plan above.
+- **Each language needs its own affiliate route, checked before its pilot:**
+  - *Russian:* tourists coming from Russia can't pay on Booking.com with Russian cards. Residents with Serbian bank cards can. Russian-market networks (Aviasales and Ostrovok through Travelpayouts) may be the working route for flights and hotels. Not verified yet; check before the pilot.
+  - *Turkish:* Booking.com has had restrictions in Türkiye. Check the current position and the alternatives before the Turkish pilot.
+- **The biggest lever isn't a language, it's switching on what we already built.** `src/data/stay-affiliates.json` has 10 hotel-link slots (the neighbourhood and where-to-stay pages) and **all 10 are switched off.** So affiliate revenue today is zero in every language. The Expo hotel crunch (May–Aug 2027) is the moment these links pay. Getting the Booking.com (or alternative) affiliate account approved and the slots on ships more money than any new language. The same goes for a transfer partner on the airport page and a flights partner on the getting-there pages.
+
+## 4. Decisions for you
 
 1. Approve the **Russian pilot** (about 6 pages) for after 1 Nov, and say whether you can do one Telegram post at launch.
 2. Approve swapping the September plan from **Italian + Turkish** to **Russian + Turkish**.
-3. **Serbian:** B2B pages only, when outreach restarts. No consumer edition.
+3. **Serbian:** B2B and partner pages only, when outreach or direct transport/hotel deals start. No consumer edition. (Confirmed under the affiliate-only model.)
+4. **Affiliate accounts:** which networks do you already have, or want to apply to (Booking.com, a flights partner, a transfer partner)? Switching on the 10 existing hotel slots is the fastest revenue step on the board.
 
 ## Sources
 

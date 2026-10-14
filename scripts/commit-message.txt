@@ -1,6 +1,11 @@
-Log the Bing submission of the Slovak pilot pages
+Revise the language estimate for an affiliate-only revenue model
 
-BB-CHG-0035: submitted /sk/expo-2027, /sk/expo-2027/tickets and
-/sk/expo-2027/getting-there to Bing after the deploy went live.
+The owner confirmed there will be no display ads; revenue comes only from
+affiliate links for hotels, flights and premium transport. The Serbian
+section now judges the edition by who books those products (foreign
+visitors, not locals), so a consumer edition stays a no and Serbian is kept
+for B2B and direct transport/hotel partner pages. Adds a section on what
+the model means for Russian and Turkish affiliate routes, and notes that
+all 10 existing hotel affiliate slots are still switched off.
 
-Co-Authored-By: Claude <noreply@anthropic.com>
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
