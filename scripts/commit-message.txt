@@ -1,20 +1,6 @@
-Stage redesign previews (homepage + Visit Belgrade hub) and quiz polish
+Log the Bing submission of the retitled pages and the quiz
 
-Two noindex design previews, unlinked and kept out of the sitemap, so the
-owner can compare them with the live pages on a real phone before anything
-is promoted (BB-CHG-0030):
-- /preview/home: full-bleed photo stage ("Belgrade, honestly."), numbered
-  quick-answer tiles, an Expo band with a live countdown (days to go,
-  countries, 93 days), a photo bento of the five sections, and a quiz band.
-- /preview/visit-belgrade: a stage hub with a bento of all 10 guides (the
-  grid closes with no gaps for any guide count) and the quiz band.
-New globals.css patterns: c-stage, c-steps, c-bento, c-band, u-section and
-u-reveal (scroll-driven, progressive, reduced-motion safe). The stage copy
-lives in site-config.json under homepage.stage. Article pages are untouched.
-
-Quiz: a wrong answer now reads "Not quite. The right answer is in green."
-instead of repeating the option text. Checked headlessly: a full play-through
-scores and ranks correctly, the reading list appears, and there is no
-horizontal scroll at 390px.
+BB-CHG-0031: submitted the four pages retitled in BB-CHG-0027 and the new
+/visit-belgrade/belgrade-quiz to Bing after the deploy went live.
 
 Co-Authored-By: Claude <noreply@anthropic.com>
