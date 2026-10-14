@@ -1,24 +1,6 @@
-Slovak pilot for Expo 2027, generalised language mirrors, language estimate
+Log the Bing submission of the Slovak pilot pages
 
-Slovak pilot (BB-CHG-0034): /sk/expo-2027 (a compact hub with the facts, the
-1 Nov Slovak ticket packages, the Slovak pavilion and an FAQ), plus
-/sk/expo-2027/tickets and /sk/expo-2027/getting-there, translated from the
-English masters with identical facts and dates. Shipped now rather than on
-1 Nov, because Bing took 3-4 weeks to crawl the German set.
-
-The language mirrors are generalised in lib/i18n.ts: Lang adds "sk", with
-TR_LANGS, UI[lang] chrome strings, PAGE_TWINS, langPath() and twinLangs().
-alternates() now lists only the languages a page actually has, so the Expo
-hub, tickets and getting-there carry en/de/sk hreflang (reciprocal), while
-other German pages keep en/de. Header nav, footer note, TOC label, skip link,
-LangNote, date locale, sitemap lastmod and the growth classifier all know
-Slovak. The new `sk` content collection and /sk routes mirror /de.
-
-The estimate is in growth/BELGRADEBEST_LANGUAGE_ESTIMATE.md: no full Russian
-site, but a ~6-page Russian pilot after 1 Nov; Russian + Turkish rather than
-Italian; Serbian only as B2B pages. CLAUDE.md is updated.
-
-Known: tests/growth/changes.test.ts fails on a pre-existing id gap
-(BB-CHG-0017..0019 were never written). The other 35 tests pass.
+BB-CHG-0035: submitted /sk/expo-2027, /sk/expo-2027/tickets and
+/sk/expo-2027/getting-there to Bing after the deploy went live.
 
 Co-Authored-By: Claude <noreply@anthropic.com>
