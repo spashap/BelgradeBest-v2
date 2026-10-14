@@ -1,19 +1,6 @@
-Promote the stage redesign: new homepage and section hub template
+Log the Bing submission of the redesigned homepage and hubs
 
-Owner approved the previews (BB-CHG-0032). The homepage (index.astro) and
-LegHubLayout (Visit Belgrade, Plan Your Trip, Where to Stay, Food & Nightlife,
-and the hidden Invest & Relocate) now use the stage design:
-- a full-bleed photo stage with an animated headline and calls to action
-  (the homepage adds quick-fact readouts),
-- numbered quick-answer tiles on the homepage, a dark Expo band with a live
-  countdown, and a photo bento of the sections,
-- hubs: a bento of every guide (tile 0 is the 2x2 "Start here" tile, and the
-  grid closes with no gaps), then the leg body and closing text, planned
-  stubs, and the quiz band.
-Title tags, meta descriptions, breadcrumbs and JSON-LD are unchanged; the
-homepage H1 is now "Belgrade, honestly.". The Expo hub keeps its own page,
-and article pages stay editorial. The /preview pages are removed. Checked
-headlessly at 1366px and 390px with no horizontal scroll, and on the hidden
-hub that has no built guides.
+BB-CHG-0033: submitted the homepage and the four redesigned leg hubs to
+Bing after the stage redesign deploy went live.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

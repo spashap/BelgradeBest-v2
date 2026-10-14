@@ -74,8 +74,17 @@ tokens INVERTED (ink deck, paper text, brick signals) — `xp-deck` + `xp-readou
 (profile intro and directory header), `xp-bar` (sticky selectors: search / stage /
 region / sort), `xp-panel` (LED `xp-led--<status>` + 4-stage `xp-track`, region
 code from `expo-participants.ts regionCode()`), `xp-slot` (named country without a
-profile). This is the ONE place the site departs from the editorial look; do not
-spread `xp-*` to other legs without the owner's say.
+profile). Do not spread `xp-*` to other legs without the owner's say.
+
+**STAGE browse chrome (owner-approved, 2026-10-14)** — the homepage
+(`index.astro`) and every leg hub (`LegHubLayout`) use the stage patterns in
+`globals.css`: `c-stage` (full-bleed photo hero + readouts), `c-steps`
+(numbered quick answers), `c-bento` (photo tiles; tile 0 is the 2×2 hero tile,
+the hub widens tiles so the grid closes), `c-band` (ink promo bands: Expo
+countdown, quiz), `u-section`, `u-reveal`. Copy lives in `site-config.json →
+homepage.stage`. The quiz (`/visit-belgrade/belgrade-quiz`, master
+`src/data/quiz.json`, `c-quiz` pattern) is the same family. **Article pages
+stay Warm Editorial** — readability wins where search lands.
 
 ## The Design Law (enforce on every page)
 
