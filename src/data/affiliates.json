@@ -1,0 +1,54 @@
+{
+  "updated": "2026-10-14",
+  "partners": {
+    "booking": {
+      "name": "Booking.com",
+      "what": "Hotel search links per neighbourhood (where-to-stay pages, Expo where-to-stay)",
+      "field": "aid",
+      "fieldLabel": "Partner ID (aid, numbers only)",
+      "enabled": false,
+      "value": "",
+      "available": true,
+      "dashboard": "https://partner.booking.com",
+      "accepted": "2026-07-08",
+      "changedAt": null
+    },
+    "welcome-pickups": {
+      "name": "Welcome Pickups",
+      "what": "Pre-booked airport transfers (airport-to-city, taxis, Expo getting-there)",
+      "field": "url",
+      "fieldLabel": "Tracked Belgrade airport-transfer link (https://…)",
+      "enabled": false,
+      "value": "",
+      "available": true,
+      "dashboard": "https://www.welcomepickups.com",
+      "accepted": "2026-06-23",
+      "changedAt": null
+    },
+    "air-serbia": {
+      "name": "Air Serbia (via CJ)",
+      "what": "Flight search on Air Serbia (airport-to-city, Expo getting-there)",
+      "field": "url",
+      "fieldLabel": "CJ tracking link for Air Serbia (CJ → Links → Get Link)",
+      "enabled": false,
+      "value": "",
+      "available": true,
+      "dashboard": "https://members.cj.com",
+      "accepted": "2026-06-25",
+      "changedAt": null
+    },
+    "alosim": {
+      "name": "aloSIM",
+      "what": "eSIM for Serbia (SIM & connectivity page) — not placed yet",
+      "field": "url",
+      "fieldLabel": "Tracked aloSIM link",
+      "enabled": false,
+      "value": "",
+      "available": false,
+      "unavailableReason": "Advertiser deactivated on 2026-10-09. Re-enable in code when the programme is live again.",
+      "dashboard": "https://alosim.com",
+      "accepted": null,
+      "changedAt": null
+    }
+  }
+}

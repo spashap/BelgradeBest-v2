@@ -558,3 +558,82 @@ export function vercelInfo() {
     dashboardUrl: team ? `https://vercel.com/${team}` : "https://vercel.com/dashboard",
   };
 }
+
+// ── Affiliate clicks (/admin/affiliates) ────────────────────────────────────
+// The public pages send one GA4 event per affiliate click, named
+// aff_click_<partner> (lib/affiliates.ts clickEvent), so every report here uses
+// only built-in dimensions: no GA4 property setup. Who clicked is anonymous
+// and aggregate: country, device, traffic source, page. Bots stripped as
+// everywhere else.
+export type AffClickRow = { event: string; key: string; clicks: number; users: number };
+export type AffClicks =
+  | {
+      configured: true;
+      days: number;
+      byPartner: AffClickRow[];
+      byPage: AffClickRow[]; // key = pagePath
+      byCountry: AffClickRow[];
+      byDevice: AffClickRow[];
+      bySource: AffClickRow[];
+      pageViews: Record<string, number>; // views of the pages that carry blocks
+    }
+  | { configured: false; reason: string };
+
+export async function ga4AffiliateClicks(days: number, events: string[], pages: string[]): Promise<AffClicks> {
+  const c = await ga4Client();
+  if (!c.ok) return { configured: false, reason: c.reason };
+  const dateRanges = [{ startDate: `${days}daysAgo`, endDate: "today" }];
+  const evFilter = withoutBots({ filter: { fieldName: "eventName", inListFilter: { values: events } } });
+  const metrics = [{ name: "eventCount" }, { name: "totalUsers" }];
+  const by = (dim: string, limit = 50) => ({
+    dateRanges,
+    dimensions: [{ name: "eventName" }, { name: dim }],
+    metrics,
+    dimensionFilter: evFilter,
+    orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
+    limit,
+  });
+  try {
+    const [resp] = await c.client.batchRunReports({
+      property: c.property,
+      requests: [
+        { dateRanges, dimensions: [{ name: "eventName" }], metrics, dimensionFilter: evFilter },
+        by("pagePath", 100),
+        by("country"),
+        by("deviceCategory"),
+        by("sessionSourceMedium"),
+      ],
+    });
+    const rows = (i: number, withKey = true): AffClickRow[] =>
+      (resp.reports?.[i]?.rows ?? []).map((r) => ({
+        event: r.dimensionValues?.[0]?.value ?? "",
+        key: withKey ? (r.dimensionValues?.[1]?.value ?? "") : "",
+        clicks: num(r.metricValues?.[0]?.value),
+        users: num(r.metricValues?.[1]?.value),
+      }));
+    const pageViews: Record<string, number> = {};
+    if (pages.length) {
+      const [pv] = await c.client.runReport({
+        property: c.property,
+        dateRanges,
+        dimensions: [{ name: "pagePath" }],
+        metrics: [{ name: "screenPageViews" }],
+        dimensionFilter: withoutBots({ filter: { fieldName: "pagePath", inListFilter: { values: pages } } }),
+        limit: 200,
+      });
+      for (const r of pv.rows ?? []) pageViews[r.dimensionValues?.[0]?.value ?? ""] = num(r.metricValues?.[0]?.value);
+    }
+    return {
+      configured: true,
+      days,
+      byPartner: rows(0, false),
+      byPage: rows(1),
+      byCountry: rows(2),
+      byDevice: rows(3),
+      bySource: rows(4),
+      pageViews,
+    };
+  } catch (e) {
+    return { configured: false, reason: `GA4 error: ${(e as Error).message}` };
+  }
+}

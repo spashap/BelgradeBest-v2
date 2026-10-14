@@ -1,0 +1,22 @@
+---
+// Click counter for affiliate links: one tiny inline listener, emitted only on
+// pages that actually render an affiliate block (and run only once per page).
+// It sends a GA4 event named after the partner (aff_click_<partner>) through
+// the gtag the site already loads, so it adds no script file, request or
+// cookie. Where GA4 is absent (dev) or blocked, it does nothing.
+---
+<script is:inline>
+  (function () {
+    if (window.__bbAff) return;
+    window.__bbAff = 1;
+    document.addEventListener("click", function (e) {
+      var a = e.target && e.target.closest ? e.target.closest("a[data-aff]") : null;
+      if (!a || typeof window.gtag !== "function") return;
+      window.gtag("event", a.getAttribute("data-aff"), {
+        placement: a.getAttribute("data-aff-placement") || "",
+        link_domain: a.hostname,
+        transport_type: "beacon",
+      });
+    });
+  })();
+</script>

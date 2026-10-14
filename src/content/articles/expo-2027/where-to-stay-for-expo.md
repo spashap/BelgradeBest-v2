@@ -7,7 +7,7 @@ description: "Where to stay for Expo 2027: New Belgrade and the Surčin airport 
 lede: "For Expo 2027, the closest beds are in New Belgrade and the Surčin / airport side, a few kilometres from the site; the historic centre (Stari Grad, Vračar) gives you the city you came to see at the cost of a longer cross-river commute. With visit projections running from 4 million to the BIE's current 6 million-plus over three months, and only a few thousand new hotel rooms coming online, the real decision is booking early — not picking the perfect neighbourhood."
 heroLabel: "Where to stay for Expo 2027 / hero"
 heroAlt: "Map-style view of Belgrade showing the Surčin Expo site, New Belgrade and the old town across the Sava"
-lastUpdated: "2026-09-13"
+lastUpdated: "2026-10-14"
 order: 90
 visible: true
 intent: "both"
@@ -100,6 +100,10 @@ Two consequences follow:
 
 - **Rooms near Surčin and in New Belgrade will go first** and command premium prices. Early booking is how you secure both the location and a sane rate.
 - **Apartments and outlying stays will fill the gap.** Private apartments are expected to absorb much of the overflow, and shuttle links from neighbouring cities such as Novi Sad and Šabac have been floated to tap rooms beyond Belgrade. These are fallback options if central and near-site hotels are gone.
+
+**Why early matters, in one line:** the room stock is modest and largely fixed, the visitor projection is large and has been rising, and the new rooms are expected to be concentrated in the same two areas (New Belgrade and the airport side) that near-site visitors want. That does not prove a shortage, but it makes early booking the low-risk choice.
+
+**How to search.** Search by area, not just by city: look at New Belgrade, Surčin, Stari Grad and Vračar separately, because the commute to the site and the feel of the stay differ a lot. Filter for free cancellation, so you can lock in a room now and rebook if a better-placed one appears. Book as soon as your dates are firm. Check each property's position on the map, not only its name: "Belgrade" in a listing can mean anywhere from the old town to the far edge of New Belgrade.
 
 We deliberately do not quote specific prices or live availability here — those numbers move week to week and would be out of date almost immediately. The durable advice is the strategy: **book early, book flexible.** Reserve a refundable room as soon as you commit to the dates, then keep an eye out for better-located or better-priced rooms as the calendar fills. For the booking-platform mechanics and apartment-versus-hotel detail, see the [where to stay guide](/where-to-stay).
 

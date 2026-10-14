@@ -1,33 +1,29 @@
 ---
 // "Book ahead" travel-partner block (airport transfers, flights, eSIM), the
 // sibling of StayLinks for non-hotel affiliates. Renders one CTA per key in
-// the article frontmatter `partnerTargets`, resolved against
-// src/data/partner-links.json. A target shows ONLY when it is enabled AND has
-// a url, so the block stays invisible until the owner pastes a tracked link.
-// Same rel="sponsored nofollow" + disclosure rules as StayLinks; affiliate
-// data lives only in the registry, never in article markdown.
+// the article frontmatter `partnerTargets` (placements: src/data/
+// partner-links.json; switches + tracked links: src/data/affiliates.json,
+// edited from /admin/affiliates). Invisible while the partner is off. Same
+// rel="sponsored nofollow" + disclosure rules as StayLinks.
 import data from "../data/partner-links.json";
-
-type Target = { label?: string; network?: string; enabled?: boolean; url?: string };
+import AffClick from "./AffClick.astro";
+import { travelLinks, clickEvent } from "../lib/affiliates";
 
 interface Props {
   targets?: string[];
 }
 const { targets = [] } = Astro.props;
-const reg = (data as { targets?: Record<string, Target> }).targets ?? {};
-const items = targets
-  .map((k) => reg[k])
-  .filter((t): t is Target => !!t && !!t.enabled && !!t.url && !!t.label);
+const items = travelLinks(targets);
 ---
 {
   items.length > 0 ? (
     <aside class="c-staylinks" aria-label={data.heading}>
       <p class="c-staylinks__title">{data.heading}</p>
       <ul class="c-staylinks__list">
-        {items.map((t) => (
+        {items.map((x) => (
           <li>
-            <a href={t.url} target="_blank" rel="sponsored nofollow noopener">
-              {t.label}
+            <a href={x.href} target="_blank" rel="sponsored nofollow noopener" data-aff={clickEvent(x.partner)} data-aff-placement={x.placement}>
+              {x.label}
             </a>
           </li>
         ))}
@@ -35,6 +31,7 @@ const items = targets
       <p class="c-staylinks__disc">
         {data.disclosure} <a href={data.disclosureHref}>How we make money</a>.
       </p>
+      <AffClick />
     </aside>
   ) : null
 }

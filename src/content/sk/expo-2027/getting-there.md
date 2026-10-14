@@ -7,7 +7,7 @@ description: "Ako sa dostať na Expo 2027 v Belehrade: areál v Surčine je ~5 k
 lede: "Takto sa dostanete na Expo 2027 v Belehrade: areál je v Surčine, približne 5 km od letiska Nikolu Teslu a zhruba 13,5 km od centra mesta (podľa oficiálneho FAQ pre účastníkov). Táto stránka sleduje každú trasu, ktorú poznáme: z letiska, z centra mesta cez bezplatnú sieť aj cez plánovanú novú železnicu, a jasne označuje, čo je potvrdené a čo sú zatiaľ len sľuby."
 heroLabel: "Areál Surčin / mapa letiska hero"
 heroAlt: "Panoráma Belehradu: cesta na areál Expa 2027 v Surčine"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-10-14"
 order: 4
 visible: true
 intent: "both"
@@ -49,6 +49,14 @@ Keďže areál leží pri letisku, a nie v starom meste, takmer každá praktick
 Približne 5 km. Oficiálne dokumenty Expa umiestňujú areál v Surčine zhruba 5 kilometrov od medzinárodného letiska Nikolu Teslu, čo znamená, že ak priletíte, pristanete bližšie k areálu Expa než k centru Belehradu (asi 13,5 km).
 
 Táto blízkosť je plánovacou výhodou, ktorú si treba zapamätať. Nová železnica, ktorá je teraz vo výstavbe, vedie hneď popri letisku na ceste do Surčina a k Národnému štadiónu a predstavitelia sľúbili vyhradené autobusové linky Expa spájajúce letisko priamo s areálom. Zatiaľ je však spoľahlivým spôsobom, ako prekonať týchto 5 km, cesta po ceste, teda taxík alebo auto z aplikácie (pozri nižšie), pretože k júnu 2026 nebol dokončený žiadny cestovný poriadok železnice medzi letiskom a Expom ani trasa kyvadlovej dopravy.
+
+## Let do Belehradu na Expo 2027
+
+Väčšina zahraničných návštevníkov pristane na letisku Belehrad Nikola Tesla (BEG), asi 5 km od areálu Expo. **Air Serbia**, národný letecký dopravca, tu má svoj hub a najširšiu sieť priamych letov do Belehradu. Podľa zoznamu destinácií na Wikipédii (stav z augusta 2026) obsluhuje z Belehradu 89 destinácií v 35 krajinách; číslo berte ako približné. Pre čitateľov z nemecky hovoriacich krajín sa tam uvádzajú priame spoje napríklad do Frankfurtu, Mníchova, Berlína, Düsseldorfu, Kolína, Hamburgu, Stuttgartu a Norimbergu v Nemecku, do Viedne a Salzburgu v Rakúsku a do Zürichu a Ženevy vo Švajčiarsku. Linka do Bratislavy v zozname nie je, takže najbližšou možnosťou zo Slovenska je Viedeň. Trasy a frekvencie sa menia podľa sezóny, preto si **pred plánovaním skontrolujte aktuálny letový poriadok na webe aerolinky**.
+
+Do Belehradu lietajú aj nízkonákladové spoločnosti z viacerých európskych miest, porovnávajte preto ceny viacerých aerolínií a nepredpokladajte, že je jedna z nich najlacnejšia. Expo trvá od 15. mája do 15. augusta 2027. Očakávame, že letenky a hotely budú najviac vyhľadávané počas otváracieho víkendu a v hlavných letných týždňoch, nikto však nezverejnil čísla. Letenky aj ubytovanie rezervujte včas, ideálne so zmeniteľnými tarifami (pozri [Kde bývať počas Expo 2027](/expo-2027/where-to-stay-for-expo)).
+
+**Príchod:** keďže areál je len asi 5 km od letiska, cesta taxíkom alebo cez aplikáciu do Surčinu je krátka; potvrdená autobusová linka Expo z letiska zatiaľ neexistuje. Pre skupiny, služobne cestujúcich s pevným programom alebo tých, čo prídu neskoro s batožinou, sa oplatí porovnať vopred objednaný súkromný transfer (vodič čaká v príletovej hale, pevná cena zaplatená vopred) s taxíkom na voucher; zvyčajne stojí viac. Podrobnosti nájdete v našom [sprievodcovi letisko–mesto (EN)](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it).
 
 ## Ako sa dostanem z letiska do mesta dnes?
 

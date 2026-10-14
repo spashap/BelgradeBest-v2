@@ -5,24 +5,16 @@
   "targets": {
     "airport-transfer": {
       "label": "Pre-book a fixed-price airport transfer (Welcome Pickups)",
-      "network": "welcome-pickups",
-      "enabled": true,
-      "url": "",
-      "note": "Welcome Pickups affiliate (accepted 2026-06-23). Paste the tracked Belgrade airport-transfer link from the partner dashboard into url."
+      "partner": "welcome-pickups"
     },
     "air-serbia": {
       "label": "Search Air Serbia flights to Belgrade",
-      "network": "cj",
-      "enabled": true,
-      "url": "",
-      "note": "Air Serbia through CJ Affiliate (welcome 2026-06-25; CJ publisher account active 2026-06-23). Paste the CJ tracking link (Links > Get Link) into url."
+      "partner": "air-serbia"
     },
     "esim": {
       "label": "Get a Serbia eSIM before you fly (aloSIM)",
-      "network": "alosim",
-      "enabled": false,
-      "url": "",
-      "note": "aloSIM advertiser deactivated on 2026-10-09. Keep disabled until the programme is live again."
+      "partner": "alosim"
     }
-  }
+  },
+  "_note": "Placements for non-hotel partners. On/off and the tracked links live in src/data/affiliates.json (edited from /admin/affiliates)."
 }

@@ -1,42 +1,21 @@
 ---
 // "Where to book your stay" affiliate block. Renders ONE CTA per stay-target a
-// page declares (article frontmatter `stayTargets`), pulling each target from
-// the central registry src/data/stay-affiliates.json. A target renders ONLY when
-// its affiliate is enabled AND has a url — so the whole block is invisible until
-// the owner adds a real link in the registry (no monetization, no broken CTAs
-// until then). A Booking.com target without its own url gets a search link
-// built from the registry's `networks.booking.aid` + the target's `search`
-// (2026-10-14), so pasting the one partner ID switches every area on. Affiliate links carry rel="sponsored nofollow" (Google's required
-// attribute) and sit beside a disclosure linking the "how we make money" page.
-// Affiliate data lives ONLY here, never in article markdown — pages stay clean
-// and regenerable while monetization is toggled centrally.
+// page declares (article frontmatter `stayTargets`); the areas live in
+// src/data/stay-affiliates.json, the Booking.com switch + partner ID in
+// src/data/affiliates.json (edited from /admin/affiliates). Invisible while the
+// partner is off. Affiliate links carry rel="sponsored nofollow" (Google's
+// required attribute) and sit beside a disclosure linking the "how we make
+// money" page. Affiliate data never lives in article markdown.
 import data from "../data/stay-affiliates.json";
-
-type Affiliate = { enabled?: boolean; network?: string; url?: string };
-type Target = { label?: string; type?: string; search?: string; affiliate?: Affiliate };
+import AffClick from "./AffClick.astro";
+import { stayLinks, clickEvent } from "../lib/affiliates";
 
 interface Props {
   targets?: string[];
   heading?: string;
 }
 const { targets = [], heading = "Where to book your stay" } = Astro.props;
-
-const reg = (data as { targets?: Record<string, Target> }).targets ?? {};
-const aid = (data as { networks?: { booking?: { aid?: string } } }).networks?.booking?.aid?.trim() ?? "";
-// label = per-target sub-ID, so Booking reports show which area converts.
-const urlFor = (key: string, t: Target) => {
-  const a = t.affiliate;
-  if (!a?.enabled) return "";
-  if (a.url) return a.url;
-  if ((a.network ?? data.defaultNetwork) !== "booking" || !aid || !t.search) return "";
-  const q = new URLSearchParams({ ss: t.search, aid, label: `bb-${key}` });
-  return `https://www.booking.com/searchresults.html?${q}`;
-};
-const items = targets
-  .map((k) => ({ key: k, t: reg[k] }))
-  .filter((x): x is { key: string; t: Target } => !!x.t)
-  .map((x) => ({ ...x, url: urlFor(x.key, x.t) }))
-  .filter((x) => !!x.url);
+const items = stayLinks(targets);
 ---
 {
   items.length > 0 ? (
@@ -45,8 +24,8 @@ const items = targets
       <ul class="c-staylinks__list">
         {items.map((x) => (
           <li>
-            <a href={x.url} target="_blank" rel="sponsored nofollow noopener">
-              Book a stay in {x.t.label}
+            <a href={x.href} target="_blank" rel="sponsored nofollow noopener" data-aff={clickEvent(x.partner)} data-aff-placement={x.placement}>
+              {x.label}
             </a>
           </li>
         ))}
@@ -54,6 +33,7 @@ const items = targets
       <p class="c-staylinks__disc">
         {data.disclosure} <a href={data.disclosureHref}>How we make money</a>.
       </p>
+      <AffClick />
     </aside>
   ) : null
 }

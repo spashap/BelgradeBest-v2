@@ -1,14 +1,21 @@
-Prepare affiliate links for Booking.com, Welcome Pickups and Air Serbia
+Affiliates admin with on/off switches and click stats; articles reshaped
 
-The owner has accepted programmes with Booking.com, Welcome Pickups and
-Air Serbia (through CJ). The hotel block now builds Booking.com search links
-from one partner ID plus a per-area search string, with a per-area label
-for reporting, and all ten area targets are enabled. A new PartnerLinks
-block (registry src/data/partner-links.json, frontmatter partnerTargets)
-carries airport transfers and flights on airport-to-city, taxis and the
-Expo getting-there page; the Expo where-to-stay page gains hotel targets.
-Nothing renders until the IDs and tracked links are pasted into the two
-registries. The aloSIM target is present but disabled (advertiser
-deactivated). How-we-make-money now names transfers and flights.
+New /admin/affiliates page: one row per partner (Booking.com, Welcome
+Pickups, Air Serbia via CJ; aloSIM shown as not available) with its ID or
+tracked link and an On/Off switch. A save commits src/data/affiliates.json
+and the Vercel rebuild switches the public boxes in about 1-2 minutes; the
+public pages stay static and gain no runtime requests. lib/affiliates.ts
+resolves every block at build time; the old per-target switches are gone.
+
+Clicks send a GA4 event named aff_click_<partner> from a small inline
+listener that is emitted only on pages carrying a box, so the admin can
+show clicks by partner, page (with click rate), country, device and
+source with no GA4 setup. The privacy page says so.
+
+Articles: airport-to-city gains "When is a pre-booked transfer worth it?"
+(the free bus stays the first answer), taxis gains a tout-avoidance note,
+Expo getting-there gains "Flying to Belgrade for Expo 2027" in English,
+German and Slovak, and Expo where-to-stay gains search advice. No prices
+or terms that could not be verified.
 
 Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

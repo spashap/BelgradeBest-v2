@@ -254,6 +254,16 @@ the slug is in the `articles` content collection.
   rebuild so the site AND the admin snapshot go live (~1 min). NO DB. In dev (no
   token) it writes the local file (instant). On Vercel without a token, Save is
   refused with a clear message; reading keeps working.
+- **Affiliates (`/admin/affiliates`, 2026-10-14)**: one row per partner (Booking.com,
+  Welcome Pickups, Air Serbia via CJ; aloSIM greyed out) with its ID/tracked link and
+  an On/Off switch → `src/data/affiliates.json` (master) via `/api/admin/affiliates`.
+  Save = commit → rebuild, so a switch is live in ~1–2 min with ZERO runtime cost on
+  public pages (blocks resolve at build in `lib/affiliates.ts`). Placements:
+  `stay-affiliates.json` (Booking areas, frontmatter `stayTargets`) and
+  `partner-links.json` (frontmatter `partnerTargets`). Clicks fire GA4 events named
+  `aff_click_<partner>` (`components/AffClick.astro`, inline, only on pages with a
+  block), so the admin reports clicks by page/country/device/source with no GA4
+  setup. A new partner = a row in affiliates.json + a placement, in code.
 - **Auth (`src/middleware.ts`)**: `ADMIN_PASSWORD` is SET in production — `/admin`
   302s to `/admin/login` (verified live 2026-07-02). Unsetting the env var would
   leave it open; the cookie is a hash of the password. Nothing else changes.

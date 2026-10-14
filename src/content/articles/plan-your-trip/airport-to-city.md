@@ -7,7 +7,7 @@ description: "Belgrade airport to city centre: the free city buses, the A1 minib
 lede: "Belgrade's Nikola Tesla Airport (BEG) sits about 18 km west of the centre, and you have four sensible ways into town: the free city buses, the paid A1 minibus, an official taxi on the voucher system, or a ride-hail app. Here's an answer-first comparison of each — how it works, what it costs as of 2026, and how to avoid the airport's taxi touts."
 heroLabel: "Belgrade airport to city / hero"
 heroAlt: "Arriving at Belgrade airport and heading into the city"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-10-14"
 order: 1
 visible: true
 intent: "both"
@@ -34,10 +34,11 @@ Here is the at-a-glance comparison, all figures indicative and time-stamped to 2
 - **A1 minibus (~400 RSD, cash)** → Slavija Square, ~30–40 min. Fastest cheap option; fewer stops; luggage space.
 - **Official voucher taxi (~2,200–3,500 RSD to the centre)** → door to door, ~20–40 min. Fixed price; use the kiosk, not touts.
 - **Ride-hail app (Yandex Go / CarGo)** → door to door; app-priced. No Uber or Bolt here.
+- **Pre-booked transfer** → door to door; a driver waits for you in arrivals and the price is fixed and paid in advance. Usually the dearest option; see [when it is worth it](#when-is-a-pre-booked-transfer-worth-it).
 
 ## First, the basics
 
-[Nikola Tesla Airport](/glossary/nikola-tesla-airport) (BEG) sits about 18 km from the city centre, and a typical road journey takes 20–40 minutes depending on traffic. To put that in orientation terms, the centre is roughly 17–19 km away by road via the E75 motorway and the Gazela bridge: Republic Square and [Knez Mihailova](/glossary/knez-mihailova) (the old-town core) are about 18 km out, Slavija Square (where the A1 minibus ends) a similar distance, and Zeleni Venac (where bus 72 ends) likewise central. The four sensible ways into town are the free city buses, the paid A1 minibus, the official voucher taxi, and an app-based ride. A future airport–city railway is under construction but not in service as of mid-2026, so for now your decision is between those four. For the wider picture of moving around the city once you arrive, see our guide to [getting around Belgrade](/plan-your-trip/getting-around).
+[Nikola Tesla Airport](/glossary/nikola-tesla-airport) (BEG) sits about 18 km from the city centre, and a typical road journey takes 20–40 minutes depending on traffic. To put that in orientation terms, the centre is roughly 17–19 km away by road via the E75 motorway and the Gazela bridge: Republic Square and [Knez Mihailova](/glossary/knez-mihailova) (the old-town core) are about 18 km out, Slavija Square (where the A1 minibus ends) a similar distance, and Zeleni Venac (where bus 72 ends) likewise central. The four sensible ways into town are the free city buses, the paid A1 minibus, the official voucher taxi, and an app-based ride. A future airport–city railway is under construction but not in service as of mid-2026, so for now your decision is between those four, plus a fifth if you would rather book ahead: a pre-booked private transfer, covered below. For the wider picture of moving around the city once you arrive, see our guide to [getting around Belgrade](/plan-your-trip/getting-around).
 
 One note before fares: prices, timetables and app availability change. Where we give a figure below, treat it as indicative and time-stamped to 2026, and re-check closer to travel.
 
@@ -74,6 +75,19 @@ One stable warning: aggressive unlicensed taxi touts operate in the arrivals hal
 Belgrade has no Uber or Bolt. The main app-based options are Yandex Go (Yango), which operates in Serbia with upfront fare estimates and card or cash payment, and CarGo, a local Uber-like platform. Classic licensed-taxi dispatch apps such as Pink Taxi and Belgrade Taxi also exist. These can be cheaper than the voucher taxi and let you pay by card, but you'll need a working data connection on arrival to order one. If you are not sure you will have data the moment you land, settle that first — [eSIMs, local SIMs and airport wifi](/plan-your-trip/sim-and-connectivity) — because without it this option disappears exactly when you need it.
 
 CarGo's regulatory status has been contested over the years, but it continues to operate in practice and is popular for car quality and transparent pricing. Exactly which apps run and under what legal framework can change; the broad pattern — no Uber or Bolt, with Yandex Go and a local app present — is stable in the short term.
+
+## When is a pre-booked transfer worth it?
+
+A pre-booked transfer is a private car you reserve before you fly. The driver meets you in the arrivals hall, your flight is tracked so a delay does not leave you without a ride, and the price is fixed and paid in advance. Several companies offer this at Belgrade airport; Welcome Pickups is one that describes these terms on its own site (we have not tested it ourselves). It is not the cheapest way into town, and it does not need to be. It earns its price in a few situations:
+
+- **Late-night or very early arrivals**, when you do not want to look for a bus stop or a taxi queue.
+- **Families and heavy luggage**: larger vehicles and child seats can usually be requested, so ask when you book.
+- **A first visit**, when you would simply like someone waiting for you and no negotiation at the door.
+- **Business trips**, where a fixed price and a punctual driver matter more than saving a few euros.
+- **Expo 2027 peak days**, when arrivals halls and taxi ranks may be crowded and you are carrying bags and a schedule. See [getting to Expo 2027](/expo-2027/getting-there).
+- **Anyone who wants the price agreed before leaving home**, and wants to avoid the touts described above.
+
+**When it isn't worth it:** if you are travelling alone and light, arriving in daylight, **bus 72 (or the A1 minibus if you want a faster, paid ride) is the better answer.** It costs nothing, or about 400 RSD, and the journey is not hard to work out. A pre-booked transfer is also less flexible than a taxi if your plans change, so read the cancellation and waiting-time terms before you pay. We have not verified current prices, so compare any quote with the voucher taxi range above (about 2,200–3,500 RSD) before you decide.
 
 ## When will the airport train to the city open?
 

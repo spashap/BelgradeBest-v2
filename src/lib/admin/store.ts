@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, renameSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { env } from "./env";
+import { checkValue, type Partner } from "../affiliates";
 
 // Data-file store for the in-app /admin.
 //
@@ -538,4 +539,34 @@ export async function triggerRadarWorkflow(): Promise<void> {
         : `Workflow dispatch failed: ${res.status} ${detail}`,
     );
   }
+}
+
+// ── Affiliates (/admin/affiliates) ──────────────────────────────────────────
+// src/data/affiliates.json: per-partner on/off + ID/tracked link. A save is a
+// commit (prod) → Vercel rebuild, and the public affiliate blocks appear or
+// disappear with that build (~1–2 min). Partners are added in code only.
+const REL_AFFILIATES = "src/data/affiliates.json";
+export type AffiliatesFile = { updated: string; partners: Record<string, Partner> };
+
+export async function readAffiliates(): Promise<AffiliatesFile> {
+  return JSON.parse((await getFile(REL_AFFILIATES)).text) as AffiliatesFile;
+}
+
+export async function setAffiliate(key: string, patch: { enabled: boolean; value: string }): Promise<void> {
+  const { text, sha } = await getFileForWrite(REL_AFFILIATES);
+  const data = JSON.parse(text) as AffiliatesFile;
+  const p = data.partners[key];
+  if (!p) throw new Error(`Unknown partner "${key}" (partners are added in code).`);
+  const value = patch.value.trim();
+  const bad = checkValue(p, value);
+  if (bad) throw new Error(bad);
+  if (patch.enabled && !p.available) throw new Error(`${p.name} cannot be switched on: ${p.unavailableReason ?? "not available"}`);
+  if (patch.enabled && !value) throw new Error(`Enter the ${p.fieldLabel} before switching ${p.name} on.`);
+  if (p.enabled === patch.enabled && p.value === value) return;
+  const what = p.enabled !== patch.enabled ? (patch.enabled ? "ON" : "OFF") : "value updated";
+  p.enabled = patch.enabled;
+  p.value = value;
+  p.changedAt = new Date().toISOString();
+  data.updated = p.changedAt.slice(0, 10);
+  await putFile(REL_AFFILIATES, JSON.stringify(data, null, 2) + "\n", `admin: affiliate ${key} ${what}`, sha);
 }

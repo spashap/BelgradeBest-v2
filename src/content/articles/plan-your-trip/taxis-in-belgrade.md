@@ -7,7 +7,7 @@ description: "Taxis in Belgrade in 2026: which apps work (CarGo and Yandex Go �
 lede: "Belgrade taxis are cheap by European standards and mostly fine to use — the real risk isn't your safety, it's being overcharged. The fix is simple and hasn't changed in years: order through an app or by phone, insist on the meter, and never get into an unmarked car at the airport or outside a tourist sight. Here's exactly how taxis work in Belgrade, the apps that actually operate here, and how to dodge the one scam that catches visitors."
 heroLabel: "Taxis in Belgrade / hero"
 heroAlt: "A licensed taxi on a Belgrade street"
-lastUpdated: "2026-06-21"
+lastUpdated: "2026-10-14"
 order: 8
 visible: true
 intent: "both"
@@ -55,6 +55,8 @@ If you take one thing from this page, make it this: install CarGo or Yandex Go b
 The airport run is where overcharging is most common, and it has a simple, official fix. Belgrade [Nikola Tesla Airport](/glossary/nikola-tesla-airport) operates a **fixed-price taxi voucher system**: self-service e-kiosks in the baggage-reclaim area and the arrivals lounge print a voucher with a set price to your destination zone. You take that voucher to the official taxi rank, and the price is locked in before you ride — no meter games, no surprises.
 
 The alternative is just as good: order a **CarGo or Yandex Go** car from the app and meet it at the pickup point, again with the price agreed up front. What you should *not* do is accept an offer from someone who approaches you inside the terminal or by the doors. Those touts, leading you to an unmarked car at a "special price," are exactly who the overcharging warnings are about. Use the kiosk voucher or an app and you're fine.
+
+There is one more way to avoid the touts altogether: **pre-book a private transfer** before you travel. A driver meets you in arrivals, the price is fixed and paid in advance, and nobody approaches you in the terminal. The trade-off is cost: it usually runs higher than the voucher taxi, though we have not verified current prices, so compare a quote with the voucher range before you commit. Our [airport-to-city guide](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it) explains when it is worth paying for.
 
 For the full set of airport options — including the much cheaper free city bus — see our [airport-to-city guide](/plan-your-trip/airport-to-city).
 

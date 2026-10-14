@@ -7,7 +7,7 @@ description: "How to get to Expo 2027 Belgrade: the Surčin site is ~5 km from N
 lede: "Here's how to get to Expo 2027 Belgrade: the site is at Surčin, around 5 km from Nikola Tesla Airport and roughly 13.5 km from downtown (per the official Participants FAQ). This page tracks every route we know — from the airport, from the city centre via the free network, and via the planned new railway — and flags clearly which parts are confirmed and which are still promises."
 heroLabel: "Surčin site / airport map hero"
 heroAlt: "Belgrade cityscape — reaching the Expo 2027 site at Surčin"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-10-14"
 order: 4
 visible: true
 intent: "both"
@@ -52,6 +52,14 @@ Because the grounds sit out by the airport rather than in the old town, almost e
 About 5 km. The official Expo documents place the Surčin site roughly 5 kilometres from Nikola Tesla International Airport — meaning that if you fly in, you land closer to the Expo grounds than to central Belgrade (around 13.5 km away).
 
 That proximity is the planning win to remember. The new railway now under construction runs right past the airport on its way to Surčin and the National Stadium, and officials have promised dedicated Expo bus lines linking the airport directly with the site. For now, though, the dependable way to cover those 5 km is by road — a taxi or a ride-hail car (see below) — because, as of June 2026, no airport-to-Expo rail timetable or shuttle route has been finalised.
+
+## Flying to Belgrade for Expo 2027
+
+Most international visitors will arrive at Belgrade Nikola Tesla Airport (BEG), about 5 km from the Expo site. **Air Serbia**, the national carrier, has its hub here and the widest direct network into Belgrade. Wikipedia's destinations list (as of August 2026) puts its Belgrade network at 89 destinations in 35 countries; treat that count as approximate. For readers in the German-speaking countries, the direct routes listed include Frankfurt, Munich, Berlin, Düsseldorf, Cologne, Hamburg, Stuttgart and Nuremberg in Germany, Vienna and Salzburg in Austria, and Zürich and Geneva in Switzerland. There is no Bratislava route in that list, so the nearest option from Slovakia is Vienna. Routes and frequencies change by season, so **check the current schedule on the airline's site** before you plan around any of them.
+
+Low-cost carriers also serve Belgrade from several European cities, so compare fares across airlines rather than assuming one is cheapest. The Expo runs from 15 May to 15 August 2027. We expect flights and hotels to be busiest on opening weekend and in peak summer weeks, though nobody has published figures. Book flights and rooms early, ideally on changeable fares (see [where to stay for Expo 2027](/expo-2027/where-to-stay-for-expo)).
+
+**Arriving:** because the site is only about 5 km from the airport, a taxi or ride-hail car to Surčin is a short trip, and no Expo-specific airport bus line is confirmed yet. For groups, business visitors on a fixed schedule, or anyone landing late with luggage, a pre-booked private transfer (driver waiting in arrivals, fixed price paid in advance) is worth comparing with the voucher taxi; it usually costs more. Our [airport-to-city guide](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it) sets out when it is worth it.
 
 ## How do I get from the airport into the city today?
 

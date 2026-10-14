@@ -1,0 +1,160 @@
+---
+export const prerender = false;
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { getCollection } from "astro:content";
+import { readAffiliates, saveMode } from "../../lib/admin/store";
+import { ga4AffiliateClicks, type AffClickRow } from "../../lib/admin/analytics";
+import { clickEvent, partnerLive, partnersForTargets } from "../../lib/affiliates";
+
+// Affiliate partners: per partner an ID/tracked link + an On/Off switch
+// (src/data/affiliates.json via /api/admin/affiliates; a save commits and the
+// Vercel rebuild switches the public blocks in ~1–2 min), where each partner
+// shows on the site, and anonymous click statistics from GA4.
+const file = await readAffiliates();
+const partners = Object.entries(file.partners);
+
+const sp = Astro.url.searchParams;
+const err = sp.get("error");
+const okKey = sp.get("ok");
+const days = [7, 28, 90].includes(Number(sp.get("days"))) ? Number(sp.get("days")) : 28;
+const mode = saveMode();
+
+// Where each partner renders: visible English articles whose frontmatter
+// names its placements (German/Slovak twins carry no affiliate blocks).
+const articles = (await getCollection("articles")).filter((a) => a.data.visible !== false);
+const pagesFor = new Map<string, string[]>();
+for (const a of articles) {
+  const path = `/${a.data.leg}/${a.data.slug}`;
+  for (const k of partnersForTargets(a.data.stayTargets, a.data.partnerTargets ?? [])) {
+    pagesFor.set(k, [...(pagesFor.get(k) ?? []), path]);
+  }
+}
+const allPages = [...new Set([...pagesFor.values()].flat())];
+
+const evToKey = new Map(partners.map(([k]) => [clickEvent(k), k]));
+const nameOf = (ev: string) => file.partners[evToKey.get(ev) ?? ""]?.name ?? ev;
+const stats = await ga4AffiliateClicks(days, [...evToKey.keys()], allPages);
+const total = (rows: AffClickRow[], ev: string) => rows.filter((r) => r.event === ev).reduce((s, r) => s + r.clicks, 0);
+const top = (rows: AffClickRow[], n = 10) => rows.slice(0, n);
+const pct = (a: number, b: number) => (b > 0 ? `${((a / b) * 100).toFixed(1)}%` : "–");
+const fmt = (iso?: string | null) => (iso ? iso.slice(0, 16).replace("T", " ") + " UTC" : "never");
+---
+<AdminLayout title="Affiliates">
+  {err ? <div class="err">{err}</div> : null}
+  {okKey ? (
+    <div class="ok">
+      Saved {file.partners[okKey]?.name ?? okKey}.{" "}
+      {mode === "github"
+        ? "The site is rebuilding: the change is live in about 1–2 minutes, and this page shows the new state after that rebuild (refresh then)."
+        : "Written to the local file (dev)."}
+    </div>
+  ) : null}
+  {mode === "readonly" ? <div class="err">Saving is OFF on this deploy (no GITHUB_TOKEN). You can still see the stats.</div> : null}
+
+  <p class="muted">
+    Paste the partner's ID or tracked link, tick <b>On</b>, press <b>Save</b>. The site rebuilds itself (about 1–2 minutes) and
+    the booking boxes appear on the pages listed under each partner. Untick and save to remove them. Nothing on the public pages
+    changes while a partner is off. Earnings and bookings are in each partner's own dashboard; this page counts clicks.
+  </p>
+
+  {partners.map(([key, p]) => {
+    const live = partnerLive(key, file.partners);
+    const pages = pagesFor.get(key) ?? [];
+    const clicks = stats.configured ? total(stats.byPartner, clickEvent(key)) : null;
+    return (
+      <div class="panel" id={key} style={p.available ? "" : "opacity:.55"}>
+        <div class="row" style="justify-content:space-between">
+          <div class="row">
+            <b>{p.name}</b>
+            {!p.available ? <span class="badge">not available</span> : live ? <span class="badge live">LIVE</span> : <span class="badge hidden">off</span>}
+            {p.dashboard ? <a class="muted" href={p.dashboard} target="_blank" rel="noopener">partner dashboard ↗</a> : null}
+          </div>
+          <div class="muted" style="font-size:13px">
+            {clicks !== null ? <span><b style="color:var(--ink)">{clicks}</b> clicks / {days} d · </span> : null}
+            last change {fmt(p.changedAt)}
+          </div>
+        </div>
+        <p class="muted" style="margin:6px 0 10px">{p.what}{p.accepted ? ` · accepted ${p.accepted}` : ""}</p>
+        {p.available ? (
+          <form method="post" action="/api/admin/affiliates" class="row">
+            <input type="hidden" name="key" value={key} />
+            <label style="flex:1;min-width:280px">
+              <span class="muted" style="font-size:12px;display:block">{p.fieldLabel}</span>
+              <input type="text" name="value" value={p.value} style="width:100%" autocomplete="off" spellcheck="false" />
+            </label>
+            <label class="row" style="gap:6px"><input type="checkbox" name="enabled" value="1" checked={p.enabled} /> On</label>
+            <button type="submit">Save</button>
+          </form>
+        ) : (
+          <p class="muted" style="margin:0">{p.unavailableReason}</p>
+        )}
+        <details style="margin-top:10px">
+          <summary class="muted">Shows on {pages.length} page{pages.length === 1 ? "" : "s"}</summary>
+          <ul style="margin:6px 0 0">
+            {pages.map((pg) => <li class="slug"><a href={pg} target="_blank" rel="noopener">{pg}</a></li>)}
+          </ul>
+        </details>
+      </div>
+    );
+  })}
+
+  <div class="row" style="justify-content:space-between;margin-top:24px">
+    <h2 style="margin:0">Clicks, last {days} days</h2>
+    <form method="get" class="row">
+      <select name="days" onchange="this.form.submit()">
+        {[7, 28, 90].map((d) => <option value={d} selected={d === days}>{d} days</option>)}
+      </select>
+      <noscript><button type="submit">Show</button></noscript>
+    </form>
+  </div>
+
+  {!stats.configured ? (
+    <div class="panel muted">GA4 not available: {stats.reason}</div>
+  ) : stats.byPartner.length === 0 ? (
+    <div class="panel muted">
+      No affiliate clicks recorded in this period. Clicks are counted once a partner is LIVE; GA4 shows them after a few hours.
+    </div>
+  ) : (
+    <>
+      <div class="panel">
+        <table>
+          <tr><th>partner</th><th>clicks</th><th>people</th></tr>
+          {stats.byPartner.map((r) => <tr><td>{nameOf(r.event)}</td><td>{r.clicks}</td><td>{r.users}</td></tr>)}
+        </table>
+      </div>
+      <h2>Where they clicked</h2>
+      <div class="panel">
+        <table>
+          <tr><th>page</th><th>partner</th><th>clicks</th><th>page views</th><th>click rate</th></tr>
+          {stats.byPage.map((r) => (
+            <tr>
+              <td class="slug">{r.key}</td><td>{nameOf(r.event)}</td><td>{r.clicks}</td>
+              <td class="muted">{stats.pageViews[r.key] ?? "–"}</td><td>{pct(r.clicks, stats.pageViews[r.key] ?? 0)}</td>
+            </tr>
+          ))}
+        </table>
+      </div>
+      <h2>Who clicked (anonymous)</h2>
+      <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))">
+        {[
+          ["Country", stats.byCountry],
+          ["Device", stats.byDevice],
+          ["Came from", stats.bySource],
+        ].map(([label, rows]) => (
+          <div class="panel" style="margin:0">
+            <b>{label as string}</b>
+            <table>
+              {top(rows as AffClickRow[]).map((r) => <tr><td>{r.key}</td><td class="muted">{nameOf(r.event)}</td><td>{r.clicks}</td></tr>)}
+            </table>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+
+  <p class="muted" style="margin-top:18px;font-size:13px">
+    Each click sends a GA4 event named <code>aff_click_&lt;partner&gt;</code>; no personal data is collected. Booking.com links
+    carry a per-area label (<code>bb-dorcol</code>, <code>bb-surcin</code>…) so the Booking.com reports show which neighbourhood
+    earns. A new partner is added in code (<code>src/data/affiliates.json</code> + a placement).
+  </p>
+</AdminLayout>

@@ -1,153 +1,68 @@
 {
   "disclosure": "Some booking links on this page are affiliate links: if you book through them we may earn a small commission at no extra cost to you.",
   "disclosureHref": "/how-we-make-money",
-  "defaultNetwork": "booking",
-  "networks": {
-    "booking": {
-      "aid": "",
-      "note": "Booking.com affiliate partner ID (accepted 2026-07-08). Paste the numeric aid here and every target below with enabled:true renders a search link for its area. Leave empty to keep the block hidden."
-    }
-  },
   "targets": {
     "stari-grad": {
       "type": "area",
       "label": "Stari Grad (Old Town)",
       "area": "stari-grad",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Stari Grad, Belgrade"
     },
     "dorcol": {
       "type": "area",
       "label": "Dorćol",
       "area": "dorcol",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Dorćol, Belgrade"
     },
     "savamala": {
       "type": "area",
       "label": "Savamala & Belgrade Waterfront",
       "area": "savamala",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Savamala, Belgrade"
     },
     "vracar": {
       "type": "area",
       "label": "Vračar",
       "area": "vracar",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Vračar, Belgrade"
     },
     "savski-venac": {
       "type": "area",
       "label": "Savski Venac",
       "area": "savski-venac",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Savski Venac, Belgrade"
     },
     "new-belgrade": {
       "type": "area",
       "label": "New Belgrade (Novi Beograd)",
       "area": "new-belgrade",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "New Belgrade, Belgrade"
     },
     "zemun": {
       "type": "area",
       "label": "Zemun",
       "area": "zemun",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Zemun, Belgrade"
     },
     "palilula": {
       "type": "area",
       "label": "Palilula / Tašmajdan",
       "area": "palilula",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Palilula, Belgrade"
     },
     "dedinje": {
       "type": "area",
       "label": "Dedinje & Topčider",
       "area": "dedinje",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Dedinje, Belgrade"
     },
     "surcin": {
       "type": "area",
       "label": "Surčin / airport & Expo side",
       "area": "surcin",
-      "affiliate": {
-        "enabled": true,
-        "network": "booking",
-        "url": "",
-        "addedAt": null,
-        "lastChecked": null,
-        "status": "none"
-      },
       "search": "Surčin, Belgrade"
     }
-  }
+  },
+  "partner": "booking",
+  "_note": "Areas the Booking.com box can link to. On/off and the partner ID live in src/data/affiliates.json (edited from /admin/affiliates)."
 }
