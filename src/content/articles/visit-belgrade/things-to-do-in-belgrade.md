@@ -1,7 +1,7 @@
 ---
 leg: "visit-belgrade"
 slug: "things-to-do-in-belgrade"
-title: "Things to do in Belgrade — the must-sees and why they matter"
+title: "Things to do in Belgrade: 8 must-sees and why each one matters"
 shortTitle: "Things to do"
 description: "The best things to do in Belgrade — the fortress, Temple of St Sava, the Tesla Museum, Skadarlija, Ada Ciganlija and Zemun — and why each matters."
 lede: "Belgrade's must-sees are easy to list and harder to understand. This is the canonical shortlist — fortress to St Sava to Skadarlija — with where each sits, how the city fits together on foot, and why it's worth your time."

@@ -1,7 +1,7 @@
 ---
 leg: "plan-your-trip"
 slug: "airport-to-city"
-title: "Getting from Belgrade Airport into the city"
+title: "Belgrade Airport to the city centre: bus, A1 minibus and taxi prices"
 shortTitle: "Airport to city"
 description: "Belgrade airport to city centre: the free city buses, the A1 minibus, the official voucher taxi and ride-hail apps, with 2026 prices and scam tips."
 lede: "Belgrade's Nikola Tesla Airport (BEG) sits about 18 km west of the centre, and you have four sensible ways into town: the free city buses, the paid A1 minibus, an official taxi on the voucher system, or a ride-hail app. Here's an answer-first comparison of each — how it works, what it costs as of 2026, and how to avoid the airport's taxi touts."

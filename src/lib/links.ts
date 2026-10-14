@@ -29,6 +29,12 @@ const DATA_PAGES: Record<string, { title: string; body: string; heroSrc: string;
     heroSrc: "/images/expo-2027/tracker-thumb.svg",
     heroAlt: "Expo 2027 participant tracker",
   },
+  "/visit-belgrade/belgrade-quiz": {
+    title: "The Belgrade quiz",
+    body: "Ten questions on rivers, money, free buses, nightlife and Expo 2027 — each answer links to the guide behind it.",
+    heroSrc: "/images/expo-2027/belgrade-quiz-thumb.svg",
+    heroAlt: "How well do you know Belgrade? A 10-question quiz",
+  },
   "/expo-2027/corporate-area": {
     title: "Corporate & Best Practice Area",
     body: "How companies get one of the ~45 corporate pavilions, who has joined, and who recruits for the zone.",
@@ -109,6 +115,16 @@ function spokeForHref(href: string): RelatedLink | null {
     }
   }
   return null;
+}
+
+// Resolve ONE internal href to its card (article, data page or spoke) — for pages
+// that link out by reference outside linksTo (e.g. the quiz reading list).
+export async function linkFor(href: string): Promise<RelatedLink | null> {
+  const a = (await articlesByHref()).get(href);
+  if (a && a.data.visible !== false) {
+    return { href, title: a.data.title, body: a.data.description };
+  }
+  return spokeForHref(href);
 }
 
 export async function relatedFor(leg: string, slug: string): Promise<RelatedLink[]> {

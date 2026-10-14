@@ -1,9 +1,9 @@
 ---
 leg: "plan-your-trip"
 slug: "money"
-title: "Money in Belgrade — dinar, cards vs cash and exchange tips"
+title: "Belgrade currency: the dinar, euros, cards vs cash and where to exchange"
 shortTitle: "Money"
-description: "Money in Belgrade: the dinar is the only legal cash currency — euros, cards vs cash, ATM fees, the DCC trap, where to exchange money, and tipping."
+description: "What currency does Belgrade use? The Serbian dinar (RSD) — whether you can pay in euros, cards vs cash, ATM fees and the DCC trap, where to exchange money, and tipping."
 lede: "Money in Belgrade runs on the Serbian dinar — the only legal currency for cash — even though many prices are quoted in euros. Cards are widely accepted; cash still matters in smaller places. A little local know-how saves you money: decline the 'pay in your own currency' offer, change cash in the centre rather than at the airport, and budget in ranges. Here's how spending works in Belgrade."
 heroLabel: "Money in Belgrade / hero"
 heroAlt: "Paying, cash and cards on a trip to Belgrade"

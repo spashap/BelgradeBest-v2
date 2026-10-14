@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="686" viewBox="0 0 1600 686" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How well do you know Belgrade? A 10-question quiz">
+  <rect width="1600" height="686" fill="#211b16"/>
+  <circle cx="1330" cy="120" r="420" fill="#b5462b" opacity="0.22"/>
+  <rect x="0" y="0" width="1600" height="10" fill="#b5462b"/>
+  <g fill="none" stroke="#f7f3ec" stroke-opacity="0.08">
+    <path d="M0 160H1600M0 320H1600M0 480H1600M200 0V686M400 0V686M600 0V686M800 0V686M1000 0V686M1200 0V686M1400 0V686"/>
+  </g>
+  <text x="800" y="236" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" letter-spacing="5" font-weight="600" fill="#b5462b">THE BELGRADE QUIZ · 10 QUESTIONS</text>
+  <text x="800" y="380" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="96" font-weight="900" letter-spacing="-3" fill="#f7f3ec">How well do you</text>
+  <text x="800" y="484" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="96" font-weight="900" letter-spacing="-3" fill="#f7f3ec">know <tspan fill="#b5462b">Belgrade?</tspan></text>
+  <g font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">
+    <rect x="560" y="540" width="100" height="56" rx="6" fill="#f7f3ec" fill-opacity="0.08" stroke="#f7f3ec" stroke-opacity="0.25"/><text x="610" y="577" fill="#f7f3ec">A</text>
+    <rect x="690" y="540" width="100" height="56" rx="6" fill="#3f6b4f"/><text x="740" y="577" fill="#f7f3ec">B ✓</text>
+    <rect x="820" y="540" width="100" height="56" rx="6" fill="#f7f3ec" fill-opacity="0.08" stroke="#f7f3ec" stroke-opacity="0.25"/><text x="870" y="577" fill="#f7f3ec">C</text>
+    <rect x="950" y="540" width="100" height="56" rx="6" fill="#f7f3ec" fill-opacity="0.08" stroke="#f7f3ec" stroke-opacity="0.25"/><text x="1000" y="577" fill="#f7f3ec">D</text>
+  </g>
+</svg>

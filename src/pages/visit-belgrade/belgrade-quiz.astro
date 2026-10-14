@@ -1,0 +1,339 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Container from "../../components/Container.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import Schema from "../../components/Schema.astro";
+import { pageMetadata } from "../../lib/metadata";
+import { ogImage } from "../../lib/og";
+import { SITE, CONFIG } from "../../lib/site";
+import { breadcrumbSchema } from "../../lib/schemas";
+import { clusterBySlug } from "../../lib/clusters";
+import { linkFor } from "../../lib/links";
+import { officialCount } from "../../lib/expo-participants";
+import quiz from "../../data/quiz.json";
+
+// The Belgrade quiz: a static page inside visit-belgrade (a real file wins over
+// [leg]/[slug]). Questions live in data/quiz.json; every answer links to the
+// page it was taken from, and that link's title is derived here at build, never
+// copied. The game is a small inline script over the same data; without JS the
+// static answer list below the stage is the whole page. lastmod: astro.config.
+const PATH = "/visit-belgrade/belgrade-quiz";
+const leg = clusterBySlug("visit-belgrade");
+
+const fill = (s: string) => s.replace("{officialCount}", String(officialCount));
+const questions = await Promise.all(
+  quiz.questions.map(async (q) => {
+    const link = await linkFor(q.href);
+    if (!link) throw new Error(`quiz.json: ${q.id} links to ${q.href}, which is not a live page`);
+    if (q.answer < 0 || q.answer >= q.options.length) throw new Error(`quiz.json: ${q.id} answer out of range`);
+    return { ...q, options: q.options.map(fill), read: { href: q.href, title: link.title } };
+  }),
+);
+const total = questions.length;
+const game = { questions, ranks: quiz.ranks, total };
+
+const meta = pageMetadata({
+  title: "The Belgrade quiz: how well do you know the city?",
+  description: `${total} quick questions on Belgrade's rivers, money, free buses, nightlife and Expo 2027. Every answer comes with the fact behind it and a link to the full guide.`,
+  path: PATH,
+  image: ogImage("belgrade-quiz"),
+  imageAlt: "How well do you know Belgrade? A 10-question quiz",
+});
+
+const crumbs = [
+  { name: CONFIG.chrome.article.breadcrumbRoot, href: "/" },
+  { name: leg?.title ?? "Visit Belgrade", href: "/visit-belgrade" },
+  { name: "The Belgrade quiz" },
+];
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: leg?.title ?? "Visit Belgrade", url: `${SITE.origin}/visit-belgrade` },
+    { name: "The Belgrade quiz", url: `${SITE.origin}${PATH}` },
+  ]),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+
+  <section class="c-quiz" data-quiz data-screen="intro" aria-live="polite">
+    <div class="c-quiz__confetti" data-q="confetti" aria-hidden="true"></div>
+    <div class="c-quiz__inner">
+      <!-- INTRO -->
+      <div class="c-quiz__screen c-quiz__screen--intro">
+        <p class="c-quiz__eyebrow">The Belgrade quiz</p>
+        <h1>How well do you know <em>Belgrade?</em></h1>
+        <p class="c-quiz__lede">
+          Rivers, rakija country, a free airport bus and a World Expo on the way. {total} questions, one tap each,
+          and every answer comes with the story behind it.
+        </p>
+        <ul class="c-quiz__chips">
+          <li>{total} questions</li>
+          <li>About 2 minutes</li>
+          <li>No sign-up</li>
+        </ul>
+        <button type="button" class="c-btn c-quiz__go" data-q="start">Start the quiz</button>
+        <p class="c-quiz__nojs">The interactive quiz needs JavaScript. <a href="#answers">All {total} questions and answers are below.</a></p>
+      </div>
+
+      <!-- PLAY -->
+      <div class="c-quiz__screen c-quiz__screen--play">
+        <div class="c-quiz__hud">
+          <div class="c-quiz__track" data-q="track" aria-hidden="true">
+            {questions.map(() => <i></i>)}
+          </div>
+          <span class="c-quiz__count" data-q="count">01 / {String(total).padStart(2, "0")}</span>
+          <span class="c-quiz__score" data-q="score-box"><b data-q="score">0</b> pts</span>
+        </div>
+        <p class="c-quiz__streak" data-q="streak"></p>
+        <h2 class="c-quiz__q" data-q="question" tabindex="-1"></h2>
+        <ul class="c-quiz__opts" data-q="opts"></ul>
+        <div class="c-quiz__reveal" data-q="reveal" hidden>
+          <p class="c-quiz__verdict" data-q="verdict"></p>
+          <p class="c-quiz__fact" data-q="fact"></p>
+          <div class="c-quiz__row">
+            <a class="c-quiz__more" data-q="more" href="/"></a>
+            <button type="button" class="c-btn c-btn--ink" data-q="next">Next question</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULT -->
+      <div class="c-quiz__screen c-quiz__screen--result">
+        <p class="c-quiz__eyebrow">Your score</p>
+        <div class="c-quiz__ring" data-q="ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="c-quiz__ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle class="c-quiz__ring-fg" data-q="arc" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="c-quiz__ring-num"><b data-q="final">0</b><span>out of {total}</span></div>
+        </div>
+        <p class="c-quiz__rank" data-q="rank"></p>
+        <p class="c-quiz__rank-line" data-q="rank-line"></p>
+        <div class="c-quiz__actions">
+          <button type="button" class="c-btn" data-q="share">Share your score</button>
+          <button type="button" class="c-btn c-btn--ghost" data-q="again">Play again</button>
+        </div>
+        <p class="c-quiz__toast" data-q="toast"></p>
+      </div>
+    </div>
+  </section>
+
+  <Container variant="read">
+    <div class="u-stack-lg" data-q="reading" hidden>
+      <SectionHead eyebrow="Fill the gaps" title="Your reading list" intro="The guides behind the questions you missed." />
+      <div class="c-linkgrid c-linkgrid--2" data-q="reading-list"></div>
+    </div>
+
+    <div class="u-stack-lg" id="answers">
+      <SectionHead
+        eyebrow="Spoilers"
+        title="All the questions, with answers"
+        intro="Play first, then come back here. Each answer links to the guide it comes from."
+      />
+      <ol class="c-quiz-answers">
+        {questions.map((q) => (
+          <li>
+            <h3>{q.q}</h3>
+            <details>
+              <summary>Show the answer</summary>
+              <p><strong>{q.options[q.answer]}.</strong> {q.fact} <a href={q.read.href}>{q.read.title}</a></p>
+            </details>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </Container>
+
+  <script type="application/json" id="quiz-data" set:html={JSON.stringify(game)} />
+  <script is:inline>
+    (function () {
+      var root = document.querySelector("[data-quiz]");
+      var dataEl = document.getElementById("quiz-data");
+      if (!root || !dataEl) return;
+      var G = JSON.parse(dataEl.textContent);
+      var KEYS = ["A", "B", "C", "D"];
+      var $ = function (n) { return document.querySelector('[data-q="' + n + '"]'); };
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var track = function (name, params) { if (typeof window.gtag === "function") window.gtag("event", name, params || {}); };
+      var pad = function (n) { return String(n).padStart(2, "0"); };
+      var state;
+
+      root.classList.add("is-live");
+
+      function shuffle(a) {
+        for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+        return a;
+      }
+      function show(screen) {
+        root.dataset.screen = screen;
+        root.classList.toggle("is-done", false);
+        var top = root.getBoundingClientRect().top + window.scrollY - 16;
+        if (window.scrollY > top) window.scrollTo({ top: top, behavior: reduce ? "auto" : "smooth" });
+      }
+      function start() {
+        state = { i: 0, score: 0, streak: 0, missed: [] };
+        Array.prototype.forEach.call($("track").children, function (el) { el.className = ""; });
+        $("score").textContent = "0";
+        $("reading").hidden = true;
+        show("play");
+        ask();
+        track("quiz_start");
+      }
+      function ask() {
+        var q = G.questions[state.i];
+        var bars = $("track").children;
+        bars[state.i].classList.add("is-now");
+        $("count").textContent = pad(state.i + 1) + " / " + pad(G.total);
+        $("question").textContent = q.q;
+        $("reveal").hidden = true;
+        var opts = $("opts");
+        opts.innerHTML = "";
+        shuffle(q.options.map(function (text, idx) { return { text: text, right: idx === q.answer }; })).forEach(function (o, k) {
+          var li = document.createElement("li");
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "c-quiz__opt";
+          b.dataset.right = o.right ? "1" : "";
+          var key = document.createElement("span");
+          key.className = "c-quiz__key";
+          key.textContent = KEYS[k];
+          b.appendChild(key);
+          b.appendChild(document.createTextNode(o.text));
+          b.addEventListener("click", function () { pick(b); });
+          li.appendChild(b);
+          opts.appendChild(li);
+        });
+        $("question").focus({ preventScroll: true });
+      }
+      function pick(btn) {
+        var q = G.questions[state.i];
+        var buttons = $("opts").querySelectorAll("button");
+        if (buttons[0].disabled) return;
+        var right = btn.dataset.right === "1";
+        Array.prototype.forEach.call(buttons, function (b) {
+          b.disabled = true;
+          if (b.dataset.right === "1") b.classList.add("is-right");
+          else if (b === btn) b.classList.add("is-wrong");
+          else b.classList.add("is-dim");
+        });
+        var bar = $("track").children[state.i];
+        bar.classList.remove("is-now");
+        bar.classList.add(right ? "is-right" : "is-wrong");
+        if (right) {
+          state.score++;
+          state.streak++;
+          var box = $("score-box");
+          $("score").textContent = String(state.score);
+          box.classList.remove("is-pop"); void box.offsetWidth; box.classList.add("is-pop");
+        } else {
+          state.streak = 0;
+          state.missed.push(q);
+        }
+        $("streak").textContent = state.streak >= 3 ? state.streak + " in a row" : "";
+        var v = $("verdict");
+        v.textContent = right ? "Correct!" : "Not quite. It's " + q.options[q.answer] + ".";
+        v.className = "c-quiz__verdict " + (right ? "is-right" : "is-wrong");
+        $("fact").textContent = q.fact;
+        var more = $("more");
+        more.href = q.read.href;
+        more.textContent = "Read: " + q.read.title;
+        more.onclick = function () { track("quiz_link", { link_url: q.read.href, quiz_question: q.id }); };
+        $("next").textContent = state.i + 1 < G.total ? "Next question" : "See my score";
+        $("reveal").hidden = false;
+        $("next").focus({ preventScroll: true });
+        if (!reduce) $("reveal").scrollIntoView({ block: "nearest", behavior: "smooth" });
+      }
+      function next() {
+        state.i++;
+        if (state.i < G.total) ask(); else finish();
+      }
+      function rankFor(s) {
+        for (var i = 0; i < G.ranks.length; i++) if (s >= G.ranks[i].min) return G.ranks[i];
+        return G.ranks[G.ranks.length - 1];
+      }
+      function finish() {
+        show("result");
+        var s = state.score, n = G.total, r = rankFor(s);
+        var arc = $("arc"), C = 2 * Math.PI * 52;
+        arc.style.strokeDasharray = String(C);
+        arc.style.strokeDashoffset = String(C);
+        $("ring").classList.toggle("is-high", s / n >= 0.8);
+        $("rank").textContent = r.title;
+        $("rank-line").textContent = r.line;
+        $("toast").textContent = "";
+        var finalEl = $("final");
+        finalEl.textContent = "0";
+        requestAnimationFrame(function () { requestAnimationFrame(function () { arc.style.strokeDashoffset = String(C * (1 - s / n)); }); });
+        if (reduce) { finalEl.textContent = String(s); root.classList.add("is-done"); }
+        else {
+          var t0 = null, dur = 1400;
+          var step = function (t) {
+            if (t0 === null) t0 = t;
+            var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+            finalEl.textContent = String(Math.round(e * s));
+            if (p < 1) requestAnimationFrame(step);
+            else { root.classList.add("is-done"); if (s / n >= 0.7) confetti(s === n ? 90 : 50); }
+          };
+          requestAnimationFrame(step);
+        }
+        var list = $("reading-list");
+        list.innerHTML = "";
+        var seen = {};
+        state.missed.forEach(function (q) {
+          if (seen[q.read.href]) return;
+          seen[q.read.href] = 1;
+          var a = document.createElement("a");
+          a.className = "c-linkcard";
+          a.href = q.read.href;
+          a.innerHTML = '<span class="c-linkcard__kicker"></span><span class="c-linkcard__title"></span>';
+          a.firstChild.textContent = "Question " + pad(G.questions.indexOf(q) + 1);
+          a.lastChild.textContent = q.read.title;
+          a.addEventListener("click", function () { track("quiz_link", { link_url: q.read.href, quiz_question: q.id, placement: "reading_list" }); });
+          list.appendChild(a);
+        });
+        $("reading").hidden = state.missed.length === 0;
+        track("quiz_complete", { score: s, total: n });
+      }
+      function confetti(count) {
+        var box = $("confetti");
+        box.innerHTML = "";
+        for (var i = 0; i < count; i++) {
+          var p = document.createElement("i");
+          p.style.left = Math.random() * 100 + "%";
+          p.style.setProperty("--dx", (Math.random() * 40 - 20) + "vw");
+          p.style.setProperty("--rot", (Math.random() * 900 - 450) + "deg");
+          p.style.setProperty("--dur", (2 + Math.random() * 1.6) + "s");
+          p.style.setProperty("--delay", (Math.random() * 0.5) + "s");
+          box.appendChild(p);
+        }
+        setTimeout(function () { box.innerHTML = ""; }, 4500);
+      }
+      function share() {
+        var r = rankFor(state.score);
+        var text = "I scored " + state.score + "/" + G.total + " on the Belgrade quiz: " + r.title + ". How well do you know Belgrade?";
+        var url = location.origin + location.pathname;
+        track("quiz_share", { score: state.score });
+        if (navigator.share) { navigator.share({ title: document.title, text: text, url: url }).catch(function () {}); return; }
+        var done = function () { $("toast").textContent = "Copied. Paste it anywhere to challenge a friend."; };
+        if (navigator.clipboard) navigator.clipboard.writeText(text + " " + url).then(done, function () { $("toast").textContent = url; });
+        else $("toast").textContent = url;
+      }
+      document.addEventListener("keydown", function (e) {
+        if (root.dataset.screen !== "play" || e.altKey || e.ctrlKey || e.metaKey) return;
+        var k = e.key.toUpperCase(), idx = KEYS.indexOf(k);
+        if (idx < 0 && /^[1-4]$/.test(e.key)) idx = Number(e.key) - 1;
+        if (idx >= 0) { var b = $("opts").querySelectorAll("button")[idx]; if (b && !b.disabled) { e.preventDefault(); pick(b); } }
+      });
+      $("start").addEventListener("click", start);
+      $("next").addEventListener("click", next);
+      $("again").addEventListener("click", start);
+      $("share").addEventListener("click", share);
+    })();
+  </script>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

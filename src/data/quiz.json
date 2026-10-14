@@ -1,0 +1,93 @@
+{
+  "updated": "2026-10-14",
+  "_note": "Belgrade quiz master. Every answer and fact is taken from the linked page — when that page changes, check its question here. `href` is a reference: the link title is derived at render. `{officialCount}` is filled from expo-participants.json.",
+  "questions": [
+    {
+      "id": "rivers",
+      "q": "Which two rivers meet at Belgrade?",
+      "options": ["The Sava and the Danube", "The Drina and the Danube", "The Morava and the Sava", "The Tisa and the Danube"],
+      "answer": 0,
+      "fact": "The confluence of the Sava and the Danube is the view from Kalemegdan, the fortress whose walls run from Roman to Austrian times.",
+      "href": "/visit-belgrade/things-to-do-in-belgrade"
+    },
+    {
+      "id": "bus-72",
+      "q": "You land at Nikola Tesla Airport. What does bus 72 into the centre cost?",
+      "options": ["Nothing, it's free", "About 1 euro", "300 dinars, cash only", "A ticket bought in an app"],
+      "answer": 0,
+      "fact": "Since 1 January 2025 all regular Belgrade city public transport has been free, the airport buses included. Fare policies change, so check before you rely on it.",
+      "href": "/plan-your-trip/airport-to-city"
+    },
+    {
+      "id": "euros",
+      "q": "Can you pay cash in euros in Belgrade?",
+      "options": ["Not really: the dinar is the only legal cash currency", "Yes, euros are legal tender everywhere", "Only in restaurants", "Only on public transport"],
+      "answer": 0,
+      "fact": "Many prices are quoted in euros, but you pay the dinar equivalent. The few places that take euro notes informally usually give a poor rate.",
+      "href": "/plan-your-trip/money"
+    },
+    {
+      "id": "registration",
+      "q": "Every foreign visitor's address must be registered with the police. Within how long of arrival?",
+      "options": ["24 hours", "72 hours", "7 days", "Only for stays over 90 days"],
+      "answer": 0,
+      "fact": "The 24-hour rule applies to every nationality. Hotels usually do it at check-in and hand you a white card; in a private apartment the host must register you, or you do it yourself.",
+      "href": "/plan-your-trip/visa-and-entry"
+    },
+    {
+      "id": "splav",
+      "q": "A friend suggests a night on a splav. What are you getting into?",
+      "options": ["A bar, restaurant or club floating on the river", "A plate of grilled meat", "A round of plum brandy", "A late-night tram ride"],
+      "answer": 0,
+      "fact": "Splav simply means a floating structure tied to the bank. On the Sava and the Danube it covers everything from quiet riverside bars to big nightclubs.",
+      "href": "/food-and-nightlife/belgrade-splavovi"
+    },
+    {
+      "id": "ada",
+      "q": "What do Belgraders call Ada Ciganlija?",
+      "options": ["Belgrade's sea", "The white city", "The old fortress", "The island of kings"],
+      "answer": 0,
+      "fact": "It's a lake and beach peninsula on the Sava with swimming, cafés and sports, and lifeguards from May to September.",
+      "href": "/visit-belgrade/things-to-do-in-belgrade"
+    },
+    {
+      "id": "tesla",
+      "q": "What does the golden orb at the Nikola Tesla Museum hold?",
+      "options": ["Tesla's ashes", "His first patent", "A working Tesla coil", "A letter to Edison"],
+      "answer": 0,
+      "fact": "The museum holds Tesla's personal archive and runs live electrical demonstrations. Bring dinars: it's cash only.",
+      "href": "/visit-belgrade/things-to-do-in-belgrade"
+    },
+    {
+      "id": "zemun",
+      "q": "Why do Zemun's streets feel so different from central Belgrade?",
+      "options": ["For centuries it was the Habsburg frontier town facing Ottoman Belgrade", "It was rebuilt as a Venetian port", "It was the capital of Yugoslavia", "It was built for the 1970s Olympics bid"],
+      "answer": 0,
+      "fact": "That border history is why Zemun is lower, older and more Central European, with a fish-restaurant quay and the Gardoš Tower above the Danube.",
+      "href": "/visit-belgrade/zemun"
+    },
+    {
+      "id": "expo-theme",
+      "q": "What is the theme of Expo 2027 Belgrade?",
+      "options": ["Play for Humanity: Sport and Music for All", "Connecting Minds, Creating the Future", "Designing Future Society for Our Lives", "Feeding the Planet, Energy for Life"],
+      "answer": 0,
+      "fact": "The wrong answers belong to Dubai 2020, Osaka 2025 and Milan 2015. Belgrade's Expo runs from 15 May to 15 August 2027 at Surčin.",
+      "href": "/expo-2027/what-is-it"
+    },
+    {
+      "id": "expo-countries",
+      "q": "How many countries has the organiser said are registered for Expo 2027?",
+      "options": ["{officialCount}", "39", "64", "192"],
+      "answer": 0,
+      "fact": "The director called it a record for a Specialised Expo. Our tracker follows every country that has been publicly named.",
+      "href": "/expo-2027/tracker"
+    }
+  ],
+  "ranks": [
+    { "min": 10, "title": "Honorary Belgrader", "line": "A perfect score. You could give the walking tour yourself." },
+    { "min": 8, "title": "Kafana regular", "line": "You know this city better than most visitors ever will." },
+    { "min": 5, "title": "Weekend on the Danube", "line": "A good start. A few pages below fill the gaps." },
+    { "min": 3, "title": "Fresh off bus 72", "line": "You've got the basics. The guides below will do the rest." },
+    { "min": 0, "title": "Just landed at Tesla Airport", "line": "Everyone starts here. Start with the reading list below." }
+  ]
+}

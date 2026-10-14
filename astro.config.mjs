@@ -12,6 +12,7 @@ import glossaryData from "./src/data/glossary.json" with { type: "json" };
 import expoParticipants from "./src/data/expo-participants.json" with { type: "json" };
 import expoContracts from "./src/data/expo-contracts.json" with { type: "json" };
 import nationalDays from "./src/data/national-days.json" with { type: "json" };
+import quizData from "./src/data/quiz.json" with { type: "json" };
 
 // Per-article last-modified dates for the sitemap, read from each markdown
 // file's `lastUpdated` frontmatter (a freshness signal for search engines).
@@ -71,6 +72,7 @@ LASTMOD["/expo-2027/national-days"] = iso(nationalDays.updated);
 LASTMOD["/expo-2027/countdown"] = iso("2026-07-05");
 LASTMOD["/expo-2027/corporate-area"] = iso("2026-07-06");
 LASTMOD["/for-businesses"] = iso("2026-07-06");
+LASTMOD["/visit-belgrade/belgrade-quiz"] = iso(quizData.updated);
 {
   const g = maxDate(glossaryData.terms.map((t) => t.updated).filter(Boolean));
   if (g) LASTMOD["/glossary"] = g;

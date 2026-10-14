@@ -77,6 +77,25 @@ function card({ eyebrow, title, sub }) {
 </svg>`;
 }
 
+// The Belgrade quiz card: the ink stage of .c-quiz (bolder than the paper card,
+// because it is made to be shared on Facebook). Same center-safe area.
+function quizCard() {
+  const opt = (x, label, on) =>
+    `<rect x="${x}" y="440" width="96" height="60" rx="10" fill="${on ? "#3f6b4f" : PAPER}" fill-opacity="${on ? 1 : 0.08}" stroke="${PAPER}" stroke-opacity="${on ? 0 : 0.3}"/><text x="${x + 48}" y="480" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" font-weight="800" fill="${PAPER}">${label}</text>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+  <defs><radialGradient id="g" cx="0.85" cy="0.1" r="0.7"><stop offset="0" stop-color="${ACCENT}" stop-opacity="0.5"/><stop offset="1" stop-color="${ACCENT}" stop-opacity="0"/></radialGradient></defs>
+  <rect width="${W}" height="${H}" fill="${INK}"/>
+  <rect width="${W}" height="${H}" fill="url(#g)"/>
+  <rect x="0" y="0" width="${W}" height="14" fill="${ACCENT}"/>
+  <text x="600" y="150" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="600" letter-spacing="5" fill="${ACCENT}">THE BELGRADE QUIZ</text>
+  <text x="600" y="262" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="84" font-weight="900" letter-spacing="-3" fill="${PAPER}">How well do you</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="84" font-weight="900" letter-spacing="-3" fill="${PAPER}">know <tspan fill="${ACCENT}">Belgrade?</tspan></text>
+  ${opt(396, "A", false)}${opt(504, "B ✓", true)}${opt(612, "C", false)}${opt(720, "D", false)}
+  <text x="600" y="580" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="${PAPER}">10 questions · Belgrade<tspan fill="${ACCENT}">Best</tspan>.com</text>
+</svg>`;
+}
+
 // Same publish rule as lib/listings.ts validListing (keep in sync): claimed
 // listings publish on summary+about alone; editorial ones also need facts.
 const publishes = (l) => {
@@ -125,6 +144,8 @@ async function main() {
   for (const [slug, eyebrow, title, sub] of fixed) {
     jobs.push({ out: `${slug}.png`, svg: card({ eyebrow, title, sub }) });
   }
+
+  jobs.push({ out: "belgrade-quiz.png", svg: quizCard() });
 
   for (const j of jobs) {
     const out = join(OUT_DIR, j.out);

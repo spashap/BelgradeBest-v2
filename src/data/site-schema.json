@@ -31,7 +31,8 @@
             "/visit-belgrade/things-to-do-in-belgrade",
             "/visit-belgrade/belgrade-itinerary-3-days",
             "/plan-your-trip",
-            "/expo-2027/what-is-it"
+            "/expo-2027/what-is-it",
+            "/visit-belgrade/belgrade-quiz"
           ]
         },
         {
@@ -46,7 +47,8 @@
             "/visit-belgrade/belgrade-museums",
             "/visit-belgrade/belgrade-itinerary-3-days",
             "/visit-belgrade/is-belgrade-worth-visiting",
-            "belgrade-arenas-and-stadiums"
+            "belgrade-arenas-and-stadiums",
+            "/visit-belgrade/belgrade-quiz"
           ]
         },
         {
@@ -723,7 +725,7 @@
       "title": "Expo 2027",
       "navLabel": "",
       "seoTitle": "Expo 2027 Belgrade: tickets, dates and the 141 countries taking part",
-      "seoDescription": "Expo 2027 Belgrade runs 15 May–15 August 2027. Tickets are not on sale yet: what is confirmed about sales and prices, every named participating country, pavilion profiles and getting there.",
+      "seoDescription": "Expo 2027 Belgrade, 15 May–15 August 2027: the latest on ticket sales and prices, the full list of participating countries with pavilion profiles, the Surčin site and how to get there.",
       "noindex": false,
       "tagline": "What's coming 15 May–15 Aug 2027, and how to make a Belgrade trip out of it.",
       "intro": "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. We're tracking what's confirmed, what's reported, and what's still unknown — and showing you how an Expo visit can become a city visit.",

@@ -1,16 +1,25 @@
-Three new pavilion profiles from Bing demand: Slovenia, Czechia, Spain
+Snippet fixes from the October traffic read, German resubmit, and the Belgrade quiz
 
-People searched Bing for these pavilions and landed on generic pages
-because no profile existed (BB-CHG-0025):
-- Slovenia: 342 m² small pavilion, €3.3m, run by SPIRIT Slovenia;
-  government decision 9 Jul, contract signed 4 Sep 2026.
-- Czechia: contract signed June 2026, Commissioner General Kryštof Šafer,
-  theme space and cosmonautics, CZK 120m reported.
-- Spain: Acción Cultural Española competition won by "Plaza España"
-  (Javier Jiménez Iniesta / Studio Animal); €505k tender estimate.
-Czechia and Spain added to the tracker's participant table. Share cards
-and QR codes generated; South Korea card regenerated for its new summary.
-UK and Bulgaria researched and rejected: no confirmed participation.
-Also logs the Bing push of the retitled hub and visa page (BB-CHG-0026).
+Fixes (BB-CHG-0027): the Expo hub's Bing CTR fell from 11/392 to 1/361 in the
+first full week after the 10-01 ticket-first description, which answered the
+question on the results page ("Tickets are not on sale yet"). The description
+now promises the page instead. The airport, currency and things-to-do titles
+now match the queries Bing actually shows them for ("belgrade airport to city
+center", "belgrade currency", "must see belgrade").
 
-Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+Bing (BB-CHG-0028): resubmitted the two German pages Bing still had not
+crawled (/de/expo-2027 and /de/expo-2027/pavilions/germany); 9 of 11 are now
+crawled.
+
+New page (BB-CHG-0029): /visit-belgrade/belgrade-quiz, an interactive
+10-question quiz on an ink stage, with a progress track, score pop, streaks,
+right/wrong reveal, an animated score ring with count-up, rank titles,
+confetti for high scores, share (native share sheet or clipboard), and a
+reading list of the guides behind missed questions. Every fact comes from a
+live page, and the link titles are derived at build (links.ts linkFor). The
+static answer list keeps it crawlable and usable without JS. New c-quiz
+pattern in globals.css (reduced-motion safe), master in src/data/quiz.json,
+ink share card in gen-listing-og.mjs, GA4 events quiz_start, quiz_complete,
+quiz_link and quiz_share. Linked from two Visit Belgrade articles.
+
+Co-Authored-By: Claude <noreply@anthropic.com>
