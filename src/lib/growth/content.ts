@@ -23,7 +23,7 @@ export type ContentPage = {
   path: string;
   content_type: Classification["content_type"];
   section: string;
-  lang: "en" | "de";
+  lang: "en" | "de" | "sk";
   expo: boolean;
   ga4: {
     views: number;

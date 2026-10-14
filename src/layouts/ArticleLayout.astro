@@ -17,7 +17,7 @@ import { heroForPath, thumbForPath } from "../lib/hero";
 import { relatedFor } from "../lib/links";
 import { pageMetadata } from "../lib/metadata";
 import type { Article } from "../lib/articles";
-import { DE, alternates, dePath, deArticleSet, fmtDate, type Lang } from "../lib/i18n";
+import { UI, alternates, langPath, twinLangs, fmtDate, type Lang, type TrLang } from "../lib/i18n";
 import { getCollection } from "astro:content";
 
 // Leg-agnostic T3 article template. Per-leg chrome (eyebrow, breadcrumb root,
@@ -30,24 +30,27 @@ interface Props {
   lang?: Lang;
 }
 const { entry, lang = "en" } = Astro.props;
-const isDe = lang === "de";
+// Translated = any non-English pilot language (de, sk). T = its chrome strings.
+const isTr = lang !== "en";
+const T = isTr ? UI[lang as TrLang] : null;
 const d = entry.data;
 const leg = d.leg;
 const enHref = `/${leg}/${d.slug}`;
-const href = isDe ? dePath(enHref) : enHref;
+const href = langPath(lang, enHref);
 const url = SITE.origin + href;
-// hreflang: German pages always have an English original; English pages only
-// when a German twin exists in the `de` collection.
-const hasTwin = isDe || (await deArticleSet()).has(enHref);
+// hreflang: every translation the English article has (de/sk collections);
+// a translated page is always in that set alongside its English original.
+const twins = await twinLangs(enHref);
+const hasTwin = twins.length > 0;
 
 const c = clusterBySlug(leg);
 const eyebrow = c?.eyebrow ?? leg;
 const crumbRoot = {
   name: c?.title ?? leg,
-  href: SITE.origin + (isDe ? dePath(c?.href ?? `/${leg}`) : (c?.href ?? `/${leg}`)),
+  href: SITE.origin + langPath(lang, c?.href ?? `/${leg}`),
 };
-const rn = isDe
-  ? { eyebrow: DE.readNextEyebrow, title: DE.readNextTitle, intro: DE.readNextIntro }
+const rn = T
+  ? { eyebrow: T.readNextEyebrow, title: T.readNextTitle, intro: T.readNextIntro }
   : leg === "expo-2027"
     ? CONFIG.chrome.article.readNextExpo
     : CONFIG.chrome.article.readNextEvergreen;
@@ -74,20 +77,20 @@ const meta = pageMetadata({
   image: resolvedHero?.src,
   imageAlt: d.heroAlt ?? resolvedHero?.alt ?? d.title,
   lang,
-  alternates: hasTwin ? alternates(enHref) : undefined,
+  alternates: hasTwin ? alternates(enHref, twins) : undefined,
 });
 
 const { Content, headings } = await render(entry);
-// German read-next: the other German pages of the same leg (there is no
-// German linksTo graph; the cluster is small enough to list in full).
-const targets = isDe
-  ? (await getCollection("de"))
+// Translated read-next: the other pages of the same leg in that language
+// (there is no translated linksTo graph; the sets are small enough to list).
+const targets = isTr
+  ? (await getCollection(lang as TrLang))
       .filter((e) => e.data.leg === leg && e.data.slug !== d.slug && e.data.visible !== false)
       .sort((a, b) => a.data.order - b.data.order)
       .map((e) => {
         const p = `/${e.data.leg}/${e.data.slug}`;
         const h = thumbForPath(p, e.data.heroAlt ?? e.data.heroLabel);
-        return { href: dePath(p), title: e.data.shortTitle, body: e.data.description, heroSrc: h?.src, heroAlt: h?.alt };
+        return { href: langPath(lang, p), title: e.data.shortTitle, body: e.data.description, heroSrc: h?.src, heroAlt: h?.alt };
       })
   : await relatedFor(leg, d.slug);
 
@@ -99,7 +102,7 @@ const updatedLabel = Number.isNaN(Date.parse(d.lastUpdated)) ? null : fmtDate(d.
 const schemas: object[] = [
   articleSchema({ title: d.title, description: d.description, url, dateModified: d.lastUpdated, imageUrl: heroAbs, inLanguage: lang }),
   breadcrumbSchema([
-    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin + (isDe ? "/de/expo-2027" : "") },
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin + (T ? T.hub : "") },
     { name: crumbRoot.name, url: crumbRoot.href },
     { name: d.shortTitle, url },
   ]),
@@ -119,7 +122,7 @@ const schemas: object[] = [
     updatedLabel ? (
       <Container variant="article">
         <p class="c-article-meta">
-          {isDe ? `${DE.updated} ${updatedLabel}` : `Updated ${updatedLabel}`}
+          {T ? `${T.updated} ${updatedLabel}` : `Updated ${updatedLabel}`}
         </p>
       </Container>
     ) : null
@@ -131,7 +134,11 @@ const schemas: object[] = [
        set gets a real anchor-text link from the English article. */
     hasTwin ? (
       <Container variant="article">
-        <LangNote to={isDe ? "en" : "de"} href={isDe ? enHref : dePath(enHref)} />
+        {isTr ? (
+          <LangNote to="en" href={enHref} />
+        ) : (
+          twins.map((l) => <LangNote to={l} href={langPath(l, enHref)} />)
+        )}
       </Container>
     ) : null
   }
@@ -169,7 +176,7 @@ const schemas: object[] = [
       {
         d.unknowns && d.unknowns.length > 0 ? (
           <aside class="c-unknowns">
-            <h2>{isDe ? DE.unknowns : "Still unknown or unconfirmed"}</h2>
+            <h2>{T ? T.unknowns : "Still unknown or unconfirmed"}</h2>
             <ul>{d.unknowns.map((u: string) => <li>{u}</li>)}</ul>
           </aside>
         ) : null
@@ -181,11 +188,9 @@ const schemas: object[] = [
            "you never said X" is actionable on its own. No endpoint, no scores. */
         INVITE_FEEDBACK.has(`${leg}/${d.slug}`) ? (
           <p class="c-article-meta">
-            {isDe
-              ? "Etwas falsch, veraltet oder fehlt in diesem Leitfaden? "
-              : "Something wrong, out of date, or missing from this guide? "}
-            <a href={isDe ? "/contact" : "/contact"}>
-              {isDe ? "Schreiben Sie uns, was Sie gesucht haben" : "Tell us what you needed"}
+            {T ? T.feedbackText : "Something wrong, out of date, or missing from this guide? "}
+            <a href="/contact">
+              {T ? T.feedbackLink : "Tell us what you needed"}
             </a>.
           </p>
         ) : null

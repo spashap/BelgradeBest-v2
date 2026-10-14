@@ -12,7 +12,7 @@ import Schema from "../components/Schema.astro";
 import Analytics from "../components/Analytics.astro";
 import { organizationSchema } from "../lib/schemas";
 import { CONFIG } from "../lib/site";
-import { OG_LOCALE } from "../lib/i18n";
+import { OG_LOCALE, UI, type Lang, type TrLang } from "../lib/i18n";
 import type { PageMeta } from "../lib/metadata";
 
 interface Props {
@@ -21,7 +21,7 @@ interface Props {
 const { meta } = Astro.props;
 // Language pilot: German pages set meta.lang; <html lang>, og:locale and the
 // chrome follow. Pages with a twin in the other language carry hreflang.
-const lang = (meta.lang ?? CONFIG.brand.locale) as "en" | "de";
+const lang = (meta.lang ?? CONFIG.brand.locale) as Lang;
 const ogLocale = OG_LOCALE[lang] ?? CONFIG.brand.ogLocale;
 
 // CSS↔JSON layout bridge — the four layout knobs (widths + cards-per-row grid)
@@ -83,7 +83,7 @@ const layoutCss =
     {!meta.noAnalytics && <Analytics />}
   </head>
   <body>
-    <a class="c-skiplink" href="#main">{lang === "de" ? "Zum Inhalt springen" : "Skip to content"}</a>
+    <a class="c-skiplink" href="#main">{lang === "en" ? "Skip to content" : UI[lang as TrLang].skip}</a>
     <SiteHeader lang={lang} alternates={meta.alternates} />
     {/* One <main> landmark for every public page. Articles had none at all —
         only <header>, four <nav>s, <article> and <footer> — so keyboard and

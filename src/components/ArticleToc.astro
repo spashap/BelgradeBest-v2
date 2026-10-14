@@ -1,4 +1,5 @@
 ---
+import { UI, type Lang, type TrLang } from "../lib/i18n";
 // On-page topic index ("On this page"), built from the article's H2 headings
 // (Astro adds id anchors, so heading.slug matches the in-page #anchor).
 // Renders nothing unless there are at least 3 sections.
@@ -16,11 +17,11 @@ interface Heading {
 }
 interface Props {
   headings?: Heading[];
-  lang?: "en" | "de";
+  lang?: Lang;
 }
 const { headings = [], lang = "en" } = Astro.props;
 const items = headings.filter((h) => h.depth === 2 && h.text && h.slug);
-const label = lang === "de" ? "Auf dieser Seite" : "On this page";
+const label = lang === "en" ? "On this page" : UI[lang as TrLang].toc;
 ---
 {
   items.length >= 3 ? (

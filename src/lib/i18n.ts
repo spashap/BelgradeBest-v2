@@ -1,4 +1,5 @@
-// Language pilot (added 2026-09-04): a German mirror of the Expo 2027 cluster
+// Language pilots: German (2026-09-04) and Slovak (2026-10-14, see TR_LANGS).
+// German is a mirror of the Expo 2027 cluster
 // only — hub, the six Expo articles, the pavilions hub and the DACH pavilion
 // profiles. Everything else stays English. URLs keep the English path segments
 // under a /de prefix (/de/expo-2027/tickets) so every page maps 1:1 to its
@@ -13,14 +14,20 @@
 import { getCollection } from "astro:content";
 import { SITE } from "./site";
 
-export type Lang = "en" | "de";
-export const LANGS: Lang[] = ["en", "de"];
-export const OG_LOCALE: Record<Lang, string> = { en: "en_US", de: "de_DE" };
+// Slovak (added 2026-10-14): a three-page pilot — Expo hub, tickets, getting
+// there — timed to the 1 Nov Slovak ticket-package launch. Same mechanics as
+// German: `sk` content collection + /sk prefix + chrome strings in UI.sk.
+export type Lang = "en" | "de" | "sk";
+export type TrLang = Exclude<Lang, "en">;
+export const LANGS: Lang[] = ["en", "de", "sk"];
+export const TR_LANGS: TrLang[] = ["de", "sk"];
+export const OG_LOCALE: Record<Lang, string> = { en: "en_US", de: "de_DE", sk: "sk_SK" };
 // Header switcher labels: the chip text and the full name (title / aria).
-// Adding a language = one row here + its hreflang in alternates().
+// Adding a language = one row here, a row in UI, TR_LANGS and PAGE_TWINS.
 export const LANG_LABEL: Record<Lang, { short: string; name: string }> = {
   en: { short: "EN", name: "English" },
   de: { short: "DE", name: "Deutsch" },
+  sk: { short: "SK", name: "Slovenčina" },
 };
 
 // The header language switcher for a page: one entry per language the page
@@ -39,38 +46,64 @@ export function langSwitcher(alts: Alternate[] | undefined, current: Lang): Lang
   return out.length > 1 ? out : [];
 }
 
-// Path of the German mirror for an English path, and back.
-export function dePath(enPathname: string): string {
-  return enPathname === "" || enPathname === "/" ? "/de" : `/de${enPathname}`;
+// Path of a language mirror for an English path, and back to English.
+export function langPath(lang: Lang, enPathname: string): string {
+  if (lang === "en") return enPathname || "/";
+  return enPathname === "" || enPathname === "/" ? `/${lang}` : `/${lang}${enPathname}`;
 }
-export function enPath(dePathname: string): string {
-  return dePathname.replace(/^\/de(?=\/|$)/, "") || "/";
+export const dePath = (enPathname: string) => langPath("de", enPathname);
+export function enPath(trPathname: string): string {
+  return trPathname.replace(/^\/(de|sk)(?=\/|$)/, "") || "/";
 }
 
-// hreflang set for a page that exists in both languages. x-default = English.
+// hreflang set for a page and the translations it HAS (`langs`; default = the
+// German pilot set, which every older caller meant). x-default = English.
 export type Alternate = { hreflang: string; href: string };
-export function alternates(enPathname: string): Alternate[] {
+export function alternates(enPathname: string, langs: TrLang[] = ["de"]): Alternate[] {
   return [
     { hreflang: "en", href: `${SITE.origin}${enPathname}` },
-    { hreflang: "de", href: `${SITE.origin}${dePath(enPathname)}` },
+    ...TR_LANGS.filter((l) => langs.includes(l)).map((l) => ({
+      hreflang: l,
+      href: `${SITE.origin}${langPath(l, enPathname)}`,
+    })),
     { hreflang: "x-default", href: `${SITE.origin}${enPathname}` },
   ];
 }
 
-// Which English article paths have a German twin (from the `de` collection).
-let deArticlePaths: Set<string> | null = null;
-export async function deArticleSet(): Promise<Set<string>> {
-  if (deArticlePaths) return deArticlePaths;
-  const de = await getCollection("de");
-  deArticlePaths = new Set(de.map((e) => `/${e.data.leg}/${e.data.slug}`));
-  return deArticlePaths;
+// Hand-built (non-article) pages that have a twin, per language. Articles are
+// read from the content collections in twinLangs().
+export const PAGE_TWINS: Record<string, TrLang[]> = {
+  "/expo-2027": ["de", "sk"],
+  "/expo-2027/pavilions": ["de"],
+};
+
+// Which English article paths have a twin in a language (from its collection).
+const articleTwinCache: Partial<Record<TrLang, Set<string>>> = {};
+export async function articleTwinSet(lang: TrLang): Promise<Set<string>> {
+  const hit = articleTwinCache[lang];
+  if (hit) return hit;
+  const entries = await getCollection(lang);
+  const set = new Set(entries.map((e) => `/${e.data.leg}/${e.data.slug}`));
+  articleTwinCache[lang] = set;
+  return set;
+}
+export const deArticleSet = () => articleTwinSet("de");
+
+// Every translation an English path has (hand-built pages + articles).
+export async function twinLangs(enPathname: string): Promise<TrLang[]> {
+  const out: TrLang[] = [];
+  for (const l of TR_LANGS) {
+    if (PAGE_TWINS[enPathname]?.includes(l) || (await articleTwinSet(l)).has(enPathname)) out.push(l);
+  }
+  return out;
 }
 
 // Date formatting per language (visible "Updated" stamps, Expo dates).
+const DATE_LOCALE: Record<Lang, string> = { en: "en-GB", de: "de-DE", sk: "sk-SK" };
 export function fmtDate(d: string, lang: Lang): string {
   const t = Date.parse(d);
   if (Number.isNaN(t)) return d;
-  return new Date(t).toLocaleDateString(lang === "de" ? "de-DE" : "en-GB", {
+  return new Date(t).toLocaleDateString(DATE_LOCALE[lang], {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -172,3 +205,58 @@ export const DE = {
     },
   },
 } as const;
+
+// Shared chrome strings per translated language (header strip, footer note,
+// article chrome). German listing strings stay in DE.listing above.
+export type Chrome = {
+  nav: { label: string; href: string }[];
+  footerNote: string;
+  footerEnglish: string;
+  updated: string;
+  unknowns: string;
+  readNextEyebrow: string;
+  readNextTitle: string;
+  readNextIntro: string;
+  skip: string;
+  toc: string;
+  hub: string;
+  feedbackText: string;
+  feedbackLink: string;
+};
+export const UI: Record<TrLang, Chrome> = {
+  de: {
+    nav: [...DE.nav],
+    footerNote: DE.footerNote,
+    footerEnglish: DE.footerEnglish,
+    updated: DE.updated,
+    unknowns: DE.unknowns,
+    readNextEyebrow: DE.readNextEyebrow,
+    readNextTitle: DE.readNextTitle,
+    readNextIntro: DE.readNextIntro,
+    skip: "Zum Inhalt springen",
+    toc: "Auf dieser Seite",
+    hub: "/de/expo-2027",
+    feedbackText: "Etwas falsch, veraltet oder fehlt in diesem Leitfaden? ",
+    feedbackLink: "Schreiben Sie uns, was Sie gesucht haben",
+  },
+  sk: {
+    nav: [
+      { label: "Expo 2027", href: "/sk/expo-2027" },
+      { label: "Vstupenky", href: "/sk/expo-2027/tickets" },
+      { label: "Doprava", href: "/sk/expo-2027/getting-there" },
+    ],
+    footerNote:
+      "Slovenské vydanie: zatiaľ len základné stránky o Expo 2027. Všetky ostatné stránky sú v angličtine.",
+    footerEnglish: "Prejsť na anglickú verziu",
+    updated: "Aktualizované",
+    unknowns: "Zatiaľ neznáme alebo nepotvrdené",
+    readNextEyebrow: "Čítajte ďalej",
+    readNextTitle: "Viac o Expo 2027 po slovensky",
+    readNextIntro: "Ďalšie slovenské stránky o Expo 2027.",
+    skip: "Preskočiť na obsah",
+    toc: "Na tejto stránke",
+    hub: "/sk/expo-2027",
+    feedbackText: "Niečo v tomto sprievodcovi nesedí, je zastarané alebo chýba? ",
+    feedbackLink: "Napíšte nám, čo ste hľadali",
+  },
+};

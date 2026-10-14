@@ -1,0 +1,187 @@
+---
+// /sk/expo-2027 — Slovak hub of the Expo cluster (Slovak pilot, 2026-10-14,
+// lib/i18n.ts). Compact like the German hub: what a Slovak visitor asks first
+// (dates, tickets and the 1 Nov Slovak packages, getting there, the Slovak
+// pavilion), the Slovak articles, and honest pointers to English-only pages.
+// Numbers interpolate from the same masters as the English hub. When a fact
+// here changes in English (tickets!), change it here in the same commit.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import PageIntro from "../../../components/PageIntro.astro";
+import Container from "../../../components/Container.astro";
+import SectionHead from "../../../components/SectionHead.astro";
+import Grid from "../../../components/Grid.astro";
+import Card from "../../../components/Card.astro";
+import Note from "../../../components/Note.astro";
+import Faq from "../../../components/Faq.astro";
+import ArticleHero from "../../../components/ArticleHero.astro";
+import Schema from "../../../components/Schema.astro";
+import { pageMetadata } from "../../../lib/metadata";
+import { SITE, EXPO, CONFIG } from "../../../lib/site";
+import { breadcrumbSchema, faqSchema, expoEventSchema } from "../../../lib/schemas";
+import { heroForLeg, thumbForPath } from "../../../lib/hero";
+import { officialCount, namedCount, updated as trackerUpdated } from "../../../lib/expo-participants";
+import { alternates, langPath, fmtDate, PAGE_TWINS } from "../../../lib/i18n";
+import { ogImage } from "../../../lib/og";
+
+const LEG = "expo-2027";
+const EN_PATH = `/${LEG}`;
+const PATH = langPath("sk", EN_PATH);
+const sk = (p: string) => langPath("sk", p);
+
+const articles = (await getCollection("sk"))
+  .filter((e) => e.data.leg === LEG && e.data.visible !== false)
+  .sort((a, b) => a.data.order - b.data.order);
+const cards = articles.map((e) => {
+  const p = `/${LEG}/${e.data.slug}`;
+  const t = thumbForPath(p, e.data.heroAlt ?? e.data.heroLabel);
+  return { href: sk(p), title: e.data.shortTitle, body: e.data.description, src: t?.src, alt: t?.alt };
+});
+
+const hero = heroForLeg(LEG, "Expo 2027 Belehrad");
+const dates = `${fmtDate(EXPO.startDate, "sk")} – ${fmtDate(EXPO.endDate, "sk")}`;
+// Running prose wants "od 15. mája do 15. augusta 2027", not a dash range.
+const fromTo = `od ${fmtDate(EXPO.startDate, "sk").replace(/ \d{4}$/, "")} do ${fmtDate(EXPO.endDate, "sk")}`;
+
+const title = "Expo 2027 Belehrad: termíny, vstupenky a doprava";
+const heading = "Expo 2027 v Belehrade – sprievodca po slovensky";
+const description = `Expo 2027 v Belehrade (${dates}): vstupenky a balíky slovenských cestovných kancelárií od 1. novembra, doprava a slovenský pavilón.`;
+
+const meta = pageMetadata({
+  title,
+  description,
+  path: PATH,
+  image: hero?.src ?? ogImage("expo-2027"),
+  imageAlt: "Expo 2027 Belehrad – slovenský sprievodca na BelgradeBest",
+  lang: "sk",
+  alternates: alternates(EN_PATH, PAGE_TWINS[EN_PATH]),
+});
+
+const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { name: "Expo 2027 (slovensky)" }];
+
+const facts: { label: string; text: string; href?: string; en?: boolean }[] = [
+  { label: "Termíny", text: `${dates} – 93 dní` },
+  { label: "Miesto", text: `${EXPO.venue}, na západe Belehradu – asi 5 km od letiska Nikolu Teslu`, href: sk(`/${LEG}/getting-there`) },
+  {
+    label: "Vstupenky",
+    text: "Zatiaľ nie sú v predaji a nemajú cenu – plánovaný štart 15. septembra 2026 prešiel bez predaja. Slovenské cestovné kancelárie majú od 1. novembra 2026 predávať balíky so vstupenkou.",
+    href: sk(`/${LEG}/tickets`),
+  },
+  { label: "Téma", text: `„${EXPO.theme}“` },
+  {
+    label: "Účastníci",
+    text: `${officialCount} registrovaných krajín podľa organizátora (stav august 2026); ${namedCount} z nich je verejne známych podľa mena`,
+    href: `/${LEG}/tracker`,
+    en: true,
+  },
+  {
+    label: "Slovensko",
+    text: "Prvá krajina so zmluvou o účasti (12. novembra 2025); pavilón „Living Playground“ od bratislavského kolektívu EXPO LINE, 648 m² v hale 6",
+    href: `/${LEG}/pavilions/slovakia`,
+    en: true,
+  },
+];
+
+const faqs = [
+  {
+    question: "Kedy a kde sa koná Expo 2027?",
+    answer: `${fromTo.charAt(0).toUpperCase()}${fromTo.slice(1)} v Surčine na západnom okraji Belehradu, asi 5 km od letiska Nikolu Teslu a približne 13,5 km od centra. Ide o špecializované Expo (Specialised Expo) pod záštitou BIE – kratšie a tematicky užšie ako svetová výstava – s mottom „${EXPO.theme}“.`,
+  },
+  {
+    question: "Dajú sa už kúpiť vstupenky na Expo 2027?",
+    answer:
+      "Nie, k 17. septembru 2026. Plánovaný začiatok predaja 15. septembra 2026 prešiel bez spustenia predaja – po 15. máji 2026 už druhý zmeškaný termín – a nový dátum oznámený nebol. Jednodňové a trojdňové vstupenky sú potvrdené ako druhy, ceny však zverejnené neboli. Od 1. novembra 2026 majú slovenské cestovné kancelárie predávať balíky, ktoré vstupenku obsahujú.",
+  },
+  {
+    question: "Má Slovensko na Expo 2027 vlastný pavilón?",
+    answer:
+      "Áno. Slovensko bolo prvou krajinou, ktorá podpísala zmluvu o účasti (12. novembra 2025). Súťaž na pavilón vyhral bratislavský kolektív EXPO LINE s návrhom „Living Playground“: 648 m² na dvoch podlažiach v hale 6, koncept „Slovakia – A Playground of Opportunities“. Podrobný profil so zdrojmi je v angličtine.",
+  },
+  {
+    question: "Je celá stránka BelgradeBest po slovensky?",
+    answer:
+      "Nie. Slovenské vydanie zatiaľ tvorí táto stránka a dva články – o vstupenkách a o doprave na výstavisko. Všetky ostatné stránky o Belehrade (štvrte, reštaurácie, cesta z letiska, víza) sú v angličtine a odkazujeme na ne z každej slovenskej stránky.",
+  },
+];
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: "Expo 2027 (slovensky)", url: `${SITE.origin}${PATH}` },
+  ]),
+  expoEventSchema(hero ? `${SITE.origin}${hero.src}` : undefined),
+  faqSchema(faqs),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow="Expo 2027 Belehrad · Slovenské vydanie"
+    title={heading}
+    lede={`Belehrad hostí ${fromTo} špecializované Expo v Surčine. Tu nájdete po slovensky to, čo je dôležité pre plánovanie cesty – termíny, vstupenky a dopravu – a čo pripravuje slovenský pavilón. Potvrdené a hlásené informácie držíme oddelene.`}
+  />
+
+  {
+    hero ? (
+      <Container>
+        <ArticleHero src={hero.src} srcset={hero.srcset} sizes={hero.sizes} alt={hero.alt ?? "Expo 2027 Belehrad"} caption={null} />
+      </Container>
+    ) : null
+  }
+
+  <Container variant="read">
+    <SectionHead title="Na prvý pohľad" />
+    <div class="c-data-table">
+      <table>
+        <tbody>
+          {facts.map((f) => (
+            <tr>
+              <th scope="row">{f.label}</th>
+              <td>
+                {f.href ? (
+                  <a href={f.href} hreflang={f.en ? "en" : undefined}>
+                    {f.text}
+                    {f.en ? " (EN)" : ""}
+                  </a>
+                ) : (
+                  f.text
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </Container>
+
+  <Container>
+    <SectionHead
+      eyebrow="Po slovensky"
+      title="Články o Expo 2027"
+      intro="Rovnaké fakty a zdroje ako anglické originály – každý článok odkazuje na svoju anglickú verziu."
+    />
+    <Grid>
+      {cards.map((c) => (
+        <Card href={c.href} title={c.title} body={c.body} src={c.src} imgAlt={c.alt} />
+      ))}
+    </Grid>
+  </Container>
+
+  <Container variant="read">
+    <Note>
+      <strong>Čo je zatiaľ len v angličtine.</strong>{" "}
+      <a href={`/${LEG}/pavilions/slovakia`} hreflang="en">Profil slovenského pavilónu</a>,{" "}
+      <a href={`/${LEG}/pavilions`} hreflang="en">všetky pavilóny</a>,{" "}
+      <a href={`/${LEG}/tracker`} hreflang="en">sledovanie účastníkov</a> (všetkých {namedCount} krajín známych podľa
+      mena so zdrojmi, naposledy aktualizované {fmtDate(trackerUpdated, "sk")}) a celý ostatný sprievodca
+      Belehradom. Anglická verzia tejto stránky: <a href={EN_PATH} hreflang="en">Expo 2027 guide (EN)</a>.
+    </Note>
+
+    <SectionHead title="Krátke odpovede" />
+    <Faq faqs={faqs} />
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

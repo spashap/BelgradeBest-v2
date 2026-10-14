@@ -6,7 +6,7 @@ import { clusterBySlug, utilityPages } from "../lib/clusters";
 import { areaSection } from "../lib/areas";
 import { glossarySection } from "../lib/glossary";
 import { VERSION } from "../lib/version";
-import { DE, enPath } from "../lib/i18n";
+import { UI, enPath, type Lang, type TrLang } from "../lib/i18n";
 
 // Footer from chrome.footer + DERIVED links (leg titles/hrefs from clusters,
 // utility-page titles/paths from utilityPages). Degrades to a one-line footer
@@ -16,10 +16,10 @@ type ResolvedLink = { title: string; href: string };
 // Language pilot: German pages keep the (English) site map — it IS the rest of
 // the site — but say so, and link this page's English twin.
 interface Props {
-  lang?: "en" | "de";
+  lang?: Lang;
 }
 const { lang = "en" } = Astro.props;
-const isDe = lang === "de";
+const T = lang !== "en" ? UI[lang as TrLang] : null;
 
 // Footer list items are { ref, visible } (admin-controlled); a bare string is
 // tolerated as { ref, visible:true }. Hidden items drop out before resolving.
@@ -120,9 +120,9 @@ const social = ((f?.social ?? []) as { url: string; label: string; icon?: string
           </div>
         </div>
 
-        {isDe ? (
-          <p class="c-footer__lang" lang="de">
-            {DE.footerNote} <a href={enPath(Astro.url.pathname)} hreflang="en">{DE.footerEnglish}</a>
+        {T ? (
+          <p class="c-footer__lang" lang={lang}>
+            {T.footerNote} <a href={enPath(Astro.url.pathname)} hreflang="en">{T.footerEnglish}</a>
           </p>
         ) : null}
         <div class="c-footer__bar">

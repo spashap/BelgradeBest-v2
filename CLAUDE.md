@@ -330,6 +330,14 @@ English rest of the site with " (EN)" markers. Mechanics (`src/lib/i18n.ts`):
   Translate via Sonnet subagents with the brief in
   `KB/platform/research/2026-09-04-sweep.md` conventions (Sie, „…“, dates
   "15. Mai 2027", keep mottos in original language), then Fable-review.
+- **Slovak pilot (`/sk/expo-2027/…`, 2026-10-14):** hub + tickets +
+  getting-there, timed to the 1 Nov Slovak ticket-package launch. Same
+  mechanics, generalised: `sk` collection, `TR_LANGS` / `UI[lang]` /
+  `PAGE_TWINS` / `twinLangs()` in `i18n.ts` (alternates list only the
+  languages a page really has). The twin rule applies to Slovak too: a ticket
+  fact changed in English changes in `/sk/` in the same commit. Next-language
+  analysis: `growth/BELGRADEBEST_LANGUAGE_ESTIMATE.md` (Russian + Turkish pilot
+  over Italian; Serbian only as B2B pages).
 - Decision gate: Bing impressions on the `/de/` set by ~05 Oct 2026 decide
   whether Italian/Turkish follow (`KB/seo/NEXT-STEPS-2026-09-04.md`).
 

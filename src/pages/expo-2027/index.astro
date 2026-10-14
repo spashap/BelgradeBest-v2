@@ -17,7 +17,7 @@ import { heroForLeg, thumbForSlug, thumbForPath } from "../../lib/hero";
 import { getPlannedChildren } from "../../lib/content-plan";
 import { articlesForLeg } from "../../lib/articles";
 import { hubMetadata } from "../../lib/metadata";
-import { alternates, dePath } from "../../lib/i18n";
+import { alternates, dePath, langPath, PAGE_TWINS } from "../../lib/i18n";
 import LangNote from "../../components/LangNote.astro";
 import { breadcrumbSchema, expoEventSchema, faqSchema } from "../../lib/schemas";
 import {
@@ -44,7 +44,7 @@ import { ogImage } from "../../lib/og";
 // the page can never drift stale the way the retired /participants article did.
 const LEG = "expo-2027";
 const cluster = clusterBySlug(LEG)!;
-const meta = { ...hubMetadata(LEG), alternates: alternates(`/${LEG}`) }; // hreflang ↔ /de (language pilot)
+const meta = { ...hubMetadata(LEG), alternates: alternates(`/${LEG}`, PAGE_TWINS[`/${LEG}`]) }; // hreflang ↔ /de, /sk (language pilots)
 const legHero = heroForLeg(LEG);
 
 // Article cards — same built/planned logic as LegHubLayout.
@@ -179,6 +179,11 @@ const schemas: object[] = [
       href={dePath(`/${LEG}`)}
       text="Die Expo 2027 Belgrad auf Deutsch: Termine, Tickets, Anreise, Programm und die Pavillons aus Deutschland, Österreich und der Schweiz."
       linkText="Zur deutschen Ausgabe"
+    />
+    <LangNote
+      to="sk"
+      href={langPath("sk", `/${LEG}`)}
+      text="Expo 2027 v Belehrade po slovensky: termíny, vstupenky a doprava na výstavisko."
     />
   </Container>
 

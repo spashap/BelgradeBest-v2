@@ -1,3 +1,4 @@
+import type { Lang } from "./i18n";
 import { SITE, CONFIG } from "./site";
 import { clusterBySlug } from "./clusters";
 import { heroForLeg } from "./hero";
@@ -21,7 +22,7 @@ export type PageMeta = {
   // Language pilot (lib/i18n.ts): page language + hreflang set when the page
   // exists in more than one language. Both optional — English pages without a
   // German twin leave them unset and render exactly as before.
-  lang?: "en" | "de";
+  lang?: Lang;
   alternates?: { hreflang: string; href: string }[];
 };
 
@@ -45,7 +46,7 @@ type Args = {
   noAnalytics?: boolean; // see PageMeta.noAnalytics
   image?: string | null; // page hero (relative or absolute); falls back to default
   imageAlt?: string;
-  lang?: "en" | "de";
+  lang?: Lang;
   alternates?: { hreflang: string; href: string }[];
 };
 

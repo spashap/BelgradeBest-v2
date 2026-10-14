@@ -38,8 +38,9 @@ try {
 // src/content/de/<leg>/<slug>.md render at /de/<leg>/<slug> — same lastUpdated
 // convention. Listing mirrors (/de/<leg>/<section>/<slug>) are added in the
 // listings loop below from each listing's `updated`.
-try {
-  const DE_DIR = "src/content/de";
+// Slovak pilot (2026-10-14): same loop over src/content/sk.
+for (const LANG of ["de", "sk"]) try {
+  const DE_DIR = `src/content/${LANG}`;
   for (const leg of readdirSync(DE_DIR)) {
     const legDir = join(DE_DIR, leg);
     if (!statSync(legDir).isDirectory()) continue;
@@ -47,11 +48,11 @@ try {
       if (!file.endsWith(".md")) continue;
       const txt = readFileSync(join(legDir, file), "utf8");
       const m = txt.match(/^lastUpdated:\s*["']?(\d{4}-\d{2}-\d{2})/m);
-      if (m) LASTMOD[`/de/${leg}/${file.replace(/\.md$/, "")}`] = new Date(m[1]).toISOString();
+      if (m) LASTMOD[`/${LANG}/${leg}/${file.replace(/\.md$/, "")}`] = new Date(m[1]).toISOString();
     }
   }
 } catch {
-  /* no German content — leave map as is */
+  /* no content in this language — leave map as is */
 }
 
 // Real lastmod for non-article pages too (previously they re-stamped BUILD_DATE
@@ -87,7 +88,7 @@ LASTMOD["/visit-belgrade/belgrade-quiz"] = iso(quizData.updated);
     const m = maxDate(dates);
     if (m) LASTMOD[`/${leg.slug}`] = m;
   }
-  if (LASTMOD["/expo-2027"]) LASTMOD["/de/expo-2027"] = LASTMOD["/expo-2027"];
+  if (LASTMOD["/expo-2027"]) LASTMOD["/de/expo-2027"] = LASTMOD["/sk/expo-2027"] = LASTMOD["/expo-2027"];
   const home = maxDate(Object.values(LASTMOD));
   if (home) LASTMOD[""] = home;
 }

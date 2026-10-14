@@ -24,7 +24,7 @@ import { breadcrumbSchema, faqSchema, expoEventSchema } from "../../../lib/schem
 import { heroForLeg, thumbForPath } from "../../../lib/hero";
 import { officialCount, namedCount, updated as trackerUpdated } from "../../../lib/expo-participants";
 import { listingsWithDe, listingHref, listingsIndexable } from "../../../lib/listings";
-import { alternates, dePath, fmtDate } from "../../../lib/i18n";
+import { alternates, dePath, fmtDate, PAGE_TWINS } from "../../../lib/i18n";
 import { ogImage } from "../../../lib/og";
 
 const LEG = "expo-2027";
@@ -60,7 +60,7 @@ const meta = pageMetadata({
   image: hero?.src ?? ogImage("expo-2027"),
   imageAlt: "Expo 2027 Belgrad – deutschsprachiger Guide auf BelgradeBest",
   lang: "de",
-  alternates: alternates(EN_PATH),
+  alternates: alternates(EN_PATH, PAGE_TWINS[EN_PATH]),
 });
 
 const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { name: "Expo 2027 (Deutsch)" }];

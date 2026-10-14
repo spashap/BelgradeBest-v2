@@ -4,7 +4,7 @@ import Wordmark from "./Wordmark.astro";
 import { CONFIG } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
 import { navSectionsFor } from "../lib/listings";
-import { DE, langSwitcher, type Alternate } from "../lib/i18n";
+import { UI, langSwitcher, type Alternate, type Lang, type TrLang } from "../lib/i18n";
 
 // Wordmark + leg nav. Nav items are leg slug REFS in chrome.headerNav; titles/
 // hrefs resolve from the structure (clusterBySlug), using navLabel when set.
@@ -19,16 +19,16 @@ import { DE, langSwitcher, type Alternate } from "../lib/i18n";
 // (meta.alternates via BaseLayout): current language = static chip, the
 // others link to the twin page. Pages without a twin show no switcher.
 interface Props {
-  lang?: "en" | "de";
+  lang?: Lang;
   alternates?: Alternate[];
 }
 const { lang = "en", alternates } = Astro.props;
-const isDe = lang === "de";
+const T = lang !== "en" ? UI[lang as TrLang] : null;
 const langs = langSwitcher(alternates, lang);
 type NavItem = string | { ref: string; visible?: boolean };
 const items = (CONFIG.chrome.headerNav?.items ?? []) as NavItem[];
-const nav = isDe
-  ? DE.nav.map((n) => ({ href: n.href, label: n.label, subs: [] as { title: string; href: string }[] }))
+const nav = T
+  ? T.nav.map((n) => ({ href: n.href, label: n.label, subs: [] as { title: string; href: string }[] }))
   : items
   .map((it) => (typeof it === "string" ? { ref: it, visible: true } : it))
   .filter((it) => it.visible !== false)
@@ -63,7 +63,7 @@ const nav = isDe
             >
               <span /> <span /> <span />
             </button>
-            <nav id="site-nav" class="c-header__nav" aria-label={isDe ? "Bereiche" : "Sections"}>
+            <nav id="site-nav" class="c-header__nav" aria-label={({ en: "Sections", de: "Bereiche", sk: "Sekcie" } as const)[lang]}>
               {nav.map((n) =>
                 n.subs.length === 0 ? (
                   <a href={n.href}>{n.label}</a>
@@ -93,7 +93,7 @@ const nav = isDe
       }
       {
         langs.length > 0 ? (
-          <nav class="c-lang" aria-label={isDe ? "Sprache" : "Language"}>
+          <nav class="c-lang" aria-label={({ en: "Language", de: "Sprache", sk: "Jazyk" } as const)[lang]}>
             {langs.map((l) =>
               l.current ? (
                 <span aria-current="page" lang={l.lang} title={l.name}>

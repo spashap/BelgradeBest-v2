@@ -38,8 +38,8 @@ export type Classification = {
   path: string; // normalised: no query, no trailing slash, "/" for home
   content_type: ContentType;
   section: string; // leg slug, "areas", "glossary", "home", "utility", …
-  lang: "en" | "de";
-  expo: boolean; // part of the Expo 2027 cluster (EN or DE)
+  lang: "en" | "de" | "sk";
+  expo: boolean; // part of the Expo 2027 cluster (EN or a translation)
 };
 
 const LEGS = new Set<string>(schema.legs.map((l) => l.slug));
@@ -69,11 +69,12 @@ export function normalisePath(input: string): string {
 
 export function classifyPath(input: string): Classification {
   const path = normalisePath(input);
-  let lang: "en" | "de" = "en";
+  let lang: "en" | "de" | "sk" = "en";
   let rest = path;
-  if (path === "/de" || path.startsWith("/de/")) {
-    lang = "de";
-    rest = path === "/de" ? "/" : path.slice(3);
+  const m = path.match(/^\/(de|sk)(?=\/|$)/);
+  if (m) {
+    lang = m[1] as "de" | "sk";
+    rest = path === `/${lang}` ? "/" : path.slice(3);
   }
   const segs = rest.split("/").filter(Boolean);
   const out = (content_type: ContentType, section: string, expo = section === EXPO_LEG): Classification => ({
@@ -84,7 +85,7 @@ export function classifyPath(input: string): Classification {
     expo,
   });
 
-  if (segs.length === 0) return out("homepage", "home", lang === "de");
+  if (segs.length === 0) return out("homepage", "home", lang !== "en");
   const [a, b, c, d] = segs;
 
   if (a === "admin" || a === "api" || a === "manage") return out("internal", "internal", false);

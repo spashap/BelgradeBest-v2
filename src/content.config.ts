@@ -63,4 +63,10 @@ const de = defineCollection({
   schema: articleSchema,
 });
 
-export const collections = { articles, de };
+// Slovak pilot (2026-10-14): same mechanics as `de`, three Expo pages.
+const sk = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/sk" }),
+  schema: articleSchema,
+});
+
+export const collections = { articles, de, sk };
