@@ -1,21 +1,15 @@
-Affiliates admin with on/off switches and click stats; articles reshaped
+Verify partner facts: Welcome Pickups terms and Air Serbia routes
 
-New /admin/affiliates page: one row per partner (Booking.com, Welcome
-Pickups, Air Serbia via CJ; aloSIM shown as not available) with its ID or
-tracked link and an On/Off switch. A save commits src/data/affiliates.json
-and the Vercel rebuild switches the public boxes in about 1-2 minutes; the
-public pages stay static and gain no runtime requests. lib/affiliates.ts
-resolves every block at build time; the old per-target switches are gone.
+Checked the facts on the partners' and Belgrade Airport's own websites so
+the pages that will carry affiliate links are accurate.
 
-Clicks send a GA4 event named aff_click_<partner> from a small inline
-listener that is emitted only on pages carrying a box, so the admin can
-show clicks by partner, page (with click rate), country, device and
-source with no GA4 setup. The privacy page says so.
-
-Articles: airport-to-city gains "When is a pre-booked transfer worth it?"
-(the free bus stays the first answer), taxis gains a tout-avoidance note,
-Expo getting-there gains "Flying to Belgrade for Expo 2027" in English,
-German and Slovak, and Expo where-to-stay gains search advice. No prices
-or terms that could not be verified.
+- airport-to-city / taxis: live Welcome Pickups quote (sedan to Republic
+  Square EUR 34, Oct 2026), 60 min free waiting, extra-wait rates,
+  cancellation terms (under 24h no refund), minivan/child-seat notes.
+- Expo getting-there (EN + DE + SK): Air Serbia routes now taken from the
+  airport's seasonal timetable instead of Wikipedia. Hanover added,
+  Salzburg marked seasonal, Cologne removed (Eurowings only), other
+  carriers on Frankfurt/Vienna named, no Bratislava flight confirmed.
+- growth log BB-CHG-0038.
 
 Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

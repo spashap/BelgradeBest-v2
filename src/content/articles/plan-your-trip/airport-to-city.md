@@ -78,16 +78,25 @@ CarGo's regulatory status has been contested over the years, but it continues to
 
 ## When is a pre-booked transfer worth it?
 
-A pre-booked transfer is a private car you reserve before you fly. The driver meets you in the arrivals hall, your flight is tracked so a delay does not leave you without a ride, and the price is fixed and paid in advance. Several companies offer this at Belgrade airport; Welcome Pickups is one that describes these terms on its own site (we have not tested it ourselves). It is not the cheapest way into town, and it does not need to be. It earns its price in a few situations:
+A pre-booked transfer is a private car you reserve before you fly. The driver meets you in the arrivals hall, your flight is tracked so a delay does not leave you without a ride, and the price is fixed and paid in advance. Several companies offer this at Belgrade airport. We checked one of them, Welcome Pickups, in October 2026: a sedan for one passenger from the airport to Republic Square was quoted at **€34**, taxes included, for a midday arrival. That is a little above the voucher taxi. It is not the cheapest way into town, and it does not need to be. It earns its price in a few situations:
 
 - **Late-night or very early arrivals**, when you do not want to look for a bus stop or a taxi queue.
-- **Families and heavy luggage**: larger vehicles and child seats can usually be requested, so ask when you book.
+- **Families and heavy luggage**: you can book a minivan or minibus instead of a sedan, and request child seats when you book (Welcome Pickups charges extra for them).
 - **A first visit**, when you would simply like someone waiting for you and no negotiation at the door.
 - **Business trips**, where a fixed price and a punctual driver matter more than saving a few euros.
 - **Expo 2027 peak days**, when arrivals halls and taxi ranks may be crowded and you are carrying bags and a schedule. See [getting to Expo 2027](/expo-2027/getting-there).
 - **Anyone who wants the price agreed before leaving home**, and wants to avoid the touts described above.
 
-**When it isn't worth it:** if you are travelling alone and light, arriving in daylight, **bus 72 (or the A1 minibus if you want a faster, paid ride) is the better answer.** It costs nothing, or about 400 RSD, and the journey is not hard to work out. A pre-booked transfer is also less flexible than a taxi if your plans change, so read the cancellation and waiting-time terms before you pay. We have not verified current prices, so compare any quote with the voucher taxi range above (about 2,200–3,500 RSD) before you decide.
+**When it isn't worth it:** if you are travelling alone and light, arriving in daylight, **bus 72 (or the A1 minibus if you want a faster, paid ride) is the better answer.** It costs nothing, or about 400 RSD, and the journey is not hard to work out. A pre-booked transfer is also less flexible than a taxi if your plans change, so read the terms before you pay.
+
+**What the terms look like (Welcome Pickups, checked October 2026):**
+
+- You pay by card when you book; the quoted price is the final price.
+- At the airport the driver waits up to **60 minutes free** from your chosen pickup time. If your flight is delayed, the driver tracks it and adjusts. Waiting beyond that costs extra (€6 per 15 minutes in a sedan).
+- Cancel **24 hours or more** before pickup and you choose between a coupon for the full amount or 80% back to your card. Cancel later and there is no refund.
+- Pick a pickup time about 30 minutes after landing, to allow for passport control and bags.
+
+Prices vary with the date, the vehicle and the address, so get your own quote and compare it with the voucher taxi range above (about 2,200–3,500 RSD).
 
 ## When will the airport train to the city open?
 

@@ -56,7 +56,7 @@ The airport run is where overcharging is most common, and it has a simple, offic
 
 The alternative is just as good: order a **CarGo or Yandex Go** car from the app and meet it at the pickup point, again with the price agreed up front. What you should *not* do is accept an offer from someone who approaches you inside the terminal or by the doors. Those touts, leading you to an unmarked car at a "special price," are exactly who the overcharging warnings are about. Use the kiosk voucher or an app and you're fine.
 
-There is one more way to avoid the touts altogether: **pre-book a private transfer** before you travel. A driver meets you in arrivals, the price is fixed and paid in advance, and nobody approaches you in the terminal. The trade-off is cost: it usually runs higher than the voucher taxi, though we have not verified current prices, so compare a quote with the voucher range before you commit. Our [airport-to-city guide](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it) explains when it is worth paying for.
+There is one more way to avoid the touts altogether: **pre-book a private transfer** before you travel. A driver meets you in arrivals, the price is fixed and paid in advance, and nobody approaches you in the terminal. The trade-off is cost: when we checked in October 2026, a pre-booked sedan to Republic Square was quoted at €34, a little above the voucher taxi, and a booking cancelled less than 24 hours ahead is not refunded. Our [airport-to-city guide](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it) explains when it is worth paying for.
 
 For the full set of airport options — including the much cheaper free city bus — see our [airport-to-city guide](/plan-your-trip/airport-to-city).
 
