@@ -1,25 +1,22 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import PageIntro from "../components/PageIntro.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import Container from "../components/Container.astro";
-import Placeholder from "../components/Placeholder.astro";
-import ArticleHero from "../components/ArticleHero.astro";
 import SectionHead from "../components/SectionHead.astro";
-import Grid from "../components/Grid.astro";
-import Card from "../components/Card.astro";
 import MarkdownInline from "../components/MarkdownInline.astro";
 import Schema from "../components/Schema.astro";
 import { breadcrumbSchema, expoEventSchema } from "../lib/schemas";
 import { SITE, CONFIG, interp } from "../lib/site";
 import { clusterBySlug } from "../lib/clusters";
-import { heroForLeg, thumbForSlug } from "../lib/hero";
+import { heroForLeg, heroForSlug, thumbForSlug } from "../lib/hero";
 import { getPlannedChildren } from "../lib/content-plan";
 import { articlesForLeg } from "../lib/articles";
 import { hubMetadata } from "../lib/metadata";
 
-// Shared T2 leg/hub template. One card per PLANNED slug (schema order): BUILT
-// slugs (a content entry exists) render a full Card; planned-only slugs render
-// a muted placeholder badged with the plan status.
+// Shared T2 leg/hub template — the STAGE design (promoted 2026-10-14): a
+// full-bleed photo stage, a bento of the BUILT guides in schema order (tile 0
+// is the 2×2 hero tile), the leg body, planned-only slugs as muted stubs, the
+// leg's closing body and the quiz band. The Expo hub has its own page.
 interface Props {
   clusterSlug: string;
 }
@@ -27,85 +24,103 @@ const { clusterSlug } = Astro.props;
 const cluster = clusterBySlug(clusterSlug)!;
 const meta = hubMetadata(clusterSlug);
 const legHero = heroForLeg(clusterSlug);
+const Q = CONFIG.homepage.stage.quizBand;
 const planned = getPlannedChildren(clusterSlug);
 const built = new Map((await articlesForLeg(clusterSlug)).map((a) => [a.data.slug, a]));
+const items = planned.map((p) => built.get(p.slug)).filter((a) => a && a.data.visible !== false).map((a) => a!);
+const stubs = planned.filter((p) => !built.has(p.slug));
 const extraSchemas =
   clusterSlug === "expo-2027" ? [expoEventSchema(legHero ? SITE.origin + legHero.src : undefined)] : [];
 
-function fmtDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-}
+// Widen tiles from the end until the 4-column grid closes with no hole
+// (cells = 4 for the hero tile + one per other tile + one extra per wide).
+const wides = items.length > 1 ? (4 - ((4 + items.length - 1) % 4)) % 4 : 0;
+const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { name: cluster.title }];
 ---
 <BaseLayout meta={meta}>
-  <PageIntro eyebrow={cluster.eyebrow} title={cluster.title} lede={cluster.intro} />
+  <section class="c-stage c-stage--hub">
+    {legHero ? <img class="c-stage__bg" src={legHero.src} srcset={legHero.srcset} sizes="100vw" alt="" fetchpriority="high" /> : null}
+    <div class="u-container c-stage__inner">
+      <p class="c-stage__eyebrow">{cluster.eyebrow}</p>
+      <h1>{cluster.title}</h1>
+      <p class="c-stage__lede">{cluster.intro}</p>
+      <div class="c-stage__ctas">
+        {items.length ? <a class="c-btn" href="#guides">{`See all ${items.length} guides`}</a> : null}
+        <a class="c-btn c-btn--ghost" href={Q.href}>{Q.cta}</a>
+      </div>
+    </div>
+  </section>
+  <Breadcrumbs crumbs={crumbs} />
 
-  <Container>
-    {
-      legHero ? (
-        <ArticleHero src={legHero.src} srcset={legHero.srcset} sizes={legHero.sizes} alt={legHero.alt} caption={null} />
-      ) : (
-        <Placeholder
-          ratio="21/9"
-          label={interp(CONFIG.chrome.legHub.clusterHeroPlaceholderTemplate, { leg: cluster.title })}
-        />
-      )
-    }
-  </Container>
-
-  {
-    cluster.body && cluster.body.trim() ? (
-      <Container variant="read">
-        <article class="c-article">
-          <MarkdownInline markdown={cluster.body} />
-        </article>
-      </Container>
-    ) : null
-  }
-
-  <Container>
-    <div class="u-stack-lg"></div>
-    <SectionHead
-      eyebrow={CONFIG.chrome.legHub.cardsEyebrow}
-      title={interp(CONFIG.chrome.legHub.cardsTitleTemplate, { leg: cluster.title })}
-      intro={CONFIG.chrome.legHub.cardsIntro}
-    />
-    <Grid>
-      {
-        planned.map((p) => {
-          const a = built.get(p.slug);
-          if (a) {
-            const label = a.data.shortTitle || a.data.title;
-            const hero = thumbForSlug(p.slug, label);
-            return (
-              <Card
-                href={`/${clusterSlug}/${p.slug}`}
-                title={label}
-                body={a.data.description}
-                src={hero?.src}
-                imgAlt={hero?.alt ?? label}
-              />
-            );
-          }
+  <section class="u-section" id="guides">
+    <Container>
+      <SectionHead
+        eyebrow={CONFIG.chrome.legHub.cardsEyebrow}
+        title={items.length ? `All ${items.length} guides` : interp(CONFIG.chrome.legHub.cardsTitleTemplate, { leg: cluster.title })}
+        intro={stubs.length ? CONFIG.chrome.legHub.cardsIntro : undefined}
+      />
+      <div class="c-bento">
+        {items.map((a, i) => {
+          const label = a.data.shortTitle || a.data.title;
+          const img = i === 0 ? heroForSlug(a.data.slug, label) : thumbForSlug(a.data.slug, label);
+          const wide = i > 0 && i >= items.length - wides;
+          const cls = `c-bento__tile u-reveal${i === 0 ? " c-bento__tile--lg" : wide ? " c-bento__tile--wide" : ""}`;
           return (
+            <a class={cls} href={`/${clusterSlug}/${a.data.slug}`}>
+              {img ? <img src={img.src} srcset={i === 0 ? img.srcset : undefined} sizes={i === 0 ? "(max-width: 980px) 100vw, 50vw" : undefined} alt="" loading={i < 3 ? "eager" : "lazy"} /> : null}
+              <span class="c-bento__go" aria-hidden="true">→</span>
+              <span class="c-bento__kicker">{i === 0 ? "Start here" : cluster.eyebrow}</span>
+              <span class="c-bento__title">{i === 0 ? a.data.title : label}</span>
+              <span class="c-bento__text">{a.data.description}</span>
+            </a>
+          );
+        })}
+      </div>
+      {stubs.length ? (
+        <div class="c-grid u-stack-md">
+          {stubs.map((p) => (
             <div class="c-stub" aria-label={`Planned page: ${p.title}`}>
               <span class="c-stub__badge">{p.status || CONFIG.chrome.legHub.stubFallbackBadge}</span>
               <span class="c-stub__title">{p.title}</span>
             </div>
-          );
-        })
-      }
-    </Grid>
-  </Container>
+          ))}
+        </div>
+      ) : null}
+    </Container>
+  </section>
 
-  {
-    cluster.bodyBelow && cluster.bodyBelow.trim() ? (
+  {cluster.body && cluster.body.trim() ? (
+    <section class="u-section u-section--tight">
       <Container variant="read">
-        <article class="c-article c-article--leg-foot">
-          <MarkdownInline markdown={cluster.bodyBelow} />
-        </article>
+        <article class="c-article"><MarkdownInline markdown={cluster.body} /></article>
       </Container>
-    ) : null
-  }
+    </section>
+  ) : null}
+
+  {cluster.bodyBelow && cluster.bodyBelow.trim() ? (
+    <Container variant="read">
+      <article class="c-article c-article--leg-foot"><MarkdownInline markdown={cluster.bodyBelow} /></article>
+    </Container>
+  ) : null}
+
+  <section class="c-band c-band--split u-stack-lg">
+    <Container>
+      <div class="c-band__grid">
+        <div>
+          <p class="c-band__eyebrow">{Q.eyebrow}</p>
+          <h2>{Q.titleBefore} <em>{Q.titleAccent}</em></h2>
+          <p>{Q.text}</p>
+          <a class="c-btn" href={Q.href}>{Q.cta}</a>
+        </div>
+        <div class="c-band__quizcard" aria-hidden="true">
+          <span><b>A</b>About 1 euro</span>
+          <span class="is-right"><b>B</b>Nothing, it's free ✓</span>
+          <span><b>C</b>300 dinars</span>
+          <span><b>D</b>An app ticket</span>
+        </div>
+      </div>
+    </Container>
+  </section>
 
   <Schema
     schemas={[

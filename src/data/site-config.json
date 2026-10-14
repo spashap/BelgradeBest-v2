@@ -234,8 +234,8 @@
       "lede": "Plain-English guides to visiting Belgrade — the things actually worth doing, where to stay, what to eat and drink, how to get around, and how to make a trip out of Expo 2027 (15 May–15 August)."
     },
     "stage": {
-      "_note": "The stage hero (preview /preview/home, 2026-10-14). title = before + <em>accent</em>; readouts are derived at render (Expo days, official country count).",
-      "eyebrow": "The honest English guide",
+      "_note": "The homepage stage hero (promoted 2026-10-14; index.astro). title = titleBefore + <em>titleAccent</em>. quizBand also renders on every leg hub (LegHubLayout).",
+      "eyebrow": "The honest English guide to Belgrade",
       "titleBefore": "Belgrade,",
       "titleAccent": "honestly.",
       "lede": "Where the Sava meets the Danube: the sights worth your time, where to stay, what to eat and drink, how to get around, and how to turn Expo 2027 into a proper Belgrade trip.",

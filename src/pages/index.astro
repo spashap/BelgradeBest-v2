@@ -1,22 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageIntro from "../components/PageIntro.astro";
 import Container from "../components/Container.astro";
 import SectionHead from "../components/SectionHead.astro";
-import Grid from "../components/Grid.astro";
-import Card from "../components/Card.astro";
-import FeaturedTile from "../components/FeaturedTile.astro";
-import GoodToKnow from "../components/GoodToKnow.astro";
-import Faq from "../components/Faq.astro";
-import Schema from "../components/Schema.astro";
 import MarkdownInline from "../components/MarkdownInline.astro";
 import { clusters } from "../lib/clusters";
 import { heroForLeg, thumbForLeg } from "../lib/hero";
 import { pageMetadata } from "../lib/metadata";
 import { CONFIG } from "../lib/site";
+import { officialCount } from "../lib/expo-participants";
+import Schema from "../components/Schema.astro";
 import { websiteSchema, faqSchema } from "../lib/schemas";
 
+// The STAGE homepage (promoted 2026-10-14). Copy lives in site-config.json →
+// homepage.stage; the quick answers (goodToKnow), section tiles (clusters) and
+// ethos come from the same config as before. Article pages stay editorial.
 const H = CONFIG.homepage;
+const S = H.stage;
 const meta = pageMetadata({
   title: CONFIG.seo.homeTitle,
   description: CONFIG.seo.homeDescription,
@@ -24,116 +23,127 @@ const meta = pageMetadata({
   noindex: !!CONFIG.seo.homeNoindex,
 });
 
-// Medical tourism is a deep vertical silo — reachable from search/sitemap, not
-// in the homepage grid (hidden = visible:false in the schema).
-const homepageClusters = clusters.filter((c) => !c.hidden);
-const featuredHero = heroForLeg(H.featured.legSlug);
+const stageHero = heroForLeg("visit-belgrade");
+const tiles = clusters.filter((c) => !c.hidden);
 
-// Section order + visibility come from config; default values reproduce the
-// previous fixed order (featured → clusters → ethos).
-const mainSections = [
-  { id: "featured", order: H.featured.order, visible: H.featured.visible },
-  { id: "clusters", order: H.clustersSection.order, visible: H.clustersSection.visible },
-  { id: "goodToKnow", order: H.goodToKnow?.order ?? 3, visible: H.goodToKnow?.visible },
-  { id: "faq", order: H.faqSection?.order ?? 4, visible: H.faqSection?.visible },
-  { id: "ethos", order: H.ethosSection.order, visible: H.ethosSection.visible },
-]
-  .filter((s) => s.visible !== false)
-  .sort((a, b) => a.order - b.order);
+// Build-time fallback for the Expo countdown; the inline script refreshes it.
+const DAY = 86400000;
+const expoStart = Date.parse(`${CONFIG.expo.startDate}T00:00:00Z`);
+const daysToExpo = Math.max(0, Math.ceil((expoStart - Date.now()) / DAY));
+const runDays = Math.round((Date.parse(`${CONFIG.expo.endDate}T00:00:00Z`) - expoStart) / DAY) + 1;
 ---
 <BaseLayout meta={meta}>
-  <PageIntro eyebrow={H.intro.eyebrow} title={H.intro.title} lede={H.intro.lede} />
+  <section class="c-stage">
+    {stageHero ? (
+      <img class="c-stage__bg" src={stageHero.src} srcset={stageHero.srcset} sizes="100vw" alt="" fetchpriority="high" />
+    ) : null}
+    <div class="u-container c-stage__inner">
+      <p class="c-stage__eyebrow">{S.eyebrow}</p>
+      <h1>{S.titleBefore} <em>{S.titleAccent}</em></h1>
+      <p class="c-stage__lede">{S.lede}</p>
+      <div class="c-stage__ctas">
+        <a class="c-btn" href={S.primaryCta.href}>{S.primaryCta.label}</a>
+        <a class="c-btn c-btn--ghost" href={S.secondaryCta.href}>{S.secondaryCta.label}</a>
+      </div>
+      <dl class="c-stage__readouts">
+        <div class="c-stage__readout"><dt>Rivers</dt><dd>2<small>Sava + Danube</small></dd></div>
+        <div class="c-stage__readout"><dt>City buses &amp; trams</dt><dd>Free</dd></div>
+        <div class="c-stage__readout"><dt>Currency</dt><dd>RSD<small>dinar</small></dd></div>
+        <div class="c-stage__readout"><dt>Ideal first visit</dt><dd>3<small>days</small></dd></div>
+      </dl>
+    </div>
+  </section>
 
-    {
-      mainSections.map((s, i) => (
-        <Container>
-          {i > 0 ? <div class="u-stack-lg"></div> : null}
-          {
-            s.id === "featured" ? (
-              <Fragment>
-                <SectionHead
-                  eyebrow={H.featured.sectionEyebrow}
-                  title={H.featured.sectionTitle}
-                  intro={H.featured.sectionIntro}
-                />
-                <FeaturedTile
-                  href={H.featured.href}
-                  eyebrow={H.featured.eyebrow}
-                  title={H.featured.title}
-                  body={H.featured.body}
-                  cta={H.featured.ctaLabel}
-                  imageLabel={H.featured.imageLabel}
-                  src={featuredHero?.src}
-                  srcset={featuredHero?.srcset}
-                  sizes={featuredHero?.sizes}
-                  imgAlt={featuredHero?.alt ?? H.featured.eyebrow}
-                />
-              </Fragment>
-            ) : s.id === "clusters" ? (
-              <Fragment>
-                <SectionHead
-                  eyebrow={H.clustersSection.eyebrow}
-                  title={H.clustersSection.title}
-                  intro={H.clustersSection.intro}
-                />
-                <Grid>
-                  {homepageClusters.map((c) => {
-                    const hero = thumbForLeg(c.slug);
-                    return (
-                      <Card
-                        href={c.href}
-                        title={c.title}
-                        body={c.tagline}
-                        src={hero?.src}
-                        imgAlt={hero?.alt ?? c.title}
-                        imgPlaceholder={`${c.title} / thumbnail`}
-                      />
-                    );
-                  })}
-                </Grid>
-              </Fragment>
-            ) : s.id === "goodToKnow" ? (
-              <Fragment>
-                <SectionHead
-                  eyebrow={H.goodToKnow.eyebrow}
-                  title={H.goodToKnow.title}
-                  intro={H.goodToKnow.intro}
-                />
-                <GoodToKnow items={H.goodToKnow.items} />
-              </Fragment>
-            ) : s.id === "faq" ? (
-              <Fragment>
-                <SectionHead
-                  eyebrow={H.faqSection.eyebrow}
-                  title={H.faqSection.title}
-                  intro={H.faqSection.intro}
-                />
-                <Faq faqs={H.faqSection.faqs} />
-              </Fragment>
-            ) : (
-              <Fragment>
-                <SectionHead
-                  eyebrow={H.ethosSection.eyebrow}
-                  title={H.ethosSection.title}
-                  intro={H.ethosSection.intro}
-                />
-                {H.ethosSection.body ? (
-                  <article class="c-article">
-                    <MarkdownInline markdown={H.ethosSection.body} />
-                  </article>
-                ) : null}
-              </Fragment>
-            )
-          }
-        </Container>
-      ))
-    }
+  <section class="u-section" id="first-visit">
+    <Container>
+      <SectionHead eyebrow={H.goodToKnow.eyebrow} title={H.goodToKnow.title} />
+      <ol class="c-steps">
+        {H.goodToKnow.items.map((it) => (
+          <li class="u-reveal">
+            <a class="c-step" href={it.href}>
+              <span class="c-step__label">{it.label}</span>
+              <span class="c-step__text">{it.text}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </Container>
+  </section>
 
+  <section class="c-band c-band--split">
+    <Container>
+      <div class="c-band__grid">
+        <div>
+          <p class="c-band__eyebrow">{S.expoBand.eyebrow}</p>
+          <h2>{S.expoBand.titleBefore} <em>{S.expoBand.titleAccent}</em></h2>
+          <p>{S.expoBand.text}</p>
+          <a class="c-btn" href={S.expoBand.href}>{S.expoBand.cta}</a>
+        </div>
+        <div class="c-band__count">
+          <div><b data-expo-days>{daysToExpo}</b><span>Days to go</span></div>
+          <div><b>{officialCount}</b><span>Countries</span></div>
+          <div><b>{runDays}</b><span>Days of Expo</span></div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <section class="u-section">
+    <Container>
+      <SectionHead title={H.clustersSection.title} />
+      <div class="c-bento">
+        {tiles.map((c, i) => {
+          const img = i === 0 ? heroForLeg(c.slug) : thumbForLeg(c.slug);
+          return (
+            <a class={`c-bento__tile u-reveal${i === 0 ? " c-bento__tile--lg" : ""}`} href={c.href}>
+              {img ? <img src={img.src} srcset={i === 0 ? img.srcset : undefined} sizes={i === 0 ? "(max-width: 980px) 100vw, 50vw" : undefined} alt="" loading="lazy" /> : null}
+              <span class="c-bento__go" aria-hidden="true">→</span>
+              <span class="c-bento__kicker">{c.eyebrow}</span>
+              <span class="c-bento__title">{c.title}</span>
+              <span class="c-bento__text">{c.tagline}</span>
+            </a>
+          );
+        })}
+      </div>
+    </Container>
+  </section>
+
+  <section class="c-band c-band--split">
+    <Container>
+      <div class="c-band__grid">
+        <div>
+          <p class="c-band__eyebrow">{S.quizBand.eyebrow}</p>
+          <h2>{S.quizBand.titleBefore} <em>{S.quizBand.titleAccent}</em></h2>
+          <p>{S.quizBand.text}</p>
+          <a class="c-btn" href={S.quizBand.href}>{S.quizBand.cta}</a>
+        </div>
+        <div class="c-band__quizcard" aria-hidden="true">
+          <span><b>A</b>The Drina</span>
+          <span class="is-right"><b>B</b>The Sava ✓</span>
+          <span><b>C</b>The Morava</span>
+          <span><b>D</b>The Tisa</span>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <section class="u-section u-section--tight">
+    <Container variant="read">
+      <SectionHead title={H.ethosSection.title} intro={H.ethosSection.intro} />
+      {H.ethosSection.body ? <article class="c-article"><MarkdownInline markdown={H.ethosSection.body} /></article> : null}
+    </Container>
+  </section>
+
+  <script is:inline define:vars={{ start: expoStart }}>
+    (function () {
+      var el = document.querySelector("[data-expo-days]");
+      if (el) el.textContent = String(Math.max(0, Math.ceil((start - Date.now()) / 86400000)));
+    })();
+  </script>
   <Schema
     schemas={[
       websiteSchema(),
-      // Gate the markup on the SAME flag as the visible section — emitting it for a
-      // hidden FAQ is the defect we just removed from ArticleLayout.
+      // Gate the markup on the SAME flag as a visible FAQ section (none on this layout today).
       ...(H.faqSection?.visible !== false && H.faqSection?.faqs?.length ? [faqSchema(H.faqSection.faqs)] : []),
     ]}
   />

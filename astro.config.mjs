@@ -111,9 +111,6 @@ const NOINDEX = new Set();
 // indexed or listed — the sitemap integration would otherwise include the
 // bare route.
 NOINDEX.add("/manage");
-// Design previews (noindex pages for the owner to compare, never listed).
-NOINDEX.add("/preview/home");
-NOINDEX.add("/preview/visit-belgrade");
 if (config.seo.homeNoindex) NOINDEX.add("");
 for (const leg of schema.legs) {
   const legHidden = leg.visible === false;
