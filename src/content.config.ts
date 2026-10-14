@@ -47,6 +47,8 @@ const articleSchema = z.object({
     // Stay-affiliate target keys (resolve via src/data/stay-affiliates.json).
     // Render-gated: a target only shows once its affiliate is enabled+url-set.
     stayTargets: z.array(z.string()).default([]),
+    // Travel-partner keys (transfers, flights, eSIM) -> src/data/partner-links.json.
+    partnerTargets: z.array(z.string()).default([]),
 });
 
 const articles = defineCollection({

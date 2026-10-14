@@ -17,6 +17,9 @@ isFaqCandidate: true
 linksTo:
   - "/plan-your-trip/airport-to-city"
   - "/plan-your-trip/getting-around"
+partnerTargets:
+  - air-serbia
+  - airport-transfer
 unknowns:
   - "Exact opening date, passenger timetable and fare scheme for the new Surčin/airport railway"
   - "Final Expo-specific bus line numbers, routes and timetables to entrances A and C for summer 2027"

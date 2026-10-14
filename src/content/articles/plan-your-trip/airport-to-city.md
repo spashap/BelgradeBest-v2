@@ -17,6 +17,9 @@ linksTo:
   - "/plan-your-trip/getting-around"
   - "/expo-2027/getting-there"
 isFaqCandidate: true
+partnerTargets:
+  - airport-transfer
+  - air-serbia
 unknowns: []
 ---
 

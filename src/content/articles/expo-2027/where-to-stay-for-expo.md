@@ -17,6 +17,11 @@ linksTo:
   - "/expo-2027/getting-there"
   - "/where-to-stay"
 isFaqCandidate: true
+stayTargets:
+  - new-belgrade
+  - surcin
+  - stari-grad
+  - vracar
 unknowns: []
 faqs:
   - question: "What are the best areas to stay in Belgrade for Expo 2027?"

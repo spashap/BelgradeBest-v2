@@ -31,6 +31,8 @@ faqs:
   - answer: "It can be at rush hour. Belgrade has genuine weekday congestion, especially on the bridges across the Sava between the old centre and New Belgrade, roughly 8–9am and 4–7pm. Because a metered fare keeps ticking in stopped traffic, an app that quotes an upfront price can save you money at busy times — and for short central hops, the free buses and trams or simply walking are often faster than sitting in a cab."
     question: "Is Belgrade traffic bad, and does it affect taxi fares?"
 isFaqCandidate: true
+partnerTargets:
+  - airport-transfer
 unknowns: []
 ---
 

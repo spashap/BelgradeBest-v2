@@ -8,6 +8,7 @@ import Placeholder from "../components/Placeholder.astro";
 import ArticleHero from "../components/ArticleHero.astro";
 import ArticleToc from "../components/ArticleToc.astro";
 import StayLinks from "../components/StayLinks.astro";
+import PartnerLinks from "../components/PartnerLinks.astro";
 import InternalLinkBlock from "../components/InternalLinkBlock.astro";
 import Schema from "../components/Schema.astro";
 import { articleSchema, breadcrumbSchema } from "../lib/schemas";
@@ -195,6 +196,7 @@ const schemas: object[] = [
           </p>
         ) : null
       }
+      <PartnerLinks targets={d.partnerTargets} />
       <StayLinks targets={d.stayTargets} />
     </div>
   </Container>

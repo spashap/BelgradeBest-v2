@@ -1,11 +1,14 @@
-Revise the language estimate for an affiliate-only revenue model
+Prepare affiliate links for Booking.com, Welcome Pickups and Air Serbia
 
-The owner confirmed there will be no display ads; revenue comes only from
-affiliate links for hotels, flights and premium transport. The Serbian
-section now judges the edition by who books those products (foreign
-visitors, not locals), so a consumer edition stays a no and Serbian is kept
-for B2B and direct transport/hotel partner pages. Adds a section on what
-the model means for Russian and Turkish affiliate routes, and notes that
-all 10 existing hotel affiliate slots are still switched off.
+The owner has accepted programmes with Booking.com, Welcome Pickups and
+Air Serbia (through CJ). The hotel block now builds Booking.com search links
+from one partner ID plus a per-area search string, with a per-area label
+for reporting, and all ten area targets are enabled. A new PartnerLinks
+block (registry src/data/partner-links.json, frontmatter partnerTargets)
+carries airport transfers and flights on airport-to-city, taxis and the
+Expo getting-there page; the Expo where-to-stay page gains hotel targets.
+Nothing renders until the IDs and tracked links are pasted into the two
+registries. The aloSIM target is present but disabled (advertiser
+deactivated). How-we-make-money now names transfers and flights.
 
 Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

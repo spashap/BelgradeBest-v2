@@ -1,0 +1,28 @@
+{
+  "disclosure": "These are affiliate links: if you book through them we may earn a small commission at no extra cost to you.",
+  "disclosureHref": "/how-we-make-money",
+  "heading": "Book ahead",
+  "targets": {
+    "airport-transfer": {
+      "label": "Pre-book a fixed-price airport transfer (Welcome Pickups)",
+      "network": "welcome-pickups",
+      "enabled": true,
+      "url": "",
+      "note": "Welcome Pickups affiliate (accepted 2026-06-23). Paste the tracked Belgrade airport-transfer link from the partner dashboard into url."
+    },
+    "air-serbia": {
+      "label": "Search Air Serbia flights to Belgrade",
+      "network": "cj",
+      "enabled": true,
+      "url": "",
+      "note": "Air Serbia through CJ Affiliate (welcome 2026-06-25; CJ publisher account active 2026-06-23). Paste the CJ tracking link (Links > Get Link) into url."
+    },
+    "esim": {
+      "label": "Get a Serbia eSIM before you fly (aloSIM)",
+      "network": "alosim",
+      "enabled": false,
+      "url": "",
+      "note": "aloSIM advertiser deactivated on 2026-10-09. Keep disabled until the programme is live again."
+    }
+  }
+}
