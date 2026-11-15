@@ -3,7 +3,7 @@ import { env } from "./env";
 // CJ (Commission Junction) earnings for /admin/affiliates (added 2026-11-15).
 // Reads the Commission Detail API with a Personal Access Token
 // (developers.cj.com → Authentication → Personal Access Tokens) in
-// CJ_PERSONAL_ACCESS_TOKEN; publisher (company) ID in CJ_PUBLISHER_ID, default
+// CJ_PERSONAL_ACCESS_TOKEN; publisher (company) ID in CJ_PUBLISHER_ID (CJ company ID, LitoCreative 7995454), default
 // the BelgradeBest account. Every link on the site carries a sub-ID
 // (sid=bb-<placement>, lib/affiliates.ts), which CJ returns as `shopperId`, so
 // earnings can be shown per placement. The API caps a query at 31 days.
@@ -17,16 +17,16 @@ export type CjEarnings =
 const CACHE = new Map<number, { at: number; v: CjEarnings }>();
 
 export async function cjEarnings(days: number): Promise<CjEarnings> {
-  const token = env("CJ_PERSONAL_ACCESS_TOKEN");
+  const token = env("CJ_PERSONAL_ACCESS_TOKEN") || env("CJ_TOKEN");
   if (!token) {
     return {
       configured: false,
-      reason: "Set CJ_PERSONAL_ACCESS_TOKEN (CJ → developers.cj.com → Personal Access Tokens) in the Vercel environment.",
+      reason: "Set CJ_TOKEN (your CJ Personal Access Token, developers.cj.com) in the Vercel environment.",
     };
   }
   const hit = CACHE.get(days);
   if (hit && Date.now() - hit.at < 30 * 60e3) return hit.v;
-  const pub = env("CJ_PUBLISHER_ID") || "7672064";
+  const pub = env("CJ_PUBLISHER_ID") || "7995454";
   const span = Math.min(Math.max(days, 1), 31);
   const before = new Date();
   const since = new Date(before.getTime() - span * 864e5);

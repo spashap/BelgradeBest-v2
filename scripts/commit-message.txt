@@ -1,58 +1,12 @@
-Affiliates via CJ, admin upgrades, content fixes, Expo location page, Czech pilot
+Link CJ earnings to the admin via CJ_TOKEN (company ID 7995454)
 
-Affiliates (BB-CHG-0040)
-- affiliates.json: Booking.com, Welcome Pickups and Air Serbia now use the
-  CJ click links from the owner's account (website PID 101807971) and are ON.
-- lib/affiliates.ts: CJ deep links (?url=) and a sub-ID per placement
-  (&sid=bb-<placement>, bb-de-/bb-sk- on translated pages), so CJ's
-  Commission Detail report shows which box earned. Booking keeps working
-  with a direct numeric aid too.
-- StayLinks/PartnerLinks take `lang`: translated heading, labels and
-  disclosure on the /de/ and /sk/ twins; placements added to
-  de getting-there + where-to-stay-for-expo and sk getting-there.
-- AffClick: new aff_view GA4 event (box seen) as the click-rate denominator.
-- Privacy page mentions box-view counting and the CJ hop.
-
-Admin
-- /admin/analytics: TL;DR cards first (traffic, Bing, wasted Bing
-  impressions, winning page, leaking page, best audience, mobile gap,
-  noise), a Bing section (pages, queries, snippets to fix), Google
-  Search Console folded away. Rules live in lib/admin/insights.ts.
-  Needs BING_WEBMASTER_API_KEY in the Vercel env.
-- /admin/affiliates: TL;DR cards, box-seen counts and click rate of
-  seen boxes, German/Slovak pages in "shows on".
-
-Content reality check (BB-CHG-0041)
-- 7 checker agents + 1 skeptic fact-checked 51 articles and the Expo data;
-  23 confirmed fixes applied in EN and the /de/ /sk/ twins: ticket status
-  re-dated (1 Nov Slovak date passed silently), railway opening Mar/Apr
-  2027, visitor figure "more than 4 million" (no BIE source for 6M),
-  NOVASTON contract row, parking zones + Sunday charging, A1 frequency,
-  roaming, protests section, fortress night closure, arenas made
-  evergreen, Novi Sad fares, closed/renamed restaurants, splav timeline,
-  tourist tax 240 RSD. Truncated Enso paragraph and cocktail itinerary
-  restored from git. Report: KB/content/BELGRADEBEST_CONTENT_REALITY_CHECK.md
-
-New pages (BB-CHG-0042)
-- /expo-2027/location (+ German twin): where the Surčin site is, no address
-  or map published yet, distances, size, transport, what it becomes.
-- Czech pilot: /cs/expo-2027 hub, tickets, getting-there (cs collection,
-  i18n TR_LANGS/UI/LangNote, hreflang, sitemap lastmod, header switcher).
-- where-to-stay-for-expo: 15 km -> 13.5 km (EN + DE); DE/SK hubs ticket
-  status re-dated to 15 Nov.
-- Bing list for after deploy: scripts/bing-urls-2026-11-15.txt
-
-Admin (second pass)
-- /admin/affiliates: CJ earnings per placement (sub-ID) via the CJ
-  Commission API once CJ_PERSONAL_ACCESS_TOKEN is set (lib/admin/cj.ts).
-- /admin/analytics: "Do this next" list, Money card (clicks + CJ),
-  Translated-editions card (DE/SK/CS vs EN engagement), raw top-pages
-  list folded away.
-- /admin/growth: dated status note on all 28 tasks (3 ticked as done),
-  "now" column on the metrics (Bing ~7 clicks/day, 829 sessions/28 d).
-
-Speed (BB-CHG-0039)
-- Stage hero text paints immediately (transform-only entrance); leg-hub
-  photo tiles lazy-load.
+- lib/admin/cj.ts reads CJ_TOKEN (the owner's .env name) as well as
+  CJ_PERSONAL_ACCESS_TOKEN, and defaults to the CJ company ID 7995454
+  (LitoCreative). 7672064 is the user ID from member URLs; the Commission
+  API rejects it ("No authorized publisher ids"). Token verified against
+  the API: 0 commissions in the last 31 days (links went live today).
+- .gitignore: Vercel CLI link entries (.env*.local).
+- Admin hints (/admin/affiliates, /admin/analytics) and .env.example now
+  name CJ_TOKEN; affiliates.json records the company and user IDs.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

@@ -47,7 +47,7 @@ verdicts.push({
   line: !live
     ? "No affiliate partner is switched on."
     : (cj.configured ? cj.sales + " CJ commissions, " : "") + affClicks + " clicks to partners from " + live + " live partners.",
-  action: !live ? "Switch partners on in Affiliates." : !cj.configured ? "Link CJ earnings (CJ_PERSONAL_ACCESS_TOKEN) to see money, not just clicks." : undefined,
+  action: !live ? "Switch partners on in Affiliates." : !cj.configured ? "Link CJ earnings (CJ_TOKEN in Vercel) to see money, not just clicks." : undefined,
 });
 
 // "Do this next": the cards that carry an action, problems first, max 4.
