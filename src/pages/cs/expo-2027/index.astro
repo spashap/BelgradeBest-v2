@@ -1,0 +1,187 @@
+---
+// /cs/expo-2027 — Czech hub of the Expo cluster (Czech pilot, 2026-11-15,
+// lib/i18n.ts). Compact like the German and Slovak hubs: what a Czech visitor
+// asks first (dates, tickets, getting there, the Czech participation), the
+// Czech articles, and honest pointers to English-only pages.
+// Numbers interpolate from the same masters as the English hub. When a fact
+// here changes in English (tickets!), change it here in the same commit.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import PageIntro from "../../../components/PageIntro.astro";
+import Container from "../../../components/Container.astro";
+import SectionHead from "../../../components/SectionHead.astro";
+import Grid from "../../../components/Grid.astro";
+import Card from "../../../components/Card.astro";
+import Note from "../../../components/Note.astro";
+import Faq from "../../../components/Faq.astro";
+import ArticleHero from "../../../components/ArticleHero.astro";
+import Schema from "../../../components/Schema.astro";
+import { pageMetadata } from "../../../lib/metadata";
+import { SITE, EXPO, CONFIG } from "../../../lib/site";
+import { breadcrumbSchema, faqSchema, expoEventSchema } from "../../../lib/schemas";
+import { heroForLeg, thumbForPath } from "../../../lib/hero";
+import { officialCount, namedCount, updated as trackerUpdated } from "../../../lib/expo-participants";
+import { alternates, langPath, fmtDate, PAGE_TWINS } from "../../../lib/i18n";
+import { ogImage } from "../../../lib/og";
+
+const LEG = "expo-2027";
+const EN_PATH = `/${LEG}`;
+const PATH = langPath("cs", EN_PATH);
+const cs = (p: string) => langPath("cs", p);
+
+const articles = (await getCollection("cs"))
+  .filter((e) => e.data.leg === LEG && e.data.visible !== false)
+  .sort((a, b) => a.data.order - b.data.order);
+const cards = articles.map((e) => {
+  const p = `/${LEG}/${e.data.slug}`;
+  const t = thumbForPath(p, e.data.heroAlt ?? e.data.heroLabel);
+  return { href: cs(p), title: e.data.shortTitle, body: e.data.description, src: t?.src, alt: t?.alt };
+});
+
+const hero = heroForLeg(LEG, "Expo 2027 Bělehrad");
+const dates = `${fmtDate(EXPO.startDate, "cs")} – ${fmtDate(EXPO.endDate, "cs")}`;
+// Running prose wants "od 15. května do 15. srpna 2027", not a dash range.
+const fromTo = `od ${fmtDate(EXPO.startDate, "cs").replace(/ \d{4}$/, "")} do ${fmtDate(EXPO.endDate, "cs")}`;
+
+const title = "Expo 2027 Bělehrad: termíny, vstupenky a doprava";
+const heading = "Expo 2027 v Bělehradě – průvodce v češtině";
+const description = `Expo 2027 v Bělehradě (${dates}): stav prodeje vstupenek, doprava na výstaviště v Surčinu a český pavilon zaměřený na vesmír.`;
+
+const meta = pageMetadata({
+  title,
+  description,
+  path: PATH,
+  image: hero?.src ?? ogImage("expo-2027"),
+  imageAlt: "Expo 2027 Bělehrad – český průvodce na BelgradeBest",
+  lang: "cs",
+  alternates: alternates(EN_PATH, PAGE_TWINS[EN_PATH]),
+});
+
+const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { name: "Expo 2027 (česky)" }];
+
+const facts: { label: string; text: string; href?: string; en?: boolean }[] = [
+  { label: "Termín", text: `${dates} – 93 dní` },
+  { label: "Místo", text: `${EXPO.venue}, na západě Bělehradu – asi 5 km od letiště Nikoly Tesly a zhruba 13,5 km od centra`, href: cs(`/${LEG}/getting-there`) },
+  {
+    label: "Vstupenky",
+    text: "Zatím nejsou v prodeji a nemají zveřejněnou cenu – plánovaný termín 15. září 2026 uplynul bez zahájení prodeje. Balíčky slovenských cestovních kanceláří se vstupenkou, ohlášené od 1. listopadu 2026, se do poloviny listopadu veřejně neobjevily.",
+    href: cs(`/${LEG}/tickets`),
+  },
+  { label: "Téma", text: `„${EXPO.theme}“` },
+  {
+    label: "Účastníci",
+    text: `${officialCount} registrovaných zemí podle pořadatele (stav ze srpna 2026); ${namedCount} z nich je veřejně známo jménem`,
+    href: `/${LEG}/tracker`,
+    en: true,
+  },
+  {
+    label: "Česko",
+    text: "Smlouva o účasti podepsána v červnu 2026; hlavním tématem je vesmír a kosmonautika, generálním komisařem je Kryštof Šafer (rozpočet podle Hospodářských novin 120 mil. Kč)",
+    href: `/${LEG}/pavilions/czechia`,
+    en: true,
+  },
+];
+
+const faqs = [
+  {
+    question: "Kdy a kde se Expo 2027 koná?",
+    answer: `${fromTo.charAt(0).toUpperCase()}${fromTo.slice(1)} v Surčinu na západním okraji Bělehradu, asi 5 km od letiště Nikoly Tesly a přibližně 13,5 km od centra. Jde o specializované Expo (Specialised Expo) pod záštitou BIE – kratší a tematicky užší než světová výstava – s mottem „${EXPO.theme}“.`,
+  },
+  {
+    question: "Dají se už koupit vstupenky na Expo 2027?",
+    answer:
+      "K 15. listopadu 2026 ne. Plánovaný začátek prodeje 15. září 2026 uplynul bez spuštění prodeje – po 15. květnu 2026 už druhý nedodržený termín – a nové datum oznámeno nebylo. Jednodenní a třídenní vstupenka jsou potvrzeny jako druhy vstupenek, ceny však zveřejněny nebyly. Oficiální web stále uvádí „Tickets available soon“.",
+  },
+  {
+    question: "Bude mít Česko na Expu 2027 vlastní expozici?",
+    answer:
+      "Česko účast potvrdilo podpisem smlouvy v Bělehradě v červnu 2026. Generálním komisařem je Kryštof Šafer, hlavním tématem české expozice je vesmír a kosmonautika a Hospodářské noviny uvedly rozpočet 120 milionů Kč. Velikost pavilonu, autor návrhu ani dodavatel zatím zveřejněni nebyli. Podrobný profil se zdroji je v angličtině.",
+  },
+  {
+    question: "Je celý web BelgradeBest v češtině?",
+    answer:
+      "Ne. České vydání zatím tvoří tato stránka a dva články – o vstupenkách a o dopravě na výstaviště. Všechny ostatní stránky o Bělehradě (čtvrti, restaurace, cesta z letiště, víza) jsou v angličtině a odkazujeme na ně z každé české stránky.",
+  },
+];
+
+const schemas: object[] = [
+  breadcrumbSchema([
+    { name: CONFIG.chrome.article.breadcrumbRoot, url: SITE.origin },
+    { name: "Expo 2027 (česky)", url: `${SITE.origin}${PATH}` },
+  ]),
+  expoEventSchema(hero ? `${SITE.origin}${hero.src}` : undefined),
+  faqSchema(faqs),
+];
+---
+
+<BaseLayout meta={meta}>
+  <Breadcrumbs crumbs={crumbs} />
+  <PageIntro
+    eyebrow="Expo 2027 Bělehrad · České vydání"
+    title={heading}
+    lede={`Bělehrad hostí ${fromTo} specializované Expo v Surčinu. Tady najdete v češtině to podstatné pro plánování cesty – termíny, vstupenky a dopravu – i to, co chystá česká expozice. Potvrzené informace důsledně oddělujeme od těch, které byly zatím jen ohlášeny.`}
+  />
+
+  {
+    hero ? (
+      <Container>
+        <ArticleHero src={hero.src} srcset={hero.srcset} sizes={hero.sizes} alt={hero.alt ?? "Expo 2027 Bělehrad"} caption={null} />
+      </Container>
+    ) : null
+  }
+
+  <Container variant="read">
+    <SectionHead title="To hlavní v kostce" />
+    <div class="c-data-table">
+      <table>
+        <tbody>
+          {facts.map((f) => (
+            <tr>
+              <th scope="row">{f.label}</th>
+              <td>
+                {f.href ? (
+                  <a href={f.href} hreflang={f.en ? "en" : undefined}>
+                    {f.text}
+                    {f.en ? " (EN)" : ""}
+                  </a>
+                ) : (
+                  f.text
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </Container>
+
+  <Container>
+    <SectionHead
+      eyebrow="Česky"
+      title="Články o Expo 2027"
+      intro="Stejná fakta a zdroje jako anglické originály – každý článek odkazuje na svou anglickou verzi."
+    />
+    <Grid>
+      {cards.map((c) => (
+        <Card href={c.href} title={c.title} body={c.body} src={c.src} imgAlt={c.alt} />
+      ))}
+    </Grid>
+  </Container>
+
+  <Container variant="read">
+    <Note>
+      <strong>Co je zatím jen v angličtině.</strong>{" "}
+      <a href={`/${LEG}/pavilions/czechia`} hreflang="en">Profil české expozice</a>,{" "}
+      <a href={`/${LEG}/pavilions`} hreflang="en">všechny pavilony</a>,{" "}
+      <a href={`/${LEG}/tracker`} hreflang="en">přehled účastníků</a> (všech {namedCount} zemí známých jménem
+      se zdroji, naposledy aktualizováno {fmtDate(trackerUpdated, "cs")}) a celý zbytek průvodce
+      Bělehradem. Anglická verze této stránky: <a href={EN_PATH} hreflang="en">Expo 2027 guide (EN)</a>.
+    </Note>
+
+    <SectionHead title="Stručné odpovědi" />
+    <Faq faqs={faqs} />
+  </Container>
+
+  <Schema schemas={schemas} />
+</BaseLayout>

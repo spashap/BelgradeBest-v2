@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-11-15",
   "license": "Free to cite and reuse with attribution and a link to https://belgradebest.com/expo-2027/tracker",
   "officialCount": {
     "count": 141,
@@ -10,7 +10,7 @@
   "namedNote": "Our table is the deduped union of countries actually named by the official Participants page (81), Wikipedia's participants table, and press announcements — only countries a source names are listed.",
   "expected": {
     "countries": "120–140 countries planned; BIE material expects 'more than 130 participating countries'",
-    "visitors": "Organiser guidance has ranged from a 4 million minimum (official facts & figures, July 2025) to the BIE's current 'more than 6 million' — the 6M figure is the more recent",
+    "visitors": "Organiser guidance has ranged from a 4 million minimum (official facts & figures, July 2025) and its latest material (May and October 2026) still says 'more than 4 million'; 6 million is an upper target the organisers' leadership cited in 2025 (no BIE source found for 6M as of 15 Nov 2026)",
     "events": "More than 8,000 events across the 93-day programme (BIE)"
   },
   "timeline": [

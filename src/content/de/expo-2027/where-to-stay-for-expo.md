@@ -4,10 +4,10 @@ slug: "where-to-stay-for-expo"
 title: "Wo übernachten für die Expo 2027: Die besten Viertel Belgrads"
 shortTitle: "Wo übernachten"
 description: "Wo Sie zur Expo 2027 übernachten: Novi Beograd und die Flughafenseite Surčin vs. die Altstadt, wie früh Sie buchen sollten und was Preise angeht."
-lede: "Für die Expo 2027 liegen die nächstgelegenen Unterkünfte in Novi Beograd und auf der Surčin-/Flughafenseite, wenige Kilometer vom Gelände entfernt; die Altstadt (Stari Grad, Vračar) bietet Ihnen die Stadt, die Sie eigentlich sehen wollten – auf Kosten eines längeren Wegs über den Fluss. Bei Besuchsprognosen von 4 Millionen bis zu den derzeit vom BIE genannten mehr als 6 Millionen über drei Monate und nur wenigen Tausend neuen Hotelzimmern ist die eigentliche Entscheidung das frühe Buchen – nicht die Wahl des perfekten Viertels."
+lede: "Für die Expo 2027 liegen die nächstgelegenen Unterkünfte in Novi Beograd und auf der Surčin-/Flughafenseite, wenige Kilometer vom Gelände entfernt; die Altstadt (Stari Grad, Vračar) bietet Ihnen die Stadt, die Sie eigentlich sehen wollten – auf Kosten eines längeren Wegs über den Fluss. Bei Besuchsprognosen vom offiziellen Wert von über 4 Millionen bis zum 6-Millionen-Ziel der Organisatoren über drei Monate und nur wenigen Tausend neuen Hotelzimmern ist die eigentliche Entscheidung das frühe Buchen – nicht die Wahl des perfekten Viertels."
 heroLabel: "Wo übernachten für Expo 2027 / Hero"
 heroAlt: "Kartenartige Ansicht von Belgrad mit dem Expo-Gelände in Surčin, Novi Beograd und der Altstadt jenseits der Sava"
-lastUpdated: "2026-09-13"
+lastUpdated: "2026-11-15"
 order: 90
 visible: true
 intent: "both"
@@ -17,12 +17,17 @@ linksTo:
   - "/expo-2027/getting-there"
   - "/where-to-stay"
 isFaqCandidate: true
+stayTargets:
+  - new-belgrade
+  - surcin
+  - stari-grad
+  - vracar
 unknowns: []
 faqs:
   - question: "Welche sind die besten Viertel, um während der Expo 2027 in Belgrad zu übernachten?"
     answer: "Die besten Viertel, um während der Expo 2027 in Belgrad zu übernachten, sind Novi Beograd, die Surčin-/Flughafenseite und die Altstadt, zu der Stari Grad, Vračar und Dorćol gehören. Novi Beograd bietet den kürzesten Weg zum Expo-Gelände und verfügt über viele moderne Hotels, während die Altstadt eine lebendige Atmosphäre mit Cafés und Nachtleben bietet – allerdings mit einem längeren Weg zum Veranstaltungsort."
   - question: "Wie weit ist das Expo-Gelände vom Stadtzentrum Belgrads entfernt?"
-    answer: "Das Expo-Gelände in Surčin liegt etwa 15 km vom Stadtzentrum Belgrads entfernt. Das bedeutet, dass ein Aufenthalt in der Altstadt eine Fahrt über den Fluss erfordert, um das Gelände zu erreichen."
+    answer: "Das Expo-Gelände in Surčin liegt etwa 13,5 km vom Stadtzentrum Belgrads entfernt. Das bedeutet, dass ein Aufenthalt in der Altstadt eine Fahrt über den Fluss erfordert, um das Gelände zu erreichen."
   - question: "Ist es besser, in der Nähe des Expo-Geländes oder im Stadtzentrum zu übernachten?"
     answer: "Das hängt von Ihren Prioritäten ab. Wenn der Fokus vor allem auf der Expo liegt, empfiehlt sich eine Unterkunft in der Nähe des Geländes in Novi Beograd oder Surčin für einen kürzeren Weg. Wenn Sie jedoch Belgrad erkunden und das Nachtleben genießen möchten, ist das Stadtzentrum die bessere Wahl, auch wenn der Weg zur Expo dann länger ist."
   - question: "Wann sollte ich eine Unterkunft für die Expo 2027 buchen?"
@@ -35,7 +40,7 @@ faqs:
 
 ## Wo sollten Sie zur Expo 2027 übernachten?
 
-Für die [Expo 2027](https://www.bie-paris.org/site/en/2027-belgrade) (15. Mai – 15. August 2027) lautet die einfachste Regel, Ihre Unterkunft auf den Zweck Ihrer Reise abzustimmen. Das Expo-Gelände liegt in **Surčin**, am westlichen Rand Belgrads – rund 15 km vom Stadtzentrum und nur etwa 5 km vom [Flughafen Nikola Tesla (EN)](/glossary/nikola-tesla-airport) entfernt, in einem brandneuen Viertel, das zwischen **Novi Beograd** und der Sava entsteht.
+Für die [Expo 2027](https://www.bie-paris.org/site/en/2027-belgrade) (15. Mai – 15. August 2027) lautet die einfachste Regel, Ihre Unterkunft auf den Zweck Ihrer Reise abzustimmen. Das Expo-Gelände liegt in **Surčin**, am westlichen Rand Belgrads – rund 13,5 km vom Stadtzentrum und nur etwa 5 km vom [Flughafen Nikola Tesla (EN)](/glossary/nikola-tesla-airport) entfernt, in einem brandneuen Viertel, das zwischen **Novi Beograd** und der Sava entsteht.
 
 Diese geografische Lage bietet Ihnen drei grundsätzliche Optionen:
 
@@ -87,7 +92,7 @@ Es gibt hier keine falsche Antwort – nur einen Kompromiss zwischen Weg und Cha
 
 Buchen Sie so früh, wie es Ihre Reisedaten erlauben. Der Grund dafür ist die Kapazitätslage.
 
-Stand 2026 verfügte Belgrad über rund **120 Hotels mit etwa 8.000 Zimmern**; weitere rund **20 Hotels (~2.000 Zimmer)** sollen Berichten zufolge vor der Expo eröffnen – ein Großteil davon in Novi Beograd und in Flughafennähe. Demgegenüber stehen für die Expo 2027 Prognosen von **4 Millionen Besuchen – nach der aktuellen BIE-Angabe sogar mehr als 6 Millionen**.
+Stand 2026 verfügte Belgrad über rund **120 Hotels mit etwa 8.000 Zimmern**; weitere rund **20 Hotels (~2.000 Zimmer)** sollen Berichten zufolge vor der Expo eröffnen – ein Großteil davon in Novi Beograd und in Flughafennähe. Demgegenüber stehen für die Expo 2027 Prognosen von **mehr als 4 Millionen Besuchen – nach dem oberen Ziel der Organisatoren sogar 6 Millionen**.
 
 Widerstehen Sie der Versuchung, das eine durch das andere zu teilen. Es handelt sich um *Besuche*, nicht um Übernachtungsgäste: Darin enthalten sind Belgrader Einwohner, Tagesgäste aus der Region und dieselbe Person, die mit einem Drei-Tage-Ticket wiederkommt. Wie viele Expo-Besucher tatsächlich ein Bett brauchen, für wie viele Nächte und wie viele außerhalb der Stadt übernachten, hat niemand veröffentlicht. Was der Vergleich zeigt, ist die Richtung: ein festes, überschaubares Zimmerangebot trifft auf eine große und weiter steigende Besucherprognose. Das ist Grund genug, früh und flexibel zu buchen – aber keine Grundlage, um eine konkrete Knappheit vorherzusagen.
 
@@ -100,7 +105,7 @@ Wir nennen hier bewusst keine konkreten Preise oder Echtzeit-Verfügbarkeiten �
 
 ## Kurzübersicht
 
-- **Gelände:** Surčin, westliches Belgrad – ca. 15 km vom Zentrum, ca. 5 km vom Flughafen Nikola Tesla, zwischen Novi Beograd und der Sava.
+- **Gelände:** Surčin, westliches Belgrad – ca. 13,5 km vom Zentrum, ca. 5 km vom Flughafen Nikola Tesla, zwischen Novi Beograd und der Sava.
 - **Nächstgelegene Basis:** Novi Beograd / Surčin (Flughafenseite) – kürzester Weg, neueste Hotels, ruhigere Umgebung.
 - **Stadtbasis:** Stari Grad / Vračar – historisches, zu Fuß erkundbares Belgrad, längerer Weg über den Fluss.
 - **Beste Allround-Wahl:** Novi Beograd – liegt zwischen beiden.

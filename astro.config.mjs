@@ -39,7 +39,8 @@ try {
 // convention. Listing mirrors (/de/<leg>/<section>/<slug>) are added in the
 // listings loop below from each listing's `updated`.
 // Slovak pilot (2026-10-14): same loop over src/content/sk.
-for (const LANG of ["de", "sk"]) try {
+// Czech pilot (2026-11-15) joins the same loop.
+for (const LANG of ["de", "sk", "cs"]) try {
   const DE_DIR = `src/content/${LANG}`;
   for (const leg of readdirSync(DE_DIR)) {
     const legDir = join(DE_DIR, leg);
@@ -88,7 +89,7 @@ LASTMOD["/visit-belgrade/belgrade-quiz"] = iso(quizData.updated);
     const m = maxDate(dates);
     if (m) LASTMOD[`/${leg.slug}`] = m;
   }
-  if (LASTMOD["/expo-2027"]) LASTMOD["/de/expo-2027"] = LASTMOD["/sk/expo-2027"] = LASTMOD["/expo-2027"];
+  if (LASTMOD["/expo-2027"]) LASTMOD["/de/expo-2027"] = LASTMOD["/sk/expo-2027"] = LASTMOD["/cs/expo-2027"] = LASTMOD["/expo-2027"];
   const home = maxDate(Object.values(LASTMOD));
   if (home) LASTMOD[""] = home;
 }

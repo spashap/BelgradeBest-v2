@@ -7,7 +7,7 @@ description: "Splavovi Belgrade — how the floating river clubs work: the May�
 lede: "Splavovi — the floating bars and clubs moored along Belgrade's rivers — are the city's signature night out. Here's how the scene actually works: when it runs, where on the Sava and Danube to find it, what changed after the recent quay clean-up, and how to avoid the table-minimum traps."
 heroLabel: "Belgrade splavovi / hero"
 heroAlt: "Illuminated floating river clubs on the water at night"
-lastUpdated: "2026-10-01"
+lastUpdated: "2026-11-15"
 order: 1
 visible: true
 intent: "leisure"
@@ -50,7 +50,7 @@ This matters enormously for timing. If you arrive in January expecting a riversi
 
 Short answer: **yes, the scene is still running in 2026 — but it is mid-shake-up, so don't assume a specific raft is still where last year's guide put it.** This is the freshest and most important thing to know, and most older English-language guides have not caught up with it.
 
-Over 2024 and 2025 the city ran a multi-year river clean-up and regulation drive. Many of the older splavovi — a lot of them informally or illegally moored — were towed away in phases from their original quays. The stretch along the **Novi Beograd Savski kej** (the Sava promenade by the New Belgrade blocks) and the quay near the **Ušće** confluence were cleared, and the last raft on that stretch was reported removed in October 2025 (REPORTED, as of late 2025). Displaced splavovi were moved variously toward the **Fair / Sajmište** area and to the **Gročanski kej** further downstream, with their long-term positions still unsettled.
+From autumn 2023 the city ran a multi-year river clean-up and regulation drive. Many of the older splavovi — a lot of them informally or illegally moored — were towed away in phases from their original quays. The stretch along the **Novi Beograd Savski kej** (the Sava promenade by the New Belgrade blocks) and the quay near the **Ušće** confluence were cleared: by August 2024 close to a hundred rafts had been removed, and the last one on that stretch (Kopernikus) was scheduled for removal that month. The city has since turned to the Danube quays. Displaced splavovi were moved variously toward the **Fair / Sajmište** area and to the **Gročanski kej** further downstream, with their long-term positions still unsettled.
 
 The city's stated plan is to replace the roughly 100 informal rafts that once lined the Sava promenade with a much smaller number of **regulated, licensed splavovi** — on the order of 28–30 tendered locations, spaced apart, connected to proper water, electricity and wastewater infrastructure, in standardised sizes. In other words, the river is expected to end up with substantially fewer splavovi than before — by some accounts up to two-thirds fewer — but better-regulated ones (REPORTED, city plan as of 2025–2026; figures and timeline are perishable and have been described as running behind schedule).
 

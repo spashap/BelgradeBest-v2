@@ -1,0 +1,42 @@
+---
+// TLDR cards for the admin: each card is ONE conclusion a human can act on,
+// with the number that backs it and the next step. Tones: good (keep doing),
+// bad (fix), watch (not decidable yet / borderline), info (context).
+// The cards are computed from data on the page (lib/admin/insights.ts); this
+// component only renders them.
+import type { Verdict } from "../../lib/admin/insights";
+interface Props {
+  items: Verdict[];
+  title?: string;
+}
+const { items, title = "TL;DR" } = Astro.props;
+const icon = { good: "▲", bad: "▼", watch: "◆", info: "●" };
+---
+<style is:inline>
+  .vd-h{display:flex;align-items:baseline;gap:10px;margin:0 0 10px}
+  .vd-h h2{margin:0}
+  .vd{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-bottom:18px}
+  .vd-c{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--soft);border-radius:10px;padding:12px 14px}
+  .vd-c.good{border-left-color:var(--ok)} .vd-c.bad{border-left-color:#e0816a} .vd-c.watch{border-left-color:#d9b25f}
+  .vd-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .vd-l{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+  .vd-v{font-family:ui-monospace,monospace;font-size:22px;font-weight:700}
+  .vd-c.good .vd-v{color:var(--ok)} .vd-c.bad .vd-v{color:#e0816a} .vd-c.watch .vd-v{color:#d9b25f}
+  .vd-line{margin:6px 0 0;font-size:14px;line-height:1.4}
+  .vd-act{margin:6px 0 0;font-size:13px;color:var(--soft)}
+  .vd-act b{color:var(--ink)}
+</style>
+{items.length ? (
+  <>
+    <div class="vd-h"><h2>{title}</h2><span class="muted" style="font-size:12px">conclusions first · details below</span></div>
+    <div class="vd">
+      {items.map((v) => (
+        <div class={`vd-c ${v.tone}`}>
+          <div class="vd-top"><span class="vd-l">{icon[v.tone]} {v.label}</span><span class="vd-v">{v.value}</span></div>
+          <p class="vd-line">{v.line}</p>
+          {v.action ? <p class="vd-act"><b>Do:</b> {v.action}</p> : null}
+        </div>
+      ))}
+    </div>
+  </>
+) : null}

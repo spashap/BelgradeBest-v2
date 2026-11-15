@@ -5,6 +5,9 @@ import { getCollection } from "astro:content";
 import { readAffiliates, saveMode } from "../../lib/admin/store";
 import { ga4AffiliateClicks, type AffClickRow } from "../../lib/admin/analytics";
 import { clickEvent, partnerLive, partnersForTargets } from "../../lib/affiliates";
+import Verdicts from "../../components/admin/Verdicts.astro";
+import type { Verdict } from "../../lib/admin/insights";
+import { cjEarnings } from "../../lib/admin/cj";
 
 // Affiliate partners: per partner an ID/tracked link + an On/Off switch
 // (src/data/affiliates.json via /api/admin/affiliates; a save commits and the
@@ -19,12 +22,14 @@ const okKey = sp.get("ok");
 const days = [7, 28, 90].includes(Number(sp.get("days"))) ? Number(sp.get("days")) : 28;
 const mode = saveMode();
 
-// Where each partner renders: visible English articles whose frontmatter
-// names its placements (German/Slovak twins carry no affiliate blocks).
-const articles = (await getCollection("articles")).filter((a) => a.data.visible !== false);
+// Where each partner renders: visible articles (English + the /de/ and /sk/
+// twins) whose frontmatter names its placements.
+const withPrefix = async (c: "articles" | "de" | "sk" | "cs", prefix: string) =>
+  (await getCollection(c)).filter((a) => a.data.visible !== false).map((a) => ({ a, prefix }));
+const articles = [...(await withPrefix("articles", "")), ...(await withPrefix("de", "/de")), ...(await withPrefix("sk", "/sk")), ...(await withPrefix("cs", "/cs"))];
 const pagesFor = new Map<string, string[]>();
-for (const a of articles) {
-  const path = `/${a.data.leg}/${a.data.slug}`;
+for (const { a, prefix } of articles) {
+  const path = `${prefix}/${a.data.leg}/${a.data.slug}`;
   for (const k of partnersForTargets(a.data.stayTargets, a.data.partnerTargets ?? [])) {
     pagesFor.set(k, [...(pagesFor.get(k) ?? []), path]);
   }
@@ -33,10 +38,80 @@ const allPages = [...new Set([...pagesFor.values()].flat())];
 
 const evToKey = new Map(partners.map(([k]) => [clickEvent(k), k]));
 const nameOf = (ev: string) => file.partners[evToKey.get(ev) ?? ""]?.name ?? ev;
-const stats = await ga4AffiliateClicks(days, [...evToKey.keys()], allPages);
+const [stats, cj] = await Promise.all([ga4AffiliateClicks(days, [...evToKey.keys()], allPages), cjEarnings(days)]);
+const usd = (n: number) => "$" + n.toFixed(2);
+// Earnings per sub-ID (sid = bb-<placement>, bb-de-<placement>…).
+type SidRow = { sid: string; n: number; c: number; adv: string };
+const sidMap = new Map<string, SidRow>();
+if (cj.configured) {
+  for (const r of cj.rows) {
+    const x = sidMap.get(r.sid) ?? { sid: r.sid, n: 0, c: 0, adv: r.advertiser };
+    x.n += 1;
+    x.c += r.commission;
+    sidMap.set(r.sid, x);
+  }
+}
+const bySid = [...sidMap.values()].sort((a, b) => b.c - a.c);
 const total = (rows: AffClickRow[], ev: string) => rows.filter((r) => r.event === ev).reduce((s, r) => s + r.clicks, 0);
 const top = (rows: AffClickRow[], n = 10) => rows.slice(0, n);
 const pct = (a: number, b: number) => (b > 0 ? `${((a / b) * 100).toFixed(1)}%` : "–");
+// ── TL;DR ──
+const liveCount = partners.filter(([k]) => partnerLive(k, file.partners)).length;
+const verdicts: Verdict[] = [];
+verdicts.push(
+  cj.configured
+    ? {
+        tone: cj.total > 0 ? "good" : "watch",
+        label: "Earned · " + cj.days + " d (CJ)",
+        value: usd(cj.total),
+        line: cj.sales
+          ? cj.sales + " commissions; best placement " + (bySid[0]?.sid ?? "–") + " (" + usd(bySid[0]?.c ?? 0) + ")."
+          : "No commissions yet. Bookings show up in CJ days after the click; hotel stays only after check-out.",
+      }
+    : {
+        tone: "info",
+        label: "Earnings",
+        value: "not linked",
+        line: "CJ earnings are not connected to this page yet.",
+        action: "Create a Personal Access Token at developers.cj.com and set CJ_PERSONAL_ACCESS_TOKEN in Vercel.",
+      },
+);
+if (stats.configured) {
+  const clicksAll = stats.byPartner.reduce((s, r) => s + r.clicks, 0);
+  const seenAll = Object.values(stats.blockViews).reduce((s, n) => s + n, 0);
+  const pvAll = allPages.reduce((s, p) => s + (stats.pageViews[p] ?? 0), 0);
+  verdicts.push({
+    tone: liveCount ? "info" : "bad",
+    label: "Partners live",
+    value: `${liveCount}/${partners.filter(([, p]) => p.available).length}`,
+    line: liveCount ? `Booking boxes are on ${allPages.length} pages (${pvAll} page views in ${days} d).` : "Every partner is off: the site cannot earn anything.",
+    action: liveCount ? undefined : "Paste the links below and switch partners On.",
+  });
+  verdicts.push({
+    tone: clicksAll > 0 ? "good" : seenAll >= 50 ? "bad" : "watch",
+    label: `Clicks · ${days} d`,
+    value: String(clicksAll),
+    line: clicksAll > 0
+      ? `${clicksAll} clicks to partners from ${stats.byPartner.reduce((s, r) => s + r.users, 0)} people.`
+      : seenAll >= 50 ? `Seen ${seenAll} times, never clicked.` : "Too few views to judge yet.",
+    action: clicksAll === 0 && seenAll >= 50 ? "Reword the box labels or move the box higher on the strongest page." : undefined,
+  });
+  if (seenAll > 0) {
+    const rate = clicksAll / seenAll;
+    verdicts.push({
+      tone: seenAll < 100 ? "watch" : rate >= 0.03 ? "good" : rate >= 0.01 ? "watch" : "bad",
+      label: "Click rate (box seen → click)",
+      value: `${(rate * 100).toFixed(1)}%`,
+      line: `${seenAll} box views. Travel content typically converts 1–5% of box views into clicks.`,
+      action: seenAll < 100 ? "Wait until 100+ box views before judging." : rate < 0.01 ? "Labels are not convincing: make them answer the reader's next step (price, time)." : undefined,
+    });
+  }
+  const best = [...stats.byPage].sort((a, b) => b.clicks - a.clicks)[0];
+  if (best) verdicts.push({ tone: "good", label: "Best page", value: String(best.clicks), line: `${best.key} earns the most clicks (${nameOf(best.event)}).`, action: "Give this page's topic more articles and a translation." });
+  const dead = allPages.filter((p) => (stats.pageViews[p] ?? 0) >= 30 && !stats.byPage.some((r) => r.key === p)).sort((a, b) => (stats.pageViews[b] ?? 0) - (stats.pageViews[a] ?? 0))[0];
+  if (dead) verdicts.push({ tone: "bad", label: "Traffic, no clicks", value: String(stats.pageViews[dead] ?? 0), line: `${dead} has ${stats.pageViews[dead]} views but no partner clicks.`, action: "Check the box fits what readers came for on that page." });
+}
+
 const fmt = (iso?: string | null) => (iso ? iso.slice(0, 16).replace("T", " ") + " UTC" : "never");
 ---
 <AdminLayout title="Affiliates">
@@ -50,6 +125,8 @@ const fmt = (iso?: string | null) => (iso ? iso.slice(0, 16).replace("T", " ") +
     </div>
   ) : null}
   {mode === "readonly" ? <div class="err">Saving is OFF on this deploy (no GITHUB_TOKEN). You can still see the stats.</div> : null}
+
+  <Verdicts items={verdicts} />
 
   <p class="muted">
     Paste the partner's ID or tracked link, tick <b>On</b>, press <b>Save</b>. The site rebuilds itself (about 1–2 minutes) and
@@ -98,6 +175,22 @@ const fmt = (iso?: string | null) => (iso ? iso.slice(0, 16).replace("T", " ") +
     );
   })}
 
+  <h2 style="margin-top:24px">Money, last {cj.configured ? cj.days : days} days (CJ)</h2>
+  {cj.configured ? (
+    bySid.length ? (
+      <div class="panel">
+        <table>
+          <tr><th>placement (sub-ID)</th><th>partner</th><th>commissions</th><th>earned</th></tr>
+          {bySid.map((r) => <tr><td class="slug">{r.sid}</td><td class="muted">{r.adv}</td><td>{r.n}</td><td><b>{usd(r.c)}</b></td></tr>)}
+        </table>
+      </div>
+    ) : (
+      <div class="panel muted">No commissions in this period yet. Hotel commissions post after the guest's stay, so expect days to weeks after the first clicks.</div>
+    )
+  ) : (
+    <div class="panel muted">{cj.reason} Until then, see earnings in CJ: Reports → Commission Detail, column <b>SID</b>.</div>
+  )}
+
   <div class="row" style="justify-content:space-between;margin-top:24px">
     <h2 style="margin:0">Clicks, last {days} days</h2>
     <form method="get" class="row">
@@ -125,11 +218,11 @@ const fmt = (iso?: string | null) => (iso ? iso.slice(0, 16).replace("T", " ") +
       <h2>Where they clicked</h2>
       <div class="panel">
         <table>
-          <tr><th>page</th><th>partner</th><th>clicks</th><th>page views</th><th>click rate</th></tr>
+          <tr><th>page</th><th>partner</th><th>clicks</th><th>page views</th><th>box seen</th><th>click rate (of seen)</th></tr>
           {stats.byPage.map((r) => (
             <tr>
               <td class="slug">{r.key}</td><td>{nameOf(r.event)}</td><td>{r.clicks}</td>
-              <td class="muted">{stats.pageViews[r.key] ?? "–"}</td><td>{pct(r.clicks, stats.pageViews[r.key] ?? 0)}</td>
+              <td class="muted">{stats.pageViews[r.key] ?? "–"}</td><td class="muted">{stats.blockViews[r.key] ?? "–"}</td><td>{pct(r.clicks, stats.blockViews[r.key] ?? stats.pageViews[r.key] ?? 0)}</td>
             </tr>
           ))}
         </table>
@@ -153,8 +246,9 @@ const fmt = (iso?: string | null) => (iso ? iso.slice(0, 16).replace("T", " ") +
   )}
 
   <p class="muted" style="margin-top:18px;font-size:13px">
-    Each click sends a GA4 event named <code>aff_click_&lt;partner&gt;</code>; no personal data is collected. Booking.com links
-    carry a per-area label (<code>bb-dorcol</code>, <code>bb-surcin</code>…) so the Booking.com reports show which neighbourhood
-    earns. A new partner is added in code (<code>src/data/affiliates.json</code> + a placement).
+    Each click sends a GA4 event named <code>aff_click_&lt;partner&gt;</code>, and each box that scrolls into view sends
+    <code>aff_view</code>; no personal data is collected. Every link carries a sub-ID (<code>bb-dorcol</code>, <code>bb-de-surcin</code>,
+    <code>bb-airport-transfer</code>…): in CJ open Reports → Commission Detail and look at the <b>SID</b> column to see which
+    placement earned each commission. A new partner is added in code (<code>src/data/affiliates.json</code> + a placement).
   </p>
 </AdminLayout>

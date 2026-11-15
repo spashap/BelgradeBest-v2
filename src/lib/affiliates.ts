@@ -15,7 +15,9 @@ export type PartnerKey = string;
 export type Partner = {
   name: string;
   what: string;
-  field: "aid" | "url";
+  // "aid" = a Booking.com partner number; "url" = a tracked https link;
+  // "aid-or-url" = either (Booking.com: direct aid, or its CJ click link).
+  field: "aid" | "url" | "aid-or-url";
   fieldLabel: string;
   enabled: boolean;
   value: string;
@@ -43,6 +45,7 @@ export function checkValue(p: Pick<Partner, "field">, value: string): string | n
   const v = value.trim();
   if (!v) return null; // empty is allowed (the partner just stays off)
   if (p.field === "aid") return /^\d{3,12}$/.test(v) ? null : "The Booking.com partner ID is a number (3–12 digits).";
+  if (p.field === "aid-or-url" && /^\d{3,12}$/.test(v)) return null;
   try {
     return new URL(v).protocol === "https:" ? null : "The link must start with https://";
   } catch {
@@ -52,30 +55,84 @@ export function checkValue(p: Pick<Partner, "field">, value: string): string | n
 
 export type AffLink = { href: string; label: string; partner: PartnerKey; placement: string };
 
-type StayReg = { partner?: string; targets: Record<string, { label: string; search?: string }> };
-type TravelReg = { targets: Record<string, { label: string; partner: string }> };
+// Block chrome per language. English lives at the top level of the placement
+// JSON; translated pilots (de, sk) under `tr`. The disclosure page is English.
+export type BlockChrome = { heading: string; disclosure: string; disclosureLink: string; cta?: string };
+type Labels = Partial<Record<string, string>>;
+type StayReg = {
+  partner?: string;
+  disclosure: string;
+  tr?: Record<string, BlockChrome>;
+  targets: Record<string, { label: string; search?: string; labels?: Labels }>;
+};
+type TravelReg = {
+  heading: string;
+  disclosure: string;
+  tr?: Record<string, BlockChrome>;
+  targets: Record<string, { label: string; partner: string; labels?: Labels; deep?: Labels }>;
+};
 const STAY = stay as StayReg;
 const TRAVEL = partnerLinks as TravelReg;
 export const STAY_PARTNER = STAY.partner ?? "booking";
 
-// Booking.com: a search for the area, with `label` = a per-area sub-ID so the
-// Booking.com reports show which neighbourhood converts.
-export function stayLinks(targets: string[]): AffLink[] {
+export function stayChrome(lang = "en"): BlockChrome {
+  return STAY.tr?.[lang] ?? { heading: "Where to book your stay", disclosure: STAY.disclosure, disclosureLink: "How we make money" };
+}
+export function travelChrome(lang = "en"): BlockChrome {
+  return TRAVEL.tr?.[lang] ?? { heading: TRAVEL.heading, disclosure: TRAVEL.disclosure, disclosureLink: "How we make money" };
+}
+
+// CJ (Commission Junction) click links: https://www.<cj-domain>/click-<PID>-<linkId>.
+// `url` deep-links to a specific partner page; `sid` is a sub-ID that CJ's
+// reports show per transaction, so every placement is traceable to money.
+const CJ_HOSTS = /(^|\.)(anrdoezrs\.net|dpbolvw\.net|jdoqocy\.com|kqzyfj\.com|tkqlhce\.com)$/;
+export const isCjLink = (href: string) => {
+  try {
+    return CJ_HOSTS.test(new URL(href).hostname);
+  } catch {
+    return false;
+  }
+};
+export function tracked(base: string, dest: string | undefined, sid: string): string {
+  if (!isCjLink(base)) return base;
+  const u = new URL(base);
+  if (dest) u.searchParams.set("url", dest);
+  u.searchParams.set("sid", sid);
+  return u.toString();
+}
+
+const BOOKING_LANG: Record<string, string> = { en: "en-gb", de: "de", sk: "sk", cs: "cs" };
+
+// Booking.com: a search for the area. Direct partner (numeric aid): `label` is
+// the per-area sub-ID. Via CJ: the search is the deep link and `sid` the sub-ID.
+export function stayLinks(targets: string[], lang = "en"): AffLink[] {
   if (!partnerLive(STAY_PARTNER)) return [];
-  const aid = PARTNERS[STAY_PARTNER].value.trim();
+  const value = PARTNERS[STAY_PARTNER].value.trim();
+  const cta = stayChrome(lang).cta ?? "Book a stay in {area}";
   return targets.flatMap((t) => {
     const x = STAY.targets[t];
     if (!x?.search) return [];
-    const q = new URLSearchParams({ ss: x.search, aid, label: `bb-${t}` });
-    return [{ href: `https://www.booking.com/searchresults.html?${q}`, label: `Book a stay in ${x.label}`, partner: STAY_PARTNER, placement: t }];
+    const sid = `bb-${lang === "en" ? "" : lang + "-"}${t}`;
+    const label = cta.replace("{area}", x.labels?.[lang] ?? x.label);
+    const q = new URLSearchParams({ ss: x.search, lang: BOOKING_LANG[lang] ?? "en-gb" });
+    if (/^\d+$/.test(value)) {
+      q.set("aid", value);
+      q.set("label", sid);
+      return [{ href: `https://www.booking.com/searchresults.html?${q}`, label, partner: STAY_PARTNER, placement: t }];
+    }
+    const dest = `https://www.booking.com/searchresults.html?${q}`;
+    return [{ href: tracked(value, dest, sid), label, partner: STAY_PARTNER, placement: t }];
   });
 }
 
-export function travelLinks(targets: string[]): AffLink[] {
+export function travelLinks(targets: string[], lang = "en"): AffLink[] {
   return targets.flatMap((t) => {
     const x = TRAVEL.targets[t];
     if (!x || !partnerLive(x.partner)) return [];
-    return [{ href: PARTNERS[x.partner].value.trim(), label: x.label, partner: x.partner, placement: t }];
+    const sid = `bb-${lang === "en" ? "" : lang + "-"}${t}`;
+    const dest = x.deep?.[lang] ?? x.deep?.en;
+    const label = x.labels?.[lang] ?? x.label;
+    return [{ href: tracked(PARTNERS[x.partner].value.trim(), dest, sid), label, partner: x.partner, placement: t }];
   });
 }
 

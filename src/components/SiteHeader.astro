@@ -63,7 +63,7 @@ const nav = T
             >
               <span /> <span /> <span />
             </button>
-            <nav id="site-nav" class="c-header__nav" aria-label={({ en: "Sections", de: "Bereiche", sk: "Sekcie" } as const)[lang]}>
+            <nav id="site-nav" class="c-header__nav" aria-label={({ en: "Sections", de: "Bereiche", sk: "Sekcie", cs: "Sekce" } as const)[lang]}>
               {nav.map((n) =>
                 n.subs.length === 0 ? (
                   <a href={n.href}>{n.label}</a>
@@ -93,7 +93,7 @@ const nav = T
       }
       {
         langs.length > 0 ? (
-          <nav class="c-lang" aria-label={({ en: "Language", de: "Sprache", sk: "Jazyk" } as const)[lang]}>
+          <nav class="c-lang" aria-label={({ en: "Language", de: "Sprache", sk: "Jazyk", cs: "Jazyk" } as const)[lang]}>
             {langs.map((l) =>
               l.current ? (
                 <span aria-current="page" lang={l.lang} title={l.name}>

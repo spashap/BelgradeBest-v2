@@ -7,7 +7,7 @@ description: "How to get to Expo 2027 Belgrade: the Surčin site is ~5 km from N
 lede: "Here's how to get to Expo 2027 Belgrade: the site is at Surčin, around 5 km from Nikola Tesla Airport and roughly 13.5 km from downtown (per the official Participants FAQ). This page tracks every route we know — from the airport, from the city centre via the free network, and via the planned new railway — and flags clearly which parts are confirmed and which are still promises."
 heroLabel: "Surčin site / airport map hero"
 heroAlt: "Belgrade cityscape — reaching the Expo 2027 site at Surčin"
-lastUpdated: "2026-10-14"
+lastUpdated: "2026-11-15"
 order: 4
 visible: true
 intent: "both"
@@ -36,7 +36,7 @@ faqs:
   - question: "What transportation options will be available for visitors during Expo 2027?"
     answer: "During Expo 2027, visitors will have access to private vehicles, public buses, urban rail, and river transport to reach the site. There will also be on-site parking for up to 11,000 vehicles, and new environmentally friendly bus lines are planned to connect the Expo site with the airport and downtown."
   - question: "Is there a railway planned to connect the airport and Expo 2027?"
-    answer: "A new railway line is under construction to connect Nikola Tesla Airport and the Expo site in Surčin, but it is not yet operational. While officials have targeted completion for late 2026, no detailed timetable or fare scheme has been announced, so it is advisable to check for updates closer to your travel date."
+    answer: "A new railway line is under construction to connect Nikola Tesla Airport and the Expo site in Surčin, but it is not yet operational. While officials have targeted completion for late 2026, no detailed timetable or fare scheme has been announced, so it is advisable to check for updates closer to your travel date. In October 2026 the finance minister put the expected opening at March or April 2027, after testing."
 ---
 
 ## Where is Expo 2027 located?
@@ -83,7 +83,7 @@ Two faster, purpose-built options are promised but not yet running. Officials pl
 
 A new double-track, electrified railway is under construction from Zemun Polje to the National Stadium, passing Nikola Tesla Airport and Surčin. It runs 18.3 km, with stops at Singidunum, the airport and Surčin, and a station at the National Stadium. The main contractor is Powerchina International Group, working for the Government of Serbia, with construction having begun in 2024. As of early 2026, the project's first phase covers the Zemun Polje–National Stadium section (a later phase is planned to extend the line toward Obrenovac), with reporting describing more than 500 people, including around 200 engineers, working on site and major bridges, a viaduct and an overpass under construction along the route.
 
-Completion timing is where caution matters most. Serbian officials, including the President and the Minister of Construction, have stated the line is targeted for the end of 2026, with one statement giving a date of 1 December 2026, after which a testing phase begins (reported to start around February 2027). More recent reporting describes the railway entering service in spring 2027. These are officially stated targets, reported as provisional — not officially confirmed and not a binding timetable. Officials have promised journeys of about 15 minutes between the airport and central Belgrade (Prokop), with trains every 30 minutes and up to every 15 at peak.
+Completion timing is where caution matters most. Serbian officials, including the President and the Minister of Construction, have stated the line is targeted for the end of 2026, with one statement giving a date of 1 December 2026, after which a testing phase begins (reported to start around February 2027). More recent reporting describes the railway entering service in spring 2027. These are officially stated targets, reported as provisional — not officially confirmed and not a binding timetable. Officials have promised journeys of about 15 minutes between the airport and central Belgrade (Prokop), with trains every 30 minutes and up to every 15 at peak. Latest update (October 2026): Finance Minister Siniša Mali said construction should finish by the end of 2026, with about 11 of the 18.3 km complete, and that the line should open in March or April 2027 after testing — a ministerial projection, not a timetable.
 
 What is still unknown: no detailed passenger timetable, exact opening date, or fare scheme for this railway during the Expo period has yet been announced. With regular transport currently free, whether this rail link will be free or carry a special fare is itself not yet specified. In short, the line is a real, advanced construction project on an officially stated 2026–2027 timeline — but do not build your travel plans on it being open until an actual opening date and timetable are published.
 

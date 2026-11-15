@@ -7,7 +7,7 @@ description: "Understanding Belgrade: why the layered city at the Sava–Danube 
 lede: "Belgrade isn't a single pretty old town — it's a collage of empires, razed and rebuilt for two thousand years. Read it by its layers, and the fortress above the rivers is where all of them are visible at once."
 heroLabel: "Understanding Belgrade / hero"
 heroAlt: "Belgrade Fortress stonework where the city's historical layers meet"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-11-15"
 order: 4
 visible: true
 intent: "leisure"
@@ -60,7 +60,7 @@ The most recent layer is [Belgrade Waterfront](/glossary/belgrade-waterfront) �
 
 ## Belgrade Fortress, where the layers are visible at once
 
-Kalemegdan Park and Belgrade Fortress occupy the promontory above the Sava–Danube confluence, on a ridge in Stari Grad about 0.9 km north-west of Republic Square and roughly 0.6–0.8 km up Knez Mihailova — a 10–15 minute walk from the square. They contain layered remains of Roman, Byzantine, medieval Serbian, Ottoman and Austrian fortifications, which is why this is the single best place to read the whole sequence in one visit. The Upper Town and Lower Town slopes run down toward Dorćol and the two riverbanks; the park and fortress grounds are open 24/7 year-round and free to enter, and they offer the city's best panoramic view out over the confluence — the Sava arriving from the left, the Danube and Zemun across the water.
+Kalemegdan Park and Belgrade Fortress occupy the promontory above the Sava–Danube confluence, on a ridge in Stari Grad about 0.9 km north-west of Republic Square and roughly 0.6–0.8 km up Knez Mihailova — a 10–15 minute walk from the square. They contain layered remains of Roman, Byzantine, medieval Serbian, Ottoman and Austrian fortifications, which is why this is the single best place to read the whole sequence in one visit. The Upper Town and Lower Town slopes run down toward Dorćol and the two riverbanks; the park and fortress grounds are free to enter, and Kalemegdan Park and the Lower Town stay open around the clock (since June 2026 the Upper Town gates close overnight, roughly 00:30–04:30); they offer the city's best panoramic view out over the confluence — the Sava arriving from the left, the Danube and Zemun across the water.
 
 The fortress's individual interior attractions are a separate matter: they are individually ticketed and seasonal. These include the Roman Well, the Military Bunker, the Big Powder Magazine, the Casemates and Military Museum, Nebojša Tower and the Clock Tower (Sahat kula). The mechanism is stable, but the exact times shift with the season. As of 2026 the pattern runs 11:00–19:00 (last entry 18:30) between 15 April and 15 October, and 10:00–17:00 (last entry 16:30) between 15 October and 15 April, Tuesday to Sunday — with Nebojša Tower open Wednesday to Sunday. Treat those hours as indicative and recheck on arrival.
 
@@ -72,4 +72,4 @@ There is one further thing worth knowing before you arrive. A combined or unifie
 
 For a first-timer, the most efficient way to have all of this narrated in one coherent walk is the standard free walking-tour spine, which conveniently traces the orientation axis above: start at Republic Square by the Prince Mihailo monument, walk north-west up the pedestrian Knez Mihailova to Kalemegdan and the fortress, then double back south-east a few hundred metres to Skadarlija — the cobblestoned bohemian kafana quarter just east of Republic Square. It runs roughly two to two and a half hours and is tip-based, commonly reported around €10–20. Thematic variants exist too, including a 20th-century history walk covering the NATO bombing, and a "Mysterious" or underground route taking in the Roman Well and the bunkers. Tour prices and schedules change, so confirm the current details before setting out.
 
-If you would rather build your own understanding more slowly, the fortress grounds reward an unhurried visit at any hour, and the city's collections fill in what the stones cannot — the practical details for those are gathered on the [Belgrade museums](/visit-belgrade/belgrade-museums) page. Either way, the principle holds: read Belgrade by its layers, and the fortress above the rivers is where you can see them all stacked together.
+If you would rather build your own understanding more slowly, the fortress grounds reward an unhurried visit at almost any hour, and the city's collections fill in what the stones cannot — the practical details for those are gathered on the [Belgrade museums](/visit-belgrade/belgrade-museums) page. Either way, the principle holds: read Belgrade by its layers, and the fortress above the rivers is where you can see them all stacked together.

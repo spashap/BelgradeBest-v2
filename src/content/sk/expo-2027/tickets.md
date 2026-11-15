@@ -3,11 +3,11 @@ leg: "expo-2027"
 slug: "tickets"
 title: "Vstupenky na Expo 2027: čo zatiaľ vieme"
 shortTitle: "Vstupenky"
-description: "Vstupenky na Expo 2027 v Belehrade stále nie sú v predaji: plánovaný štart 15. septembra 2026 prešiel bez predaja aj cien. Čo je potvrdené, čo sa posunulo a čo sa stane 1. novembra."
-lede: "Vstupenky na Expo 2027 v Belehrade stále nie sú v predaji a stále nemajú zverejnenú cenu. Tender samotného organizátora na tlač vstupeniek plánovala začiatok predaja na 15. septembra 2026; tento dátum už mlčky uplynul a je to druhý posunutý termín po sľube ministra na 15. mája 2026. Jeden budúci termín však stále platí: 1. november 2026, začiatok predaja balíkov na Slovensku. Táto stránka sleduje, čo je potvrdené, čo sa posunulo a čo je stále neznáme."
+description: "Vstupenky na Expo 2027 v Belehrade stále nie sú v predaji: plánovaný štart 15. septembra 2026 prešiel bez predaja aj cien. Ani termín slovenských balíkov 1. novembra nepriniesol zverejnenú cenu. Čo je potvrdené a čo sa posunulo."
+lede: "Vstupenky na Expo 2027 v Belehrade stále nie sú v predaji a stále nemajú zverejnenú cenu. Tender samotného organizátora na tlač vstupeniek plánovala začiatok predaja na 15. septembra 2026; tento dátum už mlčky uplynul a je to druhý posunutý termín po sľube ministra na 15. mája 2026. Uplynul aj tretí termín – 1. november 2026, začiatok predaja balíkov cez slovenské cestovné kancelárie – bez zverejneného balíka a bez ceny. Táto stránka sleduje, čo je potvrdené, čo sa posunulo a čo je stále neznáme."
 heroLabel: "Vstupenky na Expo 2027 / hero"
 heroAlt: "Vstup na Expo 2027 v Belehrade v zlatej hodinke"
-lastUpdated: "2026-09-17"
+lastUpdated: "2026-11-15"
 order: 6
 visible: true
 intent: "both"
@@ -16,15 +16,15 @@ noindex: false
 linksTo:
   - "/plan-your-trip"
 faqs:
-  - answer: "Ceny vstupeniek na Expo 2027 neboli k 17. septembru 2026 oznámené. Organizátor nezverejnil cenu denného, viacdňového ani sezónneho lístka, takže akýkoľvek údaj uvádzaný inde nie je oficiálnou cenou Expa. Plánovaný začiatok predaja 15. septembra 2026 prešiel bez spustenia predaja aj bez cenníka; túto stránku aktualizujeme, len čo sa objavia skutočné čísla."
+  - answer: "Ceny vstupeniek na Expo 2027 neboli k 15. novembru 2026 oznámené. Organizátor nezverejnil cenu denného, viacdňového ani sezónneho lístka, takže akýkoľvek údaj uvádzaný inde nie je oficiálnou cenou Expa. Plánovaný začiatok predaja 15. septembra 2026 prešiel bez spustenia predaja aj bez cenníka; túto stránku aktualizujeme, len čo sa objavia skutočné čísla."
     question: "Koľko stoja vstupenky na Expo 2027?"
   - answer: "Oficiálna webová stránka Expa 2027 (expobelgrade2027.org) bude hlavným miestom nákupu vstupeniek a jej stránka programu momentálne zobrazuje stav „Tickets available soon“ (po slovensky: vstupenky čoskoro dostupné). Zmluva o obstarávaní z augusta 2026 tiež potvrdzuje, že sa tlačia fyzické vstupenky určené na predaj na kamenných predajných miestach a pokladniach, takže popri webe sa plánuje aj predaj na priehradke. Tretí kanál sa objavil 17. septembra 2026: slovenské cestovné kancelárie budú od 1. novembra 2026 predávať balíky zahŕňajúce vstupenku na Expo, takže národní partneri z cestovného ruchu sú ďalšou cestou, najprv na Slovensku. Nič ďalšie, napríklad aplikácia či všeobecní predajcovia, potvrdené nie je."
     question: "Kde sa budú predávať vstupenky na Expo 2027?"
   - answer: "Áno, minimálne dva druhy. Zmluva o tlači vstupeniek z augusta 2026 zahŕňa 1 000 000 jednodňových a 200 000 trojdňových vstupeniek, čo je prvý konkrétny dôkaz, že Expo 2027 bude predávať jednodňovú aj trojdňovú vstupenku. Ceny, zľavy a prípadný sezónny lístok zostávajú neoznámené."
     question: "Budú na Expo 2027 viacdňové vstupenky?"
-  - answer: "Nie. K 17. septembru 2026 nie sú vstupenky na Expo 2027 v predaji a nebola zverejnená žiadna cena. Organizátorom plánovaný začiatok 15. septembra 2026 prešiel bez spustenia predaja a bez oznámenia a oficiálna stránka programu stále uvádza „Tickets available soon“ po anglicky aj „Ulaznice uskoro dostupne“ po srbsky."
+  - answer: "Nie. K 15. novembru 2026 nie sú vstupenky na Expo 2027 v predaji a nebola zverejnená žiadna cena. Organizátorom plánovaný začiatok 15. septembra 2026 prešiel bez spustenia predaja a bez oznámenia a oficiálna stránka programu stále uvádza „Tickets available soon“ po anglicky aj „Ulaznice uskoro dostupne“ po srbsky."
     question: "Sú vstupenky na Expo 2027 už v predaji?"
-  - answer: "Pre širokú verejnosť v súčasnosti neplatí žiadny dátum. Dva termíny už uplynuli: 25. januára 2026 minister financií Siniša Mali povedal, že predaj sa začne 15. mája 2026 „v Srbsku a vo svete“, a tender organizátora na tlač vstupeniek, o ktorej sa informovalo v auguste 2026, plánovala začiatok na 15. septembra 2026. Ani jedno sa nestalo. Jediný aktuálny dátum je 1. november 2026, kedy majú slovenské cestovné kancelárie začať predávať balíky zahŕňajúce vstupenku na Expo, čo je obchodný kanál v jednej krajine, nie všeobecný začiatok predaja."
+  - answer: "Pre širokú verejnosť v súčasnosti neplatí žiadny dátum. Dva termíny už uplynuli: 25. januára 2026 minister financií Siniša Mali povedal, že predaj sa začne 15. mája 2026 „v Srbsku a vo svete“, a tender organizátora na tlač vstupeniek, o ktorej sa informovalo v auguste 2026, plánovala začiatok na 15. septembra 2026. Ani jedno sa nestalo. Uplynul aj tretí, užší termín – 1. november 2026, od ktorého mali slovenské cestovné kancelárie predávať balíky so vstupenkou na Expo – bez toho, aby sa verejne objavil balík alebo cena."
     question: "Kedy sa začne predaj vstupeniek na Expo 2027?"
   - answer: "K septembru 2026 neboli zverejnené žiadne oficiálne informácie o rezervačných ani vstupných systémoch, vrátane rezervácií časových okien či denných limitov kapacity. Vzhľadom na predpokladané počty návštevníkov je určitá forma časovaného vstupu pravdepodobná, ale nič nie je potvrdené."
     question: "Budú rezervácie časových okien alebo limity kapacity?"
@@ -40,11 +40,11 @@ unknowns:
   - "Či popri jednodňových a trojdňových vstupenkách existuje aj sezónny lístok"
 ---
 
-_Naposledy overené: 17. septembra 2026._
+_Naposledy overené: 15. novembra 2026._
 
 ## Sú vstupenky na Expo 2027 už v predaji?
 
-Nie. K **17. septembru 2026** vstupenky na Expo 2027 v Belehrade **nie sú v predaji** a neboli oznámené žiadne ceny. Oficiálna stránka programu Expa 2027 stále zobrazuje stav **„Tickets available soon“** po anglicky a **„Ulaznice uskoro dostupne“** po srbsky, teda rovnaký stav ako pred mesiacom.
+Nie. K **15. novembru 2026** vstupenky na Expo 2027 v Belehrade **nie sú v predaji** a neboli oznámené žiadne ceny. Oficiálna stránka programu Expa 2027 stále zobrazuje stav **„Tickets available soon“** po anglicky a **„Ulaznice uskoro dostupne“** po srbsky, teda rovnaký stav ako od leta.
 
 Podstatné je, čo sa *nestalo*. Vlastný harmonogram organizátora určil začiatok predaja na **15. septembra 2026**. Ten deň prešiel bez spustenia predaja, bez cenníka a bez oznámenia o odklade. Srbské médiá o Expe 2027 informujú takmer denne a v dňoch 15. – 17. septembra priniesli stály prúd správ o Expe: Jamajka podpísala dohodu o účasti, dohoda o technickej spolupráci, slovenské cestovné balíky. O začiatku predaja vstupeniek však nebolo nič.
 
@@ -61,15 +61,15 @@ Tieto dva dátumy majú rôzny význam a stojí za to ich oddeliť. Prvý bol ve
 
 Nevieme vám povedať, *prečo* sa termíny posunuli, pretože organizátor sa k tomu nevyjadril. Môžeme vám však povedať, že tretí dátum nebol uvedený a že takto posunutý harmonogram predaja vstupeniek sám osebe nehovorí nič o tom, či je samotné Expo v pláne. Dohody o účasti, zmluvy na pavilóny aj výstavba sa po celý čas posúvajú ďalej.
 
-## Jediný dátum, ktorý stále platí: 1. november 2026, na Slovensku
+## Termín slovenských balíkov: 1. november 2026
 
 **17. septembra 2026** na obchodnom stretnutí „Visit Serbia“ v Bratislave oznámili slovenskí zástupcovia cestovného ruchu, že **slovenské cestovné kancelárie budú predávať balíky zahŕňajúce vstupenku na Expo 2027**, spojené s ubytovaním, dopravou a prehliadkami iných častí Srbska, a že ponuka bude pre slovenských občanov dostupná **od 1. novembra 2026**. Stretnutia sa zúčastnil Igor Kovačević, výkonný riaditeľ Expo 2027 d.o.o. Belehrad; Slovensko bolo prvou krajinou, ktorá podpísala dohodu o účasti na Expe.
 
 Z toho vyplývajú dve veci a jedna nie:
 
-- **Opäť existuje reálny dátum dostupnosti vstupeniek.** Aby mohla cestovná kancelária od 1. novembra predávať balík so vstupenkou na Expo, musí byť organizátor schopný dodať vstupenky a ceny cestovnému ruchu dovtedy. Je to odvodenie, nie vyhlásenie, ale je to najpevnejší časový signál, aký je momentálne k dispozícii, pevnejší ako dva posunuté termíny, pretože ho zverejnil obchodný partner.
+- **Bol to skutočný signál dostupnosti vstupeniek – a potichu uplynul.** Aby cestovná kancelária mohla od 1. novembra predávať balík so vstupenkou na Expo, organizátor musí cestovnému ruchu dodať vstupenky a ceny. K 15. novembru 2026 sme nenašli žiadnu ponuku slovenskej cestovnej kancelárie ani cenu balíka či vstupenky – v slovenských, srbských ani anglických zdrojoch. Balíky sa možno predávajú priamo klientom kancelárií, nič to však nepotvrdzuje.
 - **Národní partneri z cestovného ruchu sú predajným kanálom.** Popri fyzických pokladniach, ktoré naznačuje zmluva na tlač vstupeniek, sú balíky predávané cez cestovné kancelárie zúčastnenej krajiny teraz potvrdenou cestou k vstupenke.
-- **Nie je to všeobecný dátum začiatku predaja.** Týka sa balíkov, ktoré slovenské cestovné kancelárie predávajú slovenským zákazníkom. Cena nebola zverejnená a pre žiadnu inú krajinu nebolo oznámené nič podobné. Ak nekupujete cez slovenskú cestovnú kanceláriu, 1. november 2026 vám zatiaľ nedáva možnosť kúpiť vstupenku.
+- **Nie je to všeobecný dátum začiatku predaja.** Týka sa balíkov, ktoré slovenské cestovné kancelárie predávajú slovenským zákazníkom. Cena nebola zverejnená a pre žiadnu inú krajinu nebolo oznámené nič podobné. Ani pre slovenských zákazníkov sa do polovice novembra neobjavila verejná ponuka.
 
 ## Čo prezrádza augustová zmluva o tlači
 
@@ -87,7 +87,7 @@ Z toho vyplývajú tri veci, ktoré stojí za to oddeliť od špekulácií:
 
 - **Existuje jednodňová a trojdňová vstupenka.** Je to prvé oficiálne potvrdenie akejkoľvek kategórie vstupeniek na Expo 2027. Nevylučuje to iné druhy, napríklad sezónny lístok, zľavy či skupinové vstupenky, ale tieto dva teraz existujú ako produkty.
 - **Fyzické vstupenky sa plánujú na fyzický predaj.** Zmluva opisuje vstupenky určené na predaj na kamenných predajných miestach a pokladniach, tlačené na chránenom papieri s vodotlačou, holografickou fóliou, QR kódmi, perforáciou, sériovým číslovaním a bezpečnostnými prvkami viditeľnými v UV svetle. Je to ochrana proti falšovaniu na úrovni bankoviek a naznačuje to predaj na priehradke, nie čisto aplikačný vstup.
-- **Tlačená zásoba vyzerá ako menšinový kanál, ale to je odvodenie, nie fakt.** Proti 1,2 milióna vytlačených vstupeniek stoja oficiálne projekcie 4 milióny návštev a v poslednom čase viac než 6 miliónov. S počítaním však buďte opatrní: 200 000 z nich sú trojdňové vstupenky, takže tlačená zásoba pokrýva viac vstupov, než má kusov, a nič organizátorovi nebráni vytlačiť viac. Dá sa očakávať výrazný digitálny kanál; nie je preukázané, že väčšina vstupov bude digitálna.
+- **Tlačená zásoba vyzerá ako menšinový kanál, ale to je odvodenie, nie fakt.** Proti 1,2 milióna vytlačených vstupeniek stoja oficiálne projekcie viac než 4 milióny návštev (horný cieľ organizátorov je 6 miliónov). S počítaním však buďte opatrní: 200 000 z nich sú trojdňové vstupenky, takže tlačená zásoba pokrýva viac vstupov, než má kusov, a nič organizátorovi nebráni vytlačiť viac. Dá sa očakávať výrazný digitálny kanál; nie je preukázané, že väčšina vstupov bude digitálna.
 
 Rovnaká súťaž určila harmonogram dodávok, z ktorého pochádza dátum 15. septembra: prvá dávka 160 000 jednodňových a 40 000 trojdňových vstupeniek do 14. septembra 2026, druhá dávka do 30. septembra, zvyšok do 31. decembra 2026. Či bola prvá dávka skutočne dodaná, nebolo hlásené, takže nie je známe, či sa začiatok predaja posunul kvôli tlači alebo z iného dôvodu.
 
@@ -95,7 +95,7 @@ Rovnaká súťaž určila harmonogram dodávok, z ktorého pochádza dátum 15. 
 
 ## Koľko stoja vstupenky na Expo 2027?
 
-Ceny vstupeniek na Expo 2027 **zatiaľ neboli oznámené** k 17. septembru 2026. Organizátor nezverejnil žiadne ceny denných, viacdňových ani sezónnych lístkov, takže **akýkoľvek konkrétny údaj, ktorý vidíte inde, nie je oficiálnou cenou Expa.** Ak nejaká webstránka dnes uvádza cenu vstupenky na Expo 2027 ako fakt, berte to s rezervou, pretože žiadna zatiaľ neexistuje.
+Ceny vstupeniek na Expo 2027 **zatiaľ neboli oznámené** k 15. novembru 2026. Organizátor nezverejnil žiadne ceny denných, viacdňových ani sezónnych lístkov, takže **akýkoľvek konkrétny údaj, ktorý vidíte inde, nie je oficiálnou cenou Expa.** Ak nejaká webstránka dnes uvádza cenu vstupenky na Expo 2027 ako fakt, berte to s rezervou, pretože žiadna zatiaľ neexistuje.
 
 Pre kontext, čo *očakávať* (jasne: očakávané, nie potvrdené): vstupenky na špecializované Expá sa v posledných ročníkoch zvyčajne predávali v rozpätí cenových kategórií: jednodňové vstupenky pre dospelých, zľavnené vstupenky pre deti, študentov a seniorov a viacdňové alebo sezónne lístky, pričom pri online nákupe vopred bývali zvyčajne lacnejšie než pri bráne. Belehradský organizátor nič z tejto štruktúry nepotvrdil, ale je to bežný vzorec a dáva predstavu, ako budú ceny pravdepodobne koncipované, keď sa objavia.
 
@@ -115,7 +115,7 @@ Tabuľka nižšie je sledovač, nie cenník. Každá bunka s cenou zostáva „Z
 Okrem toho sú teraz viditeľné dva kanály:
 
 - **Fyzické pokladne.** Augustová zmluva na tlač vstupeniek opisuje vstupenky vyrábané na predaj na kamenných predajných miestach a pokladniach, takže predaj na priehradke sa jednoznačne plánuje. Kde tieto pokladne budú, nebolo povedané.
-- **Národné cestovné kancelárie ako balíky.** Od 1. novembra 2026 majú slovenské kancelárie predávať balíky zahŕňajúce vstupenku na Expo (pozri vyššie). Je to prvý menovite uvedený kanál tretej strany a model, ktorý môžu prebrať aj iné zúčastnené krajiny.
+- **Národné cestovné kancelárie ako balíky.** Slovenské kancelárie mali od 1. novembra 2026 predávať balíky zahŕňajúce vstupenku na Expo (pozri vyššie); do polovice novembra žiadny zverejnený nebol. Je to prvý menovite uvedený kanál tretej strany a model, ktorý môžu prebrať aj iné zúčastnené krajiny.
 
 Nepotvrdené zostáva všetko ostatné: či bude samostatná aplikácia, všeobecní autorizovaní predajcovia alebo priamy online predaj z oficiálnej stránky. Na väčšine veľkých Expí sú hlavnými predajnými miestami oficiálny web a aplikácia, často doplnené autorizovanými predajcami, no pre Belehrad je to očakávané, nie potvrdené. **Kupujte len cez kanály, ktoré oficiálna stránka výslovne uvedie**, keď budú zverejnené, aby ste sa vyhli neoficiálnym predajcom.
 
@@ -126,7 +126,7 @@ Nepotvrdené zostáva všetko ostatné: či bude samostatná aplikácia, všeobe
 Tri veci by boli každá skutočným signálom a sledujeme všetky tri:
 
 - Cena alebo predajná stránka, ktorá sa objaví na expobelgrade2027.org a nahradí stav „Tickets available soon“.
-- Skutočné otvorenie predaja slovenských balíkov 1. novembra 2026, čo by znamenalo, že existujú zásoby vstupeniek aj ceny, aj keď všeobecný začiatok predaja nebol oznámený.
+- Slovenská (alebo iná) cestovná kancelária, ktorá zverejní balík so vstupenkou na Expo a cenou – mal byť k dispozícii od 1. novembra 2026, zatiaľ ho nevidno –, čo by znamenalo, že existujú zásoby vstupeniek aj ceny ešte pred všeobecným začiatkom predaja.
 - Srbské oznámenia o obstarávaní platformy na predaj vstupeniek alebo online predajného systému, teda druh zákazky, ktorý opakovane odhalil plány Expa skôr, než ich organizátor oznámil.
 
 Túto stránku aktualizujeme v deň, keď sa ktorýkoľvek z nich objaví.
@@ -141,13 +141,13 @@ Niekoľko vecí zostáva k septembru 2026 otvorených:
 - **Rezervačné a vstupné systémy.** Neboli zverejnené žiadne oficiálne informácie o rezerváciách časových okien, denných limitoch kapacity ani o online radení a rezervačných mechanizmoch pre bežných návštevníkov.
 - **Online kanál.** Predaj na fyzických pokladniach naznačuje zmluva na tlač vstupeniek a balíky cez cestovné kancelárie sú potvrdené pre Slovensko, priamy online predaj však opísaný nebol.
 
-Ak dnes nájdete cenu uvedenú ako fakt, berte ju s rezervou: k 17. septembru 2026 žiadna oficiálna neexistuje.
+Ak dnes nájdete cenu uvedenú ako fakt, berte ju s rezervou: k 15. novembru 2026 žiadna oficiálna neexistuje.
 
 ## Budú rezervácie časových okien alebo limity kapacity?
 
 K septembru 2026 neboli zverejnené žiadne oficiálne informácie o rezervačných ani vstupných systémoch: rezervácie časových okien, denné limity kapacity ani online rezervácie a radenie pre bežných návštevníkov.
 
-Je rozumné *očakávať* určitú formu riadenia kapacity, pretože čísla sú veľké a rastú. Oficiálne FAQ pre účastníkov modeluje približne 4,1 milióna návštev za 93 dní, v priemere asi 44 652 denne so špičkami až okolo 89 304. BIE teraz uvádza viac než 6 miliónov, čo by pri rovnakých 93 dňoch znamenalo priemer bližšie k 64 500 denne. Ide o projekcie, nie sčítania, a skoršie vyhlásenia sa pohybovali od 2,6 milióna vyššie. Spomíname ich len preto, že takéto čísla sú kontextom, ktorý často odôvodňuje systémy vstupu podľa časových okien alebo kapacity, no žiadny takýto systém nebol pre Expo 2027 potvrdený.
+Je rozumné *očakávať* určitú formu riadenia kapacity, pretože čísla sú veľké a rastú. Oficiálne FAQ pre účastníkov modeluje približne 4,1 milióna návštev za 93 dní, v priemere asi 44 652 denne so špičkami až okolo 89 304. Horný cieľ organizátorov je 6 miliónov, čo by pri rovnakých 93 dňoch znamenalo priemer bližšie k 64 500 denne. Ide o projekcie, nie sčítania, a skoršie vyhlásenia sa pohybovali od 2,6 milióna vyššie. Spomíname ich len preto, že takéto čísla sú kontextom, ktorý často odôvodňuje systémy vstupu podľa časových okien alebo kapacity, no žiadny takýto systém nebol pre Expo 2027 potvrdený.
 
 ## Overený kontext, kým čakáte
 

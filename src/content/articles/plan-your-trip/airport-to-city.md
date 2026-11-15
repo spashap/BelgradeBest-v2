@@ -7,7 +7,7 @@ description: "Belgrade airport to city centre: the free city buses, the A1 minib
 lede: "Belgrade's Nikola Tesla Airport (BEG) sits about 18 km west of the centre, and you have four sensible ways into town: the free city buses, the paid A1 minibus, an official taxi on the voucher system, or a ride-hail app. Here's an answer-first comparison of each — how it works, what it costs as of 2026, and how to avoid the airport's taxi touts."
 heroLabel: "Belgrade airport to city / hero"
 heroAlt: "Arriving at Belgrade airport and heading into the city"
-lastUpdated: "2026-10-14"
+lastUpdated: "2026-11-15"
 order: 1
 visible: true
 intent: "both"
@@ -60,7 +60,7 @@ You may still see older guides and videos quoting small cash bus fares (for exam
 
 The A1 shuttle minibus runs Airport → Fontana (New Belgrade) → the main bus and rail area → Slavija Square, with limited stops, which makes it faster into the centre than bus 72. Slavija is a transport hub within walking distance of Vračar, the St. Sava Temple area and many hotels. A1 is a separate paid service — the exception to the free regular transport.
 
-The fare is commonly quoted at about 400 RSD (a little under 4 EUR), paid in **cash, in dinars (RSD), on board** — so have local cash ready, as cards are not the norm. If you are landing without dinars, that is the one thing to sort before you leave the terminal: [where to get dinars, and the airport exchange trap](/plan-your-trip/money). The journey is around 30–40 minutes. Some earlier sources quote lower fares (200 RSD), which suggests a gradual increase, so treat it as low single-digit euros in cash and check the current price rather than assuming a fixed figure. The A1 timetable runs across the day; departures are roughly hourly but vary, so check the posted schedule at the airport stop. As of 2026 this remains the cheapest paid option and the quickest budget route into the centre.
+The fare is commonly quoted at about 400 RSD (a little under 4 EUR), paid in **cash, in dinars (RSD), on board** — so have local cash ready, as cards are not the norm. If you are landing without dinars, that is the one thing to sort before you leave the terminal: [where to get dinars, and the airport exchange trap](/plan-your-trip/money). The journey is around 30–40 minutes. Some earlier sources quote lower fares (200 RSD), which suggests a gradual increase, so treat it as low single-digit euros in cash and check the current price rather than assuming a fixed figure. The A1 timetable runs across the day; departures are reported roughly every 15–30 minutes in the daytime, less often late at night, so check the posted schedule at the airport stop. As of 2026 this remains the cheapest paid option and the quickest budget route into the centre.
 
 ## How much is a taxi from Belgrade airport, and how does the voucher work?
 

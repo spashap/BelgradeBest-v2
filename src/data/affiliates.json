@@ -1,41 +1,47 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-11-15",
   "partners": {
     "booking": {
-      "name": "Booking.com",
+      "name": "Booking.com (via CJ)",
       "what": "Hotel search links per neighbourhood (where-to-stay pages, Expo where-to-stay)",
-      "field": "aid",
-      "fieldLabel": "Partner ID (aid, numbers only)",
-      "enabled": false,
-      "value": "",
+      "field": "aid-or-url",
+      "fieldLabel": "CJ click link for Booking.com (https://www.anrdoezrs.net/click-…), or a direct Booking.com aid number",
+      "enabled": true,
+      "value": "https://www.anrdoezrs.net/click-101807971-13323565",
       "available": true,
-      "dashboard": "https://partner.booking.com",
+      "dashboard": "https://members.cj.com",
       "accepted": "2026-07-08",
-      "changedAt": null
+      "changedAt": "2026-11-15T19:45:00Z",
+      "network": "cj",
+      "cjAdvertiser": "5096493"
     },
     "welcome-pickups": {
-      "name": "Welcome Pickups",
+      "name": "Welcome Pickups (via CJ)",
       "what": "Pre-booked airport transfers (airport-to-city, taxis, Expo getting-there)",
       "field": "url",
-      "fieldLabel": "Tracked Belgrade airport-transfer link (https://…)",
-      "enabled": false,
-      "value": "",
+      "fieldLabel": "CJ click link for Welcome Pickups (https://www.anrdoezrs.net/click-…)",
+      "enabled": true,
+      "value": "https://www.anrdoezrs.net/click-101807971-17259680",
       "available": true,
-      "dashboard": "https://www.welcomepickups.com",
+      "dashboard": "https://members.cj.com",
       "accepted": "2026-06-23",
-      "changedAt": null
+      "changedAt": "2026-11-15T19:45:00Z",
+      "network": "cj",
+      "cjAdvertiser": "7070733"
     },
     "air-serbia": {
       "name": "Air Serbia (via CJ)",
       "what": "Flight search on Air Serbia (airport-to-city, Expo getting-there)",
       "field": "url",
-      "fieldLabel": "CJ tracking link for Air Serbia (CJ → Links → Get Link)",
-      "enabled": false,
-      "value": "",
+      "fieldLabel": "CJ click link for Air Serbia (https://www.anrdoezrs.net/click-…)",
+      "enabled": true,
+      "value": "https://www.anrdoezrs.net/click-101807971-15735227",
       "available": true,
       "dashboard": "https://members.cj.com",
       "accepted": "2026-06-25",
-      "changedAt": null
+      "changedAt": "2026-11-15T19:45:00Z",
+      "network": "cj",
+      "cjAdvertiser": "5289333"
     },
     "alosim": {
       "name": "aloSIM",
@@ -50,5 +56,10 @@
       "accepted": null,
       "changedAt": null
     }
+  },
+  "_cj": {
+    "publisherCid": "7672064",
+    "websitePid": "101807971",
+    "note": "CJ click links: https://www.anrdoezrs.net/click-<PID>-<linkId>. lib/affiliates.ts adds ?url=<deep link> (where the target names one) and &sid=bb-<placement> so CJ reports show which placement earns. Pending at CJ 2026-11-15: Qatar Airways, Trip.com. Applying to new programmes is blocked until the CJ Network Profile is complete (owner action)."
   }
 }

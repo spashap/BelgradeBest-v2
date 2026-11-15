@@ -7,7 +7,7 @@ description: "Car rental in Belgrade in 2026: whether you need a car at all, air
 lede: "Here's the honest starting point: for Belgrade itself, you almost certainly don't need a car — the centre is walkable, public transport is free, and taxis are cheap, while parking is a regulated headache. Where a rental earns its keep is the day trips and Balkan road trips beyond the city. This guide covers when renting makes sense, where to rent, the documents and cross-border rules that catch people out, and how parking actually works if you do drive."
 heroLabel: "Renting a car in Belgrade / hero"
 heroAlt: "A rental car on a road leading out of Belgrade"
-lastUpdated: "2026-06-21"
+lastUpdated: "2026-11-15"
 order: 9
 visible: true
 intent: "both"
@@ -24,7 +24,7 @@ faqs:
     question: "Can I drive a Belgrade rental car to Kosovo?"
   - answer: "It depends on your licence. A full licence held for at least two years is the baseline. If your licence is printed in a non-Latin alphabet (for example Cyrillic, Arabic or Japanese), you must carry an International Driving Permit alongside it. Many EU, UK and US visitors are fine on their home licence, but an IDP is a cheap insurance policy against confusion at the desk or a roadside check."
     question: "Do I need an International Driving Permit to rent a car in Serbia?"
-  - answer: "Central on-street parking sits in colour-coded zones inside the number-2 tram loop — red (max 1 hour), yellow (max 2 hours) and green (max 3 hours) — charged Monday–Friday roughly 7am–9pm and Saturday mornings, and free on Sundays and public holidays. Locals pay by SMS to a zone number, but that needs a Serbian SIM and often won't process on a foreign one, so visitors are usually better off using a public parking garage, which takes cash or card with no app required."
+  - answer: "Central on-street parking sits in colour-coded zones with time limits. Since a July 2025 reform the old-town core has a purple zone (30 minutes, no extension), red (1 hour, extendable by 30 minutes) and white in lower Dorćol (2 hours), with yellow and green zones further out. In the central zones charging runs Monday–Friday through the day, Saturday 07:00–22:00 and Sunday 07:00–14:00; only public holidays are free. Limits are posted on the street signs. Locals pay by SMS to a zone number, but that needs a Serbian SIM and often won't process on a foreign one, so visitors are usually better off using a public parking garage, which takes cash or card with no app required."
     question: "How does parking work in central Belgrade?"
   - answer: "Compare across providers rather than walking up to one desk. You'll find the international chains (Sixt, Avis, Hertz, Europcar, Enterprise) plus local Serbian agencies both at Nikola Tesla Airport and in the city; airport pickup is convenient but can carry surcharges, while a city branch can be cheaper if you don't need the car until you leave town. Check the cross-border policy, fuel and insurance terms before you book, not after."
     question: "Where is the best place to rent a car in Belgrade?"
@@ -56,7 +56,7 @@ Add any extra drivers to the contract at pickup — an unlisted driver usually v
 
 ## How does parking work if you do have a car?
 
-This is the part that surprises people, so it's worth understanding before you drive into the centre. On-street parking in central Belgrade — inside the **number-2 circular tram route** — is split into **colour-coded zones with time limits**: a **red zone** (maximum 1 hour), a **yellow zone** (maximum 2 hours) and a **green zone** (maximum 3 hours). Charging applies **Monday to Friday** through the day (roughly 7am–9pm) and on **Saturday mornings**, while **Sundays and public holidays are free**.
+This is the part that surprises people, so it's worth understanding before you drive into the centre. On-street parking in central Belgrade — inside the **number-2 circular tram route** — is split into **colour-coded zones with time limits**. A reform in July 2025 redrew the old-town core: a **purple zone** (maximum 30 minutes, no extension), a **red zone** (1 hour, extendable by 30 minutes) and a **white zone** in lower Dorćol (2 hours), with **yellow** and **green** zones (longer limits) further out. Each zone's limit and SMS number are on the street signs. In the central zones charging applies **Monday to Friday** through the day, **Saturday 07:00–22:00** and **Sunday 07:00–14:00** — a Sunday morning is no longer free — and only **public holidays** are exempt.
 
 The catch for visitors is payment. Locals pay by **SMS to a zone-specific number**, but that relies on a **Serbian SIM card** and frequently won't process on a foreign number — so it's not a reliable method for tourists. Enforcement, on the other hand, is very reliable: wardens patrol constantly, an unpaid ticket draws a fine (reported around 1,870 RSD), and a persistent offender can be towed by the "spider" tow truck. The stress-free answer is to skip on-street parking and use a **public parking garage**, which takes cash or card, needs no SIM or app, and gives you a guaranteed spot. If you're staying somewhere central with a car, book accommodation that includes **private parking or a garage** rather than counting on the street.
 

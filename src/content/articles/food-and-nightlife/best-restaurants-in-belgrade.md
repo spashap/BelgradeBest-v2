@@ -7,7 +7,7 @@ description: "The best restaurants in Belgrade by area and category — the Mich
 lede: "Looking for the best restaurants in Belgrade? The city grew up fast — a Michelin selection since 2022, two starred kitchens, and a confident 'New Balkan' movement. Here's where to eat, organised by area and by what you want the evening to be, with durable anchors you can book confidently and honest flags on what's new."
 heroLabel: "Best restaurants in Belgrade / hero"
 heroAlt: "A plated fine-dining New Balkan dish with a glass of wine"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-11-15"
 order: 7
 visible: true
 intent: "both"
@@ -50,7 +50,7 @@ Fine dining in Belgrade clusters in the historic core, where a handful of durabl
 
 **Langouste** is a long-running upscale seafood specialist with river views near Kosančićev venac in the historic centre, and in the latest selection it became one of Belgrade's two Michelin-*starred* kitchens, with refined, contemporary interpretations of local products (Michelin-starred as of the 2026 selection — star status is perishable, so confirm before you book). It's a reliable pick when you want fish and a view at the top end.
 
-**Enso** is
+**Enso** is a contemporary, chef-driven kitchen built around tasting menus and seasonal modern-European cooking, with a multi-year guide presence — durable-leaning. **Klub Književnika** (the Writers' Club) began in 1946 as the Serbian Writers' Association's eatery in the basement of a neoclassical building at Francuska 7 near the centre, opened to the public in the 1950s, and counts a roll-call of literary and international guests in its history; with over 70 years behind it and a current chef-patron kitchen blending Serbian produce with French technique, it's Michelin-listed and the kind of decades-old institution that rewards a visit as much for its atmosphere as its kitchen (longevity confirmed; Michelin status as of the 2026 selection).
 
 ## What are the best traditional Serbian restaurants — and where's the New Balkan scene?
 
@@ -58,7 +58,7 @@ For traditional Serbian cooking, the destination is **Skadarlija**, the cobbled 
 
 If you only take one *modern* idea away, make it the **"New Balkan" movement** — Belgrade's most distinctive and durable culinary theme. These kitchens integrate regional, mountain and village recipes into refined, contemporary menus, often as tasting menus.
 
-**Iva New Balkan Cuisine** is the flagship, holding a Michelin Bib Gourmand for value, with regional ingredients and inventive plating — this is the place to understand what "New Balkan" actually means on a plate (Bib Gourmand as of the 2026 selection). Working in the same spirit are **Bela Reka** — which earned a Bib Gourmand in the latest selection and is known for traditional, generous cooking built on meats and cheeses and close supplier ties, including its own farm (Bib Gourmand as of the 2026 selection) — plus **Na Ćošku** and **Legat 1903**, which rework regional and village recipes into polished menus. As a rule of thumb, restaurants that pair genuinely local ingredients with long ownership tend to be more durable than chef-branded pop-ups or restaurants tied to hotel management contracts. When you're weighing where to spend a special evening, that distinction is a useful filter.
+**Iva New Balkan Cuisine** is the flagship, holding a Michelin Bib Gourmand for value, with regional ingredients and inventive plating — this is the place to understand what "New Balkan" actually means on a plate (Bib Gourmand as of the 2026 selection). Working in the same spirit are **Bela Reka** — which earned a Bib Gourmand in the latest selection and is known for traditional, generous cooking built on meats and cheeses and close supplier ties, including its own farm (Bib Gourmand as of the 2026 selection) — plus **Na Ćošku**, which reworks regional and village recipes into polished menus. As a rule of thumb, restaurants that pair genuinely local ingredients with long ownership tend to be more durable than chef-branded pop-ups or restaurants tied to hotel management contracts. When you're weighing where to spend a special evening, that distinction is a useful filter.
 
 ## Where to eat at Beton Hala and for a river view?
 
@@ -68,13 +68,13 @@ The durable anchor here is **Comunale Caffè e Cucina**, one of the most elegant
 
 ## Who's in the wider field, and which names are still unproven?
 
-Beyond the anchors, the broader Michelin-listed and well-regarded field is large and varied. It includes **Homa, Magellan, The Square, Ebisu, Metropolitan, SkyLounge, Mezestoran Dvorište, Gušti Mora, JaM**, Pinot and others — a spread of creative bistros, hotel fine dining, seafood houses and New Balkan concepts across the centre, riverfront and New Belgrade. Many of these have operated for years and lean durable. (Examples throughout are illustrative of their category; rosters shift with each Michelin edition.)
+Beyond the anchors, the broader Michelin-listed and well-regarded field is large and varied. It includes **Homa (now relaunched as Homa Bistrot), Magellan, Ebisu, Metropolitan, SkyLounge, Mezestoran Dvorište, Gušti Mora, JaM**, Pinot and others — a spread of creative bistros, hotel fine dining, seafood houses and New Balkan concepts across the centre, riverfront and New Belgrade. Many of these have operated for years and lean durable. (Examples throughout are illustrative of their category; rosters shift with each Michelin edition.)
 
 A word of honest caution: newer entries such as **The Twenty Two** and **L'Adresse** are worth knowing about, but should be treated as perishable until they prove longevity. They may well become institutions; they aren't yet, so don't book them expecting a settled track record.
 
 ## Where do business and investor dinners happen?
 
-For business dinners, the city's corporate and investor dining clusters in hotel restaurants and rooftop lounges — **SkyLounge, Metropolitan Grill** and **The Square** among them — concentrated in New Belgrade (Novi Beograd) and the central hotels, which is more associated with polished lounges and deal-making tables than with traditional kafanas. L'Adresse and similar hotel-adjacent fine-dining rooms fit the same brief. That pattern is indicative as of 2026. A practical durability note: hotel restaurants tied to current management contracts tend to be less durable than owner-run institutions, so for a dinner that matters, the longer-standing anchors are the safer bet.
+For business dinners, the city's corporate and investor dining clusters in hotel restaurants and rooftop lounges — **SkyLounge** and **Metropolitan Grill** among them — concentrated in New Belgrade (Novi Beograd) and the central hotels, which is more associated with polished lounges and deal-making tables than with traditional kafanas. L'Adresse and similar hotel-adjacent fine-dining rooms fit the same brief. That pattern is indicative as of 2026. A practical durability note: hotel restaurants tied to current management contracts tend to be less durable than owner-run institutions, so for a dinner that matters, the longer-standing anchors are the safer bet.
 
 ## Do you need a reservation, and how should you dress?
 

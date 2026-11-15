@@ -71,4 +71,10 @@ const sk = defineCollection({
   schema: articleSchema,
 });
 
-export const collections = { articles, de, sk };
+// Czech pilot (2026-11-15): same mechanics as `sk`.
+const cs = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/cs" }),
+  schema: articleSchema,
+});
+
+export const collections = { articles, de, sk, cs };

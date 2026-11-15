@@ -7,7 +7,7 @@ description: "Stari Grad vs Zemun for where to stay in Belgrade: the central, wa
 lede: "For a short first sightseeing trip, the best fit for most travellers is Stari Grad (Old Town): it usually keeps the classic sights within an easy walk, so you spend less time commuting. Zemun is the better choice for a slower, more romantic or repeat stay by the Danube — but it sits farther from the centre, so the daily commute matters."
 heroLabel: "Stari Grad vs Zemun Belgrade / hero"
 heroAlt: "Split view of central Stari Grad rooftops and Zemun's Danube quay below the hilltop Gardoš Tower"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-11-15"
 order: 8
 visible: true
 intent: "both"
@@ -131,7 +131,7 @@ Whichever you pick, run the same final checks with the property before you pay. 
 - **Non-smoking.** Serbia is more smoke-tolerant than much of Western and Northern Europe, and the law permits specially designated smoking rooms in accommodation under set conditions. If smoke matters, book a non-smoking room explicitly and confirm in writing that there is no smoke smell.
 - **Noise.** Stari Grad's bar streets and Zemun's quay restaurants can both run late. Ask whether the room faces the street or a courtyard, and check recent reviews for noise.
 - **Building access.** Both areas have older buildings. Confirm whether there is an elevator, which floor the unit is on, and whether there are entrance steps — Zemun's Gardoš streets are also steep and narrow.
-- **Tourist tax.** Belgrade charges a small per-night residence tax (160 RSD per day for adults as of the latest official source, with reductions for children and exemptions for long stays), collected by the property. Hotels often build it into the rate; apartments may add it as a separate line, so check the house rules.
+- **Tourist tax.** Belgrade charges a small per-night residence tax (240 RSD per day for adults since 15 October 2026, up from 160 RSD, with reductions for children and some exemptions), collected by the property. Hotels often build it into the rate; apartments may add it as a separate line, so check the house rules.
 - **City tax and payment terms.** For apartments especially, confirm whether the city tax is included, how you get the keys, and whether a deposit or advance payment applies — and keep payment inside a protected booking platform or a verifiable agency.
 
 If you want the full picture of every Belgrade neighbourhood and how they compare, the [where to stay in Belgrade](/where-to-stay/where-to-stay-in-belgrade) overview lays them all out. And if Zemun's atmosphere is pulling at you, the [Zemun](/visit-belgrade/zemun) guide covers what there is to see and do once you are there.

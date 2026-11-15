@@ -7,7 +7,7 @@ description: "A Belgrade 3 day itinerary grouped by area so each day flows on fo
 lede: "Three days is the sweet spot for Belgrade — enough for the walkable central core, a neighbourhood or two and a half-day escape. Here's a plan grouped by area so each day flows on foot, and that compresses to one or two days if that's all you have."
 heroLabel: "Belgrade 3-day itinerary / hero"
 heroAlt: "Walking a three-day route through Belgrade"
-lastUpdated: "2026-07-02"
+lastUpdated: "2026-11-15"
 order: 3
 visible: true
 intent: "leisure"
@@ -54,7 +54,7 @@ The next ring out is still close. Dorćol, a mixed inner-city neighbourhood good
 
 ## Sites to sequence
 
-The core stops below are detailed on their canonical pages; here is just enough to slot them into a day. Belgrade Fortress has free, 24/7 grounds, though its interior sites are seasonal and ticketed — see [understanding Belgrade](/visit-belgrade/understanding-belgrade) for the detail. The Temple of St. Sava is free and open roughly 08:00–20:00. The Nikola Tesla Museum runs timed hourly guided tours at around 800 RSD, cash only. Republic Square and Knez Mihailova are open public space, and Ada Ciganlija is a free park with facilities running May–September. All hours and prices here are indicative as of 2026.
+The core stops below are detailed on their canonical pages; here is just enough to slot them into a day. Belgrade Fortress has free grounds (park and Lower Town open around the clock; Upper Town gates closed roughly 00:30–04:30 since June 2026), though its interior sites are seasonal and ticketed — see [understanding Belgrade](/visit-belgrade/understanding-belgrade) for the detail. The Temple of St. Sava is free and open roughly 08:00–20:00. The Nikola Tesla Museum runs timed hourly guided tours at around 800 RSD, cash only. Republic Square and Knez Mihailova are open public space, and Ada Ciganlija is a free park with facilities running May–September. All hours and prices here are indicative as of 2026.
 
 ### The three-day plan, day by day
 
@@ -64,7 +64,7 @@ Think of this as one workable option rather than the only correct route. Each da
 
 1. **Republic Square (Trg Republike)** — start here; it is the orientation point most people use and the meeting spot for the free walking tour.
 2. **Knez Mihailova** — walk the length of the pedestrian shopping promenade north-west from the square; it runs about 0.6–0.8 km up toward the fortress.
-3. **Belgrade Fortress (Kalemegdan)** — finish at the fortress crowning the ridge above the Sava–Danube confluence, roughly 0.9 km from Republic Square. The grounds are free and open around the clock; the interior sites are seasonal and ticketed (detail on [understanding Belgrade](/visit-belgrade/understanding-belgrade)). Time it for late afternoon and you catch sunset over the confluence.
+3. **Belgrade Fortress (Kalemegdan)** — finish at the fortress crowning the ridge above the Sava–Danube confluence, roughly 0.9 km from Republic Square. The grounds are free, and open until well after sunset (only the Upper Town gates close, roughly 00:30–04:30); the interior sites are seasonal and ticketed (detail on [understanding Belgrade](/visit-belgrade/understanding-belgrade)). Time it for late afternoon and you catch sunset over the confluence.
 4. **Skadarlija (evening)** — drop back down to the cobbled kafana quarter, a 5–8 minute downhill walk east of Republic Square, for dinner in the old bohemian street.
 
 If you want a guided spine for this day, the **free walking tour** follows almost exactly this line (see below). The whole Day 1 route sits within roughly 300–900 metres, so it is a comfortable loop rather than a transit problem.
@@ -83,7 +83,7 @@ If you want a guided spine for this day, the **free walking tour** follows almos
 - **Avala** — the wooded hill south of the city, with the Avala Tower and the Monument to the Unknown Hero; a quieter, scenic half-day.
 - **A day trip out of the city** — most commonly Novi Sad (see *Extending the trip* below).
 
-Reorder all of this freely to suit weather, opening days and your own pace. The fortress grounds being free and open around the clock makes them an easy filler for any gap in any day, sunset included.
+Reorder all of this freely to suit weather, opening days and your own pace. The fortress grounds being free and open from early morning until after midnight makes them an easy filler for any gap in any day, sunset included.
 
 ### If you only have one or two days
 
@@ -109,7 +109,7 @@ A few practicalities tied to Expo 2027 — including airport rail upgrades, any 
 
 ## Day 1 — the old-town spine
 
-Start at Republic Square, the meeting point locals call "at the horse" (the Prince Mihailo statue), with the National Museum and National Theatre framing it. Walk Knez Mihailova end to end — cafés, buskers, a century of façades — and let it deliver you to Kalemegdan. The fortress grounds are free and open around the clock; budget a couple of unhurried hours for the walls, the park and the confluence panorama, and note that the ticketed interior sights (the Roman Well, Nebojša Tower and others) run seasonal hours with small entry fees — reported around 80–300 RSD each, or roughly 450 RSD combined, as of 2026.
+Start at Republic Square, the meeting point locals call "at the horse" (the Prince Mihailo statue), with the National Museum and National Theatre framing it. Walk Knez Mihailova end to end — cafés, buskers, a century of façades — and let it deliver you to Kalemegdan. The fortress grounds are free and open late (Upper Town gates close roughly 00:30–04:30); budget a couple of unhurried hours for the walls, the park and the confluence panorama, and note that the ticketed interior sights (the Roman Well, Nebojša Tower and others) run seasonal hours with small entry fees — reported around 80–300 RSD each, or roughly 450 RSD combined, as of 2026.
 
 If you'd rather be walked than wander, this exact spine is what nearly every free walking tour covers: Republic Square → Knez Mihailova → Kalemegdan → Skadarlija, about 2–2.5 hours, tip-based at roughly €10–20 (reported, as of 2026) — a genuinely efficient Day 1 orientation. Either way, finish in Skadarlija: the cobbled kafana quarter is at its best in the evening, and a long dinner with live music there is the classic first Belgrade night.
 

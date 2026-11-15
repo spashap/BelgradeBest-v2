@@ -7,7 +7,7 @@ description: "The best things to do in Belgrade — the fortress, Temple of St S
 lede: "Belgrade's must-sees are easy to list and harder to understand. This is the canonical shortlist — fortress to St Sava to Skadarlija — with where each sits, how the city fits together on foot, and why it's worth your time."
 heroLabel: "Things to do in Belgrade / hero"
 heroAlt: "Belgrade's must-see sights gathered in one view"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-11-15"
 order: 2
 visible: true
 intent: "leisure"
@@ -23,7 +23,7 @@ faqs:
   - question: "What are the must-see attractions in Belgrade?"
     answer: "The canonical first-timer must-sees in Belgrade include Belgrade Fortress (Kalemegdan), the Temple of St. Sava, the Nikola Tesla Museum, Skadarlija, Republic Square with Knez Mihailova, Ada Ciganlija, Zemun with Gardoš Tower, and Avala Tower just outside the city. These sites recur across essentially all reputable guides, highlighting their significance for visitors."
   - question: "Why is Belgrade Fortress important to visit?"
-    answer: "Belgrade Fortress (Kalemegdan) is significant because it offers a panoramic view of the confluence of the Sava and Danube rivers and showcases the layered history of the city, with fortifications from Roman to Austrian periods. The grounds are open 24/7 and free to enter, making it an accessible site to explore the historical context of Belgrade."
+    answer: "Belgrade Fortress (Kalemegdan) is significant because it offers a panoramic view of the confluence of the Sava and Danube rivers and showcases the layered history of the city, with fortifications from Roman to Austrian periods. The grounds are free to enter; the park and Lower Town are open around the clock, while the Upper Town gates close roughly 00:30–04:30 (since June 2026), making it an accessible site to explore the historical context of Belgrade."
   - question: "What can I expect at the Temple of St. Sava?"
     answer: "The Temple of St. Sava is one of the largest Orthodox churches in the world, known for its monumental marble façade and impressive mosaic interior. As of 2026, it is open daily from approximately 08:00 to 20:00, with free entry and a donation box, making it a key site for understanding modern Serbian Orthodox identity."
   - question: "What is Skadarlija and why should I visit?"
@@ -40,7 +40,7 @@ A city's must-see list is usually a list of buildings. Belgrade's is more intere
 
 ## Belgrade Fortress (Kalemegdan)
 
-If you see only one thing, see this. The fortress sits on the promontory in **Stari Grad** (the old town) where the Sava meets the Danube, about a 10–15 minute walk northwest of Republic Square along the Knez Mihailova promenade. Its layered fortifications run from Roman through to Austrian periods — which is precisely why it matters: it's the one place where you can physically read Belgrade's whole contested history in stone, the same strategic high ground that has been besieged and rebuilt by everyone who ever wanted the rivers below. It also has the best confluence panorama in the city, the view down onto the Sava–Danube junction that explains in a glance why Belgrade is where it is. The grounds (and the surrounding Kalemegdan park) are open around the clock and free to enter, so it costs you nothing but the walk — you can wander the ramparts at any hour. The detail you'll need to plan a visit — seasonal hours for the interior sites and museums, their per-site tickets, and whether a combined ticket is worth it — lives on our [understanding Belgrade](/visit-belgrade/understanding-belgrade) page rather than here.
+If you see only one thing, see this. The fortress sits on the promontory in **Stari Grad** (the old town) where the Sava meets the Danube, about a 10–15 minute walk northwest of Republic Square along the Knez Mihailova promenade. Its layered fortifications run from Roman through to Austrian periods — which is precisely why it matters: it's the one place where you can physically read Belgrade's whole contested history in stone, the same strategic high ground that has been besieged and rebuilt by everyone who ever wanted the rivers below. It also has the best confluence panorama in the city, the view down onto the Sava–Danube junction that explains in a glance why Belgrade is where it is. The grounds are free to enter, so it costs you nothing but the walk. Kalemegdan Park and the Lower Town are open around the clock and free; since June 2026 the Upper Town gates close overnight, roughly 00:30–04:30, so plan a late-night ramble for the park rather than the ramparts. The detail you'll need to plan a visit — seasonal hours for the interior sites and museums, their per-site tickets, and whether a combined ticket is worth it — lives on our [understanding Belgrade](/visit-belgrade/understanding-belgrade) page rather than here.
 
 ## Temple of St. Sava
 

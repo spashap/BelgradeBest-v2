@@ -17,17 +17,20 @@ import { SITE } from "./site";
 // Slovak (added 2026-10-14): a three-page pilot — Expo hub, tickets, getting
 // there — timed to the 1 Nov Slovak ticket-package launch. Same mechanics as
 // German: `sk` content collection + /sk prefix + chrome strings in UI.sk.
-export type Lang = "en" | "de" | "sk";
+// Czech (added 2026-11-15): same three-page pilot as Slovak (hub, tickets,
+// getting there) — Czech Bing queries ("expo bělehrad") click well.
+export type Lang = "en" | "de" | "sk" | "cs";
 export type TrLang = Exclude<Lang, "en">;
-export const LANGS: Lang[] = ["en", "de", "sk"];
-export const TR_LANGS: TrLang[] = ["de", "sk"];
-export const OG_LOCALE: Record<Lang, string> = { en: "en_US", de: "de_DE", sk: "sk_SK" };
+export const LANGS: Lang[] = ["en", "de", "sk", "cs"];
+export const TR_LANGS: TrLang[] = ["de", "sk", "cs"];
+export const OG_LOCALE: Record<Lang, string> = { en: "en_US", de: "de_DE", sk: "sk_SK", cs: "cs_CZ" };
 // Header switcher labels: the chip text and the full name (title / aria).
 // Adding a language = one row here, a row in UI, TR_LANGS and PAGE_TWINS.
 export const LANG_LABEL: Record<Lang, { short: string; name: string }> = {
   en: { short: "EN", name: "English" },
   de: { short: "DE", name: "Deutsch" },
   sk: { short: "SK", name: "Slovenčina" },
+  cs: { short: "CS", name: "Čeština" },
 };
 
 // The header language switcher for a page: one entry per language the page
@@ -53,7 +56,7 @@ export function langPath(lang: Lang, enPathname: string): string {
 }
 export const dePath = (enPathname: string) => langPath("de", enPathname);
 export function enPath(trPathname: string): string {
-  return trPathname.replace(/^\/(de|sk)(?=\/|$)/, "") || "/";
+  return trPathname.replace(/^\/(de|sk|cs)(?=\/|$)/, "") || "/";
 }
 
 // hreflang set for a page and the translations it HAS (`langs`; default = the
@@ -73,7 +76,7 @@ export function alternates(enPathname: string, langs: TrLang[] = ["de"]): Altern
 // Hand-built (non-article) pages that have a twin, per language. Articles are
 // read from the content collections in twinLangs().
 export const PAGE_TWINS: Record<string, TrLang[]> = {
-  "/expo-2027": ["de", "sk"],
+  "/expo-2027": ["de", "sk", "cs"],
   "/expo-2027/pavilions": ["de"],
 };
 
@@ -99,7 +102,7 @@ export async function twinLangs(enPathname: string): Promise<TrLang[]> {
 }
 
 // Date formatting per language (visible "Updated" stamps, Expo dates).
-const DATE_LOCALE: Record<Lang, string> = { en: "en-GB", de: "de-DE", sk: "sk-SK" };
+const DATE_LOCALE: Record<Lang, string> = { en: "en-GB", de: "de-DE", sk: "sk-SK", cs: "cs-CZ" };
 export function fmtDate(d: string, lang: Lang): string {
   const t = Date.parse(d);
   if (Number.isNaN(t)) return d;
@@ -258,5 +261,25 @@ export const UI: Record<TrLang, Chrome> = {
     hub: "/sk/expo-2027",
     feedbackText: "Niečo v tomto sprievodcovi nesedí, je zastarané alebo chýba? ",
     feedbackLink: "Napíšte nám, čo ste hľadali",
+  },
+  cs: {
+    nav: [
+      { label: "Expo 2027", href: "/cs/expo-2027" },
+      { label: "Vstupenky", href: "/cs/expo-2027/tickets" },
+      { label: "Doprava", href: "/cs/expo-2027/getting-there" },
+    ],
+    footerNote:
+      "České vydání: zatím jen základní stránky o Expo 2027. Všechny ostatní stránky jsou v angličtině.",
+    footerEnglish: "Přejít na anglickou verzi",
+    updated: "Aktualizováno",
+    unknowns: "Zatím neznámé nebo nepotvrzené",
+    readNextEyebrow: "Čtěte dál",
+    readNextTitle: "Více o Expo 2027 česky",
+    readNextIntro: "Další české stránky o Expo 2027.",
+    skip: "Přeskočit na obsah",
+    toc: "Na této stránce",
+    hub: "/cs/expo-2027",
+    feedbackText: "Je v tomto průvodci něco špatně, zastaralé nebo chybí? ",
+    feedbackLink: "Napište nám, co jste hledali",
   },
 };

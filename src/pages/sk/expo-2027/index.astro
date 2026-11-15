@@ -46,7 +46,7 @@ const fromTo = `od ${fmtDate(EXPO.startDate, "sk").replace(/ \d{4}$/, "")} do ${
 
 const title = "Expo 2027 Belehrad: termíny, vstupenky a doprava";
 const heading = "Expo 2027 v Belehrade – sprievodca po slovensky";
-const description = `Expo 2027 v Belehrade (${dates}): vstupenky a balíky slovenských cestovných kancelárií od 1. novembra, doprava a slovenský pavilón.`;
+const description = `Expo 2027 v Belehrade (${dates}): stav vstupeniek a balíkov slovenských cestovných kancelárií, doprava a slovenský pavilón.`;
 
 const meta = pageMetadata({
   title,
@@ -65,7 +65,7 @@ const facts: { label: string; text: string; href?: string; en?: boolean }[] = [
   { label: "Miesto", text: `${EXPO.venue}, na západe Belehradu – asi 5 km od letiska Nikolu Teslu`, href: sk(`/${LEG}/getting-there`) },
   {
     label: "Vstupenky",
-    text: "Zatiaľ nie sú v predaji a nemajú cenu – plánovaný štart 15. septembra 2026 prešiel bez predaja. Slovenské cestovné kancelárie majú od 1. novembra 2026 predávať balíky so vstupenkou.",
+    text: "Zatiaľ nie sú v predaji a nemajú cenu – plánovaný štart 15. septembra 2026 prešiel bez predaja. Balíky slovenských cestovných kancelárií so vstupenkou boli ohlásené od 1. novembra 2026, do polovice novembra sa však žiadny verejne neobjavil.",
     href: sk(`/${LEG}/tickets`),
   },
   { label: "Téma", text: `„${EXPO.theme}“` },
@@ -91,7 +91,7 @@ const faqs = [
   {
     question: "Dajú sa už kúpiť vstupenky na Expo 2027?",
     answer:
-      "Nie, k 17. septembru 2026. Plánovaný začiatok predaja 15. septembra 2026 prešiel bez spustenia predaja – po 15. máji 2026 už druhý zmeškaný termín – a nový dátum oznámený nebol. Jednodňové a trojdňové vstupenky sú potvrdené ako druhy, ceny však zverejnené neboli. Od 1. novembra 2026 majú slovenské cestovné kancelárie predávať balíky, ktoré vstupenku obsahujú.",
+      "Nie, k 15. novembru 2026. Plánovaný začiatok predaja 15. septembra 2026 prešiel bez spustenia predaja – po 15. máji 2026 už druhý zmeškaný termín – a nový dátum oznámený nebol. Jednodňové a trojdňové vstupenky sú potvrdené ako druhy, ceny však zverejnené neboli. Slovenské cestovné kancelárie mali od 1. novembra 2026 predávať balíky so vstupenkou; do polovice novembra sa žiadna verejná ponuka ani cena neobjavila.",
   },
   {
     question: "Má Slovensko na Expo 2027 vlastný pavilón?",

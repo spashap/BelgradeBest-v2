@@ -1,9 +1,13 @@
 ---
-// Click counter for affiliate links: one tiny inline listener, emitted only on
-// pages that actually render an affiliate block (and run only once per page).
-// It sends a GA4 event named after the partner (aff_click_<partner>) through
-// the gtag the site already loads, so it adds no script file, request or
-// cookie. Where GA4 is absent (dev) or blocked, it does nothing.
+// Affiliate measurement: one tiny inline script, emitted only on pages that
+// actually render an affiliate block (and run only once per page). Two GA4
+// events through the gtag the site already loads (no script file, request or
+// cookie of its own):
+//   aff_click_<partner>  a click on a partner link (partner = event NAME)
+//   aff_view             a block scrolled at least half into view, once per
+//                        block per page load (the denominator for click rate)
+// Both use only built-in dimensions (pagePath etc.) in the admin reports.
+// Where GA4 is absent (dev) or blocked, it does nothing.
 ---
 <script is:inline>
   (function () {
@@ -18,5 +22,18 @@
         transport_type: "beacon",
       });
     });
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting || typeof window.gtag !== "function") return;
+        io.unobserve(en.target);
+        window.gtag("event", "aff_view", { block: en.target.getAttribute("data-aff-block") || "" });
+      });
+    }, { threshold: 0.5 });
+    var start = function () {
+      document.querySelectorAll("[data-aff-block]").forEach(function (b) { io.observe(b); });
+    };
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+    else start();
   })();
 </script>

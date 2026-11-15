@@ -1,1 +1,142 @@
-{}
+{
+  "g01": {
+    "done": false,
+    "note": "15 Nov: code ready (lib/admin/notify.ts) but RESEND_API_KEY not set — owner action, 10 min.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g02": {
+    "done": false,
+    "note": "15 Nov: still imported via GSC; IndexNow to Bing still 403. Owner action in Bing WMT.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g03": {
+    "done": false,
+    "note": "15 Nov: not automated; scripts/submit-to-bing.mjs run by hand after each URL set.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g04": {
+    "done": false,
+    "note": "15 Nov: KB/seo/LINKS-LOG.md does not exist. Baseline: 0 referring domains (Bing GetLinkCounts).",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g10": {
+    "done": false,
+    "note": "15 Nov: no /expo-2027/press page. Contract ledger (/expo-2027/contracts) covers part of it.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g11": {
+    "done": false,
+    "note": "15 Nov: countdown widget linked from tracker + hub; no embed box on profiles.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g12": {
+    "done": false,
+    "note": "15 Nov: no CSV download or visible changelog on the tracker.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g20": {
+    "done": false,
+    "note": "15 Nov: superseded? Outreach engine cancelled 17 Sep (lawful list ~1 address). Owner to confirm drop.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g21": {
+    "done": false,
+    "note": "15 Nov: no correction notices logged since 17 Sep.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g22": {
+    "done": false,
+    "note": "15 Nov: nothing to log (g21 idle).",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g23": {
+    "done": true,
+    "note": "Permanent rule, not a task: never ask for a link in return.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g30": {
+    "done": false,
+    "note": "15 Nov: no press list.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g31": {
+    "done": true,
+    "note": "Done: 15 Sep slipped; tickets page tracked it in EN/DE/SK, re-verified 15 Nov.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g32": {
+    "done": false,
+    "note": "15 Nov: not checked/attempted.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g33": {
+    "done": false,
+    "note": "15 Nov: not attempted.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g40": {
+    "done": false,
+    "note": "15 Nov: not sent. Owner decision whether still wanted.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g41": {
+    "done": false,
+    "note": "15 Nov: not sent.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g42": {
+    "done": false,
+    "note": "15 Nov: not sent.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g43": {
+    "done": false,
+    "note": "15 Nov: not sent; pavilion renders mostly still unpublished.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g44": {
+    "done": false,
+    "note": "15 Nov: not sent.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g50": {
+    "done": true,
+    "note": "Routine via scripts/submit-to-bing.mjs (DE/SK done; 15 Nov list: scripts/bing-urls-2026-11-15.txt).",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g51": {
+    "done": false,
+    "note": "15 Nov: FB page live; daily cadence not tracked. FB traffic = ~1% engaged (m.facebook).",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g52": {
+    "done": false,
+    "note": "15 Nov: no ticket-alert capture. Still valuable: tickets = best Bing query.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g53": {
+    "done": false,
+    "note": "15 Nov: not started.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g54": {
+    "done": false,
+    "note": "15 Nov: not started.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g60": {
+    "done": false,
+    "note": "15 Nov: no monthly audit log. Links still 0.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g61": {
+    "done": true,
+    "note": "Done in sessions 01 Oct / 14 Oct: German gate read, Slovak pilot chosen, outreach dropped.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  },
+  "g62": {
+    "done": false,
+    "note": "15 Nov: not run. Google sends ~0 clicks; low priority.",
+    "updatedAt": "2026-11-15T21:30:00Z"
+  }
+}

@@ -8,49 +8,65 @@
       "name": "Bing clicks per day",
       "baseline": "~2 (04 Sep)",
       "target1": "≥ 5",
-      "target2": "≥ 15"
+      "target2": "≥ 15",
+      "current": "~7 (199 in 28 d to 14 Nov) ✓ target 1",
+      "currentAt": "2026-11-15"
     },
     {
       "name": "Pages ranking in Bing (impressions > 0)",
       "baseline": "113 (17 Sep)",
       "target1": "≥ 130",
-      "target2": "≥ 160"
+      "target2": "≥ 160",
+      "current": "68 pages in the last 28 d (different window from the baseline)",
+      "currentAt": "2026-11-15"
     },
     {
       "name": "Award-ledger sessions / 28 days",
       "baseline": "0 (not published)",
       "target1": "≥ 40",
-      "target2": "≥ 150"
+      "target2": "≥ 150",
+      "current": "15 landings 18 Oct–14 Nov",
+      "currentAt": "2026-11-15"
     },
     {
       "name": "Unsolicited citations (any rel)",
       "baseline": "0",
       "target1": "≥ 2 independent publishers by 16 Dec",
-      "target2": "≥ 5"
+      "target2": "≥ 5",
+      "current": "0",
+      "currentAt": "2026-11-15"
     },
     {
       "name": "Referring domains (Bing InLinks)",
       "baseline": "0 (04 Sep)",
       "target1": "watch only — not a target",
-      "target2": "watch only"
+      "target2": "watch only",
+      "current": "0 (15 Nov)",
+      "currentAt": "2026-11-15"
     },
     {
       "name": "Google indexed URLs",
       "baseline": "66 of 145 (04 Sep)",
       "target1": "≥ 80",
-      "target2": "≥ 120"
+      "target2": "≥ 120",
+      "current": "not re-measured; Google clicks 0 in 28 d",
+      "currentAt": "2026-11-15"
     },
     {
       "name": "GA4 sessions / 28 days (ex-bots)",
       "baseline": "~140",
       "target1": "300",
-      "target2": "800"
+      "target2": "800",
+      "current": "829 (18 Oct–14 Nov) ✓ target 2 (800)",
+      "currentAt": "2026-11-15"
     },
     {
       "name": "Owner hours spent on acquisition",
       "baseline": "0",
       "target1": "≤ 60 by 16 Dec (stop rule)",
-      "target2": "—"
+      "target2": "—",
+      "current": "not logged",
+      "currentAt": "2026-11-15"
     }
   ],
   "phases": [

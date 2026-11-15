@@ -464,7 +464,7 @@ export type GrowthPlan = {
   updated: string;
   goal: string;
   diagnosis: string;
-  metrics: { name: string; baseline: string; target1: string; target2: string }[];
+  metrics: { name: string; baseline: string; target1: string; target2: string; current?: string; currentAt?: string }[];
   phases: { id: string; title: string; when: string; summary: string }[];
   tasks: GrowthTask[];
 };

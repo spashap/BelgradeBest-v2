@@ -1,6 +1,6 @@
 {
   "_readme": "Expo 2027 contract award ledger — the data master for /expo-2027/contracts and /data/expo-2027-contracts.json. SCOPE: procurement run by the ORGANISER, EXPO 2027 Belgrade d.o.o. National-pavilion spending (each country's own budget) and Serbian state construction contracts awarded by ministries are deliberately OUT of scope — different awarding bodies, different money — and must not be mixed in. RULES, applied on every edit: (1) a consortium award is ONE row, listing every named member; (2) never add a subcontractor's share to a prime contract's value; (3) `kind` must say whether a figure is a firm award or a framework ceiling (an estimated maximum, not spending); (4) never sum the rows into a total and never call any sum 'the cost of Expo' — the ledger is deliberately incomplete; (5) every row carries at least one source URL and a `verified` date; nothing enters without one. Bump `updated` on every edit — it drives dateModified and sitemap lastmod.",
-  "updated": "2026-10-01",
+  "updated": "2026-11-15",
   "scopeNote": "Every award below was made by EXPO 2027 Belgrade d.o.o., the state-owned company organising the exhibition. Values are as reported by Serbian media from the procurement record, excluding VAT unless stated. This is not a complete register of Expo spending: it covers the packages we have been able to source and verify, and it excludes national pavilions, which each country funds itself.",
   "contracts": [
     {
@@ -213,6 +213,26 @@
         "https://www.b92.net/biz/srbija/vesti/271382/expo-2027-izabrao-partnera-za-primopredaju-paviljona-sporazum-vredan-75-miliona-dinara/vest"
       ],
       "note": "The date shown is when the award was publicly reported; the decision date was not published."
+    },
+    {
+      "id": "lease-management",
+      "package": "Retail and hospitality space lease management",
+      "awardedTo": [
+        "NOVASTON DOO Beograd",
+        "NOVASTON PROJECT MANAGEMENT-HPM DOO Beograd"
+      ],
+      "subcontractors": [],
+      "value": 1560000000,
+      "currency": "RSD",
+      "vat": "excl",
+      "kind": "award",
+      "awarded": "2026-07-08",
+      "scope": "Management and commercialisation of about 20,000 m² of hospitality and retail space on the Expo site and in the Expo village: tenant coordination, financial and operational management, signing lease agreements and support for fitting out the leased units.",
+      "verified": "2026-11-15",
+      "sources": [
+        "https://www.tanjug.rs/expo-2027/vesti/264837/kompanija-ekspo-2027-dodelila-ugovor-za-upravljanje-zakupima-prostora-na-ekspu-2027/vest"
+      ],
+      "note": "Awarded to a group of bidders on the most-economically-advantageous-tender criterion. The date shown is when the award was publicly reported; the report does not say whether it is a framework agreement or give the term."
     }
   ],
   "watching": [

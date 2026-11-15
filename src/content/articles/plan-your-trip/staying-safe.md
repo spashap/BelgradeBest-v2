@@ -7,7 +7,7 @@ description: "Is Belgrade safe? An honest answer for tourists and solo traveller
 lede: "Is Belgrade safe? For most visitors the answer is yes — it is a comfortable, broadly safe city, and treating it as dangerous would mislead you. The useful version is specific: the handful of scams worth knowing, a little nightlife sense, the emergency numbers, whether the tap water is fine, and how healthcare and insurance work if something goes wrong."
 heroLabel: "Staying safe in Belgrade / hero"
 heroAlt: "Staying safe and healthy while visiting Belgrade"
-lastUpdated: "2026-07-02"
+lastUpdated: "2026-11-15"
 order: 7
 visible: true
 intent: "both"
@@ -37,9 +37,15 @@ unknowns: []
 
 ## Is Belgrade safe?
 
-Yes — for ordinary visitors, Belgrade is a broadly safe city, and the most honest answer to "is Belgrade safe?" is a reassuring one with a few specific caveats. Official tourism and government portals describe Serbia as generally safe, with a low crime rate relative to many European destinations. Belgrade and other major cities are characterised as very safe, with no "no-go zones," and Western government advisories — while cautious — identify no systemic risk to ordinary tourists beyond standard urban concerns. As of mid-2026 there is no current advisory change that alters this picture, though advisory levels are perishable and worth a fresh check close to your travel dates.
+Yes — for ordinary visitors, Belgrade is a broadly safe city, and the most honest answer to "is Belgrade safe?" is a reassuring one with a few specific caveats. Official tourism and government portals describe Serbia as generally safe, with a low crime rate relative to many European destinations. Belgrade and other major cities are characterised as very safe, with no "no-go zones," and Western government advisories — while cautious — identify no systemic risk to ordinary tourists beyond standard urban concerns. The one current caveat is political: large anti-government protests have taken place regularly in central Belgrade since late 2024 (see below). Advisory levels are perishable, so check your government's travel advice close to your travel dates.
 
 The more detailed picture is reassuring too. Violent crime exists mainly in organised-crime contexts and around high-profile sporting events, and is not typically aimed at tourists. What you should plan around is ordinary petty theft: pickpocketing and bag-snatching happen in crowded areas, on public transport, at markets, and at motorway service stations. Treat your phone and wallet the way you would in any busy European capital, and you have covered most of the real risk.
+
+## What about the protests?
+
+Since the November 2024 Novi Sad railway-station collapse, Serbia has seen a long wave of anti-government protests, and the biggest rallies happen in central Belgrade (around the Parliament, Slavija and the main boulevards). They have been overwhelmingly peaceful, but on rally days roads close, buses are diverted and some central areas fill with very large crowds; a few have ended in scuffles with police. In 2026 several neighbouring governments advised their citizens to avoid central Belgrade during large announced rallies, and the UK and US advisories mention demonstrations.
+
+For a visitor this is a logistics issue more than a safety one: check local news or your hotel on the day, keep away from crowds and police lines, plan an alternative route if your transport crosses the centre, and don't photograph police up close.
 
 ## Is Belgrade safe for solo female travellers?
 

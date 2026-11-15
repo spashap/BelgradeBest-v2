@@ -4,21 +4,24 @@
 // the article frontmatter `partnerTargets` (placements: src/data/
 // partner-links.json; switches + tracked links: src/data/affiliates.json,
 // edited from /admin/affiliates). Invisible while the partner is off. Same
-// rel="sponsored nofollow" + disclosure rules as StayLinks.
+// rel="sponsored nofollow" + disclosure rules as StayLinks; `lang` picks the
+// translated chrome + labels for the /de/ and /sk/ pilots.
 import data from "../data/partner-links.json";
 import AffClick from "./AffClick.astro";
-import { travelLinks, clickEvent } from "../lib/affiliates";
+import { travelLinks, travelChrome, clickEvent } from "../lib/affiliates";
 
 interface Props {
   targets?: string[];
+  lang?: string;
 }
-const { targets = [] } = Astro.props;
-const items = travelLinks(targets);
+const { targets = [], lang = "en" } = Astro.props;
+const chrome = travelChrome(lang);
+const items = travelLinks(targets, lang);
 ---
 {
   items.length > 0 ? (
-    <aside class="c-staylinks" aria-label={data.heading}>
-      <p class="c-staylinks__title">{data.heading}</p>
+    <aside class="c-staylinks" aria-label={chrome.heading} data-aff-block="travel">
+      <p class="c-staylinks__title">{chrome.heading}</p>
       <ul class="c-staylinks__list">
         {items.map((x) => (
           <li>
@@ -29,7 +32,7 @@ const items = travelLinks(targets);
         ))}
       </ul>
       <p class="c-staylinks__disc">
-        {data.disclosure} <a href={data.disclosureHref}>How we make money</a>.
+        {chrome.disclosure} <a href={data.disclosureHref}>{chrome.disclosureLink}</a>.
       </p>
       <AffClick />
     </aside>

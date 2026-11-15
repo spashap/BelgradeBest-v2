@@ -576,6 +576,7 @@ export type AffClicks =
       byDevice: AffClickRow[];
       bySource: AffClickRow[];
       pageViews: Record<string, number>; // views of the pages that carry blocks
+      blockViews: Record<string, number>; // aff_view events per pagePath (block seen)
     }
   | { configured: false; reason: string };
 
@@ -623,6 +624,17 @@ export async function ga4AffiliateClicks(days: number, events: string[], pages: 
       });
       for (const r of pv.rows ?? []) pageViews[r.dimensionValues?.[0]?.value ?? ""] = num(r.metricValues?.[0]?.value);
     }
+    // Blocks actually seen (AffClick.astro sends aff_view once per block per load).
+    const blockViews: Record<string, number> = {};
+    const [bv] = await c.client.runReport({
+      property: c.property,
+      dateRanges,
+      dimensions: [{ name: "pagePath" }],
+      metrics: [{ name: "eventCount" }],
+      dimensionFilter: withoutBots({ filter: { fieldName: "eventName", stringFilter: { value: "aff_view" } } }),
+      limit: 200,
+    });
+    for (const r of bv.rows ?? []) blockViews[r.dimensionValues?.[0]?.value ?? ""] = num(r.metricValues?.[0]?.value);
     return {
       configured: true,
       days,
@@ -632,6 +644,7 @@ export async function ga4AffiliateClicks(days: number, events: string[], pages: 
       byDevice: rows(3),
       bySource: rows(4),
       pageViews,
+      blockViews,
     };
   } catch (e) {
     return { configured: false, reason: `GA4 error: ${(e as Error).message}` };

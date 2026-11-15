@@ -7,7 +7,7 @@ description: "Belgrade wine bars and Serbian wine tasting — the regions and in
 lede: "Beyond the clubs, Belgrade has a quieter going-out mode built on Serbian wine and rakija. Here's the wine renaissance and its regions, the indigenous grapes to try, the Belgrade wine bars worth a visit, where to do a wine tasting, and how the fruit-brandy tradition actually works."
 heroLabel: "Belgrade wine bars and rakija / hero"
 heroAlt: "Glasses of Serbian wine and rakija bottles on a wine-bar counter"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-11-15"
 order: 10
 visible: true
 intent: "leisure"
@@ -62,7 +62,7 @@ Beyond those, **Naše Vino** and **Wine bar Passage** are worth naming as exampl
 
 If you'd rather have someone walk you through it, **guided Serbian wine tastings** are run regularly for visitors — typically a flight of several Balkan or Serbian wines paired with local snacks, hosted in English, often in the **Dorćol** district (the cafe- and bar-heavy inner-city neighbourhood just north-east of the centre). These are an easy, structured entry point if you don't want to navigate a list yourself, and several operators run them most days; book ahead and confirm the current schedule.
 
-And if you'd rather not commit to a dedicated wine bar at all, many serious restaurants double as wine venues showcasing Serbian regions — **Legat 1903, Langouste, Comunale and Iva** among them, several of them Michelin-listed — and for non-specialists these may be the most practical introduction, letting you pair a regional wine with a meal. That overlap with the dining scene runs deep; for the full picture of where to eat, the [best restaurants in Belgrade](/food-and-nightlife/best-restaurants-in-belgrade) is the place to look.
+And if you'd rather not commit to a dedicated wine bar at all, many serious restaurants double as wine venues showcasing Serbian regions — **Langouste, Comunale and Iva** among them, several of them Michelin-listed — and for non-specialists these may be the most practical introduction, letting you pair a regional wine with a meal. That overlap with the dining scene runs deep; for the full picture of where to eat, the [best restaurants in Belgrade](/food-and-nightlife/best-restaurants-in-belgrade) is the place to look.
 
 ## Rakija — the tradition behind the bottle
 

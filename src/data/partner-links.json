@@ -5,16 +5,47 @@
   "targets": {
     "airport-transfer": {
       "label": "Pre-book a fixed-price airport transfer (Welcome Pickups)",
-      "partner": "welcome-pickups"
+      "partner": "welcome-pickups",
+      "labels": {
+        "de": "Flughafentransfer zum Festpreis vorab buchen (Welcome Pickups)",
+        "sk": "Rezervujte si letiskový transfer za pevnú cenu (Welcome Pickups)",
+        "cs": "Rezervujte si letištní transfer za pevnou cenu (Welcome Pickups)"
+      }
     },
     "air-serbia": {
       "label": "Search Air Serbia flights to Belgrade",
-      "partner": "air-serbia"
+      "partner": "air-serbia",
+      "deep": {
+        "en": "https://www.airserbia.com/en/flights-to-belgrade",
+        "de": "https://www.airserbia.com/de/fluge-nach-belgrad"
+      },
+      "labels": {
+        "de": "Air-Serbia-Flüge nach Belgrad suchen",
+        "sk": "Vyhľadať lety Air Serbia do Belehradu",
+        "cs": "Vyhledat lety Air Serbia do Bělehradu"
+      }
     },
     "esim": {
       "label": "Get a Serbia eSIM before you fly (aloSIM)",
       "partner": "alosim"
     }
   },
-  "_note": "Placements for non-hotel partners. On/off and the tracked links live in src/data/affiliates.json (edited from /admin/affiliates)."
+  "_note": "Placements for non-hotel partners. On/off and the tracked links live in src/data/affiliates.json (edited from /admin/affiliates).",
+  "tr": {
+    "de": {
+      "heading": "Vorab buchen",
+      "disclosure": "Dies sind Affiliate-Links: Wenn Sie darüber buchen, erhalten wir eventuell eine kleine Provision, ohne Mehrkosten für Sie.",
+      "disclosureLink": "So finanzieren wir uns (EN)"
+    },
+    "sk": {
+      "heading": "Rezervujte vopred",
+      "disclosure": "Ide o partnerské odkazy: ak cez ne rezervujete, môžeme získať malú províziu bez ďalších nákladov pre vás.",
+      "disclosureLink": "Ako zarábame (EN)"
+    },
+    "cs": {
+      "heading": "Rezervujte předem",
+      "disclosure": "Jde o partnerské odkazy: pokud přes ně rezervujete, můžeme získat malou provizi, aniž byste platili víc.",
+      "disclosureLink": "Jak se financujeme (EN)"
+    }
+  }
 }

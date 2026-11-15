@@ -7,7 +7,7 @@ description: "Programm und Themen der Expo 2027 Belgrad: Pavillons, Nationaltage
 lede: "Das Motto der Expo 2027 — Play for Humanity: Sport and Music for All (Spiel für die Menschheit: Sport und Musik für alle) — gibt den Rahmen für das offizielle Programm vor. Diese Seite ist Ihr Leitfaden zu allem, was geboten wird: die Pavillons und thematischen Bereiche, das Sport- und Musikprogramm, die Nationaltage sowie eine ehrliche Bestandsaufnahme dessen, welche Termine, Öffnungszeiten und Top-Acts noch nicht veröffentlicht sind."
 heroLabel: "Expo-2027-Programm / Hero"
 heroAlt: "Die Promenade der Expo 2027 in Belgrad zur goldenen Stunde — Sport, Musik und Spiel"
-lastUpdated: "2026-09-13"
+lastUpdated: "2026-11-15"
 order: 3
 visible: true
 intent: "both"
@@ -18,11 +18,11 @@ linksTo:
   - "/food-and-nightlife"
   - "/visit-belgrade/things-to-do-in-belgrade"
 faqs:
-  - answer: "In drei thematischen Pavillons — den Pavillons Power of Play, Play for Progress und Play Together — sowie einem Forum für Vorträge und Workshops, thematischen Programmsträngen für Musik („Music of all for all“) und Sport („Sport of all for all“), rekordverdächtigen „Limitless Play“-Herausforderungen, Nationaltagen der teilnehmenden Länder und stadtweiten „Playgrounds“ außerhalb des Geländes. Unabhängige Reiseführer beschreiben tägliche Live-Auftritte, von Konzerten auf schwimmenden Bühnen bis zu live gemalten Wandbildern. Der vollständige, datierte Kalender ist Stand August 2026 noch nicht veröffentlicht."
+  - answer: "In drei thematischen Pavillons — den Pavillons Power of Play, Play for Progress und Play Together — sowie einem Forum für Vorträge und Workshops, thematischen Programmsträngen für Musik („Music of all for all“) und Sport („Sport of all for all“), rekordverdächtigen „Limitless Play“-Herausforderungen, Nationaltagen der teilnehmenden Länder und stadtweiten „Playgrounds“ außerhalb des Geländes. Unabhängige Reiseführer beschreiben tägliche Live-Auftritte, von Konzerten auf schwimmenden Bühnen bis zu live gemalten Wandbildern. Der vollständige, datierte Kalender ist Stand Mitte November 2026 noch nicht veröffentlicht."
     question: "Was gibt es bei der Expo 2027 zu erleben?"
   - answer: "Ein Nationaltag ist ein Tag, der einem teilnehmenden Land gewidmet ist, an dem es seine Kultur, Innovationen, Küche und Darbietungen über seinen Pavillon und Bühnenprogramme präsentiert. Bei 141 registrierten Ländern (Stand August 2026) wird es davon während der 93 Tage viele geben. Der Veranstalter hat den vollständigen Zeitplan, der jedem Land ein Datum zuordnet, noch nicht veröffentlicht. Einzelne Länder nennen ihren Termin aber bereits selbst: Das türkische Handelsministerium nennt den 19. Mai 2027 als geplanten Nationaltag. Für die meisten Länder lässt sich also noch nicht nach dem Datum planen — ein Blick auf die Expo- oder Ministeriumsmeldungen Ihres eigenen Landes lohnt sich jedoch eher als das Warten auf den Veranstalter."
     question: "Was sind Nationaltage?"
-  - answer: "Offizielle Öffnungs- und Schließzeiten sind Stand August 2026 noch nicht veröffentlicht. Die offizielle Programmseite zeigt weiterhin „Tickets available soon“ an, und es gibt noch keine Regelung zu täglichen Zeitfenstern oder zur Besucherkapazität. Prüfen Sie die offizielle Programmseite (expobelgrade2027.org) auf Öffnungszeiten, sobald diese bekannt gegeben werden; wir aktualisieren diese Seite, sobald sie erscheinen."
+  - answer: "Offizielle Öffnungs- und Schließzeiten sind Stand Mitte November 2026 noch nicht veröffentlicht. Die offizielle Programmseite zeigt weiterhin „Tickets available soon“ an, und es gibt noch keine Regelung zu täglichen Zeitfenstern oder zur Besucherkapazität. Prüfen Sie die offizielle Programmseite (expobelgrade2027.org) auf Öffnungszeiten, sobald diese bekannt gegeben werden; wir aktualisieren diese Seite, sobald sie erscheinen."
     question: "Wie sind die Öffnungszeiten der Expo 2027?"
   - answer: "Das offizielle Motto lautet „Play for Humanity: Sport and Music for All“ und untersucht, wie Spiel durch Sport und Musik Resilienz, Kreativität, Verbundenheit und Wohlbefinden fördert."
     question: "Was ist das Motto der Expo 2027?"
@@ -30,7 +30,7 @@ faqs:
     question: "Wann findet die Expo 2027 statt?"
   - answer: "Das Konzept sieht drei thematische Pavillons vor — die Pavillons Power of Play, Play for Progress und Play Together — sowie ein Forum für Vorträge, Podiumsdiskussionen, Workshops und Networking."
     question: "Welche Pavillons wird es geben?"
-  - answer: "Nein. Stand August 2026 ist noch kein vollständiger, öffentlicher Tageskalender mit Konzerten, Sportveranstaltungen, Zeremonien, Nationaltagen oder Top-Acts veröffentlicht worden, und die offizielle Programmseite zeigt weiterhin „Tickets available soon“ an."
+  - answer: "Nein. Stand Mitte November 2026 ist noch kein vollständiger, öffentlicher Tageskalender mit Konzerten, Sportveranstaltungen, Zeremonien, Nationaltagen oder Top-Acts veröffentlicht worden, und die offizielle Programmseite zeigt weiterhin „Tickets available soon“ an."
     question: "Ist der tägliche Programmkalender schon verfügbar?"
   - answer: "Balich Wonder Studio, der italienische Zeremonien-Produzent hinter der Eröffnungsfeier der Olympischen Winterspiele Mailand-Cortina 2026, der Eröffnungsfeier der FIFA-Weltmeisterschaft 2022 in Katar und der Zeremonie der Expo 2025 in Osaka. Das Studio erhielt den Expo-2027-Auftrag im Februar 2026 in einer öffentlichen Ausschreibung mit vier Bietern für rund 2,32 Milliarden Dinar exklusive Mehrwertsteuer (etwa 19,8 Millionen Euro). Termine, Veranstaltungsort, Ticketverkauf und Mitwirkende der Zeremonien wurden noch nicht bekannt gegeben."
     question: "Wer produziert die Eröffnungs- und Abschlusszeremonien der Expo 2027?"
@@ -83,7 +83,7 @@ Der Haken ist das Timing. Der Veranstalter hat die **vollständige Zuordnung von
 
 ## Wie sind die Öffnungszeiten der Expo 2027?
 
-Ehrlich gesagt: **noch nicht bekannt gegeben.** Stand 2026 gibt es keine offizielle Aussage zu täglichen Öffnungs- und Schließzeiten, zu Zeitfenster-Reservierungen an Spitzentagen oder zu Regelungen des Besuchermanagements. Die offizielle Programmseite zeigt weiterhin **„Tickets available soon“** an und veröffentlicht weder Uhrzeiten noch Ticketpreise noch Eintrittskategorien. Für die Planung ist der einzige feste Anhaltspunkt der Gesamtzeitraum — **15. Mai bis 15. August 2027**. Die Besucherprognosen sind immer weiter gestiegen: Die Participants-FAQ modelliert rund 4,1 Millionen Besuche (etwa 44.652 pro Tag, Spitzen um 89.304), während das BIE inzwischen mehr als 6 Millionen nennt — bei gleichen 93 Tagen wären das eher 64.500 pro Tag. Zahlen dieser Größenordnung machen ein Zeitfenster- oder Kapazitätssystem plausibel, bestätigt ist keines. Prüfen Sie die [offizielle Website der Expo 2027](https://expobelgrade2027.org/en/intro) (expobelgrade2027.org) auf Öffnungszeiten, sobald diese online gehen; wir aktualisieren diese Seite, sobald es so weit ist.
+Ehrlich gesagt: **noch nicht bekannt gegeben.** Stand 2026 gibt es keine offizielle Aussage zu täglichen Öffnungs- und Schließzeiten, zu Zeitfenster-Reservierungen an Spitzentagen oder zu Regelungen des Besuchermanagements. Die offizielle Programmseite zeigt weiterhin **„Tickets available soon“** an und veröffentlicht weder Uhrzeiten noch Ticketpreise noch Eintrittskategorien. Für die Planung ist der einzige feste Anhaltspunkt der Gesamtzeitraum — **15. Mai bis 15. August 2027**. Die Besucherprognosen sind immer weiter gestiegen: Die Participants-FAQ modelliert rund 4,1 Millionen Besuche (etwa 44.652 pro Tag, Spitzen um 89.304), während das obere Ziel der Organisatoren bei 6 Millionen liegt — bei gleichen 93 Tagen wären das eher 64.500 pro Tag. Zahlen dieser Größenordnung machen ein Zeitfenster- oder Kapazitätssystem plausibel, bestätigt ist keines. Prüfen Sie die [offizielle Website der Expo 2027](https://expobelgrade2027.org/en/intro) (expobelgrade2027.org) auf Öffnungszeiten, sobald diese online gehen; wir aktualisieren diese Seite, sobald es so weit ist.
 
 ## Wer sind die Botschafter und Maskottchen der Expo 2027?
 
@@ -93,7 +93,7 @@ Die Expo hat außerdem offizielle Maskottchen: **Rastko und Milica**, ein Figure
 
 ## Wie groß ist das Programm?
 
-Die Expo wurde als Veranstaltung mit **mehr als 8.000 Events über ihre 93 Tage** beschrieben. Diese Zahl veröffentlicht das BIE selbst, ein datiertes Programm belegt sie aber noch nicht — sie ist daher als geplante Größenordnung zu lesen, nicht als bestätigte Zahl. Zur Einordnung der Größenordnung: Die Veranstaltung ist eine [Spezialisierte Expo](https://www.bie-paris.org/site/en/2027-belgrade) — die erste überhaupt auf dem Westbalkan — mit **141 registrierten Ländern (Stand August 2026)** und Besucherprognosen, die von 4 Millionen auf die derzeit vom BIE genannten mehr als 6 Millionen geklettert sind, unterstützt im Hintergrund von einer geplanten Belegschaft von rund 20.000 Freiwilligen. Wie auch immer die genaue Anzahl an Veranstaltungen am Ende ausfällt — das Programm wird für ein wirklich großes, dreimonatiges internationales Event konzipiert und nicht für ein kurzes Festival.
+Die Expo wurde als Veranstaltung mit **mehr als 8.000 Events über ihre 93 Tage** beschrieben. Diese Zahl veröffentlicht das BIE selbst, ein datiertes Programm belegt sie aber noch nicht — sie ist daher als geplante Größenordnung zu lesen, nicht als bestätigte Zahl. Zur Einordnung der Größenordnung: Die Veranstaltung ist eine [Spezialisierte Expo](https://www.bie-paris.org/site/en/2027-belgrade) — die erste überhaupt auf dem Westbalkan — mit **141 registrierten Ländern (Stand August 2026)** und Besucherprognosen, die vom offiziellen „mehr als 4 Millionen“ bis zum oberen Ziel der Organisatoren von 6 Millionen reichen, unterstützt im Hintergrund von einer geplanten Belegschaft von rund 20.000 Freiwilligen. Wie auch immer die genaue Anzahl an Veranstaltungen am Ende ausfällt — das Programm wird für ein wirklich großes, dreimonatiges internationales Event konzipiert und nicht für ein kurzes Festival.
 
 ## Kontext, den man kennen sollte
 
@@ -109,7 +109,7 @@ Was noch nicht veröffentlicht ist: die genauen Zeremonien-Termine über die Eck
 
 ## Was beim Programm noch offen ist
 
-Das ist die ehrliche Lücke, klar benannt. Stand August 2026 ist **kein vollständiger öffentlicher Tageskalender veröffentlicht** — keine datierten Konzerte, Sportwettbewerbe oder Konferenzen, kein Zeitplan der Nationaltage, keine Zeremonien-Termine oder genannten Top-Acts. Öffnungszeiten, Ticketpreise und Eintrittskategorien sind ebenfalls noch nicht veröffentlicht. Verfügbar sind nur die oben beschriebenen übergeordneten Unterthemen und Kategorien.
+Das ist die ehrliche Lücke, klar benannt. Stand Mitte November 2026 ist **kein vollständiger öffentlicher Tageskalender veröffentlicht** — keine datierten Konzerte, Sportwettbewerbe oder Konferenzen, kein Zeitplan der Nationaltage, keine Zeremonien-Termine oder genannten Top-Acts. Öffnungszeiten, Ticketpreise und Eintrittskategorien sind ebenfalls noch nicht veröffentlicht. Verfügbar sind nur die oben beschriebenen übergeordneten Unterthemen und Kategorien.
 
 Die offizielle Programmseite selbst präsentiert Stand 2026 die Vision und die Unterthemen statt eines datierten Veranstaltungsplans und zeigt weiterhin „Tickets available soon“ an. Das *Konzept* steht also fest und lässt sich beschreiben; der *Zeitplan* ist schlicht noch nicht draußen. Der beste Ort, um den datierten Programmplan, den Zeitplan der Nationaltage und die Öffnungszeiten im Blick zu behalten, ist die offizielle Programmseite unter expobelgrade2027.org — und wir werden jedes einzelne Element hier nachverfolgen, sobald es erscheint.
 

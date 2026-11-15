@@ -7,7 +7,7 @@ description: "Belgrade stadiums and arenas — Red Star's Marakana and the Parti
 lede: "Belgrade is a sports city, and its arenas and stadiums are a draw in their own right. Here's the venue guide — where each one is, capacities, tenants and tours — plus a clearly-dated snapshot of what's actually on."
 heroLabel: "Belgrade arenas and stadiums / hero"
 heroAlt: "A floodlit Belgrade arena on an event night"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-11-15"
 order: 10
 visible: true
 intent: "leisure"
@@ -27,10 +27,10 @@ faqs:
     answer: "Currently, there are no specific events scheduled at the Partizan Stadium that have been confirmed for the upcoming months. While the stadium offers tours through local operators, the fixture dates for the 2026–27 season are not yet published."
   - question: "What is the Aleksandar Nikolić Hall known for?"
     answer: "The Aleksandar Nikolić Hall, also known as 'Pionir,' is an indoor venue that seats around 8,000 and is known for hosting domestic-league basketball games, smaller concerts, and other indoor sports events. It was the main basketball venue in Belgrade before the Štark Arena was built."
-  - question: "When is the next UFC event at the Štark Arena?"
-    answer: "The next confirmed UFC event at the Štark Arena is scheduled for 1 August 2026. This date is confirmed, and details regarding tickets and the fight card will be available through the promoter."
+  - question: "Is the 2027 EuroLeague Final Four in Belgrade?"
+    answer: "No. The 2027 EuroLeague Final Four will be held in Abu Dhabi on 28–30 May 2027. Belgrade's clubs still play their EuroLeague home games at the Štark Arena through the season."
   - question: "Are there any upcoming concerts at the Štark Arena?"
-    answer: "As of now, the concert calendar for the Štark Arena has not been released for the upcoming months. It is advisable to check closer to your visit for updates, as the schedule is still to be announced."
+    answer: "Yes — the arena hosts concerts most months, often multi-night runs by Serbian and regional stars around November and the New Year holidays. Check the arena's own calendar (arenabeograd.com) or the main Serbian ticket sellers for current dates, as popular nights sell out early."
 ---
 
 ## What are Belgrade's main arenas and stadiums?
@@ -69,27 +69,23 @@ A historic sports and aquatics complex with an Olympic pool and stands for aroun
 
 ## What's on in Belgrade's arenas and stadiums?
 
-**Snapshot as of 2026 — last checked June 2026. Always confirm fixtures, concerts and tickets on the official venue and club channels before planning around them.**
+**Checked 15 November 2026. Event calendars change weekly, so confirm fixtures, concerts and tickets on the official venue and club channels before planning around them.**
 
-Unlike the venue facts above, the events calendar goes stale quickly, so this section is time-stamped and re-checked regularly. Treat anything not tied to a confirmed date as provisional.
+Rather than keep a dated list of fixtures that goes stale, here is where the live calendars are and the few dates that are fixed well ahead.
 
-### The one correction worth making first
+### Where to find the live calendar
+
+- **Štark Arena (Belgrade Arena):** the arena's own site, arenabeograd.com, and the main Serbian ticket sellers list concerts and big events. Domestic stars regularly fill several nights in a row (multi-night runs are typical around November and the New Year holidays), so popular dates sell out early.
+- **Football:** Crvena zvezda and Partizan publish fixtures on their club sites once the league schedule is out. The Eternal Derby dates follow the Serbian SuperLiga calendar.
+- **Basketball:** EuroLeague and ABA League home games for both clubs are listed on the clubs' sites and the league sites.
+
+### Dates that are fixed
+
+The FIBA World Cup 2027 European Qualifiers still have two windows ahead: 23 November–1 December 2026 and 22 February–2 March 2027. Serbia usually plays its home games in Belgrade, but check the venue and opponent with the Basketball Federation of Serbia once they are published.
+
+The 2027 EuroLeague Final Four is not in Belgrade: it is in Abu Dhabi, 28–30 May 2027.
 
 There is no EuroBasket in 2026. The 2025 men's EuroBasket was held outside Serbia — across Cyprus, Finland, Latvia and Poland — and the next edition is EuroBasket 2029, hosted by Estonia, Greece, Slovenia and Spain. If you see anything framing a "EuroBasket 2026 in Belgrade," it's simply wrong.
-
-### Basketball qualifiers and the Final Four question
-
-The FIBA World Cup 2027 European Qualifiers run in windows. Those falling between September 2026 and September 2027 are 24 August–1 September 2026, 23 November–1 December 2026, and 22 February–2 March 2027. Serbia is expected to play home games, likely in Belgrade, but exact match dates, venues and opponents have not yet been published.
-
-Separately, whether Belgrade hosts a EuroLeague Final Four in the 2026–27 season has not been decided. The city has reportedly bid for it, but no host has been announced.
-
-### Confirmed: UFC Fight Night
-
-The one firmly dated event in this window is a UFC Fight Night at Belgrade Arena on 1 August 2026. That date is confirmed; tickets and the fight card sit with the promoter.
-
-### Still to be announced
-
-The 2026–27 Eternal Derby between Crvena zvezda and Partizan does not yet have published fixture dates, and the Belgrade Arena concert calendar for this window has not been released either. League and venue schedules tend to come out in waves, so these are best regarded as not yet announced — worth re-checking closer to your trip rather than planning around.
 
 ## How do you get to the venues?
 

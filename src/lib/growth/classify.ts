@@ -38,7 +38,7 @@ export type Classification = {
   path: string; // normalised: no query, no trailing slash, "/" for home
   content_type: ContentType;
   section: string; // leg slug, "areas", "glossary", "home", "utility", …
-  lang: "en" | "de" | "sk";
+  lang: "en" | "de" | "sk" | "cs";
   expo: boolean; // part of the Expo 2027 cluster (EN or a translation)
 };
 
@@ -69,11 +69,11 @@ export function normalisePath(input: string): string {
 
 export function classifyPath(input: string): Classification {
   const path = normalisePath(input);
-  let lang: "en" | "de" | "sk" = "en";
+  let lang: "en" | "de" | "sk" | "cs" = "en";
   let rest = path;
-  const m = path.match(/^\/(de|sk)(?=\/|$)/);
+  const m = path.match(/^\/(de|sk|cs)(?=\/|$)/);
   if (m) {
-    lang = m[1] as "de" | "sk";
+    lang = m[1] as "de" | "sk" | "cs";
     rest = path === `/${lang}` ? "/" : path.slice(3);
   }
   const segs = rest.split("/").filter(Boolean);

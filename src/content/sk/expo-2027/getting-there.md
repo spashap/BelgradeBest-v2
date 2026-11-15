@@ -7,7 +7,7 @@ description: "Ako sa dostať na Expo 2027 v Belehrade: areál v Surčine je ~5 k
 lede: "Takto sa dostanete na Expo 2027 v Belehrade: areál je v Surčine, približne 5 km od letiska Nikolu Teslu a zhruba 13,5 km od centra mesta (podľa oficiálneho FAQ pre účastníkov). Táto stránka sleduje každú trasu, ktorú poznáme: z letiska, z centra mesta cez bezplatnú sieť aj cez plánovanú novú železnicu, a jasne označuje, čo je potvrdené a čo sú zatiaľ len sľuby."
 heroLabel: "Areál Surčin / mapa letiska hero"
 heroAlt: "Panoráma Belehradu: cesta na areál Expa 2027 v Surčine"
-lastUpdated: "2026-10-14"
+lastUpdated: "2026-11-15"
 order: 4
 visible: true
 intent: "both"
@@ -17,6 +17,8 @@ isFaqCandidate: true
 linksTo:
   - "/plan-your-trip/airport-to-city"
   - "/plan-your-trip/getting-around"
+partnerTargets:
+  - airport-transfer
 unknowns:
   - "Presný dátum otvorenia, cestovný poriadok pre cestujúcich a tarifa novej železnice do Surčina a na letisko"
   - "Konečné čísla, trasy a cestovné poriadky autobusových liniek špecifických pre Expo ku vchodom A a C na leto 2027"
@@ -80,7 +82,7 @@ Dve rýchlejšie, účelovo postavené možnosti sú sľúbené, ale zatiaľ nej
 
 Nová dvojkoľajná elektrifikovaná železnica je vo výstavbe zo Zemun Polje k Národnému štadiónu a prechádza popri letisku Nikolu Teslu a Surčine. Je dlhá 18,3 km, so zastávkami Singidunum, letisko a Surčin a stanicou pri Národnom štadióne. Hlavným zhotoviteľom je Powerchina International Group, pracujúca pre vládu Srbska, pričom výstavba sa začala v roku 2024. Prvá fáza projektu zahŕňa k začiatku roka 2026 úsek Zemun Polje – Národný štadión (neskoršia fáza má trať predĺžiť smerom na Obrenovac) a správy opisujú, že na stavbe pracuje viac než 500 ľudí, z toho asi 200 inžinierov, a pozdĺž trasy sa stavajú veľké mosty, viadukt a nadjazd.
 
-Pri termíne dokončenia je opatrnosť najdôležitejšia. Srbskí predstavitelia, vrátane prezidenta a ministra výstavby, uviedli, že trať sa plánuje dokončiť koncom roka 2026, pričom jedno vyhlásenie uvádzalo dátum 1. decembra 2026, po ktorom sa začne skúšobná fáza (hlásená približne od februára 2027). Novšie správy opisujú uvedenie železnice do prevádzky na jar 2027. Ide o oficiálne uvádzané ciele, hlásené ako predbežné, nie oficiálne potvrdené a nie záväzný cestovný poriadok. Predstavitelia sľúbili jazdy trvajúce asi 15 minút medzi letiskom a centrom Belehradu (Prokop), s vlakmi každých 30 minút a v špičke až každých 15.
+Pri termíne dokončenia je opatrnosť najdôležitejšia. Srbskí predstavitelia, vrátane prezidenta a ministra výstavby, uviedli, že trať sa plánuje dokončiť koncom roka 2026, pričom jedno vyhlásenie uvádzalo dátum 1. decembra 2026, po ktorom sa začne skúšobná fáza (hlásená približne od februára 2027). Novšie správy opisujú uvedenie železnice do prevádzky na jar 2027. Ide o oficiálne uvádzané ciele, hlásené ako predbežné, nie oficiálne potvrdené a nie záväzný cestovný poriadok. Predstavitelia sľúbili jazdy trvajúce asi 15 minút medzi letiskom a centrom Belehradu (Prokop), s vlakmi každých 30 minút a v špičke až každých 15. Najnovší stav (október 2026): minister financií Siniša Mali uviedol, že stavebné práce sa majú skončiť do konca roka 2026 – hotových bolo asi 11 z 18,3 km – a trať by sa mala otvoriť po skúšobnej prevádzke v marci alebo apríli 2027. Ide o odhad ministra, nie o cestovný poriadok.
 
 Čo je stále neznáme: nebol zatiaľ oznámený podrobný cestovný poriadok pre cestujúcich, presný dátum otvorenia ani tarifa tejto železnice počas Expa. Keďže bežná doprava je momentálne bezplatná, aj to, či bude toto železničné spojenie bezplatné, alebo bude mať osobitnú tarifu, nie je zatiaľ určené. Stručne: trať je skutočný, pokročilý stavebný projekt s oficiálne uvádzaným časovým rámcom 2026 – 2027, ale nestavajte svoje cestovné plány na tom, že bude otvorená, kým nebude zverejnený skutočný dátum otvorenia a cestovný poriadok.
 

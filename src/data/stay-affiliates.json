@@ -6,7 +6,10 @@
       "type": "area",
       "label": "Stari Grad (Old Town)",
       "area": "stari-grad",
-      "search": "Stari Grad, Belgrade"
+      "search": "Stari Grad, Belgrade",
+      "labels": {
+        "de": "Stari Grad (Altstadt)"
+      }
     },
     "dorcol": {
       "type": "area",
@@ -24,7 +27,10 @@
       "type": "area",
       "label": "Vračar",
       "area": "vracar",
-      "search": "Vračar, Belgrade"
+      "search": "Vračar, Belgrade",
+      "labels": {
+        "de": "Vračar"
+      }
     },
     "savski-venac": {
       "type": "area",
@@ -36,7 +42,10 @@
       "type": "area",
       "label": "New Belgrade (Novi Beograd)",
       "area": "new-belgrade",
-      "search": "New Belgrade, Belgrade"
+      "search": "New Belgrade, Belgrade",
+      "labels": {
+        "de": "Neu-Belgrad (Novi Beograd)"
+      }
     },
     "zemun": {
       "type": "area",
@@ -60,9 +69,26 @@
       "type": "area",
       "label": "Surčin / airport & Expo side",
       "area": "surcin",
-      "search": "Surčin, Belgrade"
+      "search": "Surčin, Belgrade",
+      "labels": {
+        "de": "Surčin / Flughafen- und Expo-Seite"
+      }
     }
   },
   "partner": "booking",
-  "_note": "Areas the Booking.com box can link to. On/off and the partner ID live in src/data/affiliates.json (edited from /admin/affiliates)."
+  "_note": "Areas the Booking.com box can link to. On/off and the partner ID live in src/data/affiliates.json (edited from /admin/affiliates).",
+  "tr": {
+    "de": {
+      "heading": "Wo Sie Ihre Unterkunft buchen",
+      "disclosure": "Einige Buchungslinks auf dieser Seite sind Affiliate-Links: Wenn Sie darüber buchen, erhalten wir eventuell eine kleine Provision, ohne Mehrkosten für Sie.",
+      "disclosureLink": "So finanzieren wir uns (EN)",
+      "cta": "Unterkunft finden in {area}"
+    },
+    "sk": {
+      "heading": "Kde rezervovať ubytovanie",
+      "disclosure": "Niektoré rezervačné odkazy na tejto stránke sú partnerské: ak cez ne rezervujete, môžeme získať malú províziu bez ďalších nákladov pre vás.",
+      "disclosureLink": "Ako zarábame (EN)",
+      "cta": "Nájsť ubytovanie: {area}"
+    }
+  }
 }

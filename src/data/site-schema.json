@@ -748,7 +748,8 @@
             "/where-to-stay",
             "/expo-2027/guide",
             "/expo-2027/tickets",
-            "/areas/novi-beograd"
+            "/areas/novi-beograd",
+            "/expo-2027/location"
           ]
         },
         {
@@ -780,7 +781,8 @@
             "/where-to-stay",
             "/expo-2027/getting-there",
             "where-to-stay-for-expo",
-            "/expo-2027/pavilions"
+            "/expo-2027/pavilions",
+            "/expo-2027/location"
           ]
         },
         {
@@ -809,7 +811,8 @@
             "/plan-your-trip/airport-to-city",
             "/plan-your-trip/getting-around",
             "/expo-2027/guide",
-            "/expo-2027/tickets"
+            "/expo-2027/tickets",
+            "/expo-2027/location"
           ]
         },
         {
@@ -850,6 +853,21 @@
           "linksTo": [
             "visit-itineraries",
             "things-to-do"
+          ]
+        },
+        {
+          "slug": "location",
+          "order": 5,
+          "visible": true,
+          "intent": "both",
+          "priority": "P1",
+          "title": "Where Expo 2027 is: Surčin site, map and distances",
+          "linksTo": [
+            "/expo-2027/getting-there",
+            "/expo-2027/where-to-stay-for-expo",
+            "/expo-2027/what-is-it",
+            "/plan-your-trip/airport-to-city",
+            "/areas/novi-beograd"
           ]
         }
       ]

@@ -7,7 +7,7 @@ description: "What is Expo 2027 Belgrade? A plain-English guide to the first Spe
 lede: "Expo 2027 Belgrade is the first Specialised Expo ever held in the Western Balkans — a BIE-recognised, theme-focused international exposition running 15 May to 15 August 2027 in Surčin, under the theme \"Play for Humanity: Sport and Music for All.\" Here's what that means, and whether it's worth your time."
 heroLabel: "What is a Specialised Expo / hero"
 heroAlt: "Belgrade's rivers and skyline at golden hour — the host city of Expo 2027"
-lastUpdated: "2026-09-17"
+lastUpdated: "2026-11-15"
 order: 1
 visible: true
 intent: "both"
@@ -28,9 +28,9 @@ faqs:
     question: "When and where is Expo 2027 Belgrade?"
   - answer: "Expo 2027 has two mascots, Rastko and Milica, dressed in traditional Serbian folk costume. Their names were chosen by public online vote (reported as nearly 100,000 participants) and reference figures from Serbian history — Rastko Nemanjić (Saint Sava) and Princess Milica. They serve as the event's \"superheroes of play.\""
     question: "What are the Expo 2027 mascots?"
-  - answer: "In August 2026 the organiser put the figure at 141 registered countries, up from the 139 the official Participants page counter last showed — a number that has grown steadily (a July 2025 release reported 117) and may change again. Visitor forecasts have risen the same way: the Participants FAQ models around 4.1 million visits over the 93 days, while the BIE now states more than 6 million. Both are projections, not counts."
+  - answer: "In August 2026 the organiser put the figure at 141 registered countries, up from the 139 the official Participants page counter last showed — a number that has grown steadily (a July 2025 release reported 117) and may change again. Visitor forecasts have risen the same way: the Participants FAQ models around 4.1 million visits over the 93 days, while the organisers' stated upper target is 6 million. Both are projections, not counts."
     question: "How many countries and visitors are expected?"
-  - answer: "Not yet. The official programme page still notes \"Tickets available soon,\" and as of 17 September 2026 it has not published ticket prices, categories, sales channels, or a sales start date — two planned start dates have already passed without a launch."
+  - answer: "Not yet. The official programme page still notes \"Tickets available soon,\" and as of 15 November 2026 it has not published ticket prices, categories, sales channels, or a sales start date — two planned start dates have already passed without a launch."
     question: "Can I buy tickets for Expo 2027 yet?"
   - answer: "As of June 2026 there is no announced special Expo-branded visa or automatic visa waiver for ordinary visitors, who rely on Serbia's general visa policy. The free \"Expo visa\" applies only to participants and staff."
     question: "Do I need a special visa to visit Expo 2027?"
@@ -79,7 +79,7 @@ One honest caveat: as of June 2026, **no full public daily calendar** of concert
 
 Scale matters when you're deciding whether to travel for something. In **August 2026** Expo 2027's director put the total at **141 registered countries**, describing it as a historic record; the [official Participants page](https://expobelgrade2027.org/en/participants) counter last read **139**, elsewhere the official site refers to "over 120 nations," and a July 2025 release reported **117 confirmed**. The number has grown steadily and may keep changing — Expo 2027 has already surpassed the previous Specialised Expo host, Astana — so it's best read as "141 as of August 2026," not a final figure. (For the running list, see the [participant tracker](/expo-2027/tracker).)
 
-For visitors, the forecast has **risen over time, and the most-quoted numbers are the oldest ones**. The official Participants FAQ models **around 4.1 million visits over the 93 days** — averaging roughly 44,652 per day, with peaks up to around 89,304. Since then the organiser has publicly argued that **6 million is realistic**, and the BIE now states **more than 6 million**. Earlier statements referenced figures as low as 2.6–3 million.
+For visitors, the forecast has **risen over time, and the most-quoted numbers are the oldest ones**. The official Participants FAQ models **around 4.1 million visits over the 93 days** — averaging roughly 44,652 per day, with peaks up to around 89,304. Since then the organiser has publicly argued that **6 million is realistic**, though the organiser's own latest material (May–October 2026) still says **more than 4 million**. Earlier statements referenced figures as low as 2.6–3 million.
 
 Two things follow. All of these are projections, not counts. And the per-day and peak-day figures above are derived from the older, lower model — if six million holds, the daily averages would be roughly half as large again, closer to 64,500 a day. We have seen no updated per-day model published alongside the six-million figure.
 
@@ -97,7 +97,7 @@ All of the above is **reported / planned, not a binding schedule**: as of June 2
 
 ## Can I buy tickets for Expo 2027 yet?
 
-This is the gap most visitors will care about. The official programme page notes **"Tickets available soon"** — but as of 17 September 2026 it does **not** publish ticket prices, categories, sales channels, or a sales start date, and two planned start dates (15 May and 15 September 2026) have passed without a launch. There is also no official information yet on concessions, time-slot reservations, daily capacity caps, or booking systems for general visitors. In short: ticketing is not yet announced, and we won't speculate on prices or how sales will work until the organiser publishes them. (We track this on the [Expo 2027 tickets](/expo-2027/tickets) page.)
+This is the gap most visitors will care about. The official programme page notes **"Tickets available soon"** — but as of 15 November 2026 it does **not** publish ticket prices, categories, sales channels, or a sales start date, and two planned start dates (15 May and 15 September 2026) have passed without a launch. There is also no official information yet on concessions, time-slot reservations, daily capacity caps, or booking systems for general visitors. In short: ticketing is not yet announced, and we won't speculate on prices or how sales will work until the organiser publishes them. (We track this on the [Expo 2027 tickets](/expo-2027/tickets) page.)
 
 ## Practical notes for a foreign visitor
 

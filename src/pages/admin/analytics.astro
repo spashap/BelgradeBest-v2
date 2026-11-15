@@ -7,6 +7,11 @@ import {
   searchConsoleTopQueries,
   searchConsoleTopPages,
 } from "../../lib/admin/analytics";
+import { bingStats, ga4Cuts, buildVerdicts } from "../../lib/admin/insights";
+import Verdicts from "../../components/admin/Verdicts.astro";
+import { ga4AffiliateClicks } from "../../lib/admin/analytics";
+import { cjEarnings } from "../../lib/admin/cj";
+import { PARTNERS, clickEvent, partnerLive } from "../../lib/affiliates";
 
 // Range: 1 = Today (hourly, vs yesterday); 7/28/90 = trailing days (daily).
 const RANGES = [1, 7, 28, 90] as const;
@@ -15,12 +20,46 @@ const sp = Astro.url.searchParams;
 const days = (RANGES as readonly number[]).includes(Number(sp.get("days"))) ? Number(sp.get("days")) : 28;
 const isToday = days === 1;
 
-const [ov, rt, gscQ, gscP] = await Promise.all([
+const [ov, rt, gscQ, gscP, bing, cuts] = await Promise.all([
   ga4Overview(days),
   ga4Realtime(),
   searchConsoleTopQueries(days),
   searchConsoleTopPages(days),
+  bingStats(days),
+  ga4Cuts(days),
 ]);
+const googleClicks = gscP.configured ? gscP.rows.reduce((s, r) => s + r.clicks, 0) : null;
+const verdicts = buildVerdicts(days, ov, cuts, bing, googleClicks);
+
+// Money: affiliate clicks (GA4) + CJ commissions, one card. Details live on
+// /admin/affiliates.
+const affDays = days === 1 ? 7 : days;
+const [aff, cj] = await Promise.all([
+  ga4AffiliateClicks(affDays, Object.keys(PARTNERS).map(clickEvent), []),
+  cjEarnings(affDays),
+]);
+const live = Object.keys(PARTNERS).filter((k) => partnerLive(k)).length;
+const affClicks = aff.configured ? aff.byPartner.reduce((s, r) => s + r.clicks, 0) : 0;
+verdicts.push({
+  tone: !live ? "bad" : cj.configured && cj.total > 0 ? "good" : affClicks > 0 ? "watch" : "info",
+  label: "Money · " + affDays + " d",
+  value: cj.configured ? "$" + cj.total.toFixed(2) : affClicks + " clicks",
+  line: !live
+    ? "No affiliate partner is switched on."
+    : (cj.configured ? cj.sales + " CJ commissions, " : "") + affClicks + " clicks to partners from " + live + " live partners.",
+  action: !live ? "Switch partners on in Affiliates." : !cj.configured ? "Link CJ earnings (CJ_PERSONAL_ACCESS_TOKEN) to see money, not just clicks." : undefined,
+});
+
+// "Do this next": the cards that carry an action, problems first, max 4.
+const toneRank = { bad: 0, good: 1, watch: 2, info: 3 } as const;
+const nextActions = verdicts
+  .filter((v) => v.action)
+  .sort((a, b) => toneRank[a.tone] - toneRank[b.tone])
+  .slice(0, 4);
+// Bing pages worth a snippet rewrite: top-10 position, ≥100 impressions, CTR < 2%.
+const bingGaps = bing.configured
+  ? bing.pages.filter((p) => p.impressions >= 100 && p.position > 0 && p.position <= 10 && p.ctr < 0.02).slice(0, 8)
+  : [];
 
 const fetchedAt = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC";
 
@@ -179,6 +218,19 @@ const gscHint = (r: typeof gscQ) =>
       <span class="stamp">fetched {fetchedAt}</span>
     </div>
   </div>
+
+  {nextActions.length ? (
+    <div class="panel" style="border-left:4px solid var(--accent)">
+      <h2 style="margin:0 0 8px">Do this next</h2>
+      <ol style="margin:0;padding-left:20px;line-height:1.6">
+        {nextActions.map((v) => (
+          <li><b>{v.action}</b> <span class="muted">— {v.label}: {v.value}</span></li>
+        ))}
+      </ol>
+    </div>
+  ) : null}
+
+  <Verdicts items={verdicts} />
 
   {
     ov.configured ? (
@@ -363,9 +415,8 @@ const gscHint = (r: typeof gscQ) =>
           ) : <p class="muted">No landing-page data yet.</p>}
         </div>
 
-        <div class="section-head">
-          <h2>Top pages</h2><span class="hint">most-viewed content + engagement depth</span>
-        </div>
+        <details>
+        <summary class="muted" style="cursor:pointer;margin:6px 0 10px">Top pages (raw list)</summary>
         <div class="panel">
           {ov.topPages.length ? (
             <table>
@@ -381,12 +432,56 @@ const gscHint = (r: typeof gscQ) =>
             </table>
           ) : <p class="muted">No traffic in this range yet.</p>}
         </div>
+        </details>
       </>
     ) : (
       <div class="panel"><p class="muted">GA4 not configured. {ov.reason}</p></div>
     )
   }
 
+  <!-- Bing Webmaster: the site's main search channel -->
+  <div class="section-head"><h2>Bing — the main search channel</h2><span class="hint">{bing.configured ? `last ${bing.days} d · ${bing.clicks} clicks · ${bing.impressions.toLocaleString("en-US")} impressions · prev ${bing.prevClicks} / ${bing.prevImpressions.toLocaleString("en-US")}` : ""}</span></div>
+  {
+    bing.configured ? (
+      <div class="grid3">
+        <div class="panel">
+          <h2 style="margin:0 0 10px">Pages people click</h2>
+          <table>
+            <tr><th>page</th><th class="num">clicks</th><th class="num">impr.</th><th class="num">pos.</th></tr>
+            {bing.pages.slice(0, 10).map((r) => (
+              <tr><td class="slug">{r.key}</td><td class="num">{r.clicks}</td><td class="num">{r.impressions}</td><td class="num">{pos(r.position)}</td></tr>
+            ))}
+          </table>
+        </div>
+        <div class="panel">
+          <h2 style="margin:0 0 10px">What they search</h2>
+          <table>
+            <tr><th>query</th><th class="num">clicks</th><th class="num">impr.</th></tr>
+            {bing.queries.slice(0, 10).map((r) => (
+              <tr><td>{r.key}</td><td class="num">{r.clicks}</td><td class="num">{r.impressions}</td></tr>
+            ))}
+          </table>
+        </div>
+        <div class="panel">
+          <h2 style="margin:0 0 10px">Fix these snippets</h2>
+          <p class="muted" style="margin:0 0 8px;font-size:13px">Top-10 on Bing, seen 100+ times, clicked under 2%: rewrite title + description.</p>
+          {bingGaps.length ? (
+            <table>
+              <tr><th>page</th><th class="num">impr.</th><th class="num">CTR</th><th class="num">pos.</th></tr>
+              {bingGaps.map((r) => (
+                <tr><td class="slug">{r.key}</td><td class="num">{r.impressions}</td><td class="num">{fmtPct(r.ctr)}</td><td class="num">{pos(r.position)}</td></tr>
+              ))}
+            </table>
+          ) : <p class="muted">Nothing to fix: every well-ranked page earns clicks.</p>}
+        </div>
+      </div>
+    ) : (
+      <div class="panel"><p class="muted">Bing not connected. {bing.reason}</p></div>
+    )
+  }
+
+  <details style="margin-top:14px">
+  <summary class="muted" style="cursor:pointer">Google Search Console (small: Google sends almost nothing yet)</summary>
   <!-- Search Console (follows the range; data lags ~2 days, so windows end at the latest day with data) -->
   <div class="section-head"><h2>Search Console — top queries</h2><span class="hint">{gscHint(gscQ)}</span></div>
   <div class="panel">
@@ -427,6 +522,8 @@ const gscHint = (r: typeof gscQ) =>
       )
     }
   </div>
+
+  </details>
 
   <script is:inline define:vars={{ prevWord }}>
     // Hover layer for the trend chart: one tooltip, fed by the hit columns.

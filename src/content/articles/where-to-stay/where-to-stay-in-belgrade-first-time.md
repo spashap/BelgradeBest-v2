@@ -7,7 +7,7 @@ description: "Where to stay in Belgrade for the first time: Stari Grad is the sa
 lede: "For a first visit of two to four days, the best fit for most travellers is Stari Grad (Old Town): it usually puts you within an easy walk of Republic Square, Knez Mihailova, Kalemegdan and Skadarlija, so you spend less time commuting and more time seeing the city."
 heroLabel: "Where to stay in Belgrade first time / hero"
 heroAlt: "View over Belgrade's Old Town rooftops toward Kalemegdan Fortress and the Sava–Danube confluence"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-11-15"
 order: 2
 visible: true
 intent: "leisure"
@@ -137,7 +137,7 @@ Serbia is more smoke-tolerant than much of Western and Northern Europe. The law 
 
 ### There is a small per-night tourist tax
 
-Belgrade charges a small residence/tourist tax per guest per night of stay (160 RSD per day for adults as of the latest official source, with reductions for children and exemptions for long stays). The accommodation provider collects it. Hotels often build it into the rate, while apartments may add it as a separate line at check-in or check-out, so check the house rules and fine print before booking rather than after you land.
+Belgrade charges a small residence/tourist tax per guest per night of stay (240 RSD per day for adults since 15 October 2026, up from 160 RSD, with reductions for children and some exemptions). The accommodation provider collects it. Hotels often build it into the rate, while apartments may add it as a separate line at check-in or check-out, so check the house rules and fine print before booking rather than after you land.
 
 ### Tipping basics
 

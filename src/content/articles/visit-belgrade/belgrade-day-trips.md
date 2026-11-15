@@ -7,7 +7,7 @@ description: "The best day trips from Belgrade — Novi Sad by train in about 35
 lede: "Some of Serbia's best sits within a day of Belgrade — Novi Sad on a roughly 35-minute high-speed train, the Iron Gates gorge, the royal mausoleum at Oplenac. Here's what's worth it, and whether to go it alone or take a tour."
 heroLabel: "Day trips from Belgrade / hero"
 heroAlt: "Setting out on a day trip from Belgrade by train"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-11-15"
 order: 9
 visible: true
 intent: "leisure"
@@ -45,7 +45,7 @@ This is also where demand is loudest: the Belgrade–Novi Sad route is one of th
 
 Novi Sad is the easy one — north of Belgrade on the Danube, and the only destination here you can comfortably do unaided in a day. The Soko high-speed train reaches it in about 32 to 36 minutes, with several departures daily, which makes it the standout self-guided trip from Belgrade. Intercity buses cover the same route in around an hour and ten minutes. Fares are low — commonly a few euros — so cost is rarely the deciding factor. Once there, Petrovaradin Fortress and the city centre are walkable on your own without any need for a guide or a tour. For ticketing and current departures, start with our guide to [stations and onward travel](/plan-your-trip/stations-and-onward-travel).
 
-A word on fares: train and bus prices are indicative and change. Belgrade–Novi Sad singles are commonly cited at around a few euros — roughly 400–500 RSD second class on the train, and from about €3–5 by bus (as of 2026) — but treat these as "cheap, a few euros" rather than a fixed figure, and check the current price when you book.
+A word on fares: train and bus prices are indicative and change. Belgrade–Novi Sad singles are commonly cited at around a few euros — since July 2026 roughly 550 RSD on the slower Regio train and about 680 RSD on the fast Soko, where a seat reservation is compulsory, and from about €3–5 by bus — but treat these as "cheap, a few euros" rather than a fixed figure, and check the current price when you book.
 
 ### What is there to do in Novi Sad?
 

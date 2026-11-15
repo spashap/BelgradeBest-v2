@@ -7,7 +7,7 @@ description: "Best cocktail bars in Belgrade by district: the Cetinjska courtyar
 lede: "Belgrade's best cocktail bars cluster in three walkable pockets: Cetinjska — a former brewery courtyard near Skadarlija packed with independent bars — for energy and bar-hopping; Dorćol for polished, mixology-led cocktail rooms and a growing speakeasy scene; and the centre/Savamala for a rougher, riverside edge. Pick the district that fits the night you want, then wander."
 heroLabel: "Belgrade cocktail bars / hero"
 heroAlt: "A dimly lit Belgrade cocktail bar with a bartender mixing a drink"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-11-15"
 order: 90
 visible: true
 intent: "leisure"
@@ -41,7 +41,7 @@ Belgrade's cocktail scene is small but mature, and it concentrates in a few walk
 - **Dorćol** — the old district between [Knez Mihailova](/glossary/knez-mihailova) and the Danube. The city's most polished, mixology-led cocktail rooms and most of its speakeasies sit here, on quiet residential streets.
 - **The centre and Savamala** — the pedestrian core for convenience, and the rougher, industrial riverside stretch for a more eclectic, late-night edge.
 
-All three areas are close together on foot, so most visitors pick a starting district and simply wander between bars. The named venues below are illustrative of each scene as of 2026 — Belgrade bars open, close and rebrand often, so use them to find the right block, not as fixed recommendations.
+All three areas are close together on foot, so most visitors pick a starting district and simply wander between bars. We describe districts rather than individual bars on purpose: Belgrade bars open, close and rebrand often, so the district is the reliable guide and the bar you find there is the bonus.
 
 This page is about cocktails and mixed drinks. For the wider picture — clubs, the floating [splav](/glossary/splav) clubs on the rivers, late hours and the rhythm of a Belgrade night — see the [Belgrade nightlife guide](/food-and-nightlife/belgrade-nightlife). For how each district eats and drinks more broadly, see the [food and drink by neighborhood guide](/food-and-nightlife/belgrade-food-and-drink-by-neighborhood).
 
@@ -84,3 +84,11 @@ The **central pedestrian zone** around Knez Mihailova and Trg Republike is the c
 ## How to plan a cocktail night in Belgrade
 
 A simple, low-effort itinerary that uses the geography:
+
+1. **Start in Dorćol** with one carefully made cocktail in a quiet bar or a speakeasy, while the evening is still calm.
+2. **Walk south to Cetinjska** as it fills up, and bar-hop the courtyard for energy and variety.
+3. **Drift into the centre or down to Savamala / the river** if the night keeps going.
+
+Everything above is walkable in well under half an hour end to end, which is the real advantage of Belgrade's cocktail scene: the good bars are clustered, the districts are distinct, and you can change the mood of your night just by changing streets.
+
+For prices, opening hours, the broader club-and-splav scene and general going-out etiquette, continue with the [Belgrade nightlife guide](/food-and-nightlife/belgrade-nightlife). To see how drinking fits alongside eating in each area, see [food and drink by neighborhood](/food-and-nightlife/belgrade-food-and-drink-by-neighborhood).

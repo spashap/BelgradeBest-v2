@@ -67,7 +67,7 @@ const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { nam
           const cls = `c-bento__tile u-reveal${i === 0 ? " c-bento__tile--lg" : wide ? " c-bento__tile--wide" : ""}`;
           return (
             <a class={cls} href={`/${clusterSlug}/${a.data.slug}`}>
-              {img ? <img src={img.src} srcset={i === 0 ? img.srcset : undefined} sizes={i === 0 ? "(max-width: 980px) 100vw, 50vw" : undefined} alt="" loading={i < 3 ? "eager" : "lazy"} /> : null}
+              {img ? <img src={img.src} srcset={i === 0 ? img.srcset : undefined} sizes={i === 0 ? "(max-width: 980px) 100vw, 50vw" : undefined} alt="" loading="lazy" /> : null}
               <span class="c-bento__go" aria-hidden="true">→</span>
               <span class="c-bento__kicker">{i === 0 ? "Start here" : cluster.eyebrow}</span>
               <span class="c-bento__title">{i === 0 ? a.data.title : label}</span>

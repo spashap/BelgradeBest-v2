@@ -1,25 +1,29 @@
 ---
 // "Where to book your stay" affiliate block. Renders ONE CTA per stay-target a
 // page declares (article frontmatter `stayTargets`); the areas live in
-// src/data/stay-affiliates.json, the Booking.com switch + partner ID in
+// src/data/stay-affiliates.json, the Booking.com switch + link in
 // src/data/affiliates.json (edited from /admin/affiliates). Invisible while the
 // partner is off. Affiliate links carry rel="sponsored nofollow" (Google's
 // required attribute) and sit beside a disclosure linking the "how we make
-// money" page. Affiliate data never lives in article markdown.
+// money" page. Affiliate data never lives in article markdown. `lang` picks
+// the translated chrome + labels for the /de/ and /sk/ pilots.
 import data from "../data/stay-affiliates.json";
 import AffClick from "./AffClick.astro";
-import { stayLinks, clickEvent } from "../lib/affiliates";
+import { stayLinks, stayChrome, clickEvent } from "../lib/affiliates";
 
 interface Props {
   targets?: string[];
   heading?: string;
+  lang?: string;
 }
-const { targets = [], heading = "Where to book your stay" } = Astro.props;
-const items = stayLinks(targets);
+const { targets = [], lang = "en" } = Astro.props;
+const chrome = stayChrome(lang);
+const heading = Astro.props.heading ?? chrome.heading;
+const items = stayLinks(targets, lang);
 ---
 {
   items.length > 0 ? (
-    <aside class="c-staylinks" aria-label={heading}>
+    <aside class="c-staylinks" aria-label={heading} data-aff-block="stay">
       <p class="c-staylinks__title">{heading}</p>
       <ul class="c-staylinks__list">
         {items.map((x) => (
@@ -31,7 +35,7 @@ const items = stayLinks(targets);
         ))}
       </ul>
       <p class="c-staylinks__disc">
-        {data.disclosure} <a href={data.disclosureHref}>How we make money</a>.
+        {chrome.disclosure} <a href={data.disclosureHref}>{chrome.disclosureLink}</a>.
       </p>
       <AffClick />
     </aside>

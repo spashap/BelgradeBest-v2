@@ -7,7 +7,7 @@ description: "Serbia SIM card and eSIM for tourists: which operator (mts, Yettel
 lede: "The simplest way to get online in Belgrade is an eSIM you activate before you land; if you want a physical card, buy a tourist SIM from mts, Yettel, or A1 at the airport arrivals hall — bring your passport, because registration is required."
 heroLabel: "Serbia SIM and connectivity / hero"
 heroAlt: "Smartphone showing mobile signal bars in Belgrade"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-11-15"
 order: 90
 visible: true
 intent: "both"
@@ -81,7 +81,7 @@ Pay in **Serbian dinars (RSD)**; kiosks and shops generally accept cards as well
 
 No — and this is the trap for EU and UK visitors. **Serbia is not in the European Union**, and the EU's "Roam Like at Home" rules stop at Serbia's border. Your home EU/UK plan will roam in Serbia at out-of-bundle international rates, which can be expensive, unless you have explicitly bought a roaming add-on that lists Serbia.
 
-There is movement on this: in February 2026 the European Commission proposed opening negotiations to extend EU roaming to the Western Balkans, with a stated goal of removing extra fees by around 2028. But as of 2026 those benefits are **not yet in force** for travellers in Serbia. A separate regional agreement abolishes roaming charges **within the Western Balkans** (in force since 2021), but that only helps when you are moving between Balkan countries — it does not cover an EU visitor's home plan.
+There is movement on this: in February 2026 the European Commission proposed extending EU roaming to the Western Balkans, and in June 2026 EU governments authorised the negotiations. No start date has been set for Serbia: free roaming only arrives once Serbia signs its agreement and aligns its rules. But as of 2026 those benefits are **not yet in force** for travellers in Serbia. A separate regional agreement abolishes roaming charges **within the Western Balkans** (in force since 2021), but that only helps when you are moving between Balkan countries — it does not cover an EU visitor's home plan.
 
 The practical takeaway: do not assume your home plan is free here. Buy a local SIM or a Serbia eSIM and you avoid the question entirely.
 

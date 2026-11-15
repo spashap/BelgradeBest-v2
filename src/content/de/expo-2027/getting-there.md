@@ -7,7 +7,7 @@ description: "So kommen Sie zur Expo 2027 Belgrad: Surčin liegt rund 5 km vom F
 lede: "So kommen Sie zur Expo 2027 Belgrad: Das Gelände liegt in Surčin, rund 5 km vom Flughafen Nikola Tesla und etwa 13,5 km vom Stadtzentrum entfernt (laut der offiziellen Participants FAQ). Diese Seite verzeichnet jede uns bekannte Route – vom Flughafen, vom Stadtzentrum über das kostenlose Nahverkehrsnetz und über die geplante neue Eisenbahn – und macht klar, was bereits bestätigt ist und was noch ein Versprechen bleibt."
 heroLabel: "Hero-Bild: Gelände Surčin / Flughafenkarte"
 heroAlt: "Stadtbild von Belgrad — Anreise zum Expo-2027-Gelände in Surčin"
-lastUpdated: "2026-10-14"
+lastUpdated: "2026-11-15"
 order: 4
 visible: true
 intent: "both"
@@ -17,6 +17,9 @@ isFaqCandidate: true
 linksTo:
   - "/plan-your-trip/airport-to-city"
   - "/plan-your-trip/getting-around"
+partnerTargets:
+  - air-serbia
+  - airport-transfer
 unknowns:
   - "Genaues Eröffnungsdatum, Fahrplan und Tarifsystem der neuen Eisenbahn Surčin/Flughafen"
   - "Endgültige, expo-spezifische Buslinien-Nummern, Routen und Fahrpläne zu den Eingängen A und C für den Sommer 2027"
@@ -33,7 +36,7 @@ faqs:
   - question: "Welche Transportmöglichkeiten stehen Besuchern während der Expo 2027 zur Verfügung?"
     answer: "Während der Expo 2027 können Besucher mit Privatfahrzeugen, öffentlichen Bussen, Stadtbahn und Flussverkehr zum Gelände gelangen. Vor Ort ist außerdem Parkraum für bis zu 11.000 Fahrzeuge geplant, und neue umweltfreundliche Buslinien sollen das Expo-Gelände mit dem Flughafen und der Innenstadt verbinden."
   - question: "Ist eine Eisenbahn geplant, die den Flughafen mit der Expo 2027 verbindet?"
-    answer: "Eine neue Eisenbahnlinie, die den Flughafen Nikola Tesla mit dem Expo-Gelände in Surčin verbinden soll, befindet sich im Bau, ist aber noch nicht in Betrieb. Offizielle Stellen streben eine Fertigstellung bis Ende 2026 an, doch weder ein detaillierter Fahrplan noch ein Tarifsystem wurden bislang bekanntgegeben — es empfiehlt sich, kurz vor der Reise nach Aktualisierungen zu suchen."
+    answer: "Eine neue Eisenbahnlinie, die den Flughafen Nikola Tesla mit dem Expo-Gelände in Surčin verbinden soll, befindet sich im Bau, ist aber noch nicht in Betrieb. Offizielle Stellen streben eine Fertigstellung bis Ende 2026 an, doch weder ein detaillierter Fahrplan noch ein Tarifsystem wurden bislang bekanntgegeben — es empfiehlt sich, kurz vor der Reise nach Aktualisierungen zu suchen. Im Oktober 2026 nannte der Finanzminister eine Eröffnung im März oder April 2027 nach der Testphase."
 ---
 
 ## Wo befindet sich die Expo 2027?
@@ -80,7 +83,7 @@ Zwei schnellere, eigens dafür konzipierte Optionen sind versprochen, aber noch 
 
 Eine neue zweigleisige, elektrifizierte Eisenbahn befindet sich im Bau von Zemun Polje zum Nationalstadion, vorbei am Flughafen Nikola Tesla und an Surčin. Sie ist 18,3 km lang, mit Haltestellen in Singidunum, am Flughafen und in Surčin sowie einem Bahnhof beim Nationalstadion. Hauptauftragnehmer ist die Powerchina International Group im Auftrag der serbischen Regierung; der Bau begann 2024. Stand Anfang 2026 umfasst die erste Bauphase des Projekts den Abschnitt Zemun Polje–Nationalstadion (eine spätere Phase soll die Strecke Richtung Obrenovac verlängern); Berichten zufolge arbeiten mehr als 500 Menschen, darunter rund 200 Ingenieure, vor Ort, und entlang der Strecke entstehen bedeutende Brücken, ein Viadukt und eine Überführung.
 
-Beim Fertigstellungstermin ist besondere Vorsicht geboten. Serbische Offizielle, darunter der Präsident und der Bauminister, haben Ende 2026 als Zieltermin genannt, wobei eine Aussage konkret den 1. Dezember 2026 nennt, nach dem eine Testphase beginnen soll (Berichten zufolge etwa ab Februar 2027). Neuere Berichte beschreiben eine Inbetriebnahme der Bahn im Frühjahr 2027. Dabei handelt es sich um offiziell genannte, als vorläufig gemeldete Zielwerte – nicht offiziell bestätigt und kein verbindlicher Fahrplan. Offizielle Stellen haben Fahrzeiten von etwa 15 Minuten zwischen Flughafen und dem Belgrader Zentrum (Prokop) versprochen, mit Zügen alle 30 Minuten und zu Stoßzeiten bis zu alle 15 Minuten.
+Beim Fertigstellungstermin ist besondere Vorsicht geboten. Serbische Offizielle, darunter der Präsident und der Bauminister, haben Ende 2026 als Zieltermin genannt, wobei eine Aussage konkret den 1. Dezember 2026 nennt, nach dem eine Testphase beginnen soll (Berichten zufolge etwa ab Februar 2027). Neuere Berichte beschreiben eine Inbetriebnahme der Bahn im Frühjahr 2027. Dabei handelt es sich um offiziell genannte, als vorläufig gemeldete Zielwerte – nicht offiziell bestätigt und kein verbindlicher Fahrplan. Offizielle Stellen haben Fahrzeiten von etwa 15 Minuten zwischen Flughafen und dem Belgrader Zentrum (Prokop) versprochen, mit Zügen alle 30 Minuten und zu Stoßzeiten bis zu alle 15 Minuten. Neuester Stand (Oktober 2026): Finanzminister Siniša Mali sagte, die Bauarbeiten sollen bis Ende 2026 abgeschlossen sein – rund 11 der 18,3 km waren fertig – und die Strecke solle nach der Testphase im März oder April 2027 öffnen. Das ist eine Prognose des Ministers, kein Fahrplan.
 
 Was noch unklar ist: Weder ein detaillierter Fahrplan noch ein genaues Eröffnungsdatum oder ein Tarifsystem für diese Bahnlinie während der Expo-Zeit wurden bislang bekanntgegeben. Da der reguläre Nahverkehr derzeit kostenlos ist, ist auch nicht festgelegt, ob diese Bahnverbindung kostenlos sein wird oder einen speziellen Tarif hat. Kurz gesagt: Es handelt sich um ein reales, weit fortgeschrittenes Bauprojekt mit einem offiziell genannten Zeitrahmen von 2026–2027 – planen Sie Ihre Reise aber nicht auf Basis einer Eröffnung, solange kein tatsächliches Eröffnungsdatum und kein Fahrplan veröffentlicht sind.
 

@@ -4,10 +4,10 @@ slug: "where-to-stay-for-expo"
 title: "Where to Stay for Expo 2027: Best Areas in Belgrade"
 shortTitle: "Where to stay"
 description: "Where to stay for Expo 2027: New Belgrade and the Surčin airport side vs the historic centre, how early to book, and what to expect on price."
-lede: "For Expo 2027, the closest beds are in New Belgrade and the Surčin / airport side, a few kilometres from the site; the historic centre (Stari Grad, Vračar) gives you the city you came to see at the cost of a longer cross-river commute. With visit projections running from 4 million to the BIE's current 6 million-plus over three months, and only a few thousand new hotel rooms coming online, the real decision is booking early — not picking the perfect neighbourhood."
+lede: "For Expo 2027, the closest beds are in New Belgrade and the Surčin / airport side, a few kilometres from the site; the historic centre (Stari Grad, Vračar) gives you the city you came to see at the cost of a longer cross-river commute. With visit projections running from the official 4 million-plus to the organisers' 6 million target over three months, and only a few thousand new hotel rooms coming online, the real decision is booking early — not picking the perfect neighbourhood."
 heroLabel: "Where to stay for Expo 2027 / hero"
 heroAlt: "Map-style view of Belgrade showing the Surčin Expo site, New Belgrade and the old town across the Sava"
-lastUpdated: "2026-10-14"
+lastUpdated: "2026-11-15"
 order: 90
 visible: true
 intent: "both"
@@ -27,7 +27,7 @@ faqs:
   - question: "What are the best areas to stay in Belgrade for Expo 2027?"
     answer: "The best areas to stay in Belgrade for Expo 2027 are New Belgrade, the Surčin/airport side, and the historic centre, which includes Stari Grad, Vračar, and Dorćol. New Belgrade offers the shortest commute to the Expo site and has many modern hotels, while the historic centre provides a vibrant atmosphere with cafes and nightlife, albeit with a longer commute to the venue."
   - question: "How far is the Expo site from the city centre of Belgrade?"
-    answer: "The Expo site in Surčin is roughly 15 km from the city centre of Belgrade. This distance means that staying in the historic centre will require a cross-river trip to reach the venue."
+    answer: "The Expo site in Surčin is roughly 13.5 km from the city centre of Belgrade. This distance means that staying in the historic centre will require a cross-river trip to reach the venue."
   - question: "Is it better to stay near the Expo site or in the city centre?"
     answer: "It depends on your priorities. If your main focus is the Expo, staying near the site in New Belgrade or Surčin is advisable for a shorter commute. However, if you want to explore Belgrade and enjoy its nightlife, staying in the city centre is a better choice, though it comes with a longer commute to the Expo."
   - question: "When should I book accommodation for Expo 2027?"
@@ -40,7 +40,7 @@ faqs:
 
 ## Where should you stay for Expo 2027?
 
-For [Expo 2027](https://www.bie-paris.org/site/en/2027-belgrade) (15 May–15 August 2027), the simplest rule is to match your base to the purpose of your trip. The Expo site sits at **Surčin**, on the western edge of Belgrade — roughly 15 km from the city centre and only about 5 km from [Nikola Tesla Airport](/glossary/nikola-tesla-airport), in a brand-new district being built between **New Belgrade** and the Sava river.
+For [Expo 2027](https://www.bie-paris.org/site/en/2027-belgrade) (15 May–15 August 2027), the simplest rule is to match your base to the purpose of your trip. The Expo site sits at **Surčin**, on the western edge of Belgrade — roughly 13.5 km from the city centre and only about 5 km from [Nikola Tesla Airport](/glossary/nikola-tesla-airport), in a brand-new district being built between **New Belgrade** and the Sava river.
 
 That geography gives you three broad options:
 
@@ -92,7 +92,7 @@ There is no wrong answer here — only a commute-versus-character trade-off, and
 
 Book as early as your dates allow. The capacity picture is the reason.
 
-As of 2026, Belgrade had roughly **120 hotels with about 8,000 rooms**, with around **20 more hotels (~2,000 rooms)** reported as planned to open before the Expo — much of it in New Belgrade and near the airport. Against that, Expo 2027 projects **4 million visits, and on the BIE's current figure more than 6 million**.
+As of 2026, Belgrade had roughly **120 hotels with about 8,000 rooms**, with around **20 more hotels (~2,000 rooms)** reported as planned to open before the Expo — much of it in New Belgrade and near the airport. Against that, Expo 2027 projects **more than 4 million visits, and on the organisers' upper target 6 million**.
 
 Resist the temptation to divide one by the other. Those are *visits*, not overnight guests: they include Belgrade residents, day-trippers from the region, and the same person returning on a three-day ticket. Nobody has published how many Expo visitors will need a bed, for how many nights, or how many will stay outside the city. What the comparison does tell you is the direction of travel — a fixed, modest room stock meeting a large and rising visitor projection — and that is reason enough to book early and flexibly. It is not a basis for predicting a specific shortage.
 
@@ -109,7 +109,7 @@ We deliberately do not quote specific prices or live availability here — those
 
 ## Quick reference
 
-- **Site:** Surčin, western Belgrade — ~15 km from the centre, ~5 km from Nikola Tesla Airport, between New Belgrade and the Sava.
+- **Site:** Surčin, western Belgrade — ~13.5 km from the centre, ~5 km from Nikola Tesla Airport, between New Belgrade and the Sava.
 - **Closest base:** New Belgrade / Surčin (airport side) — shortest commute, newest hotels, quieter setting.
 - **City base:** Stari Grad / Vračar — historic, walkable Belgrade, longer cross-river commute.
 - **Best all-round:** New Belgrade — sits between the two.
