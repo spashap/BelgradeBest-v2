@@ -1,19 +1,15 @@
-Air Serbia by country on pavilion pages, Welcome Pickups on every transfer sentence, stay tile first
+Slovak and Czech Expo pages: Expo-side hotel card, accommodation links, stay row on hubs
 
-- Pavilion profiles: a "Flights" tile to Air Serbia's fares page for the
-  pavilion's own country (/en-<cc>/flights-to-belgrade, CJ deep link,
-  marked as an affiliate link); German profiles use the German page;
-  Slovakia points to Vienna (no Bratislava flight). 15 profiles; countries
-  without an Air Serbia market page get none. Map: partner-links.json
-  airSerbiaPavilions; helper lib/affiliates.ts flightTile().
-- Czech getting-there links Air Serbia's Czech page, Slovak the Austrian
-  one; both link the pre-booked transfer (Welcome Pickups, which has no
-  deep link: all CJ links land on one generic page).
-- "Early flight" bullets on the stay hub and business page link hotels
-  near the airport.
-- Pavilion directory (EN + DE) and profiles: "Where to stay" tile first
-  with sharper copy; tracker tile copy too. Profiles' tickets tile now
-  says three passed start dates (was two), matching the tickets page.
-- Strategy doc second-pass section, BB-CHG-0045.
+- Tickets (SK + CS): the "accommodation can be booked now" sentence links a
+  Booking search with free cancellation, followed by the Expo-side hotel
+  card (Nobel West, Mar Garni, KAME) with Slovak/Czech lines; Booking opens
+  in Slovak/Czech.
+- Getting there (SK + CS): "book flights and accommodation early" links the
+  accommodation search; the Slovak stay-page link gains its (EN) marker.
+- Hubs (SK + CS): an "Ubytovanie"/"Ubytování" row in "at a glance" to the
+  (English) Expo stay page, marked (EN).
+- hotel-picks.json: SK/CS strings for the card, the hotels and the
+  "near the airport" label; budget tier reads "nízka/nízká cena".
+- BB-CHG-0046.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

@@ -64,6 +64,14 @@ const facts: { label: string; text: string; href?: string; en?: boolean }[] = [
   { label: "Termíny", text: `${dates} – 93 dní` },
   { label: "Miesto", text: `${EXPO.venue}, na západe Belehradu – asi 5 km od letiska Nikolu Teslu`, href: sk(`/${LEG}/getting-there`) },
   {
+    // Beds are the bottleneck (2026-11-16): the stay page, with hotels near
+    // the site and in the old town, is English-only, so the row says so.
+    label: "Ubytovanie",
+    text: "Najbližšie hotely sú v Novom Belehrade a pri letisku, staré mesto je ďalej, ale živšie – rezervujte včas a so stornom",
+    href: `/${LEG}/where-to-stay-for-expo`,
+    en: true,
+  },
+  {
     label: "Vstupenky",
     text: "Zatiaľ nie sú v predaji a nemajú cenu – plánovaný štart 15. septembra 2026 prešiel bez predaja. Balíky slovenských cestovných kancelárií so vstupenkou boli ohlásené od 1. novembra 2026, do polovice novembra sa však žiadny verejne neobjavil.",
     href: sk(`/${LEG}/tickets`),

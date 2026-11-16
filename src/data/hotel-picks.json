@@ -40,7 +40,7 @@
       "disclosureLink": "ako zarábame (EN)",
       "moreArea": "Ďalšie ubytovanie: {x}",
       "moreNear": "Ďalšie ubytovanie {x}",
-      "tierBudget": "lacné",
+      "tierBudget": "nízka cena",
       "tierMid": "stredná trieda",
       "tierUpper": "vyššia trieda",
       "tierLuxury": "luxus",
@@ -56,7 +56,7 @@
       "disclosureLink": "jak se financujeme (EN)",
       "moreArea": "Další ubytování: {x}",
       "moreNear": "Další ubytování {x}",
-      "tierBudget": "levné",
+      "tierBudget": "nízká cena",
       "tierMid": "střední třída",
       "tierUpper": "vyšší třída",
       "tierLuxury": "luxus",
@@ -74,6 +74,12 @@
       "tr": {
         "de": {
           "label": "in Flughafennähe"
+        },
+        "sk": {
+          "label": "pri letisku"
+        },
+        "cs": {
+          "label": "u letiště"
         }
       }
     },
@@ -352,6 +358,12 @@
       "tr": {
         "de": {
           "why": "In der Tošin bunar im Westen von Novi Beograd, auf der Expo-Seite des Viertels."
+        },
+        "sk": {
+          "why": "Na ulici Tošin bunar v západnej časti Nového Belehradu, na strane bližšej k Expu."
+        },
+        "cs": {
+          "why": "V ulici Tošin bunar na západě Nového Bělehradu, na straně blíž k Expu."
         }
       }
     },
@@ -366,6 +378,12 @@
       "tr": {
         "de": {
           "why": "In der Surčinska, der Straße von Novi Beograd Richtung Surčin; rund 5 km vom Flughafen."
+        },
+        "sk": {
+          "why": "Na ulici Surčinska, ceste z Nového Belehradu smerom na Surčin; asi 5 km od letiska."
+        },
+        "cs": {
+          "why": "V ulici Surčinska, na silnici z Nového Bělehradu směrem na Surčin; asi 5 km od letiště."
         }
       }
     },
@@ -380,6 +398,12 @@
       "tr": {
         "de": {
           "why": "In Ledine (Gemeinde Surčin), rund 3 km vom Flughafen."
+        },
+        "sk": {
+          "why": "V Ledine (obec Surčin), asi 3 km od letiska."
+        },
+        "cs": {
+          "why": "V Ledine (obec Surčin), asi 3 km od letiště."
         }
       }
     },
@@ -511,6 +535,12 @@
       "tr": {
         "de": {
           "title": "Hotels auf der Expo-Seite der Stadt"
+        },
+        "sk": {
+          "title": "Hotely na strane mesta bližšej k Expu"
+        },
+        "cs": {
+          "title": "Hotely na straně města blíž k Expu"
         }
       }
     },

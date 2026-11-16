@@ -153,7 +153,9 @@ Je rozumné *očekávat* určitou formu řízení kapacity, protože čísla jso
 
 Několik věcí je potvrzeno a stojí za to je znát při plánování. Expo 2027 se koná od **15. května do 15. srpna 2027, tedy 93 dní, v areálu v Surčinu** v Bělehradě, zhruba 5 km od [letiště Nikoly Tesly (EN)](/glossary/nikola-tesla-airport) a asi 13,5 km od centra města. Na toto období by se případná vstupenka vztahovala, takže právě podle těchto dat si můžete cestu naplánovat ještě dříve, než vstupenky budou existovat.
 
-Zpoždění vstupenek není důvod odkládat zbytek příprav. Skutečným omezením návštěvy Expa je nabídka lůžek v Bělehradě – město má mnohem méně pokojů, než mívá 93denní akce takové velikosti obvykle k dispozici – a ubytování si můžete rezervovat už nyní, vstupenky ne.
+Zpoždění vstupenek není důvod odkládat zbytek příprav. Skutečným omezením návštěvy Expa je nabídka lůžek v Bělehradě – město má mnohem méně pokojů, než mívá 93denní akce takové velikosti obvykle k dispozici – a [ubytování si můžete rezervovat už nyní](aff:near/belgrade-flex), vstupenky ne.
+
+[Ubytování](aff:pick/expo)
 
 Některé nezávislé cestovatelské weby, výslovně nepřidružené k pořadatelům, už zveřejňují odhadované náklady na cestu, například za letištní autobusy, taxíky a městské turistické karty. Nejsou to oficiální údaje Expa ani vlády, nejsou to ceny vstupenek a mohou se rychle měnit. Mohou pomoci s rozpočtem celé cesty, ale o vstupu na Expo neříkají nic.
 
