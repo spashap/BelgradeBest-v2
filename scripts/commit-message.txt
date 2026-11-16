@@ -1,21 +1,21 @@
-Trust pass: "Ad" labels on every affiliate link, no unsupported scarcity or commute claims
+Affiliate tracking verified end to end; CJ partner terms written down
 
-Step 1 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md (Codex-reviewed, owner-approved).
+Step 2 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md. Docs only, no
+site change.
 
-- Disclosure (EN/DE/SK/CS): every in-text affiliate link is followed by a
-  small "Ad" tag (Anzeige / Reklama); every hotel card, end-of-page box and
-  pavilion flight tile opens with "Ad" and a one-line commission note before
-  its links; the date line explains the label. /how-we-make-money explains
-  it too. New c-adtag pattern in globals.css.
-- Claims: removed "beds are the bottleneck", "rooms will go first and
-  command premium prices", "short, predictable commute" and "book early"
-  pressure across the Expo stay page, guide and tickets (EN/DE, tickets also
-  SK/CS), the hub and the stay tiles. Booking advice is now conditional:
-  book refundably once your dates are firm.
-- Expo hub: ticket row and unknowns now count three passed start dates,
-  matching the tickets page.
-- Strategy doc: the 28-day card-removal rule is deleted (noise-chasing);
-  rule 7 "never state what we can't support"; one success number.
-- Plan doc growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md added. BB-CHG-0047.
+- Test click on the Hyatt card (Expo stay page, ?bb_test=1, 16 Nov 09:51
+  UTC): GA4 realtime recorded aff_click_booking within a minute; the CJ
+  redirect landed on Booking.com with our link ID and the Hyatt first.
+  CJ shows clicks by link and day, a day late; sub-IDs only on commissions.
+- Partner terms (strategy doc, new "Partner terms" section): Booking CEE
+  4%, 1-day referral period, paid only after the stay (cancellations pay
+  nothing), monthly batches; Welcome Pickups 7%, 45 days, paid when the
+  ride runs; Air Serbia 1%, 45 days. Rules that bind us: no paid ads on
+  Booking or hotel names, no Welcome Pickups links in groups we don't own.
+- Plan: marked approved; Progress section; step 3 kit now also links the
+  Expo stay page (on-sale day is when readers fix dates and can book the
+  same day).
+- Our own clicks to exclude from baselines (15 Nov x6, 16 Nov x1) are
+  logged in BB-CHG-0048.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

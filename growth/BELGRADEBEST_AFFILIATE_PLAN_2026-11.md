@@ -1,6 +1,6 @@
 # BelgradeBest — affiliate hub plan, Nov 2026 – May 2027
 
-*16 November 2026. My draft was reviewed in two Codex rounds. I checked its claims against the repo and live sources; the verdicts are in the table below. This document is a proposal waiting for the owner's approval.*
+*16 November 2026. My draft was reviewed in two Codex rounds. I checked its claims against the repo and live sources; the verdicts are in the table below. The owner approved it on 16 Nov 2026. Progress is at the end.*
 
 ## TL;DR
 
@@ -32,7 +32,7 @@
 |---|---|---|---|---|---|
 | 1 | **Trust fixes across all languages.** Reword the bottleneck, scarcity and commute claims, including the stay page lede and FAQs. Fix the hub's ticket count. New disclosure: the date line says "We earn a commission when you book through links marked 'Ad'", cards start with "Ad ·", and in-text affiliate recommendations carry a short local label. Delete the 28-day card rule. | Trust is what converts. Labels shown only at the bottom or footer are too weak for UK and EU readers. | 2–3 h, mostly mine | Every commercial block is visibly labelled and the checked pages make no unsupported claims | 30 Nov 2026 |
 | 2 | **Verify tracking end to end.** Click one tagged test link and confirm it appears in GA4 and in CJ by sub-ID. Read each advertiser's CJ terms: commission base, attribution window, cancellations. | Data that never arrives can't support a decision. | 1 h | The test click is visible in both, and the terms are written down | 30 Nov 2026 |
-| 3 | **Ticket on-sale kit.** A prepared replacement for the top of the tickets page (EN/DE/SK/CS) covering status, official seller link, price table, conditions, unknowns and a dated change log. Matching hub row and a Facebook post. | 25% of searchers click our ticket results, and the announcement is the biggest traffic event coming. | 3–4 h now, 2–3 h on the day | Update live within 24 h; ticket clicks rise | Ready 30 Nov; judged 28 days after sales open |
+| 3 | **Ticket on-sale kit.** A prepared replacement for the top of the tickets page (EN/DE/SK/CS) covering status, official seller link, price table, conditions, unknowns and a dated change log. Matching hub row, a line to the Expo stay page, and a Facebook post. | 25% of searchers click our ticket results, and the announcement is the biggest traffic event coming. | 3–4 h now, 2–3 h on the day | Update live within 24 h; ticket clicks rise | Ready 30 Nov; judged 28 days after sales open |
 | 4 | **Improve the airport page plus one other evergreen page that Bing already shows.** Sharper answers on payment and the A1 minibus, contradictions removed, everything kept on the same URL. | Existing Bing visibility is the cheapest way to win readers, and it is a money page (Welcome Pickups). | 8–10 h | Clicks on these pages up 25% or more over 8 weeks compared with before | 31 Jan 2027 |
 | 5 | **Rebuild the Expo stay page around an honest access table.** One row per base, with columns: suits whom, which side of the Sava, transport that works today, confirmed visitor route (otherwise "not yet confirmed"), planned links, what to check before booking, source and date. No travel times to an approximate venue location. The Swissôtel gets a labelled "opening Q1 2027" note. EN and DE. | Gives better local judgement than Booking or serbiaexpo.com, without promises we can't keep. | 5–6 h | Published, claims clean, accommodation clicks measured | Published by 15 Dec; performance judged 31 Mar 2027 |
 | 6 | **Six-week Facebook test.** Two useful posts a week (arrival, choosing a base, real ticket news), each linking to one guide with UTM tags. | Already 278 sessions per 28 days. | 0.5 h/week | 120 or more engaged sessions per 28 days (about 92 now) | 15 Jan 2027 |
@@ -48,3 +48,13 @@
 - Contracts-ledger expansion, the quiz, homepage redesign, and anything aimed at locals.
 
 **Still open (owner action):** completing the CJ Network Profile is a 30-minute task that unlocks GetYourGuide, Daytrip and 12GO. Add their products only to pages that already have the matching intent.
+
+## Progress
+
+- **Step 1, done 16 Nov (V01.065).** Every affiliate link and block is labelled "Ad", the unsupported claims are gone, and the hub's ticket count is fixed.
+- **Step 2, done 16 Nov.**
+  - A test click reached GA4 within a minute and went through CJ to the right Booking.com hotel.
+  - CJ counts clicks a day late, so the 16 Nov click still has to be seen in its report. Sub-IDs appear only on commissions.
+  - The partner terms are in the strategy doc. **Booking credits only bookings made within 1 day of the click, and pays only after the stay.** Welcome Pickups pays 7% and Air Serbia 1%, both with 45 days.
+  - Consequence for step 3: the on-sale kit also carries a line to the Expo stay page, because on-sale day is when readers fix their dates and can book a bed the same day.
+  - Consequence for step 7: until summer 2027 the scorecard reads pending CJ commissions, not paid ones, because Expo stays pay only after they happen.
