@@ -7,7 +7,7 @@ description: "The Belgrade train station moved — rail now runs from Beograd Ce
 lede: "If an old guide sends you to a grand station by the river, you'll find it closed. Belgrade's main train station is now Beograd Centar (\"Prokop\"), and intercity buses leave from a new station in Block 42, New Belgrade. Here's where each station actually sits, how to reach it on the free city network, and how to travel onward across Serbia — including the Soko high-speed train to Novi Sad."
 heroLabel: "Belgrade stations / hero"
 heroAlt: "Belgrade's main stations and onward travel across Serbia"
-lastUpdated: "2026-10-01"
+lastUpdated: "2026-11-16"
 order: 3
 visible: true
 intent: "both"
@@ -85,6 +85,6 @@ More generally, from Prokop (rail) and Block 42 (bus) you can reach cities acros
 
 ## What's still unknown
 
-Several things here are deliberately left open because they are not settled. Parts of Prokop remain unfinished, and the Block 42 bus station building was still being completed at the time of research, with a temporary terminal in use — both may look and work differently by the time you arrive. Timetables, fares, station opening hours and any platform fees are perishable and should be verified locally. The Belgrade–Niš high-speed line and other corridor upgrades are progressing but not yet operational, so treat them as future, not current, options. Any dedicated event or Expo shuttle arrangements are not yet announced in our sources, so don't plan around them until they are confirmed.
+Several things here are deliberately left open because they are not settled. Parts of Prokop remain unfinished, and the Block 42 bus station building was still being completed at the time of research, with a temporary terminal in use — both may look and work differently by the time you arrive. Timetables, fares, station opening hours and any platform fees are perishable and should be verified locally. The Belgrade–Niš high-speed line and other corridor upgrades are progressing but not yet operational, so treat them as future, not current, options. Dedicated Expo bus lines have been announced but not yet confirmed running, and their stops and fares are unpublished, so don't plan around them until they are confirmed ([the Expo bus lines](/expo-2027/getting-there#the-expo-bus-lines-what-has-been-announced)).
 
 The stable, dependable facts are simple: rail from Beograd Centar (Prokop), intercity buses from Block 42 in New Belgrade, both reachable on the free city network, the fast Soko train to Novi Sad and Subotica, with Budapest still waiting on its passenger launch — and the old riverfront stations firmly behind us.

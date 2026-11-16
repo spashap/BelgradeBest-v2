@@ -7,7 +7,7 @@ description: "The best time to visit Belgrade is April–June and September–Oc
 lede: "The short answer: the best time to visit Belgrade is the shoulder seasons — April to June and September to October — when the weather is mild and the crowds are thin. Here's the full month-by-month and season-by-season breakdown, plus what the 2027 Expo window means for heat, crowds and prices."
 heroLabel: "Best time to visit Belgrade / hero"
 heroAlt: "Choosing the best time to visit Belgrade"
-lastUpdated: "2026-06-20"
+lastUpdated: "2026-11-16"
 order: 4
 visible: true
 intent: "both"
@@ -33,7 +33,7 @@ faqs:
     question: "How can I avoid the Expo crowds but still visit Belgrade in 2027?"
   - answer: "Belgrade has a continental, humid-subtropical climate with warm-to-hot summers, cold winters and rain spread across the year. Annual precipitation is around 690–700 mm, with July averages that have warmed over recent decades."
     question: "What's the climate like in Belgrade?"
-  - answer: "Details such as dedicated Expo shuttle arrangements have not yet been announced, so it's best to keep plans flexible and re-check transport options closer to your travel dates."
+  - answer: "Partly. Dedicated Expo bus lines have been announced (four from 1 November 2026, an airport line from 1 April 2027 and more from May 2027), but their stops, fares and confirmation that they run are still pending, so keep plans flexible and re-check transport closer to your travel dates."
     question: "Are dedicated Expo shuttles confirmed?"
 isFaqCandidate: true
 unknowns: []
@@ -110,4 +110,4 @@ If your real goal is Belgrade sightseeing rather than the Expo, you might prefer
 
 ## What's still unknown
 
-Some of the things travelers most want to know about summer 2027 are not yet settled. The precise number of Expo visitors is a projection, not a confirmed figure, and the scale of price increases is a directional expectation rather than a promise. Details such as dedicated Expo shuttle arrangements have not yet been announced, so it's wise to keep plans flexible and to re-check transport and accommodation closer to your travel dates.
+Some of the things travelers most want to know about summer 2027 are not yet settled. The precise number of Expo visitors is a projection, not a confirmed figure, and the scale of price increases is a directional expectation rather than a promise. Dedicated Expo bus lines have been announced, but their stops and fares are not yet published ([the Expo bus lines](/expo-2027/getting-there#the-expo-bus-lines-what-has-been-announced)), so it's wise to keep plans flexible and to re-check transport and accommodation closer to your travel dates.

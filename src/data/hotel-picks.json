@@ -230,7 +230,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/jump-inn-belgrade.html",
       "why": "In Savamala, a short walk from the Sava riverfront.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In Savamala, wenige Gehminuten vom Ufer der Save."
+        }
+      }
     },
     "bristol": {
       "name": "The Bristol Belgrade",
@@ -239,7 +244,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/sunset-beograd4.html",
       "why": "The restored historic Bristol building on Karađorđeva, in Savamala.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "Im restaurierten historischen Bristol-Gebäude an der Karađorđeva in Savamala."
+        }
+      }
     },
     "st-regis": {
       "name": "The St. Regis Belgrade",
@@ -248,7 +258,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/the-st-regis-belgrade.html",
       "why": "At Belgrade Waterfront on the Sava, with river-view rooms.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "Am Belgrade Waterfront an der Save, mit Zimmern mit Flussblick."
+        }
+      }
     },
     "karavan": {
       "name": "Hostel Karavan Inn",
@@ -422,7 +437,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/d10.html",
       "why": "On Dunavska in old Zemun, a block from the Danube quay.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Dunavska in der Altstadt von Zemun, einen Block vom Donaukai."
+        }
+      }
     },
     "lora": {
       "name": "Hotel LoRa",
@@ -431,7 +451,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/lora.html",
       "why": "In the old town of Zemun, a walk from Gardoš and the quay.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Altstadt von Zemun, zu Fuß zum Gardoš und zum Kai."
+        }
+      }
     }
   },
   "picks": {
@@ -474,7 +499,12 @@
         "jump-inn",
         "bristol",
         "st-regis"
-      ]
+      ],
+      "tr": {
+        "de": {
+          "title": "Unterkünfte in Savamala und am Belgrade Waterfront"
+        }
+      }
     },
     "vracar": {
       "title": "Places to stay in Vračar",
@@ -518,7 +548,7 @@
       ],
       "tr": {
         "de": {
-          "title": "Unterkünfte in Novi Beograd"
+          "title": "Unterkünfte in Neu-Belgrad"
         }
       }
     },
@@ -558,7 +588,12 @@
       "hotels": [
         "d10",
         "lora"
-      ]
+      ],
+      "tr": {
+        "de": {
+          "title": "Unterkünfte in Zemun"
+        }
+      }
     }
   }
 }

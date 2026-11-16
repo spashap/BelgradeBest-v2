@@ -22,7 +22,7 @@ partnerTargets:
   - airport-transfer
 unknowns:
   - "Exact opening date, passenger timetable and fare scheme for the new Surčin/airport railway"
-  - "Final Expo-specific bus line numbers, routes and timetables to entrances A and C for summer 2027"
+  - "Whether the announced EKSPO bus lines 2–5 are running, their stops and timetables, and whether they are free"
   - "Whether the airport rail link will be free or carry a special fare"
 faqs:
   - question: "Where is Expo 2027 located in Belgrade?"
@@ -51,15 +51,15 @@ Because the grounds sit out by the airport rather than in the old town, almost e
 
 About 5 km. The official Expo documents place the Surčin site roughly 5 kilometres from Nikola Tesla International Airport — meaning that if you fly in, you land closer to the Expo grounds than to central Belgrade (around 13.5 km away).
 
-That proximity is the planning win to remember. The new railway now under construction runs right past the airport on its way to Surčin and the National Stadium, and officials have promised dedicated Expo bus lines linking the airport directly with the site. For now, though, the dependable way to cover those 5 km is by road — a taxi or a ride-hail car (see below) — because, as of June 2026, no airport-to-Expo rail timetable or shuttle route has been finalised.
+That proximity is the planning win to remember. The new railway now under construction runs right past the airport on its way to Surčin and the National Stadium, and a dedicated Expo bus line from the airport, EKSPO 1, is planned from 1 April 2027. Until then, the dependable way to cover those 5 km is by road, in a taxi or a ride-hail car (see below), because the railway has no timetable yet.
 
 ## Flying to Belgrade for Expo 2027
 
 Most international visitors will arrive at Belgrade Nikola Tesla Airport (BEG), about 5 km from the Expo site. **[Air Serbia](aff:go/air-serbia)**, the national carrier, has its hub here and the widest direct network into Belgrade. Wikipedia's destinations list (as of August 2026) puts its Belgrade network at 89 destinations in 35 countries; treat that count as approximate. For readers in the German-speaking countries, Belgrade Airport's seasonal timetable (checked October 2026) shows Air Serbia flying to Frankfurt, Munich, Berlin, Düsseldorf, Hamburg, Stuttgart, Nuremberg and Hanover in Germany, Vienna and Salzburg (seasonal, weekly) in Austria, and Zürich and Geneva in Switzerland. Cologne/Bonn is served by Eurowings rather than Air Serbia, and Lufthansa and Austrian Airlines also fly from Frankfurt and Vienna. The timetable has no Bratislava flight at all, so the nearest option from Slovakia is Vienna. Routes and frequencies change by season, so **check the current schedule on the airline's site** before you plan around any of them.
 
-Low-cost carriers also serve Belgrade from several European cities, so compare fares across airlines rather than assuming one is cheapest. The Expo runs from 15 May to 15 August 2027. We expect flights and hotels to be busiest on opening weekend and in peak summer weeks, though nobody has published figures. Book flights and rooms early, ideally on changeable fares (see [where to stay for Expo 2027](/expo-2027/where-to-stay-for-expo)).
+Low-cost carriers also serve Belgrade from several European cities, so compare fares across airlines rather than assuming one is cheapest. The Expo runs from 15 May to 15 August 2027. We expect flights and hotels to be busiest on opening weekend and in peak summer weeks, though nobody has published figures. Book flights and rooms once your dates are firm, ideally on changeable fares (see [where to stay for Expo 2027](/expo-2027/where-to-stay-for-expo)).
 
-**Arriving:** because the site is only about 5 km from the airport, a taxi or ride-hail car to Surčin is a short trip, and no Expo-specific airport bus line is confirmed yet. For groups, business visitors on a fixed schedule, or anyone landing late with luggage, a [pre-booked private transfer](aff:go/airport-transfer) (driver waiting in arrivals, fixed price paid in advance) is worth comparing with the voucher taxi; it usually costs more. Our [airport-to-city guide](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it) sets out when it is worth it.
+**Arriving:** because the site is only about 5 km from the airport, a taxi or ride-hail car to Surčin is a short trip. The Expo airport bus line, EKSPO 1, is planned from 1 April 2027. For groups, business visitors on a fixed schedule, or anyone landing late with luggage, a [pre-booked private transfer](aff:go/airport-transfer) (driver waiting in arrivals, fixed price paid in advance) is worth comparing with the voucher taxi; it usually costs more. Our [airport-to-city guide](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it) sets out when it is worth it.
 
 ## How do I get from the airport into the city today?
 
@@ -77,7 +77,7 @@ For taxis, the airport operates an official voucher system: you take a fixed-pri
 
 As of 2026, the most reliable option is Belgrade's regular city public transport — currently free on all regular lines (buses, trams, trolleybuses and the BG Voz suburban trains). For door-to-door convenience to Surčin, a taxi or a ride-hail app (CarGo or Yandex Go) covers the roughly 13.5 km from the centre directly to the site.
 
-Two faster, purpose-built options are promised but not yet running. Officials plan a new airport-and-Surčin railway and dedicated environmentally friendly electric bus lines serving Expo entrances A and C. Until those firm up, the safe assumption for planning is the free network plus a ride-hail car as your backbone — and to watch official channels closer to your travel date for the Expo-specific lines.
+Two purpose-built options are on the way. Four Expo bus lines from different parts of the city were announced to start on 1 November 2026 (see [the Expo bus lines](#the-expo-bus-lines-what-has-been-announced) below), and a new railway from Beograd Centar (Prokop) to the National Stadium next to the site is expected in spring 2027. Until both are confirmed running, plan on the free network plus a ride-hail car, and check the Expo lines closer to your travel date.
 
 ## The new railway to Surčin: what's confirmed and what's still a promise
 
@@ -93,10 +93,35 @@ According to the Participants FAQ, visitors will reach the site by private vehic
 
 Serbia is procuring electric buses for the event, with charging infrastructure at the Expo complex, the airport and major terminals; after the event they are reported to pass to GSP Belgrade for regular service. The fleet size is contested: early statements described 100 electric buses, while a later tender and contract secured 50 plus 8 chargers. At least 50 are now contractually committed; the final deployed total may differ.
 
-The final Expo-specific bus line numbers, routes and timetables to entrances A and C for summer 2027 have not yet been published — so check official channels closer to the event.
+## The Expo bus lines: what has been announced
+
+On 10 October 2026, EXPO 2027 d.o.o. announced direct city bus lines to the exhibition complex in Surčin, as reported by Biznis.rs, Kurir and B92:
+
+| Line | Starts at | Announced start |
+| --- | --- | --- |
+| EKSPO 2 | Belgrade Waterfront (Beograd na vodi) loop, under the Gazela bridge, Savski venac | 1 November 2026 |
+| EKSPO 3 | Zemun (Bačka street) | 1 November 2026 |
+| EKSPO 4 | Vukov spomenik, Zvezdara, via the Terazije tunnel, Zeleni venac and Branko's Bridge | 1 November 2026 |
+| EKSPO 5 | Ustanička, Zvezdara | 1 November 2026 |
+| EKSPO 1 | Nikola Tesla Airport, via Surčin | 1 April 2027 |
+| EKSPO 6 | Belvil, near Delta City, New Belgrade | 1 May 2027 |
+| EKSPO 7 | Block 45, New Belgrade | 1 May 2027 |
+
+What the announcement says beyond that:
+
+- **Frequency:** for the first four lines, buses every 15–22 minutes for most of the day, with 31 eco-buses until the end of March 2027. More frequent service is planned from 1 May 2027, when more than 90 buses are to run.
+- **More lines from May 2027:** three local feeder lines, and a bus from the railway's National Stadium station to the Expo entrance.
+
+What is still open, as of 16 November 2026:
+
+- **Whether the first four lines are running.** All the reporting we found predates the 1 November start, and the city transport operator had published nothing on them.
+- **Their stops and exact timetables.** Only the starting points and main roads were published.
+- **Whether they are free** like regular city transport. The organiser has not said.
+
+Check the line you need before relying on it. Our [where to stay for Expo 2027](/expo-2027/where-to-stay-for-expo) page compares each part of the city by which of these lines and railway stations serve it.
 
 ## What about the metro and BG Voz?
 
 The Belgrade Metro is under construction, but officials have targeted Line 1 for around 2028 and Line 2 around 2030 — both after the Expo window, and stated as political dates rather than contractual ones. Crucially, no planned metro line reaches Surčin, the airport or the Expo site. Rail access is intended via BG Voz suburban rail instead. A planned BG Voz line (Line 4), 16.2 km, is meant to run Novi Beograd–Nikola Tesla Airport–Surčin–National Stadium, but it is a planned future line, not a service running today — don't expect to board it.
 
-For now, the practical advice is to treat the airport and the free regular network as your reliable backbone, with a taxi or ride-hail car to cover the last stretch to Surčin door-to-door, and to watch official channels for the railway and Expo shuttle details as they firm up. For the wider picture on moving around the city, see [getting around Belgrade](/plan-your-trip/getting-around).
+For now, the practical advice is to treat the airport and the free regular network as your reliable backbone, with a taxi or ride-hail car to cover the last stretch to Surčin door-to-door, and to check the Expo bus lines and the railway as their details are confirmed. For the wider picture on moving around the city, see [getting around Belgrade](/plan-your-trip/getting-around).

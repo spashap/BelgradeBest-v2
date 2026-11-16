@@ -3,8 +3,8 @@ leg: "expo-2027"
 slug: "where-to-stay-for-expo"
 title: "Where to Stay for Expo 2027: Best Areas in Belgrade"
 shortTitle: "Where to stay"
-description: "Where to stay for Expo 2027: New Belgrade and the Surčin airport side vs the historic centre, how early to book, and what to expect on price."
-lede: "For Expo 2027, the closest beds are in New Belgrade and the Surčin / airport side, a few kilometres from the site; the historic centre (Stari Grad, Vračar) gives you the city you came to see at the cost of a longer cross-river commute. Visit projections run from the official 4 million-plus to the organisers' 6 million target, but nobody has published how many visitors will need a bed, so the safe move is a refundable booking once your dates are firm, not a rush."
+description: "Where to stay for Expo 2027: New Belgrade, Zemun, the airport side, the Waterfront or the old town. Which side of the Sava each is on, which Expo bus or train line serves it, and what to check before you book."
+lede: "The Expo site is at Surčin, on the same side of the Sava as New Belgrade and Zemun, so the closest beds are there. The old town, Vračar and the Belgrade Waterfront are across the river, but announced Expo bus lines and the planned railway start near them. This page compares each base by how you would actually reach the site, separates what is announced from what is confirmed, and says what to check before you book. Nobody has published how many visitors will need a bed, so book a refundable room once your dates are firm."
 heroLabel: "Where to stay for Expo 2027 / hero"
 heroAlt: "Map-style view of Belgrade showing the Surčin Expo site, New Belgrade and the old town across the Sava"
 lastUpdated: "2026-11-16"
@@ -22,103 +22,139 @@ stayTargets:
   - surcin
   - stari-grad
   - vracar
-unknowns: []
+unknowns:
+  - "Whether the announced EKSPO bus lines 2–5 are running, and their stops"
+  - "Whether the EKSPO bus lines are free, like regular Belgrade city transport"
+  - "The opening date and fares of the railway to the National Stadium station"
 faqs:
   - question: "What are the best areas to stay in Belgrade for Expo 2027?"
-    answer: "The best areas to stay in Belgrade for Expo 2027 are New Belgrade, the Surčin/airport side, and the historic centre, which includes Stari Grad, Vračar, and Dorćol. New Belgrade is closer to the Expo site and has many modern hotels, while the historic centre provides a vibrant atmosphere with cafes and nightlife, albeit with a longer commute to the venue."
+    answer: "New Belgrade is the best all-round base: it is on the same side of the Sava as the Surčin site, and two announced Expo bus lines will start there from May 2027. Zemun is the same side too, with more character. The old town, Vračar and the Belgrade Waterfront are across the river but near the start of other announced Expo lines and of the planned railway. The airport side is closest but the least urban."
   - question: "How far is the Expo site from the city centre of Belgrade?"
-    answer: "The Expo site in Surčin is roughly 13.5 km from the city centre of Belgrade. This distance means that staying in the historic centre will require a cross-river trip to reach the venue."
-  - question: "Is it better to stay near the Expo site or in the city centre?"
-    answer: "It depends on your priorities. If your main focus is the Expo, staying near the site in New Belgrade or Surčin makes sense because it is closer. However, if you want to explore Belgrade and enjoy its nightlife, staying in the city centre is a better choice, though it comes with a longer commute to the Expo."
+    answer: "The official planning figure is about 13.5 km from the city centre and about 5 km from Nikola Tesla Airport. The site is on the western side of the Sava, so a stay in the old town means crossing the river."
+  - question: "Is there public transport from the city to the Expo site?"
+    answer: "Four Expo bus lines (EKSPO 2 to 5, from Belgrade Waterfront, Zemun, Vukov spomenik and Ustanička) were announced to start on 1 November 2026, with more lines from April and May 2027 and a railway from Beograd Centar (Prokop) expected in spring 2027. As of 16 November 2026 we had not seen confirmation that the November lines are running, and the organiser has not said whether they are free."
   - question: "When should I book accommodation for Expo 2027?"
     answer: "Book once your dates are firm, on a refundable rate. Visit projections range from 4 million to more than 6 million, but nobody has published how many visitors will need a bed; a refundable booking protects you either way."
-  - question: "What types of accommodation are available near the Expo site?"
-    answer: "Near the Expo site, you can find modern hotels and serviced apartments in New Belgrade and the Surčin area. However, the Surčin area is less urban and primarily serves as a logistics base, while New Belgrade offers more amenities and a calmer atmosphere."
-  - question: "What should I consider when choosing where to stay for Expo 2027?"
-    answer: "Consider what will dominate your days during your trip. If you will spend most of your time at the Expo, choose accommodation near the site. If you want to experience Belgrade's culture and nightlife, opt for the historic centre, accepting the longer commute to the Expo."
+  - question: "What should I check before booking a hotel for the Expo?"
+    answer: "Its exact position on the map, not just 'Belgrade'; how far it is from a terminus or route of the Expo bus line that serves its area, or from a station on the planned railway; and the cancellation deadline, deposit and prepayment terms."
 ---
 
 ## Where should you stay for Expo 2027?
 
-For [Expo 2027](https://www.bie-paris.org/site/en/2027-belgrade) (15 May–15 August 2027), the simplest rule is to match your base to the purpose of your trip. The Expo site sits at **Surčin**, on the western edge of Belgrade — roughly 13.5 km from the city centre and only about 5 km from [Nikola Tesla Airport](/glossary/nikola-tesla-airport), in a brand-new district being built between **New Belgrade** and the Sava river.
+[Expo 2027](https://www.bie-paris.org/site/en/2027-belgrade) runs from 15 May to 15 August 2027 at **Surčin**, on Belgrade's western edge: about 13.5 km from the city centre and 5 km from [Nikola Tesla Airport](/glossary/nikola-tesla-airport). The site is on the **same side of the Sava as New Belgrade and Zemun**; the old town, Vračar and the Belgrade Waterfront are across the river.
 
-That geography gives you three broad options:
+Match your base to the purpose of your trip:
 
-- **Closest to the site** — New Belgrade (Novi Beograd) and the Surčin / airport side. Closest by distance, the newest hotels, nearest the airport.
-- **The city you also came to see** — the historic centre (Stari Grad, Vračar, Dorćol). Walkable old Belgrade, at the cost of a longer cross-river trip to the venue.
-- **The middle ground** — New Belgrade again, which physically sits between the old town and Surčin and reaches both quickly.
+- **Mostly Expo:** New Belgrade, or the airport side for a short stay.
+- **Expo plus a place with character on the same side:** Zemun.
+- **Belgrade as much as the Expo:** the old town, Vračar or the Waterfront. Announced Expo bus lines and the planned railway start near them.
 
-For most visitors, New Belgrade is the best balance. If the Expo is the whole reason for the trip, lean toward Surčin and the airport side; if you want Belgrade itself as much as the fair, base in the centre and treat the Expo as a day out.
+For most visitors, New Belgrade is the best balance.
 
-The single most important decision, though, is not which neighbourhood — it is **how early you book**. More on that below.
+## Access at a glance
 
-## Staying near the Expo site: New Belgrade and the Surčin / airport side
+| Base | Side of the Sava | Expo bus lines (announced) | Planned railway (reported stops) | Suits |
+| --- | --- | --- | --- | --- |
+| New Belgrade | Same side as the site | EKSPO 3, 4 and 5 run through it; EKSPO 6 (from Belvil, near Delta City) and EKSPO 7 (from Block 45) start here from 1 May 2027 | New Belgrade station | Expo-first trips, business, families |
+| Airport side and Surčin | Same side, closest | EKSPO 1 from the airport via Surčin, from 1 April 2027 | Airport and Surčin stations | Short Expo-only stays, arrival and departure nights |
+| Zemun | Same side | EKSPO 3 from Zemun (Bačka street), announced from 1 November 2026 | Zemun station | Expo plus a riverside old town |
+| Savski venac, Vračar and the Belgrade Waterfront | Across the Sava | EKSPO 2 from the Waterfront loop under the Gazela bridge, announced from 1 November 2026 | Beograd Centar (Prokop), where the line starts | Expo plus the city |
+| Old town (Stari grad) and Dorćol | Across the Sava | EKSPO 4 from Vukov spomenik runs via the Terazije tunnel and Zeleni venac, announced from 1 November 2026 | Reach Prokop or New Belgrade first | Belgrade first, the Expo as a day out |
 
-**New Belgrade (Novi Beograd)** stretches across the Sava from the historic core and is the city's main business district: wide boulevards, modern office and apartment towers, large hotels and conference space. Because the Expo district is being built on its western flank, New Belgrade is the natural "near the site" base, and it is where a large share of Belgrade's [newer hotel rooms](aff:area/new-belgrade) are.
+**What's confirmed and what isn't (16 November 2026).**
 
-What you get:
+- **The bus lines:** EXPO 2027 d.o.o. announced the Expo bus lines on 10 October 2026. Lines EKSPO 2–5 were due to start on 1 November 2026, every 15–22 minutes for most of the day, and more often from May 2027. We have not yet seen confirmation that they are running.
+- **Still unknown:** the stops have not been published, and the organiser has not said whether the lines are free like regular city transport.
+- **The railway** (Beograd Centar/Prokop – New Belgrade – Zemun – airport – Surčin – National Stadium) is under construction. In October 2026 the finance minister put its opening at March or April 2027. A shuttle bus is planned from the National Stadium station to the Expo gates.
+- **No journey times:** we deliberately give none from any base to the site, because its gates and stops are not final.
+- **Sources:** reporting by Biznis.rs, Kurir and B92 (October 2026); the full picture is in [getting to Expo 2027](/expo-2027/getting-there).
 
-- **Less distance to cover** to the Surčin venue and to the airport. The Expo's own transport (dedicated bus lines, the airport railway) is announced but not yet confirmed.
-- **Modern hotels and serviced apartments** in good supply relative to the cramped old town.
-- A calmer, more spread-out feel — good for business travellers and families who want space.
+## New Belgrade: the closest real neighbourhood
 
-The trade-off is character. New Belgrade is functional and contemporary rather than atmospheric; the cafés, cobbled streets and riverside nightlife are across the bridge. You will cross the Sava whenever you want "old Belgrade."
+**New Belgrade (Novi Beograd)** lies across the Sava from the historic core and is the city's main business district: wide boulevards, modern towers, large hotels and conference space. It is on the same side of the river as the Expo, three of the announced Expo bus lines pass through it, and two more will start here in May 2027. A large share of Belgrade's [newer hotel rooms](aff:area/new-belgrade) are here too.
+
+- **Suits:** visitors whose days are mostly at the Expo, business travellers, families who want space and modern hotels.
+- **The trade-off:** character. New Belgrade is functional rather than atmospheric. The cafés, cobbled streets and riverside nightlife are across the bridge.
+- **Check before booking:** New Belgrade is large, and "Novi Beograd" in a listing can mean anywhere from the river to the motorway. Look at how far the hotel is from Belvil (near Delta City) or Block 45, where EKSPO 6 and 7 will start, or from the New Belgrade railway station.
 
 [Places to stay](aff:pick/new-belgrade)
 
-The **Surčin and immediate airport area** is closer still to the site and convenient for very short or arrival-day stays, but it is the least urban option — thin on restaurants, sights and street life. Treat it as a logistics base, not a place to experience the city.
+## The airport side and Surčin
+
+The **Surčin and airport area** is the closest to the site and suits very short or arrival-day stays. It is also the least urban option: thin on restaurants, sights and street life. Treat it as a logistics base, not a place to experience the city.
+
+- **Suits:** a night or two that is all about the Expo, or an early flight the next morning.
+- **Check before booking:** whether there is a shop and a restaurant within walking distance, and whether the hotel is in Surčin itself or out on the road. The airport line EKSPO 1 is planned only from 1 April 2027.
+
+**Swissôtel Belgrade EXPO (opening Q1 2027).** Accor lists this hotel inside the Expo complex itself, with 377 rooms and suites. It had not opened as of mid-November 2026. We will consider it for our hotel picks once it is open and has guest reviews.
 
 [Places to stay](aff:pick/expo)
 
-For the exact routes from each base to the venue (and from the airport), see [getting to Expo 2027](/expo-2027/getting-there).
+## Zemun: the same side, with character
 
-## Staying in the historic centre: Stari Grad and Vračar
+**Zemun** is a former Habsburg town on the Danube, now part of Belgrade: a riverside promenade, fish restaurants, and the lanes and tower of Gardoš hill. It is on the same side of the Sava as the Expo. EKSPO 3 was announced to start in Zemun, at Bačka street, and Zemun has a station on the planned railway.
 
-If you came for Belgrade as much as for the Expo, base in the **[old town](aff:area/stari-grad)**. The historic core — **Stari Grad** around [Knez Mihailova](/glossary/knez-mihailova), Republic Square and [Kalemegdan](/glossary/kalemegdan), plus neighbouring **Vračar** and **Dorćol** — is the walkable, café-dense, nightlife-rich city most visitors picture. You can sightsee on foot and step out to restaurants and bars without a car.
+- **Suits:** visitors who want an atmospheric base without crossing the Sava on Expo days.
+- **The trade-off:** fewer large hotels than New Belgrade, and the old town across the river is a longer trip.
+- **Check before booking:** how far you are from Bačka street or Zemun station. The old core is hilly in places.
 
-The cost is the commute. The centre sits on the right bank of the Sava, so every Expo day means a cross-river trip out to Surčin on the western edge of town. That is manageable, but it is a real daily journey rather than a short hop, and traffic during a major event is unpredictable.
+[Places to stay](aff:pick/zemun)
 
-This base suits travellers who will spend only part of their trip at the Expo and the rest exploring the city, and who value evenings in the historic streets over minimising the venue commute.
+## Savski venac, Vračar and the Belgrade Waterfront
 
-For a fuller breakdown of Belgrade's neighbourhoods, hotel types and booking mechanics, see the [where to stay guide](/where-to-stay); this page focuses only on the Expo-specific trade-off.
+These neighbourhoods are across the Sava from the Expo, but they sit at the start of two announced routes. **EKSPO 2** was announced to run from the Belgrade Waterfront loop under the Gazela bridge, and the planned railway starts at **Beograd Centar (Prokop)** in Savski venac. Vračar adds cafés, the St. Sava Temple and quiet residential streets; the Waterfront adds new riverside hotels.
+
+- **Suits:** visitors who want the city and the Expo in equal measure.
+- **Check before booking:** walking distance to Prokop or to the Waterfront end under the Gazela bridge. Belgrade's hills make a short distance on the map longer on foot.
+
+[Places to stay](aff:pick/savamala)
+
+## The old town: Stari grad and Dorćol
+
+If you came for Belgrade as much as for the Expo, base in the **[old town](aff:area/stari-grad)**. The historic core is the walkable, café-dense, nightlife-rich city most visitors picture: **Stari grad** around [Knez Mihailova](/glossary/knez-mihailova), Republic Square and [Kalemegdan](/glossary/kalemegdan), and neighbouring **Dorćol**. You can sightsee on foot and walk out to restaurants and bars.
+
+The cost is the river. The old town is on the right bank of the Sava, so every Expo day means a cross-river trip out to Surčin. **EKSPO 4** was announced to run from Vukov spomenik through the Terazije tunnel and Zeleni venac and across Branko's Bridge, though its stops have not been published. Traffic during a major event is unpredictable.
+
+- **Suits:** travellers who will spend part of the trip at the Expo and the rest in the city, and who value evenings in the historic streets.
+- **Check before booking:** how far you are from Terazije or Zeleni venac, and whether the street is a nightlife street if you need early nights.
+
+For a fuller breakdown of Belgrade's neighbourhoods, hotel types and booking mechanics, see the [where to stay guide](/where-to-stay); this page covers only the Expo-specific choice.
 
 [Places to stay](aff:pick/stari-grad)
 
-## Near the site or central Belgrade — how to choose
+## Near the site or central Belgrade: how to choose
 
 Decide by what will dominate your days:
 
-- **Mostly Expo** (business visitors, pavilion-focused trips, short stays): stay near the site — New Belgrade or Surčin. Minimise the commute, accept a quieter setting.
-- **Belgrade plus the Expo** (leisure trips, first-time visitors, longer stays): stay central — Stari Grad or Vračar. Enjoy the city, accept the cross-river journey on Expo days.
-- **A genuine split** of both: New Belgrade is the hedge. It is closer to the site than the old town and closer to the old town than Surčin, with strong transport links in both directions.
+- **Mostly Expo** (business visitors, pavilion-focused trips, short stays): stay on the same side of the river, in New Belgrade or by the airport. Accept a quieter setting.
+- **Belgrade plus the Expo** (leisure trips, first-time visitors, longer stays): stay in the old town, Vračar or Savski venac, and pick a hotel near where an Expo line or the railway starts.
+- **A genuine split:** New Belgrade or Zemun. Both are on the Expo side of the river and a short crossing from the old town.
 
-There is no wrong answer here — only a commute-versus-character trade-off, and your own balance between the fair and the city.
+There is no wrong answer, only a trade-off between the river crossing and the character of your base.
 
 ## How early should you book accommodation for Expo 2027?
 
 Book once your dates are firm, and book a refundable rate. The capacity picture explains why, and also why there is no reason to panic.
 
-As of 2026, Belgrade had roughly **120 hotels with about 8,000 rooms**, with around **20 more hotels (~2,000 rooms)** reported as planned to open before the Expo — much of it in New Belgrade and near the airport. Against that, Expo 2027 projects **more than 4 million visits, and on the organisers' upper target 6 million**.
+As of 2026, Belgrade had roughly **120 hotels with about 8,000 rooms**, with around **20 more hotels (~2,000 rooms)** reported as planned to open before the Expo, much of it in New Belgrade and near the airport. Against that, Expo 2027 projects **more than 4 million visits, and on the organisers' upper target 6 million**.
 
-Two of the planned openings are large, named hotels. **Swissôtel Belgrade EXPO**, inside the Expo complex itself, is listed by Accor as opening in Q1 2027 with 377 rooms and suites, and IHG's **InterContinental Belgrade** (203 rooms, in the Delta District next to Sava Centar) was announced for the end of 2026. Neither had opened as of mid-November 2026, so count them as possible extra capacity rather than a plan.
+Two of the planned openings are large, named hotels: the **Swissôtel Belgrade EXPO** described above, and IHG's **InterContinental Belgrade** (203 rooms, in the Delta District next to Sava Centar), announced for the end of 2026. Neither had opened as of mid-November 2026, so count them as possible extra capacity rather than a plan.
 
-Resist the temptation to divide one by the other. Those are *visits*, not overnight guests: they include Belgrade residents, day-trippers from the region, and the same person returning on a three-day ticket. Nobody has published how many Expo visitors will need a bed, for how many nights, or how many will stay outside the city. What the comparison does tell you is the direction of travel — a fixed, modest room stock meeting a large and rising visitor projection — and that is reason enough to book flexibly once your dates are firm. It is not a basis for predicting a specific shortage.
+Resist the temptation to divide one figure by the other. Those are *visits*, not overnight guests: they include Belgrade residents, day-trippers from the region, and the same person returning on a three-day ticket. Nobody has published how many Expo visitors will need a bed, for how many nights, or how many will stay outside the city. What the comparison does show is the direction: a fixed, modest room stock meeting a large and rising visitor projection. That is reason enough to book flexibly once your dates are firm. It is not a basis for predicting a specific shortage.
 
 What that suggests, without predicting it:
 
 - **Rooms near Surčin and in New Belgrade are the likeliest to come under pressure**, because that is where near-site visitors will look. Nobody has published price or occupancy forecasts, so a refundable booking is a hedge, not a bet.
-- **Apartments and outlying stays are the fallback.** Private apartments are expected to absorb much of any overflow, and shuttle links from neighbouring cities such as Novi Sad and Šabac have been floated to tap rooms beyond Belgrade. These are fallback options if the hotels you want are full.
+- **Apartments and outlying stays are the fallback.** Private apartments are expected to absorb much of any overflow, and shuttle links from neighbouring cities such as Novi Sad and Šabac have been floated to tap rooms beyond Belgrade.
 
-**In one line:** the room stock is modest and largely fixed, the visitor projection is large, and the new rooms are expected in the same two areas (New Belgrade and the airport side) that near-site visitors want. That does not prove a shortage; it makes a refundable booking, made once your dates are firm, the low-risk choice.
+**How to search.** Search by area, not just by city: look at New Belgrade, Zemun, Surčin, Stari grad, Vračar and Savski venac separately. Filter for free cancellation, so you can [book a room now](aff:near/belgrade-flex) and rebook if a better-placed one appears. Check each property's position on the map, not only its name: "Belgrade" in a listing can mean anywhere from the old town to the far edge of New Belgrade.
 
-**How to search.** Search by area, not just by city: look at New Belgrade, Surčin, Stari Grad and Vračar separately, because the trip to the site and the feel of the stay differ a lot. Filter for free cancellation, so you can [lock in a room now](aff:near/belgrade-flex) and rebook if a better-placed one appears. Book as soon as your dates are firm. Check each property's position on the map, not only its name: "Belgrade" in a listing can mean anywhere from the old town to the far edge of New Belgrade.
-
-We deliberately do not quote specific prices or live availability here — those numbers move week to week and would be out of date almost immediately. The durable advice is the strategy: **book refundably, once your dates are firm.** Check the cancellation deadline, deposit and prepayment terms before you confirm, then keep an eye out for better-located or better-priced rooms as the calendar fills. For the booking-platform mechanics and apartment-versus-hotel detail, see the [where to stay guide](/where-to-stay).
+We deliberately do not quote specific prices or live availability: those numbers move week to week. The durable advice is the strategy: **book refundably, once your dates are firm.** Check the cancellation deadline, deposit and prepayment terms before you confirm. For booking-platform mechanics and apartment-versus-hotel detail, see the [where to stay guide](/where-to-stay).
 
 ## Quick reference
 
-- **Site:** Surčin, western Belgrade — ~13.5 km from the centre, ~5 km from Nikola Tesla Airport, between New Belgrade and the Sava.
-- **Closest base:** New Belgrade / Surčin (airport side) — closest by distance, newest hotels, quieter setting.
-- **City base:** Stari Grad / Vračar — historic, walkable Belgrade, longer cross-river commute.
-- **Best all-round:** New Belgrade — sits between the two.
-- **Booking:** roughly 8,000 hotel rooms in 2026 plus ~2,000 planned, against projections of 4–6 million-plus *visits* (not overnight guests) — book refundably once your dates are firm.
+- **Site:** Surčin, western Belgrade, on the same side of the Sava as New Belgrade and Zemun. About 13.5 km from the centre and 5 km from Nikola Tesla Airport.
+- **Best all-round base:** New Belgrade. Three announced Expo bus lines pass through it and two more start there from May 2027.
+- **Same side, more character:** Zemun, where EKSPO 3 was announced to start.
+- **City base:** the old town, Vračar, Savski venac or the Waterfront, across the river. EKSPO 2 and 4 and the planned railway start nearby.
+- **Booking:** roughly 8,000 hotel rooms in 2026 plus about 2,000 planned, against 4–6 million *visits* (not overnight guests). Book refundably once your dates are firm.

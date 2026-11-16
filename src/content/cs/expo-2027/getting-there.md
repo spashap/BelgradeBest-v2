@@ -21,7 +21,7 @@ partnerTargets:
   - airport-transfer
 unknowns:
   - "Přesné datum otevření, jízdní řád pro cestující a tarif nové železnice do Surčinu a na letiště"
-  - "Konečná čísla, trasy a jízdní řády zvláštních autobusových linek Expa ke vchodům A a C na léto 2027"
+  - "Zda jezdí oznámené autobusové linky EKSPO 2 až 5, jejich zastávky a jízdní řády a zda jsou zdarma"
   - "Zda bude železniční spojení s letištěm bezplatné, nebo bude mít zvláštní tarif"
 faqs:
   - question: "Kde se v Bělehradě nachází Expo 2027?"
@@ -50,15 +50,15 @@ Protože areál leží u letiště, a nikoli ve starém městě, téměř každ�
 
 Zhruba 5 km. Oficiální dokumenty Expa umisťují areál v Surčinu přibližně 5 kilometrů od mezinárodního letiště Nikoly Tesly, což znamená, že pokud přiletíte, přistanete blíže k areálu Expa než k centru Bělehradu (asi 13,5 km).
 
-Tato blízkost je pro plánování výhodou, kterou stojí za to si zapamatovat. Nová železnice, která je nyní ve výstavbě, vede hned kolem letiště na cestě do Surčinu a k Národnímu stadionu a úřady slíbily zvláštní autobusové linky Expa spojující letiště přímo s areálem. Zatím je však spolehlivým způsobem, jak těchto 5 km překonat, cesta po silnici, tedy taxi nebo vůz objednaný přes aplikaci (viz níže), protože k červnu 2026 nebyl definitivně stanoven jízdní řád železnice mezi letištěm a Expem ani trasa kyvadlové dopravy.
+Tato blízkost je pro plánování výhodou, kterou stojí za to si zapamatovat. Nová železnice, která je nyní ve výstavbě, vede hned kolem letiště na cestě do Surčinu a k Národnímu stadionu a zvláštní autobusová linka Expa z letiště, EKSPO 1, je plánována od 1. dubna 2027. Do té doby je spolehlivým způsobem, jak těchto 5 km překonat, cesta po silnici, tedy taxi nebo vůz objednaný přes aplikaci (viz níže), protože železnice zatím nemá jízdní řád.
 
 ## Letecky do Bělehradu na Expo 2027
 
 Většina zahraničních návštěvníků přistane na bělehradském letišti Nikoly Tesly (BEG), asi 5 km od areálu Expa. **[Air Serbia](aff:go/air-serbia)**, národní letecký dopravce, tu má hlavní základnu a nejširší síť přímých letů do Bělehradu. Podle seznamu destinací na Wikipedii (stav k srpnu 2026) obsluhuje z Bělehradu 89 destinací v 35 zemích; číslo berte jako přibližné. V německy mluvících zemích létá Air Serbia podle sezónního letového řádu bělehradského letiště (ověřeno v říjnu 2026) do Frankfurtu, Mnichova, Berlína, Düsseldorfu, Hamburku, Stuttgartu, Norimberku a Hannoveru v Německu, do Vídně a Salcburku (sezónně, jednou týdně) v Rakousku a do Curychu a Ženevy ve Švýcarsku. Kolín nad Rýnem/Bonn obsluhuje Eurowings, nikoli Air Serbia; z Frankfurtu a Vídně létají také Lufthansa a Austrian Airlines. Bratislava v letovém řádu není vůbec, takže ze Slovenska je nejbližší možností Vídeň. Trasy a frekvence se mění podle sezóny, proto si **zkontrolujte aktuální letový řád na webu dopravce**, než s kterýmkoli z těchto spojení začnete počítat.
 
-Do Bělehradu létají z několika evropských měst také nízkonákladové společnosti, srovnávejte proto ceny u více dopravců a nepředpokládejte, že je některý z nich automaticky nejlevnější. Expo trvá od 15. května do 15. srpna 2027. Očekáváme, že lety i hotely budou nejvytíženější o zahajovacím víkendu a v hlavních letních týdnech, žádná čísla však nikdo nezveřejnil. Letenky i [ubytování](aff:near/belgrade-flex) rezervujte včas, ideálně v tarifu, který umožňuje změnu (viz [Kde bydlet během Expa 2027 (EN)](/expo-2027/where-to-stay-for-expo)).
+Do Bělehradu létají z několika evropských měst také nízkonákladové společnosti, srovnávejte proto ceny u více dopravců a nepředpokládejte, že je některý z nich automaticky nejlevnější. Expo trvá od 15. května do 15. srpna 2027. Očekáváme, že lety i hotely budou nejvytíženější o zahajovacím víkendu a v hlavních letních týdnech, žádná čísla však nikdo nezveřejnil. Letenky i [ubytování](aff:near/belgrade-flex) rezervujte, až budou vaše termíny jisté, ideálně v tarifu, který umožňuje změnu (viz [Kde bydlet během Expa 2027 (EN)](/expo-2027/where-to-stay-for-expo)).
 
-**Po příletu:** protože je areál jen asi 5 km od letiště, je cesta do Surčinu taxíkem nebo vozem objednaným přes aplikaci krátká; zvláštní autobusová linka Expa z letiště zatím potvrzena není. Skupinám, lidem na služební cestě s pevným programem a těm, kdo přiletí pozdě a se zavazadly, se vyplatí porovnat [předem objednaný soukromý transfer](aff:go/airport-transfer) (řidič čeká v příletové hale, pevná cena zaplacená předem) s taxíkem na poukaz; transfer obvykle vyjde dráž. Kdy se vyplatí, rozebíráme v [průvodci cestou z letiště do města (EN)](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it).
+**Po příletu:** protože je areál jen asi 5 km od letiště, je cesta do Surčinu taxíkem nebo vozem objednaným přes aplikaci krátká. Letištní autobus Expa, linka EKSPO 1, je plánován od 1. dubna 2027. Skupinám, lidem na služební cestě s pevným programem a těm, kdo přiletí pozdě a se zavazadly, se vyplatí porovnat [předem objednaný soukromý transfer](aff:go/airport-transfer) (řidič čeká v příletové hale, pevná cena zaplacená předem) s taxíkem na poukaz; transfer obvykle vyjde dráž. Kdy se vyplatí, rozebíráme v [průvodci cestou z letiště do města (EN)](/plan-your-trip/airport-to-city#when-is-a-pre-booked-transfer-worth-it).
 
 ## Jak se dnes dostanu z letiště do města?
 
@@ -76,7 +76,7 @@ Pro taxi má letiště oficiální systém poukazů: v samoobslužném kiosku si
 
 V roce 2026 je nejspolehlivější možností běžná bělehradská městská hromadná doprava, momentálně bezplatná na všech běžných linkách (autobusy, tramvaje, trolejbusy a příměstské vlaky BG Voz). Pokud chcete dojet pohodlně až na místo, zhruba 13,5 km z centra přímo do areálu v Surčinu zvládne taxi nebo vůz objednaný přes aplikaci (CarGo nebo Yandex Go).
 
-Dvě rychlejší možnosti budované přímo pro Expo jsou slíbeny, ale zatím nejezdí. Úřady plánují novou železnici na letiště a do Surčinu a zvláštní ekologické elektrobusové linky ke vchodům A a C Expa. Dokud se podrobnosti neupřesní, je při plánování bezpečné počítat jako se základem s bezplatnou sítí a vozem objednaným přes aplikaci – a před cestou sledovat oficiální kanály kvůli zvláštním linkám Expa.
+Dvě možnosti budované přímo pro Expo jsou na cestě. Čtyři autobusové linky Expa z různých částí města byly oznámeny se začátkem 1. listopadu 2026 (viz [autobusové linky Expa](#autobusové-linky-expa-co-bylo-oznámeno) níže) a nová železnice z Beograd Centar (Prokop) k Národnímu stadionu vedle areálu se očekává na jaře 2027. Dokud není potvrzeno, že jezdí obě, počítejte s bezplatnou sítí a vozem objednaným přes aplikaci a linky Expa si ověřte blíže k termínu cesty.
 
 ## Nová železnice do Surčinu: co je potvrzeno a co je stále jen slib
 
@@ -92,10 +92,35 @@ Podle FAQ pro účastníky se návštěvníci dostanou do areálu soukromým voz
 
 Srbsko pro Expo pořizuje elektrobusy s nabíjecí infrastrukturou v areálu Expa, na letišti a na hlavních terminálech; po skončení akce mají podle zpráv přejít do pravidelného provozu dopravního podniku GSP Beograd. Údaje o velikosti flotily se rozcházejí: dřívější prohlášení mluvila o 100 elektrobusech, pozdější tendr a smlouva však zajistily 50 vozů a 8 nabíječek. Nejméně 50 je nyní smluvně zajištěno; konečný počet nasazených vozů se může lišit.
 
-Konečná čísla, trasy a jízdní řády zvláštních autobusových linek Expa ke vchodům A a C na léto 2027 zatím zveřejněny nebyly, proto před akcí sledujte oficiální kanály.
+## Autobusové linky Expa: co bylo oznámeno
+
+Dne 10. října 2026 společnost EXPO 2027 d.o.o. oznámila přímé městské autobusové linky do výstavního areálu v Surčinu, jak uvádějí Biznis.rs, Kurir a B92:
+
+| Linka | Začíná | Oznámený start |
+| --- | --- | --- |
+| EKSPO 2 | Smyčka Beograd na vodi (Belgrade Waterfront), pod mostem Gazela, Savski venac | 1. listopadu 2026 |
+| EKSPO 3 | Zemun (ulice Bačka) | 1. listopadu 2026 |
+| EKSPO 4 | Vukov spomenik, Zvezdara, přes tunel Terazije, Zeleni venac a Brankův most | 1. listopadu 2026 |
+| EKSPO 5 | Ustanička, Zvezdara | 1. listopadu 2026 |
+| EKSPO 1 | Letiště Nikoly Tesly, přes Surčin | 1. dubna 2027 |
+| EKSPO 6 | Belvil u Delta City, Nový Bělehrad | 1. května 2027 |
+| EKSPO 7 | Blok 45, Nový Bělehrad | 1. května 2027 |
+
+Co oznámení uvádí dále:
+
+- **Četnost:** na prvních čtyřech linkách autobusy každých 15 až 22 minut po většinu dne, s 31 ekologickými autobusy do konce března 2027. Častější provoz je plánován od 1. května 2027, kdy má jezdit více než 90 autobusů.
+- **Další linky od května 2027:** tři místní napájecí linky a autobus ze stanice Národní stadion na železnici ke vchodu do Expa.
+
+Co je stále otevřené, k 16. listopadu 2026:
+
+- **Zda první čtyři linky jezdí.** Všechny zprávy, které jsme našli, jsou starší než start 1. listopadu a městský dopravce o nich nic nezveřejnil.
+- **Jejich zastávky a přesné jízdní řády.** Zveřejněny byly jen výchozí body a hlavní silnice.
+- **Zda jsou zdarma** jako běžná městská doprava. Organizátor to neuvedl.
+
+Než se na linku spolehnete, ověřte si ji. Naše stránka [Kde bydlet během Expa 2027 (EN)](/expo-2027/where-to-stay-for-expo) porovnává jednotlivé části města podle toho, které z těchto linek a železničních stanic je obsluhují.
 
 ## A co metro a BG Voz?
 
 Bělehradské metro se staví, ale úřady počítají s linkou 1 kolem roku 2028 a s linkou 2 kolem roku 2030 – obojí až po Expu, a jde o politické, nikoli smluvní termíny. Podstatné je, že žádná plánovaná linka metra nevede do Surčinu, na letiště ani do areálu Expa. Kolejové spojení má místo toho zajistit příměstská železnice BG Voz. Plánovaná linka BG Voz (linka 4) o délce 16,2 km má vést po trase Nový Bělehrad – letiště Nikoly Tesly – Surčin – Národní stadion, je to však linka budoucí, ne spoj, který jezdí už dnes – nepočítejte s tím, že se jí svezete.
 
-Praktická rada pro tuto chvíli: za spolehlivý základ považujte letiště a bezplatnou běžnou síť, poslední úsek až do Surčinu řešte taxíkem nebo vozem objednaným přes aplikaci a sledujte oficiální kanály, kde se podrobnosti o železnici a kyvadlové dopravě Expa postupně upřesní. Více o pohybu po městě najdete v článku [doprava po Bělehradě (EN)](/plan-your-trip/getting-around).
+Praktická rada pro tuto chvíli: za spolehlivý základ považujte letiště a bezplatnou běžnou síť, poslední úsek až do Surčinu řešte taxíkem nebo vozem objednaným přes aplikaci a ověřujte si autobusové linky Expa a železnici, jakmile se jejich podrobnosti potvrdí. Více o pohybu po městě najdete v článku [doprava po Bělehradě (EN)](/plan-your-trip/getting-around).

@@ -1,25 +1,24 @@
-Airport and visa pages reworked for Bing; 2026 taxi fares made consistent everywhere
+Expo stay page rebuilt around an access table; announced EKSPO bus lines added site-wide
 
-Step 4 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md (judged 31 Jan
-2027). Same URLs. Facts checked against beg.aero, the Serbian MFA and
-UK/Canadian government advice.
+Step 5 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md (due 15 Dec).
 
-- Airport to city: comparison table (time, price, how you pay), a "How do
-  you pay?" section, A1 = cash in dinars only from the driver (beg.aero),
-  official voucher zone fares (3,500 RSD old town, 2,700 RSD New
-  Belgrade/Zemun), free lines 72/72N/600/607 at the airport's own 30-40
-  min, night arrivals, train and bus stations, airport rail expected
-  March/April 2027. One new labelled link: hotels near the airport (night
-  section). E75 corrected to E-70.
-- Visa and entry: the answer in the title, a table by passport, "Is
-  Belgrade in Schengen?", ID-card entry for EU/Swiss/Norwegian/Icelandic
-  citizens, exemption wording per the MFA, DTA since 23 Apr 2025, the
-  unsupported "register online" claim removed, onward links to the
-  airport, money and where-to-stay pages.
-- Consistency: the taxis page and the Expo getting-there pages (EN/DE/SK/CS)
-  quoted an outdated 2,200-2,800 RSD voucher fare; now the 2026 zone fares.
-- CSS: markdown tables in articles scroll sideways below 760px instead of
-  widening the page.
-- Baselines (8 weeks to 15 Nov) in the plan doc. BB-CHG-0050.
+- Where to stay for Expo 2027 (EN + DE): an access table (base, side of
+  the Sava, Expo bus lines announced, planned railway with reported stops,
+  who it suits) with a dated status note and sources; "Suits" and "Check
+  before booking" per base; no journey times to the site; Swissôtel
+  labelled "opening Q1 2027". New bases with hotel cards: Zemun (EKSPO 3)
+  and Savski venac/Vračar/Waterfront (EKSPO 2, Prokop). German card text
+  added for the Zemun and Savamala cards.
+- Fact found while checking: EXPO 2027 d.o.o. announced direct EKSPO bus
+  lines on 10 Oct 2026 (EKSPO 2-5 from 1 Nov 2026, EKSPO 1 from the
+  airport from 1 Apr 2027, EKSPO 6-7 and feeders from 1 May 2027). No
+  source confirms the November lines started, so every page says
+  "announced, not yet confirmed running"; fares unannounced.
+- Getting to Expo 2027 (EN/DE/SK/CS): new "Expo bus lines" section and
+  table, EKSPO 1 replaces "no airport line confirmed", "book early" ->
+  "once your dates are firm".
+- Expo guide (EN/DE), getting around, stations, best time to visit: the
+  "no Expo shuttles announced" sentences now point to the announced lines.
+- Translations by Sonnet, reviewed by Fable. BB-CHG-0051.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

@@ -21,7 +21,10 @@
       "type": "area",
       "label": "Savamala & Belgrade Waterfront",
       "area": "savamala",
-      "search": "Savski Venac, Belgrade"
+      "search": "Savski Venac, Belgrade",
+      "labels": {
+        "de": "Savamala und Belgrade Waterfront"
+      }
     },
     "vracar": {
       "type": "area",

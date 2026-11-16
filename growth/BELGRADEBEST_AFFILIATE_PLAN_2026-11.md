@@ -84,3 +84,12 @@
     | Taxis (consistency only) | 8 | 89 | 3.5 | 16 |
 
   - **Target:** Bing clicks on the airport and visa pages together up 25% or more over the 8 weeks after the change (25 → 32 or more), compared on 31 Jan 2027 with the same 8-week window. Also watch `aff_click_welcome_pickups` and `inline:near/airport` clicks on the airport page.
+- **Step 5, published 16 Nov (due 15 Dec).** The Expo stay page (EN and DE) is now built around an access table: each base, its side of the Sava, the Expo bus line that serves it, its station on the planned railway, and who it suits.
+  - Each base has "Suits" and "Check before booking" notes, and the table carries a status note with sources and dates.
+  - There are no journey times to the site. The Swissôtel has a labelled "opening Q1 2027" note.
+  - **New bases:** Zemun and Savski venac/Waterfront, each with its own hotel card.
+  - **Found while checking:**
+    - EXPO 2027 d.o.o. announced direct EKSPO bus lines on 10 Oct 2026. EKSPO 2–5 were due from 1 Nov 2026, EKSPO 1 from the airport from 1 Apr 2027, and EKSPO 6–7 plus feeder lines from 1 May 2027.
+    - The getting-there page (all four languages), the guide (EN and DE), getting around, stations and best time to visit still said no Expo buses were announced. All are updated.
+    - None of the reporting confirms the November lines actually started, so every page says "announced, not yet confirmed running".
+  - **Measure from now:** `aff_click_booking` on the stay page, by card (`pick:zemun/*` and `pick:savamala/*` are new), in the monthly scorecard.

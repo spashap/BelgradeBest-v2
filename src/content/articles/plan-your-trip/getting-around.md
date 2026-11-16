@@ -7,7 +7,7 @@ description: "Belgrade public transport is free to ride — no ticket, no card �
 lede: "Belgrade is walkable at its core and easy to cross by public transport — which, since 2025, is free to ride for everyone, with no ticket and no card. This is how to get around day to day in 2026: buses, trams and trolleybuses, the Tram 2 sightseeing loop, night buses, when to take a taxi or an app, and where your own two feet are fastest."
 heroLabel: "Getting around Belgrade / hero"
 heroAlt: "Getting around Belgrade by tram, bus and on foot"
-lastUpdated: "2026-10-01"
+lastUpdated: "2026-11-16"
 order: 5
 visible: true
 intent: "both"
@@ -81,4 +81,4 @@ Accessibility across the system is uneven, and system-wide data is limited. Free
 
 ## What's still unknown
 
-A few things are not yet settled. Dedicated Expo shuttles and similar event-specific transport have not yet been announced in detail. The municipal bike-share rollout — how many docks and bikes, and how tourists will access it — is also not finalised. And the free-transport policy itself, while stable for now, depends on future city budgets. If you are arriving by air, see our separate guide on getting from the [airport to the city](/plan-your-trip/airport-to-city).
+A few things are not yet settled. Dedicated Expo bus lines (EKSPO 1–7) have been announced, but their stops, fares and timetables are not yet confirmed; see [the Expo bus lines](/expo-2027/getting-there#the-expo-bus-lines-what-has-been-announced). The municipal bike-share rollout — how many docks and bikes, and how tourists will access it — is also not finalised. And the free-transport policy itself, while stable for now, depends on future city budgets. If you are arriving by air, see our separate guide on getting from the [airport to the city](/plan-your-trip/airport-to-city).
