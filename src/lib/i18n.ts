@@ -200,8 +200,8 @@ export const DE = {
     tiles: {
       dates: { kicker: "Termine", title: "" , body: "" },
       gettingThere: { kicker: "Anreise", title: "Anreise zur Expo 2027", body: "Kostenloser Nahverkehr, Taxi-Apps und eine Bahn im Bau – der ehrliche Stand jeder Route." },
-      tickets: { kicker: "Tickets", title: "Ticket-Guide zur Expo 2027", body: "Weiterhin nicht im Verkauf – zwei geplante Starttermine verstrichen, Preise offen. Was tatsächlich bekannt ist." },
-      stay: { kicker: "Übernachten", title: "Übernachten für die Expo 2027", body: "Flughafennähe oder Innenstadt? Die Abwägung." },
+      tickets: { kicker: "Tickets", title: "Ticket-Guide zur Expo 2027", body: "Weiterhin nicht im Verkauf – drei angekündigte Starttermine verstrichen, Preise offen. Was tatsächlich bekannt ist." },
+      stay: { kicker: "Übernachten", title: "Übernachten für die Expo 2027", body: "Nicht die Tickets, sondern die Betten sind der Engpass: welche Seite der Stadt, mit konkreten Hotels nahe dem Gelände und in der Altstadt." },
       directory: { kicker: "Verzeichnis", title: "Alle Pavillon-Profile", body: "Jedes Land mit veröffentlichten Plänen – quellengeprüft, auf Deutsch und Englisch." },
       tracker: { kicker: "Daten (EN)", title: "Teilnehmer-Tracker", body: "Alle namentlich bekannten Länder mit Quellen und Datum." },
       guide: { kicker: "Guide", title: "Der komplette Expo-2027-Guide", body: "Termine, Programm, Tickets, Anreise – auf Deutsch." },

@@ -1,25 +1,19 @@
-Put affiliate links where the text recommends: hotel cards, in-text links, fixed Booking searches
+Air Serbia by country on pavilion pages, Welcome Pickups on every transfer sentence, stay tile first
 
-- New in-text placements (lib/aff-inline.ts): articles carry references only,
-  [phrase](aff:hotel|area|near|go/<key>) and a card line (aff:pick/<key>),
-  resolved at build in ArticleLayout from src/data/hotel-picks.json; an
-  unknown key fails the build; a partner switched off renders plain text.
-- 27 named hotels, each opened live on Booking.com 2026-11-16 (location fit,
-  score ~8.5+ over hundreds of reviews; Mona Plaza dropped for a renovation
-  notice), grouped into 11 cards (c-affpick in globals.css).
-- 21 articles: 32 cards at the end of the sections that recommend an area,
-  22 in-text links on existing booking phrases (Expo guide/tickets/
-  getting-there/location/stay EN+DE, airport, taxis, best time, stay leg).
-  End-of-page boxes now show only partners the text has not linked.
-- Fixed broken Booking targets: "Dorćol", "Savamala" and "New Belgrade"
-  searches returned 1, 1 and 8 properties; now Strahinjića Bana landmark,
-  Savski Venac district and "Novi Beograd" (488). Landing-page URLs supported.
-- CJ sub-IDs name the page: bb-[lang-]<page initials>-<item>; the admin
-  Money table maps them back and counts in-text links per partner.
-- Disclosure in the date line of pages with in-text links; /how-we-make-money
-  explains how hotels are chosen; llms-full.txt strips the references.
-- Expo stay page (EN+DE): Swissôtel Belgrade EXPO (Q1 2027) and
-  InterContinental facts. Expo hub: "Stay" row to the stay page.
-- growth/BELGRADEBEST_AFFILIATE_STRATEGY.md, CLAUDE.md, BB-CHG-0044.
+- Pavilion profiles: a "Flights" tile to Air Serbia's fares page for the
+  pavilion's own country (/en-<cc>/flights-to-belgrade, CJ deep link,
+  marked as an affiliate link); German profiles use the German page;
+  Slovakia points to Vienna (no Bratislava flight). 15 profiles; countries
+  without an Air Serbia market page get none. Map: partner-links.json
+  airSerbiaPavilions; helper lib/affiliates.ts flightTile().
+- Czech getting-there links Air Serbia's Czech page, Slovak the Austrian
+  one; both link the pre-booked transfer (Welcome Pickups, which has no
+  deep link: all CJ links land on one generic page).
+- "Early flight" bullets on the stay hub and business page link hotels
+  near the airport.
+- Pavilion directory (EN + DE) and profiles: "Where to stay" tile first
+  with sharper copy; tracker tile copy too. Profiles' tickets tile now
+  says three passed start dates (was two), matching the tickets page.
+- Strategy doc second-pass section, BB-CHG-0045.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

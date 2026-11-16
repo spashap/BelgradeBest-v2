@@ -154,6 +154,18 @@ export function travelLinks(targets: string[], lang = "en", page?: string): AffL
   });
 }
 
+// Pavilion profiles: a "flights from <country>" tile pointing at Air Serbia's
+// fares page for that country (partner-links.json → airSerbiaPavilions).
+// null when the country has no market page or Air Serbia is switched off.
+export type FlightTile = { href: string; partner: string; via?: string };
+export function flightTile(slug: string, lang = "en"): FlightTile | null {
+  const m = (partnerLinks as { airSerbiaPavilions?: Record<string, { path: string; via?: string }> }).airSerbiaPavilions?.[slug];
+  const t = TRAVEL.targets["air-serbia"];
+  if (!m || !t || !partnerLive(t.partner)) return null;
+  const dest = lang === "de" ? "https://www.airserbia.com/de/fluge-nach-belgrad" : `https://www.airserbia.com${m.path}`;
+  return { href: tracked(PARTNERS[t.partner].value.trim(), dest, sidFor(lang, slug, "flights")), partner: t.partner, via: m.via };
+}
+
 // The partner behind one partner-links.json target key ("" if unknown).
 export const partnerOfTarget = (t: string) => TRAVEL.targets[t]?.partner ?? "";
 

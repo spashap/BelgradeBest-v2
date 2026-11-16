@@ -48,7 +48,7 @@ There isn't one right answer, because "best" depends on where you actually need 
 - **Meetings in New Belgrade or near the airport:** stay in New Belgrade.
 - **Meetings downtown, want walkable evenings:** stay in Savski Venac or a central Stari Grad hotel.
 - **Meetings near the Sava riverfront:** [Belgrade Waterfront](/glossary/belgrade-waterfront) or Savamala work well.
-- **Early flight out:** lean toward New Belgrade or the Surčin/airport side.
+- **Early flight out:** lean toward New Belgrade or [the Surčin/airport side](aff:near/airport).
 
 ## How is the city laid out for a work trip?
 

@@ -24,6 +24,8 @@ import { nationalDayFor } from "../lib/national-days";
 import { ogImage } from "../lib/og";
 import { DE, alternates, dePath, fmtDate, type Lang } from "../lib/i18n";
 import { regionOf, STAGE } from "../lib/expo-participants";
+import { flightTile, clickEvent } from "../lib/affiliates";
+import AffClick from "../components/AffClick.astro";
 import {
   listingHref,
   listingsIndexable,
@@ -190,12 +192,20 @@ const ndTile = nd
 const visitTiles = isDe
   ? [
       ...ndTile,
+      { href: "/de/expo-2027/where-to-stay-for-expo", ...T.stay },
       { href: "/de/expo-2027/getting-there", ...T.gettingThere },
       { href: "/de/expo-2027/tickets", ...T.tickets },
-      { href: "/de/expo-2027/where-to-stay-for-expo", ...T.stay },
     ]
   : [
       ...ndTile,
+      // Stay leads (2026-11-16): beds, not tickets, are what a visitor can
+      // act on now, and the stay page is where the hotel cards are.
+      {
+        href: "/expo-2027/where-to-stay-for-expo",
+        kicker: "Where to stay",
+        title: "Where to stay for Expo 2027",
+        body: "Beds, not tickets, are the bottleneck: which side of the city to sleep on, with named hotels near the site and in the old town.",
+      },
       {
         href: "/expo-2027/getting-there",
         kicker: "Getting there",
@@ -206,15 +216,31 @@ const visitTiles = isDe
         href: "/expo-2027/tickets",
         kicker: "Tickets",
         title: "Expo 2027 tickets guide",
-        body: "Still not on sale — two planned start dates passed, prices unannounced. What is actually known.",
-      },
-      {
-        href: "/expo-2027/where-to-stay-for-expo",
-        kicker: "Where to stay",
-        title: "Where to stay for Expo 2027",
-        body: "Airport side or city centre? The trade-off, weighed.",
+        body: "Still not on sale — three announced start dates have passed, prices unannounced. What is actually known.",
       },
     ];
+// Flights tile (2026-11-16): Air Serbia's fares page for the pavilion's own
+// country — the one affiliate link on a profile, marked as such in its text.
+const flight = listing.type === "pavilion" ? flightTile(listing.slug, isDe ? "de" : "en") : null;
+const flightCopy = flight
+  ? isDe
+    ? {
+        kicker: "Flüge",
+        title: `Air Serbia nach Belgrad`,
+        body: "Die Preisseite der Belgrader Nationalairline. Vergleichen Sie auch andere Airlines. Affiliate-Link.",
+      }
+    : flight.via
+      ? {
+          kicker: "Flights",
+          title: `Air Serbia via ${flight.via}`,
+          body: `There is no direct flight from ${short}; ${flight.via} is the nearest Air Serbia departure. Compare other airlines too. Affiliate link.`,
+        }
+      : {
+          kicker: "Flights",
+          title: `Air Serbia from ${short}`,
+          body: `The Belgrade-based national carrier's fares page for ${short}. Compare other airlines too. Affiliate link.`,
+        }
+  : null;
 const exploreTiles = isDe
   ? [
       { href: hubPath, ...T.directory },
@@ -464,7 +490,23 @@ const exploreTiles = isDe
             <p>{t.body}</p>
           </a>
         ))}
+        {flight && flightCopy ? (
+          <a
+            class="c-linkcard"
+            href={flight.href}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            data-aff={clickEvent(flight.partner)}
+            data-aff-placement="pavilion:flights"
+            data-aff-block="pavilion-flights"
+          >
+            <span class="c-linkcard__kicker">{flightCopy.kicker}</span>
+            <span class="c-linkcard__title">{flightCopy.title}</span>
+            <p>{flightCopy.body}</p>
+          </a>
+        ) : null}
       </div>
+      {flight ? <AffClick /> : null}
     </section>
 
     {faqs.length > 0 && (

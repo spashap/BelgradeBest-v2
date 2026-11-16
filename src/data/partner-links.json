@@ -17,13 +17,16 @@
       "partner": "air-serbia",
       "deep": {
         "en": "https://www.airserbia.com/en/flights-to-belgrade",
-        "de": "https://www.airserbia.com/de/fluge-nach-belgrad"
+        "de": "https://www.airserbia.com/de/fluge-nach-belgrad",
+        "cs": "https://www.airserbia.com/en-cz/flights-to-belgrade",
+        "sk": "https://www.airserbia.com/en-at/flights-to-belgrade"
       },
       "labels": {
         "de": "Air-Serbia-Flüge nach Belgrad suchen",
         "sk": "Vyhľadať lety Air Serbia do Belehradu",
         "cs": "Vyhledat lety Air Serbia do Bělehradu"
-      }
+      },
+      "_deepNote": "cs = Air Serbia Czech market page; sk = Austrian market page (no Bratislava flight, Vienna is the nearest departure, as the Slovak getting-there page says). Checked via CJ 2026-11-16."
     },
     "esim": {
       "label": "Get a Serbia eSIM before you fly (aloSIM)",
@@ -46,6 +49,52 @@
       "heading": "Rezervujte předem",
       "disclosure": "Jde o partnerské odkazy: pokud přes ně rezervujete, můžeme získat malou provizi, aniž byste platili víc.",
       "disclosureLink": "Jak se financujeme (EN)"
+    }
+  },
+  "airSerbiaPavilions": {
+    "_note": "Pavilion profile -> Air Serbia's fares page for that country (/en-<cc>/flights-to-belgrade, taken from Air Serbia's own market list 2026-11-16). Countries without an Air Serbia market page get no flights tile. German profiles use /de/fluge-nach-belgrad. `via` = no flight from the country itself; the tile names the nearest departure city instead.",
+    "austria": {
+      "path": "/en-at/flights-to-belgrade"
+    },
+    "bosnia-and-herzegovina": {
+      "path": "/en-ba/flights-to-belgrade"
+    },
+    "china": {
+      "path": "/en-cn/flights-to-belgrade"
+    },
+    "czechia": {
+      "path": "/en-cz/flights-to-belgrade"
+    },
+    "germany": {
+      "path": "/en-de/flights-to-belgrade"
+    },
+    "italy": {
+      "path": "/en-it/flights-to-belgrade"
+    },
+    "north-macedonia": {
+      "path": "/en-mk/flights-to-belgrade"
+    },
+    "russia": {
+      "path": "/en-ru/flights-to-belgrade"
+    },
+    "slovenia": {
+      "path": "/en-si/flights-to-belgrade"
+    },
+    "spain": {
+      "path": "/en-es/flights-to-belgrade"
+    },
+    "switzerland": {
+      "path": "/en-ch/flights-to-belgrade"
+    },
+    "turkiye": {
+      "path": "/en-tr/flights-to-belgrade"
+    },
+    "united-states": {
+      "path": "/en-us/flights-to-belgrade"
+    },
+    "slovakia": {
+      "path": "/en-at/flights-to-belgrade",
+      "via": "Vienna"
     }
   }
 }

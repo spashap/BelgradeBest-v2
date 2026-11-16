@@ -63,7 +63,7 @@ Different trips reward different bases. Here is the one-line version for the mos
 - **Family with kids:** Vračar, New Belgrade or a quieter part of Zemun — space and calm over bar streets.
 - **Business or conference:** New Belgrade or central Savski Venac.
 - **Longer stay or digital nomad:** Dorćol, Vračar, New Belgrade or Zemun.
-- **Airport stopover or early flight:** the airport and Surčin side, or New Belgrade.
+- **Airport stopover or early flight:** [the airport and Surčin side](aff:near/airport), or New Belgrade.
 - **Expo 2027 visitor:** New Belgrade or the Surčin and Expo zone, with the centre as a city-experience alternative.
 
 These are starting points, not rankings. For a fuller, decision-by-decision walk-through of the first-visit choice, see [where to stay for your first time in Belgrade](/where-to-stay/where-to-stay-in-belgrade-first-time).

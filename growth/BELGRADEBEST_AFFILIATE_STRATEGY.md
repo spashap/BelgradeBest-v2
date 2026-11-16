@@ -25,6 +25,20 @@
 
 **Totals:** 21 articles, 32 hotel cards and 22 in-text links. The cards draw on 27 named hotels.
 
+### Second pass (same day): Air Serbia, Welcome Pickups, pavilions
+
+- **Air Serbia has a fares page for each country**, at `/en-<cc>/flights-to-belgrade`. CJ passes deep links to these pages; the Czech and UK pages were tested. That allows country-specific links:
+  - **15 pavilion profiles** get a "Flights" tile pointing to Air Serbia's page for that pavilion's own country, labelled as an affiliate link. The German profiles link the German page. Slovakia has no Bratislava flight, so its tile says so and points to Vienna, matching the Slovak getting-there page.
+  - Seven countries have no Air Serbia market page and get no tile: Azerbaijan, Israel, Japan, Saudi Arabia, South Korea, Turkmenistan and the UAE. Serbia gets none either.
+  - The map is in `partner-links.json → airSerbiaPavilions`.
+- **The Czech getting-there page** links to Air Serbia's Czech page. **The Slovak page** links to the Austrian one, because Vienna is the nearest departure.
+- **Welcome Pickups has no deep link.** All 16 of its CJ links land on the same generic homepage, and a `url=` parameter is ignored (tested 2026-11-16). Placement is the only lever. The link now sits on the "pre-booked transfer" sentence on every getting-there page (EN, DE, SK, CS), on the airport page and on the taxis page.
+- **"Early flight" bullets** on the stay hub and the business stay page now link to hotels near the airport.
+- **Pavilion directory and profiles:** a "Where to stay" tile now appears first, with a sharper line ("Beds, not tickets, are the bottleneck…"). That sends Expo-curious readers to the stay page with the hotel cards.
+- **Fix:** the profiles' tickets tile said two start dates had passed. It now says three, matching the tickets page.
+
+Pavilion flight sub-IDs are `bb-[lang-]<pavilion initials>-flights` (e.g. `bb-us-flights`, `bb-de-g-flights`).
+
 **Deliberately left without links:**
 - visa and entry, money, safety and SIM pages, because a link there reads as paid advice;
 - every restaurant and bar page, because we have no partner and it would look paid;
