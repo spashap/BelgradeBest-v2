@@ -4,7 +4,8 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
 import { getCollection } from "astro:content";
 import { readAffiliates, saveMode } from "../../lib/admin/store";
 import { ga4AffiliateClicks, type AffClickRow } from "../../lib/admin/analytics";
-import { clickEvent, partnerLive, partnersForTargets } from "../../lib/affiliates";
+import { clickEvent, partnerLive, partnersForTargets, pageCode } from "../../lib/affiliates";
+import { partnersInBody } from "../../lib/aff-inline";
 import Verdicts from "../../components/admin/Verdicts.astro";
 import type { Verdict } from "../../lib/admin/insights";
 import { cjEarnings } from "../../lib/admin/cj";
@@ -22,25 +23,37 @@ const okKey = sp.get("ok");
 const days = [7, 28, 90].includes(Number(sp.get("days"))) ? Number(sp.get("days")) : 28;
 const mode = saveMode();
 
-// Where each partner renders: visible articles (English + the /de/ and /sk/
-// twins) whose frontmatter names its placements.
+// Where each partner renders: visible articles (English + the /de/ /sk/ /cs/
+// twins) whose frontmatter names its end-of-page placements OR whose body
+// carries in-text `aff:` references (lib/aff-inline.ts).
 const withPrefix = async (c: "articles" | "de" | "sk" | "cs", prefix: string) =>
   (await getCollection(c)).filter((a) => a.data.visible !== false).map((a) => ({ a, prefix }));
 const articles = [...(await withPrefix("articles", "")), ...(await withPrefix("de", "/de")), ...(await withPrefix("sk", "/sk")), ...(await withPrefix("cs", "/cs"))];
 const pagesFor = new Map<string, string[]>();
 for (const { a, prefix } of articles) {
   const path = `${prefix}/${a.data.leg}/${a.data.slug}`;
-  for (const k of partnersForTargets(a.data.stayTargets, a.data.partnerTargets ?? [])) {
-    pagesFor.set(k, [...(pagesFor.get(k) ?? []), path]);
-  }
+  const ks = new Set([...partnersForTargets(a.data.stayTargets, a.data.partnerTargets ?? []), ...partnersInBody(a.body)]);
+  for (const k of ks) pagesFor.set(k, [...(pagesFor.get(k) ?? []), path]);
 }
+// sub-ID → page: sids are bb-[lang-]<page initials>-<item> (lib/affiliates.ts
+// sidFor), so the initials map back to the article(s) they could be.
+const codeToPages = new Map<string, string[]>();
+for (const { a, prefix } of articles) {
+  const k = (prefix ? prefix.slice(1) + "-" : "") + pageCode(a.data.slug);
+  codeToPages.set(k, [...(codeToPages.get(k) ?? []), `${prefix}/${a.data.leg}/${a.data.slug}`]);
+}
+const sidPage = (sid: string) => {
+  const parts = sid.replace(/^bb-/, "").split("-");
+  const tryKeys = /^(de|sk|cs)$/.test(parts[0]) ? [parts.slice(0, 2).join("-")] : [parts[0]];
+  return tryKeys.flatMap((k) => codeToPages.get(k) ?? []).join(" / ");
+};
 const allPages = [...new Set([...pagesFor.values()].flat())];
 
 const evToKey = new Map(partners.map(([k]) => [clickEvent(k), k]));
 const nameOf = (ev: string) => file.partners[evToKey.get(ev) ?? ""]?.name ?? ev;
 const [stats, cj] = await Promise.all([ga4AffiliateClicks(days, [...evToKey.keys()], allPages), cjEarnings(days)]);
 const usd = (n: number) => "$" + n.toFixed(2);
-// Earnings per sub-ID (sid = bb-<placement>, bb-de-<placement>…).
+// Earnings per sub-ID (sid = bb-[lang-]<page initials>-<item>; older links bb-<placement>).
 type SidRow = { sid: string; n: number; c: number; adv: string };
 const sidMap = new Map<string, SidRow>();
 if (cj.configured) {
@@ -180,8 +193,8 @@ const fmt = (iso?: string | null) => (iso ? iso.slice(0, 16).replace("T", " ") +
     bySid.length ? (
       <div class="panel">
         <table>
-          <tr><th>placement (sub-ID)</th><th>partner</th><th>commissions</th><th>earned</th></tr>
-          {bySid.map((r) => <tr><td class="slug">{r.sid}</td><td class="muted">{r.adv}</td><td>{r.n}</td><td><b>{usd(r.c)}</b></td></tr>)}
+          <tr><th>placement (sub-ID)</th><th>page</th><th>partner</th><th>commissions</th><th>earned</th></tr>
+          {bySid.map((r) => <tr><td class="slug">{r.sid}</td><td class="slug muted">{sidPage(r.sid) || "–"}</td><td class="muted">{r.adv}</td><td>{r.n}</td><td><b>{usd(r.c)}</b></td></tr>)}
         </table>
       </div>
     ) : (

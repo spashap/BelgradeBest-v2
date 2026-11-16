@@ -5,7 +5,8 @@
 // src/data/affiliates.json (edited from /admin/affiliates). Invisible while the
 // partner is off. Affiliate links carry rel="sponsored nofollow" (Google's
 // required attribute) and sit beside a disclosure linking the "how we make
-// money" page. Affiliate data never lives in article markdown. `lang` picks
+// money" page. Article markdown holds at most `aff:` references (lib/aff-inline.ts),
+// never partner URLs; this box hides when the body already links Booking. `lang` picks
 // the translated chrome + labels for the /de/ and /sk/ pilots.
 import data from "../data/stay-affiliates.json";
 import AffClick from "./AffClick.astro";
@@ -15,11 +16,13 @@ interface Props {
   targets?: string[];
   heading?: string;
   lang?: string;
+  // Article slug: goes into the CJ sub-ID so earnings trace to the page.
+  page?: string;
 }
-const { targets = [], lang = "en" } = Astro.props;
+const { targets = [], lang = "en", page } = Astro.props;
 const chrome = stayChrome(lang);
 const heading = Astro.props.heading ?? chrome.heading;
-const items = stayLinks(targets, lang);
+const items = stayLinks(targets, lang, page);
 ---
 {
   items.length > 0 ? (

@@ -63,7 +63,7 @@ type StayReg = {
   partner?: string;
   disclosure: string;
   tr?: Record<string, BlockChrome>;
-  targets: Record<string, { label: string; search?: string; labels?: Labels }>;
+  targets: Record<string, { label: string; search?: string; url?: string; labels?: Labels }>;
 };
 type TravelReg = {
   heading: string;
@@ -103,43 +103,64 @@ export function tracked(base: string, dest: string | undefined, sid: string): st
 
 const BOOKING_LANG: Record<string, string> = { en: "en-gb", de: "de", sk: "sk", cs: "cs" };
 
+// CJ sub-ID: bb-[lang-]<page initials>-<ref>, e.g. bb-wtsfe-moskva for
+// moskva on where-to-stay-for-expo. Short (CJ caps sub-IDs) yet traceable:
+// /admin/affiliates maps the initials back to the page. Without a page (old
+// callers) it stays bb-[lang-]<ref>.
+export const pageCode = (slug: string) =>
+  slug
+    .split("-")
+    .filter(Boolean)
+    .map((w) => (/^\d+$/.test(w) ? w : w[0]))
+    .join("");
+export function sidFor(lang: string, slug: string | undefined, ref: string): string {
+  const s = `bb-${lang === "en" ? "" : lang + "-"}${slug ? pageCode(slug) + "-" : ""}${ref}`;
+  return s.replace(/[^a-z0-9-]/gi, "-").toLowerCase().slice(0, 60);
+}
+
 // Booking.com: a search for the area. Direct partner (numeric aid): `label` is
 // the per-area sub-ID. Via CJ: the search is the deep link and `sid` the sub-ID.
-export function stayLinks(targets: string[], lang = "en"): AffLink[] {
+export function stayLinks(targets: string[], lang = "en", page?: string): AffLink[] {
   if (!partnerLive(STAY_PARTNER)) return [];
   const value = PARTNERS[STAY_PARTNER].value.trim();
   const cta = stayChrome(lang).cta ?? "Book a stay in {area}";
   return targets.flatMap((t) => {
     const x = STAY.targets[t];
-    if (!x?.search) return [];
-    const sid = `bb-${lang === "en" ? "" : lang + "-"}${t}`;
+    if (!x?.search && !x?.url) return [];
+    const sid = sidFor(lang, page, page ? `box-${t}` : t);
     const label = cta.replace("{area}", x.labels?.[lang] ?? x.label);
-    const q = new URLSearchParams({ ss: x.search, lang: BOOKING_LANG[lang] ?? "en-gb" });
+    // A Booking landing page (`url`) where one works, else a search (`search`).
+    const u = new URL(x.url ?? "https://www.booking.com/searchresults.html");
+    if (!x.url) u.searchParams.set("ss", x.search!);
+    u.searchParams.set("lang", BOOKING_LANG[lang] ?? "en-gb");
     if (/^\d+$/.test(value)) {
-      q.set("aid", value);
-      q.set("label", sid);
-      return [{ href: `https://www.booking.com/searchresults.html?${q}`, label, partner: STAY_PARTNER, placement: t }];
+      u.searchParams.set("aid", value);
+      u.searchParams.set("label", sid);
+      return [{ href: u.toString(), label, partner: STAY_PARTNER, placement: t }];
     }
-    const dest = `https://www.booking.com/searchresults.html?${q}`;
+    const dest = u.toString();
     return [{ href: tracked(value, dest, sid), label, partner: STAY_PARTNER, placement: t }];
   });
 }
 
-export function travelLinks(targets: string[], lang = "en"): AffLink[] {
+export function travelLinks(targets: string[], lang = "en", page?: string): AffLink[] {
   return targets.flatMap((t) => {
     const x = TRAVEL.targets[t];
     if (!x || !partnerLive(x.partner)) return [];
-    const sid = `bb-${lang === "en" ? "" : lang + "-"}${t}`;
+    const sid = sidFor(lang, page, page ? `box-${t}` : t);
     const dest = x.deep?.[lang] ?? x.deep?.en;
     const label = x.labels?.[lang] ?? x.label;
     return [{ href: tracked(PARTNERS[x.partner].value.trim(), dest, sid), label, partner: x.partner, placement: t }];
   });
 }
 
+// The partner behind one partner-links.json target key ("" if unknown).
+export const partnerOfTarget = (t: string) => TRAVEL.targets[t]?.partner ?? "";
+
 // Admin "where it shows": the partner behind a page's stay/partner targets.
 export function partnersForTargets(stayTargets: string[], partnerTargets: string[]): Set<PartnerKey> {
   const out = new Set<PartnerKey>();
-  if (stayTargets.some((t) => STAY.targets[t]?.search)) out.add(STAY_PARTNER);
+  if (stayTargets.some((t) => STAY.targets[t]?.search || STAY.targets[t]?.url)) out.add(STAY_PARTNER);
   for (const t of partnerTargets) if (TRAVEL.targets[t]) out.add(TRAVEL.targets[t].partner);
   return out;
 }

@@ -9,6 +9,10 @@ import ArticleHero from "../components/ArticleHero.astro";
 import ArticleToc from "../components/ArticleToc.astro";
 import StayLinks from "../components/StayLinks.astro";
 import PartnerLinks from "../components/PartnerLinks.astro";
+import AffClick from "../components/AffClick.astro";
+import { hasAffRefs, resolveAffHtml } from "../lib/aff-inline";
+import { STAY_PARTNER, partnerOfTarget } from "../lib/affiliates";
+import stayReg from "../data/hotel-picks.json";
 import InternalLinkBlock from "../components/InternalLinkBlock.astro";
 import Schema from "../components/Schema.astro";
 import { articleSchema, breadcrumbSchema } from "../lib/schemas";
@@ -82,6 +86,15 @@ const meta = pageMetadata({
 });
 
 const { Content, headings } = await render(entry);
+// In-text affiliate references (lib/aff-inline.ts): when the body carries any
+// `aff:` link, the rendered HTML is resolved here (tracked partner link, or
+// plain text while the partner is off; `aff:pick/…` lines become hotel
+// cards). Bodies without references render through <Content/> unchanged.
+const raw = (entry as { rendered?: { html?: string } }).rendered?.html;
+const aff = hasAffRefs(raw) ? resolveAffHtml(raw!, lang, d.slug) : null;
+const affInBody = !!aff && aff.links + aff.picks > 0;
+const affChrome = (stayReg.chrome as Record<string, Record<string, string>>)[lang] ?? stayReg.chrome.en;
+const affDisc = { text: affChrome.pageDisclosure, link: affChrome.disclosureLink };
 // Translated read-next: the other pages of the same leg in that language
 // (there is no translated linksTo graph; the sets are small enough to list).
 const targets = isTr
@@ -124,6 +137,16 @@ const schemas: object[] = [
       <Container variant="article">
         <p class="c-article-meta">
           {T ? `${T.updated} ${updatedLabel}` : `Updated ${updatedLabel}`}
+          {
+            /* Disclosure BEFORE the first in-text affiliate link (FTC/ASA:
+               clear and up front, not only at the bottom). */
+            affInBody ? (
+              <>
+                {" · "}
+                {affDisc.text} (<a href="/how-we-make-money">{affDisc.link}</a>)
+              </>
+            ) : null
+          }
         </p>
       </Container>
     ) : null
@@ -172,8 +195,9 @@ const schemas: object[] = [
     <div class="u-stack-lg">
       <ArticleToc headings={headings} lang={lang} />
       <article class="c-article">
-        <Content />
+        {aff ? <Fragment set:html={aff.html} /> : <Content />}
       </article>
+      {affInBody ? <AffClick /> : null}
       {
         d.unknowns && d.unknowns.length > 0 ? (
           <aside class="c-unknowns">
@@ -196,8 +220,16 @@ const schemas: object[] = [
           </p>
         ) : null
       }
-      <PartnerLinks targets={d.partnerTargets} lang={lang} />
-      <StayLinks targets={d.stayTargets} lang={lang} />
+      {
+        /* End-of-page boxes repeat only what the text has not already offered:
+           a partner linked in the body (or hotel cards) drops out of them. */
+      }
+      <PartnerLinks targets={d.partnerTargets.filter((t) => !aff?.partners.has(partnerOfTarget(t)))} lang={lang} page={d.slug} />
+      {
+        /* The end-of-article area box only where the body has no Booking.com
+           link or hotel card of its own: otherwise it just repeats itself. */
+        aff?.partners.has(STAY_PARTNER) ? null : <StayLinks targets={d.stayTargets} lang={lang} page={d.slug} />
+      }
     </div>
   </Container>
 

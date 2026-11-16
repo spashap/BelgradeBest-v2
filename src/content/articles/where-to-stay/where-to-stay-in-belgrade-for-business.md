@@ -74,6 +74,8 @@ New Belgrade is not the most romantic part of town, but it's one of the most fun
 - **Walking to the Old Town is impractical** from many blocks — you'll use a taxi, free public transport, or a car for sightseeing and downtown dinners.
 - **The exact block matters.** Some areas around the boulevards, the arena, the Ušće/Sava riverfront facing the old city, and the blocks toward Zemun are convenient and lively; others feel empty after office hours. Check what's actually around your hotel.
 
+[Places to stay](aff:pick/new-belgrade-business)
+
 ## When central is the better call: Savski Venac and Stari Grad
 
 If your meetings are downtown — government and institutional offices, central company HQs, or anything around the Sava riverfront — staying central can save you the daily commute and give you walkable evenings.
@@ -82,13 +84,19 @@ If your meetings are downtown — government and institutional offices, central 
 
 Savski Venac is a practical central choice, sitting near the government/institutional zones and central transport links. But the name covers very different places: central slopes near Savamala, busy institutional streets near Slavija, and quieter, greener, more residential parts toward Dedinje and Topčider. So **judge it by the exact street, not the district name** — some addresses are central and walkable, others need a taxi. For business, the central Savski Venac pocket near Slavija and the riverfront is the useful one.
 
+[Places to stay](aff:pick/savski-venac)
+
 ### Stari Grad business hotels (historic core)
 
 Central Stari Grad hotels put you on the doorstep of Republic Square, Knez Mihailova and the main restaurants, which is ideal if evenings and client dinners matter more than morning commute time. The trade-offs are classic old-town ones: street noise on lively blocks, difficult and regulated parking, and older buildings — so if you're driving, only choose a central hotel that guarantees its own parking, and ask for a courtyard-facing room if noise matters.
 
+[Places to stay](aff:pick/stari-grad-upscale)
+
 ### Belgrade Waterfront and Savamala
 
 If your meetings cluster near the Sava riverfront, **Belgrade Waterfront** offers newer buildings, modern serviced apartments and easy bridge access to New Belgrade, while neighbouring **Savamala** adds restaurants and nightlife (with the noise that comes with it on weekends). Good middle-ground bases if you want both river-side modernity and quick crossings to the New Belgrade office side.
+
+[Places to stay](aff:pick/savamala)
 
 ## What to confirm before you book a business hotel
 

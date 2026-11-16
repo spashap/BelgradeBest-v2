@@ -4,6 +4,7 @@ import { SITE, CONFIG } from "../lib/site";
 import { clusters } from "../lib/clusters";
 import { validTerms, glossarySection, termBodyMarkdown } from "../lib/glossary";
 import { validAreas, areaSection, areaBodyMarkdown } from "../lib/areas";
+import { stripAffMarkdown } from "../lib/aff-inline";
 
 // /llms-full.txt — the full-text companion to /llms.txt for LLM answer engines
 // that ingest whole documents (RAG-style retrieval). Emits every indexable
@@ -61,7 +62,7 @@ export const GET: APIRoute = async () => {
     if (!arts) continue;
     for (const a of arts) {
       const url = `${SITE.origin}/${a.data.leg}/${a.data.slug}`;
-      pushDoc(url, a.data.title, a.data.lede ?? "", a.body ?? "", a.data.lastUpdated);
+      pushDoc(url, a.data.title, a.data.lede ?? "", stripAffMarkdown(a.body ?? ""), a.data.lastUpdated);
     }
   }
 

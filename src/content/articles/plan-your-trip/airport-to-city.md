@@ -78,7 +78,7 @@ CarGo's regulatory status has been contested over the years, but it continues to
 
 ## When is a pre-booked transfer worth it?
 
-A pre-booked transfer is a private car you reserve before you fly. The driver meets you in the arrivals hall, your flight is tracked so a delay does not leave you without a ride, and the price is fixed and paid in advance. Several companies offer this at Belgrade airport. We checked one of them, Welcome Pickups, in October 2026: a sedan for one passenger from the airport to Republic Square was quoted at **€34**, taxes included, for a midday arrival. That is a little above the voucher taxi. It is not the cheapest way into town, and it does not need to be. It earns its price in a few situations:
+A pre-booked transfer is a private car you reserve before you fly. The driver meets you in the arrivals hall, your flight is tracked so a delay does not leave you without a ride, and the price is fixed and paid in advance. Several companies offer this at Belgrade airport. We checked one of them, [Welcome Pickups](aff:go/airport-transfer), in October 2026: a sedan for one passenger from the airport to Republic Square was quoted at **€34**, taxes included, for a midday arrival. That is a little above the voucher taxi. It is not the cheapest way into town, and it does not need to be. It earns its price in a few situations:
 
 - **Late-night or very early arrivals**, when you do not want to look for a bus stop or a taxi queue.
 - **Families and heavy luggage**: you can book a minivan or minibus instead of a sedan, and request child seats when you book (Welcome Pickups charges extra for them).

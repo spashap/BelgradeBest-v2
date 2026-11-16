@@ -80,6 +80,8 @@ Central comes with central-city friction. Keep these in mind:
 
 A fair way to put it: Stari Grad is the safest default for a first Belgrade visit, with the best walking access to the classic sights and the usual central trade-offs of noise, parking and smaller or older apartments.
 
+[Places to stay](aff:pick/stari-grad)
+
 ## Stari Grad vs Dorćol vs Savamala vs Vračar
 
 Here is how the four central choices compare for a first-timer.
@@ -90,17 +92,23 @@ Dorćol is one of Belgrade's oldest neighbourhoods and a modern favourite for ri
 
 The catch is that the same area can be charmingly quiet or noisy depending on the exact street, and apartments dominate over big hotels, so quality varies listing by listing. Check the specific address and recent reviews before you commit.
 
+[Places to stay](aff:pick/dorcol)
+
 ### Savamala / Belgrade Waterfront — river, restaurants and nightlife
 
 Savamala is a former industrial waterfront that turned into a popular urban corner of clubs, bars, restaurants and cultural venues, now bordering the newer **Belgrade Waterfront** development with its promenades and modern serviced apartments. It is excellent for river restaurants, the Sava promenade and easy bridge access to New Belgrade.
 
 It is not, however, the place to come for silence. Beton Hala and the riverfront carry a high noise risk on weekends, taxis and traffic congest around events, and from the lower river level it is an uphill walk back to the Old Town. Great for a lively base, less so if you want quiet sleep.
 
+[Places to stay](aff:pick/savamala)
+
 ### Vračar — calmer, central-residential
 
 Vračar is not on the rivers, but it is one of the most practical central-residential areas, anchored by the monumental **Saint Sava Temple** and the **Nikola Tesla Museum**. It is less touristy than Old Town and works well if you want central access with less nightlife pressure, which makes it a strong choice for families or longer stays.
 
 The trade-offs: it is not a waterfront area, some streets sit near busy roads like Slavija and Bulevar kralja Aleksandra where traffic noise carries, and central residential demand can make it pricier. Pick a quieter side street away from the big boulevards.
+
+[Places to stay](aff:pick/vracar)
 
 ### Quick comparison
 

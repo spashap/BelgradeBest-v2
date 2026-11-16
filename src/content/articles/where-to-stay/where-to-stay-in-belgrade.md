@@ -76,17 +76,25 @@ What follows is a short brief on each of the seven areas most visitors actually 
 
 Stari Grad is the most central tourist district and the natural choice for a first Belgrade visit. Staying here puts Republic Square, Knez Mihailova, the National Museum and Theatre, Kalemegdan, Skadarlija and a dense run of restaurants and bars within walking distance. The trade-offs are the usual central-city ones: bar streets and restaurant zones can stay lively late, parking is limited and regulated, and many short-stay apartments are in older buildings, so check the floor, the lift and the heating before you book. If you want the most walking access to the classic sights and can accept some noise, this is the default.
 
+[Places to stay](aff:pick/stari-grad)
+
 ### Dorćol — central, but with a neighbourhood feel
 
 Dorćol is one of the oldest parts of the city and a favourite for cafés, riverfront walks and a less purely touristy version of the centre. Locals split it: **upper Dorćol**, closer to Republic Square, is better for sightseeing, while **lower Dorćol** slopes toward the Danube and feels more local and spread out. The lively Strahinjića Bana and Cetinjska pockets are good for nightlife but weaker for quiet sleep. Apartments dominate here more than hotels, so quality depends heavily on the individual listing and the exact street — the same area can be charmingly local or genuinely noisy.
+
+[Places to stay](aff:pick/dorcol)
 
 ### Savamala — river, restaurants and nightlife
 
 Savamala is the city's river-and-nightlife base: a former industrial district on the right bank of the Sava, now full of clubs, restaurants, bars and cultural venues, with **Beton Hala** and the Sava promenade along the **[Belgrade Waterfront](/glossary/belgrade-waterfront)** redevelopment nearby. It is excellent for restaurants, bars and easy bridge access to New Belgrade, and the newer Waterfront buildings offer modern serviced apartments. It is not the first choice for silence — nightlife and restaurant noise carry near the river, and weekends bring traffic and taxi congestion. There is also an uphill walk back to the Old Town from the lower river level.
 
+[Places to stay](aff:pick/savamala)
+
 ### Vračar — central, residential, family-friendly
 
 Vračar is not on the rivers, but it is one of the most practical central residential zones — less touristy than the Old Town and easier for families and longer stays. Its landmark is the Saint Sava Temple, and the area around it and the Nikola Tesla Museum is pleasant for cafés and walking. It is one of the stronger family choices if you find a quiet side street away from the big boulevards; the trade-offs are traffic noise near Slavija and the main roads, some hills, and central-residential demand that can push prices up. It is a residential base, not a riverfront or nightlife one.
+
+[Places to stay](aff:pick/vracar)
 
 ### Savski Venac — central and practical, but check the street
 
@@ -96,9 +104,13 @@ Savski Venac is less a single tourist district than a band that covers very diff
 
 New Belgrade is the practical modern side of the city: wide boulevards, business hotels, shopping centres, arenas, larger and newer apartments, and the best road access toward the airport and Surčin. It is usually weaker for atmosphere and stronger for logistics. Walking to the Old Town from many blocks is impractical, so you would use a bus, tram or taxi — though city public transport has been free for passengers since the start of 2025, which makes the commute cheaper if not shorter. It is a strong family and business choice when you value space, parking and modern buildings over old-town charm, but the exact block matters: some are lively and convenient, others empty out after office hours.
 
+[Places to stay](aff:pick/new-belgrade)
+
 ### Zemun — the slower Danube-side stay
 
 Zemun is an old town within the city, with the Gardoš hill and its Millennium Tower, Austro-Hungarian streets, a Danube promenade and riverside restaurants. It is the best base for a slower, more romantic stay — couples, repeat visitors and longer stays who do not need to be in the old centre every day. The trade-off is distance: it is farther from Republic Square, so public-transport or taxi time matters if you want the centre daily, and it is less suited to a one- or two-night first visit unless Zemun itself is the point. Choose a quieter part and check whether the apartment sits on a steep, narrow street.
+
+[Places to stay](aff:pick/zemun)
 
 ## How cost varies by area
 

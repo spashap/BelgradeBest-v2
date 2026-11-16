@@ -97,6 +97,8 @@ Pick Dorćol if you want Belgrade's café-and-neighbourhood character with going
 
 Be ready to do the homework, because Dorćol is apartment-dominated: read the listing carefully, check the exact street for noise, and confirm parking if you are driving.
 
+[Places to stay](aff:pick/dorcol)
+
 ## Who should pick Vračar?
 
 Pick Vračar if you want a calmer, residential base that is still central. It suits:
@@ -107,6 +109,8 @@ Pick Vračar if you want a calmer, residential base that is still central. It su
 - **Visitors drawn to Saint Sava Temple, the Nikola Tesla Museum** and neighbourhood restaurants and cafés.
 
 Accept the trade-offs: you won't be on a river, you may pay a touch more, and you should still pick a quiet side street away from the big boulevards.
+
+[Places to stay](aff:pick/vracar)
 
 ## What to confirm before you book — either area
 

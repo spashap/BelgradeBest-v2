@@ -93,7 +93,7 @@ The non-smoking question is about the individual property and room, not the neig
 
 **Hotels usually make a non-smoking request easiest to formalise**, because reception can confirm and re-room you if something is wrong, whereas apartments depend more on the host and on previous guests. If a clean, smoke-free stay is a priority, that reliability can outweigh the extra space of an apartment. For the wider trade-off, see our guide on choosing between hotels and apartments.
 
-For families and smoke-sensitive travellers who also want a calmer base, areas like **Vračar** and **New Belgrade** tend to offer larger, more residential apartments and modern business hotels, away from the densest nightlife streets, while **Stari Grad** keeps you central if you would rather be in the Old Town. Wherever you land, the smoke check above is what does the work; the neighbourhood just sets the rest of the trade-offs.
+For families and smoke-sensitive travellers who also want a calmer base, areas like **Vračar** and **New Belgrade** tend to offer larger, more residential apartments and [modern business hotels](aff:area/new-belgrade), away from the densest nightlife streets, while **Stari Grad** keeps you central if you would rather be in the Old Town. Wherever you land, the smoke check above is what does the work; the neighbourhood just sets the rest of the trade-offs.
 
 ## The bottom line
 

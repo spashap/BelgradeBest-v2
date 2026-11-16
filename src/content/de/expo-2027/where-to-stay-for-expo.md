@@ -7,7 +7,7 @@ description: "Wo Sie zur Expo 2027 übernachten: Novi Beograd und die Flughafens
 lede: "Für die Expo 2027 liegen die nächstgelegenen Unterkünfte in Novi Beograd und auf der Surčin-/Flughafenseite, wenige Kilometer vom Gelände entfernt; die Altstadt (Stari Grad, Vračar) bietet Ihnen die Stadt, die Sie eigentlich sehen wollten – auf Kosten eines längeren Wegs über den Fluss. Bei Besuchsprognosen vom offiziellen Wert von über 4 Millionen bis zum 6-Millionen-Ziel der Organisatoren über drei Monate und nur wenigen Tausend neuen Hotelzimmern ist die eigentliche Entscheidung das frühe Buchen – nicht die Wahl des perfekten Viertels."
 heroLabel: "Wo übernachten für Expo 2027 / Hero"
 heroAlt: "Kartenartige Ansicht von Belgrad mit dem Expo-Gelände in Surčin, Novi Beograd und der Altstadt jenseits der Sava"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-16"
 order: 90
 visible: true
 intent: "both"
@@ -54,7 +54,7 @@ Die wichtigste Entscheidung ist jedoch nicht das Viertel – es ist **wie früh 
 
 ## Übernachten in der Nähe des Expo-Geländes: Novi Beograd und die Surčin-/Flughafenseite
 
-**Novi Beograd** erstreckt sich jenseits der Sava gegenüber der historischen Altstadt und ist das wichtigste Geschäftsviertel der Stadt: breite Boulevards, moderne Büro- und Wohntürme, große Hotels und Konferenzflächen. Da das Expo-Viertel an seiner westlichen Flanke entsteht, ist Novi Beograd die naheliegende Basis „in Geländenähe", und hier befindet sich auch ein großer Teil der neueren Hotelzimmer Belgrads.
+**Novi Beograd** erstreckt sich jenseits der Sava gegenüber der historischen Altstadt und ist das wichtigste Geschäftsviertel der Stadt: breite Boulevards, moderne Büro- und Wohntürme, große Hotels und Konferenzflächen. Da das Expo-Viertel an seiner westlichen Flanke entsteht, ist Novi Beograd die naheliegende Basis „in Geländenähe", und hier befindet sich auch ein großer Teil der [neueren Hotelzimmer](aff:area/new-belgrade) Belgrads.
 
 Was Sie bekommen:
 
@@ -64,19 +64,25 @@ Was Sie bekommen:
 
 Der Kompromiss betrifft den Charakter. Novi Beograd ist funktional und zeitgemäß statt stimmungsvoll; die Cafés, Kopfsteinpflasterstraßen und das Nachtleben am Flussufer liegen jenseits der Brücke. Sie werden die Sava immer dann überqueren, wenn Sie „das alte Belgrad" erleben möchten.
 
+[Unterkünfte](aff:pick/new-belgrade)
+
 Das Gebiet **Surčin und unmittelbare Flughafenumgebung** liegt noch näher am Gelände und eignet sich für sehr kurze Aufenthalte oder den Ankunftstag, ist aber die am wenigsten städtische Option – dünn besiedelt mit Restaurants, Sehenswürdigkeiten und Straßenleben. Betrachten Sie es als logistische Basis, nicht als Ort, um die Stadt zu erleben.
+
+[Unterkünfte](aff:pick/expo)
 
 Die genauen Routen von jeder Basis zum Veranstaltungsort (und vom Flughafen) finden Sie unter [Anreise zur Expo 2027](/de/expo-2027/getting-there).
 
 ## Übernachten in der Altstadt: Stari Grad und Vračar
 
-Wenn Sie ebenso sehr wegen Belgrad wie wegen der Expo gekommen sind, wählen Sie eine Unterkunft in der **Altstadt**. Der historische Kern – **Stari Grad** rund um die [Knez Mihailova (EN)](/glossary/knez-mihailova), den Platz der Republik und [Kalemegdan (EN)](/glossary/kalemegdan), sowie die angrenzenden Viertel **Vračar** und **Dorćol** – ist die zu Fuß erkundbare, café-dichte, nachtlebenreiche Stadt, die die meisten Besucher vor Augen haben. Sie können Sehenswürdigkeiten zu Fuß besichtigen und ohne Auto in Restaurants und Bars gehen.
+Wenn Sie ebenso sehr wegen Belgrad wie wegen der Expo gekommen sind, wählen Sie eine Unterkunft in der **[Altstadt](aff:area/stari-grad)**. Der historische Kern – **Stari Grad** rund um die [Knez Mihailova (EN)](/glossary/knez-mihailova), den Platz der Republik und [Kalemegdan (EN)](/glossary/kalemegdan), sowie die angrenzenden Viertel **Vračar** und **Dorćol** – ist die zu Fuß erkundbare, café-dichte, nachtlebenreiche Stadt, die die meisten Besucher vor Augen haben. Sie können Sehenswürdigkeiten zu Fuß besichtigen und ohne Auto in Restaurants und Bars gehen.
 
 Der Preis dafür ist der Weg. Das Zentrum liegt am rechten Ufer der Sava, sodass jeder Expo-Tag eine Fahrt über den Fluss nach Surčin am westlichen Stadtrand bedeutet. Das ist machbar, aber es ist eine echte tägliche Reise und kein kurzer Sprung, und der Verkehr während einer Großveranstaltung ist schwer vorhersehbar.
 
 Diese Basis eignet sich für Reisende, die nur einen Teil ihrer Reise auf der Expo verbringen und den Rest mit der Erkundung der Stadt verbringen, und denen Abende in den historischen Straßen wichtiger sind als ein möglichst kurzer Weg zum Gelände.
 
 Eine ausführlichere Aufschlüsselung von Belgrads Vierteln, Hoteltypen und Buchungsmechanik finden Sie im [Leitfaden zur Unterkunftswahl (EN)](/where-to-stay); diese Seite konzentriert sich nur auf den Expo-spezifischen Kompromiss.
+
+[Unterkünfte](aff:pick/stari-grad)
 
 ## In Geländenähe oder im Zentrum Belgrads – wie Sie sich entscheiden
 
@@ -94,6 +100,8 @@ Buchen Sie so früh, wie es Ihre Reisedaten erlauben. Der Grund dafür ist die K
 
 Stand 2026 verfügte Belgrad über rund **120 Hotels mit etwa 8.000 Zimmern**; weitere rund **20 Hotels (~2.000 Zimmer)** sollen Berichten zufolge vor der Expo eröffnen – ein Großteil davon in Novi Beograd und in Flughafennähe. Demgegenüber stehen für die Expo 2027 Prognosen von **mehr als 4 Millionen Besuchen – nach dem oberen Ziel der Organisatoren sogar 6 Millionen**.
 
+Zwei der geplanten Eröffnungen sind große, namentlich bekannte Hotels. Das **Swissôtel Belgrade EXPO** im Expo-Komplex selbst wird von Accor mit Eröffnung im ersten Quartal 2027 und 377 Zimmern und Suiten geführt, und das **InterContinental Belgrade** von IHG (203 Zimmer, im Delta District neben dem Sava Centar) war für Ende 2026 angekündigt. Mitte November 2026 hatte keines der beiden eröffnet; rechnen Sie sie daher als mögliche zusätzliche Kapazität, nicht als feste Planungsgröße.
+
 Widerstehen Sie der Versuchung, das eine durch das andere zu teilen. Es handelt sich um *Besuche*, nicht um Übernachtungsgäste: Darin enthalten sind Belgrader Einwohner, Tagesgäste aus der Region und dieselbe Person, die mit einem Drei-Tage-Ticket wiederkommt. Wie viele Expo-Besucher tatsächlich ein Bett brauchen, für wie viele Nächte und wie viele außerhalb der Stadt übernachten, hat niemand veröffentlicht. Was der Vergleich zeigt, ist die Richtung: ein festes, überschaubares Zimmerangebot trifft auf eine große und weiter steigende Besucherprognose. Das ist Grund genug, früh und flexibel zu buchen – aber keine Grundlage, um eine konkrete Knappheit vorherzusagen.
 
 Daraus ergeben sich zwei Konsequenzen:
@@ -101,7 +109,7 @@ Daraus ergeben sich zwei Konsequenzen:
 - **Zimmer in der Nähe von Surčin und in Novi Beograd werden zuerst vergeben** und erzielen Premiumpreise. Frühes Buchen ist der Weg, sich sowohl die Lage als auch einen vernünftigen Preis zu sichern.
 - **Apartments und Unterkünfte außerhalb werden die Lücke füllen.** Private Apartments dürften einen Großteil des Andrangs auffangen, und Shuttle-Verbindungen aus Nachbarstädten wie Novi Sad und Šabac wurden ins Gespräch gebracht, um Zimmer außerhalb Belgrads zu erschließen. Das sind Ausweichoptionen, falls zentrale Hotels und Hotels in Geländenähe ausgebucht sind.
 
-Wir nennen hier bewusst keine konkreten Preise oder Echtzeit-Verfügbarkeiten – diese Zahlen ändern sich wöchentlich und wären fast sofort veraltet. Der dauerhafte Rat betrifft die Strategie: **früh buchen, flexibel buchen.** Reservieren Sie ein stornierbares Zimmer, sobald Sie sich auf die Reisedaten festgelegt haben, und behalten Sie dann besser gelegene oder günstigere Zimmer im Auge, während sich der Kalender füllt. Details zur Buchungsplattform-Mechanik und zum Vergleich Apartment versus Hotel finden Sie im [Leitfaden zur Unterkunftswahl (EN)](/where-to-stay).
+Wir nennen hier bewusst keine konkreten Preise oder Echtzeit-Verfügbarkeiten – diese Zahlen ändern sich wöchentlich und wären fast sofort veraltet. Der dauerhafte Rat betrifft die Strategie: **früh buchen, flexibel buchen.** Reservieren Sie ein [stornierbares Zimmer](aff:near/belgrade-flex), sobald Sie sich auf die Reisedaten festgelegt haben, und behalten Sie dann besser gelegene oder günstigere Zimmer im Auge, während sich der Kalender füllt. Details zur Buchungsplattform-Mechanik und zum Vergleich Apartment versus Hotel finden Sie im [Leitfaden zur Unterkunftswahl (EN)](/where-to-stay).
 
 ## Kurzübersicht
 

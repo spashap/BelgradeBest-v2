@@ -164,7 +164,7 @@ If step-free access matters — for a wheelchair user, an older traveller, heavy
 
 There is no single best answer — only the best fit for your trip:
 
-- **First-time short city break:** a **hotel** in or near the centre. Easiest check-in, registration handled, simplest non-smoking request.
+- **First-time short city break:** a **hotel** [in or near the centre](aff:area/stari-grad). Easiest check-in, registration handled, simplest non-smoking request.
 - **Business or conference:** a **hotel** or **serviced apartment**, often in New Belgrade for space and logistics.
 - **Family or longer stay:** a **serviced or private apartment** for the kitchen, laundry and space — after clearing registration, payment and safety.
 - **Tight budget or solo and social:** a **hostel**, accepting noise and shared facilities.

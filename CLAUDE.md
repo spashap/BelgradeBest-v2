@@ -264,6 +264,15 @@ the slug is in the `articles` content collection.
   `aff_click_<partner>` (`components/AffClick.astro`, inline, only on pages with a
   block), so the admin reports clicks by page/country/device/source with no GA4
   setup. A new partner = a row in affiliates.json + a placement, in code.
+  **In-text placements (2026-11-16, `lib/aff-inline.ts`)**: article markdown carries
+  REFERENCES only — `[phrase](aff:hotel/<key>|area/<key>|near/<key>|go/<target>)` and a
+  card line `[Places to stay](aff:pick/<key>)` alone at a section's end — resolved from
+  `src/data/hotel-picks.json` (named hotels, cards, places) in `ArticleLayout` at build
+  time; an unknown key fails the build; a partner switched off renders plain text / no
+  card. Rules, hotel-selection criteria and re-check dates:
+  `growth/BELGRADEBEST_AFFILIATE_STRATEGY.md` (max 3 in-text links per article, never in
+  legal/safety/restaurant text; check every new Booking search in a real browser —
+  Booking resolves free text loosely). CJ sub-IDs are `bb-[lang-]<page initials>-<item>`.
 - **Auth (`src/middleware.ts`)**: `ADMIN_PASSWORD` is SET in production — `/admin`
   302s to `/admin/login` (verified live 2026-07-02). Unsetting the env var would
   leave it open; the cookie is a hash of the password. Nothing else changes.

@@ -74,7 +74,7 @@ Public transport inside Belgrade has been free since 1 January 2025, and the reg
 The Expo district is surrounded by suburban and rural Belgrade rather than tourist neighbourhoods:
 
 - **Surčin** itself is a small town and municipality of about 45,000 people (2022 census), with villages such as Jakovo, Bečmen, Boljevci and Dobanovci. It has few hotels and almost no visitor infrastructure yet.
-- **New Belgrade** (Novi Beograd), to the north-east, is the nearest big district with business hotels, shopping and restaurants — the usual compromise between the Expo and the centre.
+- **New Belgrade** (Novi Beograd), to the north-east, is the nearest big district with [business hotels](aff:area/new-belgrade), shopping and restaurants — the usual compromise between the Expo and the centre.
 - **Zemun** and the **old town** across the Sava have the atmosphere, but a longer daily commute.
 
 For a side-by-side of these options, see [where to stay for Expo 2027](/expo-2027/where-to-stay-for-expo).

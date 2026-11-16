@@ -1,0 +1,526 @@
+{
+  "updated": "2026-11-16",
+  "_note": "Named hotels and hotel cards for in-text affiliate links (lib/aff-inline.ts). Articles reference these by key: [name](aff:hotel/<key>), [text](aff:near/<key>), and a line [x](aff:pick/<key>) for a card. Booking.com on/off + CJ link live in affiliates.json. Every hotel carries the date it was last checked open and listed (`verified`); re-check before Expo 2027 (see BELGRADEBEST_AFFILIATE_STRATEGY.md).",
+  "chrome": {
+    "en": {
+      "pageDisclosure": "This guide contains affiliate links",
+      "disclosure": "Affiliate links:",
+      "disclosureLink": "how we make money",
+      "moreArea": "More places to stay in {x}",
+      "moreNear": "More places to stay {x}",
+      "tierBudget": "budget",
+      "tierMid": "mid-range",
+      "tierUpper": "upscale",
+      "tierLuxury": "luxury",
+      "typeHotel": "Hotel",
+      "typeBoutique": "Boutique hotel",
+      "typeAparthotel": "Aparthotel",
+      "typeHostel": "Hostel",
+      "typeGuesthouse": "Guesthouse"
+    },
+    "de": {
+      "pageDisclosure": "Dieser Ratgeber enthält Affiliate-Links",
+      "disclosure": "Affiliate-Links:",
+      "disclosureLink": "So finanzieren wir uns (EN)",
+      "moreArea": "Weitere Unterkünfte in {x}",
+      "moreNear": "Weitere Unterkünfte {x}",
+      "tierBudget": "günstig",
+      "tierMid": "Mittelklasse",
+      "tierUpper": "gehoben",
+      "tierLuxury": "Luxus",
+      "typeHotel": "Hotel",
+      "typeBoutique": "Boutique-Hotel",
+      "typeAparthotel": "Aparthotel",
+      "typeHostel": "Hostel",
+      "typeGuesthouse": "Pension"
+    },
+    "sk": {
+      "pageDisclosure": "Tento sprievodca obsahuje partnerské odkazy",
+      "disclosure": "Partnerské odkazy:",
+      "disclosureLink": "ako zarábame (EN)",
+      "moreArea": "Ďalšie ubytovanie: {x}",
+      "moreNear": "Ďalšie ubytovanie {x}",
+      "tierBudget": "lacné",
+      "tierMid": "stredná trieda",
+      "tierUpper": "vyššia trieda",
+      "tierLuxury": "luxus",
+      "typeHotel": "Hotel",
+      "typeBoutique": "Butikový hotel",
+      "typeAparthotel": "Aparthotel",
+      "typeHostel": "Hostel",
+      "typeGuesthouse": "Penzión"
+    },
+    "cs": {
+      "pageDisclosure": "Tento průvodce obsahuje partnerské odkazy",
+      "disclosure": "Partnerské odkazy:",
+      "disclosureLink": "jak se financujeme (EN)",
+      "moreArea": "Další ubytování: {x}",
+      "moreNear": "Další ubytování {x}",
+      "tierBudget": "levné",
+      "tierMid": "střední třída",
+      "tierUpper": "vyšší třída",
+      "tierLuxury": "luxus",
+      "typeHotel": "Hotel",
+      "typeBoutique": "Butikový hotel",
+      "typeAparthotel": "Aparthotel",
+      "typeHostel": "Hostel",
+      "typeGuesthouse": "Penzion"
+    }
+  },
+  "near": {
+    "airport": {
+      "url": "https://www.booking.com/airport/rs/beg.html",
+      "label": "near the airport",
+      "tr": {
+        "de": {
+          "label": "in Flughafennähe"
+        }
+      }
+    },
+    "belgrade-flex": {
+      "search": "Belgrade",
+      "nflt": "fc=2",
+      "label": "in Belgrade with free cancellation",
+      "tr": {
+        "de": {
+          "label": "in Belgrad mit kostenloser Stornierung"
+        }
+      }
+    },
+    "knez-mihailova": {
+      "url": "https://www.booking.com/landmark/rs/knez-mihailova-street.html",
+      "label": "near Knez Mihailova"
+    },
+    "kalemegdan": {
+      "url": "https://www.booking.com/landmark/rs/kalemegdan.html",
+      "label": "near Kalemegdan"
+    },
+    "st-sava": {
+      "url": "https://www.booking.com/landmark/rs/st-sava-temple.html",
+      "label": "near the Temple of Saint Sava"
+    },
+    "tesla-museum": {
+      "url": "https://www.booking.com/landmark/rs/nikola-tesla-museum.html",
+      "label": "near the Nikola Tesla Museum"
+    },
+    "usce": {
+      "url": "https://www.booking.com/landmark/rs/usce-shopping-center.html",
+      "label": "near Ušće"
+    },
+    "gardos": {
+      "url": "https://www.booking.com/landmark/rs/gardos-tower.html",
+      "label": "near Gardoš, Zemun"
+    }
+  },
+  "hotels": {
+    "capital": {
+      "name": "Capital Hotel Garni",
+      "area": "stari-grad",
+      "tier": "budget",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/capital.html",
+      "why": "In the pedestrian zone on Cara Lazara, a few minutes' walk from Knez Mihailova and Kalemegdan.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Fußgängerzone in der Cara Lazara, wenige Gehminuten von der Knez Mihailova und dem Kalemegdan."
+        }
+      }
+    },
+    "centar-no1": {
+      "name": "Hotel Centar No.1",
+      "area": "stari-grad",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/centar-no1.html",
+      "why": "On Kolarčeva, at the Republic Square end of Knez Mihailova.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Kolarčeva, am Ende der Knez Mihailova beim Platz der Republik."
+        }
+      }
+    },
+    "mama-shelter": {
+      "name": "Mama Shelter Belgrade",
+      "area": "stari-grad",
+      "tier": "upper",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/mama-shelter-belgrade.html",
+      "why": "On Knez Mihailova itself, at the end nearest Kalemegdan fortress.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "Direkt an der Knez Mihailova, am Ende nahe der Festung Kalemegdan."
+        }
+      }
+    },
+    "square-nine": {
+      "name": "Square Nine Hotel",
+      "area": "stari-grad",
+      "tier": "luxury",
+      "type": "boutique",
+      "booking": "https://www.booking.com/hotel/rs/square-nine-belgrade.html",
+      "why": "On Studentski trg, between Knez Mihailova and Dorćol.",
+      "verified": "2026-11-16"
+    },
+    "moskva": {
+      "name": "Hotel Moskva",
+      "area": "stari-grad",
+      "tier": "upper",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/moskva.html",
+      "why": "The landmark hotel on Terazije, a few minutes' walk from Republic Square.",
+      "verified": "2026-11-16"
+    },
+    "indigo": {
+      "name": "Hotel Indigo Belgrade",
+      "area": "stari-grad",
+      "tier": "upper",
+      "type": "boutique",
+      "booking": "https://www.booking.com/hotel/rs/indigo-belgrade-an-ihg.html",
+      "why": "On Čika Ljubina, between Republic Square and Studentski trg.",
+      "verified": "2026-11-16"
+    },
+    "belgrade-inn": {
+      "name": "Belgrade Inn Garni Hotel",
+      "area": "dorcol",
+      "tier": "budget",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/budget.html",
+      "why": "On Francuska, between Skadarlija and Dorćol.",
+      "verified": "2026-11-16"
+    },
+    "nevski": {
+      "name": "Garni Hotel Nevski",
+      "area": "dorcol",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/nevski.html",
+      "why": "On Venizelosova in lower Dorćol, the quieter side toward the Danube.",
+      "verified": "2026-11-16"
+    },
+    "iva-old-town": {
+      "name": "Iva Old Town",
+      "area": "dorcol",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/iva-old-town.html",
+      "why": "On Pančićeva in upper Dorćol, a few blocks from Strahinjića Bana.",
+      "verified": "2026-11-16"
+    },
+    "jump-inn": {
+      "name": "Jump INN Hotel Belgrade",
+      "area": "savamala",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/jump-inn-belgrade.html",
+      "why": "In Savamala, a short walk from the Sava riverfront.",
+      "verified": "2026-11-16"
+    },
+    "bristol": {
+      "name": "The Bristol Belgrade",
+      "area": "savamala",
+      "tier": "luxury",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/sunset-beograd4.html",
+      "why": "The restored historic Bristol building on Karađorđeva, in Savamala.",
+      "verified": "2026-11-16"
+    },
+    "st-regis": {
+      "name": "The St. Regis Belgrade",
+      "area": "savamala",
+      "tier": "luxury",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/the-st-regis-belgrade.html",
+      "why": "At Belgrade Waterfront on the Sava, with river-view rooms.",
+      "verified": "2026-11-16"
+    },
+    "karavan": {
+      "name": "Hostel Karavan Inn",
+      "area": "vracar",
+      "tier": "budget",
+      "type": "hostel",
+      "booking": "https://www.booking.com/hotel/rs/hostel-karavan-inn.html",
+      "why": "On Bulevar kralja Aleksandra, near Tašmajdan park.",
+      "verified": "2026-11-16"
+    },
+    "tesla-smart": {
+      "name": "Hotel Tesla – Smart Stay",
+      "area": "vracar",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/tesla-smart-stay.html",
+      "why": "On Šumatovačka, about 700 m from the Temple of Saint Sava; on-site parking.",
+      "verified": "2026-11-16"
+    },
+    "saint-ten": {
+      "name": "Saint Ten Boutique Hotel",
+      "area": "vracar",
+      "tier": "luxury",
+      "type": "boutique",
+      "booking": "https://www.booking.com/hotel/rs/saint-ten.html",
+      "why": "On Svetog Save, a short walk from the Temple of Saint Sava.",
+      "verified": "2026-11-16"
+    },
+    "hilton": {
+      "name": "Hilton Belgrade",
+      "area": "vracar",
+      "tier": "upper",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/hilton-belgrade.html",
+      "why": "On Kralja Milana, walking distance from Slavija and the Temple of Saint Sava.",
+      "verified": "2026-11-16"
+    },
+    "old-mill": {
+      "name": "Radisson Collection Hotel, Old Mill",
+      "area": "savski-venac",
+      "tier": "upper",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/radisson-blu-old-mill-belgrade.html",
+      "why": "A converted mill on Bulevar vojvode Mišića, near the Belgrade Fair and the Sava.",
+      "verified": "2026-11-16"
+    },
+    "mint": {
+      "name": "Garni Hotel Mint",
+      "area": "savski-venac",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/mint.html",
+      "why": "Residential Savski Venac near the Belgrade Fair: quieter, a ride from the old town.",
+      "verified": "2026-11-16"
+    },
+    "hyatt": {
+      "name": "Hyatt Regency Belgrade",
+      "area": "new-belgrade",
+      "tier": "upper",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/hyatt-regency-belgrade.html",
+      "why": "Next to Sava Centar in the New Belgrade business district.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "Neben dem Sava Centar im Geschäftsviertel von Novi Beograd."
+        }
+      }
+    },
+    "crowne": {
+      "name": "Crowne Plaza Belgrade",
+      "area": "new-belgrade",
+      "tier": "upper",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/crowne-plaza-belgrade-belgrade.html",
+      "why": "On Vladimira Popovića, a short walk from Sava Centar.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Vladimira Popovića, wenige Gehminuten vom Sava Centar."
+        }
+      }
+    },
+    "zijin": {
+      "name": "Zijin Hotel Belgrade (ex-Falkensteiner)",
+      "area": "new-belgrade",
+      "tier": "upper",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/falkenstainer-novi-beograd.html",
+      "why": "On Bulevar Mihajla Pupina near Ušće, by the bridges to the old town.",
+      "verified": "2026-11-16"
+    },
+    "in-hotel": {
+      "name": "IN Hotel Beograd",
+      "area": "new-belgrade",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/in-beograd.html",
+      "why": "A business hotel in central New Belgrade, about 5 minutes' walk from the Arena.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "Businesshotel im Zentrum von Novi Beograd, etwa 5 Gehminuten von der Arena."
+        }
+      }
+    },
+    "nobel-west": {
+      "name": "Nobel West Hotel",
+      "area": "new-belgrade",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/nobel-west.html",
+      "why": "On Tošin bunar in western New Belgrade, on the Expo side of the district.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Tošin bunar im Westen von Novi Beograd, auf der Expo-Seite des Viertels."
+        }
+      }
+    },
+    "mar": {
+      "name": "Hotel Mar Garni",
+      "area": "new-belgrade",
+      "tier": "budget",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/mar.html",
+      "why": "On Surčinska, the road from New Belgrade toward Surčin; about 5 km from the airport.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Surčinska, der Straße von Novi Beograd Richtung Surčin; rund 5 km vom Flughafen."
+        }
+      }
+    },
+    "kame": {
+      "name": "KAME Hotel Belgrade",
+      "area": "surcin",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/kame-belgrade-bei-er-ge-lai-de-kai-mei-jiu-dian.html",
+      "why": "In Ledine (Surčin municipality), about 3 km from the airport.",
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In Ledine (Gemeinde Surčin), rund 3 km vom Flughafen."
+        }
+      }
+    },
+    "d10": {
+      "name": "Garni Hotel D10",
+      "area": "zemun",
+      "tier": "mid",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/d10.html",
+      "why": "On Dunavska in old Zemun, a block from the Danube quay.",
+      "verified": "2026-11-16"
+    },
+    "lora": {
+      "name": "Hotel LoRa",
+      "area": "zemun",
+      "tier": "upper",
+      "type": "hotel",
+      "booking": "https://www.booking.com/hotel/rs/lora.html",
+      "why": "In the old town of Zemun, a walk from Gardoš and the quay.",
+      "verified": "2026-11-16"
+    }
+  },
+  "picks": {
+    "stari-grad": {
+      "title": "Places to stay in Stari Grad",
+      "area": "stari-grad",
+      "hotels": [
+        "capital",
+        "centar-no1",
+        "mama-shelter"
+      ],
+      "tr": {
+        "de": {
+          "title": "Unterkünfte in Stari Grad"
+        }
+      }
+    },
+    "stari-grad-upscale": {
+      "title": "Central hotels for a business trip",
+      "area": "stari-grad",
+      "hotels": [
+        "moskva",
+        "indigo",
+        "square-nine"
+      ]
+    },
+    "dorcol": {
+      "title": "Places to stay in Dorćol",
+      "area": "dorcol",
+      "hotels": [
+        "belgrade-inn",
+        "iva-old-town",
+        "nevski"
+      ]
+    },
+    "savamala": {
+      "title": "Places to stay in Savamala and Belgrade Waterfront",
+      "area": "savamala",
+      "hotels": [
+        "jump-inn",
+        "bristol",
+        "st-regis"
+      ]
+    },
+    "vracar": {
+      "title": "Places to stay in Vračar",
+      "area": "vracar",
+      "hotels": [
+        "karavan",
+        "tesla-smart",
+        "saint-ten"
+      ],
+      "tr": {
+        "de": {
+          "title": "Unterkünfte in Vračar"
+        }
+      }
+    },
+    "vracar-family": {
+      "title": "Places to stay in Vračar",
+      "area": "vracar",
+      "hotels": [
+        "tesla-smart",
+        "hilton",
+        "saint-ten"
+      ]
+    },
+    "savski-venac": {
+      "title": "Places to stay in Savski Venac",
+      "area": "savski-venac",
+      "hotels": [
+        "mint",
+        "old-mill",
+        "hilton"
+      ]
+    },
+    "new-belgrade": {
+      "title": "Places to stay in New Belgrade",
+      "area": "new-belgrade",
+      "hotels": [
+        "in-hotel",
+        "hyatt",
+        "crowne"
+      ],
+      "tr": {
+        "de": {
+          "title": "Unterkünfte in Novi Beograd"
+        }
+      }
+    },
+    "new-belgrade-business": {
+      "title": "Business hotels in New Belgrade",
+      "area": "new-belgrade",
+      "hotels": [
+        "hyatt",
+        "crowne",
+        "zijin",
+        "in-hotel"
+      ]
+    },
+    "expo": {
+      "title": "Hotels on the Expo side of the city",
+      "near": "airport",
+      "hotels": [
+        "nobel-west",
+        "mar",
+        "kame"
+      ],
+      "tr": {
+        "de": {
+          "title": "Hotels auf der Expo-Seite der Stadt"
+        }
+      }
+    },
+    "zemun": {
+      "title": "Places to stay in Zemun",
+      "area": "zemun",
+      "hotels": [
+        "d10",
+        "lora"
+      ]
+    }
+  }
+}

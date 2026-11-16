@@ -386,6 +386,55 @@ a {
   color: var(--ink-soft);
   margin: var(--s3) 0 0;
 }
+/* --- c-affpick : "places to stay" card inside an article section (2026-11-16).
+   Emitted by lib/aff-inline.ts for an `aff:pick/<key>` line. Quieter than a
+   callout: hairline rule on the left, no fill, names as links, one factual
+   line each. Sits where the text recommends an area, not at the page end. --- */
+.c-affpick {
+  border-left: 3px solid var(--accent);
+  padding: var(--s1) 0 var(--s1) var(--s4);
+  margin: var(--s5) 0;
+}
+.c-article .c-affpick__title {
+  font-family: var(--display);
+  font-size: var(--t-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 var(--s3);
+}
+.c-article .c-affpick__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s3);
+}
+.c-article .c-affpick__list li { margin: 0; }
+.c-affpick__name {
+  font-family: var(--display);
+  font-size: var(--t-small);
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+.c-affpick__meta {
+  font-family: var(--display);
+  font-size: var(--t-eyebrow);
+  color: var(--ink-soft);
+  margin-left: var(--s2);
+}
+.c-affpick__why {
+  display: block;
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+}
+.c-article .c-affpick__foot {
+  font-size: var(--t-eyebrow);
+  color: var(--ink-soft);
+  margin: var(--s3) 0 0;
+}
+.c-affpick__foot a { color: var(--accent-ink); }
 /* Homepage "Good to know" band */
 .c-gtk {
   list-style: none;

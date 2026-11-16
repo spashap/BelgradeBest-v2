@@ -80,6 +80,8 @@ Central comes with central-city friction:
 
 A fair way to put it: Stari Grad is the safest default for a first visit, with the best walking access to the classic sights and the usual central trade-offs of noise, parking and smaller or older apartments.
 
+[Places to stay](aff:pick/stari-grad)
+
 ## Zemun — the calmer, romantic Danube base
 
 Zemun is the best Belgrade base for a slower, Danube-side stay. It kept its 18th- and 19th-century fabric largely intact — low Austro-Hungarian and Balkan-style houses, modest churches, narrow old streets and a riverside quay — and reads as an older, quieter town stitched onto the modern city. The pleasures here are atmospheric rather than checklist: wandering the old town, climbing **Gardoš Hill** for the Danube view from the Millennium Tower, and ending on the **quay** over a long meal at one of its fish restaurants.
@@ -98,6 +100,8 @@ That makes Zemun a natural fit for couples, repeat visitors, slow travellers and
 - **Night noise can still exist** near the quay restaurants, and the steep, narrow streets up to Gardoš are worth checking if you have heavy luggage or limited mobility.
 
 A fair way to put it: Zemun is the best base for a romantic, atmospheric river stay, but not the most efficient first-time sightseeing location.
+
+[Places to stay](aff:pick/zemun)
 
 ## How far is Zemun, really — and how do you get to the centre?
 

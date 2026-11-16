@@ -66,6 +66,8 @@ The trade-offs are exactly what you'd expect from a nightlife zone:
 
 Modern serviced apartments around the Waterfront can be quieter and better-equipped than the older lower-Savamala stock — useful if you want the river access without the rawest edge. Either way, pick a unit set back from the immediate club frontage.
 
+[Places to stay](aff:pick/savamala)
+
 ## Dorćol: Strahinjića Bana and Cetinjska
 
 **Dorćol** is one of Belgrade's oldest neighbourhoods, immediately north and north-east of Republic Square, sloping down toward the Danube. It is the café, bar and restaurant belt favoured by younger residents and expats — central, but more lived-in than the pure tourist core. **Strahinjića Bana** is its best-known nightlife street, and the **Cetinjska** courtyard pocket (on the Skadarlija edge) is a cluster of bars in a converted old brewery yard.
@@ -78,6 +80,8 @@ Dorćol works well as a nightlife base because it balances access with a real ne
 
 Dorćol is the move if you want the bars close but a slightly more local, less touristy base than Old Town — provided you choose the exact street with care, because the same neighbourhood can be charmingly local or genuinely loud one block apart.
 
+[Places to stay](aff:pick/dorcol)
+
 ## Stari Grad and Skadarlija: the old-town bohemian base
 
 **Stari Grad** is the historic core — Republic Square, [Knez Mihailova](/glossary/knez-mihailova), [Kalemegdan](/glossary/kalemegdan) — and the most central, walkable place to stay in Belgrade generally. For nightlife specifically, its draw is **Skadarlija**: the cobblestoned bohemian quarter around Skadarska Street, full of traditional kafanas and live-music venues, a 5–8 minute walk from Republic Square. The adjoining **Cetinjska** pocket bridges it to Dorćol.
@@ -89,6 +93,8 @@ Staying here means everything is on foot — sights by day, bars and kafanas by 
 - **Parking is difficult** and regulated; don't base here with a car unless your accommodation guarantees a space.
 
 Again, the fix is position: stay in a quieter Stari Grad street a few minutes off Skadarlija rather than on it, and you get the old-town atmosphere and a quiet bed.
+
+[Places to stay](aff:pick/stari-grad)
 
 ## Savamala vs Dorćol for nightlife — how to choose
 

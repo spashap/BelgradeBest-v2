@@ -1,12 +1,25 @@
-Link CJ earnings to the admin via CJ_TOKEN (company ID 7995454)
+Put affiliate links where the text recommends: hotel cards, in-text links, fixed Booking searches
 
-- lib/admin/cj.ts reads CJ_TOKEN (the owner's .env name) as well as
-  CJ_PERSONAL_ACCESS_TOKEN, and defaults to the CJ company ID 7995454
-  (LitoCreative). 7672064 is the user ID from member URLs; the Commission
-  API rejects it ("No authorized publisher ids"). Token verified against
-  the API: 0 commissions in the last 31 days (links went live today).
-- .gitignore: Vercel CLI link entries (.env*.local).
-- Admin hints (/admin/affiliates, /admin/analytics) and .env.example now
-  name CJ_TOKEN; affiliates.json records the company and user IDs.
+- New in-text placements (lib/aff-inline.ts): articles carry references only,
+  [phrase](aff:hotel|area|near|go/<key>) and a card line (aff:pick/<key>),
+  resolved at build in ArticleLayout from src/data/hotel-picks.json; an
+  unknown key fails the build; a partner switched off renders plain text.
+- 27 named hotels, each opened live on Booking.com 2026-11-16 (location fit,
+  score ~8.5+ over hundreds of reviews; Mona Plaza dropped for a renovation
+  notice), grouped into 11 cards (c-affpick in globals.css).
+- 21 articles: 32 cards at the end of the sections that recommend an area,
+  22 in-text links on existing booking phrases (Expo guide/tickets/
+  getting-there/location/stay EN+DE, airport, taxis, best time, stay leg).
+  End-of-page boxes now show only partners the text has not linked.
+- Fixed broken Booking targets: "Dorćol", "Savamala" and "New Belgrade"
+  searches returned 1, 1 and 8 properties; now Strahinjića Bana landmark,
+  Savski Venac district and "Novi Beograd" (488). Landing-page URLs supported.
+- CJ sub-IDs name the page: bb-[lang-]<page initials>-<item>; the admin
+  Money table maps them back and counts in-text links per partner.
+- Disclosure in the date line of pages with in-text links; /how-we-make-money
+  explains how hotels are chosen; llms-full.txt strips the references.
+- Expo stay page (EN+DE): Swissôtel Belgrade EXPO (Q1 2027) and
+  InterContinental facts. Expo hub: "Stay" row to the stay page.
+- growth/BELGRADEBEST_AFFILIATE_STRATEGY.md, CLAUDE.md, BB-CHG-0044.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

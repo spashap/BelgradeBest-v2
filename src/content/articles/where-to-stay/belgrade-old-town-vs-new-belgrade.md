@@ -77,6 +77,8 @@ The same density that makes the Old Town walkable also creates its drawbacks:
 
 The Old Town is usually the best fit for a first Belgrade visit: the best walking access to the classic sights, with the usual central-city trade-offs of noise, parking pain and smaller, older apartments.
 
+[Places to stay](aff:pick/stari-grad)
+
 ## Why stay in New Belgrade (Novi Beograd)?
 
 New Belgrade is the practical, modern side of the city. It is usually weaker for old-world atmosphere and stronger for logistics. It tends to be the better fit for:
@@ -96,6 +98,8 @@ Useful micro-areas include the business and hotel blocks near the major boulevar
 - **The exact block matters a lot.** Some areas are lively and convenient; others can feel empty after office hours, so check the specific address and what is nearby.
 
 New Belgrade is not the most romantic base, but it is one of the most practical: modern hotels, larger apartments, easier parking, business access and better positioning for the airport and the Expo side of the city.
+
+[Places to stay](aff:pick/new-belgrade)
 
 ## How do they compare side by side?
 

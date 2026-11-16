@@ -98,14 +98,14 @@ The per-day numbers are worth reading carefully. The Participants FAQ models rou
 
 This is the part to act on now. Analyses note that hosting over four million visitors in three months would be close to **three times Belgrade's normal annual tourist volume** — a comparison worth treating carefully, since Expo *visits* include residents, day-trippers and repeat entries, while annual tourist figures count arrivals — against a city with roughly **8,000 hotel rooms** in operation (around 116 hotel facilities), with a reported pipeline of perhaps eight to fifteen new hotels and ~2,000 rooms by 2027 and a 378-room hotel planned at the Expo site itself. The Serbian government has tied over €80 million in hotel-construction subsidies to Expo preparations. Even so, the honest read is a **tight accommodation market** that will lean on private rentals and regional capacity — which is exactly why **accommodation is the thing to book first**, ahead of tickets (which aren't on sale) and even flights.
 
-This hub does not rank hotels or quote rates — that belongs on the dedicated page. The short version: the historic core keeps you in the city you presumably also came to see, while the New Belgrade and Surčin side sits closer to the Expo site, trading atmosphere for a shorter commute. For the area-by-area breakdown and how to choose, see [where to stay in Belgrade](/where-to-stay).
+This hub does not rank hotels or quote rates — that belongs on the dedicated page. The short version: the historic core keeps you in the city you presumably also came to see, while [the New Belgrade and Surčin side](aff:area/new-belgrade) sits closer to the Expo site, trading atmosphere for a shorter commute. For the area-by-area breakdown and how to choose, see [where to stay in Belgrade](/where-to-stay).
 
 ## A simple planning sequence
 
 If you want one ordered checklist out of all the above:
 
-1. **Lock accommodation early** — beds are the bottleneck; decide central-city versus near-the-site and book. See [where to stay](/where-to-stay).
-2. **Book flights** once your dates and base are set.
+1. **[Lock accommodation early](aff:near/belgrade-flex)** — beds are the bottleneck; decide central-city versus near-the-site and book. See [where to stay](/where-to-stay).
+2. **[Book flights](aff:go/air-serbia)** once your dates and base are set.
 3. **Sort visa and money** — check your own visa status and Serbia's 24-hour registration rule, and plan to pay in dinars. See [plan your trip](/plan-your-trip).
 4. **Watch for tickets** — nothing to buy yet; we update the [tickets](/expo-2027/tickets) page when sales open.
 5. **Plan the days nearer the time** — once the daily programme and any National Days schedule are published, slot them in via the [programme](/expo-2027/programme) page, and avoid opening week and weekends if you want it calmer.

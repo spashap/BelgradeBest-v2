@@ -104,8 +104,8 @@ Dieser Hub bewertet keine Hotels und nennt keine Preise – das gehört auf die 
 
 Wenn Sie aus alldem eine geordnete Checkliste möchten:
 
-1. **Sichern Sie sich früh eine Unterkunft** – Betten sind der Engpass; entscheiden Sie sich zwischen Innenstadt und Gelände-Nähe und buchen Sie. Siehe [Unterkunft (EN)](/where-to-stay).
-2. **Buchen Sie Flüge**, sobald Ihre Reisedaten und Ihr Standort feststehen.
+1. **[Sichern Sie sich früh eine Unterkunft](aff:near/belgrade-flex)** – Betten sind der Engpass; entscheiden Sie sich zwischen Innenstadt und Gelände-Nähe und buchen Sie. Siehe [Unterkunft (EN)](/where-to-stay).
+2. **[Buchen Sie Flüge](aff:go/air-serbia)**, sobald Ihre Reisedaten und Ihr Standort feststehen.
 3. **Klären Sie Visum und Geld** – prüfen Sie Ihren eigenen Visumsstatus und Serbiens 24-Stunden-Registrierungsregel, und planen Sie, in Dinar zu bezahlen. Siehe [Reise planen (EN)](/plan-your-trip).
 4. **Behalten Sie die Tickets im Blick** – noch nichts zu kaufen; wir aktualisieren die Seite [Tickets](/de/expo-2027/tickets), sobald der Verkauf startet.
 5. **Planen Sie die Tage näher am Termin** – sobald das Tagesprogramm und ein etwaiger Zeitplan der National Days veröffentlicht sind, ordnen Sie sie über die Seite [Programm](/de/expo-2027/programme) ein, und meiden Sie Eröffnungswoche und Wochenenden, wenn Sie es ruhiger möchten.

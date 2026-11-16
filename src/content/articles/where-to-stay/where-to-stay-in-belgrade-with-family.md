@@ -53,6 +53,8 @@ For families, the appeal is the everyday-life feel: normal supermarkets and phar
 
 The trade-offs are honest: Vračar is central residential demand, so it can be on the pricier side; it has some hills and busy roads; and street parking can be tight, though a building with its own garage usually makes that easier. If you find a quiet street and a well-reviewed, lift-served apartment or hotel, it is one of the strongest family choices in the city.
 
+[Places to stay](aff:pick/vracar-family)
+
 ## Why New Belgrade suits families
 
 New Belgrade is the practical, modern side of the city, and it is often the easiest area for families who value space and logistics over old-town charm. Apartments here tend to be larger and newer than in the historic core, and newer high-rise complexes are usually better candidates for lifts, garages and step-free access — exactly what you want with a stroller, a cot or a lot of luggage.
@@ -61,11 +63,15 @@ Other practical wins: parking is usually easier than in Stari Grad; shopping cen
 
 The trade-offs: less historic atmosphere, and walking to the Old Town is usually impractical from many blocks, so plan on transport or a car. The exact block also matters — some are lively and convenient, others feel empty after office hours, and blocks closer to Zemun tend to be more residential. Look at the Sava-riverfront and Ušće areas if you want river access and park space alongside the modern convenience.
 
+[Places to stay](aff:pick/new-belgrade)
+
 ## Why a quieter Zemun suits families
 
 Zemun is the best base for a slower, Danube-side family stay. It feels like its own town: the old quarter climbs toward the Millennium Tower on Gardoš Hill, and the Danube quay has a long promenade and riverside restaurants. In its calmer parts, it is more relaxed than the centre — good for families who do not need to be in the middle of the sightseeing core every day.
 
 A few cautions specific to Zemun. The old Gardoš streets are atmospheric but hilly and narrow, which is hard with a stroller — for family comfort, the flatter residential blocks and the area closer to New Belgrade are usually easier. Zemun is also farther from Republic Square and the main Old Town sights, so factor in transport or taxi time if you plan daily central sightseeing, and remember that some quay restaurants can still be lively at night. The residential blocks toward New Belgrade are also handy for the airport.
+
+[Places to stay](aff:pick/zemun)
 
 ## What to avoid when staying with kids
 

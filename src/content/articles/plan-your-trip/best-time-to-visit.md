@@ -102,7 +102,7 @@ Expo 2027 Belgrade runs **15 May–15 August 2027**. That overlaps almost exactl
 
 Authorities expect several million visitors during the Expo window, and hotel sources anticipate strong accommodation demand and upward price pressure, with new hotel capacity being added ahead of 2027. In plain terms: expect heat, crowding and elevated prices in summer 2027. The direction of this is clear; the exact magnitudes are not something anyone can pin down yet, so treat visitor and price figures as estimates rather than settled counts.
 
-A couple of practical responses follow from that. Booking early is sensible, and considering a nearby city such as Novi Sad as a base may help with both availability and cost. For the full picture of the event itself, see the [complete Expo 2027 guide](/expo-2027/guide).
+A couple of practical responses follow from that. [Booking early](aff:near/belgrade-flex) is sensible, and considering a nearby city such as Novi Sad as a base may help with both availability and cost. For the full picture of the event itself, see the [complete Expo 2027 guide](/expo-2027/guide).
 
 ## Visiting in 2027 — but not for the Expo?
 

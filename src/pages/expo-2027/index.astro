@@ -105,6 +105,9 @@ const tripLegs = ["where-to-stay", "food-and-nightlife", "visit-belgrade", "plan
 const gtk = [
   { label: "Dates", text: `${fmtLong(EXPO.startDate)} – ${fmtLong(EXPO.endDate)} — 93 days`, href: `/${LEG}/guide` },
   { label: "Where", text: `${EXPO.venue}, western Belgrade — ~5 km from the airport`, href: `/${LEG}/getting-there` },
+  // The hub is the site's most-visited page but sent no one to the stay page,
+  // where the hotel cards are (2026-11-16). An internal link, not an affiliate one.
+  { label: "Stay", text: "New Belgrade or the airport side for the site, the old town for the city — book early and refundable", href: `/${LEG}/where-to-stay-for-expo` },
   { label: "Tickets", text: "Still not on sale — the planned 15 Sep 2026 start passed, no prices, no new date; beds are the bottleneck anyway", href: `/${LEG}/tickets` },
   { label: "Theme", text: EXPO.theme, href: `/${LEG}/what-is-it` },
 ];

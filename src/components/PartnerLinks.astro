@@ -13,10 +13,12 @@ import { travelLinks, travelChrome, clickEvent } from "../lib/affiliates";
 interface Props {
   targets?: string[];
   lang?: string;
+  // Article slug: goes into the CJ sub-ID so earnings trace to the page.
+  page?: string;
 }
-const { targets = [], lang = "en" } = Astro.props;
+const { targets = [], lang = "en", page } = Astro.props;
 const chrome = travelChrome(lang);
-const items = travelLinks(targets, lang);
+const items = travelLinks(targets, lang, page);
 ---
 {
   items.length > 0 ? (
