@@ -58,3 +58,9 @@
   - The partner terms are in the strategy doc. **Booking credits only bookings made within 1 day of the click, and pays only after the stay.** Welcome Pickups pays 7% and Air Serbia 1%, both with 45 days.
   - Consequence for step 3: the on-sale kit also carries a line to the Expo stay page, because on-sale day is when readers fix their dates and can book a bed the same day.
   - Consequence for step 7: until summer 2027 the scorecard reads pending CJ commissions, not paid ones, because Expo stays pay only after they happen.
+- **Step 3, kit ready 16 Nov.** `growth/BELGRADEBEST_TICKET_ONSALE_KIT.md` with templates in `growth/ticket-kit/`.
+  - Ready to fill: replacement tickets pages in English, German, Slovak and Czech; hub rows and FAQs; pavilion tiles; Facebook posts; a list of every other page that states the ticket status; and the Bing URL list.
+  - Each new page links to the stay page after "where to buy", with one labelled in-text link and the labelled Expo hotel card.
+  - The build now refuses any page that still has an unfilled blank.
+  - Tickets were still not on sale on 16 Nov (official programme page: "Tickets available soon").
+  - Found while sweeping: two scarcity leftovers from step 1, now fixed. The Expo guide's "treat beds as the scarce resource" (EN and DE), and the German stay page's "knapp werden", which now matches the English "under pressure".

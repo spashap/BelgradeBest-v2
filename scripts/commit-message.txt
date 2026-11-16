@@ -1,21 +1,23 @@
-Affiliate tracking verified end to end; CJ partner terms written down
+Ticket on-sale kit (EN/DE/SK/CS), build guard for unfilled blanks, last scarcity leftovers removed
 
-Step 2 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md. Docs only, no
-site change.
+Step 3 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md. Tickets are still
+not on sale (official programme page, 16 Nov: "Tickets available soon").
 
-- Test click on the Hyatt card (Expo stay page, ?bb_test=1, 16 Nov 09:51
-  UTC): GA4 realtime recorded aff_click_booking within a minute; the CJ
-  redirect landed on Booking.com with our link ID and the Hyatt first.
-  CJ shows clicks by link and day, a day late; sub-IDs only on commissions.
-- Partner terms (strategy doc, new "Partner terms" section): Booking CEE
-  4%, 1-day referral period, paid only after the stay (cancellations pay
-  nothing), monthly batches; Welcome Pickups 7%, 45 days, paid when the
-  ride runs; Air Serbia 1%, 45 days. Rules that bind us: no paid ads on
-  Booking or hotel names, no Welcome Pickups links in groups we don't own.
-- Plan: marked approved; Progress section; step 3 kit now also links the
-  Expo stay page (on-sale day is when readers fix dates and can book the
-  same day).
-- Our own clicks to exclude from baselines (15 Nov x6, 16 Nov x1) are
-  logged in BB-CHG-0048.
+- Kit: growth/BELGRADEBEST_TICKET_ONSALE_KIT.md (how to tell it's real,
+  scenario A announced / B on sale, the order of work on the day, every
+  other page that states the ticket status, measurement) and
+  growth/ticket-kit/: replacement tickets pages in four languages with
+  {{BLANKS}} and ⟦CHECK⟧ defaults, hub/tile/Facebook strings, and the
+  Bing URL list. Translations by Sonnet, reviewed by Fable.
+- The new pages send readers to the stay page right after "where to buy"
+  (on-sale day is when readers fix dates; Booking credits same-day
+  bookings only), with one labelled in-text link and the labelled Expo
+  hotel card. No affiliate link on tickets.
+- Build: content-integrity now fails on any {{UPPER_CASE}} or ⟦…⟧ marker
+  in src/content, so a half-filled template can't go live.
+- Trust leftovers from step 1: the Expo guide's "treat beds as the scarce
+  resource" (EN/DE) and the German stay page's "knapp werden" now match
+  the "no predicted shortage" wording.
+- BB-CHG-0049.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

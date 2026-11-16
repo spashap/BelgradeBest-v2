@@ -7,7 +7,7 @@ description: "Expo 2027 Belgrade visitor guide: how many days you need, what to 
 lede: "Belgrade hosts a Specialised Expo from 15 May to 15 August 2027 at Surčin. This is the visitor hub — how many days to plan, what to book first, when it's busiest, what's confirmed versus still unknown, and where to go next for tickets, getting there, and where to stay."
 heroLabel: "Expo 2027 complete guide / hero"
 heroAlt: "Expo 2027 and the Belgrade skyline at golden hour — the complete visitor guide"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-16"
 order: 2
 visible: true
 intent: "both"
@@ -21,7 +21,7 @@ linksTo:
 faqs:
   - answer: "Independent guidance suggests 2–3 days for the Expo itself, or 4–5 days if you want to combine it with Belgrade sightseeing. One day lets you sample the site; a second or third lets you go deep on pavilions, catch a National Day, and not rush. Add the extra days for the city — the fortress, the rivers, the nightlife — which outlasts the event."
     question: "How many days do I need for Expo 2027?"
-  - answer: "Book your accommodation first. Projections run from four million visits to the six million the organisers say they are preparing for across three months, against roughly 8,000 hotel rooms. Those are visits, not overnight guests — they include residents, day-trippers and repeat entries on three-day tickets — so nobody can tell you the exact shortfall. But a fixed room stock facing a large and rising projection is reason enough to treat beds as the scarce resource, central, New Belgrade, Surčin or regional. Book flights next; tickets cannot be booked yet (the official site still says \"available soon\"), so there is nothing to reserve there. See our where-to-stay guide for areas and our tickets page for the latest."
+  - answer: "Book your accommodation first, once your dates are firm. Projections run from four million visits to the six million the organisers say they are preparing for across three months, against roughly 8,000 hotel rooms. Those are visits, not overnight guests — they include residents, day-trippers and repeat entries on three-day tickets — so the figures do not predict a shortage. Rooms can, however, be booked now on refundable rates, so a booking made once your dates are firm costs little to change, whether central, in New Belgrade, in Surčin or regional. Book flights next; tickets cannot be booked yet (the official site still says \"available soon\"), so there is nothing to reserve there. See our where-to-stay guide for areas and our tickets page for the latest."
     question: "What should I book first for Expo 2027?"
   - answer: "Expect opening week (from 15 May 2027) and weekends across the 93-day run to be the busiest, with National Days drawing extra crowds for the host country. The official 4.1-million model averages about 44,652 visitors a day with peak days up to roughly 89,304; the newer six-million forecast would imply more. For a calmer visit, target a midweek day outside opening week; for the most atmosphere, time it to a National Day you care about. Exact opening hours and any time-slot system are not yet announced."
     question: "When is the busiest time to visit Expo 2027?"

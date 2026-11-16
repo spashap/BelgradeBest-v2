@@ -106,7 +106,7 @@ Widerstehen Sie der Versuchung, das eine durch das andere zu teilen. Es handelt 
 
 Was das nahelegt, ohne es vorherzusagen:
 
-- **Zimmer in der Nähe von Surčin und in Novi Beograd dürften am ehesten knapp werden**, weil Besucher in Geländenähe dort suchen. Preis- oder Auslastungsprognosen hat niemand veröffentlicht; eine stornierbare Buchung ist daher eine Absicherung, keine Wette.
+- **Zimmer in der Nähe von Surčin und in Novi Beograd dürften am ehesten unter Druck geraten**, weil Besucher in Geländenähe dort suchen. Preis- oder Auslastungsprognosen hat niemand veröffentlicht; eine stornierbare Buchung ist daher eine Absicherung, keine Wette.
 - **Apartments und Unterkünfte außerhalb sind die Ausweichlösung.** Private Apartments dürften einen Großteil des Andrangs auffangen, und Shuttle-Verbindungen aus Nachbarstädten wie Novi Sad und Šabac wurden ins Gespräch gebracht, um Zimmer außerhalb Belgrads zu erschließen. Das sind Ausweichoptionen, falls die gewünschten Hotels ausgebucht sind.
 
 Wir nennen hier bewusst keine konkreten Preise oder Echtzeit-Verfügbarkeiten – diese Zahlen ändern sich wöchentlich und wären fast sofort veraltet. Der dauerhafte Rat betrifft die Strategie: **stornierbar buchen, sobald die Reisedaten feststehen.** Prüfen Sie vor der Bestätigung Stornofrist, Anzahlung und Vorauszahlung. Reservieren Sie ein [stornierbares Zimmer](aff:near/belgrade-flex), sobald Sie sich auf die Reisedaten festgelegt haben, und behalten Sie dann besser gelegene oder günstigere Zimmer im Auge, während sich der Kalender füllt. Details zur Buchungsplattform-Mechanik und zum Vergleich Apartment versus Hotel finden Sie im [Leitfaden zur Unterkunftswahl (EN)](/where-to-stay).

@@ -88,9 +88,24 @@ function damageOf(body) {
   return problems;
 }
 
-/** Run both checks. Returns [] when the corpus is healthy. */
+// Check 3 — unfilled template markers. Pages pasted from a prepared kit
+// (growth/ticket-kit/) carry {{BLANKS}} to fill and ⟦CHECK⟧ defaults to
+// confirm or replace. Either one left in a page would publish a hole, so the
+// build refuses it. Covers every language collection, frontmatter included.
+const PLACEHOLDER = /\{\{[A-Z][A-Z0-9_]*\}\}|⟦[A-Z]+⟧/;
+
+function placeholderFailures() {
+  const out = [];
+  for (const file of walk("src/content").sort()) {
+    const m = fs.readFileSync(file, "utf8").match(PLACEHOLDER);
+    if (m) out.push({ file, kind: "placeholder", detail: `unfilled template marker ${m[0]} — fill or delete it` });
+  }
+  return out;
+}
+
+/** Run all checks. Returns [] when the corpus is healthy. */
 export function checkContentIntegrity({ baselinePath = BASELINE } = {}) {
-  const failures = [];
+  const failures = [...placeholderFailures()];
   // A missing baseline used to make this check silently vacuous — the guard
   // would pass while checking nothing. Absence is now a failure: the file is
   // committed, so if it is gone something is wrong.
