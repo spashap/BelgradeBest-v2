@@ -67,8 +67,16 @@ const f = CONFIG.chrome.footer as
       columns?: { heading?: string; kind: string; items?: RefItem[] }[];
       legal?: RefItem[];
       social?: { url: string; label: string; icon?: string; visible?: boolean }[];
+      credit?: { visible?: boolean; name: string; url: string; label: Record<string, string> };
     }
   | undefined;
+
+// Developer credit (owner decision 2026-11-16): one quiet line in the bar, the
+// company name as the anchor, rel="nofollow" — a sitewide footer link must not
+// read as a link scheme to Google/Bing. Label follows the page language.
+const credit = f?.credit && f.credit.visible !== false && f.credit.url && f.credit.name
+  ? { ...f.credit, text: f.credit.label?.[lang] ?? f.credit.label?.en ?? "" }
+  : null;
 
 const columns = ((f?.columns ?? []) as { heading?: string; kind: string; items?: RefItem[] }[])
   .map((col) => ({
@@ -126,7 +134,14 @@ const social = ((f?.social ?? []) as { url: string; label: string; icon?: string
           </p>
         ) : null}
         <div class="c-footer__bar">
-          <span class="c-footer__copy">{copyright} · {VERSION}</span>
+          <span class="c-footer__copy">
+            {copyright} · {VERSION}
+            {credit ? (
+              <>
+                {" · "}{credit.text}{" "}<a href={credit.url} rel="nofollow">{credit.name}</a>
+              </>
+            ) : null}
+          </span>
           {legal.length > 0 || social.length > 0 ? (
             <span class="c-footer__meta">
               {legal.map((it) => <a href={it.href}>{it.title}</a>)}

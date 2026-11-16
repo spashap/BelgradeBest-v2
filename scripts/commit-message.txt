@@ -1,19 +1,13 @@
-Facebook: Meta crawler filtered from GA4, six-week test cancelled, Grok bot brief
+One public contact address; footer credit for LitoDev
 
-Step 6 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md, re-scoped.
-
-- Finding: the "278 Facebook sessions a month" were mostly Meta's own
-  machines: a 2000x2000 crawler (312 of 314 sessions since June from
-  Facebook, ~5 s each, US/Sweden/Ireland datacentres) and in-app prefetch
-  at 412x915 with 0 s. Real engaged Facebook visits: ~26 in 90 days, 0
-  affiliate clicks; the Page has 5 followers.
-- src/lib/bot-traffic.ts: 2000x2000 added to the bot list (stops GA4
-  collection in Analytics.astro and strips history in admin/Growth API
-  reports). 412x915 deliberately not listed: real phones use it.
-- growth/BELGRADEBEST_FACEBOOK_BOT_BRIEF.md: what the Grok bot does, a
-  brief to paste into it (2 posts a week, booking-relevant pages, no
-  affiliate/Booking/hotel names, no groups, one UTM scheme), how it is
-  judged (engaged sessions; stop paying attention under 10/month on 15 Jan).
-- Plan: step 6 cancelled; its owner-hours go to Bing work. BB-CHG-0052.
+- /contact now shows admin@belgradebest.com (was admin@out25.com), the
+  same brand address as /for-businesses; the page's updated date bumped.
+  The Facebook Page contact still shows out25.com (owner changes it in
+  the Page settings). BB-CHG-0053.
+- Footer bar: "Website developed by LitoDev" linking https://litodev.com/
+  with rel="nofollow" and the company name as anchor, localised for the
+  German, Slovak and Czech pages. Config in site-config.json
+  chrome.footer.credit (visible/name/url/label per language), rendered by
+  SiteFooter.astro. BB-CHG-0054.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

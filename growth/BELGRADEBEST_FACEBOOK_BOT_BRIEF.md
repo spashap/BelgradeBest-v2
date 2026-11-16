@@ -79,4 +79,4 @@ RULES:
 
 ## Owner check
 
-The Page's public contact email is **admin@out25.com**. The site's brand address is admin@belgradebest.com (set up 2026-09-06). If out25.com connects the site to you or to another business, switch the Page contact to the brand address. That is your call; nothing was changed.
+The Page's public contact email is **admin@out25.com**. The site's contact page was switched to the brand address, admin@belgradebest.com, on 16 Nov. Switch the Page contact to match in the Page settings; only the owner can do that.

@@ -78,6 +78,17 @@
     "footerLine": "BelgradeBest · An evergreen English guide to Belgrade · © {year}",
     "footer": {
       "showBrand": true,
+      "credit": {
+        "visible": true,
+        "name": "LitoDev",
+        "url": "https://litodev.com/",
+        "label": {
+          "en": "Website developed by",
+          "de": "Website entwickelt von",
+          "sk": "Web vytvoril",
+          "cs": "Web vytvořil"
+        }
+      },
       "columns": [
         {
           "heading": "Explore",
