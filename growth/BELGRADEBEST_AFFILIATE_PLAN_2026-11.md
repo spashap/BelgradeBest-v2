@@ -35,7 +35,7 @@
 | 3 | **Ticket on-sale kit.** A prepared replacement for the top of the tickets page (EN/DE/SK/CS) covering status, official seller link, price table, conditions, unknowns and a dated change log. Matching hub row, a line to the Expo stay page, and a Facebook post. | 25% of searchers click our ticket results, and the announcement is the biggest traffic event coming. | 3–4 h now, 2–3 h on the day | Update live within 24 h; ticket clicks rise | Ready 30 Nov; judged 28 days after sales open |
 | 4 | **Improve the airport page plus one other evergreen page that Bing already shows.** Sharper answers on payment and the A1 minibus, contradictions removed, everything kept on the same URL. | Existing Bing visibility is the cheapest way to win readers, and it is a money page (Welcome Pickups). | 8–10 h | Clicks on these pages up 25% or more over 8 weeks compared with before | 31 Jan 2027 |
 | 5 | **Rebuild the Expo stay page around an honest access table.** One row per base, with columns: suits whom, which side of the Sava, transport that works today, confirmed visitor route (otherwise "not yet confirmed"), planned links, what to check before booking, source and date. No travel times to an approximate venue location. The Swissôtel gets a labelled "opening Q1 2027" note. EN and DE. | Gives better local judgement than Booking or serbiaexpo.com, without promises we can't keep. | 5–6 h | Published, claims clean, accommodation clicks measured | Published by 15 Dec; performance judged 31 Mar 2027 |
-| 6 | **Six-week Facebook test.** Two useful posts a week (arrival, choosing a base, real ticket news), each linking to one guide with UTM tags. | Already 278 sessions per 28 days. | 0.5 h/week | 120 or more engaged sessions per 28 days (about 92 now) | 15 Jan 2027 |
+| 6 | ~~**Six-week Facebook test.**~~ *Cancelled 16 Nov; see Progress.* Two useful posts a week (arrival, choosing a base, real ticket news), each linking to one guide with UTM tags. | Already 278 sessions per 28 days. | 0.5 h/week | 120 or more engaged sessions per 28 days (about 92 now) | 15 Jan 2027 |
 | 7 | **Monthly scorecard.** Sessions with an accommodation-affiliate click, non-Expo organic landings, referring domains, commissions, owner-hours. | Protects owner time and shows what survives after the Expo. | 0.5 h/month | Non-Expo organic landings up 50% or more by May | 14 Dec (baseline), 31 May 2027, 30 Nov 2027 |
 | (8) | *Optional, owner decision:* the agency reference pilot (8–12 agencies, under the safeguards above) | Possible links and qualified visitors | 4–5 h | One relevant referring domain, or two requests to use our page | 28 Feb 2027 |
 
@@ -93,3 +93,10 @@
     - The getting-there page (all four languages), the guide (EN and DE), getting around, stations and best time to visit still said no Expo buses were announced. All are updated.
     - None of the reporting confirms the November lines actually started, so every page says "announced, not yet confirmed running".
   - **Measure from now:** `aff_click_booking` on the stay page, by card (`pick:zemun/*` and `pick:savamala/*` are new), in the monthly scorecard.
+- **Step 6, cancelled 16 Nov; replaced by a brief for the Grok bot** (`growth/BELGRADEBEST_FACEBOOK_BOT_BRIEF.md`).
+  - The "278 sessions / 92 engaged per 28 days" baseline was mostly Meta's crawler (2000×2000) and in-app prefetch (412×915, 0 s).
+  - Real Facebook readers: about 26 engaged visits in 90 days, with 0 affiliate clicks. The Page has 5 followers.
+  - The bot keeps posting at no owner cost: 2 posts a week, linked to booking-relevant pages, with one UTM scheme.
+  - 2000×2000 is now in the GA4 bot filter.
+  - Judged in the scorecard by engaged sessions. Under 10 a month on 15 Jan 2027 means we stop paying it attention.
+  - The 3 owner-hours go to Bing work instead.

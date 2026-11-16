@@ -1,24 +1,19 @@
-Expo stay page rebuilt around an access table; announced EKSPO bus lines added site-wide
+Facebook: Meta crawler filtered from GA4, six-week test cancelled, Grok bot brief
 
-Step 5 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md (due 15 Dec).
+Step 6 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md, re-scoped.
 
-- Where to stay for Expo 2027 (EN + DE): an access table (base, side of
-  the Sava, Expo bus lines announced, planned railway with reported stops,
-  who it suits) with a dated status note and sources; "Suits" and "Check
-  before booking" per base; no journey times to the site; Swissôtel
-  labelled "opening Q1 2027". New bases with hotel cards: Zemun (EKSPO 3)
-  and Savski venac/Vračar/Waterfront (EKSPO 2, Prokop). German card text
-  added for the Zemun and Savamala cards.
-- Fact found while checking: EXPO 2027 d.o.o. announced direct EKSPO bus
-  lines on 10 Oct 2026 (EKSPO 2-5 from 1 Nov 2026, EKSPO 1 from the
-  airport from 1 Apr 2027, EKSPO 6-7 and feeders from 1 May 2027). No
-  source confirms the November lines started, so every page says
-  "announced, not yet confirmed running"; fares unannounced.
-- Getting to Expo 2027 (EN/DE/SK/CS): new "Expo bus lines" section and
-  table, EKSPO 1 replaces "no airport line confirmed", "book early" ->
-  "once your dates are firm".
-- Expo guide (EN/DE), getting around, stations, best time to visit: the
-  "no Expo shuttles announced" sentences now point to the announced lines.
-- Translations by Sonnet, reviewed by Fable. BB-CHG-0051.
+- Finding: the "278 Facebook sessions a month" were mostly Meta's own
+  machines: a 2000x2000 crawler (312 of 314 sessions since June from
+  Facebook, ~5 s each, US/Sweden/Ireland datacentres) and in-app prefetch
+  at 412x915 with 0 s. Real engaged Facebook visits: ~26 in 90 days, 0
+  affiliate clicks; the Page has 5 followers.
+- src/lib/bot-traffic.ts: 2000x2000 added to the bot list (stops GA4
+  collection in Analytics.astro and strips history in admin/Growth API
+  reports). 412x915 deliberately not listed: real phones use it.
+- growth/BELGRADEBEST_FACEBOOK_BOT_BRIEF.md: what the Grok bot does, a
+  brief to paste into it (2 posts a week, booking-relevant pages, no
+  affiliate/Booking/hotel names, no groups, one UTM scheme), how it is
+  judged (engaged sessions; stop paying attention under 10/month on 15 Jan).
+- Plan: step 6 cancelled; its owner-hours go to Bing work. BB-CHG-0052.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

@@ -8,7 +8,17 @@
 // 1366x1366 is the same kit on residential proxies (Brazil, Pakistan, ~20 more).
 // No real monitor or phone reports either size. Add a size only with the same
 // evidence (GA4: screenResolution × country × channel, engagement ≈ 0).
-export const BOT_SCREEN_RESOLUTIONS = ["1280x1200", "1366x1366"];
+//
+// 2000x2000 (added 2026-11-16): Meta's link crawler. 312 of 314 sessions since
+// June are Organic Social (Facebook), from US/Sweden/Ireland datacentres, about
+// 5 s of "engagement" each — it fires engagement events, so it inflated
+// Facebook's engaged sessions. No real screen is 2000x2000.
+//
+// NOT listed on purpose: 412x915. Facebook's in-app prefetch uses it (209
+// Organic Social sessions since June, 0 s engagement), but it is also a real
+// phone size (Pixel 7 class) and real search visitors arrive with it. Judge
+// Facebook by engaged sessions, which the prefetch never produces.
+export const BOT_SCREEN_RESOLUTIONS = ["1280x1200", "1366x1366", "2000x2000"];
 
 // GA4 Data API FilterExpression that drops those sessions from a report.
 export const GA4_BOT_EXCLUSION = {
