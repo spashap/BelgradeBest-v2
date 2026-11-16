@@ -7,7 +7,17 @@ successor to the old project. Read the data masters and this file before acting.
 
 BelgradeBest is an English-first, SEO-oriented evergreen guide to Belgrade for
 foreign visitors (leisure + business/investor), with Expo 2027 (15 May–15 Aug
-2027) as a traffic trigger feeding the permanent guide. **V2 is a simple, fast,
+2027) as a traffic trigger feeding the permanent guide.
+
+**CORE RULE (owner, 2026-11-16): BelgradeBest is an affiliate marketing hub.**
+Readers get genuinely useful, independent information; the founder earns affiliate
+commissions (Booking.com, Air Serbia, Welcome Pickups via CJ; more partners to
+come). No display ads, no paid placements, ever. Judge every task by whether it
+gets a would-be traveller to a partner booking without spending trust: money pages
+(stay, airport, getting-there) convert; magnet pages (Expo hub, pavilions, tracker,
+visa, money) win Bing traffic and must route readers to money pages. Measure
+commissions > affiliate clicks per page > money-page sessions > traffic. Placement
+rules: `growth/BELGRADEBEST_AFFILIATE_STRATEGY.md`. **V2 is a simple, fast,
 static site that the owner + Claude Code edit by hand** — there is no LLM content
 pipeline, no database, no server at runtime. The strategy/identity/IA are
 inherited from the old project and are NOT being redesigned.

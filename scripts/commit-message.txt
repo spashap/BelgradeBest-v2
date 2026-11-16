@@ -1,15 +1,10 @@
-Slovak and Czech Expo pages: Expo-side hotel card, accommodation links, stay row on hubs
+CLAUDE.md: record the core rule - BelgradeBest is an affiliate marketing hub
 
-- Tickets (SK + CS): the "accommodation can be booked now" sentence links a
-  Booking search with free cancellation, followed by the Expo-side hotel
-  card (Nobel West, Mar Garni, KAME) with Slovak/Czech lines; Booking opens
-  in Slovak/Czech.
-- Getting there (SK + CS): "book flights and accommodation early" links the
-  accommodation search; the Slovak stay-page link gains its (EN) marker.
-- Hubs (SK + CS): an "Ubytovanie"/"Ubytování" row in "at a glance" to the
-  (English) Expo stay page, marked (EN).
-- hotel-picks.json: SK/CS strings for the card, the hotels and the
-  "near the airport" label; budget tier reads "nízka/nízká cena".
-- BB-CHG-0046.
+The owner set the project's core rule on 2026-11-16: useful, independent
+information for readers; affiliate commissions for the founder; no ads or
+paid placements. Every task is judged by whether it gets a would-be
+traveller to a partner booking without spending trust (money pages vs
+magnet pages; commissions > affiliate clicks > money-page sessions >
+traffic). Placement rules stay in growth/BELGRADEBEST_AFFILIATE_STRATEGY.md.
 
 Co-Authored-By: Claude <noreply@anthropic.com>
