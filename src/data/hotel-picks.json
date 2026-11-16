@@ -1,10 +1,9 @@
 {
   "updated": "2026-11-16",
-  "_note": "Named hotels and hotel cards for in-text affiliate links (lib/aff-inline.ts). Articles reference these by key: [name](aff:hotel/<key>), [text](aff:near/<key>), and a line [x](aff:pick/<key>) for a card. Booking.com on/off + CJ link live in affiliates.json. Every hotel carries the date it was last checked open and listed (`verified`); re-check before Expo 2027 (see BELGRADEBEST_AFFILIATE_STRATEGY.md).",
+  "_note": "Named hotels and hotel cards for in-text affiliate links (lib/aff-inline.ts). Articles reference these by key: [name](aff:hotel/<key>), [text](aff:near/<key>), and a line [x](aff:pick/<key>) for a card. Booking.com on/off + CJ link live in affiliates.json. Every hotel carries the date it was last checked open and listed (`verified`); re-check before Expo 2027 (see BELGRADEBEST_AFFILIATE_STRATEGY.md). Disclosure (2026-11-16, after the Codex review): every commercial block opens with an \"Ad\" label (adLabel) and a one-line commission note (cardNote) BEFORE its links; every in-text affiliate link is followed by a small \"Ad\" tag; the date line explains the label (pageDisclosure).",
   "chrome": {
     "en": {
-      "pageDisclosure": "This guide contains affiliate links",
-      "disclosure": "Affiliate links:",
+      "pageDisclosure": "We earn a commission when you book through links marked “Ad”",
       "disclosureLink": "how we make money",
       "moreArea": "More places to stay in {x}",
       "moreNear": "More places to stay {x}",
@@ -16,11 +15,13 @@
       "typeBoutique": "Boutique hotel",
       "typeAparthotel": "Aparthotel",
       "typeHostel": "Hostel",
-      "typeGuesthouse": "Guesthouse"
+      "typeGuesthouse": "Guesthouse",
+      "adLabel": "Ad",
+      "adAria": "Advertisement: affiliate link",
+      "cardNote": "We earn a commission from bookings through these links"
     },
     "de": {
-      "pageDisclosure": "Dieser Ratgeber enthält Affiliate-Links",
-      "disclosure": "Affiliate-Links:",
+      "pageDisclosure": "Wir erhalten eine Provision, wenn Sie über mit „Anzeige“ gekennzeichnete Links buchen",
       "disclosureLink": "So finanzieren wir uns (EN)",
       "moreArea": "Weitere Unterkünfte in {x}",
       "moreNear": "Weitere Unterkünfte {x}",
@@ -32,11 +33,13 @@
       "typeBoutique": "Boutique-Hotel",
       "typeAparthotel": "Aparthotel",
       "typeHostel": "Hostel",
-      "typeGuesthouse": "Pension"
+      "typeGuesthouse": "Pension",
+      "adLabel": "Anzeige",
+      "adAria": "Anzeige: Affiliate-Link",
+      "cardNote": "Für Buchungen über diese Links erhalten wir eine Provision"
     },
     "sk": {
-      "pageDisclosure": "Tento sprievodca obsahuje partnerské odkazy",
-      "disclosure": "Partnerské odkazy:",
+      "pageDisclosure": "Ak rezervujete cez odkazy označené „Reklama“, dostaneme províziu",
       "disclosureLink": "ako zarábame (EN)",
       "moreArea": "Ďalšie ubytovanie: {x}",
       "moreNear": "Ďalšie ubytovanie {x}",
@@ -48,11 +51,13 @@
       "typeBoutique": "Butikový hotel",
       "typeAparthotel": "Aparthotel",
       "typeHostel": "Hostel",
-      "typeGuesthouse": "Penzión"
+      "typeGuesthouse": "Penzión",
+      "adLabel": "Reklama",
+      "adAria": "Reklama: partnerský odkaz",
+      "cardNote": "Za rezervácie cez tieto odkazy dostávame províziu"
     },
     "cs": {
-      "pageDisclosure": "Tento průvodce obsahuje partnerské odkazy",
-      "disclosure": "Partnerské odkazy:",
+      "pageDisclosure": "Pokud rezervujete přes odkazy označené „Reklama“, dostaneme provizi",
       "disclosureLink": "jak se financujeme (EN)",
       "moreArea": "Další ubytování: {x}",
       "moreNear": "Další ubytování {x}",
@@ -64,7 +69,10 @@
       "typeBoutique": "Butikový hotel",
       "typeAparthotel": "Aparthotel",
       "typeHostel": "Hostel",
-      "typeGuesthouse": "Penzion"
+      "typeGuesthouse": "Penzion",
+      "adLabel": "Reklama",
+      "adAria": "Reklama: partnerský odkaz",
+      "cardNote": "Za rezervace přes tyto odkazy dostáváme provizi"
     }
   },
   "near": {

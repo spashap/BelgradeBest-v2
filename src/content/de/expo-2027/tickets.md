@@ -153,7 +153,7 @@ Es ist naheliegend, eine Form von Kapazitätsmanagement zu *erwarten*, weil die 
 
 Einiges ist bestätigt und für Ihre Planung wissenswert. Die Expo 2027 läuft vom **15. Mai bis 15. August 2027 – 93 Tage – auf dem Gelände in Surčin** in Belgrad, etwa 5 km vom [Flughafen Nikola Tesla (EN)](/glossary/nikola-tesla-airport) und rund 13,5 km vom Stadtzentrum entfernt. Dieses Zeitfenster ist der Zeitraum, den ein eventuelles Ticket abdecken würde – es sind also die Daten, um die herum sich eine Reise planen lässt, noch bevor es Tickets gibt.
 
-Eine Ticketverzögerung ist kein Grund, den Rest der Reise aufzuschieben. Der eigentliche Engpass eines Expo-Besuchs ist das Bettenangebot Belgrads – die Stadt hat deutlich weniger Zimmer, als hinter einer 93-tägigen Veranstaltung dieser Größe sonst stehen –, und Unterkünfte lassen sich schon heute buchen, Tickets nicht.
+Eine Ticketverzögerung ist kein Grund, den Rest der Reise aufzuschieben. Belgrad hat rund 8.000 Hotelzimmer bei Prognosen von 4 bis 6 Millionen Expo-Besuchen; wie viele dieser Besucher ein Bett brauchen, hat niemand veröffentlicht, aber Unterkünfte lassen sich schon heute stornierbar buchen, Tickets nicht.
 
 Einige unabhängige Reiseführer-Websites, die ausdrücklich nicht mit den Veranstaltern verbunden sind, veröffentlichen bereits geschätzte Reisekosten wie Flughafenbusse, Taxis und Stadtpässe. Das sind keine offiziellen Expo- oder Behördenzahlen, keine Ticketpreise, und sie können sich schnell ändern. Sie können bei der Budgetplanung für Ihre weitere Reise helfen, sagen aber nichts über den Expo-Einlass aus.
 

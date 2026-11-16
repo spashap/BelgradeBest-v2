@@ -49,7 +49,14 @@ Pavilion flight sub-IDs are `bb-[lang-]<pavilion initials>-flights` (e.g. `bb-us
 1. **A link goes only where the reader would act next.** The sentence must already recommend booking, an area or a service. If no such phrase exists, leave the spot empty.
 2. **No more than 3 in-text links per article.** Where-to-stay articles are the exception: they get one card for each recommended area.
 3. **Never in the lede, never in legal or safety text, never on a restaurant, bar, ticket seller or anything we only describe.**
-4. **Disclose up front.** Any page with in-text links says so in the date line under the title, linking `/how-we-make-money`. That page now explains how hotels are chosen.
+4. **Label every commercial link "Ad" where it appears** (revised 16 Nov after the Codex review, following UK ASA and FTC guidance).
+   - Every in-text affiliate link is followed by a small **Ad** tag.
+   - Every card, box and flight tile opens with **Ad** and a one-line commission note *before* its links, not in a footer.
+   - The date line explains the label ("We earn a commission when you book through links marked 'Ad'").
+   - Translated: *Anzeige* (DE), *Reklama* (SK/CS).
+   - `/how-we-make-money` explains the label and how hotels are chosen.
+   - `rel="sponsored"` is for search engines and does not count as disclosure to readers.
+7. **Never state what we can't support.** That rules out scarcity ("will go first", "beds are the bottleneck"), commute promises, and urgency. Booking advice is conditional: book refundably once your dates are firm, and check the cancellation deadline, deposit and prepayment. Our own pages say the room and visitor figures do not predict a shortage, so no page may contradict that.
 5. **A hotel must earn its spot.** It has to be in the area the paragraph names and score about 8.5 or more on Booking.com across hundreds of reviews. It must also be confirmed open and bookable, with the check date stored in its `verified` field. The tiers are spread from budget to luxury.
 6. **No partner URL lives in the article text.** Articles carry only references (`aff:`), which are resolved at build time. A partner switched off in `/admin/affiliates` turns links back into plain text and removes the cards, so no rewrite is needed.
 
@@ -65,9 +72,9 @@ Pavilion flight sub-IDs are `bb-[lang-]<pavilion initials>-flights` (e.g. `bb-us
 
 - **Clicks:** the GA4 event `aff_click_<partner>`. Its `placement` value is `inline:area/new-belgrade`, `pick:expo/kame` and so on. Cards also send `aff_view`, which gives a click rate. Both appear in `/admin/affiliates`.
 - **Money:** the CJ sub-ID is `bb-[lang-]<page initials>-<item>`. For example, `bb-wtsfe-p-hyatt` is the Hyatt card on where-to-stay-for-expo. `/admin/affiliates → Money` names the page.
-- **First read: 14 December 2026** (28 days). Booking pays after the stay, so expect clicks well before commissions.
-  - A card with views but no clicks after 28 days: swap its hotels or remove it.
-  - An in-text link with clicks but no money: keep it, because commissions lag the stay.
+- **The one number:** sessions with at least one accommodation-affiliate click per 28 days, excluding bots and our own test clicks. 14 December 2026 sets the baseline and 1 February 2027 is the first comparison. Click rate is a diagnostic; revenue is the eventual measure.
+- **Do not remove cards on a timer.** At a real 5% click rate, 20 views still give zero clicks 36% of the time. Judge a card only once it has enough views. Booking pays after the stay, so commissions lag clicks by weeks or months.
+- The full plan, with dates and owner hours, is in `growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md`.
 
 ## Honest expectation
 

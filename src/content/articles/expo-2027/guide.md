@@ -38,7 +38,7 @@ faqs:
 unknowns: []
 ---
 
-**Short answer for planning:** Belgrade hosts a [Specialised Expo](/glossary/specialised-expo) from **15 May to 15 August 2027** at **Surčin**, beside [Nikola Tesla Airport](/glossary/nikola-tesla-airport). Give the Expo itself **2–3 days**, or **4–5 days** to fold in the city. **Book your accommodation first** — beds are the bottleneck, not tickets, because tickets are not on sale yet. Expect **opening week and weekends to be busiest**. Everything else below — and on the linked deep-dive pages — is the detail behind that.
+**Short answer for planning:** Belgrade hosts a [Specialised Expo](/glossary/specialised-expo) from **15 May to 15 August 2027** at **Surčin**, beside [Nikola Tesla Airport](/glossary/nikola-tesla-airport). Give the Expo itself **2–3 days**, or **4–5 days** to fold in the city. **Sort out accommodation first**: unlike tickets, which are not on sale yet, it can be booked now on refundable rates. Expect **opening week and weekends to be busiest**. Everything else below — and on the linked deep-dive pages — is the detail behind that.
 
 This page is the visitor hub. It orients you, then routes you to the focused pages: [what a Specialised Expo actually is](/expo-2027/what-is-it), [getting there](/expo-2027/getting-there), [tickets](/expo-2027/tickets), [participating countries](/expo-2027/tracker) and [the programme](/expo-2027/programme) — plus the evergreen Belgrade legs for [where to stay](/where-to-stay) and the practical side of a trip in [plan your trip](/plan-your-trip).
 
@@ -96,15 +96,15 @@ The per-day numbers are worth reading carefully. The Participants FAQ models rou
 
 ## Where will you stay, and what should you book first?
 
-This is the part to act on now. Analyses note that hosting over four million visitors in three months would be close to **three times Belgrade's normal annual tourist volume** — a comparison worth treating carefully, since Expo *visits* include residents, day-trippers and repeat entries, while annual tourist figures count arrivals — against a city with roughly **8,000 hotel rooms** in operation (around 116 hotel facilities), with a reported pipeline of perhaps eight to fifteen new hotels and ~2,000 rooms by 2027 and a 378-room hotel planned at the Expo site itself. The Serbian government has tied over €80 million in hotel-construction subsidies to Expo preparations. Even so, the honest read is a **tight accommodation market** that will lean on private rentals and regional capacity — which is exactly why **accommodation is the thing to book first**, ahead of tickets (which aren't on sale) and even flights.
+This is the part to act on now. Analyses note that hosting over four million visitors in three months would be close to **three times Belgrade's normal annual tourist volume** — a comparison worth treating carefully, since Expo *visits* include residents, day-trippers and repeat entries, while annual tourist figures count arrivals — against a city with roughly **8,000 hotel rooms** in operation (around 116 hotel facilities), with a reported pipeline of perhaps eight to fifteen new hotels and ~2,000 rooms by 2027 and a 378-room hotel planned at the Expo site itself. The Serbian government has tied over €80 million in hotel-construction subsidies to Expo preparations. Even so, nobody has published how many visitors will need a bed, so treat a tight market as a risk rather than a forecast. That is why **accommodation is worth sorting first**: unlike tickets (not on sale), it can be booked now, refundably, as soon as your dates are firm.
 
-This hub does not rank hotels or quote rates — that belongs on the dedicated page. The short version: the historic core keeps you in the city you presumably also came to see, while [the New Belgrade and Surčin side](aff:area/new-belgrade) sits closer to the Expo site, trading atmosphere for a shorter commute. For the area-by-area breakdown and how to choose, see [where to stay in Belgrade](/where-to-stay).
+This hub does not rank hotels or quote rates — that belongs on the dedicated page. The short version: the historic core keeps you in the city you presumably also came to see, while [the New Belgrade and Surčin side](aff:area/new-belgrade) sits closer to the Expo site, trading atmosphere for less distance to the site. For the area-by-area breakdown and how to choose, see [where to stay in Belgrade](/where-to-stay).
 
 ## A simple planning sequence
 
 If you want one ordered checklist out of all the above:
 
-1. **[Lock accommodation early](aff:near/belgrade-flex)** — beds are the bottleneck; decide central-city versus near-the-site and book. See [where to stay](/where-to-stay).
+1. **[Sort out accommodation first](aff:near/belgrade-flex)** — it can be booked now, on refundable rates; decide central-city versus near-the-site and book once your dates are firm. See [where to stay](/where-to-stay).
 2. **[Book flights](aff:go/air-serbia)** once your dates and base are set.
 3. **Sort visa and money** — check your own visa status and Serbia's 24-hour registration rule, and plan to pay in dinars. See [plan your trip](/plan-your-trip).
 4. **Watch for tickets** — nothing to buy yet; we update the [tickets](/expo-2027/tickets) page when sales open.

@@ -1,10 +1,21 @@
-CLAUDE.md: record the core rule - BelgradeBest is an affiliate marketing hub
+Trust pass: "Ad" labels on every affiliate link, no unsupported scarcity or commute claims
 
-The owner set the project's core rule on 2026-11-16: useful, independent
-information for readers; affiliate commissions for the founder; no ads or
-paid placements. Every task is judged by whether it gets a would-be
-traveller to a partner booking without spending trust (money pages vs
-magnet pages; commissions > affiliate clicks > money-page sessions >
-traffic). Placement rules stay in growth/BELGRADEBEST_AFFILIATE_STRATEGY.md.
+Step 1 of growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md (Codex-reviewed, owner-approved).
+
+- Disclosure (EN/DE/SK/CS): every in-text affiliate link is followed by a
+  small "Ad" tag (Anzeige / Reklama); every hotel card, end-of-page box and
+  pavilion flight tile opens with "Ad" and a one-line commission note before
+  its links; the date line explains the label. /how-we-make-money explains
+  it too. New c-adtag pattern in globals.css.
+- Claims: removed "beds are the bottleneck", "rooms will go first and
+  command premium prices", "short, predictable commute" and "book early"
+  pressure across the Expo stay page, guide and tickets (EN/DE, tickets also
+  SK/CS), the hub and the stay tiles. Booking advice is now conditional:
+  book refundably once your dates are firm.
+- Expo hub: ticket row and unknowns now count three passed start dates,
+  matching the tickets page.
+- Strategy doc: the 28-day card-removal rule is deleted (noise-chasing);
+  rule 7 "never state what we can't support"; one success number.
+- Plan doc growth/BELGRADEBEST_AFFILIATE_PLAN_2026-11.md added. BB-CHG-0047.
 
 Co-Authored-By: Claude <noreply@anthropic.com>

@@ -8,6 +8,7 @@
 // translated chrome + labels for the /de/ and /sk/ pilots.
 import data from "../data/partner-links.json";
 import AffClick from "./AffClick.astro";
+import { adTag } from "../lib/aff-inline";
 import { travelLinks, travelChrome, clickEvent } from "../lib/affiliates";
 
 interface Props {
@@ -23,7 +24,10 @@ const items = travelLinks(targets, lang, page);
 {
   items.length > 0 ? (
     <aside class="c-staylinks" aria-label={chrome.heading} data-aff-block="travel">
-      <p class="c-staylinks__title">{chrome.heading}</p>
+      <p class="c-staylinks__title"><Fragment set:html={adTag(lang)} />{chrome.heading}</p>
+      <p class="c-staylinks__disc">
+        {chrome.disclosure}{" "}<a href={data.disclosureHref}>{chrome.disclosureLink}</a>.
+      </p>
       <ul class="c-staylinks__list">
         {items.map((x) => (
           <li>
@@ -33,9 +37,7 @@ const items = travelLinks(targets, lang, page);
           </li>
         ))}
       </ul>
-      <p class="c-staylinks__disc">
-        {chrome.disclosure} <a href={data.disclosureHref}>{chrome.disclosureLink}</a>.
-      </p>
+
       <AffClick />
     </aside>
   ) : null

@@ -25,6 +25,7 @@ import { ogImage } from "../lib/og";
 import { DE, alternates, dePath, fmtDate, type Lang } from "../lib/i18n";
 import { regionOf, STAGE } from "../lib/expo-participants";
 import { flightTile, clickEvent } from "../lib/affiliates";
+import { adTag } from "../lib/aff-inline";
 import AffClick from "../components/AffClick.astro";
 import {
   listingHref,
@@ -204,7 +205,7 @@ const visitTiles = isDe
         href: "/expo-2027/where-to-stay-for-expo",
         kicker: "Where to stay",
         title: "Where to stay for Expo 2027",
-        body: "Beds, not tickets, are the bottleneck: which side of the city to sleep on, with named hotels near the site and in the old town.",
+        body: "Which side of the city to sleep on for the Expo, with named hotels near the site and in the old town.",
       },
       {
         href: "/expo-2027/getting-there",
@@ -227,18 +228,18 @@ const flightCopy = flight
     ? {
         kicker: "Flüge",
         title: `Air Serbia nach Belgrad`,
-        body: "Die Preisseite der Belgrader Nationalairline. Vergleichen Sie auch andere Airlines. Affiliate-Link.",
+        body: "Die Preisseite der Belgrader Nationalairline. Vergleichen Sie auch andere Airlines; für Buchungen über diesen Link erhalten wir eine Provision.",
       }
     : flight.via
       ? {
           kicker: "Flights",
           title: `Air Serbia via ${flight.via}`,
-          body: `There is no direct flight from ${short}; ${flight.via} is the nearest Air Serbia departure. Compare other airlines too. Affiliate link.`,
+          body: `There is no direct flight from ${short}; ${flight.via} is the nearest Air Serbia departure. Compare other airlines too; we earn a commission on bookings through this link.`,
         }
       : {
           kicker: "Flights",
           title: `Air Serbia from ${short}`,
-          body: `The Belgrade-based national carrier's fares page for ${short}. Compare other airlines too. Affiliate link.`,
+          body: `The Belgrade-based national carrier's fares page for ${short}. Compare other airlines too; we earn a commission on bookings through this link.`,
         }
   : null;
 const exploreTiles = isDe
@@ -500,7 +501,7 @@ const exploreTiles = isDe
             data-aff-placement="pavilion:flights"
             data-aff-block="pavilion-flights"
           >
-            <span class="c-linkcard__kicker">{flightCopy.kicker}</span>
+            <span class="c-linkcard__kicker"><Fragment set:html={adTag(isDe ? "de" : "en")} />{flightCopy.kicker}</span>
             <span class="c-linkcard__title">{flightCopy.title}</span>
             <p>{flightCopy.body}</p>
           </a>

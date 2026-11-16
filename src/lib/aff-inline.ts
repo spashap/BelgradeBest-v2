@@ -134,11 +134,18 @@ export function pickHtml(key: string, lang: string, slug: string): string {
   }
   return (
     `<aside class="c-affpick" aria-label="${esc(title)}" data-aff-block="pick:${esc(key)}">` +
-    `<p class="c-affpick__title">${esc(title)}</p><ul class="c-affpick__list">${rows}</ul>` +
-    `<p class="c-affpick__foot">${more}<span>${esc(chrome(lang, "disclosure"))} <a href="/how-we-make-money">${esc(chrome(lang, "disclosureLink"))}</a></span></p>` +
+    `<p class="c-affpick__title">${adTag(lang)} ${esc(title)}</p>` +
+    `<p class="c-affpick__note">${esc(chrome(lang, "cardNote"))} (<a href="/how-we-make-money">${esc(chrome(lang, "disclosureLink"))}</a>).</p>` +
+    `<ul class="c-affpick__list">${rows}</ul>` +
+    (more ? `<p class="c-affpick__foot">${more.replace(/ · $/, "")}</p>` : "") +
     `</aside>`
   );
 }
+
+// The small "Ad" label for commercial links and blocks, in the page language.
+export const adTag = (lang: string) =>
+  `<span class="c-adtag" title="${esc(chrome(lang, "adAria"))}">${esc(chrome(lang, "adLabel"))}</span>`;
+export const affChrome = (lang: string, k: string) => chrome(lang, k);
 
 export type AffResolved = { html: string; links: number; picks: number; partners: Set<string> };
 
@@ -162,7 +169,9 @@ export function resolveAffHtml(html: string, lang: string, slug: string): AffRes
     if (!l) return text;
     links++;
     partners.add(l.partner);
-    return `<a class="c-afflink" ${linkAttrs(l)}>${text}</a>`;
+    // The "Ad" tag sits right after the link it labels (ASA: the reader must
+    // see which link is commercial, not only a notice at the top).
+    return `<a class="c-afflink" ${linkAttrs(l)}>${text}</a>${adTag(lang)}`;
   });
   return { html: out, links, picks, partners };
 }

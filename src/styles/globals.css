@@ -384,7 +384,7 @@ a {
 .c-staylinks__disc {
   font-size: var(--t-eyebrow);
   color: var(--ink-soft);
-  margin: var(--s3) 0 0;
+  margin: 0 0 var(--s3);
 }
 /* --- c-affpick : "places to stay" card inside an article section (2026-11-16).
    Emitted by lib/aff-inline.ts for an `aff:pick/<key>` line. Quieter than a
@@ -435,6 +435,33 @@ a {
   margin: var(--s3) 0 0;
 }
 .c-affpick__foot a { color: var(--accent-ink); }
+.c-article .c-affpick__note {
+  font-size: var(--t-eyebrow);
+  color: var(--ink-soft);
+  margin: calc(-1 * var(--s2)) 0 var(--s3);
+}
+/* --- c-adtag : the small "Ad" label (2026-11-16). After every in-text
+   affiliate link, and at the start of every commercial block's title, so a
+   reader can always tell which link pays us. Quiet, but never hidden. --- */
+.c-adtag {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 var(--s1);
+  margin-left: var(--s1);
+  vertical-align: 0.1em;
+  text-decoration: none;
+}
+.c-affpick__title .c-adtag,
+.c-staylinks__title .c-adtag,
+.c-linkcard__kicker .c-adtag { margin: 0 var(--s1) 0 0; }
 /* Homepage "Good to know" band */
 .c-gtk {
   list-style: none;
