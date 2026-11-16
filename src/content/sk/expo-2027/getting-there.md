@@ -7,7 +7,7 @@ description: "Ako sa dostať na Expo 2027 v Belehrade: areál v Surčine je ~5 k
 lede: "Takto sa dostanete na Expo 2027 v Belehrade: areál je v Surčine, približne 5 km od letiska Nikolu Teslu a zhruba 13,5 km od centra mesta (podľa oficiálneho FAQ pre účastníkov). Táto stránka sleduje každú trasu, ktorú poznáme: z letiska, z centra mesta cez bezplatnú sieť aj cez plánovanú novú železnicu, a jasne označuje, čo je potvrdené a čo sú zatiaľ len sľuby."
 heroLabel: "Areál Surčin / mapa letiska hero"
 heroAlt: "Panoráma Belehradu: cesta na areál Expa 2027 v Surčine"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-16"
 order: 4
 visible: true
 intent: "both"
@@ -70,7 +70,7 @@ Ak ste čítali sprievodcu, ktorý vám radí kúpiť lístok alebo cestovnú ka
 
 Jedinou platenou výnimkou je letiskový minibus A1, ktorý premáva medzi letiskom Nikolu Teslu a Trg Slavija so zastávkou v Novom Belehrade (Fontana). Je to samostatná platená kyvadlová doprava. Hlásené je, že cez deň premáva zhruba každých 15 až 30 minút, lístok vo vozidle stojí asi 400 RSD v hotovosti a jazda na Slaviju trvá asi 30 až 40 minút. Berte toto cestovné ako orientačné pre rok 2026: časom stúplo a do roku 2027 sa môže zmeniť.
 
-Pokiaľ ide o taxíky, letisko prevádzkuje oficiálny poukazový systém: z e-kiosku si vezmete poukaz s pevnou cenou, potom idete na stanovište taxíkov a vodič účtuje iba cenu na poukaze. Oficiálny taxík do centrálnych zón je hlásený zhruba na 2 200 až 2 800 RSD, kým jazda z aplikácie [CarGo (EN)](/glossary/cargo) vyjde približne na 1 500 až 2 500 RSD a trvá asi 25 minút. Belehrad nemá Uber ani Bolt; hlavnými aplikáciami na objednávanie jázd sú Yandex Go a CarGo. Vzdialenosť do centra (Trg Republike) po ceste je asi 18 km cez E-70, autom približne 20 až 25 minút. Ide o orientačné údaje pre rok 2026. Viac o týchto možnostiach nájdete v našom sprievodcovi [cestou z letiska do mesta (EN)](/plan-your-trip/airport-to-city).
+Pokiaľ ide o taxíky, letisko prevádzkuje oficiálny poukazový systém: z e-kiosku si vezmete poukaz s pevnou cenou, potom idete na stanovište taxíkov a vodič účtuje iba cenu na poukaze. Oficiálny taxík s poukazom stojí podľa zónových cien mesta Belehrad, uvádzaných od augusta 2025, 3 500 RSD do centrálnych štvrtí (Stari grad, Vračar, Savski venac) a 2 700 RSD do Nového Belehradu, Zemunu a Surčinu, kým jazda z aplikácie [CarGo (EN)](/glossary/cargo) vyjde približne na 1 500 až 2 500 RSD a trvá asi 25 minút. Belehrad nemá Uber ani Bolt; hlavnými aplikáciami na objednávanie jázd sú Yandex Go a CarGo. Vzdialenosť do centra (Trg Republike) po ceste je asi 18 km cez E-70, autom približne 20 až 25 minút. Ide o orientačné údaje pre rok 2026. Viac o týchto možnostiach nájdete v našom sprievodcovi [cestou z letiska do mesta (EN)](/plan-your-trip/airport-to-city).
 
 ## Aký je najlepší spôsob, ako sa dostať na Expo z centra Belehradu?
 

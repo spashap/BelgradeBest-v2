@@ -64,3 +64,23 @@
   - The build now refuses any page that still has an unfilled blank.
   - Tickets were still not on sale on 16 Nov (official programme page: "Tickets available soon").
   - Found while sweeping: two scarcity leftovers from step 1, now fixed. The Expo guide's "treat beds as the scarce resource" (EN and DE), and the German stay page's "knapp werden", which now matches the English "under pressure".
+- **Step 4, shipped 16 Nov; judged 31 Jan 2027.** The second page is visa and entry, chosen because it has the most Bing impressions of any evergreen page and the lowest click rate. Both pages stay on the same URL.
+  - **Airport page:**
+    - A comparison table giving time, price and how you pay for each option, and a "How do you pay?" section.
+    - The official A1 facts: cash in dinars only, bought from the driver. The official 2026 taxi zone fares: 3,500 RSD to the old town, 2,700 RSD to New Belgrade.
+    - New night-arrival and train/bus-station sections, the airport train's expected opening (March or April 2027), and one labelled link to hotels near the airport.
+  - **Visa page:**
+    - The answer in the title, plus a table by passport.
+    - New answers on "Is Belgrade in Schengen?" and on ID-card entry for EU, Swiss, Norwegian and Icelandic citizens.
+    - Corrected passport and exemption wording, and the unsupported "register online" claim removed.
+    - Routes onward to the airport, money and where-to-stay pages.
+  - **Consistency:** the taxis page and the Expo getting-there pages in all four languages quoted an outdated 2,200–2,800 RSD voucher fare; they now give the 2026 zone fares. The airport page's E75 is corrected to E-70.
+  - **Baseline, 21 Sep – 15 Nov 2026 (8 weeks):**
+
+    | Page | Bing clicks | Bing impressions | Avg position | GA4 organic sessions |
+    |---|---|---|---|---|
+    | Airport to city | 17 | 423 | 3.8 | 31 |
+    | Visa and entry | 8 | 491 | 5.5 | 21 |
+    | Taxis (consistency only) | 8 | 89 | 3.5 | 16 |
+
+  - **Target:** Bing clicks on the airport and visa pages together up 25% or more over the 8 weeks after the change (25 → 32 or more), compared on 31 Jan 2027 with the same 8-week window. Also watch `aff_click_welcome_pickups` and `inline:near/airport` clicks on the airport page.

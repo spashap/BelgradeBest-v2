@@ -7,7 +7,7 @@ description: "How to get to Expo 2027 Belgrade: the Surčin site is ~5 km from N
 lede: "Here's how to get to Expo 2027 Belgrade: the site is at Surčin, around 5 km from Nikola Tesla Airport and roughly 13.5 km from downtown (per the official Participants FAQ). This page tracks every route we know — from the airport, from the city centre via the free network, and via the planned new railway — and flags clearly which parts are confirmed and which are still promises."
 heroLabel: "Surčin site / airport map hero"
 heroAlt: "Belgrade cityscape — reaching the Expo 2027 site at Surčin"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-16"
 order: 4
 visible: true
 intent: "both"
@@ -71,7 +71,7 @@ If you have read a guidebook that tells you to buy a ticket or a travel card, th
 
 The one paid exception is the A1 airport minibus, which runs between Nikola Tesla Airport and Trg Slavija, stopping in New Belgrade (Fontana). It is a separate paid shuttle. It is reported to run roughly every 15 to 30 minutes during the day, with an on-board ticket costing about 400 RSD in cash and a journey of about 30 to 40 minutes to Slavija. Treat that fare as indicative for 2026 — it has risen over time and may change by 2027.
 
-For taxis, the airport operates an official voucher system: you take a fixed-price voucher from an e-kiosk, then go to the taxi stand, and the driver charges only the fare on the voucher. An official taxi to the central zones is reported at roughly 2,200 to 2,800 RSD, while an app-based [CarGo](/glossary/cargo) ride runs around 1,500 to 2,500 RSD, with the drive taking about 25 minutes. Belgrade has no Uber or Bolt; the main ride-hail apps are Yandex Go and CarGo. The driving distance to the centre (Trg Republike) is about 18 km via the E-70, around 20 to 25 minutes by car. These are indicative 2026 figures. For more on these options, see our guide to the [airport to city](/plan-your-trip/airport-to-city) journey.
+For taxis, the airport operates an official voucher system: you take a fixed-price voucher from an e-kiosk, then go to the taxi stand, and the driver charges only the fare on the voucher. An official voucher taxi costs 3,500 RSD to the central districts (Stari grad, Vračar, Savski venac) and 2,700 RSD to New Belgrade, Zemun and Surčin, at the City of Belgrade's zone fares as reported since August 2025, while an app-based [CarGo](/glossary/cargo) ride runs around 1,500 to 2,500 RSD, with the drive taking about 25 minutes. Belgrade has no Uber or Bolt; the main ride-hail apps are Yandex Go and CarGo. The driving distance to the centre (Trg Republike) is about 18 km via the E-70, around 20 to 25 minutes by car. These are indicative 2026 figures. For more on these options, see our guide to the [airport to city](/plan-your-trip/airport-to-city) journey.
 
 ## What's the best way to get to Expo from central Belgrade?
 

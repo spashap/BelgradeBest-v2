@@ -1,13 +1,13 @@
 ---
 leg: "plan-your-trip"
 slug: "visa-and-entry"
-title: "Do you need a visa for Serbia? Entry rules and registration"
+title: "Do you need a visa for Serbia? Not for US, UK, EU or Canada"
 shortTitle: "Visas & entry"
-description: "Do you need a visa for Serbia? US, UK, EU, Canadian and Australian citizens enter visa-free for 90 days in 180 — plus the 24-hour police registration rule that trips visitors up."
-lede: "Do you need a visa for Serbia? For most major nationalities the answer is no — EU, UK, US, Canadian and Australian citizens can visit visa-free for up to 90 days. But everyone meets one rule that catches visitors out: you must be registered with the police within 24 hours of arrival. Here's how entry and registration actually work, and where to confirm the rules for your own passport."
+description: "No visa for US, UK, EU, Canadian or Australian citizens: up to 90 days in any 180. Serbia is not in Schengen, EU citizens can enter with an ID card, and every visitor must be registered with the police within 24 hours."
+lede: "Do you need a visa for Serbia? For US, UK, EU, Canadian and Australian citizens, no: you can visit for up to 90 days in any 180-day period. EU, Swiss, Norwegian and Icelandic citizens can even enter with a national ID card. Serbia is not in Schengen, so its 90 days are separate from your Schengen days. The rule that catches visitors out is different: everyone must be registered with the police within 24 hours of arrival. Here's how entry and registration work, and where to check your own passport."
 heroLabel: "Serbia entry & registration / hero"
 heroAlt: "Entry rules and registration for visiting Serbia"
-lastUpdated: "2026-10-01"
+lastUpdated: "2026-11-16"
 order: 6
 visible: true
 intent: "both"
@@ -16,72 +16,119 @@ noindex: false
 linksTo:
   - "/plan-your-trip/staying-safe"
 faqs:
-  - answer: "For most major nationalities, no. As of 2026, US, UK, EU, Canadian and Australian citizens can enter Serbia visa-free for up to 90 days within a 180-day period for tourism or business. The visa-free list can change, so confirm your own nationality with the Serbian Ministry of Foreign Affairs (MFA) before you travel."
-    question: "Do US/UK/EU citizens need a visa for Serbia?"
-  - answer: "Visa-free visitors can stay up to 90 days within any 180-day period, counted on a rolling basis similar to the Schengen model, with the 180-day window starting from your first entry. Longer stays require a residence permit and the appropriate entry visa. Always check your own nationality with the Serbian MFA, since the visa-free list can change."
+  - answer: "No. US, UK, EU, Canadian and Australian citizens can enter Serbia without a visa for up to 90 days within a 180-day period, for tourism or business. The visa-free list does change, so check your own nationality with the Serbian Ministry of Foreign Affairs (MFA) before you travel."
+    question: "Do US, UK, EU or Canadian citizens need a visa for Serbia?"
+  - answer: "Up to 90 days within any 180-day period, counted on a rolling basis. Serbia is not in Schengen, so these 90 days are separate from any days you have used in the Schengen Area. Longer stays need a residence permit and the matching visa."
     question: "How long can I stay in Serbia without a visa?"
-  - answer: "Yes. Every foreigner must have their address of stay registered with the local police within 24 hours of arrival, regardless of nationality or the reason for the visit. Hotels and managed apartments usually do this automatically at check-in and give you a white card (Bela Karta); for private apartments or stays with friends, the host must register you or you must do it yourself, in person at the police station or online."
+  - answer: "No. Serbia is not an EU member and not part of the Schengen Area. A Schengen visa does not cover Serbia as such, though holders of a valid Schengen visa can enter Serbia visa-free under a separate Serbian rule, and days spent in Serbia do not count towards your 90 Schengen days."
+    question: "Is Belgrade in the Schengen Area?"
+  - answer: "Yes. According to the Serbian MFA, citizens of EU member states, Switzerland, Norway and Iceland can enter Serbia with a valid national ID card instead of a passport."
+    question: "Can EU citizens enter Serbia with an ID card?"
+  - answer: "Yes. Every foreigner must have their address registered with the local police within 24 hours of arrival. Hotels and registered apartments do this for you at check-in and give you a white card (bela karta). In a private flat or with friends, the host must register you, or you register yourself at the local police station."
     question: "Do I need to register my address in Serbia?"
-  - answer: "For private apartments, stays with friends or family, or unregistered rentals, the host must register you at the local police station within 24 hours, or you must do it yourself (in person or online). Some Airbnb hosts do not handle this, so confirm directly that you will receive a white card."
-    question: "What if I stay in an Airbnb or private apartment?"
-  - answer: "Your passport must be valid for at least 90 days after your intended date of departure from Serbia, have at least two consecutive blank pages, and (as a Serbian MFA rule) have been issued within the past 10 years. This applies whether or not you need a visa. Confirm the current rule with the MFA before you travel."
+  - answer: "Plan on a passport valid for at least 90 days after the day you leave Serbia. That is the Serbian MFA's stated requirement and the UK government's advice. The MFA's visa rules also ask for two blank pages and a passport issued within the last 10 years."
     question: "How long must my passport be valid to enter Serbia?"
-  - answer: "No. Serbia is not in the Schengen Area, so the EU's ETIAS scheme and the UK ETA do not apply to entering Serbia. As of 2026 there is no Serbia-specific online pre-registration for most short-stay tourists, though Serbia began issuing Digital Travel Authorisations for those who do need a visa in 2025."
-    question: "Does ETIAS or the UK ETA apply to Serbia?"
-  - answer: "Under a 2014 Serbian government decision, foreigners holding a valid Schengen, UK, EU or US visa or residence permit may enter without a Serbian visa for up to 90 days in 180, while that visa remains valid. Conditions can apply, so confirm your specific case before relying on it."
-    question: "Can I enter Serbia on a Schengen or US visa?"
+  - answer: "Yes, if you would otherwise need a visa. Under a 2014 Serbian government decision, holders of a valid Schengen, EU or US visa or residence permit, or a valid UK visa, can enter Serbia visa-free for up to 90 days in 180, but not beyond the date that visa or permit expires."
+    question: "Can I enter Serbia on a Schengen, UK or US visa?"
 isFaqCandidate: true
 unknowns: []
 ---
 
 ## Do you need a visa for Serbia?
 
-For most major nationalities, no. As of 2026, citizens of the EU, UK, USA, Canada, Australia and many other countries can enter Serbia visa-free for short stays. The single rule that actually trips visitors up is not the visa at all — it is the 24-hour police registration (the "white card"), covered below. If you take one thing from this page, take that.
+For most visitors from Europe, North America and Australia, no. Serbia lets citizens of the EU, the UK, the USA, Canada, Australia and many other countries visit **without a visa for up to 90 days in any 180-day period**, for tourism or business.
 
-This page covers short-stay tourism and business entry. If you are planning to live, work, study or relocate, the rules are different — see [when a short stay becomes something longer](#when-a-short-stay-becomes-something-longer).
+| Your passport | Visa for a short visit? | How long | Worth knowing |
+| --- | --- | --- | --- |
+| EU country, Switzerland, Norway, Iceland | No | 90 days in 180 | You can enter with a valid national ID card instead of a passport |
+| United Kingdom | No | 90 days in 180 | UK advice: passport valid at least 90 days after you leave |
+| United States | No | 90 days in 180 | |
+| Canada | No | Up to 90 days | The wording of Canada's official travel advice |
+| Australia | No | 90 days in 180 | |
+| Countries that need a visa | Yes, unless you hold a valid Schengen, EU, UK or US visa (see below) | 90 days in 180 | Some nationalities can apply online for a Digital Travel Authorisation |
+
+The rule that actually trips visitors up is not the visa at all. It is the **24-hour police registration** (the "white card"), covered below. If you take one thing from this page, take that.
+
+This page covers short tourist and business visits. If you plan to live, work, study or relocate, the rules are different: see [when a short stay becomes something longer](#when-a-short-stay-becomes-something-longer).
+
+## Is Belgrade in the Schengen Area?
+
+No. Serbia is not a member of the EU and is not part of the Schengen Area. That has three practical consequences:
+
+- **Your Serbian days are separate.** The 90 days in 180 you get in Serbia are counted on their own, and time in Serbia does not use up your Schengen allowance.
+- **A Schengen visa is not a Serbian visa.** It still helps: if you need a visa for Serbia but hold a valid Schengen visa, you can usually enter visa-free (see below).
+- **Expect a passport check at the border** between Serbia and its EU neighbours (Hungary, Croatia, Romania and Bulgaria), in both directions.
 
 ## How long can I stay in Serbia without a visa? The 90/180 rule
 
-Citizens of the EU, UK, USA, Canada, Australia and many other countries can visit Serbia visa-free for up to **90 days within a 180-day period**, for tourism or business. The "90 days in 180" is counted on a rolling basis, similar to the Schengen model, with the 180-day window starting from your first entry. To be clear, Serbia is **not** part of Schengen — its 90/180 allowance is separate from, and additional to, any Schengen days you may have used elsewhere.
+Visa-free visitors can stay up to **90 days within any 180-day period**. The count is rolling, as in Schengen: on any day, look back 180 days and add up the days you spent in Serbia. Canada's official advice simply says stays "up to 90 days" need no visa.
 
-The one thing to keep in mind is that the exact list of visa-free nationalities can change — occasional suspensions for particular countries have happened. Because that list is the part most likely to shift, always verify your own nationality and visa type with the Serbian Ministry of Foreign Affairs (MFA) before you travel. For nationals who do require a visa, the short-stay Visa C is reported to cover up to 90 days within 180 days for tourism, business, family visits, events or conferences. Serbia has also begun issuing visas in electronic form (Digital Travel Authorisations) alongside the traditional sticker, applied for through the official "Welcome to Serbia" portal or at a Serbian embassy or consulate.
+The visa-free list does change. In December 2024 Serbia began requiring visas from citizens of Kuwait, Oman and Qatar, and Mongolia lost visa-free entry in 2025, as part of Serbia aligning its visa policy with the EU's. So check your own nationality with the Serbian Ministry of Foreign Affairs (MFA) before you travel, especially if your passport is not in the table above.
+
+## Can EU citizens enter Serbia with an ID card?
+
+Yes. The Serbian MFA says citizens of EU member states, Switzerland, Norway and Iceland can enter Serbia with a valid national ID card. The same 90-day limit applies. If your trip continues to a non-EU country that requires a passport, or you might need one for something else, bring it anyway.
 
 ## Passport validity: how long must your passport be valid?
 
-This requirement applies whether or not you need a visa. As an MFA rule, your passport should be **valid for at least 90 days after your intended date of departure** from Serbia, have **at least two consecutive blank pages**, and have been **issued within the past 10 years**. (You may see informal advice to keep "six months" of validity as a buffer — that is a common cushion rather than the stated Serbian rule.) Because the precise wording can be updated, confirm the current requirement on the MFA site before you travel, and renew early if your passport is close to either limit.
+Plan on a passport that is **valid for at least 90 days after the day you leave Serbia**. That is the requirement the Serbian MFA states, and it is also the UK government's advice. The MFA's visa requirements add two more conditions: **at least two consecutive blank pages**, and a passport **issued within the last 10 years**.
 
-## If you hold a Schengen, UK, EU or US visa
+The governments' own advice differs slightly. Canada, for example, only says your passport must be valid for your stay, while airlines may apply stricter checks at boarding. Meeting the 90-day, two-page, 10-year standard covers you in every case, so renew early if your passport is close to any of those limits.
 
-There is a useful exemption many travellers overlook. Under a long-standing Serbian government decision from 30 October 2014, foreigners who would otherwise need a Serbian visa may enter without one if they hold a valid visa or residence permit from Schengen, the UK, an EU member state or the USA. They may stay up to 90 days within a 180-day period, but only while that underlying visa or residence permit remains valid. If the relevant visa sits in an expired passport, you can carry both the old and new passports together.
+## If you hold a Schengen, EU, UK or US visa
 
-This exemption is a stable legal structure, but conditions and suspensions can apply, so it is worth confirming your specific case before relying on it.
+There is a useful exemption that many travellers overlook. Under a Serbian government decision of 30 October 2014, people who would otherwise need a Serbian visa can enter without one if they hold:
 
-## ETIAS, ETA and e-Visa — what does not apply
+- a valid **Schengen, EU or US visa or residence permit**, or
+- a valid **UK visa**.
 
-Serbia is not in the Schengen Area. That means the EU's ETIAS scheme does not apply to entering Serbia, and the UK ETA does not apply either. For most short-stay tourists there is no Serbia-specific online pre-registration as of 2026; those who do need a visa generally apply through embassies or consulates.
+They can stay up to **90 days within 180 days**, but never beyond the date that visa or permit expires. If the visa is in an expired passport, carry the old and the new passport together. Holders of residence permits issued as cards should travel with their valid passport. The exemption does not cover long-stay purposes such as employment, which need a Serbian D visa.
 
-One EU system *does* matter if your trip continues into the Schengen Area — to Hungary, Croatia or Romania, say, or home via an EU airport. The EU's **Entry/Exit System (EES)** has been fully operational since 10 April 2026: when you cross from Serbia into Schengen as a non-EU visitor, your passport is scanned and your fingerprints and face photo are recorded at the border instead of a passport stamp. It adds a few minutes at the first crossing, particularly on busy road borders, and it changes nothing about entering Serbia itself.
+## E-visas, ETIAS and the EU's Entry/Exit System
 
-Serbia has moved some functions onto an online portal for foreigners — since 2025 it issues Digital Travel Authorisations (visas in electronic form) for those who do need a visa, applied for through the "Welcome to Serbia" portal. But mainstream short-stay tourists from visa-free countries still simply turn up at the border with a valid passport; there is no pre-arrival authorisation to buy. Any move to a full e-Visa or pre-registration system covering visa-free tourists would be widely reported, so treat the current picture as the working one rather than a fixed forever rule.
+**Serbia's Digital Travel Authorisation.** Since 23 April 2025 Serbia has issued visas in electronic form, applied for before travel through the official "Welcome to Serbia" portal. It is only for nationalities that need a visa and that the portal has been opened to; others still apply for a sticker visa at an embassy or consulate. Visa-free visitors need nothing: there is no pre-arrival authorisation to buy.
+
+**ETIAS and the UK ETA do not apply to Serbia.** Both are for entering the Schengen Area and the UK respectively.
+
+**The EU's Entry/Exit System (EES) matters only if you continue into the EU.** It started on 12 October 2025 and has been fully operational since 10 April 2026. When you cross from Serbia into a Schengen country as a non-EU visitor, your passport is scanned and your fingerprints and face photo are recorded instead of a stamp. That adds a few minutes at the first crossing, especially at busy road borders, and changes nothing about entering Serbia itself.
 
 ## Do I need to register my address in Serbia? The 24-hour white card
 
-Yes — and this is the rule that catches visitors out. Every foreigner must have their **address of stay registered with the local police within 24 hours of arrival**, regardless of nationality or the reason for the stay. The document you receive is the white card (in Serbian, the *Bela Karta*) — proof that you are registered to a specific address. The obligation runs two ways: accommodation providers — hotels, hostels, and individuals renting for compensation — and anyone hosting a foreign visitor are legally required to register that visitor within 24 hours, and the foreign national is also required to register their stay and any change of address within 24 hours.
+Yes, and this is the rule that catches visitors out. Every foreigner must have their **address registered with the local police within 24 hours of arrival**, whatever their nationality or reason for visiting. The obligation runs two ways:
 
-In practice, this is usually invisible. Hotels, hostels and managed or registered apartments handle it automatically at check-in, so guests rarely need to visit the police in person, and you receive a copy of the white card (sometimes called the *Bela Karta*).
+- **Hosts must register you.** Hotels, hostels, anyone renting rooms for money, and anyone hosting a foreign visitor must register that visitor within 24 hours.
+- **You must be registered.** The foreigner is also responsible for registering their stay, and any change of address, within 24 hours.
 
-The gap appears with private stays. If you are staying in a private apartment, with friends or family, or in an unregistered rental, the host must register you at the local police station within 24 hours — or you must do it yourself. Registration can be done in person at the local police station for the municipality where you are staying (or the Police Department for Foreigners), and is also possible online. Some Airbnb hosts do not handle this, which can leave guests technically unregistered without realising it. If you book a private apartment, ask your host directly whether they will register you, and confirm you have a white card.
+The proof is a white card (*bela karta*) showing that you are registered at a specific address.
 
-The white card should be carried with your passport during the stay; it is reported that it may be collected on departure and is needed if you later apply for residence. Failing to register can lead to fines or administrative problems at departure or in future applications, though the precise enforcement detail — paper versus digital card, and how strictly it is checked — is the kind of thing that changes over time. If you change address during your stay, you must update the registration at the police station for the new address within 24 hours.
+**In a hotel, this is invisible.** Hotels, hostels and registered apartments do it at check-in, and you rarely need to visit the police. If you would rather not deal with it at all, staying in registered accommodation is the simple answer: see [where to stay in Belgrade](/where-to-stay).
 
-Keeping your paperwork in order is part of a smooth, low-stress trip; for the broader picture, see our guide to [staying safe in Belgrade](/plan-your-trip/staying-safe).
+**In a private flat, check first.** If you stay in a private apartment, with friends or family, or in an unregistered rental, the host must register you at the local police station within 24 hours, or you go yourself. Some short-let hosts do not handle it, which leaves guests unregistered without realising it. Before you book, ask the host whether they will register you, and make sure you receive the white card.
+
+Keep the white card with your passport during your stay. Failing to register can lead to a fine and to problems when you leave or apply for anything later. If you move to a new address, the registration has to be updated within 24 hours there too.
+
+Keeping your paperwork in order is part of a smooth trip. For the broader picture, see our guide to [staying safe in Belgrade](/plan-your-trip/staying-safe).
 
 ## When a short stay becomes something longer
 
-Tourist and short business visits are capped at 90 days within 180 days. Longer stays, employment and many forms of study require temporary or permanent residence permits and the appropriate entry visa, such as a Visa D. Permanent residents also follow a different registration regime — eight days to register domicile rather than 24 hours.
+Tourist and short business visits are capped at 90 days within 180 days. Longer stays, employment and many forms of study need a temporary or permanent residence permit and the matching entry visa, such as a D visa. Permanent residents follow a different registration rule: eight days to register an address rather than 24 hours.
 
-Those residence, work and digital-nomad pathways are beyond the scope of this arrival-focused page.
+Residence, work and digital-nomad routes are beyond this arrival-focused page.
+
+## After passport control
+
+Once you are through the border at Belgrade airport, the next decisions are practical:
+
+- **Getting into town:** a free bus, a 400-dinar minibus or a fixed-price taxi. Our [airport-to-city guide](/plan-your-trip/airport-to-city) compares them, with how to pay for each.
+- **Cash:** you need dinars for the minibus, and airport exchange rates are poor. See [money in Belgrade](/plan-your-trip/money).
+- **A bed that registers you:** [where to stay in Belgrade](/where-to-stay) compares the neighbourhoods.
 
 ## What's still unknown
 
-The legal framework here — the 90/180 rule and the registration obligation — is stable. What changes is the perishable detail: the exact visa-free country list, whether Serbia expands online registration into a true e-Visa, and the fine print of how the white card is issued and checked. For your own passport and current conditions, the official MFA checker is the source to trust.
+The legal framework is stable: the 90/180 rule and the registration duty don't change from month to month. What does change is the detail:
+
+- the exact visa-free country list, as Serbia aligns its policy with the EU's;
+- which nationalities the e-visa portal is open to;
+- how the white card is issued and checked.
+
+For your own passport, the Serbian MFA is the source to trust.

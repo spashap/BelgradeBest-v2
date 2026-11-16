@@ -7,7 +7,7 @@ description: "Jak se dostat na Expo 2027 v Bělehradě: areál v Surčinu je ~5 
 lede: "Takto se dostanete na Expo 2027 v Bělehradě: areál je v Surčinu, zhruba 5 km od letiště Nikoly Tesly a přibližně 13,5 km od centra města (podle oficiálního FAQ pro účastníky). Tato stránka sleduje každou trasu, kterou známe: z letiště, z centra města bezplatnou sítí MHD i plánovanou novou železnicí, a jasně označuje, co je potvrzeno a co jsou zatím jen sliby."
 heroLabel: "Areál v Surčinu / mapa letiště hero"
 heroAlt: "Panorama Bělehradu: cesta do areálu Expa 2027 v Surčinu"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-16"
 order: 4
 visible: true
 intent: "both"
@@ -70,7 +70,7 @@ Pokud jste četli průvodce, který vám radí koupit si jízdenku nebo dopravn�
 
 Jedinou placenou výjimkou je letištní minibus A1, který jezdí mezi letištěm Nikoly Tesly a náměstím Slavija (Trg Slavija) se zastávkou v Novém Bělehradě (Fontana). Je to samostatná placená kyvadlová linka. Podle dostupných údajů jezdí přes den zhruba každých 15 až 30 minut, jízdenka u řidiče stojí asi 400 RSD v hotovosti a cesta na náměstí Slavija trvá asi 30 až 40 minut. Jízdné berte jako orientační údaj pro rok 2026: postupně rostlo a do roku 2027 se může změnit.
 
-Pro taxi má letiště oficiální systém poukazů: v samoobslužném kiosku si vezmete poukaz s pevnou cenou, s ním dojdete na stanoviště taxi a řidič účtuje pouze cenu uvedenou na poukazu. Oficiální taxi do centrálních zón vychází podle dostupných údajů zhruba na 2 200 až 2 800 RSD, zatímco jízda objednaná přes aplikaci [CarGo (EN)](/glossary/cargo) vyjde přibližně na 1 500 až 2 500 RSD a trvá asi 25 minut. Bělehrad nemá Uber ani Bolt; hlavními aplikacemi pro objednání odvozu jsou Yandex Go a CarGo. Do centra (Trg Republike) je to po silnici asi 18 km po E-70, autem přibližně 20 až 25 minut. Jde o orientační údaje pro rok 2026. Více o těchto možnostech najdete v našem průvodci [cestou z letiště do města (EN)](/plan-your-trip/airport-to-city).
+Pro taxi má letiště oficiální systém poukazů: v samoobslužném kiosku si vezmete poukaz s pevnou cenou, s ním dojdete na stanoviště taxi a řidič účtuje pouze cenu uvedenou na poukazu. Oficiální taxi s poukazem stojí podle zónových cen města Bělehradu, uváděných od srpna 2025, 3 500 RSD do centrálních čtvrtí (Stari grad, Vračar, Savski venac) a 2 700 RSD do Nového Bělehradu, Zemunu a Surčinu, zatímco jízda objednaná přes aplikaci [CarGo (EN)](/glossary/cargo) vyjde přibližně na 1 500 až 2 500 RSD a trvá asi 25 minut. Bělehrad nemá Uber ani Bolt; hlavními aplikacemi pro objednání odvozu jsou Yandex Go a CarGo. Do centra (Trg Republike) je to po silnici asi 18 km po E-70, autem přibližně 20 až 25 minut. Jde o orientační údaje pro rok 2026. Více o těchto možnostech najdete v našem průvodci [cestou z letiště do města (EN)](/plan-your-trip/airport-to-city).
 
 ## Jak se nejlépe dostat na Expo z centra Bělehradu?
 

@@ -1038,6 +1038,12 @@ a.c-gtk__link:hover {
 .c-data-table tbody tr:last-child td,
 .c-article tbody tr:last-child td { border-bottom: none; }
 .c-data-table table { margin: 0; }
+/* Markdown tables can't carry the .c-data-table wrapper, so below the
+   tablet width the table itself scrolls sideways instead of widening the
+   page (the airport comparison table has five columns). */
+@media (max-width: 759px) {
+  .c-article table { display: block; overflow-x: auto; }
+}
 
 /* --- c-listing-form : the get-listed request form (for-businesses). Stacked
    labels, token-styled fields; posts to the serverless lead endpoint. --- */
