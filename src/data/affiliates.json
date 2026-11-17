@@ -43,6 +43,20 @@
       "network": "cj",
       "cjAdvertiser": "5289333"
     },
+    "daytrip": {
+      "name": "Daytrip (via CJ)",
+      "what": "Private car transfers and day trips with a driver (day trips page: Novi Sad + Sremski Karlovci; stations page: Novi Sad and Budapest transfers)",
+      "field": "url",
+      "fieldLabel": "CJ click link for Daytrip (https://www.anrdoezrs.net/click-…)",
+      "enabled": false,
+      "value": "",
+      "available": true,
+      "dashboard": "https://members.cj.com",
+      "accepted": "2026-11-17",
+      "changedAt": null,
+      "network": "cj",
+      "cjAdvertiser": "8046928"
+    },
     "alosim": {
       "name": "aloSIM",
       "what": "eSIM for Serbia (SIM & connectivity page) — not placed yet",
@@ -60,6 +74,6 @@
   "_cj": {
     "publisherCid": "7995454", "cjUserId": "7672064",
     "websitePid": "101807971",
-    "note": "CJ click links: https://www.anrdoezrs.net/click-<PID>-<linkId>. lib/affiliates.ts adds ?url=<deep link> (where the target names one) and &sid=bb-<placement> so CJ reports show which placement earns. Pending at CJ 2026-11-15: Qatar Airways, Trip.com. Applying to new programmes is blocked until the CJ Network Profile is complete (owner action)."
+    "note": "CJ click links: https://www.anrdoezrs.net/click-<PID>-<linkId>. lib/affiliates.ts adds ?url=<deep link> (where the target names one) and &sid=bb-<placement> so CJ reports show which placement earns. Daytrip accepted 2026-11-17 (13%, 14-day cookie, no brand SEM); placed but OFF until its CJ click link is pasted in /admin/affiliates. Still pending at CJ: GetYourGuide, Qatar Airways, Trip.com."
   }
 }

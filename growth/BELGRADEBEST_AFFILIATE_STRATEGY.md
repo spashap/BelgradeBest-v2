@@ -1,6 +1,6 @@
 # BelgradeBest — affiliate placement strategy
 
-*16 November 2026. Covers Booking.com, Welcome Pickups and Air Serbia (all via CJ).*
+*16 November 2026. Covers Booking.com, Welcome Pickups, Air Serbia and, from 17 Nov, Daytrip (all via CJ).*
 
 ## TL;DR
 
@@ -75,6 +75,7 @@ Pavilion flight sub-IDs are `bb-[lang-]<pavilion initials>-flights` (e.g. `bb-us
 | Booking.com (CEE programme) | 4% of the booking | **1 day of the click** | Only after the stay happens. A cancelled booking pays nothing. | No paid ads that use Booking or hotel names, no iframes, no coupon or voucher claims |
 | Welcome Pickups | 7% of the transfer | 45 days | When the ride takes place | No links on sites we don't own (forums, Facebook groups) without the owner's consent; only CJ-supplied material (plain text links are fine); no brand-name ads |
 | Air Serbia | 1% of the ticket | 45 days | On a confirmed sale | No Google Ads, no misleading claims, only authorised material |
+| Daytrip (accepted 17 Nov, from Daytrip's welcome email) | 13% of the trip | 14 days | Not stated in the email; check in CJ | No search ads on the Daytrip brand |
 
 What this means:
 
@@ -107,8 +108,18 @@ The site has about 100–200 visitors on its best Expo pages per quarter. Even a
    - translating the where-to-stay cards into the Slovak and Czech pilots, whose readers come for Expo tickets and travel.
 2. **Unblock the CJ applications (owner action: complete the CJ Network Profile).** Spots are already mapped for these partners:
    - **GetYourGuide:** Iron Gates and Oplenac day tours, the Novi Sad + Fruška Gora tour, the Brutalism tour, wine tastings, stadium tours;
-   - **Daytrip:** Novi Sad and Budapest transfers;
+   - **Daytrip: accepted 17 Nov and placed** (see below);
    - **12GO:** Belgrade–Budapest, Novi Sad and Niš buses.
+
+   **Daytrip placements (17 Nov, OFF until its CJ click link is pasted in `/admin/affiliates`):**
+   - **Day trips page:** "Daytrip's Novi Sad and Sremski Karlovci day trip" (`aff:go/daytrip-karlovci`), in the paragraph that says the three-stop day is awkward by public transport;
+   - **Stations page:** a private transfer to Novi Sad (`daytrip-novi-sad`) and to Budapest (`daytrip-budapest`), the latter until the Budapest passenger trains run (announced for 13 Dec 2026).
+
+   **Per sale:** Daytrip lists prices per person (Budapest from about US$87, Novi Sad from US$22, the Karlovci day trip from €40; checked 17 Nov). At 13%, a Budapest transfer for two pays roughly €20, more than a typical hotel stay. Its 14-day window also beats Booking's 1 day.
+
+   **Check once CJ is reachable:**
+   - Copy Daytrip's click link from CJ (Links → Daytrip) into the admin and switch it on.
+   - Test one link: does CJ honour `?url=` deep links for Daytrip? If not, every link lands on Daytrip's home page, like Welcome Pickups.
 
    Each is one line in `partner-links.json` plus an `aff:go/…` link in the article.
 3. **Swissôtel Belgrade EXPO** (inside the Expo complex, opening Q1 2027): add it to the Expo card as soon as Booking takes bookings for it.

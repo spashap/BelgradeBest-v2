@@ -31,6 +31,22 @@
     "esim": {
       "label": "Get a Serbia eSIM before you fly (aloSIM)",
       "partner": "alosim"
+    },
+    "daytrip-karlovci": {
+      "label": "Private day trip to Novi Sad and Sremski Karlovci (Daytrip)",
+      "partner": "daytrip",
+      "deep": { "en": "https://daytrip.com/en/day-trips/from-belgrade/novi-sad-sremski-karlovaci" }
+    },
+    "daytrip-novi-sad": {
+      "label": "Private transfer from Belgrade to Novi Sad (Daytrip)",
+      "partner": "daytrip",
+      "deep": { "en": "https://daytrip.com/en/transfers/belgrade-rs/novi-sad-rs" }
+    },
+    "daytrip-budapest": {
+      "label": "Private transfer from Belgrade to Budapest (Daytrip)",
+      "partner": "daytrip",
+      "deep": { "en": "https://daytrip.com/en/transfers/belgrade-rs/budapest-hu" },
+      "_deepNote": "Daytrip pages checked in Chrome 2026-11-17: day trip 7 h round trip with a private driver; Novi Sad transfer ~1 h / 94 km; Budapest transfer ~3 h 50 min / 378 km. Whether CJ honours ?url= deep links for Daytrip is unchecked (cj.com was unreachable from this machine); if it does not, every link lands on Daytrip's home page."
     }
   },
   "_note": "Placements for non-hotel partners. On/off and the tracked links live in src/data/affiliates.json (edited from /admin/affiliates).",

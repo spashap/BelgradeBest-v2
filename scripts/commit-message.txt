@@ -1,21 +1,27 @@
-Entry pages: passport rules corrected, proof of funds added (EN + DE)
+Daytrip added as a partner (off until its CJ link is pasted); Budapest train date
 
-The visa-and-entry pages said the Serbian MFA requires a passport valid
-90 days after departure, two blank pages and issued within 10 years.
-Checked 17 Nov against the sources: those three are the MFA's conditions
-for a visa APPLICATION. For visa-free visitors the MFA's general entry
-requirements (and the government's Welcome to Serbia portal) ask only
-for a valid travel document. The 90 days is the UK government's advice;
-Germany's Foreign Office and Canada say valid for the whole stay.
+Daytrip accepted our CJ application on 17 Nov: 13% commission, 14-day
+cookie (Booking gives 1 day), no brand search ads. A Belgrade-Budapest
+transfer for two pays roughly what a hotel stay does.
 
-- Passport section rewritten on /plan-your-trip/visa-and-entry and its
-  German twin: Serbia's own rule, what the UK, Germany and Canada
-  advise, the safe plan (90 days covers all), and the visa-applicant
-  conditions labelled as such.
-- New short section on both pages: what else the border can ask for
-  (EUR 50 a day in funds, recommended health insurance of EUR 20,000,
-  documents such as a return ticket), from the MFA's entry requirements.
-- English FAQ source note corrected so it cannot bring the claim back.
-- BB-CHG-0058; content baseline re-recorded.
+- affiliates.json: partner "daytrip" (CJ advertiser 8046928), enabled
+  false and no link yet. Paste the CJ click link in /admin/affiliates and
+  switch it on; the rebuild makes the links live.
+- partner-links.json: targets daytrip-karlovci, daytrip-novi-sad and
+  daytrip-budapest, deep-linked to the Daytrip pages checked in Chrome.
+- Placements, only where the page already says the trip is hard without
+  a car:
+  - day trips: the Novi Sad + Sremski Karlovci private day trip, in the
+    paragraph on combining the stops;
+  - stations: private transfers to Novi Sad and to Budapest.
+  While the partner is off they render as plain text (checked); a
+  placeholder-link build showed the Ad labels and sub-IDs bb-bdt-* and
+  bb-saot-*.
+- Stations page: Belgrade-Budapest passenger trains now announced for
+  13 December 2026 (Srbijavoz, 27 Oct), replacing "within weeks".
+- How we make money: the disclosure now names transfers and day trips
+  with a private driver.
+- Strategy doc terms table and plan progress; BB-CHG-0059; content
+  baseline re-recorded.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

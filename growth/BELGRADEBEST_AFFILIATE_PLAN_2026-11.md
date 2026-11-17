@@ -135,3 +135,11 @@
     - **Sub-IDs:** `bb-de-atc-*` and `bb-de-wtsib-*`.
   - **How they're reached:** the German hub lists them under "Reise planen". The German Expo pages offer them in "Mehr auf Deutsch".
   - **Measure:** Bing impressions and clicks on the three URLs (from 0), and affiliate clicks from `/de/` pages.
+- **17 Nov: entry pages corrected (V01.075).** The English and German visa-and-entry pages had presented the Serbian MFA's visa-application conditions (two blank pages, a passport issued within 10 years) as rules for everyone. They now give Serbia's own rule (a valid passport or ID card), the UK, German and Canadian advice, and the visa-applicant conditions labelled as such. Both pages also gained a short section on what else the border can ask for (€50 a day in funds). No affiliate links, by rule.
+- **17 Nov: Daytrip accepted and placed** (13%, 14-day cookie, no brand search ads).
+  - **Where:**
+    - the day trips page: a private Novi Sad + Sremski Karlovci day trip;
+    - the stations page: private transfers to Novi Sad and to Budapest.
+  - **State:** the partner is OFF until its CJ click link is pasted in `/admin/affiliates` (cj.com did not resolve from this machine's DNS on 17 Nov).
+  - **Stations page fact updated:** Belgrade–Budapest passenger trains are now announced for 13 December 2026 (Srbijavoz, 27 Oct).
+  - **Measure:** `aff_click_daytrip` in the admin, CJ sub-IDs `bb-bdt-daytrip-*` and `bb-saot-daytrip-*`.

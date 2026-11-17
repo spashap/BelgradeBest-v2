@@ -7,7 +7,7 @@ description: "The best day trips from Belgrade — Novi Sad by train in about 35
 lede: "Some of Serbia's best sits within a day of Belgrade — Novi Sad on a roughly 35-minute high-speed train, the Iron Gates gorge, the royal mausoleum at Oplenac. Here's what's worth it, and whether to go it alone or take a tour."
 heroLabel: "Day trips from Belgrade / hero"
 heroAlt: "Setting out on a day trip from Belgrade by train"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-17"
 order: 9
 visible: true
 intent: "leisure"
@@ -57,7 +57,7 @@ The single must-see is **Petrovaradin Fortress**, the great 18th-century Habsbur
 
 The calculus changes if you want to add Sremski Karlovci and the Fruška Gora monasteries — both just south of Novi Sad — to the same day. **Sremski Karlovci** is a small, postcard-pretty Baroque town that was once the spiritual and cultural capital of the Serbs under Habsburg rule: its centrepiece square holds the Orthodox cathedral, the old Patriarchate palace, the first Serbian grammar school, and the Four Lions fountain, and the surrounding hills are wine country, so a tasting of the local Bermet dessert wine is the usual reason to linger. **Fruška Gora** is the low, forested mountain ridge running west from there — a national park studded with Orthodox monasteries (sixteen survive of a medieval total once far higher), several open to visitors, set among vineyards and walking trails.
 
-Stringing all three — Novi Sad, Karlovci, and a monastery or two — together by public transport is awkward, with no single clean connection, so most first-time visitors take a guided day tour instead. These are reported at around eight to ten hours, with small-group pricing reported at roughly US$85 per person (last observed 2025; verify before booking). The figures are perishable, so confirm both duration and price before you commit. The trade is straightforward: do Novi Sad alone by train and keep it cheap and flexible, or pay for a tour and let it carry you across the three scattered stops in a day you could not easily assemble yourself.
+Stringing all three — Novi Sad, Karlovci, and a monastery or two — together by public transport is awkward, with no single clean connection, so most first-time visitors take a guided day tour instead. These are reported at around eight to ten hours, with small-group pricing reported at roughly US$85 per person (last observed 2025; verify before booking). The figures are perishable, so confirm both duration and price before you commit. A middle way is a private car: [Daytrip's Novi Sad and Sremski Karlovci day trip](aff:go/daytrip-karlovci) picks you up at your Belgrade address and runs about seven hours, at your own pace. It covers the two towns, not the monasteries, and comes with a driver rather than a guide. The trade is straightforward: do Novi Sad alone by train and keep it cheap and flexible, or pay for a tour and let it carry you across the three scattered stops in a day you could not easily assemble yourself.
 
 ## The Iron Gates and Đerdap gorge — tour territory
 
