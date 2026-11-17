@@ -57,9 +57,20 @@ Ja. Das serbische MFA sagt, dass Bürger der EU-Mitgliedstaaten, der Schweiz, No
 
 ## Passgültigkeit: Wie lange muss Ihr Reisepass gültig sein?
 
-Planen Sie mit einem Pass, der **nach dem Tag Ihrer Ausreise aus Serbien noch mindestens 90 Tage gültig ist**. Das ist die Anforderung, die das serbische MFA nennt, und es ist auch der Rat der britischen Regierung. Die Visabestimmungen des MFA nennen zwei weitere Bedingungen: **mindestens zwei aufeinanderfolgende freie Seiten** und ein Pass, der **in den letzten 10 Jahren ausgestellt wurde**.
+Serbiens eigene Einreiseregel ist einfach: Sie brauchen einen **gültigen Reisepass** oder, als Bürger der EU, der Schweiz, Norwegens oder Islands, einen gültigen nationalen Personalausweis (Identitätskarte). Die allgemeinen Einreisebestimmungen des serbischen MFA nennen darüber hinaus keine Mindestgültigkeit.
 
-Die Hinweise der einzelnen Regierungen weichen leicht voneinander ab. Kanada sagt zum Beispiel nur, Ihr Pass müsse für Ihren Aufenthalt gültig sein, während Fluggesellschaften beim Boarding strenger prüfen können. Wer den Standard aus 90 Tagen, zwei Seiten und 10 Jahren erfüllt, ist in jedem Fall abgedeckt. Erneuern Sie Ihren Pass also frühzeitig, wenn er einer dieser Grenzen nahekommt.
+Die Reisehinweise der einzelnen Regierungen sind vorsichtiger und unterscheiden sich:
+
+- **Deutschland** (Auswärtiges Amt) und **Kanada:** gültig für die **gesamte Dauer des Aufenthalts**.
+- **Vereinigtes Königreich:** Der Pass muss **mindestens 90 Tage nach dem geplanten Ausreisedatum** noch gültig sein.
+
+Fluggesellschaften können strenger prüfen als die Grenzpolizei. Am sichersten planen Sie mit einem Dokument, das noch mindestens 90 Tage über Ihr Ausreisedatum hinaus gültig ist; damit erfüllen Sie alle diese Vorgaben. Erneuern Sie es also frühzeitig, wenn es dieser Grenze nahekommt.
+
+**Sie beantragen ein serbisches Visum?** Dann verlangen die Visabestimmungen des MFA mehr: einen Pass, der mindestens 90 Tage nach der geplanten Ausreise gültig ist, **mindestens zwei aufeinanderfolgende freie Seiten** hat und **in den letzten 10 Jahren ausgestellt wurde**. Das sind Bedingungen für den Visumantrag, nicht für die visumfreie Einreise. Eine freie Seite für die Grenzstempel ist trotzdem sinnvoll.
+
+## Was kann die Grenzpolizei noch verlangen?
+
+Zu den allgemeinen Einreisebestimmungen des MFA gehören außerdem ausreichende Mittel für den Aufenthalt: **50 Euro pro Tag**, nachzuweisen in bar oder per Kontoauszug. Eine Krankenversicherung mit mindestens 20.000 Euro Deckung für Behandlungskosten wird empfohlen, ist aber keine Pflicht. Die Grenzbeamten können auch weitere Unterlagen sehen wollen, etwa ein Rückflugticket.
 
 ## Wenn Sie ein Schengen-, EU-, UK- oder US-Visum haben
 

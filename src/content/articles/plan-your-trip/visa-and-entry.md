@@ -26,7 +26,7 @@ faqs:
     question: "Can EU citizens enter Serbia with an ID card?"
   - answer: "Yes. Every foreigner must have their address registered with the local police within 24 hours of arrival. Hotels and registered apartments do this for you at check-in and give you a white card (bela karta). In a private flat or with friends, the host must register you, or you register yourself at the local police station."
     question: "Do I need to register my address in Serbia?"
-  - answer: "Plan on a passport valid for at least 90 days after the day you leave Serbia. That is the Serbian MFA's stated requirement and the UK government's advice. The MFA's visa rules also ask for two blank pages and a passport issued within the last 10 years."
+  - answer: "Serbia's own entry rule asks only for a valid passport (or, for EU, Swiss, Norwegian and Icelandic citizens, a valid ID card). The UK government advises a passport that expires at least 90 days after you leave Serbia; Germany and Canada say valid for the whole stay. Plan on the 90 days and you meet all of them. The two blank pages and 10-year issue limit in the Serbian MFA's rules apply to visa applications, not to visa-free visitors."
     question: "How long must my passport be valid to enter Serbia?"
   - answer: "Yes, if you would otherwise need a visa. Under a 2014 Serbian government decision, holders of a valid Schengen, EU or US visa or residence permit, or a valid UK visa, can enter Serbia visa-free for up to 90 days in 180, but not beyond the date that visa or permit expires."
     question: "Can I enter Serbia on a Schengen, UK or US visa?"
@@ -71,9 +71,20 @@ Yes. The Serbian MFA says citizens of EU member states, Switzerland, Norway and 
 
 ## Passport validity: how long must your passport be valid?
 
-Plan on a passport that is **valid for at least 90 days after the day you leave Serbia**. That is the requirement the Serbian MFA states, and it is also the UK government's advice. The MFA's visa requirements add two more conditions: **at least two consecutive blank pages**, and a passport **issued within the last 10 years**.
+Serbia's own entry rule is simple: you need a **valid passport**, or, as a citizen of the EU, Switzerland, Norway or Iceland, a valid national ID card. The Serbian MFA's general entry requirements set no minimum number of months beyond that.
 
-The governments' own advice differs slightly. Canada, for example, only says your passport must be valid for your stay, while airlines may apply stricter checks at boarding. Meeting the 90-day, two-page, 10-year standard covers you in every case, so renew early if your passport is close to any of those limits.
+Governments advise their own travellers more cautiously, and they differ:
+
+- **UK:** your passport must expire at least **90 days after the date you plan to leave Serbia**.
+- **Germany** (Auswärtiges Amt) and **Canada:** valid for the **whole of your stay**.
+
+Airlines can check more strictly than the border does. The safe plan is a passport valid at least 90 days beyond your departure date, which meets every one of these, so renew early if yours is close to that limit.
+
+**Applying for a Serbian visa?** Then the MFA's visa rules ask for more: a passport valid at least 90 days after your planned departure, with **at least two consecutive blank pages**, **issued within the past 10 years**. Those are conditions for a visa application, not for visa-free entry, though a free page for the border stamps is still sensible.
+
+## What else can the border ask for?
+
+The MFA's general entry requirements also include enough money for your stay, which it puts at **€50 a day**, shown in cash or with a bank statement. Health insurance covering at least €20,000 of medical costs is recommended, not required. Border officers may also ask to see other documents, such as a return ticket.
 
 ## If you hold a Schengen, EU, UK or US visa
 
