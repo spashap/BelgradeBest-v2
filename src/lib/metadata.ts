@@ -71,13 +71,18 @@ export function pageMetadata({ title, description, path, noindex, noAnalytics, i
 // Leg-hub <head> from the leg's (optionally-overridden) SEO fields. Empty
 // seoTitle/seoDescription fall back to the derived values (`${title} —
 // ${tagline}` / `intro`), so a hub with no overrides renders as before.
-export function hubMetadata(slug: string): PageMeta {
+// `fill` replaces {key} tokens in the SEO strings with values the page computes
+// from its data masters (e.g. the Expo hub's {participants} count and {tickets}
+// status), so a search snippet can carry a live figure without a stale copy.
+export function hubMetadata(slug: string, fill: Record<string, string | number> = {}): PageMeta {
   const c = clusterBySlug(slug);
   if (!c) throw new Error(`hubMetadata: unknown leg '${slug}'`);
   const legHero = heroForLeg(slug, c.hero?.alt ?? c.title);
+  const filled = (s: string) =>
+    s.replace(/\{(\w+)\}/g, (m, k: string) => (k in fill ? String(fill[k]) : m)).replace(/\s{2,}/g, " ").trim();
   return pageMetadata({
-    title: c.seoTitle?.trim() || `${c.title} — ${c.tagline}`,
-    description: c.seoDescription?.trim() || c.intro,
+    title: filled(c.seoTitle?.trim() || `${c.title} — ${c.tagline}`),
+    description: filled(c.seoDescription?.trim() || c.intro),
     path: c.href,
     noindex: c.noindex,
     image: legHero?.src,

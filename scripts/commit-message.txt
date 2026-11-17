@@ -1,23 +1,27 @@
-Money page reworked for Bing currency queries; tipping consistent site-wide
+Expo hub reworked for Bing click-through; quick answers and visitor FAQs up top
 
-- /plan-your-trip/money rewritten on the same URL for its Bing queries
-  ("belgrade currency", "can you use euros in serbia"):
-  - quick-answer table;
-  - the exchange rate (NBS 117.62 on 13 Nov 2026);
-  - the euro answer sourced to Article 34 of the foreign-exchange law;
-  - a card-or-cash table by situation; ATM fees and the DCC trap;
-  - the NBS +/-1.25% euro band at exchange offices;
-  - airport cash by transfer type; paying for a stay, with the 240 RSD
-    tourist tax;
-  - leaving Serbia: EUR 10,000 declaration and the VAT refund
-    (6,000 RSD minimum per seller).
-  Removed an unverified ATM cap and an Expo price-rise line. Still no
-  affiliate links (strategy rule). Read-next now leads to the airport,
-  where-to-stay and eating-and-drinking pages.
-- Tipping now reads "about 10%, in cash" on the money, eating-and-
-  drinking, kafanas, first-time and business stay pages (was 5-10%,
-  10% and 10-15% in different places).
-- Content-integrity baseline re-recorded; plan progress updated;
-  BB-CHG-0055.
+The hub holds 39% of the site's Bing impressions but converts only 2.3%
+(64 clicks / 2,797 impressions, avg position 5.4, 8 weeks to 16 Nov).
+
+- Title and description lead with the answer:
+  "Expo 2027 Belgrade, 15 May-15 Aug: tickets, travel and 141 countries"
+  plus where it is, ticket status, getting there and where to stay. The
+  participant count and the ticket status fill in at build
+  (hubMetadata gained a {token} fill param), so the snippet cannot keep
+  a stale figure.
+- Ticket status now lives in three constants at the top of
+  pages/expo-2027/index.astro; the on-sale kit and strings.en.md list
+  them.
+- Quick answers (dates, where, tickets, getting there, stay, visa,
+  countries, theme) moved under the countdown, with the Stay line into
+  the Expo stay page. The three language notes now sit below them.
+- Five visitor FAQs (when/where, tickets, transport, stay, visa) ahead
+  of the participation FAQs, in the FAQPage JSON-LD too.
+- Hub body: EKSPO lines "announced, not yet confirmed running" (it still
+  said the transport plan was unannounced); "first World Expo"
+  corrected to the first Specialised Expo in the Western Balkans.
+- what-is-it and programme, which also rank for "expo 2027", link the
+  hub in their text.
+- BB-CHG-0056; plan progress updated.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

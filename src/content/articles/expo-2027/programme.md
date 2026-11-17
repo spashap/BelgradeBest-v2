@@ -7,7 +7,7 @@ description: "Expo 2027 programme: pavilions, National Days, sport and music und
 lede: "Expo 2027's theme — Play for Humanity: Sport and Music for All — frames the official programme. This page is your guide to what's on: the pavilions and themed areas, the sport and music programming, the National Days, and an honest account of which dates, opening hours and headline acts are not yet published."
 heroLabel: "Expo 2027 programme / hero"
 heroAlt: "The Expo 2027 promenade in Belgrade at golden hour — sport, music and play"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-17"
 order: 3
 visible: true
 intent: "both"
@@ -46,7 +46,7 @@ unknowns:
 
 Plenty — even though the dated calendar isn't out yet. The Expo 2027 programme is organised around three thematic pavilions and a Forum, themed strands for music and sport, record-breaking "Limitless Play" challenges, a National Day for each participating country, and city-wide "Playgrounds" that spill the event out beyond the gates. Independent guides also describe daily live performances during the run, from floating-stage concerts to murals painted in real time. The high-level shape of "what's on" is confirmed and explained below; what is not yet published is the day-by-day schedule — which concert, which match, which National Day falls on which date — and that gap is flagged honestly throughout this page.
 
-This matters for planning because Expo 2027 is not a single festival weekend. It is a Specialised (three-month) Expo running **15 May–15 August 2027, a span of 93 days**, and the programme is designed to unfold across the whole summer. So "what's on at Expo 2027" is best thought of as a season of programming rather than one headline event.
+This matters for planning because Expo 2027 is not a single festival weekend. It is a Specialised (three-month) Expo running **15 May–15 August 2027, a span of 93 days**, and the programme is designed to unfold across the whole summer. So "what's on at Expo 2027" is best thought of as a season of programming rather than one headline event. For tickets, transport and the participating countries, start from the [Expo 2027 Belgrade overview](/expo-2027).
 
 ## What is the theme of Expo 2027?
 

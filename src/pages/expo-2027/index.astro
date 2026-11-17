@@ -44,7 +44,19 @@ import { ogImage } from "../../lib/og";
 // the page can never drift stale the way the retired /participants article did.
 const LEG = "expo-2027";
 const cluster = clusterBySlug(LEG)!;
-const meta = { ...hubMetadata(LEG), alternates: alternates(`/${LEG}`, PAGE_TWINS[`/${LEG}`]) }; // hreflang ↔ /de, /sk (language pilots)
+
+// Ticket status lives HERE, once, for the hub: the search snippet ({tickets} in
+// site-schema seoDescription), the quick answers and the FAQ all read it. When
+// tickets go on sale, change these three strings (growth/BELGRADEBEST_TICKET_ONSALE_KIT.md).
+const TICKETS_SNIPPET = "Tickets are not on sale yet.";
+const TICKETS_GTK = "Still not on sale — three announced start dates have passed (latest: Slovak packages, 1 Nov 2026), no prices, no new date";
+const TICKETS_FAQ =
+  "Not yet. Three announced start dates (15 May and 15 September 2026, and 1 November 2026 for Slovak travel packages) passed without a public launch, and no prices have been published. Our tickets page tracks every announcement. Buy only through official channels once sales open.";
+
+const meta = {
+  ...hubMetadata(LEG, { participants: officialCount, tickets: TICKETS_SNIPPET }),
+  alternates: alternates(`/${LEG}`, PAGE_TWINS[`/${LEG}`]), // hreflang ↔ /de, /sk (language pilots)
+};
 const legHero = heroForLeg(LEG);
 
 // Article cards — same built/planned logic as LegHubLayout.
@@ -101,14 +113,19 @@ const tripLegs = ["where-to-stay", "food-and-nightlife", "visit-belgrade", "plan
   .filter(Boolean)
   .map((c) => ({ href: c!.href, title: c!.title, body: c!.tagline, thumb: thumbForPath(c!.href, c!.title) }));
 
-// Durable orientation facts (each links to the page that covers it).
+// Quick answers (each links to the page that covers it). Rendered right under the
+// countdown since 2026-11-17: Bing searchers ask dates / where / tickets / how to
+// get there, and the Stay line is the hub's route to the stay page with the hotel
+// cards (an internal link, not an affiliate one). The Getting there line is one of
+// the pages to update when the EKSPO lines are confirmed running.
 const gtk = [
   { label: "Dates", text: `${fmtLong(EXPO.startDate)} – ${fmtLong(EXPO.endDate)} — 93 days`, href: `/${LEG}/guide` },
-  { label: "Where", text: `${EXPO.venue}, western Belgrade — ~5 km from the airport`, href: `/${LEG}/getting-there` },
-  // The hub is the site's most-visited page but sent no one to the stay page,
-  // where the hotel cards are (2026-11-16). An internal link, not an affiliate one.
-  { label: "Stay", text: "New Belgrade or the airport side for the site, the old town for the city — book refundably once your dates are firm", href: `/${LEG}/where-to-stay-for-expo` },
-  { label: "Tickets", text: "Still not on sale — three announced start dates have passed (latest: Slovak packages, 1 Nov 2026), no prices, no new date", href: `/${LEG}/tickets` },
+  { label: "Where", text: `${EXPO.venue}, western Belgrade — ~5 km from the airport`, href: `/${LEG}/location` },
+  { label: "Tickets", text: TICKETS_GTK, href: `/${LEG}/tickets` },
+  { label: "Getting there", text: "Dedicated EKSPO bus lines announced (the airport line from 1 April 2027), not yet confirmed running; a railway past the airport is under construction", href: `/${LEG}/getting-there` },
+  { label: "Stay", text: "New Belgrade, Zemun or the airport side for the site, the old town for the city — book refundably once your dates are firm", href: `/${LEG}/where-to-stay-for-expo` },
+  { label: "Visa", text: "No special visitor visa: normal rules apply, and EU, UK, US and Canadian citizens need none for short stays", href: "/plan-your-trip/visa-and-entry" },
+  { label: "Countries", text: `${officialCount} participants announced by the organiser; ${namedCount} countries publicly named so far`, href: "#whos-coming" },
   { label: "Theme", text: EXPO.theme, href: `/${LEG}/what-is-it` },
 ];
 
@@ -119,9 +136,31 @@ const unknowns = [
   "Ticket prices and a sales-start date (three announced starts — 15 May and 15 September 2026, and 1 November for Slovak packages — passed without a launch; no replacement date given)",
 ];
 
-// FAQs folded from the retired /expo-2027/participants article — counts
-// interpolate from the tracker data so the answers can't go stale.
+// Visitor questions first (what the hub's Bing searches ask: dates, tickets,
+// location, transport), then the participation FAQs folded from the retired
+// /expo-2027/participants article — counts interpolate from the tracker data so
+// the answers can't go stale.
 const faqs = [
+  {
+    question: "When and where is Expo 2027?",
+    answer: `Expo 2027 runs from ${fmtLong(EXPO.startDate)} to ${fmtLong(EXPO.endDate)} (93 days) at ${EXPO.venue}, on the western edge of Belgrade, about 5 km from Nikola Tesla Airport and roughly 13.5 km in a straight line from the city centre. It is a Specialised Expo recognised by the BIE, the first held in the Western Balkans, themed "${EXPO.theme}".`,
+  },
+  {
+    question: "Are Expo 2027 tickets on sale, and how much do they cost?",
+    answer: TICKETS_FAQ,
+  },
+  {
+    question: "How do you get to the Expo 2027 site?",
+    answer: "The organiser has announced dedicated EKSPO bus lines to the site: four city lines from 1 November 2026, the airport line EKSPO 1 from 1 April 2027, and two New Belgrade lines from 1 May 2027. We have not been able to confirm that the November lines are running. A railway past the airport to Surčin is under construction. Our getting-there page has the routes from the airport, the centre and New Belgrade.",
+  },
+  {
+    question: "Where should you stay for Expo 2027?",
+    answer: "Stay in New Belgrade, Zemun or on the airport side if the Expo is the main reason for your trip, and in the old town if you want the city. Book refundably once your dates are firm, and check the cancellation deadline. Our Expo stay page compares each area by its announced bus line and planned rail stop.",
+  },
+  {
+    question: "Do you need a visa to visit Expo 2027?",
+    answer: "There is no special visa for Expo visitors: Serbia's normal rules apply. Citizens of the EU, the UK, the US and Canada need no visa for stays of up to 90 days in any 180. The free Expo visa is only for accredited participants and staff, who live and work in Serbia for the Expo period.",
+  },
   {
     question: "How many countries are taking part in Expo 2027?",
     answer: `Expo 2027's director put the figure at ${officialCount} registered countries in August 2026 and called it a historic record for a Specialised Expo (Astana 2017 hosted 115–117); the official Participants page counter last read 139. Treat it as a growing snapshot rather than a final total; our participant tracker keeps the current figure and the growth timeline with sources.`,
@@ -141,10 +180,6 @@ const faqs = [
   {
     question: "Which countries have announced pavilion plans?",
     answer: `${pavilionCount} national pavilions have public, sourced plans in our directory — Germany's 972 m² "Play for Progress" pavilion, Japan's fully published Basic Plan, Slovakia's winning "Living Playground" design and host Serbia's ~€40 million permanent flagship among them. Each profile lists what is confirmed versus reported.`,
-  },
-  {
-    question: "Does the Expo visa help general visitors?",
-    answer: "No. The free Expo visa allows accredited Expo participants and staff to live and work in Serbia for the Expo period — it is for participants, not for general visitors, who rely on Serbia's normal visa policy.",
   },
   {
     question: "Has the schedule of National Days been announced?",
@@ -173,28 +208,6 @@ const schemas: object[] = [
 <BaseLayout meta={meta}>
   <PageIntro eyebrow={cluster.eyebrow} title={cluster.title} lede={cluster.intro} />
 
-  {/* The German Expo cluster's main inbound link from the English site. Before
-      this it had only the two-letter header chip, and Google reported
-      /de/expo-2027 as "URL is unknown to Google". */}
-  <Container variant="article">
-    <LangNote
-      to="de"
-      href={dePath(`/${LEG}`)}
-      text="Die Expo 2027 Belgrad auf Deutsch: Termine, Tickets, Anreise, Programm und die Pavillons aus Deutschland, Österreich und der Schweiz."
-      linkText="Zur deutschen Ausgabe"
-    />
-    <LangNote
-      to="sk"
-      href={langPath("sk", `/${LEG}`)}
-      text="Expo 2027 v Belehrade po slovensky: termíny, vstupenky a doprava na výstavisko."
-    />
-    <LangNote
-      to="cs"
-      href={langPath("cs", `/${LEG}`)}
-      text="Expo 2027 v Bělehradě česky: termíny, vstupenky a doprava na výstaviště."
-    />
-  </Container>
-
   <Container>
     <div class="c-countdown" data-expo-start={EXPO.startDate} data-expo-end={EXPO.endDate}>
       <div class="c-stats">
@@ -220,6 +233,31 @@ const schemas: object[] = [
         <a class="c-btn c-btn--ghost" href="#for-participants">I'm a participant or exhibitor</a>
       </div>
     </div>
+    <div class="u-stack-md"></div>
+    <GoodToKnow items={gtk} />
+  </Container>
+
+  {/* The German Expo cluster's main inbound link from the English site. Before
+      this it had only the two-letter header chip, and Google reported
+      /de/expo-2027 as "URL is unknown to Google". Placed under the quick answers
+      (2026-11-17) so three language boxes no longer fill the first phone screen. */}
+  <Container variant="article">
+    <LangNote
+      to="de"
+      href={dePath(`/${LEG}`)}
+      text="Die Expo 2027 Belgrad auf Deutsch: Termine, Tickets, Anreise, Programm und die Pavillons aus Deutschland, Österreich und der Schweiz."
+      linkText="Zur deutschen Ausgabe"
+    />
+    <LangNote
+      to="sk"
+      href={langPath("sk", `/${LEG}`)}
+      text="Expo 2027 v Belehrade po slovensky: termíny, vstupenky a doprava na výstavisko."
+    />
+    <LangNote
+      to="cs"
+      href={langPath("cs", `/${LEG}`)}
+      text="Expo 2027 v Bělehradě česky: termíny, vstupenky a doprava na výstaviště."
+    />
   </Container>
 
   <nav class="c-subnav" aria-label="On this page">
@@ -292,8 +330,6 @@ const schemas: object[] = [
       </div>
 
       <div class="u-stack-md"></div>
-      <GoodToKnow items={gtk} />
-
       <aside class="c-unknowns">
         <h2>Still unknown or unconfirmed</h2>
         <ul>{unknowns.map((u) => <li>{u}</li>)}</ul>
@@ -540,7 +576,7 @@ const schemas: object[] = [
   <section id="faq" class="c-hash-section">
     <Container>
       <div class="u-stack-lg"></div>
-      <SectionHead eyebrow="Common questions" title="Expo 2027 participation, answered" />
+      <SectionHead eyebrow="Common questions" title="Expo 2027 questions, answered" />
       <Faq faqs={faqs} />
     </Container>
   </section>

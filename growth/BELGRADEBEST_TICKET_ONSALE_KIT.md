@@ -51,7 +51,7 @@
    - Prices: give the official figure first. If it is in dinars, add a euro figure only as "about €X", converted at that day's rate.
 3. **German, Slovak and Czech pages (60 min).** Do the same with `tickets.de.md`, `tickets.sk.md` and `tickets.cs.md`, in each language's date and number format. The twin rule applies: all four go in the same commit.
 4. **Hubs and tiles (20 min).** Use `strings.<lang>.md`:
-   - English hub: the Tickets row and the ticket line in the unknowns list.
+   - English hub: the three ticket constants at the top of `index.astro` (`TICKETS_SNIPPET`, which also feeds the search snippet; `TICKETS_GTK`; `TICKETS_FAQ`) and the ticket line in the unknowns list.
    - German, Slovak and Czech hubs: the Tickets row and the "can I buy tickets?" FAQ.
    - Pavilion tile: `ListingPage.astro` (English) and `i18n.ts` → `listing … tickets.body` (German).
    - The German guide line: `i18n.ts` → `ticketsText`.
@@ -81,7 +81,7 @@ Find them on the day with the grep in step 6. As of 16 Nov 2026 they are:
 | `what-is-it.md` (+ de), FAQ "Can you buy tickets yet?" | "Not yet…" | "Yes. Tickets have been on sale since {{SALE_DATE}}, {{CHANNELS_SHORT}}: {{P_1DAY}} for one day, {{P_3DAY}} for three days. Details on our tickets page." |
 | `what-is-it.md` (+ de), body paragraph on tickets | "notes "Tickets available soon"…" | The same two sentences as the guide's tickets section |
 | `what-is-it.md`, "who should wait" list | "want to budget precisely, since ticket prices and sales channels are not yet published" | Delete the bullet |
-| English hub `pages/expo-2027/index.astro` | Tickets row and unknowns line | `strings.en.md` |
+| English hub `pages/expo-2027/index.astro` | `TICKETS_SNIPPET` (search snippet), `TICKETS_GTK` (quick answer), `TICKETS_FAQ` and the unknowns line | `strings.en.md` |
 | German, Slovak and Czech hubs | Tickets row and FAQ | `strings.de/sk/cs.md` |
 | Pavilion profiles, English and German | "Still not on sale…" tile | `strings.en.md`, `strings.de.md` |
 

@@ -113,3 +113,15 @@
     - Leaving Serbia: the €10,000 declaration and the VAT refund (minimum 6,000 RSD per seller).
   - **Removed:** an unverified ATM cap and an Expo price-rise line that broke rule 7.
   - **Found while checking:** tipping was 10–15% on this page, 5–10% on the food and kafana pages, and "10%, or 10–15% in nicer places" on the stay pages. It now reads "about 10%, in cash" on all six.
+- **Step 4 follow-on, shipped 17 Nov: the Expo hub** (`/expo-2027`). Same URL, judged with step 4 on 31 Jan 2027.
+  - **Why this page:** it holds 39% of the site's Bing impressions but only 2.3% click through. "expo 2027" alone had 508 impressions and 7 clicks in 90 days. It is also the way into the Expo stay page, which gets almost no search traffic of its own (9 impressions).
+  - **Baseline, 8 weeks to 16 Nov:** Bing 64 clicks, 2,797 impressions, click rate 2.3%, average position 5.4.
+  - **Target:** click rate of 3.0% or more over the 8 weeks from 17 Nov.
+  - **What changed:**
+    - A title that leads with the dates. A snippet that answers first: where it is, ticket status, travel and stay. The count and ticket status fill in from data.
+    - Eight quick answers moved under the countdown, including a Stay line linking to the Expo stay page.
+    - Five visitor FAQs on the hub: when and where, tickets, getting there, where to stay, visa.
+    - The "what is it" and programme pages, which also rank for "expo 2027", now link to the hub in their text.
+  - **Found while checking:**
+    - The hub still said "the final transport plan" was unannounced, three weeks after the EKSPO lines were announced.
+    - It called the event "the first World Expo in the Western Balkans". The BIE ranks Specialised Expos separately from World Expos, and our own "what is it" page says "Specialised". Both are fixed.

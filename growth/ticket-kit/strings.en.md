@@ -2,7 +2,20 @@
 
 Fill the same `{{BLANKS}}` as the page template. Each string says where it goes. Scenario B is "on sale now"; scenario A is "prices or a date announced, not yet on sale".
 
-## Hub row (`src/pages/expo-2027/index.astro`, the "Tickets" row in "Good to know")
+## English hub: the three ticket strings at the top of `src/pages/expo-2027/index.astro`
+
+Since 17 Nov 2026 the English hub keeps its ticket status in three constants, and the search snippet reads one of them.
+
+`TICKETS_SNIPPET` (goes into the Bing/Google description via `{tickets}` in `site-schema.json` → `seoDescription`; keep it one short sentence):
+
+- B: `Tickets on sale since {{SALE_DATE}}, from {{P_1DAY}}.`
+- A: `Ticket sales open {{SALE_DATE}}, from {{P_1DAY}}.`
+
+`TICKETS_FAQ` (the hub FAQ "Are Expo 2027 tickets on sale, and how much do they cost?"): use the hub FAQ strings below.
+
+`TICKETS_GTK` (the "Tickets" quick answer): use the hub row strings below.
+
+## Hub row (`TICKETS_GTK` in `src/pages/expo-2027/index.astro`; the "Tickets" row on the German, Slovak and Czech hubs)
 
 - B: `On sale since {{SALE_DATE}}: one-day {{P_1DAY}}, three-day {{P_3DAY}}. Buy only through the official site`
 - A: `Sales open {{SALE_DATE}}: one-day {{P_1DAY}}, three-day {{P_3DAY}}. Not yet on sale anywhere`
@@ -12,7 +25,7 @@ Fill the same `{{BLANKS}}` as the page template. Each string says where it goes.
 - B: `Ticket concessions, a season pass, refund rules and time slots (one-day and three-day prices were published on {{SALE_DATE}})`. Delete any part the organiser has since published.
 - A: `Ticket concessions, a season pass, refund rules and time slots (sales open {{SALE_DATE}})`
 
-## Hub FAQ "Are Expo 2027 tickets on sale?" (German, Slovak and Czech hubs have this FAQ)
+## Hub FAQ "Are Expo 2027 tickets on sale?" (`TICKETS_FAQ` on the English hub; the German, Slovak and Czech hubs have this FAQ too)
 
 - B: `Yes. Sales opened on {{SALE_DATE}}, {{CHANNELS_SHORT}}. A one-day ticket costs {{P_1DAY}} and a three-day ticket {{P_3DAY}}. Buy only through channels the official site names.`
 - A: `Not yet, but the date is set. The organiser announced that sales open on {{SALE_DATE}}, {{CHANNELS_SHORT}}, with one-day tickets at {{P_1DAY}} and three-day tickets at {{P_3DAY}}.`
