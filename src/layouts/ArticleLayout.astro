@@ -22,7 +22,7 @@ import { heroForPath, thumbForPath } from "../lib/hero";
 import { relatedFor } from "../lib/links";
 import { pageMetadata } from "../lib/metadata";
 import type { Article } from "../lib/articles";
-import { UI, alternates, langPath, twinLangs, fmtDate, type Lang, type TrLang } from "../lib/i18n";
+import { UI, alternates, langPath, twinLangs, fmtDate, PAGE_TWINS, type Lang, type TrLang } from "../lib/i18n";
 import { getCollection } from "astro:content";
 
 // Leg-agnostic T3 article template. Per-leg chrome (eyebrow, breadcrumb root,
@@ -49,10 +49,16 @@ const twins = await twinLangs(enHref);
 const hasTwin = twins.length > 0;
 
 const c = clusterBySlug(leg);
-const eyebrow = c?.eyebrow ?? leg;
+// A translated page outside the Expo cluster (German airport/entry/stay pages,
+// 2026-11-17) has no hub in its language: label the leg in that language and
+// point the breadcrumb at the English hub rather than a /de/<leg> that 404s.
+const trLegLabel = T?.legs?.[leg];
+const legHubEn = c?.href ?? `/${leg}`;
+const hasTrHub = isTr && PAGE_TWINS[legHubEn]?.includes(lang as TrLang);
+const eyebrow = trLegLabel ?? c?.eyebrow ?? leg;
 const crumbRoot = {
-  name: c?.title ?? leg,
-  href: SITE.origin + langPath(lang, c?.href ?? `/${leg}`),
+  name: trLegLabel ?? c?.title ?? leg,
+  href: SITE.origin + (isTr && !hasTrHub ? legHubEn : langPath(lang, legHubEn)),
 };
 const rn = T
   ? { eyebrow: T.readNextEyebrow, title: T.readNextTitle, intro: T.readNextIntro }
@@ -95,18 +101,29 @@ const aff = hasAffRefs(raw) ? resolveAffHtml(raw!, lang, d.slug) : null;
 const affInBody = !!aff && aff.links + aff.picks > 0;
 const affChrome = (stayReg.chrome as Record<string, Record<string, string>>)[lang] ?? stayReg.chrome.en;
 const affDisc = { text: affChrome.pageDisclosure, link: affChrome.disclosureLink };
-// Translated read-next: the other pages of the same leg in that language
-// (there is no translated linksTo graph; the sets are small enough to list).
-const targets = isTr
-  ? (await getCollection(lang as TrLang))
-      .filter((e) => e.data.leg === leg && e.data.slug !== d.slug && e.data.visible !== false)
-      .sort((a, b) => a.data.order - b.data.order)
-      .map((e) => {
-        const p = `/${e.data.leg}/${e.data.slug}`;
-        const h = thumbForPath(p, e.data.heroAlt ?? e.data.heroLabel);
-        return { href: langPath(lang, p), title: e.data.shortTitle, body: e.data.description, heroSrc: h?.src, heroAlt: h?.alt };
-      })
-  : await relatedFor(leg, d.slug);
+// Translated read-next: the other pages of the same leg in that language, then
+// the translated twins of the English page's linksTo targets (so the German
+// Expo getting-there page offers the German airport page, and the German
+// airport page offers German getting-there). No separate translated graph.
+let targets: Awaited<ReturnType<typeof relatedFor>>;
+if (isTr) {
+  const trEntries = (await getCollection(lang as TrLang)).filter((e) => e.data.visible !== false);
+  const byPath = new Map(trEntries.map((e) => [`/${e.data.leg}/${e.data.slug}`, e]));
+  const sameLeg = trEntries
+    .filter((e) => e.data.leg === leg && e.data.slug !== d.slug)
+    .sort((a, b) => a.data.order - b.data.order)
+    .map((e) => `/${e.data.leg}/${e.data.slug}`);
+  const linked = (await relatedFor(leg, d.slug)).map((t) => t.href).filter((p) => byPath.has(p));
+  targets = [...new Set([...sameLeg, ...linked])]
+    .filter((p) => p !== enHref)
+    .map((p) => {
+      const e = byPath.get(p)!;
+      const h = thumbForPath(p, e.data.heroAlt ?? e.data.heroLabel);
+      return { href: langPath(lang, p), title: e.data.shortTitle, body: e.data.description, heroSrc: h?.src, heroAlt: h?.alt };
+    });
+} else {
+  targets = await relatedFor(leg, d.slug);
+}
 
 // Human-readable freshness stamp (same source as schema dateModified).
 const updatedLabel = Number.isNaN(Date.parse(d.lastUpdated)) ? null : fmtDate(d.lastUpdated, lang);

@@ -15,7 +15,10 @@
       "type": "area",
       "label": "Dorćol",
       "area": "dorcol",
-      "url": "https://www.booking.com/landmark/rs/strahinjica-bana-street.html"
+      "url": "https://www.booking.com/landmark/rs/strahinjica-bana-street.html",
+      "labels": {
+        "de": "Dorćol"
+      }
     },
     "savamala": {
       "type": "area",
@@ -54,7 +57,10 @@
       "type": "area",
       "label": "Zemun",
       "area": "zemun",
-      "search": "Zemun, Belgrade"
+      "search": "Zemun, Belgrade",
+      "labels": {
+        "de": "Zemun"
+      }
     },
     "palilula": {
       "type": "area",

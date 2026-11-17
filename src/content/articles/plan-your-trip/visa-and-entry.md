@@ -7,7 +7,7 @@ description: "No visa for US, UK, EU, Canadian or Australian citizens: up to 90 
 lede: "Do you need a visa for Serbia? For US, UK, EU, Canadian and Australian citizens, no: you can visit for up to 90 days in any 180-day period. EU, Swiss, Norwegian and Icelandic citizens can even enter with a national ID card. Serbia is not in Schengen, so its 90 days are separate from your Schengen days. The rule that catches visitors out is different: everyone must be registered with the police within 24 hours of arrival. Here's how entry and registration work, and where to check your own passport."
 heroLabel: "Serbia entry & registration / hero"
 heroAlt: "Entry rules and registration for visiting Serbia"
-lastUpdated: "2026-11-16"
+lastUpdated: "2026-11-17"
 order: 6
 visible: true
 intent: "both"
@@ -67,7 +67,7 @@ The visa-free list does change. In December 2024 Serbia began requiring visas fr
 
 ## Can EU citizens enter Serbia with an ID card?
 
-Yes. The Serbian MFA says citizens of EU member states, Switzerland, Norway and Iceland can enter Serbia with a valid national ID card. The same 90-day limit applies. If your trip continues to a non-EU country that requires a passport, or you might need one for something else, bring it anyway.
+Yes. The Serbian MFA says citizens of EU member states, Switzerland, Norway and Iceland can enter Serbia with a valid national ID card. The same 90-day limit applies. If your trip continues to a non-EU country that requires a passport, or you might need one for something else, bring it anyway. Germany's Foreign Office, for example, lists the German ID card, passport, provisional passport and children's passport as accepted, but not the provisional ID card, and says travel documents must be valid for the whole stay (Auswärtiges Amt, 17 November 2026).
 
 ## Passport validity: how long must your passport be valid?
 

@@ -203,7 +203,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/budget.html",
       "why": "On Francuska, between Skadarlija and Dorćol.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Francuska, zwischen Skadarlija und Dorćol."
+        }
+      }
     },
     "nevski": {
       "name": "Garni Hotel Nevski",
@@ -212,7 +217,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/nevski.html",
       "why": "On Venizelosova in lower Dorćol, the quieter side toward the Danube.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Venizelosova im unteren Dorćol, der ruhigeren Seite zur Donau hin."
+        }
+      }
     },
     "iva-old-town": {
       "name": "Iva Old Town",
@@ -221,7 +231,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/iva-old-town.html",
       "why": "On Pančićeva in upper Dorćol, a few blocks from Strahinjića Bana.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Pančićeva im oberen Dorćol, wenige Straßen von der Strahinjića Bana entfernt."
+        }
+      }
     },
     "jump-inn": {
       "name": "Jump INN Hotel Belgrade",
@@ -272,7 +287,12 @@
       "type": "hostel",
       "booking": "https://www.booking.com/hotel/rs/hostel-karavan-inn.html",
       "why": "On Bulevar kralja Aleksandra, near Tašmajdan park.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "Am Bulevar kralja Aleksandra, nahe dem Tašmajdan-Park."
+        }
+      }
     },
     "tesla-smart": {
       "name": "Hotel Tesla – Smart Stay",
@@ -281,7 +301,12 @@
       "type": "hotel",
       "booking": "https://www.booking.com/hotel/rs/tesla-smart-stay.html",
       "why": "On Šumatovačka, about 700 m from the Temple of Saint Sava; on-site parking.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Šumatovačka, rund 700 m vom Dom des Heiligen Sava; Parkplätze am Haus."
+        }
+      }
     },
     "saint-ten": {
       "name": "Saint Ten Boutique Hotel",
@@ -290,7 +315,12 @@
       "type": "boutique",
       "booking": "https://www.booking.com/hotel/rs/saint-ten.html",
       "why": "On Svetog Save, a short walk from the Temple of Saint Sava.",
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "tr": {
+        "de": {
+          "why": "In der Svetog Save, wenige Gehminuten vom Dom des Heiligen Sava."
+        }
+      }
     },
     "hilton": {
       "name": "Hilton Belgrade",
@@ -490,7 +520,12 @@
         "belgrade-inn",
         "iva-old-town",
         "nevski"
-      ]
+      ],
+      "tr": {
+        "de": {
+          "title": "Unterkünfte in Dorćol"
+        }
+      }
     },
     "savamala": {
       "title": "Places to stay in Savamala and Belgrade Waterfront",

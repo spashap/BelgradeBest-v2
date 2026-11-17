@@ -333,8 +333,9 @@ idempotent). Run/publish steps: `KB/automation/RUNBOOK.md → Knowledge pages`.
 
 The ONLY non-English content: a German mirror of the Expo cluster — hub
 (`src/pages/de/expo-2027/index.astro`, a compact portal, not a translation of
-the English one), the six Expo articles, the pavilions hub and the DACH
-pavilion profiles. Everything else stays English; German pages link the
+the English one), the Expo articles, the pavilions hub and the DACH
+pavilion profiles, plus three travel pages (airport, entry, where to stay — see
+below). Everything else stays English; German pages link the
 English rest of the site with " (EN)" markers. Mechanics (`src/lib/i18n.ts`):
 - **Articles:** separate content collection `de` (`src/content/de/<leg>/<slug>.md`,
   same schema, `slug` = the English slug) → `pages/de/expo-2027/[slug].astro` →
@@ -354,8 +355,17 @@ English rest of the site with " (EN)" markers. Mechanics (`src/lib/i18n.ts`):
   `SiteHeader` → `i18n.ts langSwitcher()`), both directions EN↔DE; pages
   without a twin show nothing. New language = a row in `LANG_LABEL` + its
   hreflang in `alternates()` — the chip appears by itself.
-- **When an English Expo page changes, change its German twin in the same
-  commit** (facts, dates, FAQs) — a stale translation is a wrong page.
+- **German travel pages (2026-11-17):** three non-Expo twins on the booking
+  route — `/de/plan-your-trip/airport-to-city`, `/de/plan-your-trip/visa-and-entry`,
+  `/de/where-to-stay/where-to-stay-in-belgrade` (`src/content/de/<leg>/`, route
+  `pages/de/[leg]/[slug].astro`). Their leg hubs stay English (breadcrumb points
+  there; `UI.de.legs` labels them); read-next = same-leg German pages + German
+  twins of the English `linksTo`. The German hub lists them under "Reise planen".
+  Chosen because German Expo readers were opening the English airport/stay pages;
+  not a step toward a full German site (upkeep doubles per edit).
+- **When an English Expo page — or one of those three travel pages — changes,
+  change its German twin in the same commit** (facts, dates, FAQs) — a stale
+  translation is a wrong page.
   Translate via Sonnet subagents with the brief in
   `KB/platform/research/2026-09-04-sweep.md` conventions (Sie, „…“, dates
   "15. Mai 2027", keep mottos in original language), then Fable-review.

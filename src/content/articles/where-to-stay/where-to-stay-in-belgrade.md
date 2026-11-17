@@ -7,7 +7,7 @@ description: "Where to stay in Belgrade: the best area by traveller type, from f
 lede: "For a first visit, the best fit is usually Stari Grad, Dorćol or Savamala — central, walkable to Republic Square and the fortress. For quiet and family comfort, Vračar, New Belgrade or Zemun; for business or Expo, the New Belgrade side."
 heroLabel: "Where to stay in Belgrade / hero"
 heroAlt: "Belgrade's lodging areas, from the old-town rooftops to the towers of New Belgrade across the Sava"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-11-17"
 order: 1
 visible: true
 intent: "both"
@@ -64,7 +64,7 @@ Different trips reward different bases. Here is the one-line version for the mos
 - **Business or conference:** New Belgrade or central Savski Venac.
 - **Longer stay or digital nomad:** Dorćol, Vračar, New Belgrade or Zemun.
 - **Airport stopover or early flight:** [the airport and Surčin side](aff:near/airport), or New Belgrade.
-- **Expo 2027 visitor:** New Belgrade or the Surčin and Expo zone, with the centre as a city-experience alternative.
+- **Expo 2027 visitor:** New Belgrade, Zemun or the airport side, with the centre as a city-experience alternative. Our [Expo stay guide](/expo-2027/where-to-stay-for-expo) compares each area by its announced Expo bus line.
 
 These are starting points, not rankings. For a fuller, decision-by-decision walk-through of the first-visit choice, see [where to stay for your first time in Belgrade](/where-to-stay/where-to-stay-in-belgrade-first-time).
 
@@ -120,8 +120,8 @@ Belgrade short-stay prices move with the season, with concerts, conferences and 
 
 A handful of Belgrade-specific details quietly shape a booking. None is a deal-breaker, but each is worth a question before you pay rather than a surprise after you land.
 
-- **Foreigner registration (the "white card").** Foreign visitors must have their stay registered within 24 hours. Hotels and registered providers normally handle this automatically; with a private apartment, you should confirm in writing that the host will register you — a self-check-in lockbox does not remove that obligation.
-- **The city tourist tax.** Belgrade adds a small per-night residence tax to registered stays. It is sometimes baked into the advertised rate and sometimes added as a separate line at check-in or check-out, especially in apartments, so check the house rules before booking.
+- **Foreigner registration (the "white card").** Foreign visitors must have their stay registered within 24 hours. Hotels and registered providers normally handle this automatically; with a private apartment, you should confirm in writing that the host will register you — a self-check-in lockbox does not remove that obligation. The full rule, and what happens if it is missed, is on our [entry and registration page](/plan-your-trip/visa-and-entry).
+- **The city tourist tax.** Belgrade adds a small per-night residence tax to registered stays: 240 RSD per adult per night since 15 October 2026, with exemptions and reductions for children. It is sometimes baked into the advertised rate and sometimes added as a separate line at check-in or check-out, especially in apartments, so check the house rules before booking.
 - **Smoking rooms.** Serbian law still permits designated smoking rooms in accommodation under conditions, so a high rating does not guarantee a smoke-free room. If smoke matters to you, book a non-smoking unit explicitly and confirm with the property in writing.
 - **Quiet hours.** Apartment buildings have real residential quiet hours, with weekday afternoon and night periods and longer-protected weekend mornings. If your trip plan includes late-night noise, a hotel or a nightlife-tolerant micro-area is a better fit than a quiet residential flat.
 - **Heating season and AC.** Belgrade's district-heating season runs from mid-October to mid-April, but real comfort depends on the building. For an apartment, ask two blunt questions: how is it heated, and is there air conditioning in the bedroom, not only the living room?

@@ -41,6 +41,18 @@ const cards = articles.map((e) => {
   return { href: dePath(p), title: e.data.shortTitle, body: e.data.description, src: t?.src, alt: t?.alt };
 });
 
+// German travel pages outside the Expo cluster (2026-11-17): the next step German
+// Expo readers were taking in English — airport, where to stay, entry rules.
+const TRIP_ORDER = ["/plan-your-trip/airport-to-city", "/where-to-stay/where-to-stay-in-belgrade", "/plan-your-trip/visa-and-entry"];
+const tripEntries = (await getCollection("de")).filter((e) => e.data.leg !== LEG && e.data.visible !== false);
+const tripCards = tripEntries
+  .map((e) => ({ e, p: `/${e.data.leg}/${e.data.slug}` }))
+  .sort((a, b) => (TRIP_ORDER.indexOf(a.p) + 99) % 99 - (TRIP_ORDER.indexOf(b.p) + 99) % 99)
+  .map(({ e, p }) => {
+    const t = thumbForPath(p, e.data.heroAlt ?? e.data.heroLabel);
+    return { href: dePath(p), title: e.data.shortTitle, body: e.data.description, src: t?.src, alt: t?.alt };
+  });
+
 const pavilions = listingsIndexable ? listingsWithDe(LEG) : [];
 const hero = heroForLeg(LEG, "Expo 2027 Belgrad");
 const dates = `${fmtDate(EXPO.startDate, "de")} – ${fmtDate(EXPO.endDate, "de")}`;
@@ -68,7 +80,9 @@ const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { nam
 const facts = [
   { label: "Termine", text: `${dates} – 93 Tage`, href: dePath(`/${LEG}/guide`) },
   { label: "Ort", text: `${EXPO.venue}, im Westen Belgrads – rund 5 km vom Flughafen Nikola Tesla`, href: dePath(`/${LEG}/getting-there`) },
-  { label: "Tickets", text: "Weiterhin nicht im Verkauf – der geplante Start am 15. September 2026 verstrich ohne Verkaufsbeginn; keine Preise, kein neues Datum", href: dePath(`/${LEG}/tickets`) },
+  { label: "Tickets", text: "Weiterhin nicht im Verkauf – drei angekündigte Starttermine sind verstrichen (zuletzt Pakete slowakischer Reisebüros, 1. November 2026); keine Preise, kein neues Datum", href: dePath(`/${LEG}/tickets`) },
+  { label: "Anreise", text: "Ankunft am Flughafen: Bus 72, Minibus A1, Taxi und Transfer im Vergleich", href: dePath("/plan-your-trip/airport-to-city") },
+  { label: "Übernachten", text: "Neu-Belgrad, Zemun oder Flughafennähe für das Gelände, die Altstadt für die Stadt", href: dePath(`/${LEG}/where-to-stay-for-expo`) },
   { label: "Thema", text: `${EXPO.theme} – Spiel, Sport und Musik als verbindende Sprache`, href: dePath(`/${LEG}/what-is-it`) },
   { label: "Teilnehmer", text: `${officialCount} registrierte Länder laut Veranstalter (Stand August 2026); ${namedCount} davon namentlich bekannt`, href: `/${LEG}/tracker` },
 ];
@@ -80,7 +94,7 @@ const faqs = [
   },
   {
     question: "Gibt es schon Tickets für die Expo 2027?",
-    answer: "Nein, Stand 15. November 2026. Der geplante Verkaufsstart am 15. September 2026 verstrich ohne Verkaufsbeginn – nach dem 15. Mai 2026 bereits der zweite verpasste Termin –, und ein Ersatzdatum wurde nicht genannt. Ein-Tages- und Drei-Tages-Tickets sind als Produkte bestätigt, Preise und der Online-Verkaufskanal aber weiterhin nicht veröffentlicht. Unsere Ticket-Seite verfolgt den offiziellen Stand.",
+    answer: "Nein, Stand 17. November 2026. Drei angekündigte Verkaufsstarts – der 15. Mai und der 15. September 2026 sowie der 1. November 2026 für Pakete slowakischer Reisebüros – verstrichen ohne öffentlichen Verkaufsbeginn, und ein Ersatzdatum wurde nicht genannt. Ein-Tages- und Drei-Tages-Tickets sind als Produkte bestätigt, Preise und der Online-Verkaufskanal aber weiterhin nicht veröffentlicht. Unsere Ticket-Seite verfolgt den offiziellen Stand.",
   },
   {
     question: "Wie viele Länder nehmen an der Expo 2027 teil?",
@@ -92,7 +106,7 @@ const faqs = [
   },
   {
     question: "Gibt es die ganze Website auf Deutsch?",
-    answer: "Nein – die deutsche Ausgabe umfasst bisher nur den Expo-2027-Bereich: diesen Hub, sechs Artikel und die Pavillon-Profile der DACH-Länder. Alle weiteren Belgrad-Guides (Stadtviertel, Restaurants, Anreise vom Flughafen, Visa) sind auf Englisch verfügbar und aus jeder deutschen Seite verlinkt.",
+    answer: `Nein. Die deutsche Ausgabe umfasst den Expo-2027-Bereich (diesen Hub, ${articles.length} Artikel und die Pavillon-Profile der DACH-Länder) sowie die wichtigsten Reiseseiten: vom Flughafen ins Zentrum, Einreise und Übernachten in Belgrad. Alle weiteren Belgrad-Guides (Restaurants, Sehenswürdigkeiten, Geld, Nahverkehr) sind auf Englisch verfügbar und aus jeder deutschen Seite verlinkt.`,
   },
 ];
 
@@ -144,7 +158,7 @@ const schemas: object[] = [
     <SectionHead
       eyebrow="Auf Deutsch"
       title="Die Expo-2027-Artikel"
-      intro="Sechs Seiten, dieselben Fakten und Quellen wie die englischen Originale – jede verlinkt ihre englische Fassung."
+      intro={`${cards.length} Seiten, dieselben Fakten und Quellen wie die englischen Originale – jede verlinkt ihre englische Fassung.`}
     />
     <Grid>
       {cards.map((c) => (
@@ -152,6 +166,23 @@ const schemas: object[] = [
       ))}
     </Grid>
   </Container>
+
+  {
+    tripCards.length > 0 ? (
+      <Container>
+        <SectionHead
+          eyebrow="Reise planen"
+          title="Ankommen, einreisen, übernachten"
+          intro="Die wichtigsten Reiseseiten für Belgrad, ebenfalls auf Deutsch."
+        />
+        <Grid>
+          {tripCards.map((c) => (
+            <Card href={c.href} title={c.title} body={c.body} src={c.src} imgAlt={c.alt} />
+          ))}
+        </Grid>
+      </Container>
+    ) : null
+  }
 
   {
     pavilions.length > 0 ? (

@@ -1,7 +1,10 @@
 // Language pilots: German (2026-09-04) and Slovak (2026-10-14, see TR_LANGS).
-// German is a mirror of the Expo 2027 cluster
-// only — hub, the six Expo articles, the pavilions hub and the DACH pavilion
-// profiles. Everything else stays English. URLs keep the English path segments
+// German mirrors the Expo 2027 cluster — hub, the Expo articles, the pavilions
+// hub and the DACH pavilion profiles — plus, since 2026-11-17, three travel
+// pages on the route to a booking: /de/plan-your-trip/airport-to-city,
+// /de/plan-your-trip/visa-and-entry and /de/where-to-stay/where-to-stay-in-belgrade
+// (route pages/de/[leg]/[slug].astro; their leg hubs stay English, UI.de.legs
+// labels them). Everything else stays English. URLs keep the English path segments
 // under a /de prefix (/de/expo-2027/tickets) so every page maps 1:1 to its
 // English original, which is all hreflang needs.
 //
@@ -124,15 +127,15 @@ export const DE = {
   switchLabel: "English",
   switchHint: "Diese Seite auf Englisch",
   footerNote:
-    "Deutsche Ausgabe: bisher nur der Expo-2027-Bereich. Alle weiteren Belgrad-Guides sind auf Englisch.",
+    "Deutsche Ausgabe: der Expo-2027-Bereich sowie Flughafen, Einreise und Übernachten. Alle weiteren Belgrad-Guides sind auf Englisch.",
   footerEnglish: "Zur englischen Ausgabe",
   breadcrumbRoot: "BelgradeBest",
   updated: "Aktualisiert am",
   sourceChecked: "Quellen geprüft nach dem redaktionellen Standard von BelgradeBest",
   unknowns: "Noch unbekannt oder unbestätigt",
   readNextEyebrow: "Weiterlesen",
-  readNextTitle: "Mehr zur Expo 2027 auf Deutsch",
-  readNextIntro: "Die weiteren deutschsprachigen Seiten dieses Bereichs.",
+  readNextTitle: "Mehr auf Deutsch",
+  readNextIntro: "Weitere deutschsprachige Seiten für Ihre Reise.",
   listing: {
     kindPavilion: "Nationaler Pavillon",
     kindExhibitor: "Aussteller",
@@ -225,6 +228,9 @@ export type Chrome = {
   hub: string;
   feedbackText: string;
   feedbackLink: string;
+  // Leg names for translated pages outside the Expo cluster (eyebrow +
+  // breadcrumb label); their hubs stay English, so the crumb links there.
+  legs?: Record<string, string>;
 };
 export const UI: Record<TrLang, Chrome> = {
   de: {
@@ -241,6 +247,7 @@ export const UI: Record<TrLang, Chrome> = {
     hub: "/de/expo-2027",
     feedbackText: "Etwas falsch, veraltet oder fehlt in diesem Leitfaden? ",
     feedbackLink: "Schreiben Sie uns, was Sie gesucht haben",
+    legs: { "plan-your-trip": "Reiseplanung", "where-to-stay": "Übernachten" },
   },
   sk: {
     nav: [

@@ -1,0 +1,18 @@
+---
+// German mirror of a travel article OUTSIDE the Expo cluster (2026-11-17: the
+// airport, entry and where-to-stay pages — the next step German Expo readers
+// were taking in English). Same `de` collection and ArticleLayout lang="de" as
+// /de/expo-2027/[slug]; Expo entries stay on that route (static segment wins).
+import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const de = await getCollection("de");
+  return de
+    .filter((entry) => entry.data.leg !== "expo-2027")
+    .map((entry) => ({ params: { leg: entry.data.leg, slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+---
+<ArticleLayout entry={entry} lang="de" />

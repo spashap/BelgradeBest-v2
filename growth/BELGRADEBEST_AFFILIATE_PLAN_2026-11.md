@@ -125,3 +125,13 @@
   - **Found while checking:**
     - The hub still said "the final transport plan" was unannounced, three weeks after the EKSPO lines were announced.
     - It called the event "the first World Expo in the Western Balkans". The BIE ranks Specialised Expos separately from World Expos, and our own "what is it" page says "Specialised". Both are fixed.
+- **Follow-on, shipped 17 Nov: three German travel pages** (`/de/plan-your-trip/airport-to-city`, `/de/plan-your-trip/visa-and-entry`, `/de/where-to-stay/where-to-stay-in-belgrade`). Judged on 31 Jan 2027.
+  - **Why:** German-speaking readers are the most engaged audience on the site. The `/de/` set converts at 8% on Bing (site average 4.2%). Readers landing on German pages were opening the English airport, where-to-stay and money pages next.
+  - **Not a full German site:** upkeep would double per edit, and German Bing demand outside Expo is thin.
+  - **What they carry:**
+    - **Airport page:** the Welcome Pickups link and hotels near the airport.
+    - **Stay page:** six area hotel cards with German texts.
+    - **Entry page:** no affiliate links. It now also gives the German Foreign Office's ID-card rule, added to the English page too.
+    - **Sub-IDs:** `bb-de-atc-*` and `bb-de-wtsib-*`.
+  - **How they're reached:** the German hub lists them under "Reise planen". The German Expo pages offer them in "Mehr auf Deutsch".
+  - **Measure:** Bing impressions and clicks on the three URLs (from 0), and affiliate clicks from `/de/` pages.

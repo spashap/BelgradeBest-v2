@@ -1,27 +1,30 @@
-Expo hub reworked for Bing click-through; quick answers and visitor FAQs up top
+German travel pages: airport, entry and where to stay in German
 
-The hub holds 39% of the site's Bing impressions but converts only 2.3%
-(64 clicks / 2,797 impressions, avg position 5.4, 8 weeks to 16 Nov).
+German-speaking readers are the site's most engaged audience, the /de/
+set converts at 8% on Bing (4.2% site-wide), and German readers were
+opening the English airport and stay pages next. Three pages on the
+route to a booking, not a full German site.
 
-- Title and description lead with the answer:
-  "Expo 2027 Belgrade, 15 May-15 Aug: tickets, travel and 141 countries"
-  plus where it is, ticket status, getting there and where to stay. The
-  participant count and the ticket status fill in at build
-  (hubMetadata gained a {token} fill param), so the snippet cannot keep
-  a stale figure.
-- Ticket status now lives in three constants at the top of
-  pages/expo-2027/index.astro; the on-sale kit and strings.en.md list
-  them.
-- Quick answers (dates, where, tickets, getting there, stay, visa,
-  countries, theme) moved under the countdown, with the Stay line into
-  the Expo stay page. The three language notes now sit below them.
-- Five visitor FAQs (when/where, tickets, transport, stay, visa) ahead
-  of the participation FAQs, in the FAQPage JSON-LD too.
-- Hub body: EKSPO lines "announced, not yet confirmed running" (it still
-  said the transport plan was unannounced); "first World Expo"
-  corrected to the first Specialised Expo in the Western Balkans.
-- what-is-it and programme, which also rank for "expo 2027", link the
-  hub in their text.
-- BB-CHG-0056; plan progress updated.
+- New: /de/plan-your-trip/airport-to-city (Welcome Pickups + airport
+  hotels), /de/plan-your-trip/visa-and-entry (no affiliate links),
+  /de/where-to-stay/where-to-stay-in-belgrade (six hotel cards).
+  Translated by Sonnet, reviewed and corrected by Fable; terms aligned
+  with the live German pages.
+- Route pages/de/[leg]/[slug].astro for German pages outside Expo.
+  ArticleLayout: leg label in German (UI.de.legs), breadcrumb to the
+  English hub, German read-next = same-leg German pages + German twins
+  of the English linksTo.
+- German hub: "Reise planen" cards, airport and stay quick facts, FAQ
+  updated, ticket line now says three start dates passed (as the
+  English hub does); article count derived.
+- Data: German card title for Dorcol, German lines for six Dorcol and
+  Vracar hotels, German labels for Dorcol and Zemun.
+- English twins:
+  - stay page: the 240 RSD tourist tax, links to the Expo stay page and
+    the registration rules, and the Expo stay page added to read-next;
+  - visa page: the German Foreign Office's ID-card rule (provisional ID
+    card not accepted; documents valid for the whole stay).
+- CLAUDE.md twin rule and i18n notes cover the three pages;
+  BB-CHG-0057; content baseline re-recorded.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
