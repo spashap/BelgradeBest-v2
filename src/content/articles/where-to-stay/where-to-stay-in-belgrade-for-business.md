@@ -7,7 +7,7 @@ description: "Where to stay in Belgrade for business: New Belgrade business hote
 lede: "For most business and conference trips, the best fit is New Belgrade — it has the city's cluster of business hotels, the easiest road and airport access, and the most reliable parking. Stay central in Savski Venac or a Stari Grad business hotel if your meetings are downtown and you want walkable evenings. The single decision that matters more than the district name: confirm the traffic route to where you actually need to be each morning."
 heroLabel: "Where to stay in Belgrade for business / hero"
 heroAlt: "New Belgrade business district with high-rise hotels and wide boulevards across the Sava from the old city"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-11-17"
 order: 5
 visible: true
 intent: "both"
@@ -135,7 +135,7 @@ Cards are accepted in most hotels, restaurants and shops, and ATMs are widely av
 
 ### Tipping
 
-Tipping is appreciated but not mandatory. A rough cheat-sheet: around **10% in restaurants** if service is good (10–15% in nicer or business-dinner places), round up taxis, and a small RSD cash tip for a hotel porter or housekeeping where that service exists. Keep small notes handy — tips work best in cash.
+Tipping is appreciated but not mandatory. A rough cheat-sheet: around **10% in restaurants** if service is good, round up taxis, and a small RSD cash tip for a hotel porter or housekeeping where that service exists. Keep small notes handy — tips work best in cash.
 
 ## A simple decision, made twice
 

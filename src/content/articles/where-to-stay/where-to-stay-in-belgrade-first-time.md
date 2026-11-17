@@ -7,7 +7,7 @@ description: "Where to stay in Belgrade for the first time: Stari Grad is the sa
 lede: "For a first visit of two to four days, the best fit for most travellers is Stari Grad (Old Town): it usually puts you within an easy walk of Republic Square, Knez Mihailova, Kalemegdan and Skadarlija, so you spend less time commuting and more time seeing the city."
 heroLabel: "Where to stay in Belgrade first time / hero"
 heroAlt: "View over Belgrade's Old Town rooftops toward Kalemegdan Fortress and the Sava–Danube confluence"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-17"
 order: 2
 visible: true
 intent: "leisure"
@@ -149,7 +149,7 @@ Belgrade charges a small residence/tourist tax per guest per night of stay (240 
 
 ### Tipping basics
 
-Tipping is appreciated but not usually mandatory. As a rough guide: leave around 10% in restaurants if service is good, or 10–15% in nicer or tourist places; round up in cafés and taxis; and a small cash tip is welcome for hotel porters or housekeeping where that service exists. Tips are easiest in **cash dinars (RSD)**, so do not assume you can add a tip to a card payment.
+Tipping is appreciated but not usually mandatory. As a rough guide: leave around 10% in restaurants if service is good; round up in cafés and taxis; and a small cash tip is welcome for hotel porters or housekeeping where that service exists. Tips are easiest in **cash dinars (RSD)**, so do not assume you can add a tip to a card payment.
 
 ### The central core is genuinely walkable
 

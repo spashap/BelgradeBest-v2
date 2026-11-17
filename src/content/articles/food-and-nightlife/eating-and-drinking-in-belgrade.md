@@ -7,7 +7,7 @@ description: "Eating and drinking in Belgrade: what the food scene is, what it c
 lede: "Belgrade is an easy, late, good-value city to eat and drink in once you know how it fits together. This is the overview — what the food scene is, what to eat and drink, what it costs, and the mechanics of paying, tipping, hours, booking and dress — with links out to the deep guides for each part."
 heroLabel: "Eating and drinking in Belgrade / hero"
 heroAlt: "A Belgrade café table at night with coffee, a drink and a bill tray"
-lastUpdated: "2026-07-02"
+lastUpdated: "2026-11-17"
 order: 5
 visible: true
 intent: "both"
@@ -26,7 +26,7 @@ faqs:
     question: "What should I eat and drink in Belgrade?"
   - answer: "Yes — cards are widely accepted at most mid-range and high-end restaurants, splavovi and hotel bars. Carry some dinars, though, for kafanas, bakeries, markets and small local bars; travellers commonly report paying around 70–90% of expenses by card (indicative, as of 2026)."
     question: "Can I pay by card in Belgrade?"
-  - answer: "There is no legally enforced tipping norm in Serbia; tipping is discretionary. The local custom is to round up small bills and leave around 5–10% on full meals when service is good (reported), usually in cash even when you pay the bill by card."
+  - answer: "There is no legally enforced tipping norm in Serbia; tipping is discretionary. The local custom is to round up small bills and leave about 10% on full meals when service is good (reported), usually in cash even when you pay the bill by card."
     question: "How much should I tip in Belgrade?"
   - answer: "Many restaurants serve until around 23:00 or later, while bars and clubs commonly stay open until roughly 04:00–06:00. The big going-out nights are typically Thursday through Sunday, with some venues running until about 08:00 (reported), and waterfront venues at Beton Hala blend dining into nightlife with hours like 10:00–04:00 daily (reported, as of 2026)."
     question: "How late do restaurants and clubs stay open?"
@@ -95,7 +95,7 @@ Travellers commonly report being able to settle roughly 70–90% of their city e
 
 ## Tipping: discretionary, and usually in cash
 
-There is no legally enforced tipping norm in Serbia. Tipping is discretionary appreciation for good service, not an obligation. The local consensus, reported as the Belgrade custom (indicative, as of 2026), is to round up small café and restaurant bills and to leave around 5–10% on full meals or for larger groups when the service has been good.
+There is no legally enforced tipping norm in Serbia. Tipping is discretionary appreciation for good service, not an obligation. The local consensus, reported as the Belgrade custom (indicative, as of 2026), is to round up small café and restaurant bills and to leave about 10% on full meals or for larger groups when the service has been good.
 
 One practical detail worth knowing: even when you pay the bill by card, tipping is usually done in cash. This is another reason to keep a few notes on you. Hand the tip directly to your server rather than expecting to add it to the card total. In a kafana, the live musicians who circulate between tables are tipped separately and directly, usually in cash — see [kafanas](/food-and-nightlife/belgrade-kafanas) for how that works.
 
@@ -157,7 +157,7 @@ Belgrade is inexpensive by Western-European standards, though no longer ultra-ch
 
 **Cards are widely accepted** — most mid-range and high-end restaurants, splavovi and hotel bars take them, and travellers commonly report paying around 70–90% of city expenses by card (indicative, as of 2026). Cash still matters at the small end: carry dinars for kafanas (especially tips), bakeries, markets, dessert shops and small local bars. Where to get dinars at a fair rate — and the exchange-office tricks to avoid — is covered in [money in Belgrade](/plan-your-trip/money).
 
-**Tipping is discretionary** — there is no legally enforced norm in Serbia. The local custom (reported) is to round up small café bills and leave around 5–10% on full meals when service is good, usually in cash even when the bill itself goes on a card — many terminals can't add a tip, so keep small notes back for it.
+**Tipping is discretionary** — there is no legally enforced norm in Serbia. The local custom (reported) is to round up small café bills and leave about 10% on full meals when service is good, usually in cash even when the bill itself goes on a card — many terminals can't add a tip, so keep small notes back for it.
 
 ## Hours: Belgrade runs late
 

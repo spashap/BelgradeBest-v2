@@ -100,3 +100,16 @@
   - 2000×2000 is now in the GA4 bot filter.
   - Judged in the scorecard by engaged sessions. Under 10 a month on 15 Jan 2027 means we stop paying it attention.
   - The 3 owner-hours go to Bing work instead.
+- **Step 4 follow-on, shipped 17 Nov: the money page** (`/plan-your-trip/money`), using the hours freed from step 6. Same URL, judged with step 4 on 31 Jan 2027.
+  - **Why this page:** it is the next Bing-visible evergreen page. Its top queries ask what currency Belgrade uses and whether euros are accepted. It stays free of affiliate links (strategy rule) and routes readers to the airport and stay pages.
+  - **Baseline, 8 weeks to 16 Nov:** Bing 5 clicks, 238 impressions, average position 5.2 ("belgrade currency" at 8.0). GA4 organic landings from Bing, DuckDuckGo and Ecosia: 28 sessions, 11 engaged.
+  - **Target:** 8 or more Bing clicks in the 8 weeks after the change.
+  - **What changed:**
+    - A quick-answer table, and the exchange rate (117.62 on 13 Nov), which the page never gave before.
+    - The euro answer is now sourced to Article 34 of the foreign-exchange law.
+    - A card-or-cash table by situation; ATM fees and the conversion trap.
+    - The National Bank's ±1.25% euro band at exchange offices.
+    - Airport cash for each transfer type; paying for a stay, with the 240 RSD tourist tax.
+    - Leaving Serbia: the €10,000 declaration and the VAT refund (minimum 6,000 RSD per seller).
+  - **Removed:** an unverified ATM cap and an Expo price-rise line that broke rule 7.
+  - **Found while checking:** tipping was 10–15% on this page, 5–10% on the food and kafana pages, and "10%, or 10–15% in nicer places" on the stay pages. It now reads "about 10%, in cash" on all six.

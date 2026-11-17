@@ -7,7 +7,7 @@ description: "What a Belgrade kafana is and how to enjoy one — the traditional
 lede: "A Belgrade kafana is the heart of how Serbians eat, drink and socialise — part traditional tavern, part café, part live-music venue. Here's what one actually is, the etiquette, the best kafanas in Belgrade, and the difference between Skadarlija's showpiece restaurants and the local neighbourhood kind."
 heroLabel: "Belgrade kafanas / hero"
 heroAlt: "A traditional Belgrade kafana with a tamburica band playing"
-lastUpdated: "2026-08-07"
+lastUpdated: "2026-11-17"
 order: 6
 visible: true
 intent: "leisure"
@@ -82,7 +82,7 @@ A note on Zemun, which has its own riverside fish-and-kafana dining scene with D
 
 Prices are the most perishable thing on this page, so take the following as indicative only and check current menus. A full kafana meal for two — shared starters, grilled meat, sides, dessert and drinks — at a mid-range central or Skadarlija kafana has commonly been reported around 4,000–8,000 RSD. That figure is triangulated from menus and diner reports as of 2024–2025, not a fixed tariff. Rakija shots are typically priced like other bar spirits.
 
-A practical note on payment: carry cash for kafanas. Cards are increasingly accepted across Belgrade, but smaller and older kafanas can still be cash-only, and — crucially — tips are usually given in cash even when you pay the bill by card. For service, tipping around 5–10% for good service is reported as customary, often simply by rounding up. Remember that the musicians are tipped separately and directly — that is not covered by the service tip, and it is an indicative norm as of 2026. At the touristed kafanas, some visitors are surprised by music charges or higher prices on live-music nights; the fair way to think about these is as the cost of a special experience rather than everyday dining.
+A practical note on payment: carry cash for kafanas. Cards are increasingly accepted across Belgrade, but smaller and older kafanas can still be cash-only, and — crucially — tips are usually given in cash even when you pay the bill by card. For service, tipping about 10% for good service is reported as customary, often simply by rounding up. Remember that the musicians are tipped separately and directly — that is not covered by the service tip, and it is an indicative norm as of 2026. At the touristed kafanas, some visitors are surprised by music charges or higher prices on live-music nights; the fair way to think about these is as the cost of a special experience rather than everyday dining.
 
 ## Practical notes for foreigners
 
