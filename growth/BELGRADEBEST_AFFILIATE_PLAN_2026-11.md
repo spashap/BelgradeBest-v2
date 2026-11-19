@@ -47,14 +47,14 @@
 - Removing cards on a 28-day timer.
 - Contracts-ledger expansion, the quiz, homepage redesign, and anything aimed at locals.
 
-**Still open (owner action):** completing the CJ Network Profile is a 30-minute task that unlocks GetYourGuide, Daytrip and 12GO. Add their products only to pages that already have the matching intent.
+**CJ applications (checked 19 Nov):** the Network Profile turned out to be complete already, so it was never the blocker. Daytrip was accepted (activation postponed by the owner); GetYourGuide, Qatar Airways and Trip.com are waiting for the advertisers' review; 12GO was not applied for and isn't worth it now (see the strategy doc). Add partner products only to pages that already have the matching intent.
 
 ## Progress
 
 - **Step 1, done 16 Nov (V01.065).** Every affiliate link and block is labelled "Ad", the unsupported claims are gone, and the hub's ticket count is fixed.
 - **Step 2, done 16 Nov.**
   - A test click reached GA4 within a minute and went through CJ to the right Booking.com hotel.
-  - CJ counts clicks a day late, so the 16 Nov click still has to be seen in its report. Sub-IDs appear only on commissions.
+  - CJ counts clicks a day late; the 16 Nov test click showed up in CJ's report by link (Booking, 1 click on 16 Nov), checked 19 Nov. Sub-IDs appear only on commissions.
   - The partner terms are in the strategy doc. **Booking credits only bookings made within 1 day of the click, and pays only after the stay.** Welcome Pickups pays 7% and Air Serbia 1%, both with 45 days.
   - Consequence for step 3: the on-sale kit also carries a line to the Expo stay page, because on-sale day is when readers fix their dates and can book a bed the same day.
   - Consequence for step 7: until summer 2027 the scorecard reads pending CJ commissions, not paid ones, because Expo stays pay only after they happen.
@@ -143,3 +143,9 @@
   - **State:** the partner is OFF until its CJ click link is pasted in `/admin/affiliates` (cj.com did not resolve from this machine's DNS on 17 Nov).
   - **Stations page fact updated:** Belgrade–Budapest passenger trains are now announced for 13 December 2026 (Srbijavoz, 27 Oct).
   - **Measure:** `aff_click_daytrip` in the admin, CJ sub-IDs `bb-bdt-daytrip-*` and `bb-saot-daytrip-*`.
+- **19 Nov: first look at CJ since going live.**
+  - **Clicks:** CJ has 11 for the month, all on 15–16 Nov, which were our own setup and test clicks (Booking 4 + 1, Welcome Pickups 3, Air Serbia 3). No sales.
+  - **Readers:** none have clicked an affiliate link from 17 to 19 Nov. GA4 agrees: since 15 Nov it has a single `aff_click_*` event, the 16 Nov test.
+  - **Reading:** at today's traffic this is expected, not a fault. Tracking is proven end to end on both sides. The 14 Dec read is the first one with enough days to mean anything.
+  - **Account state:** joined Booking CEE, Welcome Pickups, Air Serbia, Daytrip (postponed) and seats.aero (unused). Pending: GetYourGuide, Qatar Airways, Trip.com. Declined: Agoda, eSky, Hotels.com, Kiwi, Omio, Turkish Airlines. Of the 20 advertiser offers, the travel ones are AirHelp, eSky, LOT, Megabon and Weekend in Italy, none a clear fit.
+  - **Profile refreshed (owner approved, 19 Nov).** The Network Profile description still listed medical tourism and "45+ articles". It now describes the current site and its languages, how partners are placed (in context, every link labelled "Ad") and what we don't do (coupons, cashback, brand bidding, spam). It names no person and gives no traffic figures. The website property got a real description and 12 search tags (it had none). Advertisers read both when reviewing an application, so this matters for the GetYourGuide, Qatar and Trip.com decisions.

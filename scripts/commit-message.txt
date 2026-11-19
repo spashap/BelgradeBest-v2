@@ -1,27 +1,19 @@
-Daytrip added as a partner (off until its CJ link is pasted); Budapest train date
+Affiliate docs: CJ account check of 19 Nov
 
-Daytrip accepted our CJ application on 17 Nov: 13% commission, 14-day
-cookie (Booking gives 1 day), no brand search ads. A Belgrade-Budapest
-transfer for two pays roughly what a hotel stay does.
+First look at CJ since the partners went live, plus a profile refresh in
+CJ itself (no site change).
 
-- affiliates.json: partner "daytrip" (CJ advertiser 8046928), enabled
-  false and no link yet. Paste the CJ click link in /admin/affiliates and
-  switch it on; the rebuild makes the links live.
-- partner-links.json: targets daytrip-karlovci, daytrip-novi-sad and
-  daytrip-budapest, deep-linked to the Daytrip pages checked in Chrome.
-- Placements, only where the page already says the trip is hard without
-  a car:
-  - day trips: the Novi Sad + Sremski Karlovci private day trip, in the
-    paragraph on combining the stops;
-  - stations: private transfers to Novi Sad and to Budapest.
-  While the partner is off they render as plain text (checked); a
-  placeholder-link build showed the Ad labels and sub-IDs bb-bdt-* and
-  bb-saot-*.
-- Stations page: Belgrade-Budapest passenger trains now announced for
-  13 December 2026 (Srbijavoz, 27 Oct), replacing "within weeks".
-- How we make money: the disclosure now names transfers and day trips
-  with a private driver.
-- Strategy doc terms table and plan progress; BB-CHG-0059; content
-  baseline re-recorded.
+- Clicks: 11 in CJ, all our own 15-16 Nov setup and test clicks; the
+  16 Nov test click is confirmed in CJ, closing plan step 2. No reader
+  affiliate clicks 17-19 Nov, in CJ or GA4.
+- Applications: GetYourGuide, Qatar Airways and Trip.com pending. The
+  Network Profile was already complete, so it never blocked them; the
+  plan's "owner action" line is corrected. 12GO skipped: it pays half of
+  12GO's margin, about EUR 1.50 on a EUR 30 bus.
+- CJ profile and website property description refreshed (medical tourism
+  and "45+ articles" removed), 12 search tags added.
+- Change log BB-CHG-0060.
+- Strategy doc: "send readers to the stay pages" marked done for the Expo
+  set; things to do in Belgrade named as the next evergreen candidate.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

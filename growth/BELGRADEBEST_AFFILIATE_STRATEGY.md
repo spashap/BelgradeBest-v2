@@ -103,13 +103,11 @@ The site has about 100–200 visitors on its best Expo pages per quarter. Even a
 
 ## Next levers, ranked
 
-1. **Send readers to the stay pages.** The Expo hub now links to the Expo stay page. Next candidates:
-   - a "staying for the Expo?" line on pavilion profiles;
-   - translating the where-to-stay cards into the Slovak and Czech pilots, whose readers come for Expo tickets and travel.
-2. **Unblock the CJ applications (owner action: complete the CJ Network Profile).** Spots are already mapped for these partners:
-   - **GetYourGuide:** Iron Gates and Oplenac day tours, the Novi Sad + Fruška Gora tour, the Brutalism tour, wine tastings, stadium tours;
-   - **Daytrip: accepted 17 Nov and placed** (see below);
-   - **12GO:** Belgrade–Budapest, Novi Sad and Niš buses.
+1. **Send readers to the stay pages.** Done for the Expo set: the Expo hub links to the Expo stay page, every pavilion profile carries a "Where to stay" tile (16 Nov), and the Slovak and Czech tickets pages carry the hotel card plus an in-text stay link. The next candidates are the evergreen pages Bing already shows that have no route to a stay page yet, starting with things to do in Belgrade (236 Bing impressions in 90 days to 16 Nov, zero links to the where-to-stay leg).
+2. **CJ applications.** The Network Profile is complete (checked 19 Nov: CJ's "complete your Network Profile" note is hidden on every advertiser), so nothing blocks applying. Spots are already mapped for these partners:
+   - **GetYourGuide:** Iron Gates and Oplenac day tours, the Novi Sad + Fruška Gora tour, the Brutalism tour, wine tastings, stadium tours. Application pending since 16 Nov, as are Qatar Airways and Trip.com;
+   - **Daytrip: accepted 17 Nov and placed, owner postponed activation** (see below);
+   - **12GO: not applied, and not worth it now.** It pays 50% of 12GO's own margin, not of the fare (its example: $5 on a $100 ticket), so a €30 Belgrade–Budapest bus earns about €1.50, and Serbia is outside its listed serviceable area.
 
    **Daytrip placements (17 Nov, OFF until its CJ click link is pasted in `/admin/affiliates`):**
    - **Day trips page:** "Daytrip's Novi Sad and Sremski Karlovci day trip" (`aff:go/daytrip-karlovci`), in the paragraph that says the three-stop day is awkward by public transport;
