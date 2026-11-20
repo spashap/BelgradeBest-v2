@@ -1,0 +1,72 @@
+/* Expo 2027 Belgrade Countdown. Colours come from the --bbexpo-* custom
+ * properties, which the block, shortcode and widget settings override inline.
+ * The root selector carries the element name on purpose: block themes size
+ * every direct child of the post content (.is-layout-constrained > *) with a
+ * rule of the same weight, which would stretch a shortcode countdown to the
+ * full column. */
+div.bbexpo-countdown {
+	--bbexpo-bg: #f7f3ec;
+	--bbexpo-fg: #211b16;
+	--bbexpo-accent: #b5462b;
+	--bbexpo-line: #211b1626;
+	box-sizing: border-box;
+	max-width: 300px;
+	margin: 0 0 1em;
+	padding: 18px 20px;
+	background: var(--bbexpo-bg);
+	color: var(--bbexpo-fg);
+	border: 1px solid var(--bbexpo-line);
+	border-top: 4px solid var(--bbexpo-accent);
+	border-radius: 6px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	line-height: 1.4;
+}
+
+.aligncenter div.bbexpo-countdown {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bbexpo-countdown__title {
+	margin-bottom: 6px;
+	color: var(--bbexpo-accent);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* Letter-spacing breaks Arabic joining and uppercase means nothing in
+ * Japanese or Korean, so those titles stay plain. */
+.bbexpo-countdown--plain .bbexpo-countdown__title {
+	font-size: 12px;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+.bbexpo-countdown__num {
+	color: var(--bbexpo-fg);
+	font-size: 44px;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	line-height: 1;
+}
+
+.bbexpo-countdown__label {
+	margin-top: 4px;
+	font-size: 14px;
+	opacity: 0.75;
+}
+
+.bbexpo-countdown__credit {
+	margin-top: 10px;
+	padding-top: 8px;
+	border-top: 1px solid var(--bbexpo-line);
+	font-size: 12px;
+	opacity: 0.75;
+}
+
+.bbexpo-countdown__credit a {
+	color: var(--bbexpo-accent);
+	text-decoration: underline;
+}

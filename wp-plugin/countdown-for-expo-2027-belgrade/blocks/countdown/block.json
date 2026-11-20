@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bbexpo/countdown",
+  "version": "1.0.0",
+  "title": "Expo 2027 Belgrade Countdown",
+  "category": "widgets",
+  "icon": "clock",
+  "description": "Days until Expo 2027 Belgrade opens (15 May 2027), or days left while it runs. Eight languages.",
+  "keywords": ["expo", "countdown", "belgrade", "expo 2027", "event"],
+  "textdomain": "countdown-for-expo-2027-belgrade",
+  "supports": {
+    "html": false,
+    "align": ["left", "center", "right"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "attributes": {
+    "lang": {
+      "type": "string",
+      "default": "auto"
+    },
+    "bg": {
+      "type": "string",
+      "default": ""
+    },
+    "fg": {
+      "type": "string",
+      "default": ""
+    },
+    "accent": {
+      "type": "string",
+      "default": ""
+    },
+    "credit": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "editorScript": "bbexpo-countdown-editor",
+  "style": "bbexpo-countdown",
+  "render": "file:./render.php"
+}

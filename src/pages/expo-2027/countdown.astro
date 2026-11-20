@@ -13,8 +13,12 @@ import { SITE, EXPO, CONFIG } from "../../lib/site";
 import { breadcrumbSchema } from "../../lib/schemas";
 
 // Static page inside the expo-2027 leg (a real file wins over [leg]/[slug]).
-// The free countdown embed is a link-building asset: every embed carries an
-// attribution link home. lastmod for the sitemap lives in astro.config.mjs.
+// The free countdown embed is a distribution asset: its optional credit link
+// is nofollow and brings referral visits, not ranking credit. Languages come
+// from src/data/countdown-labels.json (shared with the WordPress plugin in
+// wp-plugin/). lastmod for the sitemap lives in astro.config.mjs.
+import LABELS from "../../data/countdown-labels.json";
+const LANG_LIST = Object.entries(LABELS.languages).map(([code, l]) => ({ code, name: l.name }));
 const PATH = "/expo-2027/countdown";
 
 const EMBED = `<div data-bb-expo-countdown></div>
@@ -69,9 +73,17 @@ const schemas: object[] = [
       <li><strong>Any other site:</strong> paste it into the page's HTML — it works anywhere plain HTML works.</li>
     </ul>
     <p>
-      <strong>Options</strong> (attributes on the <code>div</code>): <code>data-lang="de"</code> for German
-      labels; <code>data-bg</code>, <code>data-fg</code> and <code>data-accent</code> take hex colours to match
-      your site. The German build links to our <a href="/de/expo-2027" hreflang="de" lang="de">deutschsprachigen Expo-Guide</a>.
+      <strong>Languages:</strong> the widget follows your page's language when it is one of
+      {LANG_LIST.map((l, i) => (
+        <>{i > 0 && (i === LANG_LIST.length - 1 ? " or " : ", ")}<span lang={l.code}>{l.name}</span> (<code>{l.code}</code>)</>
+      ))}, and falls back to English otherwise. To pick one yourself, add <code>data-lang</code> to
+      the <code>div</code>, e.g. <code>data-lang="de"</code>. Arabic runs right to left. The German,
+      Slovak and Czech versions link to our guides in those languages; the others link to the
+      English guide and say so.
+    </p>
+    <p>
+      <strong>Colours:</strong> <code>data-bg</code>, <code>data-fg</code> and <code>data-accent</code> on the
+      <code>div</code> take hex colours to match your site.
     </p>
 
     <Note>

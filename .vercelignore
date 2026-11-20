@@ -1,3 +1,5 @@
 # The one-time content porter never deploys. (/admin now lives in the app as
 # server functions and DOES deploy — it is gated by middleware + ADMIN_PASSWORD.)
 scripts/
+# WordPress plugin source + build (published to wordpress.org, never to Vercel)
+wp-plugin/

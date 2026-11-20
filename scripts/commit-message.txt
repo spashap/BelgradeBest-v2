@@ -1,19 +1,22 @@
-Things to do in Belgrade: answer first, plus a route to the stay pages
+Countdown widget in 8 languages, nofollow credit; WordPress plugin built
 
-The page gets Bing impressions on "things to do / what to do / what to see
-in Belgrade" (236 in 90 days to 16 Nov) but no clicks on its head terms
-at position ~5.5, and it had no link to any where-to-stay page.
+Fixes two self-contradictions and builds a WordPress.org plugin as a
+listing that directory-copy sites pick up (CosmyDay's plugin earned links
+that way with zero installs).
 
-- New title ("8 must-sees, most of them free"), description and lede that
-  answer the question instead of describing the page.
-- A numbered list of the eight up top with cost and district; sections
-  reordered as a walking route (fortress, Republic Square, Skadarlija,
-  St Sava, Tesla, then Zemun, Ada, Avala). The museums link is now a link.
-- New "Beyond the sights" section: kafanas, splavovi, nightlife, day trips
-  and brutalist Belgrade (internal links only, no affiliate links).
-- New "Where to stay for sightseeing" section: one in-text Booking link
-  (Stari Grad), the Stari Grad hotel card, and links to the first-time
-  and Expo stay pages. First-time stay page added first in Read next.
-- Change log BB-CHG-0061; content-integrity baseline re-recorded.
+- Countdown widget credit link is now nofollow, like the other widgets and
+  as the page's own FAQ already said. Removed "the small attribution link
+  is the whole license" from /for-businesses (its FAQ says no conditions).
+- Countdown labels have one master, src/data/countdown-labels.json:
+  English, German, Slovak, Czech, Turkish, Arabic (right to left),
+  Japanese, Korean. /widgets/expo-countdown.js is now built from it and
+  follows the host page's language unless data-lang is set.
+  /expo-2027/countdown lists the languages.
+- wp-plugin/: "Countdown for Expo 2027 Belgrade" (block, shortcode,
+  classic widget; no external requests; credit link off by default).
+  Official Plugin Check clean in all five categories; tested on WordPress
+  6.3/PHP 7.4 and 7.1.5/PHP 8.3. Not deployed (.vercelignore). Submission
+  steps in growth/BELGRADEBEST_WP_PLUGIN.md.
+- Change log BB-CHG-0062.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

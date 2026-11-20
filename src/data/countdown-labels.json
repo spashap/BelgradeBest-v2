@@ -1,0 +1,118 @@
+{
+  "_readme": "Single source for the Expo 2027 countdown in every language. Read by the site widget (src/pages/widgets/expo-countdown.js.ts -> /widgets/expo-countdown.js) and copied into the WordPress plugin by wp-plugin/build-plugin.mjs (includes/labels.json). until/left hold three forms: [n = 1, n = 2-4 (Slovak/Czech only), every other n]; languages without plural agreement repeat one form. Labels for ar/ja/ko are number-independent noun phrases on purpose (Arabic plural agreement). caps=false turns off the uppercase, letter-spaced title, which breaks Arabic joining and reads oddly in Japanese/Korean. hub = the page the optional credit link opens; languages without a site edition link the English hub, and their tagline says so.",
+  "open": "2027-05-15",
+  "close": "2027-08-15",
+  "origin": "https://belgradebest.com",
+  "hub": {
+    "en": "/expo-2027",
+    "de": "/de/expo-2027",
+    "sk": "/sk/expo-2027",
+    "cs": "/cs/expo-2027"
+  },
+  "languages": {
+    "en": {
+      "name": "English",
+      "dir": "ltr",
+      "caps": true,
+      "title": "Expo 2027 Belgrade",
+      "until": ["day until opening", "days until opening", "days until opening"],
+      "untilNote": "15 May 2027",
+      "left": ["day left", "days left", "days left"],
+      "leftNote": "open until 15 Aug 2027",
+      "ended": "Expo 2027 Belgrade has ended",
+      "by": "Countdown by ",
+      "tagline": " — the honest English guide to Belgrade"
+    },
+    "de": {
+      "name": "Deutsch",
+      "dir": "ltr",
+      "caps": true,
+      "title": "Expo 2027 Belgrad",
+      "until": ["Tag bis zur Eröffnung", "Tage bis zur Eröffnung", "Tage bis zur Eröffnung"],
+      "untilNote": "15. Mai 2027",
+      "left": ["Tag verbleibend", "Tage verbleibend", "Tage verbleibend"],
+      "leftNote": "geöffnet bis 15. Aug. 2027",
+      "ended": "Die Expo 2027 Belgrad ist zu Ende",
+      "by": "Countdown von ",
+      "tagline": " — der deutschsprachige Expo-Guide"
+    },
+    "sk": {
+      "name": "Slovenčina",
+      "dir": "ltr",
+      "caps": true,
+      "title": "Expo 2027 Belehrad",
+      "until": ["deň do otvorenia", "dni do otvorenia", "dní do otvorenia"],
+      "untilNote": "15. mája 2027",
+      "left": ["deň do konca", "dni do konca", "dní do konca"],
+      "leftNote": "otvorené do 15. augusta 2027",
+      "ended": "Expo 2027 Belehrad sa skončilo",
+      "by": "Odpočítavanie: ",
+      "tagline": " — sprievodca po Expe v slovenčine"
+    },
+    "cs": {
+      "name": "Čeština",
+      "dir": "ltr",
+      "caps": true,
+      "title": "Expo 2027 Bělehrad",
+      "until": ["den do zahájení", "dny do zahájení", "dní do zahájení"],
+      "untilNote": "15. května 2027",
+      "left": ["den do konce", "dny do konce", "dní do konce"],
+      "leftNote": "otevřeno do 15. srpna 2027",
+      "ended": "Expo 2027 Bělehrad skončilo",
+      "by": "Odpočet: ",
+      "tagline": " — průvodce po Expu v češtině"
+    },
+    "tr": {
+      "name": "Türkçe",
+      "dir": "ltr",
+      "caps": true,
+      "title": "Expo 2027 Belgrad",
+      "until": ["gün kaldı", "gün kaldı", "gün kaldı"],
+      "untilNote": "açılış: 15 Mayıs 2027",
+      "left": ["gün kaldı", "gün kaldı", "gün kaldı"],
+      "leftNote": "15 Ağustos 2027'ye kadar açık",
+      "ended": "Expo 2027 Belgrad sona erdi",
+      "by": "Geri sayım: ",
+      "tagline": " — Belgrad için İngilizce rehber"
+    },
+    "ar": {
+      "name": "العربية",
+      "dir": "rtl",
+      "caps": false,
+      "title": "إكسبو 2027 بلغراد",
+      "until": ["الأيام المتبقية على الافتتاح", "الأيام المتبقية على الافتتاح", "الأيام المتبقية على الافتتاح"],
+      "untilNote": "15 مايو 2027",
+      "left": ["الأيام المتبقية على الختام", "الأيام المتبقية على الختام", "الأيام المتبقية على الختام"],
+      "leftNote": "مفتوح حتى 15 أغسطس 2027",
+      "ended": "انتهى إكسبو 2027 بلغراد",
+      "by": "العدّ التنازلي من ",
+      "tagline": " — دليل بلغراد باللغة الإنجليزية"
+    },
+    "ja": {
+      "name": "日本語",
+      "dir": "ltr",
+      "caps": false,
+      "title": "Expo 2027 ベオグラード",
+      "until": ["開幕までの日数", "開幕までの日数", "開幕までの日数"],
+      "untilNote": "2027年5月15日開幕",
+      "left": ["閉幕までの日数", "閉幕までの日数", "閉幕までの日数"],
+      "leftNote": "2027年8月15日まで開催",
+      "ended": "Expo 2027 ベオグラードは閉幕しました",
+      "by": "カウントダウン提供：",
+      "tagline": " — ベオグラードの英語ガイド"
+    },
+    "ko": {
+      "name": "한국어",
+      "dir": "ltr",
+      "caps": false,
+      "title": "Expo 2027 베오그라드",
+      "until": ["개막까지 남은 일수", "개막까지 남은 일수", "개막까지 남은 일수"],
+      "untilNote": "2027년 5월 15일 개막",
+      "left": ["폐막까지 남은 일수", "폐막까지 남은 일수", "폐막까지 남은 일수"],
+      "leftNote": "2027년 8월 15일까지",
+      "ended": "Expo 2027 베오그라드가 폐막했습니다",
+      "by": "카운트다운 제공: ",
+      "tagline": " — 베오그라드 영어 가이드"
+    }
+  }
+}
