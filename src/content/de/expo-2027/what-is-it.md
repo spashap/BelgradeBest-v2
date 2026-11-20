@@ -7,7 +7,7 @@ description: "Was ist die Expo 2027 Belgrad? Keine Weltausstellung, sondern die 
 lede: "Die Expo 2027 Belgrad ist die erste Spezialisierte Expo (Specialised Expo), die je auf dem Westbalkan stattfindet — eine vom BIE anerkannte, themenfokussierte internationale Ausstellung, die vom 15. Mai bis 15. August 2027 in Surčin unter dem Motto „Play for Humanity: Sport and Music for All“ läuft. Hier erfahren Sie, was das bedeutet — und ob sich ein Besuch lohnt."
 heroLabel: "Was ist eine Spezialisierte Expo / Hero"
 heroAlt: "Belgrads Flüsse und Skyline zur goldenen Stunde — die Gastgeberstadt der Expo 2027"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-20"
 order: 1
 visible: true
 intent: "both"
@@ -105,7 +105,7 @@ Dies ist die Lücke, die die meisten Besucher am meisten interessieren dürfte. 
 
 **Zur Sicherheit:** Ein staatliches Sicherheitskonzept ist vorhanden, mit Aussagen, die die Sicherheit als „auf höchstmöglichem Niveau“ beschreiben, einem Einsatzzentrum vor Ort und dem Einsatz von rund 20.000 Freiwilligen. Die Participants-FAQ beschreibt eine 24/7-Überwachung, Notfallteams und Sicherheitsübungen. Getrennt davon stellte Serbien bei der COP29 eine „Green Agenda for Expo 2027 Belgrade“ vor („Play GREEN, Play for HUMANITY“), die Nachhaltigkeit und die Zusammenarbeit im Bereich grüner Technologien hervorhebt — dies ist eine Angabe des Veranstalters, kein unabhängig bestätigtes Ergebnis.
 
-**Zur Planung der Reise selbst:** Da sich die Nachfrage auf einen Sommer konzentrieren wird, lohnt es sich, früh über Zeitpunkt und Unterkunft nachzudenken. Unsere Übersicht [Belgrad besuchen (EN)](/visit-belgrade) ist der richtige Ausgangspunkt für die Stadt selbst, und der umfassendere [Expo-2027-Besucherleitfaden](/de/expo-2027/guide) fasst die praktischen Aspekte zusammen.
+**Zur Planung der Reise selbst:** Da sich die Nachfrage auf einen Sommer konzentrieren wird, lohnt es sich, früh über Zeitpunkt und Unterkunft nachzudenken. [Wo übernachten zur Expo 2027](/de/expo-2027/where-to-stay-for-expo) vergleicht die Viertel auf beiden Seiten der Save: welche Expo-Buslinie sie anfährt und für wen sie sich eignen. Unsere Übersicht [Belgrad besuchen (EN)](/visit-belgrade) ist der richtige Ausgangspunkt für die Stadt selbst, und der umfassendere [Expo-2027-Besucherleitfaden](/de/expo-2027/guide) fasst die praktischen Aspekte zusammen.
 
 ## Also — lohnt sich ein Besuch?
 

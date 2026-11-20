@@ -7,7 +7,7 @@ description: "Expo 2027 programme: pavilions, National Days, sport and music und
 lede: "Expo 2027's theme — Play for Humanity: Sport and Music for All — frames the official programme. This page is your guide to what's on: the pavilions and themed areas, the sport and music programming, the National Days, and an honest account of which dates, opening hours and headline acts are not yet published."
 heroLabel: "Expo 2027 programme / hero"
 heroAlt: "The Expo 2027 promenade in Belgrade at golden hour — sport, music and play"
-lastUpdated: "2026-11-17"
+lastUpdated: "2026-11-20"
 order: 3
 visible: true
 intent: "both"
@@ -113,4 +113,4 @@ This is the honest gap, stated plainly. As of mid-November 2026, **no full publi
 
 The official Programme page itself, as of 2026, presents the vision and subthemes rather than a dated event schedule, and still shows "Tickets available soon." So the *concept* is solid and writable; the *timetable* simply is not out yet. The single best place to watch for the dated programme, the National Days schedule and opening hours is the official programme page at expobelgrade2027.org — and we will track each piece here as it appears.
 
-For practical transport and access detail — how to reach the site and move around the city — see our dedicated getting-there guide rather than this programme page.
+For practical transport and access detail — how to reach the site and move around the city — see our [getting-there guide](/expo-2027/getting-there) rather than this programme page. And if a National Day or the opening weekend fixes your dates, [where to stay for Expo 2027](/expo-2027/where-to-stay-for-expo) compares the areas on each side of the Sava: which Expo bus line serves each one and who each suits.

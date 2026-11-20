@@ -1,11 +1,14 @@
-WordPress plugin submitted to WordPress.org for review
+Expo pages link the Expo stay page (EN + DE)
 
-- "Countdown for Expo 2027 Belgrade" v1.0.0 submitted from the litocreative
-  account on 20 Nov. Automated scan: Pass. Status: Awaiting Review
-  (701 plugins in the queue). Slug countdown-for-expo-2027-belgrade.
-- The submission note explains that BelgradeBest and CosmyDay share an
-  owner, since the account email is a CosmyDay address.
-- growth/BELGRADEBEST_WP_PLUGIN.md updated with the status and next steps.
-- Change log BB-CHG-0063.
+"What is Expo 2027" and the programme page are the Expo pages Bing shows
+most after the hub, and neither linked a stay page in the article.
+
+- what-is-it (EN + DE): the trip-planning paragraph links the Expo stay
+  page and says what it compares.
+- programme (EN + DE): the closing paragraph now links the getting-there
+  guide (it named it without a link) and the Expo stay page.
+- Internal links only, no affiliate links. SK and CS have no twins of
+  these pages.
+- Change log BB-CHG-0064.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

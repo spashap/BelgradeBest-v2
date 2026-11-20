@@ -7,7 +7,7 @@ description: "Programm und Themen der Expo 2027 Belgrad: Pavillons, Nationaltage
 lede: "Das Motto der Expo 2027 — Play for Humanity: Sport and Music for All (Spiel für die Menschheit: Sport und Musik für alle) — gibt den Rahmen für das offizielle Programm vor. Diese Seite ist Ihr Leitfaden zu allem, was geboten wird: die Pavillons und thematischen Bereiche, das Sport- und Musikprogramm, die Nationaltage sowie eine ehrliche Bestandsaufnahme dessen, welche Termine, Öffnungszeiten und Top-Acts noch nicht veröffentlicht sind."
 heroLabel: "Expo-2027-Programm / Hero"
 heroAlt: "Die Promenade der Expo 2027 in Belgrad zur goldenen Stunde — Sport, Musik und Spiel"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-20"
 order: 3
 visible: true
 intent: "both"
@@ -113,4 +113,4 @@ Das ist die ehrliche Lücke, klar benannt. Stand Mitte November 2026 ist **kein 
 
 Die offizielle Programmseite selbst präsentiert Stand 2026 die Vision und die Unterthemen statt eines datierten Veranstaltungsplans und zeigt weiterhin „Tickets available soon“ an. Das *Konzept* steht also fest und lässt sich beschreiben; der *Zeitplan* ist schlicht noch nicht draußen. Der beste Ort, um den datierten Programmplan, den Zeitplan der Nationaltage und die Öffnungszeiten im Blick zu behalten, ist die offizielle Programmseite unter expobelgrade2027.org — und wir werden jedes einzelne Element hier nachverfolgen, sobald es erscheint.
 
-Praktische Details zu Anreise und Zugang — wie Sie zum Gelände gelangen und sich in der Stadt bewegen — finden Sie in unserem eigenen Anreise-Leitfaden, nicht auf dieser Programmseite.
+Praktische Details zu Anreise und Zugang — wie Sie zum Gelände gelangen und sich in der Stadt bewegen — finden Sie in unserem [Anreise-Leitfaden](/de/expo-2027/getting-there), nicht auf dieser Programmseite. Und wenn ein Nationaltag oder das Eröffnungswochenende Ihre Reisedaten festlegt, vergleicht [Wo übernachten zur Expo 2027](/de/expo-2027/where-to-stay-for-expo) die Viertel auf beiden Seiten der Save: welche Expo-Buslinie sie anfährt und für wen sie sich eignen.

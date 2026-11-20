@@ -7,7 +7,7 @@ description: "What is Expo 2027 Belgrade? A plain-English guide to the first Spe
 lede: "Expo 2027 Belgrade is the first Specialised Expo ever held in the Western Balkans — a BIE-recognised, theme-focused international exposition running 15 May to 15 August 2027 in Surčin, under the theme \"Play for Humanity: Sport and Music for All.\" Here's what that means, and whether it's worth your time."
 heroLabel: "What is a Specialised Expo / hero"
 heroAlt: "Belgrade's rivers and skyline at golden hour — the host city of Expo 2027"
-lastUpdated: "2026-11-17"
+lastUpdated: "2026-11-20"
 order: 1
 visible: true
 intent: "both"
@@ -105,7 +105,7 @@ This is the gap most visitors will care about. The official programme page notes
 
 **On safety:** a government security framework is in place, with statements describing security "at the highest possible level," an operations centre at the site, and engagement of around 20,000 volunteers. The Participants FAQ describes 24/7 monitoring, emergency response teams and safety drills. Separately, at COP29 Serbia presented a "Green Agenda for Expo 2027 Belgrade" ("Play GREEN, Play for HUMANITY"), highlighting sustainability and green-technology cooperation — this is reported by the organiser, not an independently verified outcome.
 
-**On planning the trip itself:** because demand will be concentrated into one summer, it's worth thinking early about timing and a base. Our [Visit Belgrade](/visit-belgrade) overview is the place to start on the city itself, and the wider [Expo 2027 visitor guide](/expo-2027/guide) pulls the practical pieces together.
+**On planning the trip itself:** because demand will be concentrated into one summer, it's worth thinking early about timing and a base. [Where to stay for Expo 2027](/expo-2027/where-to-stay-for-expo) compares the areas on each side of the Sava: which Expo bus line serves each one and who each suits. Our [Visit Belgrade](/visit-belgrade) overview is the place to start on the city itself, and the wider [Expo 2027 visitor guide](/expo-2027/guide) pulls the practical pieces together.
 
 ## So — is it worth visiting?
 
