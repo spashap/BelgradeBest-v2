@@ -12,37 +12,43 @@ import Verdicts from "../../components/admin/Verdicts.astro";
 import { ga4AffiliateClicks } from "../../lib/admin/analytics";
 import { cjEarnings } from "../../lib/admin/cj";
 import { PARTNERS, clickEvent, partnerLive } from "../../lib/affiliates";
+import { resolveAdminRange, presetDates, rangeHref, fmtRange, addDays, PRESETS, DATA_START } from "../../lib/admin/range";
 
-// Range: 1 = Today (hourly, vs yesterday); 7/28/90 = trailing days (daily).
-const RANGES = [1, 7, 28, 90] as const;
-const rangeLabel = (d: number) => (d === 1 ? "Today" : `${d}d`);
-const sp = Astro.url.searchParams;
-const days = (RANGES as readonly number[]).includes(Number(sp.get("days"))) ? Number(sp.get("days")) : 28;
-const isToday = days === 1;
+// Range: ?from=YYYY-MM-DD&to=YYYY-MM-DD (bookmarkable; lib/admin/range.ts).
+// Presets fill in from/to. A one-day range (Today, or any single day) shows
+// hours against the day before; longer ranges show days. Bad input falls back
+// to the last 28 days with a notice. Every report below uses the same range.
+const range = resolveAdminRange(Astro.url.searchParams, new Date());
+const { days, isToday, today } = range;
+const rangeText = fmtRange(range.from, range.to);
+const prevText = fmtRange(range.prevFrom, range.prevTo);
+const presetLinks = PRESETS.map((p) => {
+  const d = presetDates(p.key, today);
+  return { ...p, href: rangeHref(d), on: d.from === range.from && d.to === range.to };
+});
 
 const [ov, rt, gscQ, gscP, bing, cuts] = await Promise.all([
-  ga4Overview(days),
+  ga4Overview(range),
   ga4Realtime(),
-  searchConsoleTopQueries(days),
-  searchConsoleTopPages(days),
-  bingStats(days),
-  ga4Cuts(days),
+  searchConsoleTopQueries(range),
+  searchConsoleTopPages(range),
+  bingStats(range),
+  ga4Cuts(range),
 ]);
 const googleClicks = gscP.configured ? gscP.rows.reduce((s, r) => s + r.clicks, 0) : null;
-const verdicts = buildVerdicts(days, ov, cuts, bing, googleClicks);
+const verdicts = buildVerdicts(range, ov, cuts, bing, googleClicks);
 
 // Money: affiliate clicks (GA4) + CJ commissions, one card. Details live on
 // /admin/affiliates.
-const affDays = days === 1 ? 7 : days;
 const [aff, cj] = await Promise.all([
-  ga4AffiliateClicks(affDays, Object.keys(PARTNERS).map(clickEvent), []),
-  cjEarnings(affDays),
+  ga4AffiliateClicks(range, Object.keys(PARTNERS).map(clickEvent), []),
+  cjEarnings(range),
 ]);
 const live = Object.keys(PARTNERS).filter((k) => partnerLive(k)).length;
 const affClicks = aff.configured ? aff.byPartner.reduce((s, r) => s + r.clicks, 0) : 0;
 verdicts.push({
   tone: !live ? "bad" : cj.configured && cj.total > 0 ? "good" : affClicks > 0 ? "watch" : "info",
-  label: "Money · " + affDays + " d",
+  label: "Money · " + (isToday ? "today" : days + " d"),
   value: cj.configured ? "$" + cj.total.toFixed(2) : affClicks + " clicks",
   line: !live
     ? "No affiliate partner is switched on."
@@ -57,6 +63,7 @@ const nextActions = verdicts
   .sort((a, b) => toneRank[a.tone] - toneRank[b.tone])
   .slice(0, 4);
 // Bing pages worth a snippet rewrite: top-10 position, ≥100 impressions, CTR < 2%.
+const bingRecent = range.to >= addDays(today, -2); // Bing publishes days late
 const bingGaps = bing.configured
   ? bing.pages.filter((p) => p.impressions >= 100 && p.position > 0 && p.position <= 10 && p.ctr < 0.02).slice(0, 8)
   : [];
@@ -77,7 +84,7 @@ const fmtDelta = (d: number | null): Delta => {
   if (Math.abs(d) < 0.001) return { txt: "0%", dir: "flat" };
   return { txt: `${d > 0 ? "+" : ""}${(d * 100).toFixed(0)}%`, dir: d > 0 ? "up" : "down" };
 };
-const prevLabel = isToday ? "vs yesterday" : `vs prev ${days}d`;
+const prevLabel = days === 1 ? (isToday ? "vs yesterday" : "vs the day before") : `vs prev ${days}d`;
 
 const kpis = ov.configured
   ? [
@@ -91,9 +98,10 @@ const kpis = ov.configured
   : [];
 
 // ── Trend chart (three rows sharing one x-axis): visitors, pageviews, change ──
-// Daily bars (or hourly for Today, with yesterday's same-hour bar behind as a
-// pale reference). Change row = diverging bars: visitors vs the previous day
-// (Today: vs the same hour yesterday). Hover any column for the exact numbers.
+// Daily bars (or hourly for a one-day range, with the day before's same-hour
+// bar behind as a pale reference). Change row = diverging bars: visitors vs the
+// previous day (one-day range: vs the same hour the day before). Hover any
+// column for the exact numbers.
 const ts = ov.configured ? ov.timeseries : [];
 const hourly = ov.configured && ov.granularity === "hour";
 const n = ts.length;
@@ -117,7 +125,10 @@ const fmtChange = (c: number | null) => (c === null ? "new" : `${c > 0 ? "+" : "
 // x-axis: about 8 labels, evenly thinned
 const every = Math.max(1, Math.ceil(n / 8));
 const axisLabels = ts.map((t, i) => (i % every === 0 || i === n - 1 ? t.label : ""));
-const prevWord = hourly ? "same hour yesterday" : "previous day";
+const prevWord = hourly ? (isToday ? "same hour yesterday" : "same hour the day before") : "previous day";
+// legend words for the one-day (hourly) chart
+const curDayWord = isToday ? "today" : rangeText;
+const prevDayWord = isToday ? "yesterday" : prevText;
 // per-column hover payload (shared by all three rows)
 const hitData = (i: number) => {
   const t = ts[i];
@@ -139,18 +150,20 @@ const devices = ov.configured ? ov.devices.map((d) => ({ name: d.name, v: d.user
 const countries = ov.configured ? ov.countries.map((c) => ({ name: c.name, v: c.users })) : [];
 const newRet = ov.configured ? ov.newReturning.map((c) => ({ name: c.name, v: c.users })) : [];
 
+// Search Console lags ~2 days: a range ending today is cut at the latest day
+// with data (or is empty if it lies entirely inside the lag).
 const gscHint = (r: typeof gscQ) =>
-  r.configured
-    ? r.range.days === 1
-      ? `latest day with data · ${r.range.end}`
-      : `${r.range.days} days · ${r.range.start} → ${r.range.end}`
-    : "";
+  !r.configured
+    ? ""
+    : r.range.days === 0
+      ? "no data yet for this range (Search Console lags about 2 days)"
+      : `${fmtRange(r.range.start, r.range.end)} · ${r.range.days} d${r.range.lagged ? " (cut at the latest day with data)" : ""}`;
 ---
 <AdminLayout title="Analytics">
   <style is:inline>
     .ax-bar{display:flex;align-items:center;gap:18px;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap}
     .ax-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-    .seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+    .seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:7px;overflow:hidden}
     .seg a{padding:6px 12px;text-decoration:none;color:var(--soft);font-size:13px;border-right:1px solid var(--line)}
     .seg a:last-child{border-right:0}
     .seg a.on{background:var(--accent);color:#fff}
@@ -200,23 +213,35 @@ const gscHint = (r: typeof gscQ) =>
     @media(max-width:640px){.tc-row,.tc-axis{grid-template-columns:72px 1fr}}
   </style>
 
-  <!-- Control bar -->
+  <!-- Control bar: presets + a custom from/to pair; the range lives in the URL -->
   <div class="ax-bar">
     <div class="ax-controls">
       <span class="stamp">Range</span>
       <div class="seg">
-        {RANGES.map((d) => (
-          <a href={`/admin/analytics?days=${d}`} class={d === days ? "on" : ""}>{rangeLabel(d)}</a>
+        {presetLinks.map((p) => (
+          <a href={p.href} class={p.on ? "on" : ""}>{p.label}</a>
         ))}
       </div>
-      <a href={`/admin/analytics?days=${days}&r=${Date.now()}`} class="seg" style="padding:6px 12px;text-decoration:none;color:var(--ink)">↻ Refresh</a>
+      <form method="get" action="/admin/analytics" class="ax-controls">
+        <input type="date" name="from" value={range.from} min={DATA_START} max={today} required aria-label="From (first day)" />
+        <span class="stamp">to</span>
+        <input type="date" name="to" value={range.to} min={DATA_START} max={today} required aria-label="To (last day)" />
+        <button type="submit" class="ghost">Apply</button>
+      </form>
     </div>
     <div class="ax-controls">
       {rt ? (
         <span class="live"><span class="dot"></span>{rt.active} active now</span>
       ) : null}
-      <span class="stamp">fetched {fetchedAt}</span>
+      <a href={`${rangeHref(range)}&r=${Date.now()}`} class="seg" style="padding:6px 12px;text-decoration:none;color:var(--ink)">↻ Refresh</a>
     </div>
+  </div>
+  {range.notice ? <div class="err">{range.notice}</div> : null}
+  <div class="ax-bar">
+    <span class="stamp">
+      Showing {rangeText}{isToday ? " (so far)" : ""} · {days} {days === 1 ? "day" : "days"} · compared with {prevText}
+    </span>
+    <span class="stamp">fetched {fetchedAt}</span>
   </div>
 
   {nextActions.length ? (
@@ -252,12 +277,12 @@ const gscHint = (r: typeof gscQ) =>
         <!-- Trend: day-by-day (or hour-by-hour for Today) -->
         <div class="panel tc" id="trend">
           <div class="tc-head">
-            <h4>{hourly ? "Today by hour" : `Day by day · ${days}d`}</h4>
+            <h4>{hourly ? `${isToday ? "Today" : rangeText} by hour` : `Day by day · ${rangeText}`}</h4>
             <div class="tc-legend">
               {hourly ? (
                 <>
-                  <span><i style="background:var(--accent)"></i>today</span>
-                  <span><i style="background:rgba(210,105,63,.28)"></i>yesterday</span>
+                  <span><i style="background:var(--accent)"></i>{curDayWord}</span>
+                  <span><i style="background:rgba(210,105,63,.28)"></i>{prevDayWord}</span>
                 </>
               ) : null}
               <span><i style="background:var(--ok)"></i>up vs {prevWord}</span>
@@ -440,7 +465,7 @@ const gscHint = (r: typeof gscQ) =>
   }
 
   <!-- Bing Webmaster: the site's main search channel -->
-  <div class="section-head"><h2>Bing — the main search channel</h2><span class="hint">{bing.configured ? `last ${bing.days} d · ${bing.clicks} clicks · ${bing.impressions.toLocaleString("en-US")} impressions · prev ${bing.prevClicks} / ${bing.prevImpressions.toLocaleString("en-US")}` : ""}</span></div>
+  <div class="section-head"><h2>Bing — the main search channel</h2><span class="hint">{bing.configured ? `${fmtRange(bing.from, bing.to)} · ${bing.clicks} clicks · ${bing.impressions.toLocaleString("en-US")} impressions · prev ${bing.prevClicks} / ${bing.prevImpressions.toLocaleString("en-US")}${bingRecent ? " · Bing's last 2–3 days are usually not in yet" : ""}` : ""}</span></div>
   {
     bing.configured ? (
       <div class="grid3">

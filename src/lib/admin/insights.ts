@@ -1,6 +1,7 @@
 import { env } from "./env";
 import { ga4Client, type Ga4Overview } from "./analytics";
 import { GA4_BOT_EXCLUSION } from "../bot-traffic";
+import type { ComparedRange } from "./range";
 
 // ── /admin/analytics TL;DR (added 2026-11-15) ────────────────────────────────
 // The owner asked for conclusions, not tables to interpret. This module pulls
@@ -43,6 +44,8 @@ export type BingStats =
   | {
       configured: true;
       days: number;
+      from: string;
+      to: string;
       clicks: number;
       impressions: number;
       prevClicks: number;
@@ -54,6 +57,8 @@ export type BingStats =
   | { configured: false; reason: string };
 
 const bingDate = (s: string) => new Date(Number(/\d+/.exec(s)?.[0] ?? 0));
+// Calendar day of a Bing row, YYYY-MM-DD (compared as strings against the range).
+const bingDay = (s: string) => bingDate(s).toISOString().slice(0, 10);
 type BingRaw = { Date: string; Clicks: number; Impressions: number; Query?: string; AvgImpressionPosition?: number; AvgClickPosition?: number };
 
 async function bingCall(method: string, key: string, site: string): Promise<BingRaw[]> {
@@ -64,10 +69,11 @@ async function bingCall(method: string, key: string, site: string): Promise<Bing
   return ((await res.json()) as { d?: BingRaw[] }).d ?? [];
 }
 
-function aggregate(rows: BingRaw[], from: Date, strip = ""): BingRow[] {
+function aggregate(rows: BingRaw[], from: string, to: string, strip = ""): BingRow[] {
   const m = new Map<string, { c: number; i: number; posW: number }>();
   for (const r of rows) {
-    if (bingDate(r.Date) < from || !r.Query) continue;
+    const day = bingDay(r.Date);
+    if (day < from || day > to || !r.Query) continue;
     const k = strip ? r.Query.replace(strip, "") || "/" : r.Query;
     const a = m.get(k) ?? { c: 0, i: 0, posW: 0 };
     a.c += r.Clicks;
@@ -80,10 +86,14 @@ function aggregate(rows: BingRaw[], from: Date, strip = ""): BingRow[] {
     .sort((a, b) => b.clicks - a.clicks || b.impressions - a.impressions);
 }
 
-export function bingStats(days: number): Promise<BingStats> {
-  return cached(`bing:${days}`, 15 * 60e3, async () => {
+// The three Bing calls return the whole history regardless of dates, so they
+// are fetched (and cached) once and every range is cut from that copy:
+// switching ranges on /admin/analytics costs no extra Bing request.
+type BingRawAll = { ok: true; site: string; traffic: BingRaw[]; pages: BingRaw[]; queries: BingRaw[] } | { ok: false; reason: string };
+function bingRaw(): Promise<BingRawAll> {
+  return cached("bing:raw", 15 * 60e3, async () => {
     const key = env("BING_WEBMASTER_API_KEY");
-    if (!key) return { configured: false, reason: "Set BING_WEBMASTER_API_KEY (Bing Webmaster → Settings → API access) in the environment." };
+    if (!key) return { ok: false, reason: "Set BING_WEBMASTER_API_KEY (Bing Webmaster → Settings → API access) in the environment." };
     const site = env("BING_SITE_URL") || "https://belgradebest.com/";
     try {
       const [traffic, pages, queries] = await Promise.all([
@@ -91,37 +101,45 @@ export function bingStats(days: number): Promise<BingStats> {
         bingCall("GetPageStats", key, site),
         bingCall("GetQueryStats", key, site),
       ]);
-      const span = Math.max(days, 1);
-      const from = new Date(Date.now() - span * 864e5);
-      const prevFrom = new Date(Date.now() - 2 * span * 864e5);
-      let clicks = 0, impressions = 0, prevClicks = 0, prevImpressions = 0;
-      const daily: { date: string; clicks: number; impressions: number }[] = [];
-      for (const r of traffic) {
-        const d = bingDate(r.Date);
-        if (d >= from) {
-          clicks += r.Clicks;
-          impressions += r.Impressions;
-          daily.push({ date: d.toISOString().slice(0, 10), clicks: r.Clicks, impressions: r.Impressions });
-        } else if (d >= prevFrom) {
-          prevClicks += r.Clicks;
-          prevImpressions += r.Impressions;
-        }
-      }
-      return {
-        configured: true,
-        days: span,
-        clicks,
-        impressions,
-        prevClicks,
-        prevImpressions,
-        daily: daily.sort((a, b) => a.date.localeCompare(b.date)),
-        pages: aggregate(pages, from, site.replace(/\/$/, "")),
-        queries: aggregate(queries, from),
-      };
+      return { ok: true, site, traffic, pages, queries };
     } catch (e) {
-      return { configured: false, reason: `Bing Webmaster error: ${(e as Error).message}` };
+      return { ok: false, reason: `Bing Webmaster error: ${(e as Error).message}` };
     }
   });
+}
+
+// Bing numbers for the range r (lib/admin/range.ts), with r's previous period
+// for the comparison. Bing publishes a day's data a few days late, so the last
+// days of a range that ends today are usually still empty.
+export async function bingStats(r: ComparedRange): Promise<BingStats> {
+  const raw = await bingRaw();
+  if (!raw.ok) return { configured: false, reason: raw.reason };
+  let clicks = 0, impressions = 0, prevClicks = 0, prevImpressions = 0;
+  const daily: { date: string; clicks: number; impressions: number }[] = [];
+  for (const row of raw.traffic) {
+    const day = bingDay(row.Date);
+    if (day >= r.from && day <= r.to) {
+      clicks += row.Clicks;
+      impressions += row.Impressions;
+      daily.push({ date: day, clicks: row.Clicks, impressions: row.Impressions });
+    } else if (day >= r.prevFrom && day <= r.prevTo) {
+      prevClicks += row.Clicks;
+      prevImpressions += row.Impressions;
+    }
+  }
+  return {
+    configured: true,
+    days: r.days,
+    from: r.from,
+    to: r.to,
+    clicks,
+    impressions,
+    prevClicks,
+    prevImpressions,
+    daily: daily.sort((a, b) => a.date.localeCompare(b.date)),
+    pages: aggregate(raw.pages, r.from, r.to, raw.site.replace(/\/$/, "")),
+    queries: aggregate(raw.queries, r.from, r.to),
+  };
 }
 
 // ── GA4 engagement cuts the verdicts need ───────────────────────────────────
@@ -130,14 +148,13 @@ export type Ga4Cuts =
   | { configured: true; landing: Cut[]; language: Cut[]; device: Cut[]; source: Cut[] }
   | { configured: false; reason: string };
 
-export function ga4Cuts(days: number): Promise<Ga4Cuts> {
-  return cached(`cuts:${days}`, 15 * 60e3, async () => {
+export function ga4Cuts(r: ComparedRange): Promise<Ga4Cuts> {
+  return cached(`cuts:${r.from}:${r.to}`, 15 * 60e3, async () => {
     const c = await ga4Client();
     if (!c.ok) return { configured: false, reason: c.reason };
-    const d = Math.max(days, 1);
     const ranges = [
-      { startDate: `${d}daysAgo`, endDate: "today" },
-      { startDate: `${d * 2}daysAgo`, endDate: `${d + 1}daysAgo` },
+      { startDate: r.from, endDate: r.to },
+      { startDate: r.prevFrom, endDate: r.prevTo },
     ];
     const req = (dim: string, limit: number) => ({
       dateRanges: ranges,
@@ -183,14 +200,20 @@ const MIN_LANG = 15;
 const erate = (c: Cut) => (c.sessions ? c.engaged / c.sessions : 0);
 
 export function buildVerdicts(
-  days: number,
+  range: { days: number; isToday: boolean },
   ov: Ga4Overview,
   cuts: Ga4Cuts,
   bing: BingStats,
   googleClicks: number | null,
 ): Verdict[] {
   const out: Verdict[] = [];
-  const period = days === 1 ? "today vs yesterday" : `${days} d vs the ${days} d before`;
+  const { days } = range;
+  const period =
+    days === 1
+      ? range.isToday
+        ? "today vs yesterday"
+        : "that day vs the day before"
+      : `${days} d vs the ${days} d before`;
 
   // 1. Traffic direction (sessions; ±10% = noise band).
   if (ov.configured) {

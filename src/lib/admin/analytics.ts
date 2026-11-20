@@ -1,5 +1,7 @@
 import { env } from "./env";
 import { GA4_BOT_EXCLUSION, withoutBots } from "../bot-traffic";
+import { gscPeriod, type Period } from "../growth/dates";
+import { addDays, daysBetween, type ComparedRange } from "./range";
 
 // GA4 via the Data API. Credentials: GA_CREDENTIALS_JSON (inline service-account
 // JSON — the Vercel-friendly form) or GOOGLE_APPLICATION_CREDENTIALS (a file path,
@@ -130,8 +132,10 @@ export type GscRow = {
   ctr: number;
   position: number;
 };
+// range.lagged: the window was cut short (or, with days 0, is empty) because
+// Search Console has no data yet for its last days.
 export type GscResult =
-  | { configured: true; rows: GscRow[]; range: { start: string; end: string; days: number } }
+  | { configured: true; rows: GscRow[]; range: { start: string; end: string; days: number; lagged?: boolean } }
   | { configured: false; reason: string };
 
 // Search Console data lags ~2 days behind real time, so every window ends at
@@ -144,8 +148,17 @@ export function gscWindow(days: number) {
   return { start: fmt(start), end: fmt(end), days };
 }
 
-async function gscQuery(dimension: "query" | "page", pageRegex?: string, days = 28): Promise<GscResult> {
-  const range = gscWindow(days);
+// `span`: trailing days (ending at the latest day with data), or an explicit
+// from/to period (the /admin/analytics range), clamped to the latest day with data.
+async function gscQuery(dimension: "query" | "page", pageRegex?: string, span: number | Period = 28): Promise<GscResult> {
+  let range: { start: string; end: string; days: number; lagged?: boolean };
+  if (typeof span === "number") {
+    range = gscWindow(span);
+  } else {
+    const p = gscPeriod(span, new Date());
+    if (!p) return { configured: true, rows: [], range: { start: span.from, end: span.to, days: 0, lagged: true } };
+    range = { start: p.from, end: p.to, days: p.days, lagged: p.to !== span.to };
+  }
   const res = await gscRequest({
     startDate: range.start,
     endDate: range.end,
@@ -170,8 +183,8 @@ async function gscQuery(dimension: "query" | "page", pageRegex?: string, days = 
   return { configured: true, rows, range };
 }
 
-export const searchConsoleTopQueries = (days = 28) => gscQuery("query", undefined, days);
-export const searchConsoleTopPages = (days = 28) => gscQuery("page", undefined, days);
+export const searchConsoleTopQueries = (span: number | Period = 28) => gscQuery("query", undefined, span);
+export const searchConsoleTopPages = (span: number | Period = 28) => gscQuery("page", undefined, span);
 // Platform surface only (pavilions/tracker/countdown/for-businesses) — the
 // early-indexation feedback loop for /admin/platform.
 export const searchConsolePlatformPages = (regex: string) => gscQuery("page", regex);
@@ -269,7 +282,8 @@ export type Ga4Overview =
         viewsPerSession: Kpi;
       };
       // "day": one point per day of the range, prev = the day before it.
-      // "hour" (days=1 / Today): one point per hour, prev = same hour yesterday.
+      // "hour" (a one-day range, e.g. Today): one point per hour, prev = the
+      // same hour on the day before.
       granularity: "day" | "hour";
       timeseries: TrendPoint[];
       channels: { name: string; sessions: number }[];
@@ -287,7 +301,10 @@ const noBots = <R extends object>(reqs: R[]) => reqs.map((r) => ({ ...r, dimensi
 const delta = (cur: number, prev: number): number | null =>
   prev > 0 ? (cur - prev) / prev : cur > 0 ? null : 0; // null = "new" (no prior baseline)
 
-export async function ga4Overview(days = 28): Promise<Ga4Overview> {
+// `r`: the /admin/analytics range (lib/admin/range.ts) — explicit from/to in
+// the GA4 property's calendar, compared with the equally long period before.
+export async function ga4Overview(r: ComparedRange): Promise<Ga4Overview> {
+  const { days } = r;
   const propertyId = env("GA_PROPERTY_ID");
   if (!propertyId) {
     return { configured: false, reason: "Set GA_PROPERTY_ID (+ GA_CREDENTIALS_JSON) in the environment." };
@@ -306,14 +323,10 @@ export async function ga4Overview(days = 28): Promise<Ga4Overview> {
       : new BetaAnalyticsDataClient();
     const property = `properties/${propertyId}`;
 
-    // days=1 = "Today" (property timezone) compared against yesterday.
+    // A one-day range (Today, or any single day) runs hourly against the day before.
     const today1 = days === 1;
-    const cur = today1
-      ? { startDate: "today", endDate: "today" }
-      : { startDate: `${days}daysAgo`, endDate: "today" };
-    const prev = today1
-      ? { startDate: "yesterday", endDate: "yesterday" }
-      : { startDate: `${days * 2}daysAgo`, endDate: `${days + 1}daysAgo` };
+    const cur = { startDate: r.from, endDate: r.to };
+    const prev = { startDate: r.prevFrom, endDate: r.prevTo };
     const trendMetrics = [{ name: "totalUsers" }, { name: "screenPageViews" }];
     const kpiMetrics = [
       { name: "totalUsers" },
@@ -342,7 +355,7 @@ export async function ga4Overview(days = 28): Promise<Ga4Overview> {
                 keepEmptyRows: true,
               }
             : {
-                dateRanges: [{ startDate: `${days + 1}daysAgo`, endDate: "today" }],
+                dateRanges: [{ startDate: addDays(r.from, -1), endDate: r.to }],
                 dimensions: [{ name: "date" }],
                 metrics: trendMetrics,
                 orderBys: [{ dimension: { dimensionName: "date" } }],
@@ -445,28 +458,32 @@ export async function ga4Overview(days = 28): Promise<Ga4Overview> {
         return byHour.get(h) ?? { key: h, label: `${h}:00`, users: 0, views: 0, prevUsers: 0, prevViews: 0 };
       });
     } else {
-      const raw = rep(reports, 1).map((r) => ({
-        date: r.dimensionValues?.[0]?.value ?? "",
-        users: num(r.metricValues?.[0]?.value),
-        views: num(r.metricValues?.[1]?.value),
-      }));
-      const dayLabel = (ymd: string) =>
-        ymd.length === 8
-          ? new Date(Date.UTC(+ymd.slice(0, 4), +ymd.slice(4, 6) - 1, +ymd.slice(6, 8))).toLocaleDateString("en-GB", {
-              day: "numeric",
-              month: "short",
-              timeZone: "UTC",
-            })
-          : ymd;
-      // raw[0] is the baseline day before the range; it is not shown itself.
-      timeseries = raw.slice(1).map((d, i) => ({
-        key: d.date,
-        label: dayLabel(d.date),
-        users: d.users,
-        views: d.views,
-        prevUsers: raw[i].users,
-        prevViews: raw[i].views,
-      }));
+      // Keyed by date (GA4 YYYYMMDD) and walked day by day over the calendar,
+      // so a day GA4 leaves out shows as 0 instead of shifting the series. The
+      // extra day before `from` is only the baseline for the first delta.
+      const byDate = new Map<string, { users: number; views: number }>();
+      for (const row of rep(reports, 1)) {
+        byDate.set(row.dimensionValues?.[0]?.value ?? "", {
+          users: num(row.metricValues?.[0]?.value),
+          views: num(row.metricValues?.[1]?.value),
+        });
+      }
+      const at = (iso: string) => byDate.get(iso.replaceAll("-", "")) ?? { users: 0, views: 0 };
+      const dayLabel = (iso: string) =>
+        new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+      timeseries = Array.from({ length: daysBetween(r.from, r.to) }, (_, i) => {
+        const iso = addDays(r.from, i);
+        const d = at(iso);
+        const before = at(addDays(iso, -1));
+        return {
+          key: iso.replaceAll("-", ""),
+          label: dayLabel(iso),
+          users: d.users,
+          views: d.views,
+          prevUsers: before.users,
+          prevViews: before.views,
+        };
+      });
     }
     const channels = rep(reports, 2).map((r) => ({
       name: r.dimensionValues?.[0]?.value || "(unknown)",
@@ -502,13 +519,9 @@ export async function ga4Overview(days = 28): Promise<Ga4Overview> {
       };
     });
 
-    const today = new Date();
-    const startD = new Date(Date.now() - (today1 ? 0 : days) * 864e5);
-    const fmt = (d: Date) => d.toISOString().slice(0, 10);
-
     return {
       configured: true,
-      range: { days, start: fmt(startD), end: fmt(today) },
+      range: { days, start: r.from, end: r.to },
       granularity: today1 ? "hour" : "day",
       kpis: {
         users: kpi(0),
@@ -580,10 +593,14 @@ export type AffClicks =
     }
   | { configured: false; reason: string };
 
-export async function ga4AffiliateClicks(days: number, events: string[], pages: string[]): Promise<AffClicks> {
+// `span`: trailing days up to today, or an explicit from/to period.
+export async function ga4AffiliateClicks(span: number | Period, events: string[], pages: string[]): Promise<AffClicks> {
   const c = await ga4Client();
   if (!c.ok) return { configured: false, reason: c.reason };
-  const dateRanges = [{ startDate: `${days}daysAgo`, endDate: "today" }];
+  const days = typeof span === "number" ? span : span.days;
+  const dateRanges = [
+    typeof span === "number" ? { startDate: `${span}daysAgo`, endDate: "today" } : { startDate: span.from, endDate: span.to },
+  ];
   const evFilter = withoutBots({ filter: { fieldName: "eventName", inListFilter: { values: events } } });
   const metrics = [{ name: "eventCount" }, { name: "totalUsers" }];
   const by = (dim: string, limit = 50) => ({

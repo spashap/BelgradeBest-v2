@@ -1,17 +1,29 @@
-Language suggestion bar by browser language (not a redirect)
+Admin Analytics: pick the date range (presets + custom from/to)
 
-A visitor whose browser prefers German, Slovak, Czech or English, on a page
-that exists in that language, sees one dismissible strip under the header,
-written in that language ("Diese Seite gibt es auch auf Deutsch. Auf
-Deutsch lesen ->").
+/admin/analytics showed fixed windows (Today / 7 / 28 / 90 days). It now
+takes any range, kept in the URL so a view can be bookmarked:
+/admin/analytics?from=YYYY-MM-DD&to=YYYY-MM-DD
 
-- components/LangSuggest.astro + c-langbar in globals.css; BaseLayout
-  renders it. Bars ship hidden, so crawlers see nothing new.
-- It reads the browser's languages in order and stops at the page's own
-  language, so English-first readers on English pages see nothing.
-- While shown, the matching in-content language note is hidden (no double
-  invitation); closing brings it back and is remembered.
-- GA4 events lang_suggest_show / click / dismiss.
-- CLAUDE.md documents it. Change log BB-CHG-0065.
+- Presets: Today, 7 days, 28 days, 90 days, This month, Last month.
+  "Last N days" ends yesterday, like GA4's own presets and the Growth API,
+  so the numbers match across tools. Plus two date inputs and Apply.
+- lib/admin/range.ts parses and validates: a start after the end, a future
+  end or a non-date falls back to the last 28 days with a notice; a start
+  before the GA4 data (DATA_START 2026-06-01) is moved to that day. Days are
+  Belgrade calendar days. Old ?days= links still work.
+- The same from/to reaches every report on the tab, each compared with the
+  equally long period before: GA4 overview, trend and engagement cuts,
+  Search Console (cut at its ~2-day lag), Bing (history cached once, cut per
+  range), affiliate clicks and CJ earnings.
+- A one-day range shows hours against the day before (as Today did).
+- The day-by-day trend is built per calendar day, so a day GA4 leaves out
+  shows as 0 instead of shifting the series.
+- CJ earnings are queried in 31-day slices, so ranges over 31 days are
+  complete (on /admin/affiliates too: 90 days used to stop at 31).
+- Date inputs styled in AdminLayout with the admin tokens.
+- Tests: tests/admin/range.test.ts (npm test runs them). CLAUDE.md notes
+  the range.
 
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Admin only; the public site is unchanged, so no growth change-log entry.
+
+Co-Authored-By: Claude <noreply@anthropic.com>

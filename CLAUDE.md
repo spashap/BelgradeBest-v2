@@ -289,7 +289,14 @@ the slug is in the `articles` content collection.
 - **Analytics**: GA4 Data API via `GA_PROPERTY_ID` + `GA_CREDENTIALS_JSON` (inline
   service-account JSON; on Vercel needs `npm approve-scripts protobufjs` to have run
   at install — Vercel runs install scripts normally). Vercel Web Analytics is viewed
-  in the Vercel dashboard. Code: `src/lib/admin/analytics.ts`.
+  in the Vercel dashboard. Code: `src/lib/admin/analytics.ts`. **Date range
+  (2026-11-20):** `/admin/analytics?from=YYYY-MM-DD&to=YYYY-MM-DD` (bookmarkable;
+  presets Today / 7 / 28 / 90 days / this month / last month; "last N days" ends
+  yesterday like GA4) — parsed and validated in `src/lib/admin/range.ts`
+  (Belgrade calendar, data floor `DATA_START`, tests in `tests/admin/`), and the
+  SAME from/to reaches every report on the tab: GA4 overview + cuts, Search
+  Console (clamped to its ~2-day lag), Bing (whole history cached once, cut per
+  range), affiliate clicks and CJ (queried in 31-day slices).
 - All admin routes are `noindex` + excluded from the sitemap.
 
 ## Automated SEO / marketing (added 2026-06-21 — see `KB/automation/RUNBOOK.md`)
