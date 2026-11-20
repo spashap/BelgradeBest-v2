@@ -1,14 +1,17 @@
-Expo pages link the Expo stay page (EN + DE)
+Language suggestion bar by browser language (not a redirect)
 
-"What is Expo 2027" and the programme page are the Expo pages Bing shows
-most after the hub, and neither linked a stay page in the article.
+A visitor whose browser prefers German, Slovak, Czech or English, on a page
+that exists in that language, sees one dismissible strip under the header,
+written in that language ("Diese Seite gibt es auch auf Deutsch. Auf
+Deutsch lesen ->").
 
-- what-is-it (EN + DE): the trip-planning paragraph links the Expo stay
-  page and says what it compares.
-- programme (EN + DE): the closing paragraph now links the getting-there
-  guide (it named it without a link) and the Expo stay page.
-- Internal links only, no affiliate links. SK and CS have no twins of
-  these pages.
-- Change log BB-CHG-0064.
+- components/LangSuggest.astro + c-langbar in globals.css; BaseLayout
+  renders it. Bars ship hidden, so crawlers see nothing new.
+- It reads the browser's languages in order and stops at the page's own
+  language, so English-first readers on English pages see nothing.
+- While shown, the matching in-content language note is hidden (no double
+  invitation); closing brings it back and is remembered.
+- GA4 events lang_suggest_show / click / dismiss.
+- CLAUDE.md documents it. Change log BB-CHG-0065.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

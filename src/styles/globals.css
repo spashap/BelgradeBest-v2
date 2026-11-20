@@ -658,6 +658,28 @@ a.c-gtk__link:hover {
   .c-lang { margin-left: 0; }
 }
 
+/* --- c-langbar : browser-language suggestion strip under the header
+   (components/LangSuggest.astro). Ships `hidden`; an inline script shows the
+   one bar matching the visitor's browser language when the page has a twin in
+   it. Never a redirect, and crawlers never see it. Written in the language it
+   points at, like c-langnote, which it temporarily replaces. --- */
+.c-langbar {
+  display: flex; align-items: center; justify-content: center; gap: var(--s3);
+  padding: var(--s2) var(--s4);
+  background: var(--ink); color: var(--paper);
+  font-family: var(--display); font-size: var(--t-small); line-height: 1.4;
+}
+.c-langbar[hidden] { display: none; }
+.c-langbar__text { margin: 0; }
+.c-langbar__link { color: var(--paper); font-weight: 600; text-decoration: underline; white-space: nowrap; }
+.c-langbar__link:hover { color: var(--paper-2); }
+.c-langbar__close {
+  flex-shrink: 0; min-width: 36px; min-height: 36px;
+  background: none; border: 0; border-radius: var(--radius); cursor: pointer;
+  color: var(--paper-2); font-size: var(--t-body); line-height: 1;
+}
+.c-langbar__close:hover, .c-langbar__close:focus-visible { background: rgba(255, 255, 255, 0.12); color: var(--paper); }
+
 /* --- c-skiplink : the first thing in the tab order. Off-screen until focused,
    then pinned top-left. Public pages had no <main> landmark at all before
    2026-09-13, so a keyboard user had to tab through the whole header on every
@@ -691,6 +713,7 @@ a.c-gtk__link:hover {
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
   flex-shrink: 0;
 }
+.c-langnote[hidden] { display: none; }
 .c-langnote p { margin: 0; color: var(--ink-soft); }
 .c-langnote a { font-weight: 600; }
 /* On the inverted EXPO ATLAS deck (xp-*) the paper-on-ink palette flips. */

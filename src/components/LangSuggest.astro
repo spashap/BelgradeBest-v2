@@ -1,0 +1,90 @@
+---
+// Browser-language suggestion bar (globals.css .c-langbar), added 2026-11-20.
+//
+// NOT a redirect. Search engines crawl without a language preference and are
+// never redirected or shown anything different (the bars ship `hidden`). For a
+// visitor, the inline script reads navigator.languages in order and stops at
+// the first language it recognises:
+//   - the page's own language → nothing to suggest;
+//   - a language this page has a twin in → show that bar.
+// So a German browser on an English page sees "Diese Seite gibt es auch auf
+// Deutsch", and an English-first browser on a /de/ page sees the English bar.
+// While a bar shows, the in-content LangNote for the same language (written in
+// that language, see LangNote.astro) is hidden so the reader doesn't get the
+// same invitation twice; dismissing the bar brings it back and is remembered
+// in localStorage (wrapped in try/catch: private windows can throw).
+// GA4 events lang_suggest_show / lang_suggest_click judge whether it's used.
+import { LANGS, langSwitcher, type Alternate, type Lang } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  alternates?: Alternate[];
+}
+const { lang, alternates } = Astro.props;
+
+// Same twin set the header switcher uses; minus the current language.
+const twins = langSwitcher(alternates, lang).filter((t) => !t.current);
+
+const COPY: Record<Lang, { text: string; link: string; close: string }> = {
+  en: { text: "This page is also available in English.", link: "Read it in English", close: "Close" },
+  de: { text: "Diese Seite gibt es auch auf Deutsch.", link: "Auf Deutsch lesen", close: "Schließen" },
+  sk: { text: "Táto stránka je k dispozícii aj po slovensky.", link: "Čítať po slovensky", close: "Zavrieť" },
+  cs: { text: "Tato stránka je k dispozici i v češtině.", link: "Číst česky", close: "Zavřít" },
+};
+const known = JSON.stringify(LANGS);
+---
+
+{
+  twins.length > 0 && (
+    <>
+      {twins.map((t) => (
+        <aside class="c-langbar" data-langbar={t.lang} lang={t.lang} hidden>
+          <p class="c-langbar__text">
+            {COPY[t.lang].text}{" "}
+            <a class="c-langbar__link" href={t.href} hreflang={t.lang} data-langbar-link>
+              {COPY[t.lang].link} →
+            </a>
+          </p>
+          <button class="c-langbar__close" type="button" aria-label={COPY[t.lang].close} data-langbar-close>
+            ×
+          </button>
+        </aside>
+      ))}
+      <script is:inline define:vars={{ current: lang, known }}>
+        (function () {
+          var KEY = "bb-langbar-dismissed";
+          try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+          var langs = JSON.parse(known);
+          var prefs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""]);
+          var pick = null;
+          for (var i = 0; i < prefs.length; i++) {
+            var l = String(prefs[i] || "").toLowerCase().slice(0, 2);
+            if (langs.indexOf(l) === -1) continue;
+            if (l === current) return;
+            if (document.querySelector('[data-langbar="' + l + '"]')) { pick = l; }
+            break;
+          }
+          if (!pick) return;
+          var bar = document.querySelector('[data-langbar="' + pick + '"]');
+          var notes = function () { return document.querySelectorAll('.c-langnote[lang="' + pick + '"]'); };
+          var hideNotes = function (h) { var n = notes(); for (var j = 0; j < n.length; j++) n[j].hidden = h; };
+          var track = function (name) {
+            if (typeof window.gtag === "function") window.gtag("event", name, { to: pick, from: current, transport_type: "beacon" });
+          };
+          bar.hidden = false;
+          // Notes render later in the page; hide them once the DOM is there.
+          if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { hideNotes(true); });
+          else hideNotes(true);
+          track("lang_suggest_show");
+          bar.querySelector("[data-langbar-link]").addEventListener("click", function () { track("lang_suggest_click"); });
+          bar.querySelector("[data-langbar-close]").addEventListener("click", function () {
+            bar.hidden = true;
+            hideNotes(false);
+            try { localStorage.setItem(KEY, "1"); } catch (e) {}
+            track("lang_suggest_dismiss");
+          });
+        })();
+      </script>
+    </>
+  )
+}

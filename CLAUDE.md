@@ -355,6 +355,11 @@ English rest of the site with " (EN)" markers. Mechanics (`src/lib/i18n.ts`):
   `SiteHeader` → `i18n.ts langSwitcher()`), both directions EN↔DE; pages
   without a twin show nothing. New language = a row in `LANG_LABEL` + its
   hreflang in `alternates()` — the chip appears by itself.
+- **Browser-language bar (`c-langbar`, 2026-11-20):** `components/LangSuggest.astro`
+  under the header shows ONE dismissible strip, written in the target language, when
+  the visitor's first recognised browser language is a twin of the page (never a
+  redirect; ships `hidden`, so crawlers see nothing). While shown it hides the
+  in-content `LangNote` for that language. GA4 events `lang_suggest_show/click/dismiss`.
 - **German travel pages (2026-11-17):** three non-Expo twins on the booking
   route — `/de/plan-your-trip/airport-to-city`, `/de/plan-your-trip/visa-and-entry`,
   `/de/where-to-stay/where-to-stay-in-belgrade` (`src/content/de/<leg>/`, route
