@@ -1,22 +1,11 @@
-Countdown widget in 8 languages, nofollow credit; WordPress plugin built
+WordPress plugin submitted to WordPress.org for review
 
-Fixes two self-contradictions and builds a WordPress.org plugin as a
-listing that directory-copy sites pick up (CosmyDay's plugin earned links
-that way with zero installs).
-
-- Countdown widget credit link is now nofollow, like the other widgets and
-  as the page's own FAQ already said. Removed "the small attribution link
-  is the whole license" from /for-businesses (its FAQ says no conditions).
-- Countdown labels have one master, src/data/countdown-labels.json:
-  English, German, Slovak, Czech, Turkish, Arabic (right to left),
-  Japanese, Korean. /widgets/expo-countdown.js is now built from it and
-  follows the host page's language unless data-lang is set.
-  /expo-2027/countdown lists the languages.
-- wp-plugin/: "Countdown for Expo 2027 Belgrade" (block, shortcode,
-  classic widget; no external requests; credit link off by default).
-  Official Plugin Check clean in all five categories; tested on WordPress
-  6.3/PHP 7.4 and 7.1.5/PHP 8.3. Not deployed (.vercelignore). Submission
-  steps in growth/BELGRADEBEST_WP_PLUGIN.md.
-- Change log BB-CHG-0062.
+- "Countdown for Expo 2027 Belgrade" v1.0.0 submitted from the litocreative
+  account on 20 Nov. Automated scan: Pass. Status: Awaiting Review
+  (701 plugins in the queue). Slug countdown-for-expo-2027-belgrade.
+- The submission note explains that BelgradeBest and CosmyDay share an
+  owner, since the account email is a CosmyDay address.
+- growth/BELGRADEBEST_WP_PLUGIN.md updated with the status and next steps.
+- Change log BB-CHG-0063.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

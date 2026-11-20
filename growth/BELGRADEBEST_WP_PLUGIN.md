@@ -1,6 +1,14 @@
 # BelgradeBest — WordPress plugin "Countdown for Expo 2027 Belgrade"
 
-*20 November 2026. Built and tested; not yet submitted to WordPress.org.*
+*20 November 2026. **Submitted to WordPress.org on 20 Nov 2026** as litocreative.*
+
+**Status:**
+- **Automated scan:** Pass. **Review status:** Awaiting Review.
+- **Slug:** `countdown-for-expo-2027-belgrade`. It isn't final until approval; the future URL is https://wordpress.org/plugins/countdown-for-expo-2027-belgrade/.
+- **Queue:** 701 plugins waiting, and first replies had reached submissions from before 9 Nov.
+- **The review email** goes to admin@cosmyday.com with the subject "[WordPress Plugin Directory] Review in Progress: Countdown for Expo 2027 Belgrade". Make sure mail from plugins@wordpress.org doesn't go to spam.
+- **Do not resubmit:** the account can have one plugin in review at a time, and fixes go in as a reply to the review email.
+- **Ownership note:** the account's email is a CosmyDay address, so the submission's "Additional Information" says both sites belong to LitoCreative. It offers proof from admin@belgradebest.com or a verification file on the site.
 
 ## Why it exists
 
@@ -37,10 +45,7 @@ WordPress.org also has a page in each language for every plugin (de., sk., cs., 
 
 ## Your steps
 
-1. **Submit (about 20 minutes).**
-   - Sign in at wordpress.org as **litocreative**, the same account as the CosmyDay plugin.
-   - Open https://wordpress.org/plugins/developers/add/ and upload `wp-plugin/dist/countdown-for-expo-2027-belgrade.zip`. Rebuild it first with `node wp-plugin/build-plugin.mjs` if anything changed.
-   - Tick the confirmations and submit. The slug should read **countdown-for-expo-2027-belgrade**; it was free on 20 Nov.
+1. **Submit.** Done 20 Nov: you signed in, and I uploaded the zip (checksum matched) and submitted after your yes.
 2. **Review.** CosmyDay's took about a week. If the reviewer asks for changes, forward me the email and I'll fix the code and rebuild the zip.
 3. **After approval: publish through SVN** (WordPress.org's file store for plugins). You run the commit with your SVN password, the same way as for CosmyDay; I'll prepare the folder and a script. Screenshots and a banner can go in at the same time, with no new review.
 4. **After approval: translations.** These are what create the listings in other languages.
@@ -74,4 +79,5 @@ Your stop rule for link-building runs to 16 Dec. It can't show 50 attributable v
 - **The plugin is built and tested.** The official checker found nothing, and it works from WordPress 6.3 to 7.1, in 8 languages including Arabic right to left.
 - **It's a listing, not a traffic machine.** WordPress.org plus the sites that copy it should bring us a few real links, and each translated description gives us a page in that language.
 - **Also fixed today:** the countdown widget's credit link is now nofollow like the others, and the "the link is the license" wording is gone.
-- **Your part:** upload `wp-plugin/dist/countdown-for-expo-2027-belgrade.zip` at wordpress.org/plugins/developers/add/ as litocreative, then forward me the reviewer's email.
+- **Submitted 20 Nov.** The automated scan passed and the plugin is waiting for a manual review (701 in the queue; expect 1–3 weeks).
+- **Your part:** watch admin@cosmyday.com for the email from plugins@wordpress.org and forward it to me. Don't resubmit.
