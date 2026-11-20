@@ -1,19 +1,19 @@
-Affiliate docs: CJ account check of 19 Nov
+Things to do in Belgrade: answer first, plus a route to the stay pages
 
-First look at CJ since the partners went live, plus a profile refresh in
-CJ itself (no site change).
+The page gets Bing impressions on "things to do / what to do / what to see
+in Belgrade" (236 in 90 days to 16 Nov) but no clicks on its head terms
+at position ~5.5, and it had no link to any where-to-stay page.
 
-- Clicks: 11 in CJ, all our own 15-16 Nov setup and test clicks; the
-  16 Nov test click is confirmed in CJ, closing plan step 2. No reader
-  affiliate clicks 17-19 Nov, in CJ or GA4.
-- Applications: GetYourGuide, Qatar Airways and Trip.com pending. The
-  Network Profile was already complete, so it never blocked them; the
-  plan's "owner action" line is corrected. 12GO skipped: it pays half of
-  12GO's margin, about EUR 1.50 on a EUR 30 bus.
-- CJ profile and website property description refreshed (medical tourism
-  and "45+ articles" removed), 12 search tags added.
-- Change log BB-CHG-0060.
-- Strategy doc: "send readers to the stay pages" marked done for the Expo
-  set; things to do in Belgrade named as the next evergreen candidate.
+- New title ("8 must-sees, most of them free"), description and lede that
+  answer the question instead of describing the page.
+- A numbered list of the eight up top with cost and district; sections
+  reordered as a walking route (fortress, Republic Square, Skadarlija,
+  St Sava, Tesla, then Zemun, Ada, Avala). The museums link is now a link.
+- New "Beyond the sights" section: kafanas, splavovi, nightlife, day trips
+  and brutalist Belgrade (internal links only, no affiliate links).
+- New "Where to stay for sightseeing" section: one in-text Booking link
+  (Stari Grad), the Stari Grad hotel card, and links to the first-time
+  and Expo stay pages. First-time stay page added first in Read next.
+- Change log BB-CHG-0061; content-integrity baseline re-recorded.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
