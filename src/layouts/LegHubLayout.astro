@@ -37,7 +37,7 @@ const extraSchemas =
 const wides = items.length > 1 ? (4 - ((4 + items.length - 1) % 4)) % 4 : 0;
 const crumbs = [{ name: CONFIG.chrome.article.breadcrumbRoot, href: "/" }, { name: cluster.title }];
 ---
-<BaseLayout meta={meta}>
+<BaseLayout meta={meta} preloadImage={legHero ? { src: legHero.src, srcset: legHero.srcset, sizes: "100vw" } : null}>
   <section class="c-stage c-stage--hub">
     {legHero ? <img class="c-stage__bg" src={legHero.src} srcset={legHero.srcset} sizes="100vw" alt="" fetchpriority="high" /> : null}
     <div class="u-container c-stage__inner">

@@ -1,20 +1,14 @@
-Phone speed: inline styles, trimmed fonts, analytics after page load
+Homepage and leg hubs: fetch the stage photo first
 
-PageSpeed on phones put the Expo hub's main content at 4.4 s (target
-2.5 s). The headline text and homepage photo loaded fast but waited
-behind the one render-blocking stylesheet, which queued behind the fonts.
+After the inline-styles change, every tested page shows its main content
+in about 1 s on a throttled phone except the homepage (3.3 s): its main
+element is the stage photo, which the browser found only after reading
+the stylesheet now inside the HTML.
 
-- astro.config: build.inlineStylesheets "always". The HTML alone can paint;
-  about 14 KB gzipped more per page, one request fewer.
-- Fonts: scripts/subset-fonts.py generates src/styles/fonts.css and two
-  trimmed Central European files (Inter 84 -> 10 KB, Newsreader 36 -> 13 KB)
-  that replace the full latin-ext files any page with one č or š pulled
-  in. Same fonts, same look; unused Greek/Vietnamese faces dropped, Inter
-  Cyrillic kept for the glossary.
-- Analytics: the gtag stub and config run at once, so page views and
-  affiliate click events queue; the 180 KB library loads after the page.
-- Sitemap lastmod for /expo-2027/countdown and /for-businesses set to the
-  day they changed (20 Nov).
-- Change log BB-CHG-0066.
+- BaseLayout takes a preloadImage prop and announces it in <head>
+  (imagesrcset + fetchpriority high), before the font preloads.
+- Used by the homepage and the leg hubs (stage photo). Article and Expo
+  hub pages paint text first and get no image preload.
+- Change log BB-CHG-0067.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

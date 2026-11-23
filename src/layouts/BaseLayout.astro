@@ -21,8 +21,12 @@ import type { PageMeta } from "../lib/metadata";
 
 interface Props {
   meta: PageMeta;
+  /** Above-the-fold photo that is the page's largest paint (stage pages).
+   *  Announced in <head> so the phone starts fetching it before it has read
+   *  the inlined stylesheet (2026-11-23 speed fix). */
+  preloadImage?: { src: string; srcset?: string; sizes?: string } | null;
 }
-const { meta } = Astro.props;
+const { meta, preloadImage } = Astro.props;
 // Language pilot: German pages set meta.lang; <html lang>, og:locale and the
 // chrome follow. Pages with a twin in the other language carry hreflang.
 const lang = (meta.lang ?? CONFIG.brand.locale) as Lang;
@@ -44,6 +48,11 @@ const layoutCss =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {
+      preloadImage ? (
+        <link rel="preload" as="image" href={preloadImage.src} imagesrcset={preloadImage.srcset} imagesizes={preloadImage.sizes} fetchpriority="high" />
+      ) : null
+    }
     <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
     <link rel="preload" as="font" type="font/woff2" href={newsreaderWoff2} crossorigin />
     {

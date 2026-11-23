@@ -32,7 +32,7 @@ const expoStart = Date.parse(`${CONFIG.expo.startDate}T00:00:00Z`);
 const daysToExpo = Math.max(0, Math.ceil((expoStart - Date.now()) / DAY));
 const runDays = Math.round((Date.parse(`${CONFIG.expo.endDate}T00:00:00Z`) - expoStart) / DAY) + 1;
 ---
-<BaseLayout meta={meta}>
+<BaseLayout meta={meta} preloadImage={stageHero ? { src: stageHero.src, srcset: stageHero.srcset, sizes: "100vw" } : null}>
   <section class="c-stage">
     {stageHero ? (
       <img class="c-stage__bg" src={stageHero.src} srcset={stageHero.srcset} sizes="100vw" alt="" fetchpriority="high" />
