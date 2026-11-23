@@ -71,9 +71,9 @@ for (const p of pagesData.pages) if (p.updated) LASTMOD[`/${p.slug}`] = iso(p.up
 LASTMOD["/expo-2027/tracker"] = iso(expoParticipants.updated);
 LASTMOD["/expo-2027/contracts"] = iso(expoContracts.updated);
 LASTMOD["/expo-2027/national-days"] = iso(nationalDays.updated);
-LASTMOD["/expo-2027/countdown"] = iso("2026-07-05");
+LASTMOD["/expo-2027/countdown"] = iso("2026-11-20");
 LASTMOD["/expo-2027/corporate-area"] = iso("2026-07-06");
-LASTMOD["/for-businesses"] = iso("2026-07-06");
+LASTMOD["/for-businesses"] = iso("2026-11-20");
 LASTMOD["/visit-belgrade/belgrade-quiz"] = iso(quizData.updated);
 {
   const g = maxDate(glossaryData.terms.map((t) => t.updated).filter(Boolean));
@@ -375,6 +375,15 @@ export default defineConfig({
   markdown: {
     gfm: true,
     smartypants: false,
+  },
+  // Speed (2026-11-23): the site's one stylesheet (~66 KB raw, ~14 KB gzipped)
+  // was a separate render-blocking request. PageSpeed on a throttled phone
+  // showed it queuing behind the preloaded fonts, so first text and the stage
+  // photo waited 1.5–2.5 s for it (LCP render delay). Inlining it means the
+  // HTML alone can paint. Costs ~14 KB gzipped per page view; visits are
+  // mostly 1–2 pages, so first paint wins.
+  build: {
+    inlineStylesheets: "always",
   },
   integrations: [
     sitemap({
