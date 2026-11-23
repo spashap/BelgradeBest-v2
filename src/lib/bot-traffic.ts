@@ -15,9 +15,20 @@
 // 5 s of "engagement" each — it fires engagement events, so it inflated
 // Facebook's engaged sessions. No real screen is 2000x2000.
 //
+// 1280x1600 (added 2026-11-23): a crawler in Ashburn, Virginia (Amazon's
+// us-east-1 data centres). 40 of 40 sessions since June, all in November,
+// Direct, one page each, 0 s, and GA4 cannot even parse its browser or OS
+// ("(not set)"). It walked the site page by page (areas, pavilions, German
+// pages). It was the largest single source in Direct.
+//
+// 1600x1200 (added 2026-11-23): a Chinese scraper (Shenzhen, Guangzhou,
+// Zhongshan) claiming "Android 6.0" on a desktop-monitor-sized screen. 19 of
+// 19 sessions since June, Direct, 0 engaged. 1600x1200 is an old 4:3 monitor
+// size, but no real visitor has reported it in six months.
+//
 // NOT listed on purpose: 412x915 and 440x956 (real Pixel / iPhone Pro Max sizes).
 // Facebook's link previewer uses them, so it is caught by its referrer instead.
-export const BOT_SCREEN_RESOLUTIONS = ["1280x1200", "1366x1366", "2000x2000"];
+export const BOT_SCREEN_RESOLUTIONS = ["1280x1200", "1366x1366", "2000x2000", "1280x1600", "1600x1200"];
 
 // Facebook's link previewer (added 2026-11-23). It opens every shared link
 // with the referrer "http://m.facebook.com" — plain http, no path. Since June:
