@@ -48,5 +48,10 @@ test("the real growth/growth_changes.jsonl parses cleanly with sequential ids", 
   const { entries, problems } = parseChangelog(text);
   assert.deepEqual(problems, []);
   assert.ok(entries.length >= 1);
-  entries.forEach((e, i) => assert.equal(e.id, `BB-CHG-${String(i + 1).padStart(4, "0")}`));
+  // Ids follow APPEND order (file lines). parseChangelog sorts by timestamp,
+  // and a change can be logged after a later one (0023 vs 0021/0022 on 1 Oct),
+  // so check the ids against the raw lines, not the sorted entries.
+  const ids = text.trim().split("\n").map((line) => JSON.parse(line).id);
+  assert.equal(ids.length, entries.length);
+  ids.forEach((id, i) => assert.equal(id, `BB-CHG-${String(i + 1).padStart(4, "0")}`));
 });

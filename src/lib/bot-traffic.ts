@@ -1,4 +1,5 @@
-// Known non-human traffic that GA4's built-in (IAB list) bot filter lets through.
+// Known non-human traffic that GA4's built-in (IAB list) bot filter lets through:
+// headless screen sizes + Facebook's link previewer (by referrer, below).
 // ONE list, read by the public tag (Analytics.astro — stop collecting) and by every
 // GA4 report the admin + Growth API run (lib/admin/analytics.ts — strip history).
 //
@@ -14,16 +15,31 @@
 // 5 s of "engagement" each — it fires engagement events, so it inflated
 // Facebook's engaged sessions. No real screen is 2000x2000.
 //
-// NOT listed on purpose: 412x915. Facebook's in-app prefetch uses it (209
-// Organic Social sessions since June, 0 s engagement), but it is also a real
-// phone size (Pixel 7 class) and real search visitors arrive with it. Judge
-// Facebook by engaged sessions, which the prefetch never produces.
+// NOT listed on purpose: 412x915 and 440x956 (real Pixel / iPhone Pro Max sizes).
+// Facebook's link previewer uses them, so it is caught by its referrer instead.
 export const BOT_SCREEN_RESOLUTIONS = ["1280x1200", "1366x1366", "2000x2000"];
+
+// Facebook's link previewer (added 2026-11-23). It opens every shared link
+// with the referrer "http://m.facebook.com" — plain http, no path. Since June:
+// 307 sessions, every one from a Meta data-centre town (Prineville, Luleå,
+// Dublin, Forest City, Fort Worth, Altoona…), 0 s of engagement, emulating a
+// 412x915 Android or 440x956 iPhone. Real Facebook visitors always arrive from
+// https:// (facebook.com, l./lm./m.facebook.com). Stripping it took the last
+// 28 days' Organic Social from 143 to 15 sessions (engaged 7 → 5) and left
+// every other channel untouched. A FULL match (GA4 RE2; anchored in JS too).
+export const BOT_REFERRER_PATTERN = "http://([a-z]+\\.)?facebook\\.com/?";
 
 // GA4 Data API FilterExpression that drops those sessions from a report.
 export const GA4_BOT_EXCLUSION = {
-  notExpression: {
-    filter: { fieldName: "screenResolution", inListFilter: { values: BOT_SCREEN_RESOLUTIONS } },
+  andGroup: {
+    expressions: [
+      { notExpression: { filter: { fieldName: "screenResolution", inListFilter: { values: BOT_SCREEN_RESOLUTIONS } } } },
+      {
+        notExpression: {
+          filter: { fieldName: "pageReferrer", stringFilter: { matchType: "FULL_REGEXP", value: BOT_REFERRER_PATTERN } },
+        },
+      },
+    ],
   },
 };
 

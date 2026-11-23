@@ -1,14 +1,21 @@
-Homepage and leg hubs: fetch the stage photo first
+Strip Facebook's link previewer from GA4 (admin, Growth API, public tag)
 
-After the inline-styles change, every tested page shows its main content
-in about 1 s on a throttled phone except the homepage (3.3 s): its main
-element is the stage photo, which the browser found only after reading
-the stylesheet now inside the HTML.
+Facebook opens every shared link with a previewer that GA4 counted as a
+visit: referrer "http://m.facebook.com" (plain http), Meta data-centre
+towns (Prineville, Lulea, Dublin, Forest City, Fort Worth...), a 412x915
+Android or 440x956 iPhone screen, 0 s on the page. 307 sessions since
+June. Real Facebook visitors always arrive from https://.
 
-- BaseLayout takes a preloadImage prop and announces it in <head>
-  (imagesrcset + fetchpriority high), before the font preloads.
-- Used by the homepage and the leg hubs (stage photo). Article and Expo
-  hub pages paint text first and get no image preload.
-- Change log BB-CHG-0067.
+- lib/bot-traffic.ts: BOT_REFERRER_PATTERN; GA4_BOT_EXCLUSION now also
+  drops pageReferrer FULL_REGEXP http://([a-z]+\.)?facebook\.com/? , so
+  every admin and Growth API report cleans history too (all 14 report
+  shapes tested against the live GA4 API).
+- Analytics.astro: the tag is not loaded for that referrer.
+- Last 28 days: Organic Social 143 -> 15 sessions (engaged 7 -> 5),
+  total 728 -> 600, engagement rate 40% -> 48%, phone sessions
+  339 -> 211; other channels unchanged.
+- tests: the change-log test checks ids in append order (BB-CHG-0023 was
+  logged after 0021/0022 with an earlier timestamp; failing since 1 Oct).
+- Facebook bot brief updated. Change log BB-CHG-0068.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

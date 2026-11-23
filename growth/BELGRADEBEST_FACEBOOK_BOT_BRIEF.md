@@ -13,6 +13,11 @@
 - **So the six-week test is cancelled.** It would cost 3 owner-hours to move a channel that cannot reach anyone with 5 followers.
 - **The bot keeps posting, at zero owner cost, under a sharper brief.** The brief makes it post less, link to the pages that lead to bookings, and use one tracking scheme so we can read the results.
 - **The 2000×2000 crawler is now filtered out of GA4** (`src/lib/bot-traffic.ts`), so Facebook numbers in the admin and the Growth API are honest from now on.
+- **Update, 23 November: the link previewer is filtered out too.**
+  - It arrives with the referrer `http://m.facebook.com`, and real visitors always arrive from `https://`.
+  - It used two screen sizes, 412×915 (Android) and 440×956 (iPhone).
+  - It is now stripped from the admin, the Growth API and the public tag.
+  - Result: Facebook's 28-day total fell from 143 visits to 15, of which 5 engaged.
 
 ## What the bot does now
 

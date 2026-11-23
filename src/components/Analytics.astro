@@ -3,9 +3,10 @@
 // to avoid its cost). Emitted in PRODUCTION ONLY, so `astro dev` ships no tags.
 // Set PUBLIC_GA4_ID in the Vercel build env to switch it on.
 //
-// Known bots never load the tag: automated browsers (navigator.webdriver) and the
-// headless screen sizes GA4's own bot filter misses (lib/bot-traffic.ts — the same
-// list the admin reports strip from history).
+// Known bots never load the tag: automated browsers (navigator.webdriver), the
+// headless screen sizes GA4's own bot filter misses, and Facebook's link
+// previewer (its "http://m.facebook.com" referrer) — lib/bot-traffic.ts, the same
+// list the admin reports strip from history.
 //
 // Speed (2026-11-23): gtag.js is ~180 KB and was fetched while the page itself
 // was still loading, competing with the stylesheet, fonts and hero photo on
@@ -14,11 +15,11 @@
 // only the library download waits for window `load` (plus an idle moment,
 // at most 1.5 s). Trade-off: a visitor who leaves before the page has loaded
 // is no longer counted. Compare GA4 sessions before/after 23 Nov with that in mind.
-import { BOT_SCREEN_RESOLUTIONS } from "../lib/bot-traffic";
+import { BOT_SCREEN_RESOLUTIONS, BOT_REFERRER_PATTERN } from "../lib/bot-traffic";
 const GA4 = import.meta.env.PUBLIC_GA4_ID;
 const isProd = import.meta.env.PROD;
 const loader = `(function(){var r=screen.width+'x'+screen.height;if(navigator.webdriver||${JSON.stringify(
   BOT_SCREEN_RESOLUTIONS,
-)}.indexOf(r)>-1)return;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA4}');function inject(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${GA4}';document.head.appendChild(s);}function later(){if(window.requestIdleCallback){window.requestIdleCallback(inject,{timeout:1500});}else{window.setTimeout(inject,200);}}if(document.readyState==='complete'){later();}else{window.addEventListener('load',later,{once:true});}})();`;
+)}.indexOf(r)>-1||new RegExp(${JSON.stringify(`^(?:${BOT_REFERRER_PATTERN})$`)}).test(document.referrer))return;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA4}');function inject(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${GA4}';document.head.appendChild(s);}function later(){if(window.requestIdleCallback){window.requestIdleCallback(inject,{timeout:1500});}else{window.setTimeout(inject,200);}}if(document.readyState==='complete'){later();}else{window.addEventListener('load',later,{once:true});}})();`;
 ---
 {isProd && GA4 ? <script is:inline set:html={loader} /> : null}
