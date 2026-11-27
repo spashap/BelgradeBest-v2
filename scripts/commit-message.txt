@@ -1,17 +1,10 @@
-Expo hub snippet: drop "Tickets are not on sale yet." again
+Traffic and marketing plan for Dec 2026 - Jan 2027
 
-The 17 Nov hub rework put back the ticket-status sentence that was taken
-out on 14 Oct because it answers the searcher on the results page (hub
-clicks fell from 11 to 1 a week in early October). The first week after
-the rework repeated it: Bing impressions at a record (~293/day vs 253),
-but site CTR 3.5% -> 2.5% and GA4 search visits 95 -> 78; the hub, about
-40% of Bing impressions, was at 1.9%.
-
-- expo-2027/index.astro: TICKETS_SNIPPET is now empty (comment explains
-  why, and that it is filled with launch news once tickets go on sale).
-  The page still shows the ticket status in its quick answers and FAQ.
-- Ticket on-sale kit notes the empty snippet.
-- DE/SK/CS hub snippets never had the sentence; no twin change.
-- Change log BB-CHG-0070.
+growth/BELGRADEBEST_TRAFFIC_PLAN_2026-12.md: draft pressure-tested with
+Codex over two rounds, claims verified against the repo. Seven ranked
+items (arrival searches, ticket news in 24 h, AI-assistant answers, one
+head-term check, a German Pinterest test, booking-path check,
+scorecards), each with its success number and stop rule, plus the list
+of channels dropped and why. No site changes.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
