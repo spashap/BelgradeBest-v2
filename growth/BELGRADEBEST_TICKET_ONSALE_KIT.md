@@ -52,6 +52,8 @@
 3. **German, Slovak and Czech pages (60 min).** Do the same with `tickets.de.md`, `tickets.sk.md` and `tickets.cs.md`, in each language's date and number format. The twin rule applies: all four go in the same commit.
 4. **Hubs and tiles (20 min).** Use `strings.<lang>.md`:
    - English hub: the three ticket constants at the top of `index.astro` (`TICKETS_SNIPPET`, which also feeds the search snippet; `TICKETS_GTK`; `TICKETS_FAQ`) and the ticket line in the unknowns list.
+     - `TICKETS_SNIPPET` is deliberately empty until then. "Not on sale yet" in the search snippet cut the hub's clicks twice (October and November 2026).
+     - On launch day, fill it with the on-sale line so the snippet carries the news.
    - German, Slovak and Czech hubs: the Tickets row and the "can I buy tickets?" FAQ.
    - Pavilion tile: `ListingPage.astro` (English) and `i18n.ts` → `listing … tickets.body` (German).
    - The German guide line: `i18n.ts` → `ticketsText`.

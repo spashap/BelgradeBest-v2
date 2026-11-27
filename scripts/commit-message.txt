@@ -1,21 +1,17 @@
-Strip two Direct-traffic bots from GA4 (Ashburn crawler, Chinese scraper)
+Expo hub snippet: drop "Tickets are not on sale yet." again
 
-After the Facebook previewer, Direct was the next inflated channel
-(204 sessions in 28 days, 21% engaged). Two screen sizes are used only
-by bots:
+The 17 Nov hub rework put back the ticket-status sentence that was taken
+out on 14 Oct because it answers the searcher on the results page (hub
+clicks fell from 11 to 1 a week in early October). The first week after
+the rework repeated it: Bing impressions at a record (~293/day vs 253),
+but site CTR 3.5% -> 2.5% and GA4 search visits 95 -> 78; the hub, about
+40% of Bing impressions, was at 1.9%.
 
-- 1280x1600: a crawler in Ashburn, Virginia (Amazon us-east-1). 40 of 40
-  sessions since June, all in November, browser and OS "(not set)", one
-  page each, 0 s.
-- 1600x1200: a scraper in Shenzhen/Guangzhou/Zhongshan claiming
-  Android 6.0 on a desktop-sized screen. 19 of 19 sessions, 0 engaged.
-
-Both added to BOT_SCREEN_RESOLUTIONS (lib/bot-traffic.ts), so the admin
-and Growth API clean history and the public tag no longer loads for them.
-26 Oct-22 Nov: Direct 204 -> 153 (engaged unchanged at 42), total
-599 -> 548, engagement rate 49% -> 53%; no other channel changes.
-Chinese 1920x1080 Windows visits left alone (a common real setup).
-
-Change log BB-CHG-0069.
+- expo-2027/index.astro: TICKETS_SNIPPET is now empty (comment explains
+  why, and that it is filled with launch news once tickets go on sale).
+  The page still shows the ticket status in its quick answers and FAQ.
+- Ticket on-sale kit notes the empty snippet.
+- DE/SK/CS hub snippets never had the sentence; no twin change.
+- Change log BB-CHG-0070.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

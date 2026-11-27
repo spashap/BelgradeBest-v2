@@ -48,7 +48,14 @@ const cluster = clusterBySlug(LEG)!;
 // Ticket status lives HERE, once, for the hub: the search snippet ({tickets} in
 // site-schema seoDescription), the quick answers and the FAQ all read it. When
 // tickets go on sale, change these three strings (growth/BELGRADEBEST_TICKET_ONSALE_KIT.md).
-const TICKETS_SNIPPET = "Tickets are not on sale yet.";
+//
+// TICKETS_SNIPPET stays EMPTY while tickets are not on sale. "Tickets are not
+// on sale yet." in the search snippet answers the searcher on the results page,
+// and twice it cut the hub's Bing clicks: 1 Oct (11 → 1 click a week, removed
+// 14 Oct, BB-CHG-0027) and again after the 17 Nov rework put it back (site CTR
+// 3.5% → 2.5%, removed 27 Nov, BB-CHG-0070). Fill it only with news that makes
+// people click, i.e. when sales open ("Tickets on sale now from …").
+const TICKETS_SNIPPET = "";
 const TICKETS_GTK = "Still not on sale — three announced start dates have passed (latest: Slovak packages, 1 Nov 2026), no prices, no new date";
 const TICKETS_FAQ =
   "Not yet. Three announced start dates (15 May and 15 September 2026, and 1 November 2026 for Slovak travel packages) passed without a public launch, and no prices have been published. Our tickets page tracks every announcement. Buy only through official channels once sales open.";
