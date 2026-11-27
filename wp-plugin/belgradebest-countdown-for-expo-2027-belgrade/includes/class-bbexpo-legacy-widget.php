@@ -5,7 +5,7 @@
  * Kept alongside the block because many sites still run classic widget areas,
  * and those users cannot insert a block.
  *
- * @package Countdown_For_Expo_2027_Belgrade
+ * @package BelgradeBest_Countdown_For_Expo_2027_Belgrade
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -21,9 +21,9 @@ class BBExpo_Countdown_Legacy_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'bbexpo_countdown',
-			__( 'Expo 2027 Belgrade Countdown', 'countdown-for-expo-2027-belgrade' ),
+			__( 'BelgradeBest Countdown for Expo 2027 Belgrade', 'belgradebest-countdown-for-expo-2027-belgrade' ),
 			array(
-				'description' => __( 'Days until Expo 2027 Belgrade opens, or days left while it runs.', 'countdown-for-expo-2027-belgrade' ),
+				'description' => __( 'Days until Expo 2027 Belgrade opens, or days left while it runs.', 'belgradebest-countdown-for-expo-2027-belgrade' ),
 				'classname'   => 'bbexpo-countdown-widget',
 			)
 		);
@@ -65,7 +65,7 @@ class BBExpo_Countdown_Legacy_Widget extends WP_Widget {
 		?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
-				<?php esc_html_e( 'Title (optional)', 'countdown-for-expo-2027-belgrade' ); ?>
+				<?php esc_html_e( 'Title (optional)', 'belgradebest-countdown-for-expo-2027-belgrade' ); ?>
 			</label>
 			<input class="widefat"
 				id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
@@ -76,12 +76,12 @@ class BBExpo_Countdown_Legacy_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'lang' ) ); ?>">
-				<?php esc_html_e( 'Language', 'countdown-for-expo-2027-belgrade' ); ?>
+				<?php esc_html_e( 'Language', 'belgradebest-countdown-for-expo-2027-belgrade' ); ?>
 			</label>
 			<select class="widefat"
 				id="<?php echo esc_attr( $this->get_field_id( 'lang' ) ); ?>"
 				name="<?php echo esc_attr( $this->get_field_name( 'lang' ) ); ?>">
-				<option value="auto" <?php selected( $instance['lang'], 'auto' ); ?>><?php esc_html_e( 'Same as the site (English if not available)', 'countdown-for-expo-2027-belgrade' ); ?></option>
+				<option value="auto" <?php selected( $instance['lang'], 'auto' ); ?>><?php esc_html_e( 'Same as the site (English if not available)', 'belgradebest-countdown-for-expo-2027-belgrade' ); ?></option>
 				<?php foreach ( BBExpo_Countdown::language_names() as $code => $name ) : ?>
 					<option value="<?php echo esc_attr( $code ); ?>" <?php selected( $instance['lang'], $code ); ?>>
 						<?php echo esc_html( $name ); ?>
@@ -92,9 +92,9 @@ class BBExpo_Countdown_Legacy_Widget extends WP_Widget {
 
 		<?php
 		$colours = array(
-			'bg'     => array( __( 'Background colour (hex, blank for the default)', 'countdown-for-expo-2027-belgrade' ), BBExpo_Countdown::DEFAULT_BG ),
-			'fg'     => array( __( 'Text colour (hex, blank for the default)', 'countdown-for-expo-2027-belgrade' ), BBExpo_Countdown::DEFAULT_FG ),
-			'accent' => array( __( 'Accent colour (hex, blank for the default)', 'countdown-for-expo-2027-belgrade' ), BBExpo_Countdown::DEFAULT_ACCENT ),
+			'bg'     => array( __( 'Background colour (hex, blank for the default)', 'belgradebest-countdown-for-expo-2027-belgrade' ), BBExpo_Countdown::DEFAULT_BG ),
+			'fg'     => array( __( 'Text colour (hex, blank for the default)', 'belgradebest-countdown-for-expo-2027-belgrade' ), BBExpo_Countdown::DEFAULT_FG ),
+			'accent' => array( __( 'Accent colour (hex, blank for the default)', 'belgradebest-countdown-for-expo-2027-belgrade' ), BBExpo_Countdown::DEFAULT_ACCENT ),
 		);
 		foreach ( $colours as $key => $colour ) :
 			?>
@@ -116,10 +116,10 @@ class BBExpo_Countdown_Legacy_Widget extends WP_Widget {
 				name="<?php echo esc_attr( $this->get_field_name( 'credit' ) ); ?>"
 				value="1" <?php checked( BBExpo_Countdown::bool( $instance['credit'] ) ); ?> />
 			<label for="<?php echo esc_attr( $this->get_field_id( 'credit' ) ); ?>">
-				<?php esc_html_e( 'Show a small "Countdown by BelgradeBest" link', 'countdown-for-expo-2027-belgrade' ); ?>
+				<?php esc_html_e( 'Show a small "Countdown by BelgradeBest" link', 'belgradebest-countdown-for-expo-2027-belgrade' ); ?>
 			</label>
 			<br />
-			<small><?php esc_html_e( 'Optional and off by default. The countdown works exactly the same either way.', 'countdown-for-expo-2027-belgrade' ); ?></small>
+			<small><?php esc_html_e( 'Optional and off by default. The countdown works exactly the same either way.', 'belgradebest-countdown-for-expo-2027-belgrade' ); ?></small>
 		</p>
 		<?php
 	}

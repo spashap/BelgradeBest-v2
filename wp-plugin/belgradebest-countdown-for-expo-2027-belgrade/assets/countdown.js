@@ -1,5 +1,5 @@
 /**
- * Expo 2027 Belgrade Countdown: recounts the days in the visitor's own calendar.
+ * BelgradeBest Countdown for Expo 2027 Belgrade: recounts the days in the visitor's own calendar.
  *
  * The countdown is complete without this script (PHP renders it). It only
  * matters when a page cache serves yesterday's HTML: it reads the labels the

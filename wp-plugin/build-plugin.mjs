@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * build-plugin.mjs — builds the WordPress.org upload zip for
- * "Countdown for Expo 2027 Belgrade".
+ * "BelgradeBest Countdown for Expo 2027 Belgrade".
  *
  *   node wp-plugin/build-plugin.mjs           copy labels + write wp-plugin/dist/<slug>.zip
  *   node wp-plugin/build-plugin.mjs --check   exit 1 if the plugin's labels.json is stale
@@ -16,7 +16,7 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-const SLUG = "countdown-for-expo-2027-belgrade";
+const SLUG = "belgradebest-countdown-for-expo-2027-belgrade";
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const master = path.join(root, "src", "data", "countdown-labels.json");

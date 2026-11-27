@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Countdown for Expo 2027 Belgrade
+ * Plugin Name:       BelgradeBest Countdown for Expo 2027 Belgrade
  * Plugin URI:        https://belgradebest.com/expo-2027/countdown
  * Description:       A live countdown to Expo 2027 Belgrade (15 May – 15 August 2027) in eight languages. Block, shortcode and classic widget. No external requests, no cookies, no tracking.
  * Version:           1.0.0
@@ -10,9 +10,9 @@
  * Author URI:        https://belgradebest.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       countdown-for-expo-2027-belgrade
+ * Text Domain:       belgradebest-countdown-for-expo-2027-belgrade
  *
- * @package Countdown_For_Expo_2027_Belgrade
+ * @package BelgradeBest_Countdown_For_Expo_2027_Belgrade
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -73,7 +73,7 @@ function bbexpo_countdown_register_assets() {
 		'window.bbexpoCountdownLanguages = ' . wp_json_encode( BBExpo_Countdown::language_names() ) . ';',
 		'before'
 	);
-	wp_set_script_translations( 'bbexpo-countdown-editor', 'countdown-for-expo-2027-belgrade' );
+	wp_set_script_translations( 'bbexpo-countdown-editor', 'belgradebest-countdown-for-expo-2027-belgrade' );
 }
 add_action( 'init', 'bbexpo_countdown_register_assets', 5 );
 

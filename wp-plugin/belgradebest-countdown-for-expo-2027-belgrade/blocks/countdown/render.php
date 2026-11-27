@@ -5,7 +5,7 @@
  * Receives $attributes from WordPress. All escaping and validation happens in
  * BBExpo_Countdown, which the shortcode and the classic widget share.
  *
- * @package Countdown_For_Expo_2027_Belgrade
+ * @package BelgradeBest_Countdown_For_Expo_2027_Belgrade
  *
  * @var array $attributes Block attributes.
  */

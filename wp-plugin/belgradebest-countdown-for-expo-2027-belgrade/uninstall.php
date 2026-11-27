@@ -6,7 +6,7 @@
  * the widget option WordPress keeps for this widget, so removing that key is
  * the whole cleanup. Blocks and shortcodes are post content and are left alone.
  *
- * @package Countdown_For_Expo_2027_Belgrade
+ * @package BelgradeBest_Countdown_For_Expo_2027_Belgrade
  */
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;

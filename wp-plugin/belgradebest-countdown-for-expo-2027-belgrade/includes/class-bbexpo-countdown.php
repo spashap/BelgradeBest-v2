@@ -6,7 +6,7 @@
  * points cannot drift apart. The labels live in includes/labels.json, the same
  * table the countdown embed on belgradebest.com is built from.
  *
- * @package Countdown_For_Expo_2027_Belgrade
+ * @package BelgradeBest_Countdown_For_Expo_2027_Belgrade
  */
 
 defined( 'ABSPATH' ) || exit;

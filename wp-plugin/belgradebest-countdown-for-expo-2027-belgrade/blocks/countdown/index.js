@@ -1,5 +1,5 @@
 /**
- * Editor registration for the Expo 2027 Belgrade Countdown block.
+ * Editor registration for the BelgradeBest Countdown for Expo 2027 Belgrade block.
  *
  * Written in plain JavaScript against the wp.* globals rather than JSX so the
  * plugin ships without a build step: the reviewer and the user read exactly
@@ -21,7 +21,7 @@
 	var NAMES = window.bbexpoCountdownLanguages || { en: 'English' };
 
 	function languageOptions() {
-		var options = [ { label: __( 'Same as the site (English if not available)', 'countdown-for-expo-2027-belgrade' ), value: 'auto' } ];
+		var options = [ { label: __( 'Same as the site (English if not available)', 'belgradebest-countdown-for-expo-2027-belgrade' ), value: 'auto' } ];
 		Object.keys( NAMES ).forEach( function ( code ) {
 			options.push( { label: NAMES[ code ], value: code } );
 		} );
@@ -32,7 +32,7 @@
 		return el( C.TextControl, {
 			key: key,
 			label: label,
-			help: __( 'Hex value such as', 'countdown-for-expo-2027-belgrade' ) + ' ' + placeholder + '. ' + __( 'Leave blank for the default.', 'countdown-for-expo-2027-belgrade' ),
+			help: __( 'Hex value such as', 'belgradebest-countdown-for-expo-2027-belgrade' ) + ' ' + placeholder + '. ' + __( 'Leave blank for the default.', 'belgradebest-countdown-for-expo-2027-belgrade' ),
 			placeholder: placeholder,
 			value: attributes[ key ],
 			onChange: function ( value ) {
@@ -50,26 +50,26 @@
 
 			var settings = el(
 				C.PanelBody,
-				{ title: __( 'Countdown settings', 'countdown-for-expo-2027-belgrade' ), initialOpen: true },
+				{ title: __( 'Countdown settings', 'belgradebest-countdown-for-expo-2027-belgrade' ), initialOpen: true },
 				el( C.SelectControl, {
-					label: __( 'Language', 'countdown-for-expo-2027-belgrade' ),
+					label: __( 'Language', 'belgradebest-countdown-for-expo-2027-belgrade' ),
 					value: attributes.lang,
 					options: languageOptions(),
 					onChange: function ( value ) {
 						setAttributes( { lang: value } );
 					}
 				} ),
-				colourControl( 'bg', __( 'Background colour', 'countdown-for-expo-2027-belgrade' ), '#f7f3ec', attributes, setAttributes ),
-				colourControl( 'fg', __( 'Text colour', 'countdown-for-expo-2027-belgrade' ), '#211b16', attributes, setAttributes ),
-				colourControl( 'accent', __( 'Accent colour', 'countdown-for-expo-2027-belgrade' ), '#b5462b', attributes, setAttributes )
+				colourControl( 'bg', __( 'Background colour', 'belgradebest-countdown-for-expo-2027-belgrade' ), '#f7f3ec', attributes, setAttributes ),
+				colourControl( 'fg', __( 'Text colour', 'belgradebest-countdown-for-expo-2027-belgrade' ), '#211b16', attributes, setAttributes ),
+				colourControl( 'accent', __( 'Accent colour', 'belgradebest-countdown-for-expo-2027-belgrade' ), '#b5462b', attributes, setAttributes )
 			);
 
 			var credit = el(
 				C.PanelBody,
-				{ title: __( 'Credit link', 'countdown-for-expo-2027-belgrade' ), initialOpen: false },
+				{ title: __( 'Credit link', 'belgradebest-countdown-for-expo-2027-belgrade' ), initialOpen: false },
 				el( C.ToggleControl, {
-					label: __( 'Show a small "Countdown by BelgradeBest" link', 'countdown-for-expo-2027-belgrade' ),
-					help: __( 'Off by default. The countdown works exactly the same either way.', 'countdown-for-expo-2027-belgrade' ),
+					label: __( 'Show a small "Countdown by BelgradeBest" link', 'belgradebest-countdown-for-expo-2027-belgrade' ),
+					help: __( 'Off by default. The countdown works exactly the same either way.', 'belgradebest-countdown-for-expo-2027-belgrade' ),
 					checked: !! attributes.credit,
 					onChange: function ( value ) {
 						setAttributes( { credit: !! value } );

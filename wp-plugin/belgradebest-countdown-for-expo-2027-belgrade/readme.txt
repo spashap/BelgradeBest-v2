@@ -1,4 +1,4 @@
-=== Countdown for Expo 2027 Belgrade ===
+=== BelgradeBest Countdown for Expo 2027 Belgrade ===
 Contributors: litocreative
 Tags: countdown, expo, expo 2027, belgrade, event countdown
 Requires at least: 6.3
@@ -12,7 +12,7 @@ A live countdown to Expo 2027 Belgrade (15 May – 15 August 2027) in eight lang
 
 == Description ==
 
-Countdown for Expo 2027 Belgrade adds a small card to any post, page or sidebar that counts the days until the world expo in Belgrade, Serbia opens on 15 May 2027. While the Expo runs it shows the days left until it closes on 15 August 2027, and afterwards it says the Expo has ended. You set it up once and never touch it again.
+BelgradeBest Countdown for Expo 2027 Belgrade adds a small card to any post, page or sidebar that counts the days until the world expo in Belgrade, Serbia opens on 15 May 2027. While the Expo runs it shows the days left until it closes on 15 August 2027, and afterwards it says the Expo has ended. You set it up once and never touch it again.
 
 **Eight languages**
 
@@ -22,7 +22,7 @@ English, German, Slovak, Czech, Turkish, Arabic, Japanese and Korean. By default
 
 * **Block editor:** search for "Expo 2027" in the block inserter. Language and colours are in the block sidebar, with a live preview.
 * **Shortcode:** `[bbexpo_countdown]` anywhere shortcodes run, including page builders with a shortcode element.
-* **Classic widget:** an "Expo 2027 Belgrade Countdown" widget for themes that still use classic sidebars.
+* **Classic widget:** an "BelgradeBest Countdown for Expo 2027 Belgrade" widget for themes that still use classic sidebars.
 
 **Matches your theme**
 
@@ -42,7 +42,7 @@ This plugin is made by BelgradeBest, an independent travel guide to Belgrade. It
 
 1. Install the plugin through Plugins → Add New, or upload the plugin folder to `/wp-content/plugins/`.
 2. Activate it through the Plugins screen.
-3. Edit any post or page and add the **Expo 2027 Belgrade Countdown** block.
+3. Edit any post or page and add the **BelgradeBest Countdown for Expo 2027 Belgrade** block.
 
 For a sidebar, go to Appearance → Widgets and add either the block or the classic widget, whichever your theme supports.
 

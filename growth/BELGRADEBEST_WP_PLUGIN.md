@@ -1,12 +1,44 @@
-# BelgradeBest — WordPress plugin "Countdown for Expo 2027 Belgrade"
+# BelgradeBest — WordPress plugin "BelgradeBest Countdown for Expo 2027 Belgrade"
 
-*20 November 2026. **Submitted to WordPress.org on 20 Nov 2026** as litocreative.*
+*20 November 2026. **Submitted to WordPress.org on 20 Nov 2026** as litocreative. Renamed 27 Nov after review round 1.*
 
 **Status:**
-- **Automated scan:** Pass. **Review status:** Awaiting Review.
-- **Slug:** `countdown-for-expo-2027-belgrade`. It isn't final until approval; the future URL is https://wordpress.org/plugins/countdown-for-expo-2027-belgrade/.
+- **Automated scan:** Pass. **Review status:** round 1 pended on 27 Nov for the name and for ownership (see below).
+- **Slug:** `belgradebest-countdown-for-expo-2027-belgrade` (requested in the round 1 reply; was `countdown-for-expo-2027-belgrade`). It isn't final until approval; the future URL is https://wordpress.org/plugins/belgradebest-countdown-for-expo-2027-belgrade/.
+
+## Review round 1 (email of 27 Nov) and the fix
+
+The reviewer raised two things:
+
+1. **The name was too generic** ("Countdown" first), with "Expo 2027 Belgrade" seen as a trademark.
+   - **Fix:** the name is now **BelgradeBest Countdown for Expo 2027 Belgrade**: our brand first, and the trademark after "for".
+   - It is the same in the readme, the plugin header, the text domain, the block title and the classic widget title.
+   - The readme already says the plugin is not affiliated with the Expo organisers or the BIE.
+   - The zip is at `wp-plugin/dist/belgradebest-countdown-for-expo-2027-belgrade.zip`.
+2. **Ownership:** the account email (cosmyday.com) doesn't match belgradebest.com.
+   - **Fix:** add a DNS TXT record on belgradebest.com. The domain's DNS is at Namecheap (`dns1.registrar-servers.com`).
+   - Steps: Namecheap → Domain List → belgradebest.com → Manage → Advanced DNS → Add New Record:
+     - Type **TXT Record**;
+     - Host **@**;
+     - Value **wordpressorg-litocreative-verification**;
+     - TTL Automatic.
+   - Check it is visible before replying: `Resolve-DnsName belgradebest.com -Type TXT -Server 1.1.1.1`.
+   - The record says nothing about the owner beyond the username that is already public on the plugin.
+
+**Reply to the review email** (in the same thread, after uploading the new zip on "Add your plugin" while signed in as litocreative):
+
+> Hi,
+>
+> Thanks for the review. Both points are addressed:
+>
+> - Name: changed to "BelgradeBest Countdown for Expo 2027 Belgrade" (our brand first, the event name after "for"; the readme states there is no affiliation with the Expo organisers or the BIE). Please change the slug to: belgradebest-countdown-for-expo-2027-belgrade
+> - Ownership: I own belgradebest.com. The TXT record wordpressorg-litocreative-verification is now live at the domain root. The account email is on cosmyday.com because I also run that site and its plugin (cosmyday-astrology-widgets) under the same account.
+>
+> The updated zip has been uploaded.
+>
+> Thanks
 - **Queue:** 701 plugins waiting, and first replies had reached submissions from before 9 Nov.
-- **The review email** goes to admin@cosmyday.com with the subject "[WordPress Plugin Directory] Review in Progress: Countdown for Expo 2027 Belgrade". Make sure mail from plugins@wordpress.org doesn't go to spam.
+- **The review email** goes to admin@cosmyday.com with the subject "[WordPress Plugin Directory] Review in Progress: Countdown for Expo 2027 Belgrade" (the original name; replies stay in that thread). Make sure mail from plugins@wordpress.org doesn't go to spam.
 - **Do not resubmit:** the account can have one plugin in review at a time, and fixes go in as a reply to the review email.
 - **Ownership note:** the account's email is a CosmyDay address, so the submission's "Additional Information" says both sites belong to LitoCreative. It offers proof from admin@belgradebest.com or a verification file on the site.
 
