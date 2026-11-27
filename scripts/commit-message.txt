@@ -1,10 +1,11 @@
-Traffic and marketing plan for Dec 2026 - Jan 2027
+Traffic plan step 1 reviewed: no airport-page gap, no rewrite
 
-growth/BELGRADEBEST_TRAFFIC_PLAN_2026-12.md: draft pressure-tested with
-Codex over two rounds, claims verified against the repo. Seven ranked
-items (arrival searches, ticket news in 24 h, AI-assistant answers, one
-head-term check, a German Pinterest test, booking-path check,
-scorecards), each with its success number and stop rule, plus the list
-of channels dropped and why. No site changes.
+Grouped 763 Bing impressions (90 days) on the arrival pages by task:
+taxi fares/voucher 232, generic airport-to-centre 180, bus 72/A1 176,
+train stations 105, distance 26, night 2. The airport page already
+answers each with Nov 2026 facts, and the stations page answers the
+"main train station" queries. Stop rule applied: no content change;
+measure against 25 airport clicks by 31 Jan. Progress noted in
+growth/BELGRADEBEST_TRAFFIC_PLAN_2026-12.md.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

@@ -29,6 +29,26 @@ Most of the work is done by Claude. The owner's time is in the "Owner" column.
 | 6 | **Booking path check.** Look at what readers on the money pages actually do; fix any obvious friction once. | none | 5 visits with an affiliate click in the last 4 weeks of January | With fewer than 100 money-page visits, don't call it a conversion failure |
 | 7 | **Scorecard.** First read 14 Dec (baseline), last read 31 Jan. Search clicks, visits and affiliate clicks reported separately, with German pages split out. | 10 min to read it | Planning-page engaged visits +50 against the baseline | If nothing grows, spend less time in February rather than adding channels |
 
+## Progress
+
+- **Step 1, reviewed 27 Nov: no gap found, so no rewrite (stop rule applied).**
+  - **The data:** 763 Bing appearances over 90 days on the arrival pages, grouped by what the searcher wanted to do:
+
+    | Task | Appearances | Clicks |
+    |---|---|---|
+    | Taxi fares and the voucher | 232 | 10 |
+    | Generic "airport to city centre" | 180 | 9 |
+    | Bus 72 or the A1 minibus | 176 | 9 |
+    | Train stations | 105 | 4 |
+    | Distance and travel time | 26 | 1 |
+    | Arriving at night | 2 | 0 |
+
+  - **Coverage:**
+    - The airport page already answers every one of these tasks with November 2026 facts: a comparison table, how to pay, the voucher zones, touts, ride-hail apps, night buses, the station link and the airport railway.
+    - The stations page already answers "which is the main train station" (Beograd Centar / Prokop) for its top queries.
+  - **Decision:** the limit is clicks on queries where we already rank 2nd to 4th, and snippets stay frozen until 25 Dec. So no content change was made.
+  - **Next:** measure against the target (25 airport clicks by 31 Jan) and look at the snippet again after 25 Dec only if clicks lag. The Budapest-train line on the stations page is due its own check on 13 Dec, the announced launch date.
+
 ## Not doing (and why)
 
 - **Email ticket alert.** Already rejected in November: about 2–5 subscribers in 6 months, and the law needs a postal address and a named controller, which conflicts with the owner's privacy. My draft brought it back by mistake; Codex caught it.
