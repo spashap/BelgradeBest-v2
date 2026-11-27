@@ -7,7 +7,7 @@ description: "A Belgrade 3 day itinerary grouped by area so each day flows on fo
 lede: "Three days is the sweet spot for Belgrade — enough for the walkable central core, a neighbourhood or two and a half-day escape. Here's a plan grouped by area so each day flows on foot, and that compresses to one or two days if that's all you have."
 heroLabel: "Belgrade 3-day itinerary / hero"
 heroAlt: "Walking a three-day route through Belgrade"
-lastUpdated: "2026-11-15"
+lastUpdated: "2026-11-27"
 order: 3
 visible: true
 intent: "leisure"
@@ -51,6 +51,12 @@ This page is about sequencing and logistics — the *why* and the deeper backgro
 Belgrade's central sights cluster tightly enough to walk between, which is what makes a day-by-day plan work. The old-town core sits in the Stari Grad district on the right bank of the Sava and Danube. Republic Square (Trg Republike) is the orientation point most people start from; from there, Knez Mihailova — the pedestrian shopping spine — runs roughly north-west, and at its far end Belgrade Fortress ([Kalemegdan](/glossary/kalemegdan)) crowns the ridge above the river confluence. The fortress is about 0.9 km from Republic Square and 0.6–0.8 km from Knez Mihailova, so the whole first-day spine is a comfortable on-foot loop rather than a transit problem. Skadarlija, the cobbled [kafana](/glossary/kafana) quarter, lies just east of the square — a 5–8 minute downhill walk — which is why it slots naturally into the same day as a dinner stop.
 
 The next ring out is still close. Dorćol, a mixed inner-city neighbourhood good for cafes and a more local feel, is a 10–15 minute walk north-east of Republic Square toward the Danube; Savamala, the riverfront nightlife and creative district, is about 0.8–1.0 km south-west of the square, downhill toward the Sava. Vračar — home to the Temple of St. Sava and the Nikola Tesla Museum — sits south-east of the core, generally a short hop from the centre (these sights are detailed on their canonical pages rather than mapped here). Zemun, Ada Ciganlija and Avala are half-day add-ons: far enough out to want transport, close enough to bolt onto any day.
+
+## Where to stay for a three-day trip
+
+Stay central and this plan needs almost no transport. Days 1 and 2 are both walking days that start in the old town, so [a base in Stari Grad](aff:area/stari-grad) puts the fortress, Knez Mihailova and Skadarlija on your doorstep and saves the most time. [Vračar](aff:area/vracar) is the quieter alternative: it is a short walk from St. Sava and the Tesla Museum on Day 2, and about 15–20 minutes on foot from Republic Square for Day 1. If Day 3 is Zemun or you are mainly here for nightlife, Dorćol or Savamala work too. Our [first-time guide to where to stay](/where-to-stay/where-to-stay-in-belgrade-first-time) compares the central areas, including noise and parking.
+
+**Adding Expo 2027 days.** The Expo runs from 15 May to 15 August 2027 at Surčin, near the airport, on the New Belgrade side of the Sava. Independent guidance suggests 2–3 days for the Expo itself, so a combined trip is 4–5 days: this plan's first two days for the city, then the Expo days. If the Expo is the main reason for the trip, New Belgrade or Zemun put you on the same side of the river as the site. If the city matters as much, stay central and use the announced Expo bus lines and the planned railway, which start nearer the old town. Neither had been confirmed as running when we checked. The [Expo stay guide](/expo-2027/where-to-stay-for-expo) compares each base by how you would actually reach the site. Expo summer will be busier and dearer than a normal year, so book a refundable room once your dates are firm.
 
 ## Sites to sequence
 
@@ -105,7 +111,7 @@ For timing, the best months are April–June and September–October — mild, a
 
 ## What's still being worked out
 
-A few practicalities tied to Expo 2027 — including airport rail upgrades, any dedicated Expo shuttles and airport-to-city transfer logistics — are not covered on this planning page. Those details belong to the Expo 2027 and trip-planning sections of the site, and at the time of writing several of them are not yet announced. When you are ready to fix arrival logistics, check those pages rather than relying on a single date here. For everything else, the trip shape above is stable; it is only the numbers — hours, fares and budgets — that move, which is why the practicals point to their canonical homes.
+A few Expo 2027 practicalities are announced but not yet confirmed: whether the Expo bus lines are running, and when the airport and Expo railway opens. We track those on [getting to the Expo](/expo-2027/getting-there). For arrival, [airport to the city centre](/plan-your-trip/airport-to-city) has current bus, minibus and taxi fares. Check those pages close to your trip rather than relying on a single date here. For everything else, the trip shape above is stable; it is only the numbers — hours, fares and budgets — that move, which is why the practicals point to their canonical homes.
 
 ## Day 1 — the old-town spine
 

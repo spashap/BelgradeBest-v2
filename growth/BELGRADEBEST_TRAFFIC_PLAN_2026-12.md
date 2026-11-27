@@ -49,6 +49,46 @@ Most of the work is done by Claude. The owner's time is in the "Owner" column.
   - **Decision:** the limit is clicks on queries where we already rank 2nd to 4th, and snippets stay frozen until 25 Dec. So no content change was made.
   - **Next:** measure against the target (25 airport clicks by 31 Jan) and look at the snippet again after 25 Dec only if clicks lag. The Budapest-train line on the stations page is due its own check on 13 Dec, the announced launch date.
 
+- **Step 3, started 27 Nov: Bing AI Performance report read.**
+  - **Citations:** Copilot and Bing's AI answers cited the site **7.9K times in 3 months**, rising from about 40 a day (late Aug) to about 200 a day (late Nov). About 15 pages are cited per day, 88 in total.
+  - **But few visits follow:** only about 21 AI-referred visits per 28 days. Citations are reach, not traffic.
+  - **Most-cited pages:**
+
+    | Page | Citations |
+    |---|---|
+    | Things to do | 1.5K |
+    | Airport to city | 625 |
+    | Expo hub | 469 |
+    | Taxis | 370 |
+    | Visa | 331 |
+    | Safety | 272 |
+    | Money | 271 |
+    | Serbian food | 252 |
+    | Kafana (glossary) | 230 |
+    | Best time to visit | 198 |
+    | 3-day itinerary | 193 |
+
+    No where-to-stay page is in the top 25.
+  - **Top questions** (citations, share of the AI answer's sources):
+
+    | Question | Citations | Share |
+    |---|---|---|
+    | "things to do in belgrade" | 459 | 28% |
+    | "kafana" | 246 | 20% |
+    | Romanian "sights in and around Belgrade" | 144 | 27% |
+    | "best time to visit belgrade" | 85 | 19% |
+    | "belgrade expo 2027" | 61 | 15% |
+    | "is belgrade safe" | 56 | 21% |
+    | "3-day belgrade itinerary" | 20 | 13% |
+
+  - **Topic Portfolio (beta):** its "opportunity" queries are other cities (Prague, Oslo, Dubai), so it's useless at our size, as Codex warned.
+  - **Question 1, done 27 Nov: "where should I stay for a 3-day trip / with Expo days?"**
+    - The 3-day itinerary (193 citations, only 13% share on itinerary questions) never said where to stay.
+    - Its Expo paragraph said Expo logistics "are not covered".
+    - Added a self-contained "Where to stay for a three-day trip" section: a Stari Grad or Vračar base with Booking area links labelled "Ad", plus an Expo-days variant pointing to the Expo stay guide. The outdated Expo paragraph was replaced with links to getting-there and airport.
+    - **Worked if:** the itinerary page sends readers to stay pages or Booking, and its citation share on itinerary questions rises above 13%.
+  - **Question 2:** chosen from the next report read (around 11 Dec), once Bing has re-crawled this page.
+
 ## Not doing (and why)
 
 - **Email ticket alert.** Already rejected in November: about 2–5 subscribers in 6 months, and the law needs a postal address and a named controller, which conflicts with the owner's privacy. My draft brought it back by mistake; Codex caught it.
