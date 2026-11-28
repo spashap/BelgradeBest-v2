@@ -1,14 +1,14 @@
-WordPress plugin: rename to "BelgradeBest Countdown for Expo 2027 Belgrade"
+WordPress plugin approved: SVN publish script and directory icons
 
-The WordPress.org review (round 1) pended the submission: the name began
-with the generic word "Countdown", "Expo 2027 Belgrade" was flagged as a
-trademark, and the account email domain does not match belgradebest.com.
+WordPress.org approved "BelgradeBest Countdown for Expo 2027 Belgrade"
+on 28 Nov 2026 (slug belgradebest-countdown-for-expo-2027-belgrade).
 
-- Display name, slug, folder, main file, text domain and @package now
-  use belgradebest-countdown-for-expo-2027-belgrade (brand first, the
-  event name after "for"). Block and classic-widget titles follow.
-- Version stays 1.0.0 (never published); zip rebuilt.
-- Guide: round 1 fixes, the DNS TXT step at Namecheap, the reply draft.
-- Change log BB-CHG-0072.
+- wp-plugin/svn-publish.ps1: the owner runs it with his SVN password.
+  It checks the build, checks out to C:\projects\wporg-svn\<slug>,
+  mirrors the plugin into trunk/ and the icons into assets/, shows
+  the change list, commits, then tags the Stable tag version.
+- wp-plugin/wporg-assets: 128 and 256 px icons from the site's B mark.
+- Guide: approval status and publish steps.
+- Change log BB-CHG-0073.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

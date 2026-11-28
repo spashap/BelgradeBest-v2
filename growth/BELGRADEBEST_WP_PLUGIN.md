@@ -1,10 +1,27 @@
 # BelgradeBest — WordPress plugin "BelgradeBest Countdown for Expo 2027 Belgrade"
 
-*20 November 2026. **Submitted to WordPress.org on 20 Nov 2026** as litocreative. Renamed 27 Nov after review round 1.*
+*20 November 2026. **Submitted to WordPress.org on 20 Nov 2026** as litocreative. Renamed 27 Nov after review round 1. **Approved 28 Nov 2026.***
 
 **Status:**
-- **Automated scan:** Pass. **Review status:** round 1 pended on 27 Nov for the name and for ownership (see below).
-- **Slug:** `belgradebest-countdown-for-expo-2027-belgrade` (requested in the round 1 reply; was `countdown-for-expo-2027-belgrade`). It isn't final until approval; the future URL is https://wordpress.org/plugins/belgradebest-countdown-for-expo-2027-belgrade/.
+- **Approved 28 Nov.**
+  - Slug: `belgradebest-countdown-for-expo-2027-belgrade`.
+  - SVN: https://plugins.svn.wordpress.org/belgradebest-countdown-for-expo-2027-belgrade
+  - Listing: https://wordpress.org/plugins/belgradebest-countdown-for-expo-2027-belgrade/. It stays empty until the first SVN commit.
+- **Next step: publish through SVN.** Run this from the repo root in PowerShell:
+
+  ```
+  powershell -ExecutionPolicy Bypass -File wp-plugin\svn-publish.ps1
+  ```
+
+  - svn asks for your SVN password, which you set under WordPress.org profile → Account & Security. Your username is `litocreative`.
+  - The script does the rest:
+    - checks the build;
+    - checks the repository out to `C:\projects\wporg-svn\belgradebest-countdown-for-expo-2027-belgrade`, next to CosmyDay's;
+    - copies the plugin into `trunk/` and the icons from `wp-plugin/wporg-assets/` into `assets/`;
+    - shows the change list and waits for Enter;
+    - commits, then tags `1.0.0`.
+  - A dry run on 28 Nov, which stopped before the commit, showed exactly the 12 plugin files and 2 icons.
+- **The DNS TXT record** `wordpressorg-litocreative-verification` is no longer needed after approval. Leaving it in place does no harm.
 
 ## Review round 1 (email of 27 Nov) and the fix
 
@@ -79,7 +96,12 @@ WordPress.org also has a page in each language for every plugin (de., sk., cs., 
 
 1. **Submit.** Done 20 Nov: you signed in, and I uploaded the zip (checksum matched) and submitted after your yes.
 2. **Review.** CosmyDay's took about a week. If the reviewer asks for changes, forward me the email and I'll fix the code and rebuild the zip.
-3. **After approval: publish through SVN** (WordPress.org's file store for plugins). You run the commit with your SVN password, the same way as for CosmyDay; I'll prepare the folder and a script. Screenshots and a banner can go in at the same time, with no new review.
+3. **Publish through SVN** (WordPress.org's file store for plugins).
+   - The plugin was approved on 28 Nov.
+   - Run `wp-plugin\svn-publish.ps1` (see Status). It asks for your SVN password.
+   - The icons come from the site's "B" mark.
+   - A banner and screenshots can be added later to `wp-plugin/wporg-assets/` and published by re-running the script, with no new review.
+   - Later versions follow the same path: bump the version in four places, run `node wp-plugin/build-plugin.mjs`, then run the script.
 4. **After approval: translations.** These are what create the listings in other languages.
    - The description is translated at translate.wordpress.org. I'll prepare the text in all 7 languages, and you import it while signed in.
    - Each language's editors approve it. To speed that up, we can ask the language teams to make litocreative the translation editor for this plugin.
@@ -111,5 +133,5 @@ Your stop rule for link-building runs to 16 Dec. It can't show 50 attributable v
 - **The plugin is built and tested.** The official checker found nothing, and it works from WordPress 6.3 to 7.1, in 8 languages including Arabic right to left.
 - **It's a listing, not a traffic machine.** WordPress.org plus the sites that copy it should bring us a few real links, and each translated description gives us a page in that language.
 - **Also fixed today:** the countdown widget's credit link is now nofollow like the others, and the "the link is the license" wording is gone.
-- **Submitted 20 Nov.** The automated scan passed and the plugin is waiting for a manual review (701 in the queue; expect 1–3 weeks).
-- **Your part:** watch admin@cosmyday.com for the email from plugins@wordpress.org and forward it to me. Don't resubmit.
+- **Approved 28 Nov** under the name "BelgradeBest Countdown for Expo 2027 Belgrade". The publish script and icons are ready.
+- **Your part:** run `powershell -ExecutionPolicy Bypass -File wp-plugin\svn-publish.ps1` and enter your SVN password when asked. Then tell me, and I'll add the plugin link to the site and prepare the translations.
